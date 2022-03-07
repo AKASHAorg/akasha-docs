@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'AKASHA docs',
   tagline: 'Build your own application with AKASHA',
-  url: 'https://ethereum.world',
+  url: 'https://akasha-docs.pages.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
