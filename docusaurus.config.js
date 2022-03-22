@@ -42,20 +42,24 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: true,
+      },
       navbar: {
-        title: 'My Site',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
-        },
+        title: 'AKASHA Docs',
+        // logo: {
+          // alt: 'My Site Logo',
+          // src: 'img/logo.svg',
+        // },
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'introduction',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'Tutorials', position: 'left'},
           {
             href: 'https://github.com/AKASHAorg/akasha-docs',
             label: 'GitHub',
@@ -70,8 +74,20 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Introduction',
+                to: '/docs/introduction',
+              },
+              {
+                label: 'Quick start',
+                to: '/docs/dev-quickstart',
+              },
+              {
+                label: 'Integrations',
+                to: '/docs/integrations',
+              },
+              {
+                label: 'SDK',
+                to: '/docs/sdk',
               },
             ],
           },
@@ -80,7 +96,7 @@ const config = {
             items: [
               {
                 label: 'Discord',
-                href: '#',
+                href: '#discord',
               },
               {
                 label: 'Twitter',
@@ -92,12 +108,12 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
+                label: 'Tutorials',
                 to: '/blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Docs GitHub',
+                href: 'https://github.com/AKASHAorg/akasha-docs',
               },
             ],
           },
