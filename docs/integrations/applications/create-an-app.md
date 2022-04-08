@@ -11,18 +11,7 @@ We only support [React](https://reactjs.org/) as the UI library for now.
 
 :::
 
-
-### Using nx generator (**coming soon**)
-The simplest way of creating an application is through the nx generator.
-
-```bash title="generate @test/hello-ethereum-world app"
-  $ npx workspace-generator generate-app @test/hello-ethereum-world
-```
-
-You can now skip to the Repository setup chapter.
-
-
-### Manually creating a basic `Hello ethereum world` app
+### Creating a basic `Hello ethereum world` app
 
 From the root of the repository you have cloned in the [quickstart guide](http://localhost:3000/docs/dev-quickstart):
 
