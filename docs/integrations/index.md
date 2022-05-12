@@ -9,6 +9,8 @@ sidebar_label: Integrations Overview
 
 // write about the integration types and link to them
 
-// write about the integration center
+Currently we have 2 different types of integrations:
+  - [Apps](applications)
+  - [Widgets](widgets)
 
 // write abount the app-loader with references to single-spa docs.

@@ -13,21 +13,26 @@ The AKASHA SDK is used in every world instance and provides the core functionali
 - dependency injection (inversify)
 - RxJS
 
-### Installation
-
-// provide instalation instructions
-
 ### Usage
+To instantiate the SDK, you can use one of the methods it exports:
 
-```ts
-
-import getSDK from '@akashaproject/awf-sdk';
+```typescript
+import getSDK from '@akashaproject/sdk/build/web/sdk';
 
 const sdk = getSDK();
 
-```
+// use the sdk here
 
-### SDK Object
-* `sdk` => `Object`
-  * .`api` => `Object`
-  * .`services` => `Object`
+```
+or:
+
+```ts
+
+import {init} from '@akashaproject/awf-sdk';
+
+const sdk = init();
+
+```
+The main difference between the two is that `getSDK()` ensures that the sdk object is instantiated only one (singleton) whereas `init()` will instantiate it every time it's called.
+
+*returns* [SDK instance](./sdk-instance)

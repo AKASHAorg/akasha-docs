@@ -1,0 +1,3 @@
+[submodule "akasha-framework"]
+	path = akasha-framework
+	url = https://github.com/AKASHAorg/akasha-framework.git

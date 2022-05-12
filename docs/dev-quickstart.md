@@ -53,4 +53,4 @@ Visit `https://localhost:8131/` in your browser.
 :::
 
 **Congrats!** You're ready to start developing.
-Let's start by [creating a super simple app](/docs/applications/create-an-app).
+Let's start by [creating a super simple app](/docs/integrations/applications/create-an-app).

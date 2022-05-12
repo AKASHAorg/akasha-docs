@@ -21,24 +21,76 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/AKASHAorg/akasha-docs',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/AKASHAorg/akasha-docs',
-        },
+        // docs: {
+        //   sidebarPath: require.resolve('./sidebars.js'),
+        //   // Please change this to your repo.
+        //   editUrl: 'https://github.com/AKASHAorg/akasha-docs',
+        // },
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   editUrl:
+        //     'https://github.com/AKASHAorg/akasha-docs',
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
   ],
-
+  plugins: [
+    [
+      'docusaurus-plugin-typedoc',
+      {
+        id: 'akasha-sdk-main',
+        entryPoints: ['./akasha-framework/sdk/src/index.ts'],
+        entryPointStrategy: 'expand',
+        tsconfig: 'akasha-framework/sdk/tsconfig.json',
+        readme: 'docs/sdk/apis.md',
+        out: './sdk/api-reference',
+        name: 'AKASHA SDK Reference',
+        categorizeByGroup: false,
+        emit: 'both',
+        // plugin
+        plugin: ['typedoc-plugin-missing-exports'],
+        internalNamespace: 'sdk',
+        // end_plugin
+        excludeInternal: true,
+        categoryOrder: ['API', 'Services'],
+        sidebar: {
+          categoryLabel: 'SDK Reference',
+        },
+        hideMembersSymbol: true,
+        frontmatter: {
+          pagination_prev: null,
+          pagination_next: null,
+          hide_title: true,
+          description: 'Test Description',
+        },
+      },
+    ],
+    // [
+    //   'docusaurus-plugin-typedoc',
+    //   {
+    //     id: 'akasha-ui-hooks',
+    //     entryPoints: ['./akasha-framework/ui/hooks/'],
+    //     entryPointStrategy: 'packages',
+    //     tsconfig: './akasha-framework/ui/hooks/tsconfig.json',
+    //     readme: 'docs/react-hooks/index.md',
+    //     out: './react-hooks',
+    //     name: 'React Hooks',
+    //     emit: 'both',
+    //     excludeInternal: true,
+    //     sidebar: {
+    //       categoryLabel: 'React Hooks',
+    //     },
+    //     frontmatter: {
+    //       pagination_prev: null,
+    //       pagination_next: null,
+    //     },
+    //   },
+    // ],
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({

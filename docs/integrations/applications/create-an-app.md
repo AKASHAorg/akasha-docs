@@ -131,3 +131,5 @@ export default HelloEthereumWorldApp;
 ### Repository setup for the newly created app
 
 **1. Repo setup: nx, registryOverrides, examples/ethereum.world/src/index update**
+
+
