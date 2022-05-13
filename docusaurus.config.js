@@ -21,41 +21,91 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/AKASHAorg/akasha-docs',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/AKASHAorg/akasha-docs',
-        },
+        // docs: {
+        //   sidebarPath: require.resolve('./sidebars.js'),
+        //   // Please change this to your repo.
+        //   editUrl: 'https://github.com/AKASHAorg/akasha-docs',
+        // },
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   editUrl:
+        //     'https://github.com/AKASHAorg/akasha-docs',
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
   ],
-
+  plugins: [
+    [
+      'docusaurus-plugin-typedoc',
+      {
+        id: 'akasha-sdk-main',
+        entryPoints: ['./akasha-framework/sdk/src/index.ts'],
+        entryPointStrategy: 'expand',
+        tsconfig: 'akasha-framework/sdk/tsconfig.json',
+        readme: 'none',
+        out: './sdk/api-reference',
+        name: 'AKASHA SDK Reference',
+        categorizeByGroup: false,
+        // plugin
+        plugin: ['typedoc-plugin-missing-exports'],
+        internalNamespace: 'sdk',
+        // end_plugin
+        excludeInternal: true,
+        categoryOrder: ['API', 'Services'],
+        sidebar: {
+          categoryLabel: 'SDK Reference',
+        },
+        hideMembersSymbol: true,
+        frontmatter: {
+          pagination_prev: null,
+          pagination_next: null,
+          hide_title: true,
+          description: 'Test Description',
+        },
+      },
+    ],
+    [
+      'docusaurus-plugin-typedoc',
+      {
+        id: 'akasha-ui-hooks',
+        entryPoints: ['./akasha-framework/ui/hooks/src/index.ts'],
+        entryPointStrategy: 'expand',
+        tsconfig: './akasha-framework/ui/hooks/tsconfig.json',
+        readme: 'docs/react-hooks/_hooks-list_.md',
+        out: './react-hooks',
+        name: 'React Hooks',
+        excludeInternal: true,
+        sidebar: {
+          categoryLabel: 'React Hooks',
+        },
+        frontmatter: null,
+      },
+    ],
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark'
+      },
       navbar: {
-        title: 'My Site',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
-        },
+        title: 'AKASHA Docs',
+        // logo: {
+          // alt: 'My Site Logo',
+          // src: 'img/logo.svg',
+        // },
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'introduction',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'Tutorials', position: 'left'},
           {
             href: 'https://github.com/AKASHAorg/akasha-docs',
             label: 'GitHub',
@@ -70,8 +120,20 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Introduction',
+                to: '/docs/introduction',
+              },
+              {
+                label: 'Quick start',
+                to: '/docs/dev-quickstart',
+              },
+              {
+                label: 'Integrations',
+                to: '/docs/integrations',
+              },
+              {
+                label: 'SDK',
+                to: '/docs/sdk',
               },
             ],
           },
@@ -80,7 +142,7 @@ const config = {
             items: [
               {
                 label: 'Discord',
-                href: '#',
+                href: '#discord',
               },
               {
                 label: 'Twitter',
@@ -92,12 +154,12 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
+                label: 'Tutorials',
                 to: '/blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Docs GitHub',
+                href: 'https://github.com/AKASHAorg/akasha-docs',
               },
             ],
           },
