@@ -26,14 +26,14 @@ description: "Test Description"
 | Name | Type |
 | :------ | :------ |
 | `log` | [`Logging`](sdk.Logging.md) |
-| `gql` | [`Gql`](sdk.Gql.md) |
+| `gql` | `Gql` |
 | `auth` | [`AWF_Auth`](sdk.AWF_Auth.md) |
 | `settings` | [`Settings`](sdk.Settings.md) |
 | `globalChannel` | [`EventBus`](sdk.EventBus.md) |
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:71](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/profiles/index.ts#L71)
+[sdk/src/profiles/index.ts:71](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L71)
 
 ## Properties
 
@@ -43,7 +43,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:52](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/profiles/index.ts#L52)
+[sdk/src/profiles/index.ts:52](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L52)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:53](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/profiles/index.ts#L53)
+[sdk/src/profiles/index.ts:53](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L53)
 
 ## Methods
 
@@ -103,7 +103,7 @@ Mutation request to add a profile provider to the profile object
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:89](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/profiles/index.ts#L89)
+[sdk/src/profiles/index.ts:89](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L89)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:237](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/profiles/index.ts#L237)
+[sdk/src/profiles/index.ts:237](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L237)
 
 ___
 
@@ -153,7 +153,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:534](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/profiles/index.ts#L534)
+[sdk/src/profiles/index.ts:534](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L534)
 
 ___
 
@@ -179,7 +179,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:551](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/profiles/index.ts#L551)
+[sdk/src/profiles/index.ts:551](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L551)
 
 ___
 
@@ -205,7 +205,7 @@ Retrieve subscription list
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:566](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/profiles/index.ts#L566)
+[sdk/src/profiles/index.ts:566](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L566)
 
 ___
 
@@ -231,7 +231,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:206](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/profiles/index.ts#L206)
+[sdk/src/profiles/index.ts:206](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L206)
 
 ___
 
@@ -249,7 +249,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:490](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/profiles/index.ts#L490)
+[sdk/src/profiles/index.ts:490](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L490)
 
 ___
 
@@ -267,7 +267,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:445](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/profiles/index.ts#L445)
+[sdk/src/profiles/index.ts:445](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L445)
 
 ___
 
@@ -291,7 +291,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:517](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/profiles/index.ts#L517)
+[sdk/src/profiles/index.ts:517](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L517)
 
 ___
 
@@ -317,7 +317,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:313](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/profiles/index.ts#L313)
+[sdk/src/profiles/index.ts:313](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L313)
 
 ___
 
@@ -341,7 +341,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:501](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/profiles/index.ts#L501)
+[sdk/src/profiles/index.ts:501](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L501)
 
 ___
 
@@ -365,7 +365,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:126](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/profiles/index.ts#L126)
+[sdk/src/profiles/index.ts:126](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L126)
 
 ___
 
@@ -389,7 +389,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:163](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/profiles/index.ts#L163)
+[sdk/src/profiles/index.ts:163](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L163)
 
 ___
 
@@ -422,7 +422,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:328](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/profiles/index.ts#L328)
+[sdk/src/profiles/index.ts:328](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L328)
 
 ___
 
@@ -446,7 +446,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:431](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/profiles/index.ts#L431)
+[sdk/src/profiles/index.ts:431](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L431)
 
 ___
 
@@ -470,7 +470,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:453](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/profiles/index.ts#L453)
+[sdk/src/profiles/index.ts:453](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L453)
 
 ___
 
@@ -494,4 +494,4 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:275](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/profiles/index.ts#L275)
+[sdk/src/profiles/index.ts:275](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L275)

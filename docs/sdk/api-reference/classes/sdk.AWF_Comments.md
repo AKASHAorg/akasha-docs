@@ -11,6 +11,10 @@ description: "Test Description"
 
 [sdk](../namespaces/sdk.md).AWF_Comments
 
+# sdk.api.comments
+
+Comments Module
+
 ## Implements
 
 - [`AWF_IComments`](../interfaces/sdk.AWF_IComments.md)
@@ -26,13 +30,13 @@ description: "Test Description"
 | Name | Type |
 | :------ | :------ |
 | `log` | [`Logging`](sdk.Logging.md) |
-| `gql` | [`Gql`](sdk.Gql.md) |
+| `gql` | `Gql` |
 | `auth` | [`AWF_Auth`](sdk.AWF_Auth.md) |
 | `globalChannel` | [`EventBus`](sdk.EventBus.md) |
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:39](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/posts/comments.ts#L39)
+[sdk/src/posts/comments.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/comments.ts#L43)
 
 ## Properties
 
@@ -52,13 +56,15 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:31](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/posts/comments.ts#L31)
+[sdk/src/posts/comments.ts:35](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/comments.ts#L35)
 
 ## Methods
 
 ### addComment
 
 **addComment**(`opt`): `Observable`<{ `data`: { `addComment`: `string`  }  }\>
+
+Create a new comment
 
 #### Parameters
 
@@ -82,7 +88,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:85](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/posts/comments.ts#L85)
+[sdk/src/posts/comments.ts:86](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/comments.ts#L86)
 
 ___
 
@@ -115,13 +121,15 @@ Update an existing comment
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:130](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/posts/comments.ts#L130)
+[sdk/src/posts/comments.ts:130](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/comments.ts#L130)
 
 ___
 
 ### getComment
 
 **getComment**(`commentID`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getComment`: [`Comment_Response`](../interfaces/sdk.Comment_Response.md)  }\>
+
+Get comment data
 
 #### Parameters
 
@@ -139,13 +147,15 @@ ___
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:55](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/posts/comments.ts#L55)
+[sdk/src/posts/comments.ts:58](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/comments.ts#L58)
 
 ___
 
 ### getComments
 
 **getComments**(`opt`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getComments`: [`Comments_Response`](../interfaces/sdk.Comments_Response.md)  }\>
+
+Get a list of comments for a post
 
 #### Parameters
 
@@ -166,7 +176,7 @@ ___
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:70](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/posts/comments.ts#L70)
+[sdk/src/posts/comments.ts:72](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/comments.ts#L72)
 
 ___
 
@@ -192,4 +202,4 @@ Remove a comment's data by ID
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:173](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/posts/comments.ts#L173)
+[sdk/src/posts/comments.ts:172](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/comments.ts#L172)

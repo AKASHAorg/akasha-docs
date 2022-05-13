@@ -1,8 +1,8 @@
 ---
 id: "index"
 title: "AKASHA SDK Reference"
-sidebar_label: "Readme"
-sidebar_position: 0
+sidebar_label: "Exports"
+sidebar_position: 0.5
 custom_edit_url: null
 pagination_prev: null
 pagination_next: null
@@ -10,132 +10,60 @@ hide_title: true
 description: "Test Description"
 ---
 
-# SDK APIs
+AKASHA SDK is a modular set of utilities and apis that can be used to build
+your own app.
 
-- [auth](#sdk.auth)
-    - [getCurrentUser](#.getCurrentUser)
-    - signIn
-    - signOut
-- comments
-    - editComment
-    - getComment
-    - getComments
-    - removeComment
-- ens
-    - claimName
-    - getContracts
-    - isAvailable
-    - registerName
-    - resolveAddress
-    - resolveName
-    - setupContracts
-    - userIsOwnerOf
-- entries
-    - editEntry
-    - entriesByAuthor
-    - entriesByTag
-    - getEntries
-    - getEntry
-    - getFeedEntries
-    - getLinkPreview
-    - postEntry
-    - removeEntry
-- globalChannel
-- icRegistry
-    - getAllIntegrationReleaseIds
-    - getAllIntegrationIds
-    - getContracts
-    - getIntegrationId
-    - getIntegrationInfo
-    - getIntegrationReleaseId
-    - getIntegrationReleaseInfo
-    - getIntegrationsCount
-    - getIntegrationsInfo
-    - getLatestReleaseInfo
-    - getLatestVersionInfo
-- profile
-    - addProfileProvider
-    - follow
-    - getFollowers
-    - getFollowing
-    - getInterests
-    - getProfile
-    - getTagSubscriptions
-    - getTrending
-    - globalSearch
-    - isFollowing
-    - isSubscribedToTag
-    - makeDefaultProvider
-    - registerUserName
-    - saveMediaFile
-    - searchProfiles
-    - toggleTagSubscription
-    - unFollow
-- tags
-    - createTag
-    - getTag
-    - getTags
-    - getTrending
-    - searchTags
+## Namespaces
 
-### sdk.api.auth
-// General description
+- [sdk](namespaces/sdk.md)
+- [typings](namespaces/typings.md)
 
-**.getCurrentUser**
+## Interfaces
 
-// description
+- [AWF\_SDK](interfaces/AWF_SDK.md)
+- [SDK\_API](interfaces/SDK_API.md)
+- [SDK\_Services](interfaces/SDK_Services.md)
 
-// signature
+## Functions
 
-// example
+### default
 
-**.signIn**
+**default**(): [`AWF_SDK`](interfaces/AWF_SDK.md)
 
-// description
+Creates a new SDK instance or returns a previusly created one.
 
-// signature
+**`example`**
+```ts
+import getSDK from '@akashaorg/awf-sdk';
+const sdk = getSDK();
+```
 
-// example
+#### Returns
 
-**.signOut**
+[`AWF_SDK`](interfaces/AWF_SDK.md)
 
-// description
+#### Defined in
 
-// signature
+[sdk/src/index.ts:68](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/index.ts#L68)
 
-// example
+___
 
-### sdk.api.comments
-// General description
+### init
 
-**.editComment**
+**init**(): [`AWF_SDK`](interfaces/AWF_SDK.md)
 
-// description
+Creates a new SDK instance.
 
-// signature
+**`example`**
+```ts
+import {init} from '@akashaorg/awf-sdk';
+const sdk = init();
+```
 
-// example
+#### Returns
 
-**.getComment**
+[`AWF_SDK`](interfaces/AWF_SDK.md)
 
-// description
+#### Defined in
 
-// signature
-
-// example
-
-**.getComments**
-
-// description
-
-// signature
-
-// example
-
-**.removeComment**
-
-// description
-
-// signature
-
-// example
+[sdk/src/index.ts:85](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/index.ts#L85)

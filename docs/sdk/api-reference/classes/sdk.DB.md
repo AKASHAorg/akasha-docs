@@ -39,11 +39,9 @@ Create a new DB instance
 
 `Database`
 
-Database
-
 #### Defined in
 
-[sdk/src/db/index.ts:26](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/db/index.ts#L26)
+[sdk/src/db/index.ts:25](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/index.ts#L25)
 
 ___
 
@@ -69,15 +67,13 @@ Get access to the db collection by name
 
 [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`Collection`<`T`\>\>
 
-ServiceCallResult<Collection>
-
 #### Implementation of
 
 [IDBService](../interfaces/sdk.IDBService.md).[getCollection](../interfaces/sdk.IDBService.md#getcollection)
 
 #### Defined in
 
-[sdk/src/db/index.ts:63](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/db/index.ts#L63)
+[sdk/src/db/index.ts:59](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/index.ts#L59)
 
 ___
 
@@ -91,15 +87,13 @@ Get access to the local db
 
 [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`Database`\>
 
-ServiceCallResult<Database>
-
 #### Implementation of
 
 [IDBService](../interfaces/sdk.IDBService.md).[getDb](../interfaces/sdk.IDBService.md#getdb)
 
 #### Defined in
 
-[sdk/src/db/index.ts:53](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/db/index.ts#L53)
+[sdk/src/db/index.ts:50](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/index.ts#L50)
 
 ___
 
@@ -117,12 +111,10 @@ ___
 
 [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`Database`\>
 
-ServiceCallResult<Database>
-
 #### Implementation of
 
 [IDBService](../interfaces/sdk.IDBService.md).[open](../interfaces/sdk.IDBService.md#open)
 
 #### Defined in
 
-[sdk/src/db/index.ts:37](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/db/index.ts#L37)
+[sdk/src/db/index.ts:35](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/index.ts#L35)

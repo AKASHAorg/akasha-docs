@@ -16,11 +16,9 @@ description: "Test Description"
 
  **api**: [`SDK_API`](SDK_API.md)
 
-Main apis to interact with the supported services.
-
 #### Defined in
 
-[sdk/src/index.ts:57](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/index.ts#L57)
+[sdk/src/index.ts:53](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/index.ts#L53)
 
 ___
 
@@ -30,4 +28,4 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:53](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/index.ts#L53)
+[sdk/src/index.ts:52](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/index.ts#L52)

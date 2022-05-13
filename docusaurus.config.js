@@ -46,11 +46,10 @@ const config = {
         entryPoints: ['./akasha-framework/sdk/src/index.ts'],
         entryPointStrategy: 'expand',
         tsconfig: 'akasha-framework/sdk/tsconfig.json',
-        readme: 'docs/sdk/apis.md',
+        readme: 'none',
         out: './sdk/api-reference',
         name: 'AKASHA SDK Reference',
         categorizeByGroup: false,
-        emit: 'both',
         // plugin
         plugin: ['typedoc-plugin-missing-exports'],
         internalNamespace: 'sdk',
@@ -69,27 +68,23 @@ const config = {
         },
       },
     ],
-    // [
-    //   'docusaurus-plugin-typedoc',
-    //   {
-    //     id: 'akasha-ui-hooks',
-    //     entryPoints: ['./akasha-framework/ui/hooks/'],
-    //     entryPointStrategy: 'packages',
-    //     tsconfig: './akasha-framework/ui/hooks/tsconfig.json',
-    //     readme: 'docs/react-hooks/index.md',
-    //     out: './react-hooks',
-    //     name: 'React Hooks',
-    //     emit: 'both',
-    //     excludeInternal: true,
-    //     sidebar: {
-    //       categoryLabel: 'React Hooks',
-    //     },
-    //     frontmatter: {
-    //       pagination_prev: null,
-    //       pagination_next: null,
-    //     },
-    //   },
-    // ],
+    [
+      'docusaurus-plugin-typedoc',
+      {
+        id: 'akasha-ui-hooks',
+        entryPoints: ['./akasha-framework/ui/hooks/src/index.ts'],
+        entryPointStrategy: 'expand',
+        tsconfig: './akasha-framework/ui/hooks/tsconfig.json',
+        readme: 'docs/react-hooks/_hooks-list_.md',
+        out: './react-hooks',
+        name: 'React Hooks',
+        excludeInternal: true,
+        sidebar: {
+          categoryLabel: 'React Hooks',
+        },
+        frontmatter: null,
+      },
+    ],
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */

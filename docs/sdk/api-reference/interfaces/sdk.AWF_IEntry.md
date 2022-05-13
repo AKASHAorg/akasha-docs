@@ -39,7 +39,7 @@ description: "Test Description"
 
 #### Defined in
 
-sdk/typings/lib/interfaces/posts.d.ts:29
+sdk/typings/lib/interfaces/posts.d.ts:17
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-sdk/typings/lib/interfaces/posts.d.ts:39
+sdk/typings/lib/interfaces/posts.d.ts:27
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-sdk/typings/lib/interfaces/posts.d.ts:48
+sdk/typings/lib/interfaces/posts.d.ts:32
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-sdk/typings/lib/interfaces/posts.d.ts:13
+sdk/typings/lib/interfaces/posts.d.ts:5
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-sdk/typings/lib/interfaces/posts.d.ts:8
+sdk/typings/lib/interfaces/posts.d.ts:4
 
 ___
 
@@ -149,7 +149,7 @@ ___
 
 #### Defined in
 
-sdk/typings/lib/interfaces/posts.d.ts:62
+sdk/typings/lib/interfaces/posts.d.ts:38
 
 ___
 
@@ -169,7 +169,7 @@ ___
 
 #### Defined in
 
-sdk/typings/lib/interfaces/posts.d.ts:57
+sdk/typings/lib/interfaces/posts.d.ts:37
 
 ___
 
@@ -194,7 +194,7 @@ ___
 
 #### Defined in
 
-sdk/typings/lib/interfaces/posts.d.ts:21
+sdk/typings/lib/interfaces/posts.d.ts:9
 
 ___
 
@@ -214,4 +214,4 @@ ___
 
 #### Defined in
 
-sdk/typings/lib/interfaces/posts.d.ts:38
+sdk/typings/lib/interfaces/posts.d.ts:26

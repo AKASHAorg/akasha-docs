@@ -30,7 +30,6 @@ description: "Test Description"
 - [AppSettings](../classes/sdk.AppSettings.md)
 - [DB](../classes/sdk.DB.md)
 - [EventBus](../classes/sdk.EventBus.md)
-- [Gql](../classes/sdk.Gql.md)
 - [Logging](../classes/sdk.Logging.md)
 - [Settings](../classes/sdk.Settings.md)
 - [Stash](../classes/sdk.Stash.md)
@@ -107,7 +106,7 @@ ___
 
 #### Defined in
 
-[sdk/src/stash/index.ts:8](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/stash/index.ts#L8)
+[sdk/src/stash/index.ts:8](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/stash/index.ts#L8)
 
 ___
 

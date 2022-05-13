@@ -11,13 +11,6 @@ description: "Test Description"
 
 [typings](../namespaces/typings.md).IAwfSDK
 
-AKASHA SDK contains two main objects:
-
-- `api` - used to communicate with remote products and services.
-
-- `services` - Helpers and utilities to interact with underlying packages and technologies.
-    - example: web3, local database, user settings (local) etc.
-
 ## Properties
 
 ### api
@@ -39,7 +32,7 @@ AKASHA SDK contains two main objects:
 
 #### Defined in
 
-sdk/typings/lib/index.d.ts:20
+sdk/typings/lib/index.d.ts:12
 
 ___
 
@@ -49,4 +42,4 @@ ___
 
 #### Defined in
 
-sdk/typings/lib/index.d.ts:19
+sdk/typings/lib/index.d.ts:11

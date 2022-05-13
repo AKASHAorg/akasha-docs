@@ -30,7 +30,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:46](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/web3.connector.ts#L46)
+[sdk/src/common/web3.connector.ts:46](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L46)
 
 ## Properties
 
@@ -44,7 +44,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:32](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/web3.connector.ts#L32)
+[sdk/src/common/web3.connector.ts:32](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L32)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:35](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/web3.connector.ts#L35)
+[sdk/src/common/web3.connector.ts:35](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L35)
 
 ## Accessors
 
@@ -78,7 +78,7 @@ Get access to the web3 provider instance
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:88](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/web3.connector.ts#L88)
+[sdk/src/common/web3.connector.ts:88](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L88)
 
 ## Methods
 
@@ -96,7 +96,7 @@ Get access to the web3 provider instance
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:168](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/web3.connector.ts#L168)
+[sdk/src/common/web3.connector.ts:168](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L168)
 
 ___
 
@@ -120,7 +120,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:59](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/web3.connector.ts#L59)
+[sdk/src/common/web3.connector.ts:59](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L59)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:171](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/web3.connector.ts#L171)
+[sdk/src/common/web3.connector.ts:171](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L171)
 
 ___
 
@@ -154,7 +154,7 @@ Remove the web3 connection
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:98](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/web3.connector.ts#L98)
+[sdk/src/common/web3.connector.ts:98](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L98)
 
 ___
 
@@ -174,7 +174,7 @@ the current eth address that is connected to the provider
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:135](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/web3.connector.ts#L135)
+[sdk/src/common/web3.connector.ts:135](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L135)
 
 ___
 
@@ -188,7 +188,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:139](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/web3.connector.ts#L139)
+[sdk/src/common/web3.connector.ts:139](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L139)
 
 ___
 
@@ -202,7 +202,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:121](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/web3.connector.ts#L121)
+[sdk/src/common/web3.connector.ts:121](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L121)
 
 ___
 
@@ -216,7 +216,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:75](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/web3.connector.ts#L75)
+[sdk/src/common/web3.connector.ts:75](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L75)
 
 ___
 
@@ -242,7 +242,7 @@ Enforce personal_sign method for message signature
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:117](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/web3.connector.ts#L117)
+[sdk/src/common/web3.connector.ts:117](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L117)
 
 ___
 
@@ -256,4 +256,4 @@ ___
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:146](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/web3.connector.ts#L146)
+[sdk/src/common/web3.connector.ts:146](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L146)

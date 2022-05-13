@@ -26,7 +26,7 @@ description: "Test Description"
 | Name | Type |
 | :------ | :------ |
 | `log` | [`Logging`](sdk.Logging.md) |
-| `gql` | [`Gql`](sdk.Gql.md) |
+| `gql` | `Gql` |
 | `auth` | [`AWF_Auth`](sdk.AWF_Auth.md) |
 | `settings` | [`Settings`](sdk.Settings.md) |
 | `globalChannel` | [`EventBus`](sdk.EventBus.md) |
@@ -35,7 +35,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:56](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/registry/ens.ts#L56)
+[sdk/src/registry/ens.ts:56](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L56)
 
 ## Properties
 
@@ -45,7 +45,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:52](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/registry/ens.ts#L52)
+[sdk/src/registry/ens.ts:52](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L52)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:50](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/registry/ens.ts#L50)
+[sdk/src/registry/ens.ts:50](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L50)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:51](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/registry/ens.ts#L51)
+[sdk/src/registry/ens.ts:51](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L51)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:53](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/registry/ens.ts#L53)
+[sdk/src/registry/ens.ts:53](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L53)
 
 ## Methods
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:101](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/registry/ens.ts#L101)
+[sdk/src/registry/ens.ts:101](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L101)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:185](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/registry/ens.ts#L185)
+[sdk/src/registry/ens.ts:185](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L185)
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:134](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/registry/ens.ts#L134)
+[sdk/src/registry/ens.ts:134](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L134)
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:74](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/registry/ens.ts#L74)
+[sdk/src/registry/ens.ts:74](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L74)
 
 ___
 
@@ -191,7 +191,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:146](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/registry/ens.ts#L146)
+[sdk/src/registry/ens.ts:146](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L146)
 
 ___
 
@@ -215,7 +215,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:154](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/registry/ens.ts#L154)
+[sdk/src/registry/ens.ts:154](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L154)
 
 ___
 
@@ -229,7 +229,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:159](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/registry/ens.ts#L159)
+[sdk/src/registry/ens.ts:159](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L159)
 
 ___
 
@@ -253,4 +253,4 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:123](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/registry/ens.ts#L123)
+[sdk/src/registry/ens.ts:123](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L123)

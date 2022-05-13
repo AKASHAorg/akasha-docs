@@ -29,7 +29,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:27](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/ipfs.connector.ts#L27)
+[sdk/src/common/ipfs.connector.ts:27](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L27)
 
 ## Properties
 
@@ -39,7 +39,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:18](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/ipfs.connector.ts#L18)
+[sdk/src/common/ipfs.connector.ts:18](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L18)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:16](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/ipfs.connector.ts#L16)
+[sdk/src/common/ipfs.connector.ts:16](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L16)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:17](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/ipfs.connector.ts#L17)
+[sdk/src/common/ipfs.connector.ts:17](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L17)
 
 ## Methods
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:83](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/ipfs.connector.ts#L83)
+[sdk/src/common/ipfs.connector.ts:83](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L83)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:99](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/ipfs.connector.ts#L99)
+[sdk/src/common/ipfs.connector.ts:99](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L99)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:75](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/ipfs.connector.ts#L75)
+[sdk/src/common/ipfs.connector.ts:75](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L75)
 
 ___
 
@@ -149,7 +149,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:91](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/ipfs.connector.ts#L91)
+[sdk/src/common/ipfs.connector.ts:91](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L91)
 
 ___
 
@@ -180,7 +180,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:37](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/ipfs.connector.ts#L37)
+[sdk/src/common/ipfs.connector.ts:37](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L37)
 
 ___
 
@@ -204,7 +204,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:59](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/ipfs.connector.ts#L59)
+[sdk/src/common/ipfs.connector.ts:59](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L59)
 
 ___
 
@@ -226,7 +226,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:31](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/ipfs.connector.ts#L31)
+[sdk/src/common/ipfs.connector.ts:31](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L31)
 
 ___
 
@@ -246,7 +246,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:116](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/ipfs.connector.ts#L116)
+[sdk/src/common/ipfs.connector.ts:116](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L116)
 
 ___
 
@@ -266,7 +266,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:111](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/ipfs.connector.ts#L111)
+[sdk/src/common/ipfs.connector.ts:111](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L111)
 
 ___
 
@@ -286,4 +286,4 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:64](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/common/ipfs.connector.ts#L64)
+[sdk/src/common/ipfs.connector.ts:64](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L64)

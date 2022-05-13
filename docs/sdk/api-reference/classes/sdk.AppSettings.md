@@ -32,7 +32,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:30](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/settings/apps.ts#L30)
+[sdk/src/settings/apps.ts:30](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L30)
 
 ## Methods
 
@@ -58,7 +58,7 @@ Returns an app configuration object
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:46](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/settings/apps.ts#L46)
+[sdk/src/settings/apps.ts:46](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L46)
 
 ___
 
@@ -78,7 +78,7 @@ Returns all installed apps
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:57](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/settings/apps.ts#L57)
+[sdk/src/settings/apps.ts:57](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L57)
 
 ___
 
@@ -106,7 +106,7 @@ Persist installed app configuration for the current user
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:69](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/settings/apps.ts#L69)
+[sdk/src/settings/apps.ts:69](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L69)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:116](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/settings/apps.ts#L116)
+[sdk/src/settings/apps.ts:116](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L116)
 
 ___
 
@@ -152,7 +152,7 @@ Uninstall app by name
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:102](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/settings/apps.ts#L102)
+[sdk/src/settings/apps.ts:102](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L102)
 
 ___
 
@@ -172,7 +172,7 @@ ___
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:157](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/settings/apps.ts#L157)
+[sdk/src/settings/apps.ts:157](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L157)
 
 ___
 
@@ -192,4 +192,4 @@ ___
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:133](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/settings/apps.ts#L133)
+[sdk/src/settings/apps.ts:133](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L133)

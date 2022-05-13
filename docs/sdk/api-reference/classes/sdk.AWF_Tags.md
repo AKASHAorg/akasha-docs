@@ -26,13 +26,13 @@ description: "Test Description"
 | Name | Type |
 | :------ | :------ |
 | `log` | [`Logging`](sdk.Logging.md) |
-| `gql` | [`Gql`](sdk.Gql.md) |
+| `gql` | `Gql` |
 | `auth` | [`AWF_Auth`](sdk.AWF_Auth.md) |
 | `globalChannel` | [`EventBus`](sdk.EventBus.md) |
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:27](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/posts/tags.ts#L27)
+[sdk/src/posts/tags.ts:27](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/tags.ts#L27)
 
 ## Properties
 
@@ -51,7 +51,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:26](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/posts/tags.ts#L26)
+[sdk/src/posts/tags.ts:26](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/tags.ts#L26)
 
 ## Methods
 
@@ -75,7 +75,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:88](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/posts/tags.ts#L88)
+[sdk/src/posts/tags.ts:88](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/tags.ts#L88)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/posts/tags.ts#L43)
+[sdk/src/posts/tags.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/tags.ts#L43)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:58](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/posts/tags.ts#L58)
+[sdk/src/posts/tags.ts:58](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/tags.ts#L58)
 
 ___
 
@@ -145,7 +145,7 @@ Returns most recent used tags
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:124](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/posts/tags.ts#L124)
+[sdk/src/posts/tags.ts:124](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/tags.ts#L124)
 
 ___
 
@@ -169,4 +169,4 @@ ___
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:73](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/posts/tags.ts#L73)
+[sdk/src/posts/tags.ts:73](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/tags.ts#L73)

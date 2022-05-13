@@ -23,7 +23,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/logging/index.ts:11](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/logging/index.ts#L11)
+[sdk/src/logging/index.ts:11](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/logging/index.ts#L11)
 
 ## Methods
 
@@ -49,4 +49,4 @@ ILogger
 
 #### Defined in
 
-[sdk/src/logging/index.ts:20](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/logging/index.ts#L20)
+[sdk/src/logging/index.ts:20](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/logging/index.ts#L20)

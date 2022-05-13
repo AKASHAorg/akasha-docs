@@ -10,6 +10,9 @@ hide_title: true
 description: "Test Description"
 ---
 
+AKASHA SDK is a modular set of utilities and apis that can be used to build
+your own app.
+
 ## Namespaces
 
 - [sdk](namespaces/sdk.md)
@@ -41,7 +44,7 @@ const sdk = getSDK();
 
 #### Defined in
 
-[sdk/src/index.ts:72](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/index.ts#L72)
+[sdk/src/index.ts:68](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/index.ts#L68)
 
 ___
 
@@ -63,4 +66,4 @@ const sdk = init();
 
 #### Defined in
 
-[sdk/src/index.ts:89](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/index.ts#L89)
+[sdk/src/index.ts:85](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/index.ts#L85)

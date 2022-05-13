@@ -33,7 +33,7 @@ description: "Test Description"
 
 #### Defined in
 
-sdk/typings/lib/interfaces/posts.d.ts:130
+sdk/typings/lib/interfaces/posts.d.ts:78
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-sdk/typings/lib/interfaces/posts.d.ts:112
+sdk/typings/lib/interfaces/posts.d.ts:72
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-sdk/typings/lib/interfaces/posts.d.ts:117
+sdk/typings/lib/interfaces/posts.d.ts:73
 
 ___
 
@@ -83,15 +83,13 @@ ___
 
 **getTrending**(): `unknown`
 
-Returns most recent used tags
-
 #### Returns
 
 `unknown`
 
 #### Defined in
 
-sdk/typings/lib/interfaces/posts.d.ts:134
+sdk/typings/lib/interfaces/posts.d.ts:79
 
 ___
 
@@ -111,4 +109,4 @@ ___
 
 #### Defined in
 
-sdk/typings/lib/interfaces/posts.d.ts:125
+sdk/typings/lib/interfaces/posts.d.ts:77

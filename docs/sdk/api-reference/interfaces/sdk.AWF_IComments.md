@@ -39,7 +39,7 @@ description: "Test Description"
 
 #### Defined in
 
-sdk/typings/lib/interfaces/posts.d.ts:86
+sdk/typings/lib/interfaces/posts.d.ts:50
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-sdk/typings/lib/interfaces/posts.d.ts:95
+sdk/typings/lib/interfaces/posts.d.ts:59
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-sdk/typings/lib/interfaces/posts.d.ts:72
+sdk/typings/lib/interfaces/posts.d.ts:44
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-sdk/typings/lib/interfaces/posts.d.ts:77
+sdk/typings/lib/interfaces/posts.d.ts:45
 
 ___
 
@@ -129,4 +129,4 @@ ___
 
 #### Defined in
 
-sdk/typings/lib/interfaces/posts.d.ts:105
+sdk/typings/lib/interfaces/posts.d.ts:69

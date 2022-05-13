@@ -19,7 +19,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/db/app.schema.ts:46](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/db/app.schema.ts#L46)
+[sdk/src/db/app.schema.ts:46](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/app.schema.ts#L46)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[sdk/src/db/app.schema.ts:41](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/db/app.schema.ts#L41)
+[sdk/src/db/app.schema.ts:41](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/app.schema.ts#L41)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[sdk/src/db/app.schema.ts:42](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/db/app.schema.ts#L42)
+[sdk/src/db/app.schema.ts:42](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/app.schema.ts#L42)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[sdk/src/db/app.schema.ts:40](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/db/app.schema.ts#L40)
+[sdk/src/db/app.schema.ts:40](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/app.schema.ts#L40)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[sdk/src/db/app.schema.ts:44](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/db/app.schema.ts#L44)
+[sdk/src/db/app.schema.ts:44](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/app.schema.ts#L44)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[sdk/src/db/app.schema.ts:45](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/db/app.schema.ts#L45)
+[sdk/src/db/app.schema.ts:45](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/app.schema.ts#L45)
 
 ___
 
@@ -79,4 +79,4 @@ ___
 
 #### Defined in
 
-[sdk/src/db/app.schema.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/db/app.schema.ts#L43)
+[sdk/src/db/app.schema.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/app.schema.ts#L43)

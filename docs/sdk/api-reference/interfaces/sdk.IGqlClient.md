@@ -17,10 +17,6 @@ description: "Test Description"
 | :------ |
 | `Operation` |
 
-## Implemented by
-
-- [`Gql`](../classes/sdk.Gql.md)
-
 ## Methods
 
 ### run
