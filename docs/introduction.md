@@ -11,7 +11,7 @@ Welcome to the AKASHA's Docs! This is the place where you can find all the docum
 
 **Students** that want to learn more about new **web3** technologies.
 
-**Companies** because why not?
+**Companies** because ...
 
 
 ### What is AKASHA?
