@@ -58,6 +58,7 @@ const config = {
         categoryOrder: ['API', 'Services'],
         sidebar: {
           categoryLabel: 'SDK Reference',
+          position: 3,
         },
         hideMembersSymbol: true,
         frontmatter: {
@@ -81,6 +82,7 @@ const config = {
         excludeInternal: true,
         sidebar: {
           categoryLabel: 'React Hooks',
+          position: 5,
         },
         frontmatter: null,
       },

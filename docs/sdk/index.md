@@ -17,7 +17,7 @@ The AKASHA SDK is used in every world instance and provides the core functionali
 To instantiate the SDK, you can use one of the methods it exports:
 
 ```typescript
-import getSDK from '@akashaproject/sdk/build/web/sdk';
+import getSDK from '@akashaorg/awf-sdk';
 
 const sdk = getSDK();
 
@@ -28,7 +28,7 @@ or:
 
 ```ts
 
-import {init} from '@akashaproject/awf-sdk';
+import {init} from '@akashaorg/awf-sdk';
 
 const sdk = init();
 
