@@ -1,6 +1,6 @@
-# React Hooks
+# React hooks
 
-Most of the SDK's methods are also implemented as React Hooks.
+Most of the SDK's methods are also implemented as React hooks.
 
 Currently we have the following hooks:
 

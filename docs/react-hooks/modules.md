@@ -1,6 +1,6 @@
 ---
 id: "modules"
-title: "React Hooks"
+title: "React hooks"
 sidebar_label: "Exports"
 sidebar_position: 0.5
 custom_edit_url: null

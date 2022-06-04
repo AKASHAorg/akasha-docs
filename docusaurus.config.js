@@ -48,7 +48,7 @@ const config = {
         tsconfig: 'akasha-framework/sdk/tsconfig.json',
         readme: 'none',
         out: './sdk/api-reference',
-        name: 'AKASHA SDK Reference',
+        name: 'AKASHA SDK reference',
         categorizeByGroup: false,
         // plugin
         plugin: ['typedoc-plugin-missing-exports'],
@@ -57,7 +57,7 @@ const config = {
         excludeInternal: true,
         categoryOrder: ['API', 'Services'],
         sidebar: {
-          categoryLabel: 'SDK Reference',
+          categoryLabel: 'SDK reference',
           position: 3,
         },
         hideMembersSymbol: true,
@@ -78,10 +78,10 @@ const config = {
         tsconfig: './akasha-framework/ui/hooks/tsconfig.json',
         readme: 'docs/react-hooks/_hooks-list_.md',
         out: './react-hooks',
-        name: 'React Hooks',
+        name: 'React hooks',
         excludeInternal: true,
         sidebar: {
-          categoryLabel: 'React Hooks',
+          categoryLabel: 'React hooks',
           position: 5,
         },
         frontmatter: null,
@@ -103,11 +103,11 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'introduction',
+            docId: 'index',
             position: 'left',
             label: 'Docs',
           },
-          {to: '/blog', label: 'Tutorials', position: 'left'},
+          // {to: '/blog', label: 'Tutorials', position: 'left'},
           {
             href: 'https://github.com/AKASHAorg/akasha-docs',
             label: 'GitHub',
@@ -155,10 +155,10 @@ const config = {
           {
             title: 'More',
             items: [
-              {
-                label: 'Tutorials',
-                to: '/blog',
-              },
+              // {
+              //   label: 'Tutorials',
+              //   to: '/blog',
+              // },
               {
                 label: 'Docs GitHub',
                 href: 'https://github.com/AKASHAorg/akasha-docs',
