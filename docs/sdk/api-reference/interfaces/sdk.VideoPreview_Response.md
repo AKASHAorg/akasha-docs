@@ -15,47 +15,47 @@ description: "Test Description"
 
 ### height
 
- **height**: `string`
+**height**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:46
 
-___
+---
 
 ### secureUrl
 
- **secureUrl**: `string`
+**secureUrl**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:43
 
-___
+---
 
 ### type
 
- **type**: `string`
+**type**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:44
 
-___
+---
 
 ### url
 
- **url**: `string`
+**url**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:42
 
-___
+---
 
 ### width
 
- **width**: `string`
+**width**: `string`
 
 #### Defined in
 

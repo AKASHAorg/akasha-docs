@@ -23,15 +23,15 @@ description: "Test Description"
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opt` | `Object` |
-| `opt.data` | [`DataProviderInput`](sdk.DataProviderInput.md)[] |
-| `opt.entryID` | `string` |
-| `opt.post` | `Object` |
-| `opt.post.quotes?` | `string`[] |
-| `opt.post.tags?` | `string`[] |
-| `opt.post.title?` | `string` |
+| Name               | Type                                              |
+| :----------------- | :------------------------------------------------ |
+| `opt`              | `Object`                                          |
+| `opt.data`         | [`DataProviderInput`](sdk.DataProviderInput.md)[] |
+| `opt.entryID`      | `string`                                          |
+| `opt.post`         | `Object`                                          |
+| `opt.post.quotes?` | `string`[]                                        |
+| `opt.post.tags?`   | `string`[]                                        |
+| `opt.post.title?`  | `string`                                          |
 
 #### Returns
 
@@ -41,7 +41,7 @@ description: "Test Description"
 
 sdk/typings/lib/interfaces/posts.d.ts:17
 
-___
+---
 
 ### entriesByAuthor
 
@@ -49,12 +49,12 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opt` | `Object` |
-| `opt.limit` | `number` |
+| Name          | Type     |
+| :------------ | :------- |
+| `opt`         | `Object` |
+| `opt.limit`   | `number` |
 | `opt.offset?` | `number` |
-| `opt.pubKey` | `string` |
+| `opt.pubKey`  | `string` |
 
 #### Returns
 
@@ -64,7 +64,7 @@ ___
 
 sdk/typings/lib/interfaces/posts.d.ts:27
 
-___
+---
 
 ### entriesByTag
 
@@ -72,11 +72,11 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opt` | `Object` |
-| `opt.limit` | `number` |
-| `opt.name` | `string` |
+| Name          | Type     |
+| :------------ | :------- |
+| `opt`         | `Object` |
+| `opt.limit`   | `number` |
+| `opt.name`    | `string` |
 | `opt.offset?` | `string` |
 
 #### Returns
@@ -87,7 +87,7 @@ ___
 
 sdk/typings/lib/interfaces/posts.d.ts:32
 
-___
+---
 
 ### getEntries
 
@@ -95,10 +95,10 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opt` | `Object` |
-| `opt.limit` | `number` |
+| Name          | Type     |
+| :------------ | :------- |
+| `opt`         | `Object` |
+| `opt.limit`   | `number` |
 | `opt.offset?` | `string` |
 
 #### Returns
@@ -109,7 +109,7 @@ ___
 
 sdk/typings/lib/interfaces/posts.d.ts:5
 
-___
+---
 
 ### getEntry
 
@@ -117,8 +117,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type     |
+| :-------- | :------- |
 | `entryId` | `string` |
 
 #### Returns
@@ -129,7 +129,7 @@ ___
 
 sdk/typings/lib/interfaces/posts.d.ts:4
 
-___
+---
 
 ### getFeedEntries
 
@@ -137,10 +137,10 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opt` | `Object` |
-| `opt.limit` | `number` |
+| Name          | Type     |
+| :------------ | :------- |
+| `opt`         | `Object` |
+| `opt.limit`   | `number` |
 | `opt.offset?` | `number` |
 
 #### Returns
@@ -151,7 +151,7 @@ ___
 
 sdk/typings/lib/interfaces/posts.d.ts:38
 
-___
+---
 
 ### getLinkPreview
 
@@ -159,8 +159,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type     |
+| :----- | :------- |
 | `link` | `string` |
 
 #### Returns
@@ -171,7 +171,7 @@ ___
 
 sdk/typings/lib/interfaces/posts.d.ts:37
 
-___
+---
 
 ### postEntry
 
@@ -179,14 +179,14 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opt` | `Object` |
-| `opt.data` | [`DataProviderInput`](sdk.DataProviderInput.md)[] |
-| `opt.post` | `Object` |
-| `opt.post.quotes?` | `string`[] |
-| `opt.post.tags?` | `string`[] |
-| `opt.post.title?` | `string` |
+| Name               | Type                                              |
+| :----------------- | :------------------------------------------------ |
+| `opt`              | `Object`                                          |
+| `opt.data`         | [`DataProviderInput`](sdk.DataProviderInput.md)[] |
+| `opt.post`         | `Object`                                          |
+| `opt.post.quotes?` | `string`[]                                        |
+| `opt.post.tags?`   | `string`[]                                        |
+| `opt.post.title?`  | `string`                                          |
 
 #### Returns
 
@@ -196,7 +196,7 @@ ___
 
 sdk/typings/lib/interfaces/posts.d.ts:9
 
-___
+---
 
 ### removeEntry
 
@@ -204,8 +204,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type     |
+| :-------- | :------- |
 | `entryID` | `string` |
 
 #### Returns

@@ -11,6 +11,7 @@ A widget cannot have it's own routes, hence you cannot navigate to a widget and 
 The areas are defined by the [Layout Widget](/docs/integrations/layout-widget) and it may be hidden on some specific browser sizes. For example the widget area in the current implementation of the Layout Widget is hidden on mobile devices.
 
 Examples of widgets are:
- - "Trending Right Now" widget showing trending topics and people
- - "Topbar" widget
- - "Mini Profile" widget which shows a information about the author of a post in the full post page
+
+- "Trending Right Now" widget showing trending topics and people
+- "Topbar" widget
+- "Mini Profile" widget which shows a information about the author of a post in the full post page

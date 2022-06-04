@@ -14,24 +14,24 @@ description: "Test Description"
 ## Type parameters
 
 | Name |
-| :------ |
-| `T` |
+| :--- |
+| `T`  |
 
 ## Properties
 
 ### options
 
- **options**: `T`
+**options**: `T`
 
 #### Defined in
 
 [sdk/src/db/settings.schema.ts:22](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/settings.schema.ts#L22)
 
-___
+---
 
 ### serviceName
 
- **serviceName**: `string`
+**serviceName**: `string`
 
 #### Defined in
 

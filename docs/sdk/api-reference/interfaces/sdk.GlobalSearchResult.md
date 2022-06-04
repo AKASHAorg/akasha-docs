@@ -15,37 +15,37 @@ description: "Test Description"
 
 ### comments
 
- **comments**: [[`GlobalSearchResultItem`](sdk.GlobalSearchResultItem.md)]
+**comments**: [[`GlobalSearchResultItem`](sdk.GlobalSearchResultItem.md)]
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:110
 
-___
+---
 
 ### posts
 
- **posts**: [[`GlobalSearchResultItem`](sdk.GlobalSearchResultItem.md)]
+**posts**: [[`GlobalSearchResultItem`](sdk.GlobalSearchResultItem.md)]
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:108
 
-___
+---
 
 ### profiles
 
- **profiles**: [[`GlobalSearchResultItem`](sdk.GlobalSearchResultItem.md)]
+**profiles**: [[`GlobalSearchResultItem`](sdk.GlobalSearchResultItem.md)]
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:111
 
-___
+---
 
 ### tags
 
- **tags**: [[`GlobalSearchResultTagItem`](sdk.GlobalSearchResultTagItem.md)]
+**tags**: [[`GlobalSearchResultTagItem`](sdk.GlobalSearchResultTagItem.md)]
 
 #### Defined in
 

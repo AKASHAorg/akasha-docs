@@ -15,147 +15,147 @@ description: "Test Description"
 
 ### \_id
 
- **\_id**: `string`
+**\_id**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:60
 
-___
+---
 
 ### avatar
 
- **avatar**: `string`
+**avatar**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:67
 
-___
+---
 
 ### coverImage
 
- **coverImage**: `string`
+**coverImage**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:68
 
-___
+---
 
 ### creationDate
 
- **creationDate**: `string`
+**creationDate**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:63
 
-___
+---
 
 ### default
 
- **default**: [[`DataProviderInput`](sdk.DataProviderInput.md)]
+**default**: [[`DataProviderInput`](sdk.DataProviderInput.md)]
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:71
 
-___
+---
 
 ### description
 
- **description**: `string`
+**description**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:66
 
-___
+---
 
 ### ethAddress
 
- **ethAddress**: `string`
+**ethAddress**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:61
 
-___
+---
 
 ### name
 
- **name**: `string`
+**name**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:65
 
-___
+---
 
 ### providers
 
- **providers**: [[`DataProviderInput`](sdk.DataProviderInput.md)]
+**providers**: [[`DataProviderInput`](sdk.DataProviderInput.md)]
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:70
 
-___
+---
 
 ### pubKey
 
- **pubKey**: `string`
+**pubKey**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:62
 
-___
+---
 
 ### totalFollowers
 
- **totalFollowers**: `number`
+**totalFollowers**: `number`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:72
 
-___
+---
 
 ### totalFollowing
 
- **totalFollowing**: `number`
+**totalFollowing**: `number`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:73
 
-___
+---
 
 ### totalInterests
 
- **totalInterests**: `number`
+**totalInterests**: `number`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:74
 
-___
+---
 
 ### totalPosts
 
- **totalPosts**: `string`
+**totalPosts**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:69
 
-___
+---
 
 ### userName
 
- **userName**: `string`
+**userName**: `string`
 
 #### Defined in
 

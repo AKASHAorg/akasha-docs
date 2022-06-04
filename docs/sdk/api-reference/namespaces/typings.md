@@ -23,28 +23,28 @@ description: "Test Description"
 
 ### TYPES
 
- `Const` **TYPES**: `Object`
+`Const` **TYPES**: `Object`
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
+| Name          | Type     |
+| :------------ | :------- |
 | `AppSettings` | `symbol` |
-| `Auth` | `symbol` |
-| `Comment` | `symbol` |
-| `Db` | `symbol` |
-| `ENS` | `symbol` |
-| `Entry` | `symbol` |
-| `EventBus` | `symbol` |
-| `Gql` | `symbol` |
-| `ICRegistry` | `symbol` |
-| `IPFS` | `symbol` |
-| `Log` | `symbol` |
-| `Profile` | `symbol` |
-| `Settings` | `symbol` |
-| `Stash` | `symbol` |
-| `Tag` | `symbol` |
-| `Web3` | `symbol` |
+| `Auth`        | `symbol` |
+| `Comment`     | `symbol` |
+| `Db`          | `symbol` |
+| `ENS`         | `symbol` |
+| `Entry`       | `symbol` |
+| `EventBus`    | `symbol` |
+| `Gql`         | `symbol` |
+| `ICRegistry`  | `symbol` |
+| `IPFS`        | `symbol` |
+| `Log`         | `symbol` |
+| `Profile`     | `symbol` |
+| `Settings`    | `symbol` |
+| `Stash`       | `symbol` |
+| `Tag`         | `symbol` |
+| `Web3`        | `symbol` |
 
 #### Defined in
 

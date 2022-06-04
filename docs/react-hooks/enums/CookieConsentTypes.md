@@ -16,7 +16,7 @@ custom_edit_url: null
 
 [ui/hooks/src/use-analytics.tsx:17](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-analytics.tsx#L17)
 
-___
+---
 
 ### ESSENTIAL
 

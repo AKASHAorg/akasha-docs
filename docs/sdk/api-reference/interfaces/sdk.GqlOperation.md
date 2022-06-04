@@ -15,47 +15,47 @@ description: "Test Description"
 
 ### context
 
- `Optional` **context**: `Record`<`string`, `unknown`\>
+`Optional` **context**: `Record`<`string`, `unknown`\>
 
 #### Defined in
 
 [sdk/src/gql/index.ts:14](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/gql/index.ts#L14)
 
-___
+---
 
 ### extensions
 
- `Optional` **extensions**: `Record`<`string`, `unknown`\>
+`Optional` **extensions**: `Record`<`string`, `unknown`\>
 
 #### Defined in
 
 [sdk/src/gql/index.ts:15](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/gql/index.ts#L15)
 
-___
+---
 
 ### operationName
 
- `Optional` **operationName**: `string`
+`Optional` **operationName**: `string`
 
 #### Defined in
 
 [sdk/src/gql/index.ts:13](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/gql/index.ts#L13)
 
-___
+---
 
 ### query
 
- **query**: `string`
+**query**: `string`
 
 #### Defined in
 
 [sdk/src/gql/index.ts:11](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/gql/index.ts#L11)
 
-___
+---
 
 ### variables
 
- `Optional` **variables**: `Record`<`string`, `unknown`\>
+`Optional` **variables**: `Record`<`string`, `unknown`\>
 
 #### Defined in
 

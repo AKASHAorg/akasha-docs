@@ -27,8 +27,8 @@ Returns an app configuration object
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name      | Type     | Description     |
+| :-------- | :------- | :-------------- |
 | `appName` | `string` | Name of the app |
 
 #### Returns
@@ -39,7 +39,7 @@ Returns an app configuration object
 
 sdk/typings/lib/interfaces/settings.d.ts:15
 
-___
+---
 
 ### getAll
 
@@ -55,7 +55,7 @@ Returns all installed apps
 
 sdk/typings/lib/interfaces/settings.d.ts:19
 
-___
+---
 
 ### install
 
@@ -65,9 +65,9 @@ Persist installed app configuration for the current user
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `app` | `unknown` | Object |
+| Name  | Type      | Description |
+| :---- | :-------- | :---------- |
+| `app` | `unknown` | Object      |
 
 #### Returns
 
@@ -77,7 +77,7 @@ Persist installed app configuration for the current user
 
 sdk/typings/lib/interfaces/settings.d.ts:24
 
-___
+---
 
 ### uninstall
 
@@ -87,8 +87,8 @@ Uninstall app by name
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name      | Type     | Description     |
+| :-------- | :------- | :-------------- |
 | `appName` | `string` | Name of the app |
 
 #### Returns

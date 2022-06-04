@@ -23,9 +23,9 @@ description: "Test Description"
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `logFactory` | [`Logging`](sdk.Logging.md) |
+| Name            | Type                          |
+| :-------------- | :---------------------------- |
+| `logFactory`    | [`Logging`](sdk.Logging.md)   |
 | `globalChannel` | [`EventBus`](sdk.EventBus.md) |
 
 #### Defined in
@@ -36,7 +36,7 @@ description: "Test Description"
 
 ### network
 
- `Readonly` **network**: ``"rinkeby"``
+`Readonly` **network**: `"rinkeby"`
 
 #### Implementation of
 
@@ -46,11 +46,11 @@ description: "Test Description"
 
 [sdk/src/common/web3.connector.ts:32](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L32)
 
-___
+---
 
 ### networkId
 
- `Readonly` **networkId**: `Readonly`<{ `goerli`: `number` = 5; `kovan`: `number` = 42; `mainnet`: `number` = 1; `rinkeby`: `number` = 4; `ropsten`: `number` = 3 }\>
+`Readonly` **networkId**: `Readonly`<{ `goerli`: `number` = 5; `kovan`: `number` = 42; `mainnet`: `number` = 1; `rinkeby`: `number` = 4; `ropsten`: `number` = 3 }\>
 
 #### Implementation of
 
@@ -98,7 +98,7 @@ Get access to the web3 provider instance
 
 [sdk/src/common/web3.connector.ts:168](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L168)
 
-___
+---
 
 ### connect
 
@@ -106,8 +106,8 @@ ___
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
+| Name       | Type                                           | Default value       | Description                             |
+| :--------- | :--------------------------------------------- | :------------------ | :-------------------------------------- |
 | `provider` | [`EthProviders`](../enums/sdk.EthProviders.md) | `EthProviders.None` | Number representing the provider option |
 
 #### Returns
@@ -122,7 +122,7 @@ ___
 
 [sdk/src/common/web3.connector.ts:59](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L59)
 
-___
+---
 
 ### detectInjectedProvider
 
@@ -136,7 +136,7 @@ ___
 
 [sdk/src/common/web3.connector.ts:171](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L171)
 
-___
+---
 
 ### disconnect
 
@@ -156,7 +156,7 @@ Remove the web3 connection
 
 [sdk/src/common/web3.connector.ts:98](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L98)
 
-___
+---
 
 ### getCurrentAddress
 
@@ -176,7 +176,7 @@ the current eth address that is connected to the provider
 
 [sdk/src/common/web3.connector.ts:135](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L135)
 
-___
+---
 
 ### getRequiredNetworkName
 
@@ -190,7 +190,7 @@ ___
 
 [sdk/src/common/web3.connector.ts:139](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L139)
 
-___
+---
 
 ### getSigner
 
@@ -204,7 +204,7 @@ ___
 
 [sdk/src/common/web3.connector.ts:121](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L121)
 
-___
+---
 
 ### requestWalletPermissions
 
@@ -218,7 +218,7 @@ ___
 
 [sdk/src/common/web3.connector.ts:75](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L75)
 
-___
+---
 
 ### signMessage
 
@@ -228,8 +228,8 @@ Enforce personal_sign method for message signature
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name      | Type     | Description                   |
+| :-------- | :------- | :---------------------------- |
 | `message` | `string` | Human readable string to sign |
 
 #### Returns
@@ -244,7 +244,7 @@ Enforce personal_sign method for message signature
 
 [sdk/src/common/web3.connector.ts:117](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L117)
 
-___
+---
 
 ### switchToRequiredNetwork
 

@@ -27,14 +27,14 @@ Authentication module
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `db` | [`DB`](sdk.DB.md) |
-| `web3` | [`Web3Connector`](sdk.Web3Connector.md) |
-| `globalChannel` | [`EventBus`](sdk.EventBus.md) |
-| `log` | [`Logging`](sdk.Logging.md) |
-| `settings` | [`Settings`](sdk.Settings.md) |
-| `gql` | `Gql` |
+| Name            | Type                                    |
+| :-------------- | :-------------------------------------- |
+| `db`            | [`DB`](sdk.DB.md)                       |
+| `web3`          | [`Web3Connector`](sdk.Web3Connector.md) |
+| `globalChannel` | [`EventBus`](sdk.EventBus.md)           |
+| `log`           | [`Logging`](sdk.Logging.md)             |
+| `settings`      | [`Settings`](sdk.Settings.md)           |
+| `gql`           | `Gql`                                   |
 
 #### Defined in
 
@@ -42,79 +42,79 @@ Authentication module
 
 ## Properties
 
-### SIGN\_OUT\_EVENT
+### SIGN_OUT_EVENT
 
- `Readonly` **SIGN\_OUT\_EVENT**: ``"@sign_out"``
+`Readonly` **SIGN_OUT_EVENT**: `"@sign_out"`
 
 #### Defined in
 
 [sdk/src/auth/index.ts:70](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L70)
 
-___
+---
 
-### SYNC\_CHANNEL
+### SYNC_CHANNEL
 
- `Readonly` **SYNC\_CHANNEL**: ``"@sync_data"``
+`Readonly` **SYNC_CHANNEL**: `"@sync_data"`
 
 #### Defined in
 
 [sdk/src/auth/index.ts:69](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L69)
 
-___
+---
 
-### SYNC\_REQUEST
+### SYNC_REQUEST
 
- `Readonly` **SYNC\_REQUEST**: ``"@sync_request"``
+`Readonly` **SYNC_REQUEST**: `"@sync_request"`
 
 #### Defined in
 
 [sdk/src/auth/index.ts:67](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L67)
 
-___
+---
 
-### SYNC\_RESPONSE
+### SYNC_RESPONSE
 
- `Readonly` **SYNC\_RESPONSE**: ``"@sync_response"``
+`Readonly` **SYNC_RESPONSE**: `"@sync_response"`
 
 #### Defined in
 
 [sdk/src/auth/index.ts:68](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L68)
 
-___
+---
 
 ### currentUserKey
 
- `Readonly` **currentUserKey**: ``"@currentUserType"``
+`Readonly` **currentUserKey**: `"@currentUserType"`
 
 #### Defined in
 
 [sdk/src/auth/index.ts:66](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L66)
 
-___
+---
 
 ### encoder
 
- `Readonly` **encoder**: `TextEncoder`
+`Readonly` **encoder**: `TextEncoder`
 
 #### Defined in
 
 [sdk/src/auth/index.ts:71](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L71)
 
-___
+---
 
 ### providerKey
 
- `Readonly` **providerKey**: ``"@providerType"``
+`Readonly` **providerKey**: `"@providerType"`
 
 #### Defined in
 
 [sdk/src/auth/index.ts:65](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L65)
 
-___
+---
 
 ### waitForAuth
 
- `Readonly` **waitForAuth**: ``"waitForAuth"``
+`Readonly` **waitForAuth**: `"waitForAuth"`
 
 #### Defined in
 
@@ -124,12 +124,12 @@ ___
 
 ### \_connectAddress
 
-**_connectAddress**(`provider`): `Promise`<`string`\>
+**\_connectAddress**(`provider`): `Promise`<`string`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type                                           |
+| :--------- | :--------------------------------------------- |
 | `provider` | [`EthProviders`](../enums/sdk.EthProviders.md) |
 
 #### Returns
@@ -140,23 +140,23 @@ ___
 
 [sdk/src/auth/index.ts:278](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L278)
 
-___
+---
 
 ### authenticateMutationData
 
-**authenticateMutationData**(`data`): `Observable`<{ `signedData`: { `data`: { `pubKey`: `string` ; `serializedData`: `any` ; `signature`: `string` \| `Uint8Array` = sig }  } ; `token`: { `data`: `string`  }  }\>
+**authenticateMutationData**(`data`): `Observable`<{ `signedData`: { `data`: { `pubKey`: `string` ; `serializedData`: `any` ; `signature`: `string` \| `Uint8Array` = sig } } ; `token`: { `data`: `string` } }\>
 
 Utility method for sending mutation graphql requests
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type                                                                           |
+| :----- | :----------------------------------------------------------------------------- |
 | `data` | `string` \| `Record`<`string`, `unknown`\> \| `Record`<`string`, `unknown`\>[] |
 
 #### Returns
 
-`Observable`<{ `signedData`: { `data`: { `pubKey`: `string` ; `serializedData`: `any` ; `signature`: `string` \| `Uint8Array` = sig }  } ; `token`: { `data`: `string`  }  }\>
+`Observable`<{ `signedData`: { `data`: { `pubKey`: `string` ; `serializedData`: `any` ; `signature`: `string` \| `Uint8Array` = sig } } ; `token`: { `data`: `string` } }\>
 
 #### Implementation of
 
@@ -166,24 +166,24 @@ Utility method for sending mutation graphql requests
 
 [sdk/src/auth/index.ts:551](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L551)
 
-___
+---
 
 ### checkIfSignedUp
 
-**checkIfSignedUp**(`ethAddress`): `Observable`<{ `data`: { `errors?`: `never`  }  }\>
+**checkIfSignedUp**(`ethAddress`): `Observable`<{ `data`: { `errors?`: `never` } }\>
 
 Verifies if an ethereum address is already registered
 Throws an UserNotRegistered error for addresses that are not registered
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name         | Type     |
+| :----------- | :------- |
 | `ethAddress` | `string` |
 
 #### Returns
 
-`Observable`<{ `data`: { `errors?`: `never`  }  }\>
+`Observable`<{ `data`: { `errors?`: `never` } }\>
 
 #### Implementation of
 
@@ -193,7 +193,7 @@ Throws an UserNotRegistered error for addresses that are not registered
 
 [sdk/src/auth/index.ts:133](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L133)
 
-___
+---
 
 ### connectAddress
 
@@ -201,8 +201,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type                                           |
+| :--------- | :--------------------------------------------- |
 | `provider` | [`EthProviders`](../enums/sdk.EthProviders.md) |
 
 #### Returns
@@ -213,23 +213,23 @@ ___
 
 [sdk/src/auth/index.ts:293](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L293)
 
-___
+---
 
 ### decryptMessage
 
-**decryptMessage**(`message`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `body`: `Record`<`string`, `any`\> ; `createdAt`: `number` ; `from`: `string` ; `id`: `string` ; `readAt`: `number`  }\>
+**decryptMessage**(`message`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `body`: `Record`<`string`, `any`\> ; `createdAt`: `number` ; `from`: `string` ; `id`: `string` ; `readAt`: `number` }\>
 
 Allows decryption of privately sent messages to the current identity
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type  |
+| :-------- | :---- |
 | `message` | `any` |
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `body`: `Record`<`string`, `any`\> ; `createdAt`: `number` ; `from`: `string` ; `id`: `string` ; `readAt`: `number`  }\>
+[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `body`: `Record`<`string`, `any`\> ; `createdAt`: `number` ; `from`: `string` ; `id`: `string` ; `readAt`: `number` }\>
 
 #### Implementation of
 
@@ -239,7 +239,7 @@ Allows decryption of privately sent messages to the current identity
 
 [sdk/src/auth/index.ts:563](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L563)
 
-___
+---
 
 ### deleteMessage
 
@@ -247,8 +247,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name        | Type     |
+| :---------- | :------- |
 | `messageId` | `string` |
 
 #### Returns
@@ -263,7 +263,7 @@ ___
 
 [sdk/src/auth/index.ts:659](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L659)
 
-___
+---
 
 ### enableSync
 
@@ -283,7 +283,7 @@ enable key sync between opened tabs
 
 [sdk/src/auth/index.ts:92](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L92)
 
-___
+---
 
 ### getCurrentUser
 
@@ -304,7 +304,7 @@ It will try to login if there is a previous session detected
 
 [sdk/src/auth/index.ts:433](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L433)
 
-___
+---
 
 ### getMessages
 
@@ -314,8 +314,8 @@ Returns all the inbox messages from Textile Users
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name   | Type               | Description      |
+| :----- | :----------------- | :--------------- |
 | `args` | `InboxListOptions` | InboxListOptions |
 
 #### Returns
@@ -330,17 +330,17 @@ Returns all the inbox messages from Textile Users
 
 [sdk/src/auth/index.ts:589](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L589)
 
-___
+---
 
 ### getSession
 
-**getSession**(): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `buck`: `Buckets` ; `client`: `Client` ; `user`: `Users`  }\>
+**getSession**(): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `buck`: `Buckets` ; `client`: `Client` ; `user`: `Users` }\>
 
 Returns current session objects for textile
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `buck`: `Buckets` ; `client`: `Client` ; `user`: `Users`  }\>
+[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `buck`: `Buckets` ; `client`: `Client` ; `user`: `Users` }\>
 
 #### Implementation of
 
@@ -350,7 +350,7 @@ Returns current session objects for textile
 
 [sdk/src/auth/index.ts:386](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L386)
 
-___
+---
 
 ### getToken
 
@@ -370,7 +370,7 @@ Generate a textile access token
 
 [sdk/src/auth/index.ts:413](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L413)
 
-___
+---
 
 ### hasNewNotifications
 
@@ -391,21 +391,21 @@ notification message type
 
 [sdk/src/auth/index.ts:628](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L628)
 
-___
+---
 
 ### markMessageAsRead
 
-**markMessageAsRead**(`messageId`): `Observable`<{ `data`: `boolean`  }\>
+**markMessageAsRead**(`messageId`): `Observable`<{ `data`: `boolean` }\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name        | Type     |
+| :---------- | :------- |
 | `messageId` | `string` |
 
 #### Returns
 
-`Observable`<{ `data`: `boolean`  }\>
+`Observable`<{ `data`: `boolean` }\>
 
 #### Implementation of
 
@@ -415,7 +415,7 @@ ___
 
 [sdk/src/auth/index.ts:639](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L639)
 
-___
+---
 
 ### signAuthMessage
 
@@ -429,7 +429,7 @@ ___
 
 [sdk/src/auth/index.ts:297](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L297)
 
-___
+---
 
 ### signComposedMessage
 
@@ -443,7 +443,7 @@ ___
 
 [sdk/src/auth/index.ts:312](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L312)
 
-___
+---
 
 ### signData
 
@@ -453,10 +453,10 @@ Sign data with the identity key
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `data` | `string` \| `Record`<`string`, `unknown`\> \| `Record`<`string`, `unknown`\>[] | `undefined` |
-| `base64Format` | `boolean` | `false` |
+| Name           | Type                                                                           | Default value |
+| :------------- | :----------------------------------------------------------------------------- | :------------ |
+| `data`         | `string` \| `Record`<`string`, `unknown`\> \| `Record`<`string`, `unknown`\>[] | `undefined`   |
+| `base64Format` | `boolean`                                                                      | `false`       |
 
 #### Returns
 
@@ -470,24 +470,24 @@ Sign data with the identity key
 
 [sdk/src/auth/index.ts:485](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L485)
 
-___
+---
 
 ### signIn
 
-**signIn**(`args`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<[`CurrentUser`](../interfaces/sdk.CurrentUser.md) & { `isNewUser`: `boolean`  }\>
+**signIn**(`args`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<[`CurrentUser`](../interfaces/sdk.CurrentUser.md) & { `isNewUser`: `boolean` }\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Object` |
-| `args.checkRegistered` | `boolean` |
-| `args.provider?` | [`EthProviders`](../enums/sdk.EthProviders.md) |
-| `args.resumeSignIn?` | `boolean` |
+| Name                   | Type                                           |
+| :--------------------- | :--------------------------------------------- |
+| `args`                 | `Object`                                       |
+| `args.checkRegistered` | `boolean`                                      |
+| `args.provider?`       | [`EthProviders`](../enums/sdk.EthProviders.md) |
+| `args.resumeSignIn?`   | `boolean`                                      |
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<[`CurrentUser`](../interfaces/sdk.CurrentUser.md) & { `isNewUser`: `boolean`  }\>
+[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<[`CurrentUser`](../interfaces/sdk.CurrentUser.md) & { `isNewUser`: `boolean` }\>
 
 #### Implementation of
 
@@ -497,7 +497,7 @@ ___
 
 [sdk/src/auth/index.ts:154](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L154)
 
-___
+---
 
 ### signOut
 
@@ -517,7 +517,7 @@ Destroy all the session objects
 
 [sdk/src/auth/index.ts:457](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L457)
 
-___
+---
 
 ### signTokenMessage
 
@@ -531,7 +531,7 @@ ___
 
 [sdk/src/auth/index.ts:331](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L331)
 
-___
+---
 
 ### validateInvite
 
@@ -539,8 +539,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name         | Type     |
+| :----------- | :------- |
 | `inviteCode` | `string` |
 
 #### Returns
@@ -555,7 +555,7 @@ ___
 
 [sdk/src/auth/index.ts:672](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/auth/index.ts#L672)
 
-___
+---
 
 ### verifySignature
 
@@ -565,12 +565,12 @@ Verify if a signature was made by a specific Public Key
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Object` |
-| `args.data` | `string` \| `Record`<`string`, `unknown`\> \| `Uint8Array` |
-| `args.pubKey` | `string` |
-| `args.signature` | `string` \| `Uint8Array` |
+| Name             | Type                                                       |
+| :--------------- | :--------------------------------------------------------- |
+| `args`           | `Object`                                                   |
+| `args.data`      | `string` \| `Record`<`string`, `unknown`\> \| `Uint8Array` |
+| `args.pubKey`    | `string`                                                   |
+| `args.signature` | `string` \| `Uint8Array`                                   |
 
 #### Returns
 

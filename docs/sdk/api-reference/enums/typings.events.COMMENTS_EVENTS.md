@@ -15,27 +15,27 @@ description: "Test Description"
 
 ### CREATE
 
- **CREATE** = `"#comments#Create"`
+**CREATE** = `"#comments#Create"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:32
 
-___
+---
 
 ### EDIT
 
- **EDIT** = `"#comments#Edit"`
+**EDIT** = `"#comments#Edit"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:33
 
-___
+---
 
 ### REMOVE
 
- **REMOVE** = `"#comments#Remove"`
+**REMOVE** = `"#comments#Remove"`
 
 #### Defined in
 

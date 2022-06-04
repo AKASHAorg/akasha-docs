@@ -16,7 +16,7 @@ custom_edit_url: null
 
 [ui/hooks/src/moderation-requests.ts:49](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/moderation-requests.ts#L49)
 
-___
+---
 
 ### \_mod
 
@@ -26,7 +26,7 @@ ___
 
 [ui/hooks/src/moderation-requests.ts:50](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/moderation-requests.ts#L50)
 
-___
+---
 
 ### author
 
@@ -36,7 +36,7 @@ ___
 
 [ui/hooks/src/moderation-requests.ts:52](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/moderation-requests.ts#L52)
 
-___
+---
 
 ### contentID
 
@@ -46,7 +46,7 @@ ___
 
 [ui/hooks/src/moderation-requests.ts:53](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/moderation-requests.ts#L53)
 
-___
+---
 
 ### contentType
 
@@ -56,7 +56,7 @@ ___
 
 [ui/hooks/src/moderation-requests.ts:54](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/moderation-requests.ts#L54)
 
-___
+---
 
 ### creationDate
 
@@ -66,7 +66,7 @@ ___
 
 [ui/hooks/src/moderation-requests.ts:51](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/moderation-requests.ts#L51)
 
-___
+---
 
 ### explanation
 
@@ -76,7 +76,7 @@ ___
 
 [ui/hooks/src/moderation-requests.ts:55](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/moderation-requests.ts#L55)
 
-___
+---
 
 ### reason
 

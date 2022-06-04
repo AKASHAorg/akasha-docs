@@ -23,8 +23,8 @@ description: "Test Description"
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type     |
+| :-------- | :------- |
 | `tagName` | `string` |
 
 #### Returns
@@ -35,7 +35,7 @@ description: "Test Description"
 
 sdk/typings/lib/interfaces/posts.d.ts:78
 
-___
+---
 
 ### getTag
 
@@ -43,8 +43,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type     |
+| :-------- | :------- |
 | `tagName` | `string` |
 
 #### Returns
@@ -55,7 +55,7 @@ ___
 
 sdk/typings/lib/interfaces/posts.d.ts:72
 
-___
+---
 
 ### getTags
 
@@ -63,10 +63,10 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opt` | `Object` |
-| `opt.limit` | `number` |
+| Name          | Type     |
+| :------------ | :------- |
+| `opt`         | `Object` |
+| `opt.limit`   | `number` |
 | `opt.offset?` | `string` |
 
 #### Returns
@@ -77,7 +77,7 @@ ___
 
 sdk/typings/lib/interfaces/posts.d.ts:73
 
-___
+---
 
 ### getTrending
 
@@ -91,7 +91,7 @@ ___
 
 sdk/typings/lib/interfaces/posts.d.ts:79
 
-___
+---
 
 ### searchTags
 
@@ -99,8 +99,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type     |
+| :----- | :------- |
 | `name` | `string` |
 
 #### Returns

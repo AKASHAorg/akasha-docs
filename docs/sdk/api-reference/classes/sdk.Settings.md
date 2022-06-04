@@ -25,25 +25,25 @@ description: "Test Description"
 
 ### get
 
-**get**<`T`\>(`service`): `Observable`<{ `data`: [`SettingsSchema`](../interfaces/sdk.SettingsSchema.md)<`T`\> & {} & `Instance`  }\>
+**get**<`T`\>(`service`): `Observable`<{ `data`: [`SettingsSchema`](../interfaces/sdk.SettingsSchema.md)<`T`\> & {} & `Instance` }\>
 
 Returns the settings object for a specified service name
 
 #### Type parameters
 
 | Name |
-| :------ |
-| `T` |
+| :--- |
+| `T`  |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name      | Type     | Description      |
+| :-------- | :------- | :--------------- |
 | `service` | `string` | The service name |
 
 #### Returns
 
-`Observable`<{ `data`: [`SettingsSchema`](../interfaces/sdk.SettingsSchema.md)<`T`\> & {} & `Instance`  }\>
+`Observable`<{ `data`: [`SettingsSchema`](../interfaces/sdk.SettingsSchema.md)<`T`\> & {} & `Instance` }\>
 
 #### Implementation of
 
@@ -53,7 +53,7 @@ Returns the settings object for a specified service name
 
 [sdk/src/settings/index.ts:19](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/index.ts#L19)
 
-___
+---
 
 ### remove
 
@@ -61,8 +61,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name          | Type     |
+| :------------ | :------- |
 | `serviceName` | `string` |
 
 #### Returns
@@ -77,7 +77,7 @@ ___
 
 [sdk/src/settings/index.ts:58](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/index.ts#L58)
 
-___
+---
 
 ### set
 
@@ -85,9 +85,9 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `service` | `string` | The service name |
+| Name      | Type                                            | Description                               |
+| :-------- | :---------------------------------------------- | :---------------------------------------- |
+| `service` | `string`                                        | The service name                          |
 | `options` | [[`string`, `string` \| `number` \| `boolean`]] | Array of option pairs [optionName, value] |
 
 #### Returns

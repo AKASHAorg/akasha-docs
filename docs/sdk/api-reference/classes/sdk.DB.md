@@ -31,8 +31,8 @@ Create a new DB instance
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name   | Type     | Description   |
+| :----- | :------- | :------------ |
 | `name` | `string` | database name |
 
 #### Returns
@@ -43,7 +43,7 @@ Create a new DB instance
 
 [sdk/src/db/index.ts:25](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/index.ts#L25)
 
-___
+---
 
 ### getCollection
 
@@ -54,13 +54,13 @@ Get access to the db collection by name
 #### Type parameters
 
 | Name |
-| :------ |
-| `T` |
+| :--- |
+| `T`  |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name   | Type     | Description                             |
+| :----- | :------- | :-------------------------------------- |
 | `name` | `string` | string representing the collection name |
 
 #### Returns
@@ -75,7 +75,7 @@ Get access to the db collection by name
 
 [sdk/src/db/index.ts:59](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/index.ts#L59)
 
-___
+---
 
 ### getDb
 
@@ -95,7 +95,7 @@ Get access to the local db
 
 [sdk/src/db/index.ts:50](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/index.ts#L50)
 
-___
+---
 
 ### open
 
@@ -103,9 +103,9 @@ ___
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `version` | `number` | `1` | number representing the db version |
+| Name      | Type     | Default value | Description                        |
+| :-------- | :------- | :------------ | :--------------------------------- |
+| `version` | `number` | `1`           | number representing the db version |
 
 #### Returns
 

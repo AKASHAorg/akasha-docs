@@ -23,8 +23,8 @@ description: "Test Description"
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name  | Type                        |
+| :---- | :-------------------------- |
 | `log` | [`Logging`](sdk.Logging.md) |
 
 #### Defined in
@@ -35,17 +35,17 @@ description: "Test Description"
 
 ### fallbackGateway
 
- `Readonly` **fallbackGateway**: ``"ipfs.infura-ipfs.io"``
+`Readonly` **fallbackGateway**: `"ipfs.infura-ipfs.io"`
 
 #### Defined in
 
 [sdk/src/common/ipfs.connector.ts:18](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L18)
 
-___
+---
 
 ### gateway
 
- `Readonly` **gateway**: ``"https://hub.textile.io/ipfs/"``
+`Readonly` **gateway**: `"https://hub.textile.io/ipfs/"`
 
 #### Implementation of
 
@@ -55,11 +55,11 @@ ___
 
 [sdk/src/common/ipfs.connector.ts:16](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L16)
 
-___
+---
 
 ### originGateway
 
- `Readonly` **originGateway**: ``"ipfs.hub.textile.io"``
+`Readonly` **originGateway**: `"ipfs.hub.textile.io"`
 
 #### Defined in
 
@@ -73,8 +73,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type              |
+| :----- | :---------------- |
 | `hash` | `string` \| `CID` |
 
 #### Returns
@@ -85,7 +85,7 @@ ___
 
 [sdk/src/common/ipfs.connector.ts:83](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L83)
 
-___
+---
 
 ### buildIpfsLinks
 
@@ -93,25 +93,25 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type              |
+| :----- | :---------------- |
 | `hash` | `string` \| `CID` |
 
 #### Returns
 
 `Object`
 
-| Name | Type |
-| :------ | :------ |
+| Name           | Type     |
+| :------------- | :------- |
 | `fallbackLink` | `string` |
-| `originLink` | `string` |
-| `pathLink` | `string` |
+| `originLink`   | `string` |
+| `pathLink`     | `string` |
 
 #### Defined in
 
 [sdk/src/common/ipfs.connector.ts:99](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L99)
 
-___
+---
 
 ### buildOriginLink
 
@@ -119,8 +119,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type              |
+| :----- | :---------------- |
 | `hash` | `string` \| `CID` |
 
 #### Returns
@@ -131,7 +131,7 @@ ___
 
 [sdk/src/common/ipfs.connector.ts:75](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L75)
 
-___
+---
 
 ### buildPathLink
 
@@ -139,8 +139,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type              |
+| :----- | :---------------- |
 | `hash` | `string` \| `CID` |
 
 #### Returns
@@ -151,7 +151,7 @@ ___
 
 [sdk/src/common/ipfs.connector.ts:91](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L91)
 
-___
+---
 
 ### catDocument
 
@@ -160,15 +160,15 @@ ___
 #### Type parameters
 
 | Name |
-| :------ |
-| `T` |
+| :--- |
+| `T`  |
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `docHash` | `string` \| `CID` | `undefined` |
-| `jsonResponse` | `boolean` | `false` |
+| Name           | Type              | Default value |
+| :------------- | :---------------- | :------------ |
+| `docHash`      | `string` \| `CID` | `undefined`   |
+| `jsonResponse` | `boolean`         | `false`       |
 
 #### Returns
 
@@ -182,7 +182,7 @@ ___
 
 [sdk/src/common/ipfs.connector.ts:37](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L37)
 
-___
+---
 
 ### getLegalDoc
 
@@ -190,9 +190,9 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `doc` | [`LEGAL_DOCS`](../enums/sdk.LEGAL_DOCS.md) | legal docs |
+| Name  | Type                                       | Description |
+| :---- | :----------------------------------------- | :---------- |
+| `doc` | [`LEGAL_DOCS`](../enums/sdk.LEGAL_DOCS.md) | legal docs  |
 
 #### Returns
 
@@ -206,7 +206,7 @@ ___
 
 [sdk/src/common/ipfs.connector.ts:59](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L59)
 
-___
+---
 
 ### getSettings
 
@@ -216,8 +216,8 @@ ___
 
 `Object`
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type     |
+| :-------- | :------- |
 | `gateway` | `string` |
 
 #### Implementation of
@@ -228,7 +228,7 @@ ___
 
 [sdk/src/common/ipfs.connector.ts:31](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L31)
 
-___
+---
 
 ### multiAddrToUri
 
@@ -236,8 +236,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type       |
+| :--------- | :--------- |
 | `addrList` | `string`[] |
 
 #### Returns
@@ -248,7 +248,7 @@ ___
 
 [sdk/src/common/ipfs.connector.ts:116](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L116)
 
-___
+---
 
 ### transformBase16HashToV1
 
@@ -256,8 +256,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type     |
+| :----- | :------- |
 | `hash` | `string` |
 
 #### Returns
@@ -268,7 +268,7 @@ ___
 
 [sdk/src/common/ipfs.connector.ts:111](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/ipfs.connector.ts#L111)
 
-___
+---
 
 ### validateCid
 
@@ -276,8 +276,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type              |
+| :----- | :---------------- |
 | `hash` | `string` \| `CID` |
 
 #### Returns

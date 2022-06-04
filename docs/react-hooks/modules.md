@@ -33,7 +33,7 @@ and passes it to the ThemeSelector component along with all available themes.
 
 [ui/hooks/src/utils/theme-wrapper.tsx:11](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/utils/theme-wrapper.tsx#L11)
 
-___
+---
 
 ### constants
 
@@ -41,29 +41,29 @@ ___
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `BASE_DECISION_URL` | `string` |
-| `BASE_MODERATOR_URL` | `string` |
-| `BASE_REASONS_URL` | `string` |
-| `BASE_REPORT_URL` | `string` |
-| `BASE_STATUS_URL` | `string` |
-| `CHECK_MODERATOR_KEY` | `string` |
-| `CONNECT_PROVIDER_KEY` | `string` |
-| `DEFAULT_FETCH_TIMEOUT` | `number` |
-| `DELISTED_ITEMS_KEY` | `string` |
-| `INJECTED_PROVIDER_KEY` | `string` |
-| `KEPT_ITEMS_KEY` | `string` |
-| `LOG_ITEMS_KEY` | `string` |
-| `MODERATED_CACHE_KEY_PREFIX` | `string` |
+| Name                                | Type     |
+| :---------------------------------- | :------- |
+| `BASE_DECISION_URL`                 | `string` |
+| `BASE_MODERATOR_URL`                | `string` |
+| `BASE_REASONS_URL`                  | `string` |
+| `BASE_REPORT_URL`                   | `string` |
+| `BASE_STATUS_URL`                   | `string` |
+| `CHECK_MODERATOR_KEY`               | `string` |
+| `CONNECT_PROVIDER_KEY`              | `string` |
+| `DEFAULT_FETCH_TIMEOUT`             | `number` |
+| `DELISTED_ITEMS_KEY`                | `string` |
+| `INJECTED_PROVIDER_KEY`             | `string` |
+| `KEPT_ITEMS_KEY`                    | `string` |
+| `LOG_ITEMS_KEY`                     | `string` |
+| `MODERATED_CACHE_KEY_PREFIX`        | `string` |
 | `MODERATION_COUNT_CACHE_KEY_PREFIX` | `string` |
-| `MODERATION_ITEMS_COUNT_KEY` | `string` |
-| `MODERATION_ITEM_FLAGS_KEY` | `string` |
-| `MODERATION_STATUS_KEY` | `string` |
-| `PENDING_CACHE_KEY_PREFIX` | `string` |
-| `PENDING_ITEMS_KEY` | `string` |
-| `REQUIRED_NETWORK_KEY` | `string` |
-| `TOKEN_VALIDATION_KEY` | `string` |
+| `MODERATION_ITEMS_COUNT_KEY`        | `string` |
+| `MODERATION_ITEM_FLAGS_KEY`         | `string` |
+| `MODERATION_STATUS_KEY`             | `string` |
+| `PENDING_CACHE_KEY_PREFIX`          | `string` |
+| `PENDING_ITEMS_KEY`                 | `string` |
+| `REQUIRED_NETWORK_KEY`              | `string` |
+| `TOKEN_VALIDATION_KEY`              | `string` |
 
 #### Defined in
 
@@ -77,10 +77,10 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `author` | `IProfileData` |
-| `entryPublishData` | `IPublishData` & { `entryId?`: `string`  } |
+| Name               | Type                                      |
+| :----------------- | :---------------------------------------- |
+| `author`           | `IProfileData`                            |
+| `entryPublishData` | `IPublishData` & { `entryId?`: `string` } |
 
 #### Returns
 
@@ -90,7 +90,7 @@ ___
 
 [ui/hooks/src/utils/entry-utils.ts:199](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/utils/entry-utils.ts#L199)
 
-___
+---
 
 ### getLinkPreview
 
@@ -98,8 +98,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name  | Type     |
+| :---- | :------- |
 | `url` | `string` |
 
 #### Returns
@@ -110,7 +110,7 @@ ___
 
 [ui/hooks/src/utils/media-utils.ts:100](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/utils/media-utils.ts#L100)
 
-___
+---
 
 ### getMediaUrl
 
@@ -120,8 +120,8 @@ Utility to build gateway links to ipfs content
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type     |
+| :------ | :------- |
 | `hash?` | `string` |
 
 #### Returns
@@ -132,17 +132,17 @@ originLink: textile subdomain gateway
 fallbackLink: infura subdomain gateway
 pathLink: textile path gateway
 
-| Name | Type |
-| :------ | :------ |
+| Name           | Type     |
+| :------------- | :------- |
 | `fallbackLink` | `string` |
-| `originLink` | `string` |
-| `pathLink` | `string` |
+| `originLink`   | `string` |
+| `pathLink`     | `string` |
 
 #### Defined in
 
 [ui/hooks/src/utils/media-utils.ts:19](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/utils/media-utils.ts#L19)
 
-___
+---
 
 ### mapEntry
 
@@ -155,10 +155,10 @@ entry images - append ipfs gateway
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `entry` | `PostResponse` \| `CommentResponse` |
-| `logger?` | `ILogger` |
+| Name      | Type                                |
+| :-------- | :---------------------------------- |
+| `entry`   | `PostResponse` \| `CommentResponse` |
+| `logger?` | `ILogger`                           |
 
 #### Returns
 
@@ -168,7 +168,7 @@ entry images - append ipfs gateway
 
 [ui/hooks/src/utils/entry-utils.ts:71](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/utils/entry-utils.ts#L71)
 
-___
+---
 
 ### switchToRequiredNetwork
 
@@ -184,28 +184,28 @@ An utility function to switch to required network - Metamask
 
 [ui/hooks/src/use-injected-provider.ts:38](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-injected-provider.ts#L38)
 
-___
+---
 
 ### uploadMediaToTextile
 
-▸ **uploadMediaToTextile**(`data`, `isUrl?`): `Promise`<{ `data`: { `size`: { `height`: `number` ; `naturalHeight`: `number` ; `naturalWidth`: `number` ; `width`: `number`  } = res.size; `src`: { `fallbackUrl`: `string` = ipfsLinks.fallbackLink; `url`: `string` = ipfsLinks.originLink }  } ; `error`: `undefined` = error } \| { `data`: `undefined` ; `error`: `any` = error }\>
+▸ **uploadMediaToTextile**(`data`, `isUrl?`): `Promise`<{ `data`: { `size`: { `height`: `number` ; `naturalHeight`: `number` ; `naturalWidth`: `number` ; `width`: `number` } = res.size; `src`: { `fallbackUrl`: `string` = ipfsLinks.fallbackLink; `url`: `string` = ipfsLinks.originLink } } ; `error`: `undefined` = error } \| { `data`: `undefined` ; `error`: `any` = error }\>
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `data` | `File` | `undefined` |
-| `isUrl` | `boolean` | `false` |
+| Name    | Type      | Default value |
+| :------ | :-------- | :------------ |
+| `data`  | `File`    | `undefined`   |
+| `isUrl` | `boolean` | `false`       |
 
 #### Returns
 
-`Promise`<{ `data`: { `size`: { `height`: `number` ; `naturalHeight`: `number` ; `naturalWidth`: `number` ; `width`: `number`  } = res.size; `src`: { `fallbackUrl`: `string` = ipfsLinks.fallbackLink; `url`: `string` = ipfsLinks.originLink }  } ; `error`: `undefined` = error } \| { `data`: `undefined` ; `error`: `any` = error }\>
+`Promise`<{ `data`: { `size`: { `height`: `number` ; `naturalHeight`: `number` ; `naturalWidth`: `number` ; `width`: `number` } = res.size; `src`: { `fallbackUrl`: `string` = ipfsLinks.fallbackLink; `url`: `string` = ipfsLinks.originLink } } ; `error`: `undefined` = error } \| { `data`: `undefined` ; `error`: `any` = error }\>
 
 #### Defined in
 
 [ui/hooks/src/utils/media-utils.ts:58](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/utils/media-utils.ts#L58)
 
-___
+---
 
 ### useAnalytics
 
@@ -219,7 +219,7 @@ ___
 
 [ui/hooks/src/use-analytics.tsx:32](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-analytics.tsx#L32)
 
-___
+---
 
 ### useCheckModerator
 
@@ -229,8 +229,8 @@ Hook to check if a user is a moderator
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name         | Type     | Description                    |
+| :----------- | :------- | :----------------------------- |
 | `loggedUser` | `string` | textile public key of the user |
 
 #### Returns
@@ -241,7 +241,7 @@ Hook to check if a user is a moderator
 
 [ui/hooks/src/use-moderation.ts:188](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-moderation.ts#L188)
 
-___
+---
 
 ### useCheckNewNotifications
 
@@ -251,8 +251,8 @@ Hook to check for new notifications
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name               | Type     | Description                            |
+| :----------------- | :------- | :------------------------------------- |
 | `loggedEthAddress` | `string` | currently logged in user's eth address |
 
 #### Returns
@@ -263,7 +263,7 @@ Hook to check for new notifications
 
 [ui/hooks/src/use-notifications.ts:109](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-notifications.ts#L109)
 
-___
+---
 
 ### useComment
 
@@ -273,10 +273,10 @@ Hook for fetching data for a specific comment
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `commentID` | `string` | `undefined` | id of comment to fetch data for |
-| `enabler` | `boolean` | `true` | flag for allowing the query |
+| Name        | Type      | Default value | Description                     |
+| :---------- | :-------- | :------------ | :------------------------------ |
+| `commentID` | `string`  | `undefined`   | id of comment to fetch data for |
+| `enabler`   | `boolean` | `true`        | flag for allowing the query     |
 
 #### Returns
 
@@ -286,7 +286,7 @@ Hook for fetching data for a specific comment
 
 [ui/hooks/src/use-comments.ts:91](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-comments.ts#L91)
 
-___
+---
 
 ### useConnectProvider
 
@@ -296,8 +296,8 @@ A hook to connect to injected provider
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name       | Type           | Description                 |
+| :--------- | :------------- | :-------------------------- |
 | `provider` | `EthProviders` | -: any of type EthProviders |
 
 #### Returns
@@ -308,40 +308,40 @@ A hook to connect to injected provider
 
 [ui/hooks/src/use-injected-provider.ts:64](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-injected-provider.ts#L64)
 
-___
+---
 
 ### useCreateComment
 
-▸ **useCreateComment**(): `UseMutationResult`<`string`, `unknown`, `IPublishData` & { `postID`: `string`  }, { `entryId`: `string` = pendingID; `optimisticComment`: `IPublishData` & { `postID`: `string`  }  }\>
+▸ **useCreateComment**(): `UseMutationResult`<`string`, `unknown`, `IPublishData` & { `postID`: `string` }, { `entryId`: `string` = pendingID; `optimisticComment`: `IPublishData` & { `postID`: `string` } }\>
 
 Hook for creating a new comment
 
 #### Returns
 
-`UseMutationResult`<`string`, `unknown`, `IPublishData` & { `postID`: `string`  }, { `entryId`: `string` = pendingID; `optimisticComment`: `IPublishData` & { `postID`: `string`  }  }\>
+`UseMutationResult`<`string`, `unknown`, `IPublishData` & { `postID`: `string` }, { `entryId`: `string` = pendingID; `optimisticComment`: `IPublishData` & { `postID`: `string` } }\>
 
 #### Defined in
 
 [ui/hooks/src/use-comments.ts:175](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-comments.ts#L175)
 
-___
+---
 
 ### useCreatePost
 
-▸ **useCreatePost**(): `UseMutationResult`<`string`, `unknown`, `IPublishData`, { `entryId`: `string` = pendingID; `optimisticEntry`: `IPublishData` & { `isPublishing`: `boolean` = true }  }\>
+▸ **useCreatePost**(): `UseMutationResult`<`string`, `unknown`, `IPublishData`, { `entryId`: `string` = pendingID; `optimisticEntry`: `IPublishData` & { `isPublishing`: `boolean` = true } }\>
 
 Hook to create a new post
 pass the publish data from the editor to the mutate function
 
 #### Returns
 
-`UseMutationResult`<`string`, `unknown`, `IPublishData`, { `entryId`: `string` = pendingID; `optimisticEntry`: `IPublishData` & { `isPublishing`: `boolean` = true }  }\>
+`UseMutationResult`<`string`, `unknown`, `IPublishData`, { `entryId`: `string` = pendingID; `optimisticEntry`: `IPublishData` & { `isPublishing`: `boolean` = true } }\>
 
 #### Defined in
 
 [ui/hooks/src/use-posts.ts:289](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-posts.ts#L289)
 
-___
+---
 
 ### useCurrentNetwork
 
@@ -349,8 +349,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type      |
+| :--------- | :-------- |
 | `enabler?` | `boolean` |
 
 #### Returns
@@ -361,107 +361,107 @@ ___
 
 [ui/hooks/src/use-network-state.ts:37](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-network-state.ts#L37)
 
-___
+---
 
 ### useDeleteBookmark
 
-▸ **useDeleteBookmark**(): `UseMutationResult`<{ `data`: `string`[]  }, `unknown`, `string`, { `prevBmks`: { `entryId`: `string` ; `type`: `ItemTypes`  }[]  }\>
+▸ **useDeleteBookmark**(): `UseMutationResult`<{ `data`: `string`[] }, `unknown`, `string`, { `prevBmks`: { `entryId`: `string` ; `type`: `ItemTypes` }[] }\>
 
 Hook used to delete a bookmark
 
 #### Returns
 
-`UseMutationResult`<{ `data`: `string`[]  }, `unknown`, `string`, { `prevBmks`: { `entryId`: `string` ; `type`: `ItemTypes`  }[]  }\>
+`UseMutationResult`<{ `data`: `string`[] }, `unknown`, `string`, { `prevBmks`: { `entryId`: `string` ; `type`: `ItemTypes` }[] }\>
 
 #### Defined in
 
 [ui/hooks/src/use-bookmarks.ts:95](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-bookmarks.ts#L95)
 
-___
+---
 
 ### useDeleteComment
 
-▸ **useDeleteComment**(`commentID`): `UseMutationResult`<``true``, `unknown`, `string`, { `previousComment`: `CommentResponse`  }\>
+▸ **useDeleteComment**(`commentID`): `UseMutationResult`<`true`, `unknown`, `string`, { `previousComment`: `CommentResponse` }\>
 
 Hook for deleting a specific comment
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name        | Type     | Description                     |
+| :---------- | :------- | :------------------------------ |
 | `commentID` | `string` | id of the comment to be deleted |
 
 #### Returns
 
-`UseMutationResult`<``true``, `unknown`, `string`, { `previousComment`: `CommentResponse`  }\>
+`UseMutationResult`<`true`, `unknown`, `string`, { `previousComment`: `CommentResponse` }\>
 
 #### Defined in
 
 [ui/hooks/src/use-comments.ts:122](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-comments.ts#L122)
 
-___
+---
 
 ### useDeletePost
 
-▸ **useDeletePost**(`postID`): `UseMutationResult`<{ `data`: { `removePost`: `boolean`  }  }, `unknown`, `string`, { `previousPost`: `Post_Response`  }\>
+▸ **useDeletePost**(`postID`): `UseMutationResult`<{ `data`: { `removePost`: `boolean` } }, `unknown`, `string`, { `previousPost`: `Post_Response` }\>
 
 Hook to delete a post
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name     | Type     | Description                  |
+| :------- | :------- | :--------------------------- |
 | `postID` | `string` | id of the post to be deleted |
 
 #### Returns
 
-`UseMutationResult`<{ `data`: { `removePost`: `boolean`  }  }, `unknown`, `string`, { `previousPost`: `Post_Response`  }\>
+`UseMutationResult`<{ `data`: { `removePost`: `boolean` } }, `unknown`, `string`, { `previousPost`: `Post_Response` }\>
 
 #### Defined in
 
 [ui/hooks/src/use-posts.ts:229](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-posts.ts#L229)
 
-___
+---
 
 ### useEditComment
 
-▸ **useEditComment**(`commentID`, `hasCommentData`): `UseMutationResult`<`void` \| { `data`: { `editComment`: `boolean`  }  }, `unknown`, `IPublishData` & { `postID`: `string`  }, { `comment`: `IPublishData` & { `postID`: `string`  }  }\>
+▸ **useEditComment**(`commentID`, `hasCommentData`): `UseMutationResult`<`void` \| { `data`: { `editComment`: `boolean` } }, `unknown`, `IPublishData` & { `postID`: `string` }, { `comment`: `IPublishData` & { `postID`: `string` } }\>
 
 Hook for editing a comment
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `commentID` | `string` |
+| Name             | Type      |
+| :--------------- | :-------- |
+| `commentID`      | `string`  |
 | `hasCommentData` | `boolean` |
 
 #### Returns
 
-`UseMutationResult`<`void` \| { `data`: { `editComment`: `boolean`  }  }, `unknown`, `IPublishData` & { `postID`: `string`  }, { `comment`: `IPublishData` & { `postID`: `string`  }  }\>
+`UseMutationResult`<`void` \| { `data`: { `editComment`: `boolean` } }, `unknown`, `IPublishData` & { `postID`: `string` }, { `comment`: `IPublishData` & { `postID`: `string` } }\>
 
 #### Defined in
 
 [ui/hooks/src/use-comments.ts:220](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-comments.ts#L220)
 
-___
+---
 
 ### useEditPost
 
-▸ **useEditPost**(): `UseMutationResult`<`boolean`, `Error`, `IPublishData` & { `entryID`: `string`  }, { `editedPost`: `IPublishData` & { `entryID`: `string`  }  }\>
+▸ **useEditPost**(): `UseMutationResult`<`boolean`, `Error`, `IPublishData` & { `entryID`: `string` }, { `editedPost`: `IPublishData` & { `entryID`: `string` } }\>
 
 Hook to edit a post
 pass the edited post data to the mutation function
 
 #### Returns
 
-`UseMutationResult`<`boolean`, `Error`, `IPublishData` & { `entryID`: `string`  }, { `editedPost`: `IPublishData` & { `entryID`: `string`  }  }\>
+`UseMutationResult`<`boolean`, `Error`, `IPublishData` & { `entryID`: `string` }, { `editedPost`: `IPublishData` & { `entryID`: `string` } }\>
 
 #### Defined in
 
 [ui/hooks/src/use-posts.ts:337](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-posts.ts#L337)
 
-___
+---
 
 ### useEnsByAddress
 
@@ -471,8 +471,8 @@ Hook to resolve an ethAddress to an ENS name
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name         | Type     | Description                 |
+| :----------- | :------- | :-------------------------- |
 | `ethAddress` | `string` | ethereum address to resolve |
 
 #### Returns
@@ -483,29 +483,29 @@ Hook to resolve an ethAddress to an ENS name
 
 [ui/hooks/src/use-username.ts:212](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-username.ts#L212)
 
-___
+---
 
 ### useEnsRegistration
 
-▸ **useEnsRegistration**(`pubKey?`): `UseMutationResult`<{ `makeDefaultProvider`: `string`  }, `Error`, { `userName`: `string`  }, { `currentProfile`: `IProfileData`  }\>
+▸ **useEnsRegistration**(`pubKey?`): `UseMutationResult`<{ `makeDefaultProvider`: `string` }, `Error`, { `userName`: `string` }, { `currentProfile`: `IProfileData` }\>
 
 Hook to register a new ENS name
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name      | Type     | Description                    |
+| :-------- | :------- | :----------------------------- |
 | `pubKey?` | `string` | textile public key of the user |
 
 #### Returns
 
-`UseMutationResult`<{ `makeDefaultProvider`: `string`  }, `Error`, { `userName`: `string`  }, { `currentProfile`: `IProfileData`  }\>
+`UseMutationResult`<{ `makeDefaultProvider`: `string` }, `Error`, { `userName`: `string` }, { `currentProfile`: `IProfileData` }\>
 
 #### Defined in
 
 [ui/hooks/src/use-username.ts:144](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-username.ts#L144)
 
-___
+---
 
 ### useEntryNavigation
 
@@ -513,10 +513,10 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `navigateFn?` | (`args`: `NavigateToParams`) => `void` |
-| `currentPostId?` | `string` |
+| Name             | Type                                   |
+| :--------------- | :------------------------------------- |
+| `navigateFn?`    | (`args`: `NavigateToParams`) => `void` |
+| `currentPostId?` | `string`                               |
 
 #### Returns
 
@@ -526,10 +526,10 @@ ___
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name                | Type                   |
+| :------------------ | :--------------------- |
 | `navigationDetails` | `IContentClickDetails` |
-| `itemType` | `ItemTypes` |
+| `itemType`          | `ItemTypes`            |
 
 ##### Returns
 
@@ -539,7 +539,7 @@ ___
 
 [ui/hooks/src/use-navigation.ts:8](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-navigation.ts#L8)
 
-___
+---
 
 ### useFetchNotifications
 
@@ -549,8 +549,8 @@ Hook to get a user's notifications
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name               | Type     | Description                            |
+| :----------------- | :------- | :------------------------------------- |
 | `loggedEthAddress` | `string` | currently logged in user's eth address |
 
 #### Returns
@@ -561,23 +561,23 @@ Hook to get a user's notifications
 
 [ui/hooks/src/use-notifications.ts:50](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-notifications.ts#L50)
 
-___
+---
 
 ### useFollow
 
-▸ **useFollow**(): `UseMutationResult`<{ `data`: { `follow`: `boolean`  }  }, `unknown`, `string`, { `previousFollowedProfiles`: `string`[]  }\>
+▸ **useFollow**(): `UseMutationResult`<{ `data`: { `follow`: `boolean` } }, `unknown`, `string`, { `previousFollowedProfiles`: `string`[] }\>
 
 Hook to follow another user
 
 #### Returns
 
-`UseMutationResult`<{ `data`: { `follow`: `boolean`  }  }, `unknown`, `string`, { `previousFollowedProfiles`: `string`[]  }\>
+`UseMutationResult`<{ `data`: { `follow`: `boolean` } }, `unknown`, `string`, { `previousFollowedProfiles`: `string`[] }\>
 
 #### Defined in
 
 [ui/hooks/src/use-follow.ts:156](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-follow.ts#L156)
 
-___
+---
 
 ### useFollowers
 
@@ -587,11 +587,11 @@ Hook to get followers for a user
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `pubKey` | `string` | textile generated public key of the user |
-| `limit` | `number` | number of followers to return per page |
-| `offset?` | `number` | offset for query |
+| Name      | Type     | Description                              |
+| :-------- | :------- | :--------------------------------------- |
+| `pubKey`  | `string` | textile generated public key of the user |
+| `limit`   | `number` | number of followers to return per page   |
+| `offset?` | `number` | offset for query                         |
 
 #### Returns
 
@@ -601,7 +601,7 @@ Hook to get followers for a user
 
 [ui/hooks/src/use-profile.ts:161](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-profile.ts#L161)
 
-___
+---
 
 ### useFollowing
 
@@ -611,11 +611,11 @@ Hook to get a list of profiles following the user
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `pubKey` | `string` | textile generated public key of the user |
-| `limit` | `number` | number of profiles following the user to return per page |
-| `offset?` | `number` | offset for query |
+| Name      | Type     | Description                                              |
+| :-------- | :------- | :------------------------------------------------------- |
+| `pubKey`  | `string` | textile generated public key of the user                 |
+| `limit`   | `number` | number of profiles following the user to return per page |
+| `offset?` | `number` | offset for query                                         |
 
 #### Returns
 
@@ -625,7 +625,7 @@ Hook to get a list of profiles following the user
 
 [ui/hooks/src/use-profile.ts:190](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-profile.ts#L190)
 
-___
+---
 
 ### useGetAllInstalledApps
 
@@ -635,8 +635,8 @@ Hook to get all the user's installed apps
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type      |
+| :--------- | :-------- |
 | `enabler?` | `boolean` |
 
 #### Returns
@@ -647,30 +647,30 @@ Hook to get all the user's installed apps
 
 [ui/hooks/src/use-app-settings.ts:37](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-app-settings.ts#L37)
 
-___
+---
 
 ### useGetAllIntegrationReleaseIds
 
-▸ **useGetAllIntegrationReleaseIds**(`integrationName`, `offset?`): `UseQueryResult`<{ `nextIndex`: `any` = data.next; `releaseIds`: `any`  }, `Error`\>
+▸ **useGetAllIntegrationReleaseIds**(`integrationName`, `offset?`): `UseQueryResult`<{ `nextIndex`: `any` = data.next; `releaseIds`: `any` }, `Error`\>
 
 Hook to get all the release ids for an integration
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name              | Type     | Description             |
+| :---------------- | :------- | :---------------------- |
 | `integrationName` | `string` | name of the integration |
-| `offset?` | `number` | offset to start from |
+| `offset?`         | `number` | offset to start from    |
 
 #### Returns
 
-`UseQueryResult`<{ `nextIndex`: `any` = data.next; `releaseIds`: `any`  }, `Error`\>
+`UseQueryResult`<{ `nextIndex`: `any` = data.next; `releaseIds`: `any` }, `Error`\>
 
 #### Defined in
 
 [ui/hooks/src/use-integration-registry.ts:141](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-integration-registry.ts#L141)
 
-___
+---
 
 ### useGetAllIntegrationsIds
 
@@ -680,10 +680,10 @@ Hook to get all the published integrations ids
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `enabler` | `boolean` | `true` |
-| `offset?` | `number` | `undefined` |
+| Name      | Type      | Default value |
+| :-------- | :-------- | :------------ |
+| `enabler` | `boolean` | `true`        |
+| `offset?` | `number`  | `undefined`   |
 
 #### Returns
 
@@ -693,7 +693,7 @@ Hook to get all the published integrations ids
 
 [ui/hooks/src/use-integration-registry.ts:122](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-integration-registry.ts#L122)
 
-___
+---
 
 ### useGetAppConfig
 
@@ -703,10 +703,10 @@ Hook to get configuration object for an installed app
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `appName` | `string` | name of the app |
-| `enabler?` | `boolean` | - |
+| Name       | Type      | Description     |
+| :--------- | :-------- | :-------------- |
+| `appName`  | `string`  | name of the app |
+| `enabler?` | `boolean` | -               |
 
 #### Returns
 
@@ -716,7 +716,7 @@ Hook to get configuration object for an installed app
 
 [ui/hooks/src/use-app-settings.ts:20](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-app-settings.ts#L20)
 
-___
+---
 
 ### useGetBookmarks
 
@@ -726,10 +726,10 @@ Hook for gettting a user's saved posts and comments
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `loggedEthAddress` | `string` | `undefined` | currently logged in user's ethereum address |
-| `enabler` | `boolean` | `true` | flag for allowing the query |
+| Name               | Type      | Default value | Description                                 |
+| :----------------- | :-------- | :------------ | :------------------------------------------ |
+| `loggedEthAddress` | `string`  | `undefined`   | currently logged in user's ethereum address |
+| `enabler`          | `boolean` | `true`        | flag for allowing the query                 |
 
 #### Returns
 
@@ -739,7 +739,7 @@ Hook for gettting a user's saved posts and comments
 
 [ui/hooks/src/use-bookmarks.ts:16](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-bookmarks.ts#L16)
 
-___
+---
 
 ### useGetCount
 
@@ -755,29 +755,29 @@ Hook to get moderation counters
 
 [ui/hooks/src/use-moderation.ts:199](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-moderation.ts#L199)
 
-___
+---
 
 ### useGetEntryAuthor
 
-▸ **useGetEntryAuthor**(`entryId`): `UseQueryResult`<`IProfileData` \| { `_id`: `string` ; `avatar`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `coverImage`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `description`: `string` ; `ethAddress`: `string` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string`  }, `Error`\>
+▸ **useGetEntryAuthor**(`entryId`): `UseQueryResult`<`IProfileData` \| { `_id`: `string` ; `avatar`: { `fallbackUrl`: `string` ; `url`: `string` } ; `coverImage`: { `fallbackUrl`: `string` ; `url`: `string` } ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `description`: `string` ; `ethAddress`: `string` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string` }, `Error`\>
 
 Hook to get an entry author's profile data
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name      | Type     | Description                 |
+| :-------- | :------- | :-------------------------- |
 | `entryId` | `string` | the id of the specific post |
 
 #### Returns
 
-`UseQueryResult`<`IProfileData` \| { `_id`: `string` ; `avatar`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `coverImage`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `description`: `string` ; `ethAddress`: `string` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string`  }, `Error`\>
+`UseQueryResult`<`IProfileData` \| { `_id`: `string` ; `avatar`: { `fallbackUrl`: `string` ; `url`: `string` } ; `coverImage`: { `fallbackUrl`: `string` ; `url`: `string` } ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `description`: `string` ; `ethAddress`: `string` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string` }, `Error`\>
 
 #### Defined in
 
 [ui/hooks/src/use-profile.ts:136](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-profile.ts#L136)
 
-___
+---
 
 ### useGetFlags
 
@@ -787,8 +787,8 @@ Hook to get report flags for a specific entry
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name      | Type     | Description     |
+| :-------- | :------- | :-------------- |
 | `entryId` | `string` | id of the entry |
 
 #### Returns
@@ -799,7 +799,7 @@ Hook to get report flags for a specific entry
 
 [ui/hooks/src/use-moderation.ts:210](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-moderation.ts#L210)
 
-___
+---
 
 ### useGetIntegrationId
 
@@ -809,8 +809,8 @@ Hook to get integration id by its name
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name              | Type     | Description             |
+| :---------------- | :------- | :---------------------- |
 | `integrationName` | `string` | name of the integration |
 
 #### Returns
@@ -821,7 +821,7 @@ Hook to get integration id by its name
 
 [ui/hooks/src/use-integration-registry.ts:72](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-integration-registry.ts#L72)
 
-___
+---
 
 ### useGetIntegrationInfo
 
@@ -831,8 +831,8 @@ Hook to get integration package info
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name            | Type     | Description           |
+| :-------------- | :------- | :-------------------- |
 | `integrationId` | `string` | id of the integration |
 
 #### Returns
@@ -843,7 +843,7 @@ Hook to get integration package info
 
 [ui/hooks/src/use-integration-registry.ts:19](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-integration-registry.ts#L19)
 
-___
+---
 
 ### useGetIntegrationReleaseId
 
@@ -853,11 +853,11 @@ Hook to get integration release id by its name and version
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `integrationName` | `string` | name of the integration |
-| `version` | `string` | release version |
-| `enabler?` | `boolean` | - |
+| Name              | Type      | Description             |
+| :---------------- | :-------- | :---------------------- |
+| `integrationName` | `string`  | name of the integration |
+| `version`         | `string`  | release version         |
+| `enabler?`        | `boolean` | -                       |
 
 #### Returns
 
@@ -867,7 +867,7 @@ Hook to get integration release id by its name and version
 
 [ui/hooks/src/use-integration-registry.ts:90](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-integration-registry.ts#L90)
 
-___
+---
 
 ### useGetIntegrationReleaseInfo
 
@@ -877,8 +877,8 @@ Hook to get integration release info
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name        | Type     | Description           |
+| :---------- | :------- | :-------------------- |
 | `releaseId` | `string` | id of the integration |
 
 #### Returns
@@ -889,7 +889,7 @@ Hook to get integration release info
 
 [ui/hooks/src/use-integration-registry.ts:163](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-integration-registry.ts#L163)
 
-___
+---
 
 ### useGetIntegrationsCount
 
@@ -905,29 +905,29 @@ Hook to get the number of published integrations
 
 [ui/hooks/src/use-integration-registry.ts:55](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-integration-registry.ts#L55)
 
-___
+---
 
 ### useGetIntegrationsInfo
 
-▸ **useGetIntegrationsInfo**(`opt`): `UseQueryResult`<{ `getIntegrationInfo`: `IntegrationInfo`[]  }, `Error`\>
+▸ **useGetIntegrationsInfo**(`opt`): `UseQueryResult`<{ `getIntegrationInfo`: `IntegrationInfo`[] }, `Error`\>
 
 Hook to get package info for multiple integrations by name or id
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opt` | { `id?`: `string` ; `name?`: `string`  }[] |
+| Name  | Type                                      |
+| :---- | :---------------------------------------- |
+| `opt` | { `id?`: `string` ; `name?`: `string` }[] |
 
 #### Returns
 
-`UseQueryResult`<{ `getIntegrationInfo`: `IntegrationInfo`[]  }, `Error`\>
+`UseQueryResult`<{ `getIntegrationInfo`: `IntegrationInfo`[] }, `Error`\>
 
 #### Defined in
 
 [ui/hooks/src/use-integration-registry.ts:38](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-integration-registry.ts#L38)
 
-___
+---
 
 ### useGetIntegrationsReleaseInfo
 
@@ -937,8 +937,8 @@ Hook to get multiple integrations release info
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name         | Type       | Description             |
+| :----------- | :--------- | :---------------------- |
 | `releaseIds` | `string`[] | ids of the integrations |
 
 #### Returns
@@ -949,29 +949,29 @@ Hook to get multiple integrations release info
 
 [ui/hooks/src/use-integration-registry.ts:186](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-integration-registry.ts#L186)
 
-___
+---
 
 ### useGetLatestReleaseInfo
 
-▸ **useGetLatestReleaseInfo**(`opt`): `UseQueryResult`<{ `getLatestRelease`: `ReleaseInfo`[]  }, `Error`\>
+▸ **useGetLatestReleaseInfo**(`opt`): `UseQueryResult`<{ `getLatestRelease`: `ReleaseInfo`[] }, `Error`\>
 
 Hook to get latest release info for integrations
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opt` | { `id?`: `string` ; `name?`: `string`  }[] | array of integration names or ids |
+| Name  | Type                                      | Description                       |
+| :---- | :---------------------------------------- | :-------------------------------- |
+| `opt` | { `id?`: `string` ; `name?`: `string` }[] | array of integration names or ids |
 
 #### Returns
 
-`UseQueryResult`<{ `getLatestRelease`: `ReleaseInfo`[]  }, `Error`\>
+`UseQueryResult`<{ `getLatestRelease`: `ReleaseInfo`[] }, `Error`\>
 
 #### Defined in
 
 [ui/hooks/src/use-integration-registry.ts:204](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-integration-registry.ts#L204)
 
-___
+---
 
 ### useGetLogin
 
@@ -981,8 +981,8 @@ Hook for retrieving the current authentication state of the user
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name       | Type                         | Description           |
+| :--------- | :--------------------------- | :-------------------- |
 | `onError?` | (`error`: `Error`) => `void` | outside error handler |
 
 #### Returns
@@ -993,7 +993,7 @@ Hook for retrieving the current authentication state of the user
 
 [ui/hooks/src/use-login.ts:48](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-login.ts#L48)
 
-___
+---
 
 ### useGetProfile
 
@@ -1003,11 +1003,11 @@ Hook to get a user's profile data
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `pubKey` | `string` | `undefined` | the textile generated public key of the user |
-| `loggedUser?` | `string` | `undefined` | the textile generated public key of the currently logged in user |
-| `enabler` | `boolean` | `true` | flag to allow the query |
+| Name          | Type      | Default value | Description                                                      |
+| :------------ | :-------- | :------------ | :--------------------------------------------------------------- |
+| `pubKey`      | `string`  | `undefined`   | the textile generated public key of the user                     |
+| `loggedUser?` | `string`  | `undefined`   | the textile generated public key of the currently logged in user |
+| `enabler`     | `boolean` | `true`        | flag to allow the query                                          |
 
 #### Returns
 
@@ -1017,7 +1017,7 @@ Hook to get a user's profile data
 
 [ui/hooks/src/use-profile.ts:74](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-profile.ts#L74)
 
-___
+---
 
 ### useGetProfileByEthAddress
 
@@ -1027,11 +1027,11 @@ Hook to get a user's profile data
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `ethAddress` | `string` | `undefined` | the ethereum public key of the user |
-| `loggedUser?` | `string` | `undefined` | the textile generated public key of the currently logged in user |
-| `enabler` | `boolean` | `true` | flag to allow the query |
+| Name          | Type      | Default value | Description                                                      |
+| :------------ | :-------- | :------------ | :--------------------------------------------------------------- |
+| `ethAddress`  | `string`  | `undefined`   | the ethereum public key of the user                              |
+| `loggedUser?` | `string`  | `undefined`   | the textile generated public key of the currently logged in user |
+| `enabler`     | `boolean` | `true`        | flag to allow the query                                          |
 
 #### Returns
 
@@ -1041,7 +1041,7 @@ Hook to get a user's profile data
 
 [ui/hooks/src/use-profile.ts:107](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-profile.ts#L107)
 
-___
+---
 
 ### useGetTag
 
@@ -1051,10 +1051,10 @@ Hook to get a specific tag by name
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `tagName` | `string` | `undefined` | name of the tag |
-| `enabler` | `boolean` | `true` | flag to allow the query |
+| Name      | Type      | Default value | Description             |
+| :-------- | :-------- | :------------ | :---------------------- |
+| `tagName` | `string`  | `undefined`   | name of the tag         |
+| `enabler` | `boolean` | `true`        | flag to allow the query |
 
 #### Returns
 
@@ -1064,7 +1064,7 @@ Hook to get a specific tag by name
 
 [ui/hooks/src/use-tag.ts:120](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-tag.ts#L120)
 
-___
+---
 
 ### useGlobalLogin
 
@@ -1072,8 +1072,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type                  |
+| :------ | :-------------------- |
 | `props` | `UseGlobalLoginProps` |
 
 #### Returns
@@ -1084,56 +1084,56 @@ ___
 
 [ui/hooks/src/use-global-login.ts:24](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-global-login.ts#L24)
 
-___
+---
 
 ### useInfiniteComments
 
-▸ **useInfiniteComments**(`limit`, `postID`, `offset?`): `UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
+▸ **useInfiniteComments**(`limit`, `postID`, `offset?`): `UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number` }, `Error`\>
 
 Hook to get the comments for a specific post
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `limit` | `number` | number of comments to fetch on a page |
-| `postID` | `string` | id of the parent post |
-| `offset?` | `string` | id of where to start |
+| Name      | Type     | Description                           |
+| :-------- | :------- | :------------------------------------ |
+| `limit`   | `number` | number of comments to fetch on a page |
+| `postID`  | `string` | id of the parent post                 |
+| `offset?` | `string` | id of where to start                  |
 
 #### Returns
 
-`UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
+`UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number` }, `Error`\>
 
 #### Defined in
 
 [ui/hooks/src/use-comments.ts:49](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-comments.ts#L49)
 
-___
+---
 
 ### useInfiniteCustomPosts
 
-▸ **useInfiniteCustomPosts**(`enabler`, `limit`, `offset?`): `UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
+▸ **useInfiniteCustomPosts**(`enabler`, `limit`, `offset?`): `UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number` }, `Error`\>
 
 Hook to get posts for personalised user feed from followed profiles and subscribed tags,
 sorted chronologically
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type      |
+| :-------- | :-------- |
 | `enabler` | `boolean` |
-| `limit` | `number` |
-| `offset?` | `string` |
+| `limit`   | `number`  |
+| `offset?` | `string`  |
 
 #### Returns
 
-`UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
+`UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number` }, `Error`\>
 
 #### Defined in
 
 [ui/hooks/src/use-posts.ts:101](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-posts.ts#L101)
 
-___
+---
 
 ### useInfiniteDelisted
 
@@ -1143,10 +1143,10 @@ Hook to get delisted moderated items
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `limit` | `number` | number of items per page |
-| `offset?` | `string` | index of query offset |
+| Name      | Type     | Description              |
+| :-------- | :------- | :----------------------- |
+| `limit`   | `number` | number of items per page |
+| `offset?` | `string` | index of query offset    |
 
 #### Returns
 
@@ -1156,7 +1156,7 @@ Hook to get delisted moderated items
 
 [ui/hooks/src/use-moderation.ts:289](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-moderation.ts#L289)
 
-___
+---
 
 ### useInfiniteKept
 
@@ -1166,10 +1166,10 @@ Hook to get kept moderated items
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `limit` | `number` | number of items per page |
-| `offset?` | `string` | index of query offset |
+| Name      | Type     | Description              |
+| :-------- | :------- | :----------------------- |
+| `limit`   | `number` | number of items per page |
+| `offset?` | `string` | index of query offset    |
 
 #### Returns
 
@@ -1179,7 +1179,7 @@ Hook to get kept moderated items
 
 [ui/hooks/src/use-moderation.ts:265](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-moderation.ts#L265)
 
-___
+---
 
 ### useInfiniteLog
 
@@ -1189,10 +1189,10 @@ Hook to get log of moderated items
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `limit` | `number` | number of items per page |
-| `offset?` | `string` | index of query offset |
+| Name      | Type     | Description              |
+| :-------- | :------- | :----------------------- |
+| `limit`   | `number` | number of items per page |
+| `offset?` | `string` | index of query offset    |
 
 #### Returns
 
@@ -1202,7 +1202,7 @@ Hook to get log of moderated items
 
 [ui/hooks/src/use-moderation.ts:223](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-moderation.ts#L223)
 
-___
+---
 
 ### useInfinitePending
 
@@ -1212,10 +1212,10 @@ Hook to get pending moderation items
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `limit` | `number` | number of items per page |
-| `offset?` | `string` | index of query offset |
+| Name      | Type     | Description              |
+| :-------- | :------- | :----------------------- |
+| `limit`   | `number` | number of items per page |
+| `offset?` | `string` | index of query offset    |
 
 #### Returns
 
@@ -1225,111 +1225,111 @@ Hook to get pending moderation items
 
 [ui/hooks/src/use-moderation.ts:246](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-moderation.ts#L246)
 
-___
+---
 
 ### useInfinitePosts
 
-▸ **useInfinitePosts**(`limit`, `offset?`): `UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
+▸ **useInfinitePosts**(`limit`, `offset?`): `UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number` }, `Error`\>
 
 Hook to get posts for feed, sorted chronologically
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `limit` | `number` |
+| Name      | Type     |
+| :-------- | :------- |
+| `limit`   | `number` |
 | `offset?` | `string` |
 
 #### Returns
 
-`UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
+`UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number` }, `Error`\>
 
 #### Defined in
 
 [ui/hooks/src/use-posts.ts:64](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-posts.ts#L64)
 
-___
+---
 
 ### useInfinitePostsByAuthor
 
-▸ **useInfinitePostsByAuthor**(`pubKey`, `limit`, `enabled?`, `offset?`): `UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
+▸ **useInfinitePostsByAuthor**(`pubKey`, `limit`, `enabled?`, `offset?`): `UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number` }, `Error`\>
 
 Hook to get an author's posts
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `pubKey` | `string` | `undefined` | textile public key of the user |
-| `limit` | `number` | `undefined` | - |
-| `enabled` | `boolean` | `true` | - |
-| `offset?` | `number` | `undefined` | - |
+| Name      | Type      | Default value | Description                    |
+| :-------- | :-------- | :------------ | :----------------------------- |
+| `pubKey`  | `string`  | `undefined`   | textile public key of the user |
+| `limit`   | `number`  | `undefined`   | -                              |
+| `enabled` | `boolean` | `true`        | -                              |
+| `offset?` | `number`  | `undefined`   | -                              |
 
 #### Returns
 
-`UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
+`UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number` }, `Error`\>
 
 #### Defined in
 
 [ui/hooks/src/use-posts.ts:173](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-posts.ts#L173)
 
-___
+---
 
 ### useInfinitePostsByTag
 
-▸ **useInfinitePostsByTag**(`name`, `limit`, `offset?`): `UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
+▸ **useInfinitePostsByTag**(`name`, `limit`, `offset?`): `UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number` }, `Error`\>
 
 Hook to get posts that contain a specific tag
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | tag name |
-| `limit` | `number` | - |
-| `offset?` | `string` | - |
+| Name      | Type     | Description |
+| :-------- | :------- | :---------- |
+| `name`    | `string` | tag name    |
+| `limit`   | `number` | -           |
+| `offset?` | `string` | -           |
 
 #### Returns
 
-`UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
+`UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number` }, `Error`\>
 
 #### Defined in
 
 [ui/hooks/src/use-posts.ts:137](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-posts.ts#L137)
 
-___
+---
 
 ### useInjectedProvider
 
-▸ **useInjectedProvider**(): `UseQueryResult`<{ `details`: { `iconType`: `string` = ''; `subtitleLabel`: `string` = ''; `titleLabel`: `string` = '' } ; `name`: `INJECTED_PROVIDERS` = INJECTED\_PROVIDERS.NOT\_DETECTED }, `Error`\>
+▸ **useInjectedProvider**(): `UseQueryResult`<{ `details`: { `iconType`: `string` = ''; `subtitleLabel`: `string` = ''; `titleLabel`: `string` = '' } ; `name`: `INJECTED_PROVIDERS` = INJECTED_PROVIDERS.NOT_DETECTED }, `Error`\>
 
 A hook to get injected provider from the SDK
 
 #### Returns
 
-`UseQueryResult`<{ `details`: { `iconType`: `string` = ''; `subtitleLabel`: `string` = ''; `titleLabel`: `string` = '' } ; `name`: `INJECTED_PROVIDERS` = INJECTED\_PROVIDERS.NOT\_DETECTED }, `Error`\>
+`UseQueryResult`<{ `details`: { `iconType`: `string` = ''; `subtitleLabel`: `string` = ''; `titleLabel`: `string` = '' } ; `name`: `INJECTED_PROVIDERS` = INJECTED_PROVIDERS.NOT_DETECTED }, `Error`\>
 
 #### Defined in
 
 [ui/hooks/src/use-injected-provider.ts:46](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-injected-provider.ts#L46)
 
-___
+---
 
 ### useInstallApp
 
-▸ **useInstallApp**(): `UseMutationResult`<`string`[], `unknown`, { `id?`: `string` ; `name?`: `string`  }, `unknown`\>
+▸ **useInstallApp**(): `UseMutationResult`<`string`[], `unknown`, { `id?`: `string` ; `name?`: `string` }, `unknown`\>
 
 Hook to persist an installed app config to a user's profile
 
 #### Returns
 
-`UseMutationResult`<`string`[], `unknown`, { `id?`: `string` ; `name?`: `string`  }, `unknown`\>
+`UseMutationResult`<`string`[], `unknown`, { `id?`: `string` ; `name?`: `string` }, `unknown`\>
 
 #### Defined in
 
 [ui/hooks/src/use-app-settings.ts:59](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-app-settings.ts#L59)
 
-___
+---
 
 ### useInterests
 
@@ -1339,8 +1339,8 @@ Fetch the list of subscribed tags for a specific pub key
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name     | Type  | Description                                  |
+| :------- | :---- | :------------------------------------------- |
 | `pubKey` | `any` | the textile generated public key of the user |
 
 #### Returns
@@ -1351,7 +1351,7 @@ Fetch the list of subscribed tags for a specific pub key
 
 [ui/hooks/src/use-profile.ts:227](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-profile.ts#L227)
 
-___
+---
 
 ### useIsFollowingMultiple
 
@@ -1361,9 +1361,9 @@ Hook to check if a user is following other users
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `followerEthAddress` | `string` | ethereum address of user to check for |
+| Name                       | Type       | Description                                      |
+| :------------------------- | :--------- | :----------------------------------------------- |
+| `followerEthAddress`       | `string`   | ethereum address of user to check for            |
 | `followingEthAddressArray` | `string`[] | array of ethereum addresses to check if followed |
 
 #### Returns
@@ -1374,7 +1374,7 @@ Hook to check if a user is following other users
 
 [ui/hooks/src/use-follow.ts:60](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-follow.ts#L60)
 
-___
+---
 
 ### useIsSubscribedToTag
 
@@ -1384,9 +1384,9 @@ Hook to check if a user subscribes to a tag
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `tagName` | `string` | name of the tag |
+| Name               | Type     | Description                       |
+| :----------------- | :------- | :-------------------------------- |
+| `tagName`          | `string` | name of the tag                   |
 | `loggedEthAddress` | `string` | eth address of the logged in user |
 
 #### Returns
@@ -1397,27 +1397,27 @@ Hook to check if a user subscribes to a tag
 
 [ui/hooks/src/use-tag.ts:42](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-tag.ts#L42)
 
-___
+---
 
 ### useIsValidToken
 
-▸ **useIsValidToken**(`props`): `UseQueryResult`<{ `data`: `boolean`  }, `Error`\>
+▸ **useIsValidToken**(`props`): `UseQueryResult`<{ `data`: `boolean` }, `Error`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type                    |
+| :------ | :---------------------- |
 | `props` | `IUseIsValidTokenProps` |
 
 #### Returns
 
-`UseQueryResult`<{ `data`: `boolean`  }, `Error`\>
+`UseQueryResult`<{ `data`: `boolean` }, `Error`\>
 
 #### Defined in
 
 [ui/hooks/src/use-invite-token-validation.ts:22](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-invite-token-validation.ts#L22)
 
-___
+---
 
 ### useLegalDoc
 
@@ -1427,8 +1427,8 @@ Hook to get legal docs stored on ipfs
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name      | Type         | Description                  |
+| :-------- | :----------- | :--------------------------- |
 | `docName` | `LEGAL_DOCS` | type of document to retrieve |
 
 #### Returns
@@ -1439,84 +1439,84 @@ Hook to get legal docs stored on ipfs
 
 [ui/hooks/src/use-legal.ts:19](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-legal.ts#L19)
 
-___
+---
 
 ### useLogin
 
-▸ **useLogin**(`onError?`): `UseMutationResult`<`CurrentUser` & { `isNewUser`: `boolean`  }, `Error`, { `checkRegistered`: `boolean` ; `selectedProvider`: `EthProviders`  }, `unknown`\>
+▸ **useLogin**(`onError?`): `UseMutationResult`<`CurrentUser` & { `isNewUser`: `boolean` }, `Error`, { `checkRegistered`: `boolean` ; `selectedProvider`: `EthProviders` }, `unknown`\>
 
 Hook to sign in a user
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name       | Type                       | Description           |
+| :--------- | :------------------------- | :-------------------- |
 | `onError?` | (`err`: `Error`) => `void` | outside error handler |
 
 #### Returns
 
-`UseMutationResult`<`CurrentUser` & { `isNewUser`: `boolean`  }, `Error`, { `checkRegistered`: `boolean` ; `selectedProvider`: `EthProviders`  }, `unknown`\>
+`UseMutationResult`<`CurrentUser` & { `isNewUser`: `boolean` }, `Error`, { `checkRegistered`: `boolean` ; `selectedProvider`: `EthProviders` }, `unknown`\>
 
 #### Defined in
 
 [ui/hooks/src/use-login.ts:110](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-login.ts#L110)
 
-___
+---
 
 ### useLogout
 
-▸ **useLogout**(): `UseMutationResult`<``true``, `Error`, `void`, `unknown`\>
+▸ **useLogout**(): `UseMutationResult`<`true`, `Error`, `void`, `unknown`\>
 
 Hook to sign out the current user
 
 #### Returns
 
-`UseMutationResult`<``true``, `Error`, `void`, `unknown`\>
+`UseMutationResult`<`true`, `Error`, `void`, `unknown`\>
 
 #### Defined in
 
 [ui/hooks/src/use-login.ts:316](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-login.ts#L316)
 
-___
+---
 
 ### useMarkAsRead
 
-▸ **useMarkAsRead**(): `UseMutationResult`<{ `data`: `boolean`  }, `unknown`, `string`, { `previousCheckNotifs`: `boolean` ; `previousNotifs`: `IMessage`[]  }\>
+▸ **useMarkAsRead**(): `UseMutationResult`<{ `data`: `boolean` }, `unknown`, `string`, { `previousCheckNotifs`: `boolean` ; `previousNotifs`: `IMessage`[] }\>
 
 Hook to mark a notification as read
 pass the messageId to the mutate function
 
 #### Returns
 
-`UseMutationResult`<{ `data`: `boolean`  }, `unknown`, `string`, { `previousCheckNotifs`: `boolean` ; `previousNotifs`: `IMessage`[]  }\>
+`UseMutationResult`<{ `data`: `boolean` }, `unknown`, `string`, { `previousCheckNotifs`: `boolean` ; `previousNotifs`: `IMessage`[] }\>
 
 #### Defined in
 
 [ui/hooks/src/use-notifications.ts:62](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-notifications.ts#L62)
 
-___
+---
 
 ### useMentionSearch
 
-▸ **useMentionSearch**(`mention`): `UseQueryResult`<(`IProfileData` \| { `_id`: `string` ; `avatar`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `coverImage`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `description`: `string` ; `ethAddress`: `string` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string`  })[], `Error`\>
+▸ **useMentionSearch**(`mention`): `UseQueryResult`<(`IProfileData` \| { `_id`: `string` ; `avatar`: { `fallbackUrl`: `string` ; `url`: `string` } ; `coverImage`: { `fallbackUrl`: `string` ; `url`: `string` } ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `description`: `string` ; `ethAddress`: `string` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string` })[], `Error`\>
 
 Hook to search for profiles
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name      | Type     | Description                |
+| :-------- | :------- | :------------------------- |
 | `mention` | `string` | profile name to search for |
 
 #### Returns
 
-`UseQueryResult`<(`IProfileData` \| { `_id`: `string` ; `avatar`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `coverImage`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `description`: `string` ; `ethAddress`: `string` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string`  })[], `Error`\>
+`UseQueryResult`<(`IProfileData` \| { `_id`: `string` ; `avatar`: { `fallbackUrl`: `string` ; `url`: `string` } ; `coverImage`: { `fallbackUrl`: `string` ; `url`: `string` } ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `description`: `string` ; `ethAddress`: `string` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string` })[], `Error`\>
 
 #### Defined in
 
 [ui/hooks/src/use-mentions.ts:27](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-mentions.ts#L27)
 
-___
+---
 
 ### useModeration
 
@@ -1532,7 +1532,7 @@ Hook for creating a moderation decision
 
 [ui/hooks/src/use-moderation.ts:72](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-moderation.ts#L72)
 
-___
+---
 
 ### useMutationListener
 
@@ -1542,14 +1542,14 @@ Hook to detect changes to a mutation
 
 #### Type parameters
 
-| Name |
+| Name    |
 | :------ |
 | `TVars` |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name          | Type          | Description                          |
+| :------------ | :------------ | :----------------------------------- |
 | `mutationKey` | `MutationKey` | the key of the mutation to listen to |
 
 #### Returns
@@ -1562,7 +1562,7 @@ Mutation | undefined
 
 [ui/hooks/src/use-query-listener.ts:16](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-query-listener.ts#L16)
 
-___
+---
 
 ### useNetworkState
 
@@ -1572,8 +1572,8 @@ Hook to check if the web3 provider is set to function on the Rinkeby test networ
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type      |
+| :--------- | :-------- |
 | `enabler?` | `boolean` |
 
 #### Returns
@@ -1586,51 +1586,51 @@ networkNotSupported: true if web3 provider on another network
 
 [ui/hooks/src/use-network-state.ts:23](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-network-state.ts#L23)
 
-___
+---
 
 ### usePost
 
-▸ **usePost**(`__namedParameters`): `UseQueryResult`<{ `_id`: `string` ; `author`: { `_id`: `string` ; `avatar`: `string` ; `contentId`: `string` ; `coverImage`: `string` ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `delisted`: `boolean` ; `description`: `string` ; `ethAddress`: `string` ; `moderated`: `boolean` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `reason`: `string` ; `reported`: `boolean` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string`  } ; `content`: [`DataProviderInput`] ; `contentId`: `string` ; `creationDate`: `string` ; `delisted`: `boolean` ; `mentions`: [`string`] ; `moderated`: `boolean` ; `quotedBy`: [`string`] ; `quotedByAuthors`: [`UserProfile_Response`] ; `quotes`: [`Post_Response`] ; `reason`: `string` ; `reported`: `boolean` ; `tags`: [`string`] ; `title`: `string` ; `totalComments`: `string` ; `type`: `PostType` ; `updatedAt`: `string`  }, `Error`\>
+▸ **usePost**(`__namedParameters`): `UseQueryResult`<{ `_id`: `string` ; `author`: { `_id`: `string` ; `avatar`: `string` ; `contentId`: `string` ; `coverImage`: `string` ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `delisted`: `boolean` ; `description`: `string` ; `ethAddress`: `string` ; `moderated`: `boolean` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `reason`: `string` ; `reported`: `boolean` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string` } ; `content`: [`DataProviderInput`] ; `contentId`: `string` ; `creationDate`: `string` ; `delisted`: `boolean` ; `mentions`: [`string`] ; `moderated`: `boolean` ; `quotedBy`: [`string`] ; `quotedByAuthors`: [`UserProfile_Response`] ; `quotes`: [`Post_Response`] ; `reason`: `string` ; `reported`: `boolean` ; `tags`: [`string`] ; `title`: `string` ; `totalComments`: `string` ; `type`: `PostType` ; `updatedAt`: `string` }, `Error`\>
 
 Hook to get data for a specific post
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name                | Type           |
+| :------------------ | :------------- |
 | `__namedParameters` | `usePostParam` |
 
 #### Returns
 
-`UseQueryResult`<{ `_id`: `string` ; `author`: { `_id`: `string` ; `avatar`: `string` ; `contentId`: `string` ; `coverImage`: `string` ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `delisted`: `boolean` ; `description`: `string` ; `ethAddress`: `string` ; `moderated`: `boolean` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `reason`: `string` ; `reported`: `boolean` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string`  } ; `content`: [`DataProviderInput`] ; `contentId`: `string` ; `creationDate`: `string` ; `delisted`: `boolean` ; `mentions`: [`string`] ; `moderated`: `boolean` ; `quotedBy`: [`string`] ; `quotedByAuthors`: [`UserProfile_Response`] ; `quotes`: [`Post_Response`] ; `reason`: `string` ; `reported`: `boolean` ; `tags`: [`string`] ; `title`: `string` ; `totalComments`: `string` ; `type`: `PostType` ; `updatedAt`: `string`  }, `Error`\>
+`UseQueryResult`<{ `_id`: `string` ; `author`: { `_id`: `string` ; `avatar`: `string` ; `contentId`: `string` ; `coverImage`: `string` ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `delisted`: `boolean` ; `description`: `string` ; `ethAddress`: `string` ; `moderated`: `boolean` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `reason`: `string` ; `reported`: `boolean` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string` } ; `content`: [`DataProviderInput`] ; `contentId`: `string` ; `creationDate`: `string` ; `delisted`: `boolean` ; `mentions`: [`string`] ; `moderated`: `boolean` ; `quotedBy`: [`string`] ; `quotedByAuthors`: [`UserProfile_Response`] ; `quotes`: [`Post_Response`] ; `reason`: `string` ; `reported`: `boolean` ; `tags`: [`string`] ; `title`: `string` ; `totalComments`: `string` ; `type`: `PostType` ; `updatedAt`: `string` }, `Error`\>
 
 #### Defined in
 
 [ui/hooks/src/use-posts.ts:217](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-posts.ts#L217)
 
-___
+---
 
 ### useProfileUpdate
 
-▸ **useProfileUpdate**(`pubKey`): `UseMutationResult`<`void`, `unknown`, `UpdateProfileFormData`, { `currentProfile`: `IProfileData`  }\>
+▸ **useProfileUpdate**(`pubKey`): `UseMutationResult`<`void`, `unknown`, `UpdateProfileFormData`, { `currentProfile`: `IProfileData` }\>
 
 Hook to update a user's profile data
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name     | Type     | Description                                  |
+| :------- | :------- | :------------------------------------------- |
 | `pubKey` | `string` | the textile generated public key of the user |
 
 #### Returns
 
-`UseMutationResult`<`void`, `unknown`, `UpdateProfileFormData`, { `currentProfile`: `IProfileData`  }\>
+`UseMutationResult`<`void`, `unknown`, `UpdateProfileFormData`, { `currentProfile`: `IProfileData` }\>
 
 #### Defined in
 
 [ui/hooks/src/use-profile.ts:382](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-profile.ts#L382)
 
-___
+---
 
 ### useQueryListener
 
@@ -1638,14 +1638,14 @@ ___
 
 #### Type parameters
 
-| Name |
+| Name    |
 | :------ |
 | `TData` |
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type       |
+| :--------- | :--------- |
 | `queryKey` | `QueryKey` |
 
 #### Returns
@@ -1656,7 +1656,7 @@ ___
 
 [ui/hooks/src/use-query-listener.ts:33](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-query-listener.ts#L33)
 
-___
+---
 
 ### useReasons
 
@@ -1672,7 +1672,7 @@ A hook to get predefined reasons from moderation API
 
 [ui/hooks/src/use-reasons.ts:47](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-reasons.ts#L47)
 
-___
+---
 
 ### useReport
 
@@ -1688,7 +1688,7 @@ Hook for reporting a post, reply or account
 
 [ui/hooks/src/use-moderation.ts:129](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-moderation.ts#L129)
 
-___
+---
 
 ### useRequiredNetworkName
 
@@ -1704,42 +1704,42 @@ A hook to get required network name from the SDK
 
 [ui/hooks/src/use-injected-provider.ts:75](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-injected-provider.ts#L75)
 
-___
+---
 
 ### useSaveBookmark
 
-▸ **useSaveBookmark**(): `UseMutationResult`<`string`[], `unknown`, { `entryId`: `string` ; `itemType`: `ItemTypes`  }, { `prevBmks`: { `entryId`: `string` ; `type`: `ItemTypes`  }[]  }\>
+▸ **useSaveBookmark**(): `UseMutationResult`<`string`[], `unknown`, { `entryId`: `string` ; `itemType`: `ItemTypes` }, { `prevBmks`: { `entryId`: `string` ; `type`: `ItemTypes` }[] }\>
 
 Hook used to save bookmarks
 can be used to bookmark replies and posts (itemType is passed to mutate()).
 
 #### Returns
 
-`UseMutationResult`<`string`[], `unknown`, { `entryId`: `string` ; `itemType`: `ItemTypes`  }, { `prevBmks`: { `entryId`: `string` ; `type`: `ItemTypes`  }[]  }\>
+`UseMutationResult`<`string`[], `unknown`, { `entryId`: `string` ; `itemType`: `ItemTypes` }, { `prevBmks`: { `entryId`: `string` ; `type`: `ItemTypes` }[] }\>
 
 #### Defined in
 
 [ui/hooks/src/use-bookmarks.ts:50](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-bookmarks.ts#L50)
 
-___
+---
 
 ### useSearch
 
-▸ **useSearch**(`searchQuery`, `loggedUser?`, `enabler?`): `UseQueryResult`<{ `comments`: `IEntryData`[] ; `entries`: `IEntryData`[] ; `profiles`: `any`[] ; `tags`: [`GlobalSearchResultTagItem`] \| []  }, `Error`\>
+▸ **useSearch**(`searchQuery`, `loggedUser?`, `enabler?`): `UseQueryResult`<{ `comments`: `IEntryData`[] ; `entries`: `IEntryData`[] ; `profiles`: `any`[] ; `tags`: [`GlobalSearchResultTagItem`] \| [] }, `Error`\>
 
 Hook for fetching search results for a specific query
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `searchQuery` | `string` | `undefined` | query for the search |
-| `loggedUser?` | `string` | `undefined` | pubKey of the logged in user |
-| `enabler` | `boolean` | `true` | flag to allow the query |
+| Name          | Type      | Default value | Description                  |
+| :------------ | :-------- | :------------ | :--------------------------- |
+| `searchQuery` | `string`  | `undefined`   | query for the search         |
+| `loggedUser?` | `string`  | `undefined`   | pubKey of the logged in user |
+| `enabler`     | `boolean` | `true`        | flag to allow the query      |
 
 #### Returns
 
-`UseQueryResult`<{ `comments`: `IEntryData`[] ; `entries`: `IEntryData`[] ; `profiles`: `any`[] ; `tags`: [`GlobalSearchResultTagItem`] \| []  }, `Error`\>
+`UseQueryResult`<{ `comments`: `IEntryData`[] ; `entries`: `IEntryData`[] ; `profiles`: `any`[] ; `tags`: [`GlobalSearchResultTagItem`] \| [] }, `Error`\>
 
 search results for posts, comments, tags and profiles
 
@@ -1747,7 +1747,7 @@ search results for posts, comments, tags and profiles
 
 [ui/hooks/src/use-search.ts:324](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-search.ts#L324)
 
-___
+---
 
 ### useSearchComments
 
@@ -1757,13 +1757,13 @@ Hook to search for comments
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `searchQuery` | `string` | `undefined` | query for the search |
-| `page` | `number` | `undefined` | page number |
-| `loggedUser?` | `string` | `undefined` | pubKey of the logged in user |
-| `enabler` | `boolean` | `true` | flag to allow the query |
-| `pageSize` | `number` | `5` | number of results per page |
+| Name          | Type      | Default value | Description                  |
+| :------------ | :-------- | :------------ | :--------------------------- |
+| `searchQuery` | `string`  | `undefined`   | query for the search         |
+| `page`        | `number`  | `undefined`   | page number                  |
+| `loggedUser?` | `string`  | `undefined`   | pubKey of the logged in user |
+| `enabler`     | `boolean` | `true`        | flag to allow the query      |
+| `pageSize`    | `number`  | `5`           | number of results per page   |
 
 #### Returns
 
@@ -1775,7 +1775,7 @@ search results for comments
 
 [ui/hooks/src/use-search.ts:186](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-search.ts#L186)
 
-___
+---
 
 ### useSearchPosts
 
@@ -1785,13 +1785,13 @@ Hook to search for posts
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `searchQuery` | `string` | `undefined` | query for the search |
-| `page` | `number` | `undefined` | page number |
-| `loggedUser?` | `string` | `undefined` | pubKey of the logged in user |
-| `enabler` | `boolean` | `true` | flag to allow the query |
-| `pageSize` | `number` | `5` | number of results per page |
+| Name          | Type      | Default value | Description                  |
+| :------------ | :-------- | :------------ | :--------------------------- |
+| `searchQuery` | `string`  | `undefined`   | query for the search         |
+| `page`        | `number`  | `undefined`   | page number                  |
+| `loggedUser?` | `string`  | `undefined`   | pubKey of the logged in user |
+| `enabler`     | `boolean` | `true`        | flag to allow the query      |
+| `pageSize`    | `number`  | `5`           | number of results per page   |
 
 #### Returns
 
@@ -1803,7 +1803,7 @@ search results for posts
 
 [ui/hooks/src/use-search.ts:122](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-search.ts#L122)
 
-___
+---
 
 ### useSearchProfiles
 
@@ -1813,13 +1813,13 @@ Hook to search for profiles
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `searchQuery` | `string` | `undefined` | query for the search |
-| `page` | `number` | `undefined` | page number |
-| `loggedUser?` | `string` | `undefined` | pubKey of the logged in user |
-| `enabler` | `boolean` | `true` | flag to allow the query |
-| `pageSize` | `number` | `5` | number of results per page |
+| Name          | Type      | Default value | Description                  |
+| :------------ | :-------- | :------------ | :--------------------------- |
+| `searchQuery` | `string`  | `undefined`   | query for the search         |
+| `page`        | `number`  | `undefined`   | page number                  |
+| `loggedUser?` | `string`  | `undefined`   | pubKey of the logged in user |
+| `enabler`     | `boolean` | `true`        | flag to allow the query      |
+| `pageSize`    | `number`  | `5`           | number of results per page   |
 
 #### Returns
 
@@ -1831,7 +1831,7 @@ search results for profiles, containing full profile data
 
 [ui/hooks/src/use-search.ts:61](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-search.ts#L61)
 
-___
+---
 
 ### useSearchTags
 
@@ -1841,10 +1841,10 @@ Hook to search for tags
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `searchQuery` | `string` | `undefined` | query for the search |
-| `enabler` | `boolean` | `true` | flag to allow the query |
+| Name          | Type      | Default value | Description             |
+| :------------ | :-------- | :------------ | :---------------------- |
+| `searchQuery` | `string`  | `undefined`   | query for the search    |
+| `enabler`     | `boolean` | `true`        | flag to allow the query |
 
 #### Returns
 
@@ -1856,7 +1856,7 @@ search results for posts, comments, tags and profiles
 
 [ui/hooks/src/use-search.ts:220](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-search.ts#L220)
 
-___
+---
 
 ### useTagSearch
 
@@ -1866,8 +1866,8 @@ Hook to search for tags
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name      | Type     | Description     |
+| :-------- | :------- | :-------------- |
 | `tagName` | `string` | name of the tag |
 
 #### Returns
@@ -1878,7 +1878,7 @@ Hook to search for tags
 
 [ui/hooks/src/use-tag.ts:140](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-tag.ts#L140)
 
-___
+---
 
 ### useTagSubscriptions
 
@@ -1888,8 +1888,8 @@ Hook to get a user's subscribed tags
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name               | Type     | Description                       |
+| :----------------- | :------- | :-------------------------------- |
 | `loggedEthAddress` | `string` | eth address of the logged in user |
 
 #### Returns
@@ -1900,40 +1900,40 @@ Hook to get a user's subscribed tags
 
 [ui/hooks/src/use-tag.ts:22](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-tag.ts#L22)
 
-___
+---
 
 ### useToggleTagSubscription
 
-▸ **useToggleTagSubscription**(): `UseMutationResult`<{ `data`: { `toggleInterestSub`: `boolean`  }  }, `unknown`, `string`, { `previousTagSubs`: `string`[]  }\>
+▸ **useToggleTagSubscription**(): `UseMutationResult`<{ `data`: { `toggleInterestSub`: `boolean` } }, `unknown`, `string`, { `previousTagSubs`: `string`[] }\>
 
 Hook to toggle a user's tag subscription
 pass the tagName to the mutation function
 
 #### Returns
 
-`UseMutationResult`<{ `data`: { `toggleInterestSub`: `boolean`  }  }, `unknown`, `string`, { `previousTagSubs`: `string`[]  }\>
+`UseMutationResult`<{ `data`: { `toggleInterestSub`: `boolean` } }, `unknown`, `string`, { `previousTagSubs`: `string`[] }\>
 
 #### Defined in
 
 [ui/hooks/src/use-tag.ts:54](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-tag.ts#L54)
 
-___
+---
 
 ### useTrendingProfiles
 
-▸ **useTrendingProfiles**(): `UseQueryResult`<(`IProfileData` \| { `_id`: `string` ; `avatar`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `coverImage`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `description`: `string` ; `ethAddress`: `string` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string`  })[], `Error`\>
+▸ **useTrendingProfiles**(): `UseQueryResult`<(`IProfileData` \| { `_id`: `string` ; `avatar`: { `fallbackUrl`: `string` ; `url`: `string` } ; `coverImage`: { `fallbackUrl`: `string` ; `url`: `string` } ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `description`: `string` ; `ethAddress`: `string` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string` })[], `Error`\>
 
 Hook to fetch trending profiles
 
 #### Returns
 
-`UseQueryResult`<(`IProfileData` \| { `_id`: `string` ; `avatar`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `coverImage`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `description`: `string` ; `ethAddress`: `string` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string`  })[], `Error`\>
+`UseQueryResult`<(`IProfileData` \| { `_id`: `string` ; `avatar`: { `fallbackUrl`: `string` ; `url`: `string` } ; `coverImage`: { `fallbackUrl`: `string` ; `url`: `string` } ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `description`: `string` ; `ethAddress`: `string` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string` })[], `Error`\>
 
 #### Defined in
 
 [ui/hooks/src/use-trending.ts:45](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-trending.ts#L45)
 
-___
+---
 
 ### useTrendingTags
 
@@ -1949,23 +1949,23 @@ Hook to fetch trending tags
 
 [ui/hooks/src/use-trending.ts:21](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-trending.ts#L21)
 
-___
+---
 
 ### useUnfollow
 
-▸ **useUnfollow**(): `UseMutationResult`<{ `data`: { `unFollow`: `boolean`  }  }, `unknown`, `string`, { `previousFollowedProfiles`: `string`[]  }\>
+▸ **useUnfollow**(): `UseMutationResult`<{ `data`: { `unFollow`: `boolean` } }, `unknown`, `string`, { `previousFollowedProfiles`: `string`[] }\>
 
 Hook to unfollow another user
 
 #### Returns
 
-`UseMutationResult`<{ `data`: { `unFollow`: `boolean`  }  }, `unknown`, `string`, { `previousFollowedProfiles`: `string`[]  }\>
+`UseMutationResult`<{ `data`: { `unFollow`: `boolean` } }, `unknown`, `string`, { `previousFollowedProfiles`: `string`[] }\>
 
 #### Defined in
 
 [ui/hooks/src/use-follow.ts:228](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-follow.ts#L228)
 
-___
+---
 
 ### useUninstallApp
 
@@ -1981,29 +1981,29 @@ Hook to uninstall an app
 
 [ui/hooks/src/use-app-settings.ts:85](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-app-settings.ts#L85)
 
-___
+---
 
 ### useUpdateUsernameProvider
 
-▸ **useUpdateUsernameProvider**(`pubKey?`): `UseMutationResult`<`void` \| { `makeDefaultProvider`: `string`  }, `Error`, { `provider`: `ProfileProviders` ; `userName`: `string`  }, { `currentProfile`: `IProfileData`  }\>
+▸ **useUpdateUsernameProvider**(`pubKey?`): `UseMutationResult`<`void` \| { `makeDefaultProvider`: `string` }, `Error`, { `provider`: `ProfileProviders` ; `userName`: `string` }, { `currentProfile`: `IProfileData` }\>
 
 Hook to register a username for the user
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name      | Type     | Description                    |
+| :-------- | :------- | :----------------------------- |
 | `pubKey?` | `string` | textile public key of the user |
 
 #### Returns
 
-`UseMutationResult`<`void` \| { `makeDefaultProvider`: `string`  }, `Error`, { `provider`: `ProfileProviders` ; `userName`: `string`  }, { `currentProfile`: `IProfileData`  }\>
+`UseMutationResult`<`void` \| { `makeDefaultProvider`: `string` }, `Error`, { `provider`: `ProfileProviders` ; `userName`: `string` }, { `currentProfile`: `IProfileData` }\>
 
 #### Defined in
 
 [ui/hooks/src/use-username.ts:70](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-username.ts#L70)
 
-___
+---
 
 ### useUsernameValidation
 
@@ -2013,10 +2013,10 @@ Hook to check if a username is available
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `username` | `string` | `undefined` | name to check for |
-| `enabler` | `boolean` | `true` | prevent hook from running in passed falsy |
+| Name       | Type      | Default value | Description                               |
+| :--------- | :-------- | :------------ | :---------------------------------------- |
+| `username` | `string`  | `undefined`   | name to check for                         |
+| `enabler`  | `boolean` | `true`        | prevent hook from running in passed falsy |
 
 #### Returns
 
@@ -2026,7 +2026,7 @@ Hook to check if a username is available
 
 [ui/hooks/src/use-username.ts:202](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-username.ts#L202)
 
-___
+---
 
 ### withProviders
 
@@ -2035,13 +2035,13 @@ ___
 #### Type parameters
 
 | Name |
-| :------ |
-| `T` |
+| :--- |
+| `T`  |
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name               | Type                  |
+| :----------------- | :-------------------- |
 | `WrappedComponent` | `ComponentType`<`T`\> |
 
 #### Returns
@@ -2052,16 +2052,16 @@ ___
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type  |
+| :------ | :---- |
 | `props` | `any` |
 
 ##### Returns
 
 `Element`
 
-| Name | Type |
-| :------ | :------ |
+| Name          | Type     |
+| :------------ | :------- |
 | `displayName` | `string` |
 
 #### Defined in

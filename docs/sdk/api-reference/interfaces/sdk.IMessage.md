@@ -15,47 +15,47 @@ description: "Test Description"
 
 ### body
 
- **body**: `Record`<`string`, `any`\>
+**body**: `Record`<`string`, `any`\>
 
 #### Defined in
 
 sdk/typings/lib/interfaces/auth.d.ts:82
 
-___
+---
 
 ### createdAt
 
- **createdAt**: `number`
+**createdAt**: `number`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/auth.d.ts:85
 
-___
+---
 
 ### from
 
- **from**: `string`
+**from**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/auth.d.ts:83
 
-___
+---
 
 ### id
 
- **id**: `string`
+**id**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/auth.d.ts:86
 
-___
+---
 
 ### readAt
 
- **readAt**: `number`
+**readAt**: `number`
 
 #### Defined in
 

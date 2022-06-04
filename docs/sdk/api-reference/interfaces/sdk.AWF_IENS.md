@@ -23,8 +23,8 @@ description: "Test Description"
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type     |
+| :----- | :------- |
 | `name` | `string` |
 
 #### Returns
@@ -35,7 +35,7 @@ description: "Test Description"
 
 sdk/typings/lib/interfaces/registry.d.ts:4
 
-___
+---
 
 ### isAvailable
 
@@ -43,8 +43,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type     |
+| :----- | :------- |
 | `name` | `string` |
 
 #### Returns
@@ -55,7 +55,7 @@ ___
 
 sdk/typings/lib/interfaces/registry.d.ts:6
 
-___
+---
 
 ### registerName
 
@@ -63,8 +63,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type     |
+| :----- | :------- |
 | `name` | `string` |
 
 #### Returns
@@ -75,7 +75,7 @@ ___
 
 sdk/typings/lib/interfaces/registry.d.ts:3
 
-___
+---
 
 ### resolveAddress
 
@@ -83,8 +83,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name         | Type     |
+| :----------- | :------- |
 | `ethAddress` | `string` |
 
 #### Returns
@@ -95,7 +95,7 @@ ___
 
 sdk/typings/lib/interfaces/registry.d.ts:7
 
-___
+---
 
 ### resolveName
 
@@ -103,8 +103,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type     |
+| :----- | :------- |
 | `name` | `string` |
 
 #### Returns
@@ -115,7 +115,7 @@ ___
 
 sdk/typings/lib/interfaces/registry.d.ts:8
 
-___
+---
 
 ### userIsOwnerOf
 
@@ -123,8 +123,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type     |
+| :----- | :------- |
 | `name` | `string` |
 
 #### Returns

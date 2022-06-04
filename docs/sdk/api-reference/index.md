@@ -20,9 +20,9 @@ your own app.
 
 ## Interfaces
 
-- [AWF\_SDK](interfaces/AWF_SDK.md)
-- [SDK\_API](interfaces/SDK_API.md)
-- [SDK\_Services](interfaces/SDK_Services.md)
+- [AWF_SDK](interfaces/AWF_SDK.md)
+- [SDK_API](interfaces/SDK_API.md)
+- [SDK_Services](interfaces/SDK_Services.md)
 
 ## Functions
 
@@ -33,8 +33,9 @@ your own app.
 Creates a new SDK instance or returns a previusly created one.
 
 **`example`**
+
 ```ts
-import getSDK from '@akashaorg/awf-sdk';
+import getSDK from "@akashaorg/awf-sdk";
 const sdk = getSDK();
 ```
 
@@ -46,7 +47,7 @@ const sdk = getSDK();
 
 [sdk/src/index.ts:68](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/index.ts#L68)
 
-___
+---
 
 ### init
 
@@ -55,8 +56,9 @@ ___
 Creates a new SDK instance.
 
 **`example`**
+
 ```ts
-import {init} from '@akashaorg/awf-sdk';
+import { init } from "@akashaorg/awf-sdk";
 const sdk = init();
 ```
 

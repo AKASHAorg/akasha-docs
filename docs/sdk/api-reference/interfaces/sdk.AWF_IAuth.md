@@ -21,23 +21,23 @@ Auth API
 
 ### authenticateMutationData
 
-**authenticateMutationData**(`data`): `Observable`<{ `signedData`: `unknown` ; `token`: `unknown`  }\>
+**authenticateMutationData**(`data`): `Observable`<{ `signedData`: `unknown` ; `token`: `unknown` }\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type                                                                           |
+| :----- | :----------------------------------------------------------------------------- |
 | `data` | `string` \| `Record`<`string`, `unknown`\> \| `Record`<`string`, `unknown`\>[] |
 
 #### Returns
 
-`Observable`<{ `signedData`: `unknown` ; `token`: `unknown`  }\>
+`Observable`<{ `signedData`: `unknown` ; `token`: `unknown` }\>
 
 #### Defined in
 
 sdk/typings/lib/interfaces/auth.d.ts:52
 
-___
+---
 
 ### checkIfSignedUp
 
@@ -45,8 +45,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name         | Type     |
+| :----------- | :------- |
 | `ethAddress` | `string` |
 
 #### Returns
@@ -57,47 +57,47 @@ ___
 
 sdk/typings/lib/interfaces/auth.d.ts:13
 
-___
+---
 
 ### decryptMessage
 
-**decryptMessage**(`message`): `Observable`<{ `data`: { `body`: `Record`<`string`, `any`\> ; `createdAt`: `number` ; `from`: `string` ; `id`: `string` ; `readAt`: `number`  }  }\>
+**decryptMessage**(`message`): `Observable`<{ `data`: { `body`: `Record`<`string`, `any`\> ; `createdAt`: `number` ; `from`: `string` ; `id`: `string` ; `readAt`: `number` } }\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type  |
+| :-------- | :---- |
 | `message` | `any` |
 
 #### Returns
 
-`Observable`<{ `data`: { `body`: `Record`<`string`, `any`\> ; `createdAt`: `number` ; `from`: `string` ; `id`: `string` ; `readAt`: `number`  }  }\>
+`Observable`<{ `data`: { `body`: `Record`<`string`, `any`\> ; `createdAt`: `number` ; `from`: `string` ; `id`: `string` ; `readAt`: `number` } }\>
 
 #### Defined in
 
 sdk/typings/lib/interfaces/auth.d.ts:56
 
-___
+---
 
 ### deleteMessage
 
-**deleteMessage**(`messageId`): `Observable`<{ `data`: `boolean`  }\>
+**deleteMessage**(`messageId`): `Observable`<{ `data`: `boolean` }\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name        | Type     |
+| :---------- | :------- |
 | `messageId` | `string` |
 
 #### Returns
 
-`Observable`<{ `data`: `boolean`  }\>
+`Observable`<{ `data`: `boolean` }\>
 
 #### Defined in
 
 sdk/typings/lib/interfaces/auth.d.ts:74
 
-___
+---
 
 ### enableSync
 
@@ -113,197 +113,197 @@ enable key sync between opened tabs
 
 sdk/typings/lib/interfaces/auth.d.ts:12
 
-___
+---
 
 ### getCurrentUser
 
-**getCurrentUser**(): `Observable`<{ `data`: [`CurrentUser`](sdk.CurrentUser.md)  }\>
+**getCurrentUser**(): `Observable`<{ `data`: [`CurrentUser`](sdk.CurrentUser.md) }\>
 
 #### Returns
 
-`Observable`<{ `data`: [`CurrentUser`](sdk.CurrentUser.md)  }\>
+`Observable`<{ `data`: [`CurrentUser`](sdk.CurrentUser.md) }\>
 
 #### Defined in
 
 sdk/typings/lib/interfaces/auth.d.ts:32
 
-___
+---
 
 ### getMessages
 
-**getMessages**(`args`): `Observable`<{ `data`: [`IMessage`](sdk.IMessage.md)[]  }\>
+**getMessages**(`args`): `Observable`<{ `data`: [`IMessage`](sdk.IMessage.md)[] }\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type               |
+| :----- | :----------------- |
 | `args` | `InboxListOptions` |
 
 #### Returns
 
-`Observable`<{ `data`: [`IMessage`](sdk.IMessage.md)[]  }\>
+`Observable`<{ `data`: [`IMessage`](sdk.IMessage.md)[] }\>
 
 #### Defined in
 
 sdk/typings/lib/interfaces/auth.d.ts:65
 
-___
+---
 
 ### getSession
 
-**getSession**(): `Observable`<{ `data`: { `buck`: `Buckets` ; `client`: `Client` ; `user`: `Users`  }  }\>
+**getSession**(): `Observable`<{ `data`: { `buck`: `Buckets` ; `client`: `Client` ; `user`: `Users` } }\>
 
 #### Returns
 
-`Observable`<{ `data`: { `buck`: `Buckets` ; `client`: `Client` ; `user`: `Users`  }  }\>
+`Observable`<{ `data`: { `buck`: `Buckets` ; `client`: `Client` ; `user`: `Users` } }\>
 
 #### Defined in
 
 sdk/typings/lib/interfaces/auth.d.ts:22
 
-___
+---
 
 ### getToken
 
-**getToken**(): `Observable`<{ `data`: `string`  }\>
+**getToken**(): `Observable`<{ `data`: `string` }\>
 
 #### Returns
 
-`Observable`<{ `data`: `string`  }\>
+`Observable`<{ `data`: `string` }\>
 
 #### Defined in
 
 sdk/typings/lib/interfaces/auth.d.ts:29
 
-___
+---
 
 ### hasNewNotifications
 
-**hasNewNotifications**(): `Observable`<{ `data`: `boolean`  }\>
+**hasNewNotifications**(): `Observable`<{ `data`: `boolean` }\>
 
 #### Returns
 
-`Observable`<{ `data`: `boolean`  }\>
+`Observable`<{ `data`: `boolean` }\>
 
 #### Defined in
 
 sdk/typings/lib/interfaces/auth.d.ts:68
 
-___
+---
 
 ### markMessageAsRead
 
-**markMessageAsRead**(`messageId`): `Observable`<{ `data`: `boolean`  }\>
+**markMessageAsRead**(`messageId`): `Observable`<{ `data`: `boolean` }\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name        | Type     |
+| :---------- | :------- |
 | `messageId` | `string` |
 
 #### Returns
 
-`Observable`<{ `data`: `boolean`  }\>
+`Observable`<{ `data`: `boolean` }\>
 
 #### Defined in
 
 sdk/typings/lib/interfaces/auth.d.ts:71
 
-___
+---
 
 ### signData
 
-**signData**(`data`, `base64Format?`): `Observable`<{ `data`: { `pubKey`: `string` ; `serializedData`: `unknown` ; `signature`: `string` \| `Uint8Array`  }  }\>
+**signData**(`data`, `base64Format?`): `Observable`<{ `data`: { `pubKey`: `string` ; `serializedData`: `unknown` ; `signature`: `string` \| `Uint8Array` } }\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `string` \| `Record`<`string`, `unknown`\> \| `Record`<`string`, `unknown`\>[] |
-| `base64Format?` | `boolean` |
+| Name            | Type                                                                           |
+| :-------------- | :----------------------------------------------------------------------------- |
+| `data`          | `string` \| `Record`<`string`, `unknown`\> \| `Record`<`string`, `unknown`\>[] |
+| `base64Format?` | `boolean`                                                                      |
 
 #### Returns
 
-`Observable`<{ `data`: { `pubKey`: `string` ; `serializedData`: `unknown` ; `signature`: `string` \| `Uint8Array`  }  }\>
+`Observable`<{ `data`: { `pubKey`: `string` ; `serializedData`: `unknown` ; `signature`: `string` \| `Uint8Array` } }\>
 
 #### Defined in
 
 sdk/typings/lib/interfaces/auth.d.ts:38
 
-___
+---
 
 ### signIn
 
-**signIn**(`args`): `Observable`<{ `data`: [`CurrentUser`](sdk.CurrentUser.md) & { `isNewUser`: `boolean`  }  }\>
+**signIn**(`args`): `Observable`<{ `data`: [`CurrentUser`](sdk.CurrentUser.md) & { `isNewUser`: `boolean` } }\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Object` |
-| `args.checkRegistered` | `boolean` |
-| `args.provider?` | [`EthProviders`](../enums/sdk.EthProviders.md) |
+| Name                   | Type                                           |
+| :--------------------- | :--------------------------------------------- |
+| `args`                 | `Object`                                       |
+| `args.checkRegistered` | `boolean`                                      |
+| `args.provider?`       | [`EthProviders`](../enums/sdk.EthProviders.md) |
 
 #### Returns
 
-`Observable`<{ `data`: [`CurrentUser`](sdk.CurrentUser.md) & { `isNewUser`: `boolean`  }  }\>
+`Observable`<{ `data`: [`CurrentUser`](sdk.CurrentUser.md) & { `isNewUser`: `boolean` } }\>
 
 #### Defined in
 
 sdk/typings/lib/interfaces/auth.d.ts:14
 
-___
+---
 
 ### signOut
 
-**signOut**(): `Observable`<{ `data`: `boolean`  }\>
+**signOut**(): `Observable`<{ `data`: `boolean` }\>
 
 #### Returns
 
-`Observable`<{ `data`: `boolean`  }\>
+`Observable`<{ `data`: `boolean` }\>
 
 #### Defined in
 
 sdk/typings/lib/interfaces/auth.d.ts:35
 
-___
+---
 
 ### validateInvite
 
-**validateInvite**(`inviteCode`): `Observable`<{ `data`: `boolean`  }\>
+**validateInvite**(`inviteCode`): `Observable`<{ `data`: `boolean` }\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name         | Type     |
+| :----------- | :------- |
 | `inviteCode` | `string` |
 
 #### Returns
 
-`Observable`<{ `data`: `boolean`  }\>
+`Observable`<{ `data`: `boolean` }\>
 
 #### Defined in
 
 sdk/typings/lib/interfaces/auth.d.ts:77
 
-___
+---
 
 ### verifySignature
 
-**verifySignature**(`args`): `Observable`<{ `data`: `boolean`  }\>
+**verifySignature**(`args`): `Observable`<{ `data`: `boolean` }\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Object` |
-| `args.data` | `string` \| `Record`<`string`, `unknown`\> \| `Uint8Array` |
-| `args.pubKey` | `string` |
-| `args.signature` | `string` \| `Uint8Array` |
+| Name             | Type                                                       |
+| :--------------- | :--------------------------------------------------------- |
+| `args`           | `Object`                                                   |
+| `args.data`      | `string` \| `Record`<`string`, `unknown`\> \| `Uint8Array` |
+| `args.pubKey`    | `string`                                                   |
+| `args.signature` | `string` \| `Uint8Array`                                   |
 
 #### Returns
 
-`Observable`<{ `data`: `boolean`  }\>
+`Observable`<{ `data`: `boolean` }\>
 
 #### Defined in
 

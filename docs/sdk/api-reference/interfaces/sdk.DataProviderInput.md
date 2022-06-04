@@ -15,27 +15,27 @@ description: "Test Description"
 
 ### property
 
- **property**: `string`
+**property**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/common.d.ts:4
 
-___
+---
 
 ### provider
 
- **provider**: `string`
+**provider**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/common.d.ts:3
 
-___
+---
 
 ### value
 
- **value**: `string`
+**value**: `string`
 
 #### Defined in
 

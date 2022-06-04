@@ -25,10 +25,10 @@ description: "Test Description"
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `size?` | `number` |
-| `time?` | `number` |
+| Name                 | Type                |
+| :------------------- | :------------------ |
+| `size?`              | `number`            |
+| `time?`              | `number`            |
 | `timeStampProvider?` | `TimestampProvider` |
 
 #### Overrides

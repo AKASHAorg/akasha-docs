@@ -15,67 +15,67 @@ description: "Test Description"
 
 ### config
 
- `Optional` **config**: `string`[][]
+`Optional` **config**: `string`[][]
 
 #### Defined in
 
 [sdk/src/db/app.schema.ts:46](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/app.schema.ts#L46)
 
-___
+---
 
 ### id
 
- **id**: `string`
+**id**: `string`
 
 #### Defined in
 
 [sdk/src/db/app.schema.ts:41](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/app.schema.ts#L41)
 
-___
+---
 
 ### integrationType
 
- **integrationType**: `number`
+**integrationType**: `number`
 
 #### Defined in
 
 [sdk/src/db/app.schema.ts:42](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/app.schema.ts#L42)
 
-___
+---
 
 ### name
 
- **name**: `string`
+**name**: `string`
 
 #### Defined in
 
 [sdk/src/db/app.schema.ts:40](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/app.schema.ts#L40)
 
-___
+---
 
 ### sources
 
- **sources**: `string`[]
+**sources**: `string`[]
 
 #### Defined in
 
 [sdk/src/db/app.schema.ts:44](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/app.schema.ts#L44)
 
-___
+---
 
 ### status
 
- **status**: `boolean`
+**status**: `boolean`
 
 #### Defined in
 
 [sdk/src/db/app.schema.ts:45](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/app.schema.ts#L45)
 
-___
+---
 
 ### version
 
- **version**: `string`
+**version**: `string`
 
 #### Defined in
 

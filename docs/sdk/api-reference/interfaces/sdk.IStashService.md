@@ -13,8 +13,8 @@ description: "Test Description"
 
 ## Type parameters
 
-| Name |
-| :------ |
+| Name     |
+| :------- |
 | `IStash` |
 
 ## Implemented by
@@ -29,8 +29,8 @@ description: "Test Description"
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type                           |
+| :------- | :----------------------------- |
 | `objKey` | `Record`<`string`, `unknown`\> |
 
 #### Returns
@@ -41,7 +41,7 @@ description: "Test Description"
 
 sdk/typings/lib/interfaces/stash.d.ts:9
 
-___
+---
 
 ### create
 
@@ -49,8 +49,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type                              |
+| :----- | :-------------------------------- |
 | `args` | [`LRUOptions`](sdk.LRUOptions.md) |
 
 #### Returns
@@ -61,7 +61,7 @@ ___
 
 sdk/typings/lib/interfaces/stash.d.ts:7
 
-___
+---
 
 ### getUiStash
 

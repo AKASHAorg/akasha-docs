@@ -26,7 +26,7 @@ CurrentUser.ethAddress
 
 sdk/typings/lib/interfaces/common.d.ts:14
 
-___
+---
 
 ### filAddress
 
@@ -40,7 +40,7 @@ CurrentUser.filAddress
 
 sdk/typings/lib/interfaces/common.d.ts:16
 
-___
+---
 
 ### fromCache
 
@@ -50,7 +50,7 @@ ___
 
 [ui/hooks/src/use-login.ts:28](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-login.ts#L28)
 
-___
+---
 
 ### isNewUser
 
@@ -64,7 +64,7 @@ CurrentUser.isNewUser
 
 sdk/typings/lib/interfaces/common.d.ts:15
 
-___
+---
 
 ### isReady
 
@@ -74,7 +74,7 @@ ___
 
 [ui/hooks/src/use-login.ts:21](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-login.ts#L21)
 
-___
+---
 
 ### isSigningIn
 
@@ -84,7 +84,7 @@ ___
 
 [ui/hooks/src/use-login.ts:23](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-login.ts#L23)
 
-___
+---
 
 ### pubKey
 
@@ -98,7 +98,7 @@ CurrentUser.pubKey
 
 sdk/typings/lib/interfaces/common.d.ts:13
 
-___
+---
 
 ### waitForAuth
 

@@ -13,8 +13,8 @@ description: "Test Description"
 
 ## Type parameters
 
-| Name |
-| :------ |
+| Name        |
+| :---------- |
 | `Operation` |
 
 ## Methods
@@ -25,8 +25,8 @@ description: "Test Description"
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name        | Type             |
+| :---------- | :--------------- |
 | `operation` | `GraphQLRequest` |
 
 #### Returns

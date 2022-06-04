@@ -13,139 +13,139 @@ description: "Test Description"
 
 ## Enumeration members
 
-### CONNECT\_ADDRESS
+### CONNECT_ADDRESS
 
- **CONNECT\_ADDRESS** = `"#auth#connectAddress"`
+**CONNECT_ADDRESS** = `"#auth#connectAddress"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:8
 
-___
+---
 
-### CONNECT\_ADDRESS\_SUCCESS
+### CONNECT_ADDRESS_SUCCESS
 
- **CONNECT\_ADDRESS\_SUCCESS** = `"#auth#aconnectAddress#success"`
+**CONNECT_ADDRESS_SUCCESS** = `"#auth#aconnectAddress#success"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:9
 
-___
+---
 
-### MARK\_MSG\_READ
+### MARK_MSG_READ
 
- **MARK\_MSG\_READ** = `"#auth#markMsgRead"`
+**MARK_MSG_READ** = `"#auth#markMsgRead"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:7
 
-___
+---
 
-### NEW\_NOTIFICATIONS
+### NEW_NOTIFICATIONS
 
- **NEW\_NOTIFICATIONS** = `"#auth#hasNewNotifications"`
+**NEW_NOTIFICATIONS** = `"#auth#hasNewNotifications"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:4
 
-___
+---
 
 ### READY
 
- **READY** = `"#auth#ready"`
+**READY** = `"#auth#ready"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:3
 
-___
+---
 
-### SIGN\_AUTH\_MESSAGE
+### SIGN_AUTH_MESSAGE
 
- **SIGN\_AUTH\_MESSAGE** = `"#auth#signAuthMessage"`
+**SIGN_AUTH_MESSAGE** = `"#auth#signAuthMessage"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:10
 
-___
+---
 
-### SIGN\_AUTH\_MESSAGE\_SUCCESS
+### SIGN_AUTH_MESSAGE_SUCCESS
 
- **SIGN\_AUTH\_MESSAGE\_SUCCESS** = `"#auth#signAuthMessage#success"`
+**SIGN_AUTH_MESSAGE_SUCCESS** = `"#auth#signAuthMessage#success"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:11
 
-___
+---
 
-### SIGN\_COMPOSED\_MESSAGE
+### SIGN_COMPOSED_MESSAGE
 
- **SIGN\_COMPOSED\_MESSAGE** = `"#auth#signComposedMessage"`
+**SIGN_COMPOSED_MESSAGE** = `"#auth#signComposedMessage"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:12
 
-___
+---
 
-### SIGN\_COMPOSED\_MESSAGE\_SUCCESS
+### SIGN_COMPOSED_MESSAGE_SUCCESS
 
- **SIGN\_COMPOSED\_MESSAGE\_SUCCESS** = `"#auth#signComposedMessage#success"`
+**SIGN_COMPOSED_MESSAGE_SUCCESS** = `"#auth#signComposedMessage#success"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:13
 
-___
+---
 
-### SIGN\_IN
+### SIGN_IN
 
- **SIGN\_IN** = `"#auth#signIn"`
+**SIGN_IN** = `"#auth#signIn"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:2
 
-___
+---
 
-### SIGN\_OUT
+### SIGN_OUT
 
- **SIGN\_OUT** = `"#auth#signOut"`
+**SIGN_OUT** = `"#auth#signOut"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:5
 
-___
+---
 
-### SIGN\_TOKEN\_MESSAGE
+### SIGN_TOKEN_MESSAGE
 
- **SIGN\_TOKEN\_MESSAGE** = `"#auth#signTokenMessage"`
+**SIGN_TOKEN_MESSAGE** = `"#auth#signTokenMessage"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:14
 
-___
+---
 
-### SIGN\_TOKEN\_MESSAGE\_SUCCESS
+### SIGN_TOKEN_MESSAGE_SUCCESS
 
- **SIGN\_TOKEN\_MESSAGE\_SUCCESS** = `"#auth#signTokenMessage#success"`
+**SIGN_TOKEN_MESSAGE_SUCCESS** = `"#auth#signTokenMessage#success"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:15
 
-___
+---
 
-### WAIT\_FOR\_AUTH
+### WAIT_FOR_AUTH
 
- **WAIT\_FOR\_AUTH** = `"#auth#waitForAuth"`
+**WAIT_FOR_AUTH** = `"#auth#waitForAuth"`
 
 #### Defined in
 

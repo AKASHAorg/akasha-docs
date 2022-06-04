@@ -15,17 +15,17 @@ description: "Test Description"
 
 ### config
 
- **config**: `string`[][]
+**config**: `string`[][]
 
 #### Defined in
 
 [sdk/src/settings/apps.ts:21](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L21)
 
-___
+---
 
 ### name
 
- **name**: `string`
+**name**: `string`
 
 #### Defined in
 

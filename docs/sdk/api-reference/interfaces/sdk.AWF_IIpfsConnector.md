@@ -19,7 +19,7 @@ description: "Test Description"
 
 ### gateway
 
- **gateway**: `string`
+**gateway**: `string`
 
 #### Defined in
 
@@ -29,23 +29,23 @@ sdk/typings/lib/interfaces/ipfs.connector.d.ts:5
 
 ### catDocument
 
-**catDocument**(`doc`): `Observable`<{ `data`: `string`  }\>
+**catDocument**(`doc`): `Observable`<{ `data`: `string` }\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name  | Type     |
+| :---- | :------- |
 | `doc` | `string` |
 
 #### Returns
 
-`Observable`<{ `data`: `string`  }\>
+`Observable`<{ `data`: `string` }\>
 
 #### Defined in
 
 sdk/typings/lib/interfaces/ipfs.connector.d.ts:9
 
-___
+---
 
 ### getLegalDoc
 
@@ -53,8 +53,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name  | Type                                       |
+| :---- | :----------------------------------------- |
 | `doc` | [`LEGAL_DOCS`](../enums/sdk.LEGAL_DOCS.md) |
 
 #### Returns
@@ -65,7 +65,7 @@ ___
 
 sdk/typings/lib/interfaces/ipfs.connector.d.ts:16
 
-___
+---
 
 ### getSettings
 
@@ -75,8 +75,8 @@ ___
 
 `Object`
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type     |
+| :-------- | :------- |
 | `gateway` | `string` |
 
 #### Defined in
