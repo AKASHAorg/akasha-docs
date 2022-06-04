@@ -5,6 +5,48 @@ sidebar_position: 2
 
 Applications are the core of AKASHA. They are the building blocks that powers a world (link to world definition here).
 
+## App Folder Structure
+In order to maintain consistency between different apps, we recommend creating a similar top level folder structure:
+
+```treeview title='Basic App Directory Structure'
+├── src
+│   ├── components
+│   │   ├── app.tsx // root component of your app
+│   │   ├── index.tsx // single-spa-react lifecycle exports
+│   └── index.tsx // registration function export
+├── package.json
+├── README.md
+├── tsconfig.json
+├── yarn.lock
+└── webpack.config.js
+```
+
+## Loading/Unloading Apps
+Before loading and unloading apps, they must be registered in the app-loader module.
+
+// @TODO: describe how to register apps
+
+
+
+## Registration Object Interface
+
+Every application is required to export a `register` function that will be called by the App Loader. It's recommended to be exported from an `index.ts` file in the `src` folder of your app.
+
+Minimum required properties of the returned object in order to be loaded are:
+
+```typescript title=src/index.ts
+export default register (registrationOptions) {
+  return {
+    mountsIn: 'string',
+    loadingFn: () => import('my-application'), // must return a promise
+    activeWhen: (location, pathToActiveWhen) => pathToActiveWhen('/my-app-route')(location), // must be a boolean
+    routes: {}, // other apps can use these routes to navigate to this app
+    menuItems: {} // used by the sidebar widget to generate a menu
+  };
+}
+```
+
+
 :::tip ReactJS
 
 We only support [React](https://reactjs.org/) as the UI library for now.
@@ -131,5 +173,3 @@ export default HelloEthereumWorldApp;
 ### Repository setup for the newly created app
 
 **1. Repo setup: nx, registryOverrides, examples/ethereum.world/src/index update**
-
-
