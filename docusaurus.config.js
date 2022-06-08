@@ -109,7 +109,7 @@ const config = {
             type: "doc",
             docId: "index",
             position: "left",
-            label: "Documents",
+            label: "Docs",
           },
           // {to: '/blog', label: 'Tutorials', position: 'left'},
           {
