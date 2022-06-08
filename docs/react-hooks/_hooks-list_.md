@@ -6,154 +6,154 @@ Currently we have the following hooks:
 
 ## Analytics
 
-- [`useAnalytics`](/docs/react-hooks/modules#useanalytics)
+- [`useAnalytics`](/react-hooks/modules#useanalytics)
 
 ## AppSettings
 
-- [`useGetAppConfig`](/docs/react-hooks/modules#usegetappconfig)
-- [`useGetAllInstalledApps`](/docs/react-hooks/modules#usegetallinstalledapps)
-- [`useInstallApp`](/docs/react-hooks/modules#useinstallapp)
-- [`useUninstallApp`](/docs/react-hooks/modules#useuninstallapp)
+- [`useGetAppConfig`](/react-hooks/modules#usegetappconfig)
+- [`useGetAllInstalledApps`](/react-hooks/modules#usegetallinstalledapps)
+- [`useInstallApp`](/react-hooks/modules#useinstallapp)
+- [`useUninstallApp`](/react-hooks/modules#useuninstallapp)
 
 ## Bookmarks
 
-- [`useGetBookmarks`](/docs/react-hooks/modules#usegetbookmarks)
-- [`useSaveBookmark`](/docs/react-hooks/modules#usesavebookmark)
-- [`useDeleteBookmark`](/docs/react-hooks/modules#usedeletebookmark)
+- [`useGetBookmarks`](/react-hooks/modules#usegetbookmarks)
+- [`useSaveBookmark`](/react-hooks/modules#usesavebookmark)
+- [`useDeleteBookmark`](/react-hooks/modules#usedeletebookmark)
 
 ## Comments
 
-- [`useInfiniteComments`](/docs/react-hooks/modules#useinfinitecomments)
-- [`useComment`](/docs/react-hooks/modules#usecomment)
-- [`useDeleteComment`](/docs/react-hooks/modules#usedeletecomment)
-- [`useCreateComment`](/docs/react-hooks/modules#usecreatecomment)
-- [`useEditComment`](/docs/react-hooks/modules#useeditcomment)
+- [`useInfiniteComments`](/react-hooks/modules#useinfinitecomments)
+- [`useComment`](/react-hooks/modules#usecomment)
+- [`useDeleteComment`](/react-hooks/modules#usedeletecomment)
+- [`useCreateComment`](/react-hooks/modules#usecreatecomment)
+- [`useEditComment`](/react-hooks/modules#useeditcomment)
 
 ## Follow/Unfollow
 
-- [`useIsFollowingMultiple`](/docs/react-hooks/modules#useisfollowingmultiple)
-- [`useFollow`](/docs/react-hooks/modules#usefollow)
-- [`useUnfollow`](/docs/react-hooks/modules#useunfollow)
+- [`useIsFollowingMultiple`](/react-hooks/modules#useisfollowingmultiple)
+- [`useFollow`](/react-hooks/modules#usefollow)
+- [`useUnfollow`](/react-hooks/modules#useunfollow)
 
 ## GlobalLogin
 
-- [`useGlobalLogin`](/docs/react-hooks/modules#usegloballogin)
+- [`useGlobalLogin`](/react-hooks/modules#usegloballogin)
 
 ## web3Providers
 
-- [`useInjectedProvider`](/docs/react-hooks/modules#useinjectedprovider)
-- [`useConnectProvider`](/docs/react-hooks/modules#useconnectprovider)
-- [`useRequiredNetworkName`](/docs/react-hooks/modules#userequirednetworkname)
+- [`useInjectedProvider`](/react-hooks/modules#useinjectedprovider)
+- [`useConnectProvider`](/react-hooks/modules#useconnectprovider)
+- [`useRequiredNetworkName`](/react-hooks/modules#userequirednetworkname)
 
 ## IntegrationRegistry
 
-- [`useGetIntegrationInfo`](/docs/react-hooks/modules#usegetintegrationinfo)
-- [`useGetIntegrationsInfo`](/docs/react-hooks/modules#usegetintegrationsinfo)
-- [`useGetIntegrationsCount`](/docs/react-hooks/modules#usegetintegrationscount)
-- [`useGetIntegrationId`](/docs/react-hooks/modules#usegetintegrationid)
-- [`useGetIntegrationReleaseId`](/docs/react-hooks/modules#usegetintegrationreleaseid)
-- [`useGetAllIntegrationsIds`](/docs/react-hooks/modules#usegetallintegrationsids)
-- [`useGetAllIntegrationReleaseIds`](/docs/react-hooks/modules#usegetallintegrationreleaseids)
-- [`useGetIntegrationReleaseInfo`](/docs/react-hooks/modules#usegetintegrationreleaseinfo)
-- [`useGetIntegrationsReleaseInfo`](/docs/react-hooks/modules#usegetintegrationsreleaseinfo)
-- [`useGetLatestReleaseInfo`](/docs/react-hooks/modules#usegetlatestreleaseinfo)
+- [`useGetIntegrationInfo`](/react-hooks/modules#usegetintegrationinfo)
+- [`useGetIntegrationsInfo`](/react-hooks/modules#usegetintegrationsinfo)
+- [`useGetIntegrationsCount`](/react-hooks/modules#usegetintegrationscount)
+- [`useGetIntegrationId`](/react-hooks/modules#usegetintegrationid)
+- [`useGetIntegrationReleaseId`](/react-hooks/modules#usegetintegrationreleaseid)
+- [`useGetAllIntegrationsIds`](/react-hooks/modules#usegetallintegrationsids)
+- [`useGetAllIntegrationReleaseIds`](/react-hooks/modules#usegetallintegrationreleaseids)
+- [`useGetIntegrationReleaseInfo`](/react-hooks/modules#usegetintegrationreleaseinfo)
+- [`useGetIntegrationsReleaseInfo`](/react-hooks/modules#usegetintegrationsreleaseinfo)
+- [`useGetLatestReleaseInfo`](/react-hooks/modules#usegetlatestreleaseinfo)
 
 ## InviteTokenValidation
 
-- [`useIsValidToken`](/docs/react-hooks/modules#useisvalidtoken)
+- [`useIsValidToken`](/react-hooks/modules#useisvalidtoken)
 
 ## Legal
 
-- [`useLegalDoc`](/docs/react-hooks/modules#uselegaldoc)
+- [`useLegalDoc`](/react-hooks/modules#uselegaldoc)
 
 ## Login/Logout
 
-- [`useGetLogin`](/docs/react-hooks/modules#usegetlogin)
-- [`useLogin`](/docs/react-hooks/modules#uselogin)
-- [`useSignUp`](/docs/react-hooks/modules#usesignup)
-- [`signAuthMessage`](/docs/react-hooks/modules#signauthmessage)
-- [`useLogout`](/docs/react-hooks/modules#uselogout)
-- [`useCheckSignup`](/docs/react-hooks/modules#usechecksignup)
+- [`useGetLogin`](/react-hooks/modules#usegetlogin)
+- [`useLogin`](/react-hooks/modules#uselogin)
+- [`useSignUp`](/react-hooks/modules#usesignup)
+- [`signAuthMessage`](/react-hooks/modules#signauthmessage)
+- [`useLogout`](/react-hooks/modules#uselogout)
+- [`useCheckSignup`](/react-hooks/modules#usechecksignup)
 
 ## Mentions
 
-- [`useMentionSearch`](/docs/react-hooks/modules#usementionsearch)
+- [`useMentionSearch`](/react-hooks/modules#usementionsearch)
 
 ## Moderation
 
-- [`useModeration`](/docs/react-hooks/modules#usemoderation)
-- [`useReport`](/docs/react-hooks/modules#usereport)
-- [`useCheckModerator`](/docs/react-hooks/modules#usecheckmoderator)
-- [`useGetCount`](/docs/react-hooks/modules#usegetcount)
-- [`useGetFlags`](/docs/react-hooks/modules#usegetflags)
-- [`useInfiniteLog`](/docs/react-hooks/modules#useinflog)
-- [`useInfinitePending`](/docs/react-hooks/modules#useinfinitepending)
-- [`useInfiniteKept`](/docs/react-hooks/modules#useinfinitekept)
-- [`useInfiniteDelisted`](/docs/react-hooks/modules#useinfinitedelisted)
+- [`useModeration`](/react-hooks/modules#usemoderation)
+- [`useReport`](/react-hooks/modules#usereport)
+- [`useCheckModerator`](/react-hooks/modules#usecheckmoderator)
+- [`useGetCount`](/react-hooks/modules#usegetcount)
+- [`useGetFlags`](/react-hooks/modules#usegetflags)
+- [`useInfiniteLog`](/react-hooks/modules#useinflog)
+- [`useInfinitePending`](/react-hooks/modules#useinfinitepending)
+- [`useInfiniteKept`](/react-hooks/modules#useinfinitekept)
+- [`useInfiniteDelisted`](/react-hooks/modules#useinfinitedelisted)
 
 ## Navigation
 
-- [`useEntryNavigation`](/docs/react-hooks/modules#useentrynavigation)
+- [`useEntryNavigation`](/react-hooks/modules#useentrynavigation)
 
 ## NetworkState
 
-- [`useNetworkState`](/docs/react-hooks/modules#usenetworkstate)
-- [`useCurrentNetwork`](/docs/react-hooks/modules#usecurrentnetwork)
+- [`useNetworkState`](/react-hooks/modules#usenetworkstate)
+- [`useCurrentNetwork`](/react-hooks/modules#usecurrentnetwork)
 
 ## Notifications
 
-- [`useFetchNotifications`](/docs/react-hooks/modules#usefetchnotifications)
-- [`useMarkAsRead`](/docs/react-hooks/modules#usemarkasread)
-- [`useCheckNewNotifications`](/docs/react-hooks/modules#usechecknewnotifications)
+- [`useFetchNotifications`](/react-hooks/modules#usefetchnotifications)
+- [`useMarkAsRead`](/react-hooks/modules#usemarkasread)
+- [`useCheckNewNotifications`](/react-hooks/modules#usechecknewnotifications)
 
 ## Posts
 
-- [`useInfinitePosts`](/docs/react-hooks/modules#useinfiniteposts)
-- [`useInfinitePostsByTag`](/docs/react-hooks/modules#useinfinitepostsbytag)
-- [`useInfinitePostsByAuthor`](/docs/react-hooks/modules#useinfinitepostsbyauthor)
-- [`usePost`](/docs/react-hooks/modules#usepost)
-- [`useDeletePost`](/docs/react-hooks/modules#usedeletepost)
-- [`useCreatePost`](/docs/react-hooks/modules#usecreatepost)
-- [`useEditPost`](/docs/react-hooks/modules#useeditpost)
+- [`useInfinitePosts`](/react-hooks/modules#useinfiniteposts)
+- [`useInfinitePostsByTag`](/react-hooks/modules#useinfinitepostsbytag)
+- [`useInfinitePostsByAuthor`](/react-hooks/modules#useinfinitepostsbyauthor)
+- [`usePost`](/react-hooks/modules#usepost)
+- [`useDeletePost`](/react-hooks/modules#usedeletepost)
+- [`useCreatePost`](/react-hooks/modules#usecreatepost)
+- [`useEditPost`](/react-hooks/modules#useeditpost)
 
 ## Profile
 
-- [`useGetProfile`](/docs/react-hooks/modules#usegetprofile)
-- [`useGetProfileByEthAddress`](/docs/react-hooks/modules#usegetprofilebyethaddress)
-- [`useGetEntryAuthor`](/docs/react-hooks/modules#usegetentryauthor)
-- [`useFollowers`](/docs/react-hooks/modules#usefollowers)
-- [`useFollowing`](/docs/react-hooks/modules#usefollowing)
-- [`useInterests`](/docs/react-hooks/modules#useinterests)
-- [`useProfileUpdate`](/docs/react-hooks/modules#useprofileupdate)
+- [`useGetProfile`](/react-hooks/modules#usegetprofile)
+- [`useGetProfileByEthAddress`](/react-hooks/modules#usegetprofilebyethaddress)
+- [`useGetEntryAuthor`](/react-hooks/modules#usegetentryauthor)
+- [`useFollowers`](/react-hooks/modules#usefollowers)
+- [`useFollowing`](/react-hooks/modules#usefollowing)
+- [`useInterests`](/react-hooks/modules#useinterests)
+- [`useProfileUpdate`](/react-hooks/modules#useprofileupdate)
 
 ## Reasons
 
-- [`useReasons`](/docs/react-hooks/modules#usereasons)
+- [`useReasons`](/react-hooks/modules#usereasons)
 
 ## Search
 
-- [`useSearchProfiles`](/docs/react-hooks/modules#usesearchprofiles)
-- [`useSearchPosts`](/docs/react-hooks/modules#usesearchposts)
-- [`useSearchComments`](/docs/react-hooks/modules#usesearchcomments)
-- [`useSearchTags`](/docs/react-hooks/modules#usesearchtags)
-- [`useSearch`](/docs/react-hooks/modules#usesearch)
+- [`useSearchProfiles`](/react-hooks/modules#usesearchprofiles)
+- [`useSearchPosts`](/react-hooks/modules#usesearchposts)
+- [`useSearchComments`](/react-hooks/modules#usesearchcomments)
+- [`useSearchTags`](/react-hooks/modules#usesearchtags)
+- [`useSearch`](/react-hooks/modules#usesearch)
 
 ## Tag
 
-- [`useTagSubscriptions`](/docs/react-hooks/modules#usetagsubscriptions)
-- [`useIsSubscribedToTag`](/docs/react-hooks/modules#useissubscribedtotag)
-- [`useToggleTagSubscription`](/docs/react-hooks/modules#usetoggletagsubscription)
-- [`useGetTag`](/docs/react-hooks/modules#usegettag)
-- [`useTagSearch`](/docs/react-hooks/modules#usetagsearch)
+- [`useTagSubscriptions`](/react-hooks/modules#usetagsubscriptions)
+- [`useIsSubscribedToTag`](/react-hooks/modules#useissubscribedtotag)
+- [`useToggleTagSubscription`](/react-hooks/modules#usetoggletagsubscription)
+- [`useGetTag`](/react-hooks/modules#usegettag)
+- [`useTagSearch`](/react-hooks/modules#usetagsearch)
 
 ## Trending
 
-- [`useTrendingTags`](/docs/react-hooks/modules#usetrendingtags)
-- [`useTrendingProfiles`](/docs/react-hooks/modules#usetrendingprofiles)
+- [`useTrendingTags`](/react-hooks/modules#usetrendingtags)
+- [`useTrendingProfiles`](/react-hooks/modules#usetrendingprofiles)
 
 ## Username
 
-- [`useUpdateUsernameProvider`](/docs/react-hooks/modules#useupdateusernameprovider)
-- [`useEnsRegistration`](/docs/react-hooks/modules#useensregistration)
-- [`useUsernameValidation`](/docs/react-hooks/modules#useusernamevalidation)
-- [`useEnsByAddress`](/docs/react-hooks/modules#useensbyaddress)
+- [`useUpdateUsernameProvider`](/react-hooks/modules#useupdateusernameprovider)
+- [`useEnsRegistration`](/react-hooks/modules#useensregistration)
+- [`useUsernameValidation`](/react-hooks/modules#useusernamevalidation)
+- [`useEnsByAddress`](/react-hooks/modules#useensbyaddress)

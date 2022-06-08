@@ -58,4 +58,4 @@ You will need to accept the certificate in your browser.
 :::
 
 **Congrats!** You're ready to start developing.
-Let's start by [creating a super simple app](/docs/integrations/applications/create-an-app).
+Let's start by [creating a super simple app](/integrations/applications/create-an-app).

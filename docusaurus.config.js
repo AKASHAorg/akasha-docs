@@ -127,19 +127,19 @@ const config = {
             items: [
               {
                 label: "Introduction",
-                to: "/docs/introduction",
+                to: "/",
               },
               {
                 label: "Quick start",
-                to: "/docs/dev-quickstart",
+                to: "/dev-quickstart",
               },
               {
                 label: "Integrations",
-                to: "/docs/integrations",
+                to: "/integrations",
               },
               {
                 label: "SDK",
-                to: "/docs/sdk",
+                to: "/sdk",
               },
             ],
           },

@@ -20,13 +20,13 @@ In the future, we envision AKASHA as the platform that will allow people to crea
 
 Applications are standalone components that complement and extend Ethereans social network experience.
 
-[Learn more](/docs/integrations/applications)
+[Learn more](/integrations/applications)
 
 ### Widgets
 
 Allow Ethereans to perform quick actions or access small pieces of information using widgets.
 
-[Learn more](/docs/integrations/widgets)
+[Learn more](/integrations/widgets)
 
 ## Explore using AKASHA
 

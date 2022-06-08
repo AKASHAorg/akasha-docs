@@ -55,7 +55,7 @@ We only support [React](https://reactjs.org/) as the UI library for now.
 
 ### Creating a basic `Hello ethereum world` app
 
-From the root of the repository you have cloned in the [quickstart guide](http://localhost:3000/docs/dev-quickstart):
+From the root of the repository you have cloned in the [quickstart guide](/dev-quickstart):
 
 **1. Create a folder in `ui/apps/hello-ethereum-world`**
 
