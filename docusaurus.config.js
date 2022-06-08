@@ -1,24 +1,24 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'AKASHA docs',
-  tagline: 'Build your own application with AKASHA',
-  url: 'https://akasha-docs.pages.dev',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'AKASHAorg', // Usually your GitHub org/user name.
-  projectName: 'akasha-docs', // Usually your repo name.
+  title: "AKASHA docs",
+  tagline: "Build your own application with AKASHA",
+  url: "https://akasha-docs.pages.dev",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
+  organizationName: "AKASHAorg", // Usually your GitHub org/user name.
+  projectName: "akasha-docs", // Usually your repo name.
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         // docs: {
@@ -32,32 +32,36 @@ const config = {
         //   editUrl:
         //     'https://github.com/AKASHAorg/akasha-docs',
         // },
+        docs: {
+          // required to set the doc with / slug as landing page
+          routeBasePath: "/",
+        },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
   ],
   plugins: [
     [
-      'docusaurus-plugin-typedoc',
+      "docusaurus-plugin-typedoc",
       {
-        id: 'akasha-sdk-main',
-        entryPoints: ['./akasha-framework/sdk/src/index.ts'],
-        entryPointStrategy: 'expand',
-        tsconfig: 'akasha-framework/sdk/tsconfig.json',
-        readme: 'none',
-        out: './sdk/api-reference',
-        name: 'AKASHA SDK Reference',
+        id: "akasha-sdk-main",
+        entryPoints: ["./akasha-framework/sdk/src/index.ts"],
+        entryPointStrategy: "expand",
+        tsconfig: "akasha-framework/sdk/tsconfig.json",
+        readme: "none",
+        out: "./sdk/api-reference",
+        name: "AKASHA SDK reference",
         categorizeByGroup: false,
         // plugin
-        plugin: ['typedoc-plugin-missing-exports'],
-        internalNamespace: 'sdk',
+        plugin: ["typedoc-plugin-missing-exports"],
+        internalNamespace: "sdk",
         // end_plugin
         excludeInternal: true,
-        categoryOrder: ['API', 'Services'],
+        categoryOrder: ["API", "Services"],
         sidebar: {
-          categoryLabel: 'SDK Reference',
+          categoryLabel: "SDK reference",
           position: 3,
         },
         hideMembersSymbol: true,
@@ -65,23 +69,23 @@ const config = {
           pagination_prev: null,
           pagination_next: null,
           hide_title: true,
-          description: 'Test Description',
+          description: "Test Description",
         },
       },
     ],
     [
-      'docusaurus-plugin-typedoc',
+      "docusaurus-plugin-typedoc",
       {
-        id: 'akasha-ui-hooks',
-        entryPoints: ['./akasha-framework/ui/hooks/src/index.ts'],
-        entryPointStrategy: 'expand',
-        tsconfig: './akasha-framework/ui/hooks/tsconfig.json',
-        readme: 'docs/react-hooks/_hooks-list_.md',
-        out: './react-hooks',
-        name: 'React Hooks',
+        id: "akasha-ui-hooks",
+        entryPoints: ["./akasha-framework/ui/hooks/src/index.ts"],
+        entryPointStrategy: "expand",
+        tsconfig: "./akasha-framework/ui/hooks/tsconfig.json",
+        readme: "docs/react-hooks/_hooks-list_.md",
+        out: "./react-hooks",
+        name: "React hooks",
         excludeInternal: true,
         sidebar: {
-          categoryLabel: 'React Hooks',
+          categoryLabel: "React hooks",
           position: 5,
         },
         frontmatter: null,
@@ -92,76 +96,80 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode: 'dark'
+        defaultMode: "dark",
       },
       navbar: {
-        title: 'AKASHA Docs',
+        title: "AKASHA Docs",
         // logo: {
-          // alt: 'My Site Logo',
-          // src: 'img/logo.svg',
+        // alt: 'My Site Logo',
+        // src: 'img/logo.svg',
         // },
         items: [
           {
-            type: 'doc',
-            docId: 'introduction',
-            position: 'left',
-            label: 'Docs',
+            type: "doc",
+            docId: "index",
+            position: "left",
+            label: "Docs",
           },
-          {to: '/blog', label: 'Tutorials', position: 'left'},
+          // {to: '/blog', label: 'Tutorials', position: 'left'},
           {
-            href: 'https://github.com/AKASHAorg/akasha-docs',
-            label: 'GitHub',
-            position: 'right',
+            href: "https://github.com/AKASHAorg/akasha-docs",
+            label: "GitHub",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: 'Introduction',
-                to: '/docs/introduction',
+                label: "Introduction",
+                to: "/",
               },
               {
-                label: 'Quick start',
-                to: '/docs/dev-quickstart',
+                label: "Quick start",
+                to: "/dev-quickstart",
               },
               {
-                label: 'Integrations',
-                to: '/docs/integrations',
+                label: "Integrations",
+                to: "/integrations",
               },
               {
-                label: 'SDK',
-                to: '/docs/sdk',
+                label: "SDK",
+                to: "/sdk",
               },
             ],
           },
           {
-            title: 'Community',
+            title: "Community",
             items: [
               {
-                label: 'Discord',
-                href: '#discord',
+                label: "Discord",
+                href: "https://discord.com/invite/JqqKasJ",
               },
               {
-                label: 'Twitter',
-                href: '#',
+                label: "Twitter",
+                href: "https://twitter.com/AKASHAorg",
               },
             ],
           },
           {
-            title: 'More',
+            title: "More",
             items: [
+              // {
+              //   label: 'Tutorials',
+              //   to: '/blog',
+              // },
               {
-                label: 'Tutorials',
-                to: '/blog',
+                label: "GitHub",
+                href: "https://github.com/AKASHAorg",
               },
               {
-                label: 'Docs GitHub',
-                href: 'https://github.com/AKASHAorg/akasha-docs',
+                label: "Docs GitHub",
+                href: "https://github.com/AKASHAorg/akasha-docs",
               },
             ],
           },

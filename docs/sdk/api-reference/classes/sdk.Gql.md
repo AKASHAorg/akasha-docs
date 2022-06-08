@@ -23,8 +23,8 @@ description: "Test Description"
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type                    |
+| :------ | :---------------------- |
 | `stash` | [`Stash`](sdk.Stash.md) |
 
 #### Defined in
@@ -35,7 +35,7 @@ description: "Test Description"
 
 ### \_link
 
- `Readonly` **\_link**: `HttpLink`
+`Readonly` **\_link**: `HttpLink`
 
 #### Defined in
 
@@ -55,7 +55,7 @@ description: "Test Description"
 
 [sdk/src/gql/index.ts:83](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/gql/index.ts#L83)
 
-___
+---
 
 ### getCache
 
@@ -71,7 +71,7 @@ cache container for graphQL results
 
 [sdk/src/gql/index.ts:79](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/gql/index.ts#L79)
 
-___
+---
 
 ### makeOperation
 
@@ -79,8 +79,8 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name        | Type                                                | Description            |
+| :---------- | :-------------------------------------------------- | :--------------------- |
 | `operation` | [`GqlOperation`](../interfaces/sdk.GqlOperation.md) | graphQL request object |
 
 #### Returns
@@ -93,7 +93,7 @@ an object with the transformed graphQL template string for query
 
 [sdk/src/gql/index.ts:66](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/gql/index.ts#L66)
 
-___
+---
 
 ### run
 
@@ -102,15 +102,15 @@ ___
 #### Type parameters
 
 | Name |
-| :------ |
-| `T` |
+| :--- |
+| `T`  |
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `operation` | `GraphQLRequest` | `undefined` | graphQL request object |
-| `saveCache` | `boolean` | `true` | Cache the result |
+| Name        | Type             | Default value | Description            |
+| :---------- | :--------------- | :------------ | :--------------------- |
+| `operation` | `GraphQLRequest` | `undefined`   | graphQL request object |
+| `saveCache` | `boolean`        | `true`        | Cache the result       |
 
 #### Returns
 

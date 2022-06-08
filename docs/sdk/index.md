@@ -3,10 +3,9 @@ sidebar_position: 1
 sidebar_label: SDK Overview
 ---
 
-# SDK Overview
+# SDK overview
 
 The AKASHA SDK is used in every world instance and provides the core functionality to interact with different services and 3rd parties (ex. Metamask, Textile, Infura, etc.).
-
 
 ### Core concepts
 
@@ -14,25 +13,25 @@ The AKASHA SDK is used in every world instance and provides the core functionali
 - RxJS
 
 ### Usage
+
 To instantiate the SDK, you can use one of the methods it exports:
 
 ```typescript
-import getSDK from '@akashaorg/awf-sdk';
+import getSDK from "@akashaorg/awf-sdk";
 
 const sdk = getSDK();
 
 // use the sdk here
-
 ```
+
 or:
 
 ```ts
-
-import {init} from '@akashaorg/awf-sdk';
+import { init } from "@akashaorg/awf-sdk";
 
 const sdk = init();
-
 ```
+
 The main difference between the two is that `getSDK()` ensures that the sdk object is instantiated only one (singleton) whereas `init()` will instantiate it every time it's called.
 
-*returns* [SDK instance](./sdk-instance)
+_returns_ [SDK instance](./sdk-instance)
