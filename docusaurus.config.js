@@ -148,11 +148,11 @@ const config = {
             items: [
               {
                 label: "Discord",
-                href: "#discord",
+                href: "https://discord.com/invite/JqqKasJ",
               },
               {
                 label: "Twitter",
-                href: "#",
+                href: "https://twitter.com/AKASHAorg",
               },
             ],
           },
@@ -163,6 +163,10 @@ const config = {
               //   label: 'Tutorials',
               //   to: '/blog',
               // },
+              {
+                label: "GitHub",
+                href: "https://github.com/AKASHAorg",
+              },
               {
                 label: "Docs GitHub",
                 href: "https://github.com/AKASHAorg/akasha-docs",
