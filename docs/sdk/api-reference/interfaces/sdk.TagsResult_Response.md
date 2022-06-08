@@ -15,27 +15,27 @@ description: "Test Description"
 
 ### nextIndex
 
-**nextIndex**: `string`
+ **nextIndex**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:91
 
----
+___
 
 ### results
 
-**results**: [[`Tag_Response`](sdk.Tag_Response.md)]
+ **results**: [[`Tag_Response`](sdk.Tag_Response.md)]
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:90
 
----
+___
 
 ### total
 
-**total**: `number`
+ **total**: `number`
 
 #### Defined in
 

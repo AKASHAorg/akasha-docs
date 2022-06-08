@@ -15,87 +15,87 @@ description: "Test Description"
 
 ### contentType
 
-**contentType**: `string`
+ **contentType**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:51
 
----
+___
 
 ### description
 
-**description**: `string`
+ **description**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:56
 
----
+___
 
 ### favicons
 
-**favicons**: [`string`]
+ **favicons**: [`string`]
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:52
 
----
+___
 
 ### images
 
-**images**: [`string`]
+ **images**: [`string`]
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:57
 
----
+___
 
 ### mediaType
 
-**mediaType**: `string`
+ **mediaType**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:50
 
----
+___
 
 ### siteName
 
-**siteName**: `string`
+ **siteName**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:55
 
----
+___
 
 ### title
 
-**title**: `string`
+ **title**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:54
 
----
+___
 
 ### url
 
-**url**: `string`
+ **url**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:49
 
----
+___
 
 ### videos
 
-**videos**: [[`VideoPreview_Response`](sdk.VideoPreview_Response.md)]
+ **videos**: [[`VideoPreview_Response`](sdk.VideoPreview_Response.md)]
 
 #### Defined in
 

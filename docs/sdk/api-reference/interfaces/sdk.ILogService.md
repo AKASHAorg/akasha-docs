@@ -23,8 +23,8 @@ description: "Test Description"
 
 #### Parameters
 
-| Name         | Type     |
-| :----------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `nameSpace?` | `string` |
 
 #### Returns

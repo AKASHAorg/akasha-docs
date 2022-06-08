@@ -15,27 +15,27 @@ description: "Test Description"
 
 ### CREATE
 
-**CREATE** = `"#entries#Create"`
+ **CREATE** = `"#entries#Create"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:37
 
----
+___
 
 ### EDIT
 
-**EDIT** = `"#entries#Edit"`
+ **EDIT** = `"#entries#Edit"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:38
 
----
+___
 
 ### REMOVE
 
-**REMOVE** = `"#entries#Remove"`
+ **REMOVE** = `"#entries#Remove"`
 
 #### Defined in
 

@@ -14,8 +14,8 @@ description: "Test Description"
 ## Type parameters
 
 | Name |
-| :--- |
-| `T`  |
+| :------ |
+| `T` |
 
 ## Implemented by
 
@@ -25,27 +25,27 @@ description: "Test Description"
 
 ### network
 
-**network**: `string`
+ **network**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/web3.connector.d.ts:10
 
----
+___
 
 ### networkId
 
-**networkId**: `Readonly`<{ `goerli`: `number` ; `kovan`: `number` ; `mainnet`: `number` ; `rinkeby`: `number` ; `ropsten`: `number` }\>
+ **networkId**: `Readonly`<{ `goerli`: `number` ; `kovan`: `number` ; `mainnet`: `number` ; `rinkeby`: `number` ; `ropsten`: `number`  }\>
 
 #### Defined in
 
 sdk/typings/lib/interfaces/web3.connector.d.ts:11
 
----
+___
 
 ### provider
 
-`Readonly` **provider**: `T`
+ `Readonly` **provider**: `T`
 
 #### Defined in
 
@@ -55,17 +55,17 @@ sdk/typings/lib/interfaces/web3.connector.d.ts:18
 
 ### checkCurrentNetwork
 
-**checkCurrentNetwork**(): `Observable`<{ `data`: `void` }\>
+**checkCurrentNetwork**(): `Observable`<{ `data`: `void`  }\>
 
 #### Returns
 
-`Observable`<{ `data`: `void` }\>
+`Observable`<{ `data`: `void`  }\>
 
 #### Defined in
 
 sdk/typings/lib/interfaces/web3.connector.d.ts:25
 
----
+___
 
 ### connect
 
@@ -73,8 +73,8 @@ sdk/typings/lib/interfaces/web3.connector.d.ts:25
 
 #### Parameters
 
-| Name       | Type                                           |
-| :--------- | :--------------------------------------------- |
+| Name | Type |
+| :------ | :------ |
 | `provider` | [`EthProviders`](../enums/sdk.EthProviders.md) |
 
 #### Returns
@@ -85,7 +85,7 @@ sdk/typings/lib/interfaces/web3.connector.d.ts:25
 
 sdk/typings/lib/interfaces/web3.connector.d.ts:19
 
----
+___
 
 ### disconnect
 
@@ -99,21 +99,21 @@ sdk/typings/lib/interfaces/web3.connector.d.ts:19
 
 sdk/typings/lib/interfaces/web3.connector.d.ts:20
 
----
+___
 
 ### getCurrentAddress
 
-**getCurrentAddress**(): `Observable`<{ `data`: `string` }\>
+**getCurrentAddress**(): `Observable`<{ `data`: `string`  }\>
 
 #### Returns
 
-`Observable`<{ `data`: `string` }\>
+`Observable`<{ `data`: `string`  }\>
 
 #### Defined in
 
 sdk/typings/lib/interfaces/web3.connector.d.ts:22
 
----
+___
 
 ### signMessage
 
@@ -121,8 +121,8 @@ sdk/typings/lib/interfaces/web3.connector.d.ts:22
 
 #### Parameters
 
-| Name      | Type     |
-| :-------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `message` | `string` |
 
 #### Returns

@@ -15,17 +15,17 @@ description: "Test Description"
 
 ### maxAge
 
-**maxAge**: `number`
+ **maxAge**: `number`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/stash.d.ts:4
 
----
+___
 
 ### maxSize
 
-**maxSize**: `number`
+ **maxSize**: `number`
 
 #### Defined in
 

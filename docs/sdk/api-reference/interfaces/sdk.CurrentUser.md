@@ -15,37 +15,37 @@ description: "Test Description"
 
 ### ethAddress
 
-**ethAddress**: `string`
+ **ethAddress**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/common.d.ts:14
 
----
+___
 
 ### filAddress
 
-`Optional` **filAddress**: `string`
+ `Optional` **filAddress**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/common.d.ts:16
 
----
+___
 
 ### isNewUser
 
-`Optional` **isNewUser**: `boolean`
+ `Optional` **isNewUser**: `boolean`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/common.d.ts:15
 
----
+___
 
 ### pubKey
 
-**pubKey**: `string`
+ **pubKey**: `string`
 
 #### Defined in
 

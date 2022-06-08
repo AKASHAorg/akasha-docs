@@ -14,18 +14,18 @@ custom_edit_url: null
 
 #### Type declaration
 
-| Name               | Type                                            |
-| :----------------- | :---------------------------------------------- |
-| `isUrl`            | `boolean`                                       |
-| `src`              | { `fallbackUrl?`: `string` ; `url?`: `string` } |
-| `src.fallbackUrl?` | `string`                                        |
-| `src.url?`         | `string`                                        |
+| Name | Type |
+| :------ | :------ |
+| `isUrl` | `boolean` |
+| `src` | { `fallbackUrl?`: `string` ; `url?`: `string`  } |
+| `src.fallbackUrl?` | `string` |
+| `src.url?` | `string` |
 
 #### Defined in
 
 [ui/hooks/src/use-profile.ts:257](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-profile.ts#L257)
 
----
+___
 
 ### coverImage
 
@@ -33,18 +33,18 @@ custom_edit_url: null
 
 #### Type declaration
 
-| Name               | Type                                            |
-| :----------------- | :---------------------------------------------- |
-| `isUrl`            | `boolean`                                       |
-| `src`              | { `fallbackUrl?`: `string` ; `url?`: `string` } |
-| `src.fallbackUrl?` | `string`                                        |
-| `src.url?`         | `string`                                        |
+| Name | Type |
+| :------ | :------ |
+| `isUrl` | `boolean` |
+| `src` | { `fallbackUrl?`: `string` ; `url?`: `string`  } |
+| `src.fallbackUrl?` | `string` |
+| `src.url?` | `string` |
 
 #### Defined in
 
 [ui/hooks/src/use-profile.ts:258](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-profile.ts#L258)
 
----
+___
 
 ### description
 
@@ -54,7 +54,7 @@ custom_edit_url: null
 
 [ui/hooks/src/use-profile.ts:256](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-profile.ts#L256)
 
----
+___
 
 ### ethAddress
 
@@ -64,7 +64,7 @@ custom_edit_url: null
 
 [ui/hooks/src/use-profile.ts:260](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-profile.ts#L260)
 
----
+___
 
 ### name
 
@@ -74,7 +74,7 @@ custom_edit_url: null
 
 [ui/hooks/src/use-profile.ts:254](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-profile.ts#L254)
 
----
+___
 
 ### pubKey
 
@@ -84,7 +84,7 @@ custom_edit_url: null
 
 [ui/hooks/src/use-profile.ts:259](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-profile.ts#L259)
 
----
+___
 
 ### userName
 

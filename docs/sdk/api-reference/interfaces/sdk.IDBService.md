@@ -13,9 +13,9 @@ description: "Test Description"
 
 ## Type parameters
 
-| Name         |
-| :----------- |
-| `DB`         |
+| Name |
+| :------ |
+| `DB` |
 | `Collection` |
 
 ## Implemented by
@@ -30,8 +30,8 @@ description: "Test Description"
 
 #### Parameters
 
-| Name   | Type     |
-| :----- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `name` | `string` |
 
 #### Returns
@@ -42,7 +42,7 @@ description: "Test Description"
 
 sdk/typings/lib/interfaces/db.d.ts:5
 
----
+___
 
 ### getDb
 
@@ -56,7 +56,7 @@ sdk/typings/lib/interfaces/db.d.ts:5
 
 sdk/typings/lib/interfaces/db.d.ts:4
 
----
+___
 
 ### open
 
@@ -64,8 +64,8 @@ sdk/typings/lib/interfaces/db.d.ts:4
 
 #### Parameters
 
-| Name      | Type     |
-| :-------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `version` | `number` |
 
 #### Returns

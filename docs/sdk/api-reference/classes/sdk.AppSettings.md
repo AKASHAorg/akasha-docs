@@ -23,12 +23,12 @@ description: "Test Description"
 
 #### Parameters
 
-| Name            | Type                                        |
-| :-------------- | :------------------------------------------ |
-| `log`           | [`Logging`](sdk.Logging.md)                 |
-| `db`            | [`DB`](sdk.DB.md)                           |
-| `icRegistry`    | [`AWF_IC_REGISTRY`](sdk.AWF_IC_REGISTRY.md) |
-| `globalChannel` | [`EventBus`](sdk.EventBus.md)               |
+| Name | Type |
+| :------ | :------ |
+| `log` | [`Logging`](sdk.Logging.md) |
+| `db` | [`DB`](sdk.DB.md) |
+| `icRegistry` | [`AWF_IC_REGISTRY`](sdk.AWF_IC_REGISTRY.md) |
+| `globalChannel` | [`EventBus`](sdk.EventBus.md) |
 
 #### Defined in
 
@@ -38,19 +38,19 @@ description: "Test Description"
 
 ### get
 
-**get**(`appName`): `Promise`<{ `data`: [`AppsSchema`](../interfaces/sdk.AppsSchema.md) & {} & `Instance` }\>
+**get**(`appName`): `Promise`<{ `data`: [`AppsSchema`](../interfaces/sdk.AppsSchema.md) & {} & `Instance`  }\>
 
 Returns an app configuration object
 
 #### Parameters
 
-| Name      | Type     | Description     |
-| :-------- | :------- | :-------------- |
+| Name | Type | Description |
+| :------ | :------ | :------ |
 | `appName` | `string` | Name of the app |
 
 #### Returns
 
-`Promise`<{ `data`: [`AppsSchema`](../interfaces/sdk.AppsSchema.md) & {} & `Instance` }\>
+`Promise`<{ `data`: [`AppsSchema`](../interfaces/sdk.AppsSchema.md) & {} & `Instance`  }\>
 
 #### Implementation of
 
@@ -60,17 +60,17 @@ Returns an app configuration object
 
 [sdk/src/settings/apps.ts:46](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L46)
 
----
+___
 
 ### getAll
 
-**getAll**(): `Promise`<{ `data`: [`AppsSchema`](../interfaces/sdk.AppsSchema.md) & {} & `Instance`[] }\>
+**getAll**(): `Promise`<{ `data`: [`AppsSchema`](../interfaces/sdk.AppsSchema.md) & {} & `Instance`[]  }\>
 
 Returns all installed apps
 
 #### Returns
 
-`Promise`<{ `data`: [`AppsSchema`](../interfaces/sdk.AppsSchema.md) & {} & `Instance`[] }\>
+`Promise`<{ `data`: [`AppsSchema`](../interfaces/sdk.AppsSchema.md) & {} & `Instance`[]  }\>
 
 #### Implementation of
 
@@ -80,25 +80,25 @@ Returns all installed apps
 
 [sdk/src/settings/apps.ts:57](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L57)
 
----
+___
 
 ### install
 
-**install**(`app`): `Promise`<`false` \| `string`[]\>
+**install**(`app`): `Promise`<``false`` \| `string`[]\>
 
 Persist installed app configuration for the current user
 
 #### Parameters
 
-| Name        | Type     | Description |
-| :---------- | :------- | :---------- |
-| `app`       | `Object` | Object      |
-| `app.id?`   | `string` | -           |
-| `app.name?` | `string` | -           |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `app` | `Object` | Object |
+| `app.id?` | `string` | - |
+| `app.name?` | `string` | - |
 
 #### Returns
 
-`Promise`<`false` \| `string`[]\>
+`Promise`<``false`` \| `string`[]\>
 
 #### Implementation of
 
@@ -108,7 +108,7 @@ Persist installed app configuration for the current user
 
 [sdk/src/settings/apps.ts:69](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L69)
 
----
+___
 
 ### toggleAppStatus
 
@@ -116,8 +116,8 @@ Persist installed app configuration for the current user
 
 #### Parameters
 
-| Name      | Type     |
-| :-------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `appName` | `string` |
 
 #### Returns
@@ -128,7 +128,7 @@ Persist installed app configuration for the current user
 
 [sdk/src/settings/apps.ts:116](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L116)
 
----
+___
 
 ### uninstall
 
@@ -138,8 +138,8 @@ Uninstall app by name
 
 #### Parameters
 
-| Name      | Type     | Description     |
-| :-------- | :------- | :-------------- |
+| Name | Type | Description |
+| :------ | :------ | :------ |
 | `appName` | `string` | Name of the app |
 
 #### Returns
@@ -154,41 +154,41 @@ Uninstall app by name
 
 [sdk/src/settings/apps.ts:102](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L102)
 
----
+___
 
 ### updateConfig
 
-**updateConfig**(`app`): `Promise`<`string` \| `false`\>
+**updateConfig**(`app`): `Promise`<`string` \| ``false``\>
 
 #### Parameters
 
-| Name  | Type                                            |
-| :---- | :---------------------------------------------- |
+| Name | Type |
+| :------ | :------ |
 | `app` | [`ConfigInfo`](../interfaces/sdk.ConfigInfo.md) |
 
 #### Returns
 
-`Promise`<`string` \| `false`\>
+`Promise`<`string` \| ``false``\>
 
 #### Defined in
 
 [sdk/src/settings/apps.ts:157](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L157)
 
----
+___
 
 ### updateVersion
 
-**updateVersion**(`app`): `Promise`<`string` \| `false`\>
+**updateVersion**(`app`): `Promise`<`string` \| ``false``\>
 
 #### Parameters
 
-| Name  | Type                                              |
-| :---- | :------------------------------------------------ |
+| Name | Type |
+| :------ | :------ |
 | `app` | [`VersionInfo`](../interfaces/sdk.VersionInfo.md) |
 
 #### Returns
 
-`Promise`<`string` \| `false`\>
+`Promise`<`string` \| ``false``\>
 
 #### Defined in
 

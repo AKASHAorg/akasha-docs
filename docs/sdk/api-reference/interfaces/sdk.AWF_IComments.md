@@ -23,15 +23,15 @@ description: "Test Description"
 
 #### Parameters
 
-| Name                    | Type                                              |
-| :---------------------- | :------------------------------------------------ |
-| `opt`                   | `Object`                                          |
-| `opt.comment`           | `Object`                                          |
-| `opt.comment.mentions?` | `string`[]                                        |
-| `opt.comment.postID`    | `string`                                          |
-| `opt.comment.replyTo?`  | `string`                                          |
-| `opt.comment.tags?`     | `string`[]                                        |
-| `opt.data`              | [`DataProviderInput`](sdk.DataProviderInput.md)[] |
+| Name | Type |
+| :------ | :------ |
+| `opt` | `Object` |
+| `opt.comment` | `Object` |
+| `opt.comment.mentions?` | `string`[] |
+| `opt.comment.postID` | `string` |
+| `opt.comment.replyTo?` | `string` |
+| `opt.comment.tags?` | `string`[] |
+| `opt.data` | [`DataProviderInput`](sdk.DataProviderInput.md)[] |
 
 #### Returns
 
@@ -41,7 +41,7 @@ description: "Test Description"
 
 sdk/typings/lib/interfaces/posts.d.ts:50
 
----
+___
 
 ### editComment
 
@@ -49,16 +49,16 @@ sdk/typings/lib/interfaces/posts.d.ts:50
 
 #### Parameters
 
-| Name                    | Type                                              |
-| :---------------------- | :------------------------------------------------ |
-| `opt`                   | `Object`                                          |
-| `opt.comment`           | `Object`                                          |
-| `opt.comment.mentions?` | `string`[]                                        |
-| `opt.comment.postID`    | `string`                                          |
-| `opt.comment.replyTo?`  | `string`                                          |
-| `opt.comment.tags?`     | `string`[]                                        |
-| `opt.commentID`         | `string`                                          |
-| `opt.data`              | [`DataProviderInput`](sdk.DataProviderInput.md)[] |
+| Name | Type |
+| :------ | :------ |
+| `opt` | `Object` |
+| `opt.comment` | `Object` |
+| `opt.comment.mentions?` | `string`[] |
+| `opt.comment.postID` | `string` |
+| `opt.comment.replyTo?` | `string` |
+| `opt.comment.tags?` | `string`[] |
+| `opt.commentID` | `string` |
+| `opt.data` | [`DataProviderInput`](sdk.DataProviderInput.md)[] |
 
 #### Returns
 
@@ -68,7 +68,7 @@ sdk/typings/lib/interfaces/posts.d.ts:50
 
 sdk/typings/lib/interfaces/posts.d.ts:59
 
----
+___
 
 ### getComment
 
@@ -76,8 +76,8 @@ sdk/typings/lib/interfaces/posts.d.ts:59
 
 #### Parameters
 
-| Name        | Type     |
-| :---------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `commentID` | `string` |
 
 #### Returns
@@ -88,7 +88,7 @@ sdk/typings/lib/interfaces/posts.d.ts:59
 
 sdk/typings/lib/interfaces/posts.d.ts:44
 
----
+___
 
 ### getComments
 
@@ -96,12 +96,12 @@ sdk/typings/lib/interfaces/posts.d.ts:44
 
 #### Parameters
 
-| Name          | Type     |
-| :------------ | :------- |
-| `opt`         | `Object` |
-| `opt.limit`   | `number` |
+| Name | Type |
+| :------ | :------ |
+| `opt` | `Object` |
+| `opt.limit` | `number` |
 | `opt.offset?` | `string` |
-| `opt.postID`  | `string` |
+| `opt.postID` | `string` |
 
 #### Returns
 
@@ -111,7 +111,7 @@ sdk/typings/lib/interfaces/posts.d.ts:44
 
 sdk/typings/lib/interfaces/posts.d.ts:45
 
----
+___
 
 ### removeComment
 
@@ -119,8 +119,8 @@ sdk/typings/lib/interfaces/posts.d.ts:45
 
 #### Parameters
 
-| Name        | Type     |
-| :---------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `commentID` | `string` |
 
 #### Returns

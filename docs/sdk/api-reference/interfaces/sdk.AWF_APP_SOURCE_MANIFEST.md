@@ -15,47 +15,47 @@ description: "Test Description"
 
 ### description
 
-`Optional` **description**: `string`
+ `Optional` **description**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/registry.d.ts:32
 
----
+___
 
 ### displayName
 
-`Optional` **displayName**: `string`
+ `Optional` **displayName**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/registry.d.ts:34
 
----
+___
 
 ### keywords
 
-`Optional` **keywords**: `string`[]
+ `Optional` **keywords**: `string`[]
 
 #### Defined in
 
 sdk/typings/lib/interfaces/registry.d.ts:33
 
----
+___
 
 ### license
 
-`Optional` **license**: `string`
+ `Optional` **license**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/registry.d.ts:31
 
----
+___
 
 ### mainFile
 
-**mainFile**: `string`
+ **mainFile**: `string`
 
 #### Defined in
 

@@ -19,23 +19,23 @@ description: "Test Description"
 
 ### graphQLDocs
 
-**graphQLDocs**: `Object`
+ **graphQLDocs**: `Object`
 
 #### Type declaration
 
-| Name                  | Type  |
-| :-------------------- | :---- |
-| `AddProfileProvider`  | `any` |
-| `Follow`              | `any` |
-| `GetProfile`          | `any` |
-| `GlobalSearch`        | `any` |
-| `IsFollowing`         | `any` |
+| Name | Type |
+| :------ | :------ |
+| `AddProfileProvider` | `any` |
+| `Follow` | `any` |
+| `GetProfile` | `any` |
+| `GlobalSearch` | `any` |
+| `IsFollowing` | `any` |
 | `MakeDefaultProvider` | `any` |
-| `RegisterUsername`    | `any` |
-| `ResolveProfile`      | `any` |
-| `SaveMetaData`        | `any` |
-| `SearchProfiles`      | `any` |
-| `UnFollow`            | `any` |
+| `RegisterUsername` | `any` |
+| `ResolveProfile` | `any` |
+| `SaveMetaData` | `any` |
+| `SearchProfiles` | `any` |
+| `UnFollow` | `any` |
 
 #### Defined in
 
@@ -49,8 +49,8 @@ sdk/typings/lib/interfaces/profile.d.ts:4
 
 #### Parameters
 
-| Name  | Type                                              |
-| :---- | :------------------------------------------------ |
+| Name | Type |
+| :------ | :------ |
 | `opt` | [`DataProviderInput`](sdk.DataProviderInput.md)[] |
 
 #### Returns
@@ -61,7 +61,7 @@ sdk/typings/lib/interfaces/profile.d.ts:4
 
 sdk/typings/lib/interfaces/profile.d.ts:21
 
----
+___
 
 ### follow
 
@@ -69,8 +69,8 @@ sdk/typings/lib/interfaces/profile.d.ts:21
 
 #### Parameters
 
-| Name         | Type     |
-| :----------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `ethAddress` | `string` |
 
 #### Returns
@@ -81,7 +81,7 @@ sdk/typings/lib/interfaces/profile.d.ts:21
 
 sdk/typings/lib/interfaces/profile.d.ts:45
 
----
+___
 
 ### getFollowers
 
@@ -89,10 +89,10 @@ sdk/typings/lib/interfaces/profile.d.ts:45
 
 #### Parameters
 
-| Name      | Type     |
-| :-------- | :------- |
-| `pubKey`  | `string` |
-| `limit`   | `number` |
+| Name | Type |
+| :------ | :------ |
+| `pubKey` | `string` |
+| `limit` | `number` |
 | `offset?` | `number` |
 
 #### Returns
@@ -103,7 +103,7 @@ sdk/typings/lib/interfaces/profile.d.ts:45
 
 sdk/typings/lib/interfaces/profile.d.ts:117
 
----
+___
 
 ### getFollowing
 
@@ -111,10 +111,10 @@ sdk/typings/lib/interfaces/profile.d.ts:117
 
 #### Parameters
 
-| Name      | Type     |
-| :-------- | :------- |
-| `pubKey`  | `string` |
-| `limit`   | `number` |
+| Name | Type |
+| :------ | :------ |
+| `pubKey` | `string` |
+| `limit` | `number` |
 | `offset?` | `number` |
 
 #### Returns
@@ -125,7 +125,7 @@ sdk/typings/lib/interfaces/profile.d.ts:117
 
 sdk/typings/lib/interfaces/profile.d.ts:124
 
----
+___
 
 ### getInterests
 
@@ -133,8 +133,8 @@ sdk/typings/lib/interfaces/profile.d.ts:124
 
 #### Parameters
 
-| Name     | Type     |
-| :------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `pubKey` | `string` |
 
 #### Returns
@@ -145,7 +145,7 @@ sdk/typings/lib/interfaces/profile.d.ts:124
 
 sdk/typings/lib/interfaces/profile.d.ts:129
 
----
+___
 
 ### getProfile
 
@@ -153,12 +153,12 @@ sdk/typings/lib/interfaces/profile.d.ts:129
 
 #### Parameters
 
-| Name              | Type       |
-| :---------------- | :--------- |
-| `opt`             | `Object`   |
-| `opt.ethAddress?` | `string`   |
-| `opt.fields?`     | `string`[] |
-| `opt.pubKey?`     | `string`   |
+| Name | Type |
+| :------ | :------ |
+| `opt` | `Object` |
+| `opt.ethAddress?` | `string` |
+| `opt.fields?` | `string`[] |
+| `opt.pubKey?` | `string` |
 
 #### Returns
 
@@ -168,7 +168,7 @@ sdk/typings/lib/interfaces/profile.d.ts:129
 
 sdk/typings/lib/interfaces/profile.d.ts:36
 
----
+___
 
 ### getTagSubscriptions
 
@@ -182,7 +182,7 @@ sdk/typings/lib/interfaces/profile.d.ts:36
 
 sdk/typings/lib/interfaces/profile.d.ts:100
 
----
+___
 
 ### getTrending
 
@@ -196,7 +196,7 @@ sdk/typings/lib/interfaces/profile.d.ts:100
 
 sdk/typings/lib/interfaces/profile.d.ts:91
 
----
+___
 
 ### globalSearch
 
@@ -204,8 +204,8 @@ sdk/typings/lib/interfaces/profile.d.ts:91
 
 #### Parameters
 
-| Name      | Type     |
-| :-------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `keyword` | `string` |
 
 #### Returns
@@ -216,7 +216,7 @@ sdk/typings/lib/interfaces/profile.d.ts:91
 
 sdk/typings/lib/interfaces/profile.d.ts:110
 
----
+___
 
 ### isFollowing
 
@@ -224,10 +224,10 @@ sdk/typings/lib/interfaces/profile.d.ts:110
 
 #### Parameters
 
-| Name            | Type     |
-| :-------------- | :------- |
-| `opt`           | `Object` |
-| `opt.follower`  | `string` |
+| Name | Type |
+| :------ | :------ |
+| `opt` | `Object` |
+| `opt.follower` | `string` |
 | `opt.following` | `string` |
 
 #### Returns
@@ -238,7 +238,7 @@ sdk/typings/lib/interfaces/profile.d.ts:110
 
 sdk/typings/lib/interfaces/profile.d.ts:55
 
----
+___
 
 ### isSubscribedToTag
 
@@ -246,8 +246,8 @@ sdk/typings/lib/interfaces/profile.d.ts:55
 
 #### Parameters
 
-| Name      | Type     |
-| :-------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `tagName` | `string` |
 
 #### Returns
@@ -258,7 +258,7 @@ sdk/typings/lib/interfaces/profile.d.ts:55
 
 sdk/typings/lib/interfaces/profile.d.ts:105
 
----
+___
 
 ### makeDefaultProvider
 
@@ -266,8 +266,8 @@ sdk/typings/lib/interfaces/profile.d.ts:105
 
 #### Parameters
 
-| Name  | Type                                              |
-| :---- | :------------------------------------------------ |
+| Name | Type |
+| :------ | :------ |
 | `opt` | [`DataProviderInput`](sdk.DataProviderInput.md)[] |
 
 #### Returns
@@ -278,7 +278,7 @@ sdk/typings/lib/interfaces/profile.d.ts:105
 
 sdk/typings/lib/interfaces/profile.d.ts:26
 
----
+___
 
 ### registerUserName
 
@@ -286,8 +286,8 @@ sdk/typings/lib/interfaces/profile.d.ts:26
 
 #### Parameters
 
-| Name       | Type     |
-| :--------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `userName` | `string` |
 
 #### Returns
@@ -298,36 +298,36 @@ sdk/typings/lib/interfaces/profile.d.ts:26
 
 sdk/typings/lib/interfaces/profile.d.ts:31
 
----
+___
 
 ### saveMediaFile
 
-**saveMediaFile**(`data`): `Promise`<{ `CID`: `string` ; `size`: { `height`: `number` ; `naturalHeight`: `number` ; `naturalWidth`: `number` ; `width`: `number` } }\>
+**saveMediaFile**(`data`): `Promise`<{ `CID`: `string` ; `size`: { `height`: `number` ; `naturalHeight`: `number` ; `naturalWidth`: `number` ; `width`: `number`  }  }\>
 
 #### Parameters
 
-| Name                      | Type      |
-| :------------------------ | :-------- |
-| `data`                    | `Object`  |
-| `data.config?`            | `Object`  |
+| Name | Type |
+| :------ | :------ |
+| `data` | `Object` |
+| `data.config?` | `Object` |
 | `data.config.autoRotate?` | `boolean` |
-| `data.config.maxHeight`   | `number`  |
-| `data.config.maxWidth`    | `number`  |
-| `data.config.mimeType?`   | `string`  |
-| `data.config.quality?`    | `number`  |
-| `data.content`            | `any`     |
-| `data.isUrl?`             | `boolean` |
-| `data.name?`              | `string`  |
+| `data.config.maxHeight` | `number` |
+| `data.config.maxWidth` | `number` |
+| `data.config.mimeType?` | `string` |
+| `data.config.quality?` | `number` |
+| `data.content` | `any` |
+| `data.isUrl?` | `boolean` |
+| `data.name?` | `string` |
 
 #### Returns
 
-`Promise`<{ `CID`: `string` ; `size`: { `height`: `number` ; `naturalHeight`: `number` ; `naturalWidth`: `number` ; `width`: `number` } }\>
+`Promise`<{ `CID`: `string` ; `size`: { `height`: `number` ; `naturalHeight`: `number` ; `naturalWidth`: `number` ; `width`: `number`  }  }\>
 
 #### Defined in
 
 sdk/typings/lib/interfaces/profile.d.ts:63
 
----
+___
 
 ### searchProfiles
 
@@ -335,8 +335,8 @@ sdk/typings/lib/interfaces/profile.d.ts:63
 
 #### Parameters
 
-| Name   | Type     |
-| :----- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `name` | `string` |
 
 #### Returns
@@ -347,7 +347,7 @@ sdk/typings/lib/interfaces/profile.d.ts:63
 
 sdk/typings/lib/interfaces/profile.d.ts:87
 
----
+___
 
 ### toggleTagSubscription
 
@@ -355,8 +355,8 @@ sdk/typings/lib/interfaces/profile.d.ts:87
 
 #### Parameters
 
-| Name      | Type     |
-| :-------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `tagName` | `string` |
 
 #### Returns
@@ -367,7 +367,7 @@ sdk/typings/lib/interfaces/profile.d.ts:87
 
 sdk/typings/lib/interfaces/profile.d.ts:96
 
----
+___
 
 ### unFollow
 
@@ -375,8 +375,8 @@ sdk/typings/lib/interfaces/profile.d.ts:96
 
 #### Parameters
 
-| Name         | Type     |
-| :----------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `ethAddress` | `string` |
 
 #### Returns

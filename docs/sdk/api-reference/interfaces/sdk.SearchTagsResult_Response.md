@@ -15,17 +15,17 @@ description: "Test Description"
 
 ### name
 
-**name**: `string`
+ **name**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:95
 
----
+___
 
 ### totalPosts
 
-**totalPosts**: `number`
+ **totalPosts**: `number`
 
 #### Defined in
 

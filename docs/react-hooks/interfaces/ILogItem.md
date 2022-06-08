@@ -16,7 +16,7 @@ custom_edit_url: null
 
 [ui/hooks/src/moderation-requests.ts:60](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/moderation-requests.ts#L60)
 
----
+___
 
 ### contentType
 
@@ -26,17 +26,17 @@ custom_edit_url: null
 
 [ui/hooks/src/moderation-requests.ts:61](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/moderation-requests.ts#L61)
 
----
+___
 
 ### delisted
 
-• **delisted**: `false`
+• **delisted**: ``false``
 
 #### Defined in
 
 [ui/hooks/src/moderation-requests.ts:62](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/moderation-requests.ts#L62)
 
----
+___
 
 ### explanation
 
@@ -46,7 +46,7 @@ custom_edit_url: null
 
 [ui/hooks/src/moderation-requests.ts:64](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/moderation-requests.ts#L64)
 
----
+___
 
 ### moderatedDate
 
@@ -56,7 +56,7 @@ custom_edit_url: null
 
 [ui/hooks/src/moderation-requests.ts:66](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/moderation-requests.ts#L66)
 
----
+___
 
 ### moderator
 
@@ -66,7 +66,7 @@ custom_edit_url: null
 
 [ui/hooks/src/moderation-requests.ts:65](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/moderation-requests.ts#L65)
 
----
+___
 
 ### reasons
 
@@ -76,7 +76,7 @@ custom_edit_url: null
 
 [ui/hooks/src/moderation-requests.ts:63](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/moderation-requests.ts#L63)
 
----
+___
 
 ### reports
 

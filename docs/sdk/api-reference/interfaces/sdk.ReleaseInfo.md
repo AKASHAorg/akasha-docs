@@ -15,115 +15,115 @@ description: "Test Description"
 
 ### author
 
-**author**: `string`
+ **author**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/registry.d.ts:44
 
----
+___
 
 ### createdAt
 
-`Optional` **createdAt**: `number`
+ `Optional` **createdAt**: `number`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/registry.d.ts:47
 
----
+___
 
 ### enabled
 
-**enabled**: `boolean`
+ **enabled**: `boolean`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/registry.d.ts:45
 
----
+___
 
 ### id
 
-**id**: `string`
+ **id**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/registry.d.ts:38
 
----
+___
 
 ### integrationID
 
-**integrationID**: `string`
+ **integrationID**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/registry.d.ts:37
 
----
+___
 
 ### integrationType
 
-**integrationType**: `number`
+ **integrationType**: `number`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/registry.d.ts:41
 
----
+___
 
 ### links
 
-`Optional` **links**: `Object`
+ `Optional` **links**: `Object`
 
 #### Type declaration
 
-| Name                   | Type     |
-| :--------------------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `detailedDescription?` | `string` |
-| `documentation?`       | `string` |
-| `publicRepository?`    | `string` |
+| `documentation?` | `string` |
+| `publicRepository?` | `string` |
 
 #### Defined in
 
 sdk/typings/lib/interfaces/registry.d.ts:42
 
----
+___
 
 ### manifestData
 
-`Optional` **manifestData**: [`AWF_APP_SOURCE_MANIFEST`](sdk.AWF_APP_SOURCE_MANIFEST.md)
+ `Optional` **manifestData**: [`AWF_APP_SOURCE_MANIFEST`](sdk.AWF_APP_SOURCE_MANIFEST.md)
 
 #### Defined in
 
 sdk/typings/lib/interfaces/registry.d.ts:46
 
----
+___
 
 ### name
 
-**name**: `string`
+ **name**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/registry.d.ts:39
 
----
+___
 
 ### sources
 
-**sources**: `string`[]
+ **sources**: `string`[]
 
 #### Defined in
 
 sdk/typings/lib/interfaces/registry.d.ts:43
 
----
+___
 
 ### version
 
-**version**: `string`
+ **version**: `string`
 
 #### Defined in
 

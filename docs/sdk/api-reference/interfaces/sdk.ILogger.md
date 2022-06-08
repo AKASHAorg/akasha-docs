@@ -19,8 +19,8 @@ description: "Test Description"
 
 #### Parameters
 
-| Name  | Type     |
-| :---- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `msg` | `string` |
 
 #### Returns
@@ -31,7 +31,7 @@ description: "Test Description"
 
 sdk/typings/lib/interfaces/log.d.ts:4
 
----
+___
 
 ### info
 
@@ -39,8 +39,8 @@ sdk/typings/lib/interfaces/log.d.ts:4
 
 #### Parameters
 
-| Name  | Type     |
-| :---- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `msg` | `string` |
 
 #### Returns
@@ -51,7 +51,7 @@ sdk/typings/lib/interfaces/log.d.ts:4
 
 sdk/typings/lib/interfaces/log.d.ts:2
 
----
+___
 
 ### setLevel
 
@@ -59,8 +59,8 @@ sdk/typings/lib/interfaces/log.d.ts:2
 
 #### Parameters
 
-| Name  | Type     |
-| :---- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `lvl` | `string` |
 
 #### Returns
@@ -71,7 +71,7 @@ sdk/typings/lib/interfaces/log.d.ts:2
 
 sdk/typings/lib/interfaces/log.d.ts:5
 
----
+___
 
 ### warn
 
@@ -79,8 +79,8 @@ sdk/typings/lib/interfaces/log.d.ts:5
 
 #### Parameters
 
-| Name  | Type     |
-| :---- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `msg` | `string` |
 
 #### Returns

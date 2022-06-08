@@ -13,49 +13,49 @@ description: "Test Description"
 
 ## Enumeration members
 
-### APP_GUIDE
+### APP\_GUIDE
 
-**APP_GUIDE** = `"AppGuide"`
+ **APP\_GUIDE** = `"AppGuide"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/common.d.ts:23
 
----
+___
 
-### CODE_OF_CONDUCT
+### CODE\_OF\_CONDUCT
 
-**CODE_OF_CONDUCT** = `"CodeOfConduct"`
+ **CODE\_OF\_CONDUCT** = `"CodeOfConduct"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/common.d.ts:22
 
----
+___
 
-### PRIVACY_POLICY
+### PRIVACY\_POLICY
 
-**PRIVACY_POLICY** = `"PrivacyPolicy"`
+ **PRIVACY\_POLICY** = `"PrivacyPolicy"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/common.d.ts:21
 
----
+___
 
-### TERMS_OF_SERVICE
+### TERMS\_OF\_SERVICE
 
-**TERMS_OF_SERVICE** = `"TermsOfService"`
+ **TERMS\_OF\_SERVICE** = `"TermsOfService"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/common.d.ts:20
 
----
+___
 
-### TERMS_OF_USE
+### TERMS\_OF\_USE
 
-**TERMS_OF_USE** = `"TermsOfUse"`
+ **TERMS\_OF\_USE** = `"TermsOfUse"`
 
 #### Defined in
 

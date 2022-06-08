@@ -15,17 +15,17 @@ description: "Test Description"
 
 ### CLAIM
 
-**CLAIM** = `"#ens#Claim"`
+ **CLAIM** = `"#ens#Claim"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:46
 
----
+___
 
 ### REGISTER
 
-**REGISTER** = `"#ens#Register"`
+ **REGISTER** = `"#ens#Register"`
 
 #### Defined in
 

@@ -13,49 +13,49 @@ description: "Test Description"
 
 ## Enumeration members
 
-### INFO_READY
+### INFO\_READY
 
-**INFO_READY** = `"#integration#ReleaseInfoReady"`
+ **INFO\_READY** = `"#integration#ReleaseInfoReady"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:49
 
----
+___
 
 ### REMOVED
 
-**REMOVED** = `"#integration#Removed"`
+ **REMOVED** = `"#integration#Removed"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:50
 
----
+___
 
-### TOGGLE_STATUS
+### TOGGLE\_STATUS
 
-**TOGGLE_STATUS** = `"#integration#ToggleStatus"`
+ **TOGGLE\_STATUS** = `"#integration#ToggleStatus"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:51
 
----
+___
 
-### UPDATE_CONFIG
+### UPDATE\_CONFIG
 
-**UPDATE_CONFIG** = `"#integration#UpdateConfig"`
+ **UPDATE\_CONFIG** = `"#integration#UpdateConfig"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:53
 
----
+___
 
-### UPDATE_VERSION
+### UPDATE\_VERSION
 
-**UPDATE_VERSION** = `"#integration#UpdateVersion"`
+ **UPDATE\_VERSION** = `"#integration#UpdateVersion"`
 
 #### Defined in
 

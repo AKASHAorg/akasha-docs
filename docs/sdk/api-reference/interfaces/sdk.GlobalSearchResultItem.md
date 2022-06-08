@@ -15,17 +15,17 @@ description: "Test Description"
 
 ### id
 
-**id**: `string`
+ **id**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:99
 
----
+___
 
 ### name
 
-**name**: `string`
+ **name**: `string`
 
 #### Defined in
 

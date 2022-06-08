@@ -14,17 +14,17 @@ description: "Test Description"
 
 ### api
 
-**api**: [`SDK_API`](SDK_API.md)
+ **api**: [`SDK_API`](SDK_API.md)
 
 #### Defined in
 
 [sdk/src/index.ts:53](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/index.ts#L53)
 
----
+___
 
 ### services
 
-**services**: [`SDK_Services`](SDK_Services.md)
+ **services**: [`SDK_Services`](SDK_Services.md)
 
 #### Defined in
 

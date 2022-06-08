@@ -15,57 +15,57 @@ description: "Test Description"
 
 ### \_id
 
-**\_id**: `string`
+ **\_id**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:82
 
----
+___
 
 ### comments
 
-**comments**: [`string`]
+ **comments**: [`string`]
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:86
 
----
+___
 
 ### creationDate
 
-**creationDate**: `string`
+ **creationDate**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:84
 
----
+___
 
 ### name
 
-**name**: `string`
+ **name**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:83
 
----
+___
 
 ### posts
 
-**posts**: [`string`]
+ **posts**: [`string`]
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:85
 
----
+___
 
 ### totalPosts
 
-**totalPosts**: `number`
+ **totalPosts**: `number`
 
 #### Defined in
 

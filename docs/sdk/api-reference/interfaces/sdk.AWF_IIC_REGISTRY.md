@@ -23,10 +23,10 @@ description: "Test Description"
 
 #### Parameters
 
-| Name              | Type     |
-| :---------------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `integrationName` | `string` |
-| `offset`          | `number` |
+| `offset` | `number` |
 
 #### Returns
 
@@ -36,7 +36,7 @@ description: "Test Description"
 
 sdk/typings/lib/interfaces/registry.d.ts:15
 
----
+___
 
 ### getAllIntegrationsIds
 
@@ -44,8 +44,8 @@ sdk/typings/lib/interfaces/registry.d.ts:15
 
 #### Parameters
 
-| Name     | Type     |
-| :------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `offset` | `number` |
 
 #### Returns
@@ -56,7 +56,7 @@ sdk/typings/lib/interfaces/registry.d.ts:15
 
 sdk/typings/lib/interfaces/registry.d.ts:14
 
----
+___
 
 ### getIntegrationId
 
@@ -64,8 +64,8 @@ sdk/typings/lib/interfaces/registry.d.ts:14
 
 #### Parameters
 
-| Name   | Type     |
-| :----- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `name` | `string` |
 
 #### Returns
@@ -76,7 +76,7 @@ sdk/typings/lib/interfaces/registry.d.ts:14
 
 sdk/typings/lib/interfaces/registry.d.ts:16
 
----
+___
 
 ### getIntegrationInfo
 
@@ -84,8 +84,8 @@ sdk/typings/lib/interfaces/registry.d.ts:16
 
 #### Parameters
 
-| Name            | Type     |
-| :-------------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `integrationId` | `string` |
 
 #### Returns
@@ -96,7 +96,7 @@ sdk/typings/lib/interfaces/registry.d.ts:16
 
 sdk/typings/lib/interfaces/registry.d.ts:11
 
----
+___
 
 ### getIntegrationReleaseId
 
@@ -104,9 +104,9 @@ sdk/typings/lib/interfaces/registry.d.ts:11
 
 #### Parameters
 
-| Name      | Type     |
-| :-------- | :------- |
-| `name`    | `string` |
+| Name | Type |
+| :------ | :------ |
+| `name` | `string` |
 | `version` | `string` |
 
 #### Returns
@@ -117,7 +117,7 @@ sdk/typings/lib/interfaces/registry.d.ts:11
 
 sdk/typings/lib/interfaces/registry.d.ts:17
 
----
+___
 
 ### getIntegrationReleaseInfo
 
@@ -125,8 +125,8 @@ sdk/typings/lib/interfaces/registry.d.ts:17
 
 #### Parameters
 
-| Name        | Type     |
-| :---------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `releaseId` | `string` |
 
 #### Returns
@@ -137,7 +137,7 @@ sdk/typings/lib/interfaces/registry.d.ts:17
 
 sdk/typings/lib/interfaces/registry.d.ts:12
 
----
+___
 
 ### getIntegrationsCount
 
@@ -151,7 +151,7 @@ sdk/typings/lib/interfaces/registry.d.ts:12
 
 sdk/typings/lib/interfaces/registry.d.ts:13
 
----
+___
 
 ### getIntegrationsInfo
 
@@ -159,8 +159,8 @@ sdk/typings/lib/interfaces/registry.d.ts:13
 
 #### Parameters
 
-| Name  | Type      |
-| :---- | :-------- |
+| Name | Type |
+| :------ | :------ |
 | `opt` | `unknown` |
 
 #### Returns
@@ -171,7 +171,7 @@ sdk/typings/lib/interfaces/registry.d.ts:13
 
 sdk/typings/lib/interfaces/registry.d.ts:19
 
----
+___
 
 ### getLatestReleaseInfo
 
@@ -179,8 +179,8 @@ sdk/typings/lib/interfaces/registry.d.ts:19
 
 #### Parameters
 
-| Name  | Type      |
-| :---- | :-------- |
+| Name | Type |
+| :------ | :------ |
 | `opt` | `unknown` |
 
 #### Returns

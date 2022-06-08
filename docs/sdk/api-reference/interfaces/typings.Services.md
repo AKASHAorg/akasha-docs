@@ -17,74 +17,74 @@ Services that are available in the SDK.
 
 ### appSettings
 
-**appSettings**: [`IAppSettings`](sdk.IAppSettings.md)
+ **appSettings**: [`IAppSettings`](sdk.IAppSettings.md)
 
 #### Defined in
 
 sdk/typings/lib/service.interfaces.d.ts:17
 
----
+___
 
 ### common
 
-**common**: `Object`
+ **common**: `Object`
 
 #### Type declaration
 
-| Name   | Type                                                  |
-| :----- | :---------------------------------------------------- |
-| `ipfs` | [`AWF_IIpfsConnector`](sdk.AWF_IIpfsConnector.md)     |
+| Name | Type |
+| :------ | :------ |
+| `ipfs` | [`AWF_IIpfsConnector`](sdk.AWF_IIpfsConnector.md) |
 | `web3` | [`IWeb3Connector`](sdk.IWeb3Connector.md)<`unknown`\> |
 
 #### Defined in
 
 sdk/typings/lib/service.interfaces.d.ts:19
 
----
+___
 
 ### db
 
-**db**: [`IDBService`](sdk.IDBService.md)<`unknown`, `unknown`\>
+ **db**: [`IDBService`](sdk.IDBService.md)<`unknown`, `unknown`\>
 
 #### Defined in
 
 sdk/typings/lib/service.interfaces.d.ts:18
 
----
+___
 
 ### gql
 
-**gql**: [`IGqlClient`](sdk.IGqlClient.md)<`unknown`\>
+ **gql**: [`IGqlClient`](sdk.IGqlClient.md)<`unknown`\>
 
 #### Defined in
 
 sdk/typings/lib/service.interfaces.d.ts:13
 
----
+___
 
 ### log
 
-**log**: [`ILogService`](sdk.ILogService.md)
+ **log**: [`ILogService`](sdk.ILogService.md)
 
 #### Defined in
 
 sdk/typings/lib/service.interfaces.d.ts:14
 
----
+___
 
 ### settings
 
-**settings**: [`ISettingsService`](sdk.ISettingsService.md)
+ **settings**: [`ISettingsService`](sdk.ISettingsService.md)
 
 #### Defined in
 
 sdk/typings/lib/service.interfaces.d.ts:16
 
----
+___
 
 ### stash
 
-**stash**: [`IStashService`](sdk.IStashService.md)<`unknown`\>
+ **stash**: [`IStashService`](sdk.IStashService.md)<`unknown`\>
 
 #### Defined in
 

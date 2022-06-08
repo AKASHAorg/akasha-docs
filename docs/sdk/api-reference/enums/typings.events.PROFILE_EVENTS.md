@@ -13,59 +13,59 @@ description: "Test Description"
 
 ## Enumeration members
 
-### ADD_PROVIDER
+### ADD\_PROVIDER
 
-**ADD_PROVIDER** = `"#profile#AddProvider"`
+ **ADD\_PROVIDER** = `"#profile#AddProvider"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:26
 
----
+___
 
-### DEFAULT_PROVIDER
+### DEFAULT\_PROVIDER
 
-**DEFAULT_PROVIDER** = `"#profile#DefaultProvider"`
+ **DEFAULT\_PROVIDER** = `"#profile#DefaultProvider"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:27
 
----
+___
 
 ### FOLLOW
 
-**FOLLOW** = `"#profile#Follow"`
+ **FOLLOW** = `"#profile#Follow"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:24
 
----
+___
 
-### REGISTER_USERNAME
+### REGISTER\_USERNAME
 
-**REGISTER_USERNAME** = `"#profile#RegisterUsername"`
+ **REGISTER\_USERNAME** = `"#profile#RegisterUsername"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:28
 
----
+___
 
-### TAG_SUBSCRIPTION
+### TAG\_SUBSCRIPTION
 
-**TAG_SUBSCRIPTION** = `"#profile#TagSubscription"`
+ **TAG\_SUBSCRIPTION** = `"#profile#TagSubscription"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:29
 
----
+___
 
 ### UNFOLLOW
 
-**UNFOLLOW** = `"#profile#UnFollow"`
+ **UNFOLLOW** = `"#profile#UnFollow"`
 
 #### Defined in
 

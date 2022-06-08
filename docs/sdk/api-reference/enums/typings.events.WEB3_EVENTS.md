@@ -13,39 +13,39 @@ description: "Test Description"
 
 ## Enumeration members
 
-### ACCOUNT_CHANGED
+### ACCOUNT\_CHANGED
 
-**ACCOUNT_CHANGED** = `"#web3#accountChanged"`
+ **ACCOUNT\_CHANGED** = `"#web3#accountChanged"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:20
 
----
+___
 
-### CHAIN_CHANGED
+### CHAIN\_CHANGED
 
-**CHAIN_CHANGED** = `"#web3#chainChanged"`
+ **CHAIN\_CHANGED** = `"#web3#chainChanged"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:21
 
----
+___
 
 ### CONNECTED
 
-**CONNECTED** = `"#web3#connected"`
+ **CONNECTED** = `"#web3#connected"`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/events.d.ts:18
 
----
+___
 
 ### DISCONNECTED
 
-**DISCONNECTED** = `"#web3#disconnected"`
+ **DISCONNECTED** = `"#web3#disconnected"`
 
 #### Defined in
 

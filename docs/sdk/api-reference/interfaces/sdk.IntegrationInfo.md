@@ -15,57 +15,57 @@ description: "Test Description"
 
 ### author
 
-**author**: `string`
+ **author**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/registry.d.ts:52
 
----
+___
 
 ### enabled
 
-**enabled**: `boolean`
+ **enabled**: `boolean`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/registry.d.ts:55
 
----
+___
 
 ### id
 
-**id**: `string`
+ **id**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/registry.d.ts:50
 
----
+___
 
 ### integrationType
 
-**integrationType**: `number`
+ **integrationType**: `number`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/registry.d.ts:53
 
----
+___
 
 ### latestReleaseId
 
-**latestReleaseId**: `string`
+ **latestReleaseId**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/registry.d.ts:54
 
----
+___
 
 ### name
 
-**name**: `string`
+ **name**: `string`
 
 #### Defined in
 

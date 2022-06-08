@@ -15,27 +15,27 @@ description: "Test Description"
 
 ### nextIndex
 
-**nextIndex**: `number`
+ **nextIndex**: `number`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:78
 
----
+___
 
 ### results
 
-**results**: [[`UserProfile_Response`](sdk.UserProfile_Response.md)]
+ **results**: [[`UserProfile_Response`](sdk.UserProfile_Response.md)]
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:77
 
----
+___
 
 ### total
 
-**total**: `number`
+ **total**: `number`
 
 #### Defined in
 

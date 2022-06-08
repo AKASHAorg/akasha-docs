@@ -27,11 +27,11 @@ Comments Module
 
 #### Parameters
 
-| Name            | Type                          |
-| :-------------- | :---------------------------- |
-| `log`           | [`Logging`](sdk.Logging.md)   |
-| `gql`           | `Gql`                         |
-| `auth`          | [`AWF_Auth`](sdk.AWF_Auth.md) |
+| Name | Type |
+| :------ | :------ |
+| `log` | [`Logging`](sdk.Logging.md) |
+| `gql` | `Gql` |
+| `auth` | [`AWF_Auth`](sdk.AWF_Auth.md) |
 | `globalChannel` | [`EventBus`](sdk.EventBus.md) |
 
 #### Defined in
@@ -42,17 +42,17 @@ Comments Module
 
 ### graphQLDocs
 
-`Readonly` **graphQLDocs**: `Object`
+ `Readonly` **graphQLDocs**: `Object`
 
 #### Type declaration
 
-| Name            | Type                                                                                |
-| :-------------- | :---------------------------------------------------------------------------------- |
-| `AddComment`    | `DocumentNode`                                                                      |
-| `EditComment`   | `DocumentNode`                                                                      |
-| `GetComment`    | `TypedQueryDocumentNode`<{ `[key: string]`: `any`; }, { `[key: string]`: `any`; }\> |
-| `GetComments`   | `TypedQueryDocumentNode`<{ `[key: string]`: `any`; }, { `[key: string]`: `any`; }\> |
-| `RemoveComment` | `DocumentNode`                                                                      |
+| Name | Type |
+| :------ | :------ |
+| `AddComment` | `DocumentNode` |
+| `EditComment` | `DocumentNode` |
+| `GetComment` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
+| `GetComments` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
+| `RemoveComment` | `DocumentNode` |
 
 #### Defined in
 
@@ -62,25 +62,25 @@ Comments Module
 
 ### addComment
 
-**addComment**(`opt`): `Observable`<{ `data`: { `addComment`: `string` } }\>
+**addComment**(`opt`): `Observable`<{ `data`: { `addComment`: `string`  }  }\>
 
 Create a new comment
 
 #### Parameters
 
-| Name                    | Type                                                            |
-| :---------------------- | :-------------------------------------------------------------- |
-| `opt`                   | `Object`                                                        |
-| `opt.comment`           | `Object`                                                        |
-| `opt.comment.mentions?` | `string`[]                                                      |
-| `opt.comment.postID`    | `string`                                                        |
-| `opt.comment.replyTo?`  | `string`                                                        |
-| `opt.comment.tags?`     | `string`[]                                                      |
-| `opt.data`              | [`DataProviderInput`](../interfaces/sdk.DataProviderInput.md)[] |
+| Name | Type |
+| :------ | :------ |
+| `opt` | `Object` |
+| `opt.comment` | `Object` |
+| `opt.comment.mentions?` | `string`[] |
+| `opt.comment.postID` | `string` |
+| `opt.comment.replyTo?` | `string` |
+| `opt.comment.tags?` | `string`[] |
+| `opt.data` | [`DataProviderInput`](../interfaces/sdk.DataProviderInput.md)[] |
 
 #### Returns
 
-`Observable`<{ `data`: { `addComment`: `string` } }\>
+`Observable`<{ `data`: { `addComment`: `string`  }  }\>
 
 #### Implementation of
 
@@ -90,30 +90,30 @@ Create a new comment
 
 [sdk/src/posts/comments.ts:86](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/comments.ts#L86)
 
----
+___
 
 ### editComment
 
-**editComment**(`opt`): `Observable`<{ `data`: { `editComment`: `boolean` } }\>
+**editComment**(`opt`): `Observable`<{ `data`: { `editComment`: `boolean`  }  }\>
 
 Update an existing comment
 
 #### Parameters
 
-| Name                    | Type                                                            |
-| :---------------------- | :-------------------------------------------------------------- |
-| `opt`                   | `Object`                                                        |
-| `opt.comment`           | `Object`                                                        |
-| `opt.comment.mentions?` | `string`[]                                                      |
-| `opt.comment.postID`    | `string`                                                        |
-| `opt.comment.replyTo?`  | `string`                                                        |
-| `opt.comment.tags?`     | `string`[]                                                      |
-| `opt.commentID`         | `string`                                                        |
-| `opt.data`              | [`DataProviderInput`](../interfaces/sdk.DataProviderInput.md)[] |
+| Name | Type |
+| :------ | :------ |
+| `opt` | `Object` |
+| `opt.comment` | `Object` |
+| `opt.comment.mentions?` | `string`[] |
+| `opt.comment.postID` | `string` |
+| `opt.comment.replyTo?` | `string` |
+| `opt.comment.tags?` | `string`[] |
+| `opt.commentID` | `string` |
+| `opt.data` | [`DataProviderInput`](../interfaces/sdk.DataProviderInput.md)[] |
 
 #### Returns
 
-`Observable`<{ `data`: { `editComment`: `boolean` } }\>
+`Observable`<{ `data`: { `editComment`: `boolean`  }  }\>
 
 #### Implementation of
 
@@ -123,23 +123,23 @@ Update an existing comment
 
 [sdk/src/posts/comments.ts:130](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/comments.ts#L130)
 
----
+___
 
 ### getComment
 
-**getComment**(`commentID`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getComment`: [`Comment_Response`](../interfaces/sdk.Comment_Response.md) }\>
+**getComment**(`commentID`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getComment`: [`Comment_Response`](../interfaces/sdk.Comment_Response.md)  }\>
 
 Get comment data
 
 #### Parameters
 
-| Name        | Type     |
-| :---------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `commentID` | `string` |
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getComment`: [`Comment_Response`](../interfaces/sdk.Comment_Response.md) }\>
+[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getComment`: [`Comment_Response`](../interfaces/sdk.Comment_Response.md)  }\>
 
 #### Implementation of
 
@@ -149,26 +149,26 @@ Get comment data
 
 [sdk/src/posts/comments.ts:58](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/comments.ts#L58)
 
----
+___
 
 ### getComments
 
-**getComments**(`opt`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getComments`: [`Comments_Response`](../interfaces/sdk.Comments_Response.md) }\>
+**getComments**(`opt`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getComments`: [`Comments_Response`](../interfaces/sdk.Comments_Response.md)  }\>
 
 Get a list of comments for a post
 
 #### Parameters
 
-| Name          | Type     |
-| :------------ | :------- |
-| `opt`         | `Object` |
-| `opt.limit`   | `number` |
+| Name | Type |
+| :------ | :------ |
+| `opt` | `Object` |
+| `opt.limit` | `number` |
 | `opt.offset?` | `string` |
-| `opt.postID`  | `string` |
+| `opt.postID` | `string` |
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getComments`: [`Comments_Response`](../interfaces/sdk.Comments_Response.md) }\>
+[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getComments`: [`Comments_Response`](../interfaces/sdk.Comments_Response.md)  }\>
 
 #### Implementation of
 
@@ -178,23 +178,23 @@ Get a list of comments for a post
 
 [sdk/src/posts/comments.ts:72](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/comments.ts#L72)
 
----
+___
 
 ### removeComment
 
-**removeComment**(`commentID`): `Observable`<{ `data`: { `removeComment`: `boolean` } }\>
+**removeComment**(`commentID`): `Observable`<{ `data`: { `removeComment`: `boolean`  }  }\>
 
 Remove a comment's data by ID
 
 #### Parameters
 
-| Name        | Type     |
-| :---------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `commentID` | `string` |
 
 #### Returns
 
-`Observable`<{ `data`: { `removeComment`: `boolean` } }\>
+`Observable`<{ `data`: { `removeComment`: `boolean`  }  }\>
 
 #### Implementation of
 

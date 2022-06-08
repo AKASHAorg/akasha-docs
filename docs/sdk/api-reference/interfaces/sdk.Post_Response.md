@@ -15,127 +15,127 @@ description: "Test Description"
 
 ### \_id
 
-**\_id**: `string`
+ **\_id**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:22
 
----
+___
 
 ### author
 
-**author**: [`UserProfile_Response`](sdk.UserProfile_Response.md)
+ **author**: [`UserProfile_Response`](sdk.UserProfile_Response.md)
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:26
 
----
+___
 
 ### content
 
-**content**: [[`DataProviderInput`](sdk.DataProviderInput.md)]
+ **content**: [[`DataProviderInput`](sdk.DataProviderInput.md)]
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:28
 
----
+___
 
 ### creationDate
 
-**creationDate**: `string`
+ **creationDate**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:24
 
----
+___
 
 ### mentions
 
-**mentions**: [`string`]
+ **mentions**: [`string`]
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:32
 
----
+___
 
 ### quotedBy
 
-**quotedBy**: [`string`]
+ **quotedBy**: [`string`]
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:31
 
----
+___
 
 ### quotedByAuthors
 
-**quotedByAuthors**: [[`UserProfile_Response`](sdk.UserProfile_Response.md)]
+ **quotedByAuthors**: [[`UserProfile_Response`](sdk.UserProfile_Response.md)]
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:34
 
----
+___
 
 ### quotes
 
-**quotes**: [[`Post_Response`](sdk.Post_Response.md)]
+ **quotes**: [[`Post_Response`](sdk.Post_Response.md)]
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:29
 
----
+___
 
 ### tags
 
-**tags**: [`string`]
+ **tags**: [`string`]
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:30
 
----
+___
 
 ### title
 
-**title**: `string`
+ **title**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:27
 
----
+___
 
 ### totalComments
 
-**totalComments**: `string`
+ **totalComments**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:33
 
----
+___
 
 ### type
 
-**type**: [`PostType`](../enums/sdk.PostType.md)
+ **type**: [`PostType`](../enums/sdk.PostType.md)
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:23
 
----
+___
 
 ### updatedAt
 
-**updatedAt**: `string`
+ **updatedAt**: `string`
 
 #### Defined in
 

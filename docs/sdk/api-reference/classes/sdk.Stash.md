@@ -29,8 +29,8 @@ description: "Test Description"
 
 #### Parameters
 
-| Name     | Type                          |
-| :------- | :---------------------------- |
+| Name | Type |
+| :------ | :------ |
 | `objKey` | `Record`<`never`, `unknown`\> |
 
 #### Returns
@@ -45,7 +45,7 @@ description: "Test Description"
 
 [sdk/src/stash/index.ts:32](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/stash/index.ts#L32)
 
----
+___
 
 ### create
 
@@ -53,8 +53,8 @@ description: "Test Description"
 
 #### Parameters
 
-| Name   | Type                                            | Description                                          |
-| :----- | :---------------------------------------------- | :--------------------------------------------------- |
+| Name | Type | Description |
+| :------ | :------ | :------ |
 | `args` | [`LRUOptions`](../interfaces/sdk.LRUOptions.md) | Object with props maxSize: number and maxAge: number |
 
 #### Returns
@@ -71,7 +71,7 @@ a new instance of QuickLRU
 
 [sdk/src/stash/index.ts:17](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/stash/index.ts#L17)
 
----
+___
 
 ### getUiStash
 

@@ -33,8 +33,8 @@ description: "Test Description"
 
 #### Parameters
 
-| Name         | Type     | Description           |
-| :----------- | :------- | :-------------------- |
+| Name | Type | Description |
+| :------ | :------ | :------ |
 | `nameSpace?` | `string` | Logger name attribute |
 
 #### Returns

@@ -23,8 +23,8 @@ description: "Test Description"
 
 #### Parameters
 
-| Name         | Type     |
-| :----------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `moduleName` | `string` |
 
 #### Returns
@@ -35,7 +35,7 @@ description: "Test Description"
 
 sdk/typings/lib/interfaces/settings.d.ts:4
 
----
+___
 
 ### remove
 
@@ -43,8 +43,8 @@ sdk/typings/lib/interfaces/settings.d.ts:4
 
 #### Parameters
 
-| Name         | Type     |
-| :----------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `moduleName` | `string` |
 
 #### Returns
@@ -55,7 +55,7 @@ sdk/typings/lib/interfaces/settings.d.ts:4
 
 sdk/typings/lib/interfaces/settings.d.ts:5
 
----
+___
 
 ### set
 
@@ -63,10 +63,10 @@ sdk/typings/lib/interfaces/settings.d.ts:5
 
 #### Parameters
 
-| Name         | Type                                                      |
-| :----------- | :-------------------------------------------------------- |
-| `moduleName` | `string`                                                  |
-| `value`      | `Record`<`string`, `unknown`\> \| [[`string`, `unknown`]] |
+| Name | Type |
+| :------ | :------ |
+| `moduleName` | `string` |
+| `value` | `Record`<`string`, `unknown`\> \| [[`string`, `unknown`]] |
 
 #### Returns
 

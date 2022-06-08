@@ -15,77 +15,77 @@ description: "Test Description"
 
 ### \_id
 
-**\_id**: `string`
+ **\_id**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:7
 
----
+___
 
 ### author
 
-**author**: [`UserProfile_Response`](sdk.UserProfile_Response.md)
+ **author**: [`UserProfile_Response`](sdk.UserProfile_Response.md)
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:10
 
----
+___
 
 ### content
 
-**content**: [[`DataProviderInput`](sdk.DataProviderInput.md)]
+ **content**: [[`DataProviderInput`](sdk.DataProviderInput.md)]
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:11
 
----
+___
 
 ### creationDate
 
-**creationDate**: `string`
+ **creationDate**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:8
 
----
+___
 
 ### mentions
 
-**mentions**: [`string`]
+ **mentions**: [`string`]
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:12
 
----
+___
 
 ### postId
 
-**postId**: `string`
+ **postId**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:14
 
----
+___
 
 ### replyTo
 
-**replyTo**: `string`
+ **replyTo**: `string`
 
 #### Defined in
 
 sdk/typings/lib/interfaces/responses.d.ts:13
 
----
+___
 
 ### updatedAt
 
-**updatedAt**: `string`
+ **updatedAt**: `string`
 
 #### Defined in
 

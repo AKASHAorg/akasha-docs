@@ -23,11 +23,11 @@ description: "Test Description"
 
 #### Parameters
 
-| Name            | Type                          |
-| :-------------- | :---------------------------- |
-| `log`           | [`Logging`](sdk.Logging.md)   |
-| `gql`           | `Gql`                         |
-| `auth`          | [`AWF_Auth`](sdk.AWF_Auth.md) |
+| Name | Type |
+| :------ | :------ |
+| `log` | [`Logging`](sdk.Logging.md) |
+| `gql` | `Gql` |
+| `auth` | [`AWF_Auth`](sdk.AWF_Auth.md) |
 | `globalChannel` | [`EventBus`](sdk.EventBus.md) |
 
 #### Defined in
@@ -38,16 +38,16 @@ description: "Test Description"
 
 ### graphQLDocs
 
-`Readonly` **graphQLDocs**: `Object`
+ `Readonly` **graphQLDocs**: `Object`
 
 #### Type declaration
 
-| Name         | Type                                                                                |
-| :----------- | :---------------------------------------------------------------------------------- |
-| `CreateTag`  | `DocumentNode`                                                                      |
-| `GetTag`     | `TypedQueryDocumentNode`<{ `[key: string]`: `any`; }, { `[key: string]`: `any`; }\> |
-| `GetTags`    | `TypedQueryDocumentNode`<{ `[key: string]`: `any`; }, { `[key: string]`: `any`; }\> |
-| `SearchTags` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`; }, { `[key: string]`: `any`; }\> |
+| Name | Type |
+| :------ | :------ |
+| `CreateTag` | `DocumentNode` |
+| `GetTag` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
+| `GetTags` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
+| `SearchTags` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
 
 #### Defined in
 
@@ -57,17 +57,17 @@ description: "Test Description"
 
 ### createTag
 
-**createTag**(`tagName`): `Observable`<{ `data`: { `createTag`: `string` } }\>
+**createTag**(`tagName`): `Observable`<{ `data`: { `createTag`: `string`  }  }\>
 
 #### Parameters
 
-| Name      | Type     |
-| :-------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `tagName` | `string` |
 
 #### Returns
 
-`Observable`<{ `data`: { `createTag`: `string` } }\>
+`Observable`<{ `data`: { `createTag`: `string`  }  }\>
 
 #### Implementation of
 
@@ -77,21 +77,21 @@ description: "Test Description"
 
 [sdk/src/posts/tags.ts:88](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/tags.ts#L88)
 
----
+___
 
 ### getTag
 
-**getTag**(`tagName`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getTag`: [`Tag_Response`](../interfaces/sdk.Tag_Response.md) }\>
+**getTag**(`tagName`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getTag`: [`Tag_Response`](../interfaces/sdk.Tag_Response.md)  }\>
 
 #### Parameters
 
-| Name      | Type     |
-| :-------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `tagName` | `string` |
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getTag`: [`Tag_Response`](../interfaces/sdk.Tag_Response.md) }\>
+[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getTag`: [`Tag_Response`](../interfaces/sdk.Tag_Response.md)  }\>
 
 #### Implementation of
 
@@ -101,23 +101,23 @@ description: "Test Description"
 
 [sdk/src/posts/tags.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/tags.ts#L43)
 
----
+___
 
 ### getTags
 
-**getTags**(`opt`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `tags`: [`TagsResult_Response`](../interfaces/sdk.TagsResult_Response.md) }\>
+**getTags**(`opt`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `tags`: [`TagsResult_Response`](../interfaces/sdk.TagsResult_Response.md)  }\>
 
 #### Parameters
 
-| Name          | Type     |
-| :------------ | :------- |
-| `opt`         | `Object` |
-| `opt.limit`   | `number` |
+| Name | Type |
+| :------ | :------ |
+| `opt` | `Object` |
+| `opt.limit` | `number` |
 | `opt.offset?` | `string` |
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `tags`: [`TagsResult_Response`](../interfaces/sdk.TagsResult_Response.md) }\>
+[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `tags`: [`TagsResult_Response`](../interfaces/sdk.TagsResult_Response.md)  }\>
 
 #### Implementation of
 
@@ -127,17 +127,17 @@ description: "Test Description"
 
 [sdk/src/posts/tags.ts:58](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/tags.ts#L58)
 
----
+___
 
 ### getTrending
 
-**getTrending**(): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `searchTags`: [`SearchTagsResult_Response`](../interfaces/sdk.SearchTagsResult_Response.md)[] }\>
+**getTrending**(): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `searchTags`: [`SearchTagsResult_Response`](../interfaces/sdk.SearchTagsResult_Response.md)[]  }\>
 
 Returns most recent used tags
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `searchTags`: [`SearchTagsResult_Response`](../interfaces/sdk.SearchTagsResult_Response.md)[] }\>
+[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `searchTags`: [`SearchTagsResult_Response`](../interfaces/sdk.SearchTagsResult_Response.md)[]  }\>
 
 #### Implementation of
 
@@ -147,21 +147,21 @@ Returns most recent used tags
 
 [sdk/src/posts/tags.ts:124](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/tags.ts#L124)
 
----
+___
 
 ### searchTags
 
-**searchTags**(`name`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `searchTags`: [`SearchTagsResult_Response`](../interfaces/sdk.SearchTagsResult_Response.md)[] }\>
+**searchTags**(`name`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `searchTags`: [`SearchTagsResult_Response`](../interfaces/sdk.SearchTagsResult_Response.md)[]  }\>
 
 #### Parameters
 
-| Name   | Type     |
-| :----- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `name` | `string` |
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `searchTags`: [`SearchTagsResult_Response`](../interfaces/sdk.SearchTagsResult_Response.md)[] }\>
+[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `searchTags`: [`SearchTagsResult_Response`](../interfaces/sdk.SearchTagsResult_Response.md)[]  }\>
 
 #### Implementation of
 

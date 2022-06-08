@@ -16,7 +16,7 @@ custom_edit_url: null
 
 [ui/hooks/src/moderation-requests.ts:45](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/moderation-requests.ts#L45)
 
----
+___
 
 ### kept
 
@@ -26,7 +26,7 @@ custom_edit_url: null
 
 [ui/hooks/src/moderation-requests.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/moderation-requests.ts#L43)
 
----
+___
 
 ### pending
 

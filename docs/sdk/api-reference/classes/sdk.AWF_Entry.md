@@ -23,11 +23,11 @@ description: "Test Description"
 
 #### Parameters
 
-| Name            | Type                          |
-| :-------------- | :---------------------------- |
-| `log`           | [`Logging`](sdk.Logging.md)   |
-| `gql`           | `Gql`                         |
-| `auth`          | [`AWF_Auth`](sdk.AWF_Auth.md) |
+| Name | Type |
+| :------ | :------ |
+| `log` | [`Logging`](sdk.Logging.md) |
+| `gql` | `Gql` |
+| `auth` | [`AWF_Auth`](sdk.AWF_Auth.md) |
 | `globalChannel` | [`EventBus`](sdk.EventBus.md) |
 
 #### Defined in
@@ -38,21 +38,21 @@ description: "Test Description"
 
 ### graphQLDocs
 
-`Readonly` **graphQLDocs**: `Object`
+ `Readonly` **graphQLDocs**: `Object`
 
 #### Type declaration
 
-| Name               | Type                                                                                |
-| :----------------- | :---------------------------------------------------------------------------------- |
-| `CreateEntry`      | `DocumentNode`                                                                      |
-| `EditEntry`        | `DocumentNode`                                                                      |
-| `GetCustomFeed`    | `TypedQueryDocumentNode`<{ `[key: string]`: `any`; }, { `[key: string]`: `any`; }\> |
-| `GetEntries`       | `TypedQueryDocumentNode`<{ `[key: string]`: `any`; }, { `[key: string]`: `any`; }\> |
-| `GetEntry`         | `TypedQueryDocumentNode`<{ `[key: string]`: `any`; }, { `[key: string]`: `any`; }\> |
-| `GetLinkPreview`   | `TypedQueryDocumentNode`<{ `[key: string]`: `any`; }, { `[key: string]`: `any`; }\> |
-| `GetPostsByAuthor` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`; }, { `[key: string]`: `any`; }\> |
-| `GetPostsByTag`    | `TypedQueryDocumentNode`<{ `[key: string]`: `any`; }, { `[key: string]`: `any`; }\> |
-| `RemoveEntry`      | `DocumentNode`                                                                      |
+| Name | Type |
+| :------ | :------ |
+| `CreateEntry` | `DocumentNode` |
+| `EditEntry` | `DocumentNode` |
+| `GetCustomFeed` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
+| `GetEntries` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
+| `GetEntry` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
+| `GetLinkPreview` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
+| `GetPostsByAuthor` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
+| `GetPostsByTag` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
+| `RemoveEntry` | `DocumentNode` |
 
 #### Defined in
 
@@ -62,26 +62,26 @@ description: "Test Description"
 
 ### editEntry
 
-**editEntry**(`opt`): `Observable`<{ `data`: { `editPost`: `boolean` } }\>
+**editEntry**(`opt`): `Observable`<{ `data`: { `editPost`: `boolean`  }  }\>
 
 Update an existing entry
 
 #### Parameters
 
-| Name                 | Type                                                            |
-| :------------------- | :-------------------------------------------------------------- |
-| `opt`                | `Object`                                                        |
-| `opt.data`           | [`DataProviderInput`](../interfaces/sdk.DataProviderInput.md)[] |
-| `opt.entryID`        | `string`                                                        |
-| `opt.post`           | `Object`                                                        |
-| `opt.post.mentions?` | `string`[]                                                      |
-| `opt.post.quotes?`   | `string`[]                                                      |
-| `opt.post.tags?`     | `string`[]                                                      |
-| `opt.post.title?`    | `string`                                                        |
+| Name | Type |
+| :------ | :------ |
+| `opt` | `Object` |
+| `opt.data` | [`DataProviderInput`](../interfaces/sdk.DataProviderInput.md)[] |
+| `opt.entryID` | `string` |
+| `opt.post` | `Object` |
+| `opt.post.mentions?` | `string`[] |
+| `opt.post.quotes?` | `string`[] |
+| `opt.post.tags?` | `string`[] |
+| `opt.post.title?` | `string` |
 
 #### Returns
 
-`Observable`<{ `data`: { `editPost`: `boolean` } }\>
+`Observable`<{ `data`: { `editPost`: `boolean`  }  }\>
 
 #### Implementation of
 
@@ -91,24 +91,24 @@ Update an existing entry
 
 [sdk/src/posts/entry.ts:149](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/entry.ts#L149)
 
----
+___
 
 ### entriesByAuthor
 
-**entriesByAuthor**(`opt`): `Observable`<{ `data`: { `getPostsByAuthor`: [`PostsResult_Response`](../interfaces/sdk.PostsResult_Response.md) } }\>
+**entriesByAuthor**(`opt`): `Observable`<{ `data`: { `getPostsByAuthor`: [`PostsResult_Response`](../interfaces/sdk.PostsResult_Response.md)  }  }\>
 
 #### Parameters
 
-| Name          | Type     |
-| :------------ | :------- |
-| `opt`         | `Object` |
-| `opt.limit`   | `number` |
+| Name | Type |
+| :------ | :------ |
+| `opt` | `Object` |
+| `opt.limit` | `number` |
 | `opt.offset?` | `number` |
-| `opt.pubKey`  | `string` |
+| `opt.pubKey` | `string` |
 
 #### Returns
 
-`Observable`<{ `data`: { `getPostsByAuthor`: [`PostsResult_Response`](../interfaces/sdk.PostsResult_Response.md) } }\>
+`Observable`<{ `data`: { `getPostsByAuthor`: [`PostsResult_Response`](../interfaces/sdk.PostsResult_Response.md)  }  }\>
 
 #### Implementation of
 
@@ -118,24 +118,24 @@ Update an existing entry
 
 [sdk/src/posts/entry.ts:191](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/entry.ts#L191)
 
----
+___
 
 ### entriesByTag
 
-**entriesByTag**(`opt`): `Observable`<{ `data`: { `getPostsByTag`: [`PostsResult_Response`](../interfaces/sdk.PostsResult_Response.md) } }\>
+**entriesByTag**(`opt`): `Observable`<{ `data`: { `getPostsByTag`: [`PostsResult_Response`](../interfaces/sdk.PostsResult_Response.md)  }  }\>
 
 #### Parameters
 
-| Name          | Type     |
-| :------------ | :------- |
-| `opt`         | `Object` |
-| `opt.limit`   | `number` |
-| `opt.name`    | `string` |
+| Name | Type |
+| :------ | :------ |
+| `opt` | `Object` |
+| `opt.limit` | `number` |
+| `opt.name` | `string` |
 | `opt.offset?` | `string` |
 
 #### Returns
 
-`Observable`<{ `data`: { `getPostsByTag`: [`PostsResult_Response`](../interfaces/sdk.PostsResult_Response.md) } }\>
+`Observable`<{ `data`: { `getPostsByTag`: [`PostsResult_Response`](../interfaces/sdk.PostsResult_Response.md)  }  }\>
 
 #### Implementation of
 
@@ -145,23 +145,23 @@ Update an existing entry
 
 [sdk/src/posts/entry.ts:216](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/entry.ts#L216)
 
----
+___
 
 ### getEntries
 
-**getEntries**(`opt`): `Observable`<{ `data`: { `posts`: [`PostsResult_Response`](../interfaces/sdk.PostsResult_Response.md) } }\>
+**getEntries**(`opt`): `Observable`<{ `data`: { `posts`: [`PostsResult_Response`](../interfaces/sdk.PostsResult_Response.md)  }  }\>
 
 #### Parameters
 
-| Name          | Type     |
-| :------------ | :------- |
-| `opt`         | `Object` |
-| `opt.limit`   | `number` |
+| Name | Type |
+| :------ | :------ |
+| `opt` | `Object` |
+| `opt.limit` | `number` |
 | `opt.offset?` | `string` |
 
 #### Returns
 
-`Observable`<{ `data`: { `posts`: [`PostsResult_Response`](../interfaces/sdk.PostsResult_Response.md) } }\>
+`Observable`<{ `data`: { `posts`: [`PostsResult_Response`](../interfaces/sdk.PostsResult_Response.md)  }  }\>
 
 #### Implementation of
 
@@ -171,21 +171,21 @@ Update an existing entry
 
 [sdk/src/posts/entry.ts:84](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/entry.ts#L84)
 
----
+___
 
 ### getEntry
 
-**getEntry**(`entryId`): `Observable`<{ `data`: { `getPost`: [`Post_Response`](../interfaces/sdk.Post_Response.md) } }\>
+**getEntry**(`entryId`): `Observable`<{ `data`: { `getPost`: [`Post_Response`](../interfaces/sdk.Post_Response.md)  }  }\>
 
 #### Parameters
 
-| Name      | Type     |
-| :-------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `entryId` | `string` |
 
 #### Returns
 
-`Observable`<{ `data`: { `getPost`: [`Post_Response`](../interfaces/sdk.Post_Response.md) } }\>
+`Observable`<{ `data`: { `getPost`: [`Post_Response`](../interfaces/sdk.Post_Response.md)  }  }\>
 
 #### Implementation of
 
@@ -195,23 +195,23 @@ Update an existing entry
 
 [sdk/src/posts/entry.ts:64](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/entry.ts#L64)
 
----
+___
 
 ### getFeedEntries
 
-**getFeedEntries**(`opt`): `Observable`<{ `data`: { `getCustomFeed`: [`PostsResult_Response`](../interfaces/sdk.PostsResult_Response.md) } }\>
+**getFeedEntries**(`opt`): `Observable`<{ `data`: { `getCustomFeed`: [`PostsResult_Response`](../interfaces/sdk.PostsResult_Response.md)  }  }\>
 
 #### Parameters
 
-| Name          | Type     |
-| :------------ | :------- |
-| `opt`         | `Object` |
-| `opt.limit`   | `number` |
+| Name | Type |
+| :------ | :------ |
+| `opt` | `Object` |
+| `opt.limit` | `number` |
 | `opt.offset?` | `number` |
 
 #### Returns
 
-`Observable`<{ `data`: { `getCustomFeed`: [`PostsResult_Response`](../interfaces/sdk.PostsResult_Response.md) } }\>
+`Observable`<{ `data`: { `getCustomFeed`: [`PostsResult_Response`](../interfaces/sdk.PostsResult_Response.md)  }  }\>
 
 #### Implementation of
 
@@ -221,21 +221,21 @@ Update an existing entry
 
 [sdk/src/posts/entry.ts:299](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/entry.ts#L299)
 
----
+___
 
 ### getLinkPreview
 
-**getLinkPreview**(`link`): `Observable`<{ `data`: { `getLinkPreview`: [`LinkPreview_Response`](../interfaces/sdk.LinkPreview_Response.md) } }\>
+**getLinkPreview**(`link`): `Observable`<{ `data`: { `getLinkPreview`: [`LinkPreview_Response`](../interfaces/sdk.LinkPreview_Response.md)  }  }\>
 
 #### Parameters
 
-| Name   | Type     |
-| :----- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `link` | `string` |
 
 #### Returns
 
-`Observable`<{ `data`: { `getLinkPreview`: [`LinkPreview_Response`](../interfaces/sdk.LinkPreview_Response.md) } }\>
+`Observable`<{ `data`: { `getLinkPreview`: [`LinkPreview_Response`](../interfaces/sdk.LinkPreview_Response.md)  }  }\>
 
 #### Implementation of
 
@@ -245,27 +245,27 @@ Update an existing entry
 
 [sdk/src/posts/entry.ts:277](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/entry.ts#L277)
 
----
+___
 
 ### postEntry
 
-**postEntry**(`opt`): `Observable`<{ `data`: { `createPost`: `string` } }\>
+**postEntry**(`opt`): `Observable`<{ `data`: { `createPost`: `string`  }  }\>
 
 #### Parameters
 
-| Name                 | Type                                                            |
-| :------------------- | :-------------------------------------------------------------- |
-| `opt`                | `Object`                                                        |
-| `opt.data`           | [`DataProviderInput`](../interfaces/sdk.DataProviderInput.md)[] |
-| `opt.post`           | `Object`                                                        |
-| `opt.post.mentions?` | `string`[]                                                      |
-| `opt.post.quotes?`   | `string`[]                                                      |
-| `opt.post.tags?`     | `string`[]                                                      |
-| `opt.post.title?`    | `string`                                                        |
+| Name | Type |
+| :------ | :------ |
+| `opt` | `Object` |
+| `opt.data` | [`DataProviderInput`](../interfaces/sdk.DataProviderInput.md)[] |
+| `opt.post` | `Object` |
+| `opt.post.mentions?` | `string`[] |
+| `opt.post.quotes?` | `string`[] |
+| `opt.post.tags?` | `string`[] |
+| `opt.post.title?` | `string` |
 
 #### Returns
 
-`Observable`<{ `data`: { `createPost`: `string` } }\>
+`Observable`<{ `data`: { `createPost`: `string`  }  }\>
 
 #### Implementation of
 
@@ -275,23 +275,23 @@ Update an existing entry
 
 [sdk/src/posts/entry.ts:104](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/entry.ts#L104)
 
----
+___
 
 ### removeEntry
 
-**removeEntry**(`entryID`): `Observable`<{ `data`: { `removePost`: `boolean` } }\>
+**removeEntry**(`entryID`): `Observable`<{ `data`: { `removePost`: `boolean`  }  }\>
 
 Remove an entry's content by ID
 
 #### Parameters
 
-| Name      | Type     |
-| :-------- | :------- |
+| Name | Type |
+| :------ | :------ |
 | `entryID` | `string` |
 
 #### Returns
 
-`Observable`<{ `data`: { `removePost`: `boolean` } }\>
+`Observable`<{ `data`: { `removePost`: `boolean`  }  }\>
 
 #### Implementation of
 

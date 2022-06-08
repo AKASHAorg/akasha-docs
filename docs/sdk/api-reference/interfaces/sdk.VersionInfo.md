@@ -15,17 +15,17 @@ description: "Test Description"
 
 ### name
 
-**name**: `string`
+ **name**: `string`
 
 #### Defined in
 
 [sdk/src/settings/apps.ts:16](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L16)
 
----
+___
 
 ### version
 
-**version**: `string`
+ **version**: `string`
 
 #### Defined in
 
