@@ -13,7 +13,7 @@ description: "Test Description"
 
 ## Implements
 
-- [`AWF_IENS`](../interfaces/sdk.AWF_IENS.md)
+- [`AWF_IENS`](../interfaces/typings.AWF_IENS.md)
 
 ## Constructors
 
@@ -35,7 +35,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:56](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L56)
+[sdk/src/registry/ens.ts:53](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L53)
 
 ## Properties
 
@@ -45,7 +45,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:52](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L52)
+[sdk/src/registry/ens.ts:49](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L49)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:50](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L50)
+[sdk/src/registry/ens.ts:47](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L47)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:51](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L51)
+[sdk/src/registry/ens.ts:48](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L48)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:53](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L53)
+[sdk/src/registry/ens.ts:50](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L50)
 
 ## Methods
 
@@ -95,11 +95,11 @@ ___
 
 #### Implementation of
 
-[AWF_IENS](../interfaces/sdk.AWF_IENS.md).[claimName](../interfaces/sdk.AWF_IENS.md#claimname)
+[AWF_IENS](../interfaces/typings.AWF_IENS.md).[claimName](../interfaces/typings.AWF_IENS.md#claimname)
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:101](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L101)
+[sdk/src/registry/ens.ts:98](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L98)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:185](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L185)
+[sdk/src/registry/ens.ts:182](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L182)
 
 ___
 
@@ -139,17 +139,17 @@ ___
 
 #### Implementation of
 
-[AWF_IENS](../interfaces/sdk.AWF_IENS.md).[isAvailable](../interfaces/sdk.AWF_IENS.md#isavailable)
+[AWF_IENS](../interfaces/typings.AWF_IENS.md).[isAvailable](../interfaces/typings.AWF_IENS.md#isavailable)
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:134](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L134)
+[sdk/src/registry/ens.ts:131](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L131)
 
 ___
 
 ### registerName
 
-**registerName**(`name`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`any`\>
+**registerName**(`name`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`any`\>
 
 #### Parameters
 
@@ -159,15 +159,15 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`any`\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`any`\>
 
 #### Implementation of
 
-[AWF_IENS](../interfaces/sdk.AWF_IENS.md).[registerName](../interfaces/sdk.AWF_IENS.md#registername)
+[AWF_IENS](../interfaces/typings.AWF_IENS.md).[registerName](../interfaces/typings.AWF_IENS.md#registername)
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:74](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L74)
+[sdk/src/registry/ens.ts:71](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L71)
 
 ___
 
@@ -187,11 +187,11 @@ ___
 
 #### Implementation of
 
-[AWF_IENS](../interfaces/sdk.AWF_IENS.md).[resolveAddress](../interfaces/sdk.AWF_IENS.md#resolveaddress)
+[AWF_IENS](../interfaces/typings.AWF_IENS.md).[resolveAddress](../interfaces/typings.AWF_IENS.md#resolveaddress)
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:146](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L146)
+[sdk/src/registry/ens.ts:143](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L143)
 
 ___
 
@@ -211,11 +211,11 @@ ___
 
 #### Implementation of
 
-[AWF_IENS](../interfaces/sdk.AWF_IENS.md).[resolveName](../interfaces/sdk.AWF_IENS.md#resolvename)
+[AWF_IENS](../interfaces/typings.AWF_IENS.md).[resolveName](../interfaces/typings.AWF_IENS.md#resolvename)
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:154](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L154)
+[sdk/src/registry/ens.ts:151](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L151)
 
 ___
 
@@ -229,7 +229,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:159](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L159)
+[sdk/src/registry/ens.ts:156](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L156)
 
 ___
 
@@ -249,8 +249,8 @@ ___
 
 #### Implementation of
 
-[AWF_IENS](../interfaces/sdk.AWF_IENS.md).[userIsOwnerOf](../interfaces/sdk.AWF_IENS.md#userisownerof)
+[AWF_IENS](../interfaces/typings.AWF_IENS.md).[userIsOwnerOf](../interfaces/typings.AWF_IENS.md#userisownerof)
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:123](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/ens.ts#L123)
+[sdk/src/registry/ens.ts:120](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L120)

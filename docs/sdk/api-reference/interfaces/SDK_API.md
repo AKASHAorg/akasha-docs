@@ -18,7 +18,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/index.ts:29](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/index.ts#L29)
+[sdk/src/index.ts:30](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/index.ts#L30)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:33](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/index.ts#L33)
+[sdk/src/index.ts:34](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/index.ts#L34)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:31](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/index.ts#L31)
+[sdk/src/index.ts:32](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/index.ts#L32)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:32](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/index.ts#L32)
+[sdk/src/index.ts:33](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/index.ts#L33)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:28](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/index.ts#L28)
+[sdk/src/index.ts:29](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/index.ts#L29)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:35](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/index.ts#L35)
+[sdk/src/index.ts:36](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/index.ts#L36)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:30](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/index.ts#L30)
+[sdk/src/index.ts:31](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/index.ts#L31)
 
 ___
 
@@ -88,4 +88,4 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:34](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/index.ts#L34)
+[sdk/src/index.ts:35](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/index.ts#L35)

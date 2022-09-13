@@ -13,7 +13,7 @@ description: "Test Description"
 
 ## Implements
 
-- [`IStashService`](../interfaces/sdk.IStashService.md)<[`IQuickLRU`](../namespaces/sdk.md#iquicklru)\>
+- [`IStashService`](../interfaces/typings.IStashService.md)<[`IQuickLRU`](../namespaces/sdk.md#iquicklru)\>
 
 ## Constructors
 
@@ -39,37 +39,37 @@ description: "Test Description"
 
 #### Implementation of
 
-[IStashService](../interfaces/sdk.IStashService.md).[computeKey](../interfaces/sdk.IStashService.md#computekey)
+[IStashService](../interfaces/typings.IStashService.md).[computeKey](../interfaces/typings.IStashService.md#computekey)
 
 #### Defined in
 
-[sdk/src/stash/index.ts:32](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/stash/index.ts#L32)
+[sdk/src/stash/index.ts:31](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/stash/index.ts#L31)
 
 ___
 
 ### create
 
-**create**(`args`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<[`IQuickLRU`](../namespaces/sdk.md#iquicklru)\>
+**create**(`args`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<[`IQuickLRU`](../namespaces/sdk.md#iquicklru)\>
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `args` | [`LRUOptions`](../interfaces/sdk.LRUOptions.md) | Object with props maxSize: number and maxAge: number |
+| `args` | [`LRUOptions`](../interfaces/typings.LRUOptions.md) | Object with props maxSize: number and maxAge: number |
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<[`IQuickLRU`](../namespaces/sdk.md#iquicklru)\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<[`IQuickLRU`](../namespaces/sdk.md#iquicklru)\>
 
 a new instance of QuickLRU
 
 #### Implementation of
 
-[IStashService](../interfaces/sdk.IStashService.md).[create](../interfaces/sdk.IStashService.md#create)
+[IStashService](../interfaces/typings.IStashService.md).[create](../interfaces/typings.IStashService.md#create)
 
 #### Defined in
 
-[sdk/src/stash/index.ts:17](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/stash/index.ts#L17)
+[sdk/src/stash/index.ts:16](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/stash/index.ts#L16)
 
 ___
 
@@ -85,8 +85,8 @@ General purpose stash for caching ui related data
 
 #### Implementation of
 
-[IStashService](../interfaces/sdk.IStashService.md).[getUiStash](../interfaces/sdk.IStashService.md#getuistash)
+[IStashService](../interfaces/typings.IStashService.md).[getUiStash](../interfaces/typings.IStashService.md#getuistash)
 
 #### Defined in
 
-[sdk/src/stash/index.ts:25](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/stash/index.ts#L25)
+[sdk/src/stash/index.ts:24](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/stash/index.ts#L24)

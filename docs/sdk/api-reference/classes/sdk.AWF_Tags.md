@@ -13,7 +13,7 @@ description: "Test Description"
 
 ## Implements
 
-- [`AWF_ITags`](../interfaces/sdk.AWF_ITags.md)
+- [`AWF_ITags`](../interfaces/typings.AWF_ITags.md)
 
 ## Constructors
 
@@ -32,7 +32,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:27](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/tags.ts#L27)
+[sdk/src/posts/tags.ts:27](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/posts/tags.ts#L27)
 
 ## Properties
 
@@ -51,7 +51,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:26](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/tags.ts#L26)
+[sdk/src/posts/tags.ts:26](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/posts/tags.ts#L26)
 
 ## Methods
 
@@ -71,17 +71,17 @@ description: "Test Description"
 
 #### Implementation of
 
-[AWF_ITags](../interfaces/sdk.AWF_ITags.md).[createTag](../interfaces/sdk.AWF_ITags.md#createtag)
+[AWF_ITags](../interfaces/typings.AWF_ITags.md).[createTag](../interfaces/typings.AWF_ITags.md#createtag)
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:88](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/tags.ts#L88)
+[sdk/src/posts/tags.ts:88](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/posts/tags.ts#L88)
 
 ___
 
 ### getTag
 
-**getTag**(`tagName`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getTag`: [`Tag_Response`](../interfaces/sdk.Tag_Response.md)  }\>
+**getTag**(`tagName`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getTag`: [`Tag_Response`](../interfaces/typings.Tag_Response.md)  }\>
 
 #### Parameters
 
@@ -91,21 +91,21 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getTag`: [`Tag_Response`](../interfaces/sdk.Tag_Response.md)  }\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getTag`: [`Tag_Response`](../interfaces/typings.Tag_Response.md)  }\>
 
 #### Implementation of
 
-[AWF_ITags](../interfaces/sdk.AWF_ITags.md).[getTag](../interfaces/sdk.AWF_ITags.md#gettag)
+[AWF_ITags](../interfaces/typings.AWF_ITags.md).[getTag](../interfaces/typings.AWF_ITags.md#gettag)
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/tags.ts#L43)
+[sdk/src/posts/tags.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/posts/tags.ts#L43)
 
 ___
 
 ### getTags
 
-**getTags**(`opt`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `tags`: [`TagsResult_Response`](../interfaces/sdk.TagsResult_Response.md)  }\>
+**getTags**(`opt`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `tags`: [`TagsResult_Response`](../interfaces/typings.TagsResult_Response.md)  }\>
 
 #### Parameters
 
@@ -117,41 +117,41 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `tags`: [`TagsResult_Response`](../interfaces/sdk.TagsResult_Response.md)  }\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `tags`: [`TagsResult_Response`](../interfaces/typings.TagsResult_Response.md)  }\>
 
 #### Implementation of
 
-[AWF_ITags](../interfaces/sdk.AWF_ITags.md).[getTags](../interfaces/sdk.AWF_ITags.md#gettags)
+[AWF_ITags](../interfaces/typings.AWF_ITags.md).[getTags](../interfaces/typings.AWF_ITags.md#gettags)
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:58](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/tags.ts#L58)
+[sdk/src/posts/tags.ts:58](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/posts/tags.ts#L58)
 
 ___
 
 ### getTrending
 
-**getTrending**(): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `searchTags`: [`SearchTagsResult_Response`](../interfaces/sdk.SearchTagsResult_Response.md)[]  }\>
+**getTrending**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `searchTags`: [`SearchTagsResult_Response`](../interfaces/typings.SearchTagsResult_Response.md)[]  }\>
 
 Returns most recent used tags
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `searchTags`: [`SearchTagsResult_Response`](../interfaces/sdk.SearchTagsResult_Response.md)[]  }\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `searchTags`: [`SearchTagsResult_Response`](../interfaces/typings.SearchTagsResult_Response.md)[]  }\>
 
 #### Implementation of
 
-[AWF_ITags](../interfaces/sdk.AWF_ITags.md).[getTrending](../interfaces/sdk.AWF_ITags.md#gettrending)
+[AWF_ITags](../interfaces/typings.AWF_ITags.md).[getTrending](../interfaces/typings.AWF_ITags.md#gettrending)
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:124](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/tags.ts#L124)
+[sdk/src/posts/tags.ts:124](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/posts/tags.ts#L124)
 
 ___
 
 ### searchTags
 
-**searchTags**(`name`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `searchTags`: [`SearchTagsResult_Response`](../interfaces/sdk.SearchTagsResult_Response.md)[]  }\>
+**searchTags**(`name`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `searchTags`: [`SearchTagsResult_Response`](../interfaces/typings.SearchTagsResult_Response.md)[]  }\>
 
 #### Parameters
 
@@ -161,12 +161,12 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `searchTags`: [`SearchTagsResult_Response`](../interfaces/sdk.SearchTagsResult_Response.md)[]  }\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `searchTags`: [`SearchTagsResult_Response`](../interfaces/typings.SearchTagsResult_Response.md)[]  }\>
 
 #### Implementation of
 
-[AWF_ITags](../interfaces/sdk.AWF_ITags.md).[searchTags](../interfaces/sdk.AWF_ITags.md#searchtags)
+[AWF_ITags](../interfaces/typings.AWF_ITags.md).[searchTags](../interfaces/typings.AWF_ITags.md#searchtags)
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:73](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/tags.ts#L73)
+[sdk/src/posts/tags.ts:73](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/posts/tags.ts#L73)

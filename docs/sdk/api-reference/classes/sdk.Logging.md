@@ -13,7 +13,7 @@ description: "Test Description"
 
 ## Implements
 
-- [`ILogService`](../interfaces/sdk.ILogService.md)
+- [`ILogService`](../interfaces/typings.ILogService.md)
 
 ## Constructors
 
@@ -23,13 +23,13 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/logging/index.ts:11](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/logging/index.ts#L11)
+[sdk/src/logging/index.ts:11](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/logging/index.ts#L11)
 
 ## Methods
 
 ### create
 
-**create**(`nameSpace?`): [`ILogger`](../interfaces/sdk.ILogger.md)
+**create**(`nameSpace?`): [`ILogger`](../interfaces/typings.ILogger.md)
 
 #### Parameters
 
@@ -39,14 +39,14 @@ description: "Test Description"
 
 #### Returns
 
-[`ILogger`](../interfaces/sdk.ILogger.md)
+[`ILogger`](../interfaces/typings.ILogger.md)
 
 ILogger
 
 #### Implementation of
 
-[ILogService](../interfaces/sdk.ILogService.md).[create](../interfaces/sdk.ILogService.md#create)
+[ILogService](../interfaces/typings.ILogService.md).[create](../interfaces/typings.ILogService.md#create)
 
 #### Defined in
 
-[sdk/src/logging/index.ts:20](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/logging/index.ts#L20)
+[sdk/src/logging/index.ts:20](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/logging/index.ts#L20)

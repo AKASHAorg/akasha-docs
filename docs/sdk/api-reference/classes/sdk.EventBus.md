@@ -13,7 +13,7 @@ description: "Test Description"
 
 ## Hierarchy
 
-- `ReplaySubject`<[`GlobalEventBusData`](../namespaces/sdk.md#globaleventbusdata)\>
+- `ReplaySubject`<[`GlobalEventBusData`](../namespaces/typings.md#globaleventbusdata)\>
 
   ↳ **`EventBus`**
 
@@ -37,4 +37,4 @@ ReplaySubject&lt;GlobalEventBusData\&gt;.constructor
 
 #### Defined in
 
-[sdk/src/common/event-bus.ts:9](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/event-bus.ts#L9)
+[sdk/src/common/event-bus.ts:9](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/common/event-bus.ts#L9)

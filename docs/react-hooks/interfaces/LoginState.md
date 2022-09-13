@@ -24,7 +24,7 @@ CurrentUser.ethAddress
 
 #### Defined in
 
-sdk/typings/lib/interfaces/common.d.ts:14
+typings/sdk/common.d.ts:14
 
 ___
 
@@ -38,7 +38,7 @@ CurrentUser.filAddress
 
 #### Defined in
 
-sdk/typings/lib/interfaces/common.d.ts:16
+typings/sdk/common.d.ts:16
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-login.ts:28](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-login.ts#L28)
+[ui/hooks/src/use-login.ts:49](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-login.ts#L49)
 
 ___
 
@@ -62,7 +62,7 @@ CurrentUser.isNewUser
 
 #### Defined in
 
-sdk/typings/lib/interfaces/common.d.ts:15
+typings/sdk/common.d.ts:15
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-login.ts:21](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-login.ts#L21)
+[ui/hooks/src/use-login.ts:42](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-login.ts#L42)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-login.ts:23](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-login.ts#L23)
+[ui/hooks/src/use-login.ts:44](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-login.ts#L44)
 
 ___
 
@@ -96,7 +96,7 @@ CurrentUser.pubKey
 
 #### Defined in
 
-sdk/typings/lib/interfaces/common.d.ts:13
+typings/sdk/common.d.ts:13
 
 ___
 
@@ -106,4 +106,4 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-login.ts:22](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-login.ts#L22)
+[ui/hooks/src/use-login.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-login.ts#L43)

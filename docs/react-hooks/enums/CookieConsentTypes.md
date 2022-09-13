@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[ui/hooks/src/use-analytics.tsx:17](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-analytics.tsx#L17)
+[ui/hooks/src/use-analytics.tsx:17](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-analytics.tsx#L17)
 
 ___
 
@@ -24,4 +24,4 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-analytics.tsx:16](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-analytics.tsx#L16)
+[ui/hooks/src/use-analytics.tsx:16](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-analytics.tsx#L16)

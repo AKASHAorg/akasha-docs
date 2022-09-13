@@ -13,7 +13,7 @@ description: "Test Description"
 
 ## Implements
 
-- [`IWeb3Connector`](../interfaces/sdk.IWeb3Connector.md)<`ethers.providers.BaseProvider` \| `ethers.providers.Web3Provider`\>
+- [`IWeb3Connector`](../interfaces/typings.IWeb3Connector.md)<`ethers.providers.BaseProvider` \| `ethers.providers.Web3Provider`\>
 
 ## Constructors
 
@@ -30,7 +30,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:46](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L46)
+[sdk/src/common/web3.connector.ts:47](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/common/web3.connector.ts#L47)
 
 ## Properties
 
@@ -40,11 +40,11 @@ description: "Test Description"
 
 #### Implementation of
 
-[IWeb3Connector](../interfaces/sdk.IWeb3Connector.md).[network](../interfaces/sdk.IWeb3Connector.md#network)
+[IWeb3Connector](../interfaces/typings.IWeb3Connector.md).[network](../interfaces/typings.IWeb3Connector.md#network)
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:32](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L32)
+[sdk/src/common/web3.connector.ts:33](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/common/web3.connector.ts#L33)
 
 ___
 
@@ -54,11 +54,11 @@ ___
 
 #### Implementation of
 
-[IWeb3Connector](../interfaces/sdk.IWeb3Connector.md).[networkId](../interfaces/sdk.IWeb3Connector.md#networkid)
+[IWeb3Connector](../interfaces/typings.IWeb3Connector.md).[networkId](../interfaces/typings.IWeb3Connector.md#networkid)
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:35](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L35)
+[sdk/src/common/web3.connector.ts:36](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/common/web3.connector.ts#L36)
 
 ## Accessors
 
@@ -74,29 +74,29 @@ Get access to the web3 provider instance
 
 #### Implementation of
 
-[IWeb3Connector](../interfaces/sdk.IWeb3Connector.md).[provider](../interfaces/sdk.IWeb3Connector.md#provider)
+[IWeb3Connector](../interfaces/typings.IWeb3Connector.md).[provider](../interfaces/typings.IWeb3Connector.md#provider)
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:88](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L88)
+[sdk/src/common/web3.connector.ts:89](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/common/web3.connector.ts#L89)
 
 ## Methods
 
 ### checkCurrentNetwork
 
-**checkCurrentNetwork**(): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`void`\>
+**checkCurrentNetwork**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`void`\>
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`void`\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`void`\>
 
 #### Implementation of
 
-[IWeb3Connector](../interfaces/sdk.IWeb3Connector.md).[checkCurrentNetwork](../interfaces/sdk.IWeb3Connector.md#checkcurrentnetwork)
+[IWeb3Connector](../interfaces/typings.IWeb3Connector.md).[checkCurrentNetwork](../interfaces/typings.IWeb3Connector.md#checkcurrentnetwork)
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:168](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L168)
+[sdk/src/common/web3.connector.ts:169](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/common/web3.connector.ts#L169)
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `provider` | [`EthProviders`](../enums/sdk.EthProviders.md) | `EthProviders.None` | Number representing the provider option |
+| `provider` | [`EthProviders`](../enums/typings.EthProviders.md) | `EthProviders.None` | Number representing the provider option |
 
 #### Returns
 
@@ -116,25 +116,25 @@ ___
 
 #### Implementation of
 
-[IWeb3Connector](../interfaces/sdk.IWeb3Connector.md).[connect](../interfaces/sdk.IWeb3Connector.md#connect)
+[IWeb3Connector](../interfaces/typings.IWeb3Connector.md).[connect](../interfaces/typings.IWeb3Connector.md#connect)
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:59](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L59)
+[sdk/src/common/web3.connector.ts:60](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/common/web3.connector.ts#L60)
 
 ___
 
 ### detectInjectedProvider
 
-**detectInjectedProvider**(): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<[`INJECTED_PROVIDERS`](../enums/sdk.INJECTED_PROVIDERS.md)\>
+**detectInjectedProvider**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<[`INJECTED_PROVIDERS`](../enums/typings.INJECTED_PROVIDERS.md)\>
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<[`INJECTED_PROVIDERS`](../enums/sdk.INJECTED_PROVIDERS.md)\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<[`INJECTED_PROVIDERS`](../enums/typings.INJECTED_PROVIDERS.md)\>
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:171](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L171)
+[sdk/src/common/web3.connector.ts:172](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/common/web3.connector.ts#L172)
 
 ___
 
@@ -150,45 +150,45 @@ Remove the web3 connection
 
 #### Implementation of
 
-[IWeb3Connector](../interfaces/sdk.IWeb3Connector.md).[disconnect](../interfaces/sdk.IWeb3Connector.md#disconnect)
+[IWeb3Connector](../interfaces/typings.IWeb3Connector.md).[disconnect](../interfaces/typings.IWeb3Connector.md#disconnect)
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:98](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L98)
+[sdk/src/common/web3.connector.ts:99](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/common/web3.connector.ts#L99)
 
 ___
 
 ### getCurrentAddress
 
-**getCurrentAddress**(): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`string`\>
+**getCurrentAddress**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`string`\>
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`string`\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`string`\>
 
 the current eth address that is connected to the provider
 
 #### Implementation of
 
-[IWeb3Connector](../interfaces/sdk.IWeb3Connector.md).[getCurrentAddress](../interfaces/sdk.IWeb3Connector.md#getcurrentaddress)
+[IWeb3Connector](../interfaces/typings.IWeb3Connector.md).[getCurrentAddress](../interfaces/typings.IWeb3Connector.md#getcurrentaddress)
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:135](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L135)
+[sdk/src/common/web3.connector.ts:136](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/common/web3.connector.ts#L136)
 
 ___
 
 ### getRequiredNetworkName
 
-**getRequiredNetworkName**(): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`string`\>
+**getRequiredNetworkName**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`string`\>
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`string`\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`string`\>
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:139](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L139)
+[sdk/src/common/web3.connector.ts:140](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/common/web3.connector.ts#L140)
 
 ___
 
@@ -202,21 +202,21 @@ ___
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:121](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L121)
+[sdk/src/common/web3.connector.ts:122](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/common/web3.connector.ts#L122)
 
 ___
 
 ### requestWalletPermissions
 
-**requestWalletPermissions**(): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`any`\>
+**requestWalletPermissions**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`any`\>
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`any`\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`any`\>
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:75](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L75)
+[sdk/src/common/web3.connector.ts:76](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/common/web3.connector.ts#L76)
 
 ___
 
@@ -238,22 +238,22 @@ Enforce personal_sign method for message signature
 
 #### Implementation of
 
-[IWeb3Connector](../interfaces/sdk.IWeb3Connector.md).[signMessage](../interfaces/sdk.IWeb3Connector.md#signmessage)
+[IWeb3Connector](../interfaces/typings.IWeb3Connector.md).[signMessage](../interfaces/typings.IWeb3Connector.md#signmessage)
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:117](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L117)
+[sdk/src/common/web3.connector.ts:118](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/common/web3.connector.ts#L118)
 
 ___
 
 ### switchToRequiredNetwork
 
-**switchToRequiredNetwork**(): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`any`\>
+**switchToRequiredNetwork**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`any`\>
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`any`\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`any`\>
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:146](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/common/web3.connector.ts#L146)
+[sdk/src/common/web3.connector.ts:147](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/common/web3.connector.ts#L147)
