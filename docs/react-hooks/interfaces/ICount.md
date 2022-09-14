@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[ui/hooks/src/moderation-requests.ts:45](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/moderation-requests.ts#L45)
+[ui/hooks/src/moderation-requests.ts:45](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/moderation-requests.ts#L45)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/moderation-requests.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/moderation-requests.ts#L43)
+[ui/hooks/src/moderation-requests.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/moderation-requests.ts#L43)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/moderation-requests.ts:44](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/moderation-requests.ts#L44)
+[ui/hooks/src/moderation-requests.ts:44](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/moderation-requests.ts#L44)

@@ -25,7 +25,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/db/settings.schema.ts:22](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/db/settings.schema.ts#L22)
+[sdk/src/db/settings.schema.ts:22](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/db/settings.schema.ts#L22)
 
 ___
 
@@ -35,4 +35,4 @@ ___
 
 #### Defined in
 
-[sdk/src/db/settings.schema.ts:21](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/db/settings.schema.ts#L21)
+[sdk/src/db/settings.schema.ts:21](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/db/settings.schema.ts#L21)

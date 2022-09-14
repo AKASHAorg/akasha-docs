@@ -35,7 +35,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:53](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L53)
+[sdk/src/registry/ens.ts:53](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/ens.ts#L53)
 
 ## Properties
 
@@ -45,7 +45,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:49](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L49)
+[sdk/src/registry/ens.ts:49](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/ens.ts#L49)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:47](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L47)
+[sdk/src/registry/ens.ts:47](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/ens.ts#L47)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:48](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L48)
+[sdk/src/registry/ens.ts:48](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/ens.ts#L48)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:50](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L50)
+[sdk/src/registry/ens.ts:50](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/ens.ts#L50)
 
 ## Methods
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:98](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L98)
+[sdk/src/registry/ens.ts:98](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/ens.ts#L98)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:182](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L182)
+[sdk/src/registry/ens.ts:182](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/ens.ts#L182)
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:131](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L131)
+[sdk/src/registry/ens.ts:131](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/ens.ts#L131)
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:71](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L71)
+[sdk/src/registry/ens.ts:71](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/ens.ts#L71)
 
 ___
 
@@ -191,7 +191,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:143](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L143)
+[sdk/src/registry/ens.ts:143](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/ens.ts#L143)
 
 ___
 
@@ -215,7 +215,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:151](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L151)
+[sdk/src/registry/ens.ts:151](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/ens.ts#L151)
 
 ___
 
@@ -229,7 +229,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:156](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L156)
+[sdk/src/registry/ens.ts:156](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/ens.ts#L156)
 
 ___
 
@@ -253,4 +253,4 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:120](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/registry/ens.ts#L120)
+[sdk/src/registry/ens.ts:120](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/ens.ts#L120)

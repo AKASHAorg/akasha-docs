@@ -31,7 +31,7 @@ and passes it to the ThemeSelector component along with all available themes.
 
 #### Defined in
 
-[ui/hooks/src/utils/theme-wrapper.tsx:10](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/utils/theme-wrapper.tsx#L10)
+[ui/hooks/src/utils/theme-wrapper.tsx:10](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/utils/theme-wrapper.tsx#L10)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/constants.ts:29](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/constants.ts#L29)
+[ui/hooks/src/constants.ts:29](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/constants.ts#L29)
 
 ## Functions
 
@@ -89,7 +89,7 @@ Utility to check whether a post is active or not
 
 #### Defined in
 
-[ui/hooks/src/utils/checkPostActive.ts:6](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/utils/checkPostActive.ts#L6)
+[ui/hooks/src/utils/checkPostActive.ts:6](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/utils/checkPostActive.ts#L6)
 
 ___
 
@@ -112,7 +112,7 @@ Utility to create an entry yet to be published
 
 #### Defined in
 
-[ui/hooks/src/utils/entry-utils.ts:268](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/utils/entry-utils.ts#L268)
+[ui/hooks/src/utils/entry-utils.ts:268](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/utils/entry-utils.ts#L268)
 
 ___
 
@@ -134,7 +134,7 @@ Utility to get preview of a specified url
 
 #### Defined in
 
-[ui/hooks/src/utils/media-utils.ts:108](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/utils/media-utils.ts#L108)
+[ui/hooks/src/utils/media-utils.ts:108](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/utils/media-utils.ts#L108)
 
 ___
 
@@ -162,7 +162,7 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/utils/media-utils.ts:17](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/utils/media-utils.ts#L17)
+[ui/hooks/src/utils/media-utils.ts:17](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/utils/media-utils.ts#L17)
 
 ___
 
@@ -185,7 +185,7 @@ Utility to log error to a specified logger
 
 #### Defined in
 
-[ui/hooks/src/utils/error-handler.ts:21](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/utils/error-handler.ts#L21)
+[ui/hooks/src/utils/error-handler.ts:21](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/utils/error-handler.ts#L21)
 
 ___
 
@@ -211,7 +211,7 @@ entry images - append ipfs gateway
 
 #### Defined in
 
-[ui/hooks/src/utils/entry-utils.ts:99](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/utils/entry-utils.ts#L99)
+[ui/hooks/src/utils/entry-utils.ts:99](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/utils/entry-utils.ts#L99)
 
 ___
 
@@ -227,7 +227,7 @@ An utility function to switch to required network - Metamask
 
 #### Defined in
 
-[ui/hooks/src/use-injected-provider.ts:37](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-injected-provider.ts#L37)
+[ui/hooks/src/use-injected-provider.ts:37](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-injected-provider.ts#L37)
 
 ___
 
@@ -250,7 +250,7 @@ Utility to upload media to textile bucket
 
 #### Defined in
 
-[ui/hooks/src/utils/media-utils.ts:62](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/utils/media-utils.ts#L62)
+[ui/hooks/src/utils/media-utils.ts:62](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/utils/media-utils.ts#L62)
 
 ___
 
@@ -276,7 +276,7 @@ action: 'some-action',
 
 #### Defined in
 
-[ui/hooks/src/use-analytics.tsx:44](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-analytics.tsx#L44)
+[ui/hooks/src/use-analytics.tsx:44](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-analytics.tsx#L44)
 
 ___
 
@@ -305,7 +305,7 @@ const description = detailedDescriptionQuery.data
 
 #### Defined in
 
-[ui/hooks/src/use-app-description.ts:23](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-app-description.ts#L23)
+[ui/hooks/src/use-app-description.ts:23](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-app-description.ts#L23)
 
 ___
 
@@ -334,7 +334,7 @@ const isModerator = checkModeratorQuery.data === 200;
 
 #### Defined in
 
-[ui/hooks/src/use-moderation.ts:207](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-moderation.ts#L207)
+[ui/hooks/src/use-moderation.ts:207](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-moderation.ts#L207)
 
 ___
 
@@ -363,7 +363,7 @@ const hasNewNotifications = checkNewNotificationsQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-notifications.ts:127](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-notifications.ts#L127)
+[ui/hooks/src/use-notifications.ts:127](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-notifications.ts#L127)
 
 ___
 
@@ -391,7 +391,7 @@ const checkSignupQuery = useCheckSignup('0x42b35jk53ifq');
 
 #### Defined in
 
-[ui/hooks/src/use-login.ts:379](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-login.ts#L379)
+[ui/hooks/src/use-login.ts:379](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-login.ts#L379)
 
 ___
 
@@ -427,7 +427,7 @@ return mapEntry(commentQuery.data);
 
 #### Defined in
 
-[ui/hooks/src/use-comments.ts:116](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-comments.ts#L116)
+[ui/hooks/src/use-comments.ts:116](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-comments.ts#L116)
 
 ___
 
@@ -457,7 +457,7 @@ const networkStateQuery = useNetworkState(connectProviderQuery.data);
 
 #### Defined in
 
-[ui/hooks/src/use-injected-provider.ts:78](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-injected-provider.ts#L78)
+[ui/hooks/src/use-injected-provider.ts:78](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-injected-provider.ts#L78)
 
 ___
 
@@ -481,7 +481,7 @@ createCommentQuery.mutate({ ...newCommentData , postID: 'some-post-id' });
 
 #### Defined in
 
-[ui/hooks/src/use-comments.ts:207](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-comments.ts#L207)
+[ui/hooks/src/use-comments.ts:207](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-comments.ts#L207)
 
 ___
 
@@ -505,7 +505,7 @@ publishPostQuery.mutate({ pubKey: 'author-public-key', ...});
 
 #### Defined in
 
-[ui/hooks/src/use-posts.ts:419](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-posts.ts#L419)
+[ui/hooks/src/use-posts.ts:416](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-posts.ts#L416)
 
 ___
 
@@ -536,7 +536,7 @@ network name
 
 #### Defined in
 
-[ui/hooks/src/use-network-state.ts:53](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-network-state.ts#L53)
+[ui/hooks/src/use-network-state.ts:53](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-network-state.ts#L53)
 
 ___
 
@@ -559,7 +559,7 @@ deleteBookmarkQuery.mutate('dbkjjouyahljfe');
 
 #### Defined in
 
-[ui/hooks/src/use-bookmarks.ts:111](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-bookmarks.ts#L111)
+[ui/hooks/src/use-bookmarks.ts:111](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-bookmarks.ts#L111)
 
 ___
 
@@ -588,7 +588,7 @@ deleteCommentQuery.mutate('some-comment-id');
 
 #### Defined in
 
-[ui/hooks/src/use-comments.ts:147](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-comments.ts#L147)
+[ui/hooks/src/use-comments.ts:147](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-comments.ts#L147)
 
 ___
 
@@ -617,7 +617,7 @@ deletePostQuery.mutate('some-post-id');
 
 #### Defined in
 
-[ui/hooks/src/use-posts.ts:353](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-posts.ts#L353)
+[ui/hooks/src/use-posts.ts:350](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-posts.ts#L350)
 
 ___
 
@@ -648,7 +648,7 @@ editCommentQuery.mutate({ ...editedCommentData, postID: 'some-post-id' });
 
 #### Defined in
 
-[ui/hooks/src/use-comments.ts:259](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-comments.ts#L259)
+[ui/hooks/src/use-comments.ts:259](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-comments.ts#L259)
 
 ___
 
@@ -672,7 +672,7 @@ editPostQuery.mutate({ entryID: 'some-entry-id', ...});
 
 #### Defined in
 
-[ui/hooks/src/use-posts.ts:473](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-posts.ts#L473)
+[ui/hooks/src/use-posts.ts:470](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-posts.ts#L470)
 
 ___
 
@@ -702,7 +702,7 @@ const querySuccess =  ensByAddressQuery.isSuccess
 
 #### Defined in
 
-[ui/hooks/src/use-username.ts:241](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-username.ts#L241)
+[ui/hooks/src/use-username.ts:241](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-username.ts#L241)
 
 ___
 
@@ -737,7 +737,7 @@ if (registerEnsQuery.status === 'success') {
 
 #### Defined in
 
-[ui/hooks/src/use-username.ts:162](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-username.ts#L162)
+[ui/hooks/src/use-username.ts:162](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-username.ts#L162)
 
 ___
 
@@ -779,7 +779,7 @@ const handleEntryNavigate = useEntryNavigation(navigateTo, 'current-post-id');
 
 #### Defined in
 
-[ui/hooks/src/use-navigation.ts:17](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-navigation.ts#L17)
+[ui/hooks/src/use-navigation.ts:17](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-navigation.ts#L17)
 
 ___
 
@@ -808,7 +808,7 @@ const notifications = fetchNotificationsQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-notifications.ts:57](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-notifications.ts#L57)
+[ui/hooks/src/use-notifications.ts:57](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-notifications.ts#L57)
 
 ___
 
@@ -831,7 +831,7 @@ followQuery.mutate('pubkey-of-user-to-follow');
 
 #### Defined in
 
-[ui/hooks/src/use-follow.ts:279](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-follow.ts#L279)
+[ui/hooks/src/use-follow.ts:279](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-follow.ts#L279)
 
 ___
 
@@ -865,7 +865,7 @@ const followers = React.useMemo(
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:198](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-profile.ts#L198)
+[ui/hooks/src/use-profile.ts:198](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-profile.ts#L198)
 
 ___
 
@@ -899,7 +899,7 @@ const following = React.useMemo(
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:233](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-profile.ts#L233)
+[ui/hooks/src/use-profile.ts:233](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-profile.ts#L233)
 
 ___
 
@@ -928,7 +928,7 @@ const installedApps = installedAppsQuery.data
 
 #### Defined in
 
-[ui/hooks/src/use-app-settings.ts:47](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-app-settings.ts#L47)
+[ui/hooks/src/use-app-settings.ts:47](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-app-settings.ts#L47)
 
 ___
 
@@ -958,7 +958,7 @@ const releaseIds = releaseIdsQuery.data?.releaseIds
 
 #### Defined in
 
-[ui/hooks/src/use-integration-registry.ts:178](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-integration-registry.ts#L178)
+[ui/hooks/src/use-integration-registry.ts:178](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-integration-registry.ts#L178)
 
 ___
 
@@ -988,7 +988,7 @@ const availableIntegrations = availableIntegrationsQuery.data
 
 #### Defined in
 
-[ui/hooks/src/use-integration-registry.ts:152](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-integration-registry.ts#L152)
+[ui/hooks/src/use-integration-registry.ts:152](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-integration-registry.ts#L152)
 
 ___
 
@@ -1018,7 +1018,7 @@ const appConfig = appConfigQuery.data
 
 #### Defined in
 
-[ui/hooks/src/use-app-settings.ts:24](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-app-settings.ts#L24)
+[ui/hooks/src/use-app-settings.ts:24](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-app-settings.ts#L24)
 
 ___
 
@@ -1048,7 +1048,7 @@ const bookmarks = getBookmarksQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-bookmarks.ts:20](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-bookmarks.ts#L20)
+[ui/hooks/src/use-bookmarks.ts:20](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-bookmarks.ts#L20)
 
 ___
 
@@ -1071,7 +1071,7 @@ const count = getCountQuery.data || { delisted: 0, kept: 0, pending: 0 };
 
 #### Defined in
 
-[ui/hooks/src/use-moderation.ts:224](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-moderation.ts#L224)
+[ui/hooks/src/use-moderation.ts:224](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-moderation.ts#L224)
 
 ___
 
@@ -1100,7 +1100,7 @@ const profile = getEntryAuthorQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:167](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-profile.ts#L167)
+[ui/hooks/src/use-profile.ts:167](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-profile.ts#L167)
 
 ___
 
@@ -1129,7 +1129,7 @@ const flagEntries = getFlagsQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-moderation.ts:240](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-moderation.ts#L240)
+[ui/hooks/src/use-moderation.ts:240](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-moderation.ts#L240)
 
 ___
 
@@ -1158,7 +1158,7 @@ const integrationId = integrationIdQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-integration-registry.ts:92](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-integration-registry.ts#L92)
+[ui/hooks/src/use-integration-registry.ts:92](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-integration-registry.ts#L92)
 
 ___
 
@@ -1187,7 +1187,7 @@ const integrationInfo = integrationInfoQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-integration-registry.ts:24](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-integration-registry.ts#L24)
+[ui/hooks/src/use-integration-registry.ts:24](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-integration-registry.ts#L24)
 
 ___
 
@@ -1218,7 +1218,7 @@ const integrationReleaseId = integrationReleaseIdQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-integration-registry.ts:114](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-integration-registry.ts#L114)
+[ui/hooks/src/use-integration-registry.ts:114](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-integration-registry.ts#L114)
 
 ___
 
@@ -1247,7 +1247,7 @@ const latestReleaseInfo = latestReleaseInfoQuery.data
 
 #### Defined in
 
-[ui/hooks/src/use-integration-registry.ts:205](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-integration-registry.ts#L205)
+[ui/hooks/src/use-integration-registry.ts:205](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-integration-registry.ts#L205)
 
 ___
 
@@ -1270,7 +1270,7 @@ const integrationCount = integrationsCountQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-integration-registry.ts:70](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-integration-registry.ts#L70)
+[ui/hooks/src/use-integration-registry.ts:70](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-integration-registry.ts#L70)
 
 ___
 
@@ -1299,7 +1299,7 @@ const integrationsInfo = integrationsInfoQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-integration-registry.ts:47](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-integration-registry.ts#L47)
+[ui/hooks/src/use-integration-registry.ts:47](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-integration-registry.ts#L47)
 
 ___
 
@@ -1357,7 +1357,7 @@ if (!res.data.getLatestRelease.some(rel => rel.name === '@akashaorg/app-messagin
 
 #### Defined in
 
-[ui/hooks/src/use-integration-registry.ts:262](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-integration-registry.ts#L262)
+[ui/hooks/src/use-integration-registry.ts:262](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-integration-registry.ts#L262)
 
 ___
 
@@ -1388,7 +1388,7 @@ return latestReleaseInfoQuery.data?.getLatestRelease;
 
 #### Defined in
 
-[ui/hooks/src/use-integration-registry.ts:288](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-integration-registry.ts#L288)
+[ui/hooks/src/use-integration-registry.ts:288](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-integration-registry.ts#L288)
 
 ___
 
@@ -1419,7 +1419,7 @@ const loggedProfileData = profileDataQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-login.ts:76](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-login.ts#L76)
+[ui/hooks/src/use-login.ts:76](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-login.ts#L76)
 
 ___
 
@@ -1450,7 +1450,7 @@ const profile = getProfileQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:97](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-profile.ts#L97)
+[ui/hooks/src/use-profile.ts:97](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-profile.ts#L97)
 
 ___
 
@@ -1481,7 +1481,7 @@ const profile = getProfileByEthAddressQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:133](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-profile.ts#L133)
+[ui/hooks/src/use-profile.ts:133](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-profile.ts#L133)
 
 ___
 
@@ -1511,7 +1511,7 @@ const tag =  getTagQuery.data
 
 #### Defined in
 
-[ui/hooks/src/use-tag.ts:139](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-tag.ts#L139)
+[ui/hooks/src/use-tag.ts:139](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-tag.ts#L139)
 
 ___
 
@@ -1545,7 +1545,7 @@ onError: payload => {},
 
 #### Defined in
 
-[ui/hooks/src/use-global-login.ts:34](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-global-login.ts#L34)
+[ui/hooks/src/use-global-login.ts:34](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-global-login.ts#L34)
 
 ___
 
@@ -1581,7 +1581,7 @@ return [];
 
 #### Defined in
 
-[ui/hooks/src/use-comments.ts:61](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-comments.ts#L61)
+[ui/hooks/src/use-comments.ts:61](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-comments.ts#L61)
 
 ___
 
@@ -1625,7 +1625,7 @@ customPostsQuery.fetchNextPage();
 
 #### Defined in
 
-[ui/hooks/src/use-posts.ts:149](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-posts.ts#L149)
+[ui/hooks/src/use-posts.ts:149](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-posts.ts#L149)
 
 ___
 
@@ -1667,7 +1667,7 @@ infiniteDelistedQuery.fetchNextPage();
 
 #### Defined in
 
-[ui/hooks/src/use-moderation.ts:383](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-moderation.ts#L383)
+[ui/hooks/src/use-moderation.ts:383](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-moderation.ts#L383)
 
 ___
 
@@ -1709,7 +1709,7 @@ infiniteKeptQuery.fetchNextPage();
 
 #### Defined in
 
-[ui/hooks/src/use-moderation.ts:343](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-moderation.ts#L343)
+[ui/hooks/src/use-moderation.ts:343](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-moderation.ts#L343)
 
 ___
 
@@ -1751,7 +1751,7 @@ infiniteLogQuery.fetchNextPage();
 
 #### Defined in
 
-[ui/hooks/src/use-moderation.ts:269](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-moderation.ts#L269)
+[ui/hooks/src/use-moderation.ts:269](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-moderation.ts#L269)
 
 ___
 
@@ -1793,7 +1793,7 @@ infinitePendingQuery.fetchNextPage();
 
 #### Defined in
 
-[ui/hooks/src/use-moderation.ts:308](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-moderation.ts#L308)
+[ui/hooks/src/use-moderation.ts:308](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-moderation.ts#L308)
 
 ___
 
@@ -1835,7 +1835,7 @@ postsQuery.fetchNextPage();
 
 #### Defined in
 
-[ui/hooks/src/use-posts.ts:94](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-posts.ts#L94)
+[ui/hooks/src/use-posts.ts:94](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-posts.ts#L94)
 
 ___
 
@@ -1879,7 +1879,7 @@ authorPostsQuery.fetchNextPage();
 
 #### Defined in
 
-[ui/hooks/src/use-posts.ts:255](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-posts.ts#L255)
+[ui/hooks/src/use-posts.ts:255](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-posts.ts#L255)
 
 ___
 
@@ -1922,7 +1922,7 @@ tagPostsQuery.fetchNextPage();
 
 #### Defined in
 
-[ui/hooks/src/use-posts.ts:202](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-posts.ts#L202)
+[ui/hooks/src/use-posts.ts:202](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-posts.ts#L202)
 
 ___
 
@@ -1948,7 +1948,7 @@ const injectedProvider = React.useMemo(
 
 #### Defined in
 
-[ui/hooks/src/use-injected-provider.ts:54](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-injected-provider.ts#L54)
+[ui/hooks/src/use-injected-provider.ts:54](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-injected-provider.ts#L54)
 
 ___
 
@@ -1971,7 +1971,7 @@ installAppQuery.mutate({ name: 'awesome integration', id: 'fhyuhjfhyrtl' });
 
 #### Defined in
 
-[ui/hooks/src/use-app-settings.ts:76](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-app-settings.ts#L76)
+[ui/hooks/src/use-app-settings.ts:76](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-app-settings.ts#L76)
 
 ___
 
@@ -2000,7 +2000,7 @@ const interests = interestsQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:275](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-profile.ts#L275)
+[ui/hooks/src/use-profile.ts:275](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-profile.ts#L275)
 
 ___
 
@@ -2031,7 +2031,7 @@ const contactList = isContactMultipleQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-follow.ts:181](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-follow.ts#L181)
+[ui/hooks/src/use-follow.ts:181](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-follow.ts#L181)
 
 ___
 
@@ -2061,7 +2061,7 @@ const followedProfiles = isFollowingMultipleQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-follow.ts:63](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-follow.ts#L63)
+[ui/hooks/src/use-follow.ts:63](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-follow.ts#L63)
 
 ___
 
@@ -2091,7 +2091,7 @@ const isSubscribedToTag = isSubscribedToTagQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-tag.ts:51](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-tag.ts#L51)
+[ui/hooks/src/use-tag.ts:51](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-tag.ts#L51)
 
 ___
 
@@ -2120,7 +2120,7 @@ const isValidToken = inviteTokenQuery.isSuccess;
 
 #### Defined in
 
-[ui/hooks/src/use-invite-token-validation.ts:30](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-invite-token-validation.ts#L30)
+[ui/hooks/src/use-invite-token-validation.ts:30](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-invite-token-validation.ts#L30)
 
 ___
 
@@ -2149,7 +2149,7 @@ const termsOfUseDoc = termsOfUseDocQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-legal.ts:24](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-legal.ts#L24)
+[ui/hooks/src/use-legal.ts:24](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-legal.ts#L24)
 
 ___
 
@@ -2171,7 +2171,7 @@ Hook to sign in a user
 
 #### Defined in
 
-[ui/hooks/src/use-login.ts:137](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-login.ts#L137)
+[ui/hooks/src/use-login.ts:137](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-login.ts#L137)
 
 ___
 
@@ -2198,7 +2198,7 @@ await logoutMutation.mutateAsync();
 
 #### Defined in
 
-[ui/hooks/src/use-login.ts:348](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-login.ts#L348)
+[ui/hooks/src/use-login.ts:348](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-login.ts#L348)
 
 ___
 
@@ -2222,7 +2222,7 @@ markAsReadQuery.mutate('message id');
 
 #### Defined in
 
-[ui/hooks/src/use-notifications.ts:75](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-notifications.ts#L75)
+[ui/hooks/src/use-notifications.ts:75](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-notifications.ts#L75)
 
 ___
 
@@ -2251,7 +2251,7 @@ const mentions = mentionQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-mentions.ts:32](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-mentions.ts#L32)
+[ui/hooks/src/use-mentions.ts:32](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-mentions.ts#L32)
 
 ___
 
@@ -2274,7 +2274,7 @@ moderateMutation.mutate({ dataToSign: { explanation: 'no violations detected', .
 
 #### Defined in
 
-[ui/hooks/src/use-moderation.ts:78](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-moderation.ts#L78)
+[ui/hooks/src/use-moderation.ts:78](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-moderation.ts#L78)
 
 ___
 
@@ -2311,7 +2311,7 @@ Mutation | undefined
 
 #### Defined in
 
-[ui/hooks/src/use-query-listener.ts:21](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-query-listener.ts#L21)
+[ui/hooks/src/use-query-listener.ts:21](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-query-listener.ts#L21)
 
 ___
 
@@ -2342,7 +2342,7 @@ networkNotSupported: true if web3 provider is not on the specified network
 
 #### Defined in
 
-[ui/hooks/src/use-network-state.ts:29](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-network-state.ts#L29)
+[ui/hooks/src/use-network-state.ts:29](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-network-state.ts#L29)
 
 ___
 
@@ -2356,7 +2356,7 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-health-check.ts:13](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-health-check.ts#L13)
+[ui/hooks/src/use-health-check.ts:13](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-health-check.ts#L13)
 
 ___
 
@@ -2391,7 +2391,7 @@ return undefined;
 
 #### Defined in
 
-[ui/hooks/src/use-posts.ts:309](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-posts.ts#L309)
+[ui/hooks/src/use-posts.ts:309](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-posts.ts#L309)
 
 ___
 
@@ -2403,10 +2403,7 @@ Hook to get an array of post data
 
 **`example`** usePosts hook
 ```typescript
-const postQueries = usePost({ postIds: ['some-post-id', 'some-other-post-id'],
-                                       loggedUser: 'logged-user-pubkey',
-                                       enabler: true,
-                             });
+const postQueries = usePost({ postIds: ['some-post-id', 'some-other-post-id'], loggedUser: 'logged-user-pubkey', enabler: true });
 
 const entryData = postQueries.map(postQuery=>postQuery.data);
 ```
@@ -2423,7 +2420,7 @@ const entryData = postQueries.map(postQuery=>postQuery.data);
 
 #### Defined in
 
-[ui/hooks/src/use-posts.ts:329](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-posts.ts#L329)
+[ui/hooks/src/use-posts.ts:326](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-posts.ts#L326)
 
 ___
 
@@ -2457,7 +2454,7 @@ profileUpdateMutation.reset();
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:421](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-profile.ts#L421)
+[ui/hooks/src/use-profile.ts:421](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-profile.ts#L421)
 
 ___
 
@@ -2492,7 +2489,7 @@ const result = sampleQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-query-listener.ts:47](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-query-listener.ts#L47)
+[ui/hooks/src/use-query-listener.ts:47](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-query-listener.ts#L47)
 
 ___
 
@@ -2520,7 +2517,7 @@ console.log(reasons);
 
 #### Defined in
 
-[ui/hooks/src/use-reasons.ts:58](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-reasons.ts#L58)
+[ui/hooks/src/use-reasons.ts:58](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-reasons.ts#L58)
 
 ___
 
@@ -2543,7 +2540,7 @@ reportMutation.mutate({ dataToSign: { explanation: 'no violations detected', ...
 
 #### Defined in
 
-[ui/hooks/src/use-moderation.ts:141](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-moderation.ts#L141)
+[ui/hooks/src/use-moderation.ts:141](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-moderation.ts#L141)
 
 ___
 
@@ -2566,7 +2563,7 @@ const requiredNetworkName = requiredNetworkQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-injected-provider.ts:95](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-injected-provider.ts#L95)
+[ui/hooks/src/use-injected-provider.ts:95](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-injected-provider.ts#L95)
 
 ___
 
@@ -2590,7 +2587,7 @@ saveBookmarkQuery.mutate({entryId: 'dbkjjouyahljfe', itemType: 'item type'});
 
 #### Defined in
 
-[ui/hooks/src/use-bookmarks.ts:60](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-bookmarks.ts#L60)
+[ui/hooks/src/use-bookmarks.ts:60](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-bookmarks.ts#L60)
 
 ___
 
@@ -2623,7 +2620,7 @@ search results for posts, comments, tags and profiles
 
 #### Defined in
 
-[ui/hooks/src/use-search.ts:332](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-search.ts#L332)
+[ui/hooks/src/use-search.ts:332](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-search.ts#L332)
 
 ___
 
@@ -2658,7 +2655,7 @@ search results for comments
 
 #### Defined in
 
-[ui/hooks/src/use-search.ts:187](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-search.ts#L187)
+[ui/hooks/src/use-search.ts:187](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-search.ts#L187)
 
 ___
 
@@ -2693,7 +2690,7 @@ search results for posts
 
 #### Defined in
 
-[ui/hooks/src/use-search.ts:122](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-search.ts#L122)
+[ui/hooks/src/use-search.ts:122](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-search.ts#L122)
 
 ___
 
@@ -2728,7 +2725,7 @@ search results for profiles, containing full profile data
 
 #### Defined in
 
-[ui/hooks/src/use-search.ts:60](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-search.ts#L60)
+[ui/hooks/src/use-search.ts:60](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-search.ts#L60)
 
 ___
 
@@ -2760,7 +2757,7 @@ search results for posts, comments, tags and profiles
 
 #### Defined in
 
-[ui/hooks/src/use-search.ts:225](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-search.ts#L225)
+[ui/hooks/src/use-search.ts:225](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-search.ts#L225)
 
 ___
 
@@ -2799,7 +2796,7 @@ const { signUpState, ethAddress, fireRemainingMessages, error, fullSignUp, reset
 
 #### Defined in
 
-[ui/hooks/src/use-login.ts:173](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-login.ts#L173)
+[ui/hooks/src/use-login.ts:173](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-login.ts#L173)
 
 ___
 
@@ -2828,7 +2825,7 @@ const result =  tagSearchQuery.data
 
 #### Defined in
 
-[ui/hooks/src/use-tag.ts:164](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-tag.ts#L164)
+[ui/hooks/src/use-tag.ts:164](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-tag.ts#L164)
 
 ___
 
@@ -2857,7 +2854,7 @@ const subscribedTags = subscribedTagsQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-tag.ts:27](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-tag.ts#L27)
+[ui/hooks/src/use-tag.ts:27](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-tag.ts#L27)
 
 ___
 
@@ -2881,7 +2878,7 @@ toggleTagSubscriptionQuery.mutate('awesome tag');
 
 #### Defined in
 
-[ui/hooks/src/use-tag.ts:69](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-tag.ts#L69)
+[ui/hooks/src/use-tag.ts:69](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-tag.ts#L69)
 
 ___
 
@@ -2904,7 +2901,7 @@ const trendingProfiles = trendingProfilesQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-trending.ts:57](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-trending.ts#L57)
+[ui/hooks/src/use-trending.ts:57](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-trending.ts#L57)
 
 ___
 
@@ -2927,7 +2924,7 @@ const trendingTags = trendingTagsQuery.data;
 
 #### Defined in
 
-[ui/hooks/src/use-trending.ts:27](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-trending.ts#L27)
+[ui/hooks/src/use-trending.ts:27](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-trending.ts#L27)
 
 ___
 
@@ -2950,7 +2947,7 @@ unfollowQuery.mutate('pubkey-of-user-to-unfollow');
 
 #### Defined in
 
-[ui/hooks/src/use-follow.ts:358](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-follow.ts#L358)
+[ui/hooks/src/use-follow.ts:358](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-follow.ts#L358)
 
 ___
 
@@ -2973,7 +2970,7 @@ uninstallAppQuery.mutate('awesome integration');
 
 #### Defined in
 
-[ui/hooks/src/use-app-settings.ts:107](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-app-settings.ts#L107)
+[ui/hooks/src/use-app-settings.ts:107](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-app-settings.ts#L107)
 
 ___
 
@@ -3008,7 +3005,7 @@ if (updateUsernameProviderQuery.status === 'success') {
 
 #### Defined in
 
-[ui/hooks/src/use-username.ts:77](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-username.ts#L77)
+[ui/hooks/src/use-username.ts:77](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-username.ts#L77)
 
 ___
 
@@ -3039,7 +3036,7 @@ const querySuccess =  usernameValidationQuery.isSuccess
 
 #### Defined in
 
-[ui/hooks/src/use-username.ts:225](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/use-username.ts#L225)
+[ui/hooks/src/use-username.ts:225](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-username.ts#L225)
 
 ___
 
@@ -3066,7 +3063,7 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/utils/generic-utils.ts:1](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/utils/generic-utils.ts#L1)
+[ui/hooks/src/utils/generic-utils.ts:1](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/utils/generic-utils.ts#L1)
 
 ___
 
@@ -3110,4 +3107,4 @@ Higher order component that wraps a component with all necessary providers
 
 #### Defined in
 
-[ui/hooks/src/utils/provider-hoc.tsx:26](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/ui/hooks/src/utils/provider-hoc.tsx#L26)
+[ui/hooks/src/utils/provider-hoc.tsx:26](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/utils/provider-hoc.tsx#L26)

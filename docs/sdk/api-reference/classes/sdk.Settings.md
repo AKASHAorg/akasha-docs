@@ -51,7 +51,7 @@ Returns the settings object for a specified service name
 
 #### Defined in
 
-[sdk/src/settings/index.ts:17](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/settings/index.ts#L17)
+[sdk/src/settings/index.ts:17](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/index.ts#L17)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[sdk/src/settings/index.ts:56](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/settings/index.ts#L56)
+[sdk/src/settings/index.ts:56](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/index.ts#L56)
 
 ___
 
@@ -102,4 +102,4 @@ ServiceCallResult
 
 #### Defined in
 
-[sdk/src/settings/index.ts:34](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/settings/index.ts#L34)
+[sdk/src/settings/index.ts:34](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/index.ts#L34)

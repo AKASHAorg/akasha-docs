@@ -32,7 +32,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:48](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/posts/entry.ts#L48)
+[sdk/src/posts/entry.ts:48](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L48)
 
 ## Properties
 
@@ -56,7 +56,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:36](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/posts/entry.ts#L36)
+[sdk/src/posts/entry.ts:36](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L36)
 
 ## Methods
 
@@ -89,7 +89,7 @@ Update an existing entry
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:149](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/posts/entry.ts#L149)
+[sdk/src/posts/entry.ts:149](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L149)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:191](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/posts/entry.ts#L191)
+[sdk/src/posts/entry.ts:191](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L191)
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:216](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/posts/entry.ts#L216)
+[sdk/src/posts/entry.ts:216](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L216)
 
 ___
 
@@ -169,7 +169,7 @@ ___
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:84](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/posts/entry.ts#L84)
+[sdk/src/posts/entry.ts:84](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L84)
 
 ___
 
@@ -193,7 +193,7 @@ ___
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:64](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/posts/entry.ts#L64)
+[sdk/src/posts/entry.ts:64](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L64)
 
 ___
 
@@ -219,7 +219,7 @@ ___
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:299](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/posts/entry.ts#L299)
+[sdk/src/posts/entry.ts:299](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L299)
 
 ___
 
@@ -243,7 +243,7 @@ ___
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:277](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/posts/entry.ts#L277)
+[sdk/src/posts/entry.ts:277](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L277)
 
 ___
 
@@ -273,7 +273,7 @@ ___
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:104](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/posts/entry.ts#L104)
+[sdk/src/posts/entry.ts:104](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L104)
 
 ___
 
@@ -299,4 +299,4 @@ Remove an entry's content by ID
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:241](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/posts/entry.ts#L241)
+[sdk/src/posts/entry.ts:241](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L241)

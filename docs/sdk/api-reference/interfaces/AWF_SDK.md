@@ -18,7 +18,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/index.ts:55](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/index.ts#L55)
+[sdk/src/index.ts:55](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/index.ts#L55)
 
 ___
 
@@ -28,4 +28,4 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:54](https://github.com/AKASHAorg/akasha-framework/blob/433e1162/sdk/src/index.ts#L54)
+[sdk/src/index.ts:54](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/index.ts#L54)
