@@ -35,6 +35,7 @@ const config = {
         docs: {
           // required to set the doc with / slug as landing page
           routeBasePath: "/",
+          showLastUpdateTime: true,
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
