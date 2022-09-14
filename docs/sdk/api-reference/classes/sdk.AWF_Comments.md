@@ -17,7 +17,7 @@ Comments Module
 
 ## Implements
 
-- [`AWF_IComments`](../interfaces/sdk.AWF_IComments.md)
+- [`AWF_IComments`](../interfaces/typings.AWF_IComments.md)
 
 ## Constructors
 
@@ -36,7 +36,7 @@ Comments Module
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/comments.ts#L43)
+[sdk/src/posts/comments.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/comments.ts#L43)
 
 ## Properties
 
@@ -56,7 +56,7 @@ Comments Module
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:35](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/comments.ts#L35)
+[sdk/src/posts/comments.ts:35](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/comments.ts#L35)
 
 ## Methods
 
@@ -76,7 +76,7 @@ Create a new comment
 | `opt.comment.postID` | `string` |
 | `opt.comment.replyTo?` | `string` |
 | `opt.comment.tags?` | `string`[] |
-| `opt.data` | [`DataProviderInput`](../interfaces/sdk.DataProviderInput.md)[] |
+| `opt.data` | [`DataProviderInput`](../interfaces/typings.DataProviderInput.md)[] |
 
 #### Returns
 
@@ -84,11 +84,11 @@ Create a new comment
 
 #### Implementation of
 
-[AWF_IComments](../interfaces/sdk.AWF_IComments.md).[addComment](../interfaces/sdk.AWF_IComments.md#addcomment)
+[AWF_IComments](../interfaces/typings.AWF_IComments.md).[addComment](../interfaces/typings.AWF_IComments.md#addcomment)
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:86](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/comments.ts#L86)
+[sdk/src/posts/comments.ts:86](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/comments.ts#L86)
 
 ___
 
@@ -109,7 +109,7 @@ Update an existing comment
 | `opt.comment.replyTo?` | `string` |
 | `opt.comment.tags?` | `string`[] |
 | `opt.commentID` | `string` |
-| `opt.data` | [`DataProviderInput`](../interfaces/sdk.DataProviderInput.md)[] |
+| `opt.data` | [`DataProviderInput`](../interfaces/typings.DataProviderInput.md)[] |
 
 #### Returns
 
@@ -117,17 +117,17 @@ Update an existing comment
 
 #### Implementation of
 
-[AWF_IComments](../interfaces/sdk.AWF_IComments.md).[editComment](../interfaces/sdk.AWF_IComments.md#editcomment)
+[AWF_IComments](../interfaces/typings.AWF_IComments.md).[editComment](../interfaces/typings.AWF_IComments.md#editcomment)
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:130](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/comments.ts#L130)
+[sdk/src/posts/comments.ts:130](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/comments.ts#L130)
 
 ___
 
 ### getComment
 
-**getComment**(`commentID`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getComment`: [`Comment_Response`](../interfaces/sdk.Comment_Response.md)  }\>
+**getComment**(`commentID`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getComment`: [`Comment_Response`](../interfaces/typings.Comment_Response.md)  }\>
 
 Get comment data
 
@@ -139,21 +139,21 @@ Get comment data
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getComment`: [`Comment_Response`](../interfaces/sdk.Comment_Response.md)  }\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getComment`: [`Comment_Response`](../interfaces/typings.Comment_Response.md)  }\>
 
 #### Implementation of
 
-[AWF_IComments](../interfaces/sdk.AWF_IComments.md).[getComment](../interfaces/sdk.AWF_IComments.md#getcomment)
+[AWF_IComments](../interfaces/typings.AWF_IComments.md).[getComment](../interfaces/typings.AWF_IComments.md#getcomment)
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:58](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/comments.ts#L58)
+[sdk/src/posts/comments.ts:58](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/comments.ts#L58)
 
 ___
 
 ### getComments
 
-**getComments**(`opt`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getComments`: [`Comments_Response`](../interfaces/sdk.Comments_Response.md)  }\>
+**getComments**(`opt`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getComments`: [`Comments_Response`](../interfaces/typings.Comments_Response.md)  }\>
 
 Get a list of comments for a post
 
@@ -168,15 +168,15 @@ Get a list of comments for a post
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getComments`: [`Comments_Response`](../interfaces/sdk.Comments_Response.md)  }\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getComments`: [`Comments_Response`](../interfaces/typings.Comments_Response.md)  }\>
 
 #### Implementation of
 
-[AWF_IComments](../interfaces/sdk.AWF_IComments.md).[getComments](../interfaces/sdk.AWF_IComments.md#getcomments)
+[AWF_IComments](../interfaces/typings.AWF_IComments.md).[getComments](../interfaces/typings.AWF_IComments.md#getcomments)
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:72](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/comments.ts#L72)
+[sdk/src/posts/comments.ts:72](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/comments.ts#L72)
 
 ___
 
@@ -198,8 +198,8 @@ Remove a comment's data by ID
 
 #### Implementation of
 
-[AWF_IComments](../interfaces/sdk.AWF_IComments.md).[removeComment](../interfaces/sdk.AWF_IComments.md#removecomment)
+[AWF_IComments](../interfaces/typings.AWF_IComments.md).[removeComment](../interfaces/typings.AWF_IComments.md#removecomment)
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:172](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/posts/comments.ts#L172)
+[sdk/src/posts/comments.ts:172](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/comments.ts#L172)

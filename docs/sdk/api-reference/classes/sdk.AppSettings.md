@@ -13,7 +13,7 @@ description: "Test Description"
 
 ## Implements
 
-- [`IAppSettings`](../interfaces/sdk.IAppSettings.md)
+- [`IAppSettings`](../interfaces/typings.IAppSettings.md)
 
 ## Constructors
 
@@ -32,7 +32,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:30](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L30)
+[sdk/src/settings/apps.ts:29](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/apps.ts#L29)
 
 ## Methods
 
@@ -54,11 +54,11 @@ Returns an app configuration object
 
 #### Implementation of
 
-[IAppSettings](../interfaces/sdk.IAppSettings.md).[get](../interfaces/sdk.IAppSettings.md#get)
+[IAppSettings](../interfaces/typings.IAppSettings.md).[get](../interfaces/typings.IAppSettings.md#get)
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:46](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L46)
+[sdk/src/settings/apps.ts:45](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/apps.ts#L45)
 
 ___
 
@@ -74,27 +74,28 @@ Returns all installed apps
 
 #### Implementation of
 
-[IAppSettings](../interfaces/sdk.IAppSettings.md).[getAll](../interfaces/sdk.IAppSettings.md#getall)
+[IAppSettings](../interfaces/typings.IAppSettings.md).[getAll](../interfaces/typings.IAppSettings.md#getall)
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:57](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L57)
+[sdk/src/settings/apps.ts:56](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/apps.ts#L56)
 
 ___
 
 ### install
 
-**install**(`app`): `Promise`<``false`` \| `string`[]\>
+**install**(`app`, `isLocal?`): `Promise`<``false`` \| `string`[]\>
 
 Persist installed app configuration for the current user
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `app` | `Object` | Object |
-| `app.id?` | `string` | - |
-| `app.name?` | `string` | - |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `app` | `Object` | `undefined` | Object |
+| `app.id?` | `string` | `undefined` | - |
+| `app.name?` | `string` | `undefined` | - |
+| `isLocal` | `boolean` | `false` | - |
 
 #### Returns
 
@@ -102,11 +103,11 @@ Persist installed app configuration for the current user
 
 #### Implementation of
 
-[IAppSettings](../interfaces/sdk.IAppSettings.md).[install](../interfaces/sdk.IAppSettings.md#install)
+[IAppSettings](../interfaces/typings.IAppSettings.md).[install](../interfaces/typings.IAppSettings.md#install)
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:69](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L69)
+[sdk/src/settings/apps.ts:68](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/apps.ts#L68)
 
 ___
 
@@ -126,7 +127,7 @@ ___
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:116](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L116)
+[sdk/src/settings/apps.ts:126](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/apps.ts#L126)
 
 ___
 
@@ -148,11 +149,11 @@ Uninstall app by name
 
 #### Implementation of
 
-[IAppSettings](../interfaces/sdk.IAppSettings.md).[uninstall](../interfaces/sdk.IAppSettings.md#uninstall)
+[IAppSettings](../interfaces/typings.IAppSettings.md).[uninstall](../interfaces/typings.IAppSettings.md#uninstall)
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:102](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L102)
+[sdk/src/settings/apps.ts:112](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/apps.ts#L112)
 
 ___
 
@@ -172,7 +173,7 @@ ___
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:157](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L157)
+[sdk/src/settings/apps.ts:167](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/apps.ts#L167)
 
 ___
 
@@ -192,4 +193,4 @@ ___
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:133](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/apps.ts#L133)
+[sdk/src/settings/apps.ts:143](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/apps.ts#L143)

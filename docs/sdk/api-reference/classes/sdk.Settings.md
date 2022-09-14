@@ -13,7 +13,7 @@ description: "Test Description"
 
 ## Implements
 
-- [`ISettingsService`](../interfaces/sdk.ISettingsService.md)
+- [`ISettingsService`](../interfaces/typings.ISettingsService.md)
 
 ## Constructors
 
@@ -47,11 +47,11 @@ Returns the settings object for a specified service name
 
 #### Implementation of
 
-[ISettingsService](../interfaces/sdk.ISettingsService.md).[get](../interfaces/sdk.ISettingsService.md#get)
+[ISettingsService](../interfaces/typings.ISettingsService.md).[get](../interfaces/typings.ISettingsService.md#get)
 
 #### Defined in
 
-[sdk/src/settings/index.ts:19](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/index.ts#L19)
+[sdk/src/settings/index.ts:17](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/index.ts#L17)
 
 ___
 
@@ -71,17 +71,17 @@ ___
 
 #### Implementation of
 
-[ISettingsService](../interfaces/sdk.ISettingsService.md).[remove](../interfaces/sdk.ISettingsService.md#remove)
+[ISettingsService](../interfaces/typings.ISettingsService.md).[remove](../interfaces/typings.ISettingsService.md#remove)
 
 #### Defined in
 
-[sdk/src/settings/index.ts:58](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/index.ts#L58)
+[sdk/src/settings/index.ts:56](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/index.ts#L56)
 
 ___
 
 ### set
 
-**set**(`service`, `options`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`string`[]\>
+**set**(`service`, `options`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`string`[]\>
 
 #### Parameters
 
@@ -92,14 +92,14 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`string`[]\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`string`[]\>
 
 ServiceCallResult
 
 #### Implementation of
 
-[ISettingsService](../interfaces/sdk.ISettingsService.md).[set](../interfaces/sdk.ISettingsService.md#set)
+[ISettingsService](../interfaces/typings.ISettingsService.md).[set](../interfaces/typings.ISettingsService.md#set)
 
 #### Defined in
 
-[sdk/src/settings/index.ts:36](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/settings/index.ts#L36)
+[sdk/src/settings/index.ts:34](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/index.ts#L34)

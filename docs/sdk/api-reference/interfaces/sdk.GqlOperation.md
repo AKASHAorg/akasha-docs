@@ -19,7 +19,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/gql/index.ts:14](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/gql/index.ts#L14)
+[sdk/src/gql/index.ts:11](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/gql/index.ts#L11)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[sdk/src/gql/index.ts:15](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/gql/index.ts#L15)
+[sdk/src/gql/index.ts:12](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/gql/index.ts#L12)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[sdk/src/gql/index.ts:13](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/gql/index.ts#L13)
+[sdk/src/gql/index.ts:10](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/gql/index.ts#L10)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[sdk/src/gql/index.ts:11](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/gql/index.ts#L11)
+[sdk/src/gql/index.ts:8](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/gql/index.ts#L8)
 
 ___
 
@@ -59,4 +59,4 @@ ___
 
 #### Defined in
 
-[sdk/src/gql/index.ts:12](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/gql/index.ts#L12)
+[sdk/src/gql/index.ts:9](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/gql/index.ts#L9)

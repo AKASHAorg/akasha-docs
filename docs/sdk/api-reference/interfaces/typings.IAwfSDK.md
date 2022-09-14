@@ -21,25 +21,25 @@ description: "Test Description"
 
 | Name | Type |
 | :------ | :------ |
-| `auth` | [`AWF_IAuth`](sdk.AWF_IAuth.md) |
-| `comments` | [`AWF_IComments`](sdk.AWF_IComments.md) |
-| `ens` | [`AWF_IENS`](sdk.AWF_IENS.md) |
-| `entries` | [`AWF_IEntry`](sdk.AWF_IEntry.md) |
-| `globalChannel` | `ReplaySubject`<[`GlobalEventBusData`](../namespaces/sdk.md#globaleventbusdata)\> |
-| `icRegistry` | [`AWF_IIC_REGISTRY`](sdk.AWF_IIC_REGISTRY.md) |
-| `profile` | [`AWF_IProfile`](sdk.AWF_IProfile.md) |
-| `tags` | [`AWF_ITags`](sdk.AWF_ITags.md) |
+| `auth` | [`AWF_IAuth`](typings.AWF_IAuth.md) |
+| `comments` | [`AWF_IComments`](typings.AWF_IComments.md) |
+| `ens` | [`AWF_IENS`](typings.AWF_IENS.md) |
+| `entries` | [`AWF_IEntry`](typings.AWF_IEntry.md) |
+| `globalChannel` | `ReplaySubject`<[`GlobalEventBusData`](../namespaces/typings.md#globaleventbusdata)\> |
+| `icRegistry` | [`AWF_IIC_REGISTRY`](typings.AWF_IIC_REGISTRY.md) |
+| `profile` | [`AWF_IProfile`](typings.AWF_IProfile.md) |
+| `tags` | [`AWF_ITags`](typings.AWF_ITags.md) |
 
 #### Defined in
 
-sdk/typings/lib/index.d.ts:12
+typings/sdk/index.d.ts:58
 
 ___
 
 ### services
 
- **services**: [`Services`](typings.Services.md)
+ **services**: [`IServices`](typings.IServices.md)
 
 #### Defined in
 
-sdk/typings/lib/index.d.ts:11
+typings/sdk/index.d.ts:57

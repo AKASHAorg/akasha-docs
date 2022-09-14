@@ -13,7 +13,7 @@ description: "Test Description"
 
 ## Implements
 
-- [`AWF_IProfile`](../interfaces/sdk.AWF_IProfile.md)
+- [`AWF_IProfile`](../interfaces/typings.AWF_IProfile.md)
 
 ## Constructors
 
@@ -33,7 +33,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:71](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L71)
+[sdk/src/profiles/index.ts:71](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L71)
 
 ## Properties
 
@@ -43,7 +43,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:52](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L52)
+[sdk/src/profiles/index.ts:52](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L52)
 
 ___
 
@@ -73,11 +73,11 @@ ___
 
 #### Implementation of
 
-[AWF_IProfile](../interfaces/sdk.AWF_IProfile.md).[graphQLDocs](../interfaces/sdk.AWF_IProfile.md#graphqldocs)
+[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[graphQLDocs](../interfaces/typings.AWF_IProfile.md#graphqldocs)
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:53](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L53)
+[sdk/src/profiles/index.ts:53](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L53)
 
 ## Methods
 
@@ -91,7 +91,7 @@ Mutation request to add a profile provider to the profile object
 
 | Name | Type |
 | :------ | :------ |
-| `opt` | [`DataProviderInput`](../interfaces/sdk.DataProviderInput.md)[] |
+| `opt` | [`DataProviderInput`](../interfaces/typings.DataProviderInput.md)[] |
 
 #### Returns
 
@@ -99,23 +99,23 @@ Mutation request to add a profile provider to the profile object
 
 #### Implementation of
 
-[AWF_IProfile](../interfaces/sdk.AWF_IProfile.md).[addProfileProvider](../interfaces/sdk.AWF_IProfile.md#addprofileprovider)
+[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[addProfileProvider](../interfaces/typings.AWF_IProfile.md#addprofileprovider)
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:89](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L89)
+[sdk/src/profiles/index.ts:89](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L89)
 
 ___
 
 ### follow
 
-**follow**(`ethAddress`): `Observable`<{ `data`: { `follow`: `boolean`  }  }\>
+**follow**(`pubKey`): `Observable`<{ `data`: { `follow`: `boolean`  }  }\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `ethAddress` | `string` |
+| `pubKey` | `string` |
 
 #### Returns
 
@@ -123,17 +123,17 @@ ___
 
 #### Implementation of
 
-[AWF_IProfile](../interfaces/sdk.AWF_IProfile.md).[follow](../interfaces/sdk.AWF_IProfile.md#follow)
+[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[follow](../interfaces/typings.AWF_IProfile.md#follow)
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:237](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L237)
+[sdk/src/profiles/index.ts:237](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L237)
 
 ___
 
 ### getFollowers
 
-**getFollowers**(`pubKey`, `limit`, `offset?`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getFollowers`: [`UserFollowers_Response`](../interfaces/sdk.UserFollowers_Response.md)  }\>
+**getFollowers**(`pubKey`, `limit`, `offset?`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getFollowers`: [`UserFollowers_Response`](../interfaces/typings.UserFollowers_Response.md)  }\>
 
 #### Parameters
 
@@ -145,21 +145,21 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getFollowers`: [`UserFollowers_Response`](../interfaces/sdk.UserFollowers_Response.md)  }\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getFollowers`: [`UserFollowers_Response`](../interfaces/typings.UserFollowers_Response.md)  }\>
 
 #### Implementation of
 
-[AWF_IProfile](../interfaces/sdk.AWF_IProfile.md).[getFollowers](../interfaces/sdk.AWF_IProfile.md#getfollowers)
+[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[getFollowers](../interfaces/typings.AWF_IProfile.md#getfollowers)
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:534](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L534)
+[sdk/src/profiles/index.ts:534](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L534)
 
 ___
 
 ### getFollowing
 
-**getFollowing**(`pubKey`, `limit`, `offset?`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getFollowing`: [`UserFollowers_Response`](../interfaces/sdk.UserFollowers_Response.md)  }\>
+**getFollowing**(`pubKey`, `limit`, `offset?`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getFollowing`: [`UserFollowers_Response`](../interfaces/typings.UserFollowers_Response.md)  }\>
 
 #### Parameters
 
@@ -171,21 +171,21 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getFollowing`: [`UserFollowers_Response`](../interfaces/sdk.UserFollowers_Response.md)  }\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getFollowing`: [`UserFollowers_Response`](../interfaces/typings.UserFollowers_Response.md)  }\>
 
 #### Implementation of
 
-[AWF_IProfile](../interfaces/sdk.AWF_IProfile.md).[getFollowing](../interfaces/sdk.AWF_IProfile.md#getfollowing)
+[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[getFollowing](../interfaces/typings.AWF_IProfile.md#getfollowing)
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:551](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L551)
+[sdk/src/profiles/index.ts:551](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L551)
 
 ___
 
 ### getInterests
 
-**getInterests**(`pubKey`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getInterests`: `string`[]  }\>
+**getInterests**(`pubKey`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getInterests`: `string`[]  }\>
 
 Retrieve subscription list
 
@@ -197,21 +197,21 @@ Retrieve subscription list
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getInterests`: `string`[]  }\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getInterests`: `string`[]  }\>
 
 #### Implementation of
 
-[AWF_IProfile](../interfaces/sdk.AWF_IProfile.md).[getInterests](../interfaces/sdk.AWF_IProfile.md#getinterests)
+[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[getInterests](../interfaces/typings.AWF_IProfile.md#getinterests)
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:566](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L566)
+[sdk/src/profiles/index.ts:566](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L566)
 
 ___
 
 ### getProfile
 
-**getProfile**(`opt`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getProfile?`: [`UserProfile_Response`](../interfaces/sdk.UserProfile_Response.md)  } & { `resolveProfile`: [`UserProfile_Response`](../interfaces/sdk.UserProfile_Response.md)  }\>
+**getProfile**(`opt`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getProfile?`: [`UserProfile_Response`](../interfaces/typings.UserProfile_Response.md)  } & { `resolveProfile`: [`UserProfile_Response`](../interfaces/typings.UserProfile_Response.md)  }\>
 
 #### Parameters
 
@@ -223,15 +223,15 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getProfile?`: [`UserProfile_Response`](../interfaces/sdk.UserProfile_Response.md)  } & { `resolveProfile`: [`UserProfile_Response`](../interfaces/sdk.UserProfile_Response.md)  }\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getProfile?`: [`UserProfile_Response`](../interfaces/typings.UserProfile_Response.md)  } & { `resolveProfile`: [`UserProfile_Response`](../interfaces/typings.UserProfile_Response.md)  }\>
 
 #### Implementation of
 
-[AWF_IProfile](../interfaces/sdk.AWF_IProfile.md).[getProfile](../interfaces/sdk.AWF_IProfile.md#getprofile)
+[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[getProfile](../interfaces/typings.AWF_IProfile.md#getprofile)
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:206](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L206)
+[sdk/src/profiles/index.ts:206](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L206)
 
 ___
 
@@ -245,35 +245,35 @@ ___
 
 #### Implementation of
 
-[AWF_IProfile](../interfaces/sdk.AWF_IProfile.md).[getTagSubscriptions](../interfaces/sdk.AWF_IProfile.md#gettagsubscriptions)
+[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[getTagSubscriptions](../interfaces/typings.AWF_IProfile.md#gettagsubscriptions)
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:490](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L490)
+[sdk/src/profiles/index.ts:490](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L490)
 
 ___
 
 ### getTrending
 
-**getTrending**(): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `searchProfiles`: [`UserProfile_Response`](../interfaces/sdk.UserProfile_Response.md)[]  }\>
+**getTrending**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `searchProfiles`: [`UserProfile_Response`](../interfaces/typings.UserProfile_Response.md)[]  }\>
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `searchProfiles`: [`UserProfile_Response`](../interfaces/sdk.UserProfile_Response.md)[]  }\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `searchProfiles`: [`UserProfile_Response`](../interfaces/typings.UserProfile_Response.md)[]  }\>
 
 #### Implementation of
 
-[AWF_IProfile](../interfaces/sdk.AWF_IProfile.md).[getTrending](../interfaces/sdk.AWF_IProfile.md#gettrending)
+[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[getTrending](../interfaces/typings.AWF_IProfile.md#gettrending)
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:445](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L445)
+[sdk/src/profiles/index.ts:445](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L445)
 
 ___
 
 ### globalSearch
 
-**globalSearch**(`keyword`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `globalSearch`: [`GlobalSearchResult`](../interfaces/sdk.GlobalSearchResult.md)  }\>
+**globalSearch**(`keyword`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `globalSearch`: [`GlobalSearchResult`](../interfaces/typings.GlobalSearchResult.md)  }\>
 
 #### Parameters
 
@@ -283,21 +283,21 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `globalSearch`: [`GlobalSearchResult`](../interfaces/sdk.GlobalSearchResult.md)  }\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `globalSearch`: [`GlobalSearchResult`](../interfaces/typings.GlobalSearchResult.md)  }\>
 
 #### Implementation of
 
-[AWF_IProfile](../interfaces/sdk.AWF_IProfile.md).[globalSearch](../interfaces/sdk.AWF_IProfile.md#globalsearch)
+[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[globalSearch](../interfaces/typings.AWF_IProfile.md#globalsearch)
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:517](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L517)
+[sdk/src/profiles/index.ts:517](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L517)
 
 ___
 
 ### isFollowing
 
-**isFollowing**(`opt`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `isFollowing`: `boolean`  }\>
+**isFollowing**(`opt`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `isFollowing`: `boolean`  }\>
 
 #### Parameters
 
@@ -309,15 +309,15 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `isFollowing`: `boolean`  }\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `isFollowing`: `boolean`  }\>
 
 #### Implementation of
 
-[AWF_IProfile](../interfaces/sdk.AWF_IProfile.md).[isFollowing](../interfaces/sdk.AWF_IProfile.md#isfollowing)
+[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[isFollowing](../interfaces/typings.AWF_IProfile.md#isfollowing)
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:313](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L313)
+[sdk/src/profiles/index.ts:313](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L313)
 
 ___
 
@@ -337,11 +337,11 @@ ___
 
 #### Implementation of
 
-[AWF_IProfile](../interfaces/sdk.AWF_IProfile.md).[isSubscribedToTag](../interfaces/sdk.AWF_IProfile.md#issubscribedtotag)
+[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[isSubscribedToTag](../interfaces/typings.AWF_IProfile.md#issubscribedtotag)
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:501](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L501)
+[sdk/src/profiles/index.ts:501](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L501)
 
 ___
 
@@ -353,7 +353,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `opt` | [`DataProviderInput`](../interfaces/sdk.DataProviderInput.md)[] |
+| `opt` | [`DataProviderInput`](../interfaces/typings.DataProviderInput.md)[] |
 
 #### Returns
 
@@ -361,11 +361,11 @@ ___
 
 #### Implementation of
 
-[AWF_IProfile](../interfaces/sdk.AWF_IProfile.md).[makeDefaultProvider](../interfaces/sdk.AWF_IProfile.md#makedefaultprovider)
+[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[makeDefaultProvider](../interfaces/typings.AWF_IProfile.md#makedefaultprovider)
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:126](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L126)
+[sdk/src/profiles/index.ts:126](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L126)
 
 ___
 
@@ -385,17 +385,17 @@ ___
 
 #### Implementation of
 
-[AWF_IProfile](../interfaces/sdk.AWF_IProfile.md).[registerUserName](../interfaces/sdk.AWF_IProfile.md#registerusername)
+[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[registerUserName](../interfaces/typings.AWF_IProfile.md#registerusername)
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:163](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L163)
+[sdk/src/profiles/index.ts:163](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L163)
 
 ___
 
 ### saveMediaFile
 
-**saveMediaFile**(`data`): `Promise`<{ `CID`: `string` = cid; `size`: { `height`: `number` ; `naturalHeight`: `number` ; `naturalWidth`: `number` ; `width`: `number`  } = resized.size }\>
+**saveMediaFile**(`data`): `Promise`<{ `CID`: `string` = cid; `blob`: `any` = resized.image; `size`: { `height`: `number` ; `naturalHeight`: `number` ; `naturalWidth`: `number` ; `width`: `number`  } = resized.size }\>
 
 #### Parameters
 
@@ -414,21 +414,21 @@ ___
 
 #### Returns
 
-`Promise`<{ `CID`: `string` = cid; `size`: { `height`: `number` ; `naturalHeight`: `number` ; `naturalWidth`: `number` ; `width`: `number`  } = resized.size }\>
+`Promise`<{ `CID`: `string` = cid; `blob`: `any` = resized.image; `size`: { `height`: `number` ; `naturalHeight`: `number` ; `naturalWidth`: `number` ; `width`: `number`  } = resized.size }\>
 
 #### Implementation of
 
-[AWF_IProfile](../interfaces/sdk.AWF_IProfile.md).[saveMediaFile](../interfaces/sdk.AWF_IProfile.md#savemediafile)
+[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[saveMediaFile](../interfaces/typings.AWF_IProfile.md#savemediafile)
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:328](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L328)
+[sdk/src/profiles/index.ts:328](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L328)
 
 ___
 
 ### searchProfiles
 
-**searchProfiles**(`name`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `searchProfiles`: [`UserProfile_Response`](../interfaces/sdk.UserProfile_Response.md)[]  }\>
+**searchProfiles**(`name`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `searchProfiles`: [`UserProfile_Response`](../interfaces/typings.UserProfile_Response.md)[]  }\>
 
 #### Parameters
 
@@ -438,15 +438,15 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `searchProfiles`: [`UserProfile_Response`](../interfaces/sdk.UserProfile_Response.md)[]  }\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `searchProfiles`: [`UserProfile_Response`](../interfaces/typings.UserProfile_Response.md)[]  }\>
 
 #### Implementation of
 
-[AWF_IProfile](../interfaces/sdk.AWF_IProfile.md).[searchProfiles](../interfaces/sdk.AWF_IProfile.md#searchprofiles)
+[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[searchProfiles](../interfaces/typings.AWF_IProfile.md#searchprofiles)
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:431](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L431)
+[sdk/src/profiles/index.ts:431](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L431)
 
 ___
 
@@ -466,23 +466,23 @@ ___
 
 #### Implementation of
 
-[AWF_IProfile](../interfaces/sdk.AWF_IProfile.md).[toggleTagSubscription](../interfaces/sdk.AWF_IProfile.md#toggletagsubscription)
+[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[toggleTagSubscription](../interfaces/typings.AWF_IProfile.md#toggletagsubscription)
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:453](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L453)
+[sdk/src/profiles/index.ts:453](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L453)
 
 ___
 
 ### unFollow
 
-**unFollow**(`ethAddress`): `Observable`<{ `data`: { `unFollow`: `boolean`  }  }\>
+**unFollow**(`pubKey`): `Observable`<{ `data`: { `unFollow`: `boolean`  }  }\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `ethAddress` | `string` |
+| `pubKey` | `string` |
 
 #### Returns
 
@@ -490,8 +490,8 @@ ___
 
 #### Implementation of
 
-[AWF_IProfile](../interfaces/sdk.AWF_IProfile.md).[unFollow](../interfaces/sdk.AWF_IProfile.md#unfollow)
+[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[unFollow](../interfaces/typings.AWF_IProfile.md#unfollow)
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:275](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/profiles/index.ts#L275)
+[sdk/src/profiles/index.ts:275](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L275)

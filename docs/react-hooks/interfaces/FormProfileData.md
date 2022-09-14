@@ -23,7 +23,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:257](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-profile.ts#L257)
+[ui/hooks/src/use-profile.ts:54](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-profile.ts#L54)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:258](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-profile.ts#L258)
+[ui/hooks/src/use-profile.ts:55](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-profile.ts#L55)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:256](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-profile.ts#L256)
+[ui/hooks/src/use-profile.ts:53](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-profile.ts#L53)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:260](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-profile.ts#L260)
+[ui/hooks/src/use-profile.ts:57](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-profile.ts#L57)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:254](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-profile.ts#L254)
+[ui/hooks/src/use-profile.ts:51](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-profile.ts#L51)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:259](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-profile.ts#L259)
+[ui/hooks/src/use-profile.ts:56](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-profile.ts#L56)
 
 ___
 
@@ -92,4 +92,4 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:255](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/ui/hooks/src/use-profile.ts#L255)
+[ui/hooks/src/use-profile.ts:52](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-profile.ts#L52)

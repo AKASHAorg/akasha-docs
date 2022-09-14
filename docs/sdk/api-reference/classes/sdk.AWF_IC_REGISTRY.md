@@ -13,7 +13,7 @@ description: "Test Description"
 
 ## Implements
 
-- [`AWF_IIC_REGISTRY`](../interfaces/sdk.AWF_IIC_REGISTRY.md)
+- [`AWF_IIC_REGISTRY`](../interfaces/typings.AWF_IIC_REGISTRY.md)
 
 ## Constructors
 
@@ -35,7 +35,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/icRegistry.ts#L43)
+[sdk/src/registry/icRegistry.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L43)
 
 ## Properties
 
@@ -45,7 +45,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:36](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/icRegistry.ts#L36)
+[sdk/src/registry/icRegistry.ts:36](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L36)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:37](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/icRegistry.ts#L37)
+[sdk/src/registry/icRegistry.ts:37](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L37)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:38](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/icRegistry.ts#L38)
+[sdk/src/registry/icRegistry.ts:38](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L38)
 
 ## Methods
 
@@ -93,11 +93,11 @@ ___
 
 #### Implementation of
 
-[AWF_IIC_REGISTRY](../interfaces/sdk.AWF_IIC_REGISTRY.md).[getAllIntegrationReleaseIds](../interfaces/sdk.AWF_IIC_REGISTRY.md#getallintegrationreleaseids)
+[AWF_IIC_REGISTRY](../interfaces/typings.AWF_IIC_REGISTRY.md).[getAllIntegrationReleaseIds](../interfaces/typings.AWF_IIC_REGISTRY.md#getallintegrationreleaseids)
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:155](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/icRegistry.ts#L155)
+[sdk/src/registry/icRegistry.ts:155](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L155)
 
 ___
 
@@ -117,11 +117,11 @@ ___
 
 #### Implementation of
 
-[AWF_IIC_REGISTRY](../interfaces/sdk.AWF_IIC_REGISTRY.md).[getAllIntegrationsIds](../interfaces/sdk.AWF_IIC_REGISTRY.md#getallintegrationsids)
+[AWF_IIC_REGISTRY](../interfaces/typings.AWF_IIC_REGISTRY.md).[getAllIntegrationsIds](../interfaces/typings.AWF_IIC_REGISTRY.md#getallintegrationsids)
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:146](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/icRegistry.ts#L146)
+[sdk/src/registry/icRegistry.ts:146](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L146)
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:205](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/icRegistry.ts#L205)
+[sdk/src/registry/icRegistry.ts:205](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L205)
 
 ___
 
@@ -159,17 +159,17 @@ ___
 
 #### Implementation of
 
-[AWF_IIC_REGISTRY](../interfaces/sdk.AWF_IIC_REGISTRY.md).[getIntegrationId](../interfaces/sdk.AWF_IIC_REGISTRY.md#getintegrationid)
+[AWF_IIC_REGISTRY](../interfaces/typings.AWF_IIC_REGISTRY.md).[getIntegrationId](../interfaces/typings.AWF_IIC_REGISTRY.md#getintegrationid)
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:164](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/icRegistry.ts#L164)
+[sdk/src/registry/icRegistry.ts:164](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L164)
 
 ___
 
 ### getIntegrationInfo
 
-**getIntegrationInfo**(`integrationId`): `Promise`<{ `data`: [`IntegrationInfo`](../interfaces/sdk.IntegrationInfo.md)  }\>
+**getIntegrationInfo**(`integrationId`): `Promise`<{ `data`: [`IntegrationInfo`](../interfaces/typings.IntegrationInfo.md)  }\>
 
 #### Parameters
 
@@ -179,15 +179,15 @@ ___
 
 #### Returns
 
-`Promise`<{ `data`: [`IntegrationInfo`](../interfaces/sdk.IntegrationInfo.md)  }\>
+`Promise`<{ `data`: [`IntegrationInfo`](../interfaces/typings.IntegrationInfo.md)  }\>
 
 #### Implementation of
 
-[AWF_IIC_REGISTRY](../interfaces/sdk.AWF_IIC_REGISTRY.md).[getIntegrationInfo](../interfaces/sdk.AWF_IIC_REGISTRY.md#getintegrationinfo)
+[AWF_IIC_REGISTRY](../interfaces/typings.AWF_IIC_REGISTRY.md).[getIntegrationInfo](../interfaces/typings.AWF_IIC_REGISTRY.md#getintegrationinfo)
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:75](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/icRegistry.ts#L75)
+[sdk/src/registry/icRegistry.ts:75](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L75)
 
 ___
 
@@ -208,17 +208,17 @@ ___
 
 #### Implementation of
 
-[AWF_IIC_REGISTRY](../interfaces/sdk.AWF_IIC_REGISTRY.md).[getIntegrationReleaseId](../interfaces/sdk.AWF_IIC_REGISTRY.md#getintegrationreleaseid)
+[AWF_IIC_REGISTRY](../interfaces/typings.AWF_IIC_REGISTRY.md).[getIntegrationReleaseId](../interfaces/typings.AWF_IIC_REGISTRY.md#getintegrationreleaseid)
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:169](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/icRegistry.ts#L169)
+[sdk/src/registry/icRegistry.ts:169](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L169)
 
 ___
 
 ### getIntegrationReleaseInfo
 
-**getIntegrationReleaseInfo**(`releaseId`, `integrationId?`): `Promise`<{ `data`: [`ReleaseInfo`](../interfaces/sdk.ReleaseInfo.md)  }\>
+**getIntegrationReleaseInfo**(`releaseId`, `integrationId?`): `Promise`<{ `data`: [`ReleaseInfo`](../interfaces/typings.ReleaseInfo.md)  }\>
 
 #### Parameters
 
@@ -229,15 +229,15 @@ ___
 
 #### Returns
 
-`Promise`<{ `data`: [`ReleaseInfo`](../interfaces/sdk.ReleaseInfo.md)  }\>
+`Promise`<{ `data`: [`ReleaseInfo`](../interfaces/typings.ReleaseInfo.md)  }\>
 
 #### Implementation of
 
-[AWF_IIC_REGISTRY](../interfaces/sdk.AWF_IIC_REGISTRY.md).[getIntegrationReleaseInfo](../interfaces/sdk.AWF_IIC_REGISTRY.md#getintegrationreleaseinfo)
+[AWF_IIC_REGISTRY](../interfaces/typings.AWF_IIC_REGISTRY.md).[getIntegrationReleaseInfo](../interfaces/typings.AWF_IIC_REGISTRY.md#getintegrationreleaseinfo)
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:89](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/icRegistry.ts#L89)
+[sdk/src/registry/icRegistry.ts:89](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L89)
 
 ___
 
@@ -251,17 +251,17 @@ ___
 
 #### Implementation of
 
-[AWF_IIC_REGISTRY](../interfaces/sdk.AWF_IIC_REGISTRY.md).[getIntegrationsCount](../interfaces/sdk.AWF_IIC_REGISTRY.md#getintegrationscount)
+[AWF_IIC_REGISTRY](../interfaces/typings.AWF_IIC_REGISTRY.md).[getIntegrationsCount](../interfaces/typings.AWF_IIC_REGISTRY.md#getintegrationscount)
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:138](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/icRegistry.ts#L138)
+[sdk/src/registry/icRegistry.ts:138](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L138)
 
 ___
 
 ### getIntegrationsInfo
 
-**getIntegrationsInfo**(`opt`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getIntegrationInfo`: [`IntegrationInfo`](../interfaces/sdk.IntegrationInfo.md)[]  }\>
+**getIntegrationsInfo**(`opt`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getIntegrationInfo`: [`IntegrationInfo`](../interfaces/typings.IntegrationInfo.md)[]  }\>
 
 #### Parameters
 
@@ -271,21 +271,21 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getIntegrationInfo`: [`IntegrationInfo`](../interfaces/sdk.IntegrationInfo.md)[]  }\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getIntegrationInfo`: [`IntegrationInfo`](../interfaces/typings.IntegrationInfo.md)[]  }\>
 
 #### Implementation of
 
-[AWF_IIC_REGISTRY](../interfaces/sdk.AWF_IIC_REGISTRY.md).[getIntegrationsInfo](../interfaces/sdk.AWF_IIC_REGISTRY.md#getintegrationsinfo)
+[AWF_IIC_REGISTRY](../interfaces/typings.AWF_IIC_REGISTRY.md).[getIntegrationsInfo](../interfaces/typings.AWF_IIC_REGISTRY.md#getintegrationsinfo)
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:182](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/icRegistry.ts#L182)
+[sdk/src/registry/icRegistry.ts:182](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L182)
 
 ___
 
 ### getLatestReleaseInfo
 
-**getLatestReleaseInfo**(`opt`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getLatestRelease`: [`ReleaseInfo`](../interfaces/sdk.ReleaseInfo.md)[]  }\>
+**getLatestReleaseInfo**(`opt`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getLatestRelease`: [`ReleaseInfo`](../interfaces/typings.ReleaseInfo.md)[]  }\>
 
 #### Parameters
 
@@ -295,21 +295,21 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<{ `getLatestRelease`: [`ReleaseInfo`](../interfaces/sdk.ReleaseInfo.md)[]  }\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getLatestRelease`: [`ReleaseInfo`](../interfaces/typings.ReleaseInfo.md)[]  }\>
 
 #### Implementation of
 
-[AWF_IIC_REGISTRY](../interfaces/sdk.AWF_IIC_REGISTRY.md).[getLatestReleaseInfo](../interfaces/sdk.AWF_IIC_REGISTRY.md#getlatestreleaseinfo)
+[AWF_IIC_REGISTRY](../interfaces/typings.AWF_IIC_REGISTRY.md).[getLatestReleaseInfo](../interfaces/typings.AWF_IIC_REGISTRY.md#getlatestreleaseinfo)
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:193](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/icRegistry.ts#L193)
+[sdk/src/registry/icRegistry.ts:193](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L193)
 
 ___
 
 ### getLatestVersionInfo
 
-**getLatestVersionInfo**(`integration`): `Promise`<{ `data`: [`ReleaseInfo`](../interfaces/sdk.ReleaseInfo.md)  }\>
+**getLatestVersionInfo**(`integration`): `Promise`<{ `data`: [`ReleaseInfo`](../interfaces/typings.ReleaseInfo.md)  }\>
 
 #### Parameters
 
@@ -321,8 +321,8 @@ ___
 
 #### Returns
 
-`Promise`<{ `data`: [`ReleaseInfo`](../interfaces/sdk.ReleaseInfo.md)  }\>
+`Promise`<{ `data`: [`ReleaseInfo`](../interfaces/typings.ReleaseInfo.md)  }\>
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:132](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/registry/icRegistry.ts#L132)
+[sdk/src/registry/icRegistry.ts:132](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L132)

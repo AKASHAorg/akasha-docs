@@ -13,7 +13,7 @@ description: "Test Description"
 
 ## Implements
 
-- [`IDBService`](../interfaces/sdk.IDBService.md)<`Database`, `Collection`\>
+- [`IDBService`](../interfaces/typings.IDBService.md)<`Database`, `Collection`\>
 
 ## Constructors
 
@@ -41,13 +41,13 @@ Create a new DB instance
 
 #### Defined in
 
-[sdk/src/db/index.ts:25](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/index.ts#L25)
+[sdk/src/db/index.ts:24](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/db/index.ts#L24)
 
 ___
 
 ### getCollection
 
-**getCollection**<`T`\>(`name`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`Collection`<`T`\>\>
+**getCollection**<`T`\>(`name`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`Collection`<`T`\>\>
 
 Get access to the db collection by name
 
@@ -65,41 +65,41 @@ Get access to the db collection by name
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`Collection`<`T`\>\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`Collection`<`T`\>\>
 
 #### Implementation of
 
-[IDBService](../interfaces/sdk.IDBService.md).[getCollection](../interfaces/sdk.IDBService.md#getcollection)
+[IDBService](../interfaces/typings.IDBService.md).[getCollection](../interfaces/typings.IDBService.md#getcollection)
 
 #### Defined in
 
-[sdk/src/db/index.ts:59](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/index.ts#L59)
+[sdk/src/db/index.ts:58](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/db/index.ts#L58)
 
 ___
 
 ### getDb
 
-**getDb**(): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`Database`\>
+**getDb**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`Database`\>
 
 Get access to the local db
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`Database`\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`Database`\>
 
 #### Implementation of
 
-[IDBService](../interfaces/sdk.IDBService.md).[getDb](../interfaces/sdk.IDBService.md#getdb)
+[IDBService](../interfaces/typings.IDBService.md).[getDb](../interfaces/typings.IDBService.md#getdb)
 
 #### Defined in
 
-[sdk/src/db/index.ts:50](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/index.ts#L50)
+[sdk/src/db/index.ts:49](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/db/index.ts#L49)
 
 ___
 
 ### open
 
-**open**(`version?`): [`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`Database`\>
+**open**(`version?`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`Database`\>
 
 #### Parameters
 
@@ -109,12 +109,12 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/sdk.md#servicecallresult)<`Database`\>
+[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`Database`\>
 
 #### Implementation of
 
-[IDBService](../interfaces/sdk.IDBService.md).[open](../interfaces/sdk.IDBService.md#open)
+[IDBService](../interfaces/typings.IDBService.md).[open](../interfaces/typings.IDBService.md#open)
 
 #### Defined in
 
-[sdk/src/db/index.ts:35](https://github.com/AKASHAorg/akasha-framework/blob/d370b59a/sdk/src/db/index.ts#L35)
+[sdk/src/db/index.ts:34](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/db/index.ts#L34)
