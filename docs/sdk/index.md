@@ -5,7 +5,7 @@ sidebar_label: SDK Overview
 
 # SDK overview
 
-The AKASHA SDK is used in every world instance and provides the core functionality to interact with different services and 3rd parties (ex. Metamask, Textile, Infura, etc.).
+The AKASHA SDK is used in every world instance and provides the core functionality to interact with different services and 3rd parties (ex. Metamask, Ceramic, ComposeDB, Infura, etc.).
 
 ### Core concepts
 
