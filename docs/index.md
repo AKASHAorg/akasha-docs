@@ -6,13 +6,13 @@ slug: /
 
 # Welcome to the AKASHA documentation
 
-Explore how to build amazing integrations using AKASHA (applications, widgets and plugins) and create unique experiences in Ethereum World.
+Explore how to build amazing integrations using AKASHA Core (applications, widgets and plugins) and create unique experiences in the Akasha World.
 
-### What is AKASHA?
+### What is AKASHA Core?
 
-Today, AKASHA is a framework that aims to facilitate the development of integrations in our microblogging site called [Ethereum World](https://akasha.ethereum.world/). By providing it, we expect developers to have the opportunity to build and innovate in this decentralized social network ecosystem.
+Today, AKASHA Core is a framework that aims to facilitate the development of integrations in our microblogging site called [Akasha World](https://akasha.ethereum.world/). By providing it, we expect developers to have the opportunity to build and innovate in this decentralized social network ecosystem.
 
-In the future, we envision AKASHA as the platform that will allow people to create and sustain social technological spaces we call [Worlds](https://akasha.org/blog/2019/11/21/what-is-akasha-reloaded-what-is-ethereum-world).
+In the future, we envision AKASHA Core as the platform that will allow people to create and sustain social technological spaces we call [Worlds](https://akasha.org/blog/2019/11/21/what-is-akasha-reloaded-what-is-ethereum-world).
 
 ## AKASHA integrations
 
