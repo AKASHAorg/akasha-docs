@@ -10,9 +10,9 @@ Explore how to build amazing integrations using AKASHA Core (applications, widge
 
 ### What is AKASHA Core?
 
-Today, AKASHA Core is a framework that aims to facilitate the development of integrations in our microblogging site called [Akasha World](https://akasha.ethereum.world/). By providing it, we expect developers to have the opportunity to build and innovate in this decentralized social network ecosystem.
+Today, AKASHA Core is the open-sourced framework for building and distributing composable web3 apps, serving as the foundation for our microblogging site, [Akasha World](https://akasha.ethereum.world/). By providing this framework, we expect developers to have the opportunity to build and innovate in this decentralized social network ecosystem.
 
-In the future, we envision AKASHA Core as the platform that will allow people to create and sustain social technological spaces we call [Worlds](https://akasha.org/blog/2019/11/21/what-is-akasha-reloaded-what-is-ethereum-world).
+With AKASHA Core, we make it easier for people to create and sustain social technological spaces we call [Worlds](https://akasha.org/blog/2019/11/21/what-is-akasha-reloaded-what-is-ethereum-world).
 
 ## AKASHA integrations
 
@@ -41,11 +41,11 @@ Allow Ethereans to perform quick actions or access small pieces of information u
 All Ethereum World integrations are open source. Explore them whenever you want to get inspired or learn.
 
 - [Akasha app](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/akasha)
-- [Integration Center](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/app-center)
+- [AKASHAverse](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/app-center)
 - [Authentication app](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/auth-app)
-- [Bookmarks app](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/bookmarks)
+- [List app](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/bookmarks)
 - [Legal app](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/legal)
-- [Moderation app](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/moderation)
+- [Vibe](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/moderation)
 - [Notifications app](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/notifications)
 - [Profile app](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/profile)
 - [Routing app](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/routing)
