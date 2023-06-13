@@ -29,7 +29,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/gql/index.ts:26](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/gql/index.ts#L26)
+[sdk/src/gql/index.ts:26](https://github.com/AKASHAorg/akasha-core/blob/5fd9b78a/sdk/src/gql/index.ts#L26)
 
 ## Properties
 
@@ -39,7 +39,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/gql/index.ts:22](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/gql/index.ts#L22)
+[sdk/src/gql/index.ts:22](https://github.com/AKASHAorg/akasha-core/blob/5fd9b78a/sdk/src/gql/index.ts#L22)
 
 ## Methods
 
@@ -53,7 +53,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/gql/index.ts:83](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/gql/index.ts#L83)
+[sdk/src/gql/index.ts:83](https://github.com/AKASHAorg/akasha-core/blob/5fd9b78a/sdk/src/gql/index.ts#L83)
 
 ---
 
@@ -69,7 +69,7 @@ cache container for graphQL results
 
 #### Defined in
 
-[sdk/src/gql/index.ts:79](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/gql/index.ts#L79)
+[sdk/src/gql/index.ts:79](https://github.com/AKASHAorg/akasha-core/blob/5fd9b78a/sdk/src/gql/index.ts#L79)
 
 ---
 
@@ -91,7 +91,7 @@ an object with the transformed graphQL template string for query
 
 #### Defined in
 
-[sdk/src/gql/index.ts:66](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/gql/index.ts#L66)
+[sdk/src/gql/index.ts:66](https://github.com/AKASHAorg/akasha-core/blob/5fd9b78a/sdk/src/gql/index.ts#L66)
 
 ---
 
@@ -124,4 +124,4 @@ ServiceCallResult
 
 #### Defined in
 
-[sdk/src/gql/index.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/5fd9b78a/sdk/src/gql/index.ts#L43)
+[sdk/src/gql/index.ts:43](https://github.com/AKASHAorg/akasha-core/blob/5fd9b78a/sdk/src/gql/index.ts#L43)

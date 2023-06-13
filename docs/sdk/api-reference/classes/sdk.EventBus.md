@@ -37,4 +37,4 @@ ReplaySubject&lt;GlobalEventBusData\&gt;.constructor
 
 #### Defined in
 
-[sdk/src/common/event-bus.ts:9](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/event-bus.ts#L9)
+[sdk/src/common/event-bus.ts:9](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/common/event-bus.ts#L9)

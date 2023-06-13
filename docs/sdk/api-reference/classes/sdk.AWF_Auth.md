@@ -38,7 +38,7 @@ Authentication module
 
 #### Defined in
 
-[sdk/src/auth/index.ts:75](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L75)
+[sdk/src/auth/index.ts:75](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L75)
 
 ## Properties
 
@@ -48,7 +48,7 @@ Authentication module
 
 #### Defined in
 
-[sdk/src/auth/index.ts:73](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L73)
+[sdk/src/auth/index.ts:73](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L73)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:72](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L72)
+[sdk/src/auth/index.ts:72](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L72)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:70](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L70)
+[sdk/src/auth/index.ts:70](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L70)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:71](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L71)
+[sdk/src/auth/index.ts:71](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L71)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:69](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L69)
+[sdk/src/auth/index.ts:69](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L69)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:74](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L74)
+[sdk/src/auth/index.ts:74](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L74)
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:68](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L68)
+[sdk/src/auth/index.ts:68](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L68)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:67](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L67)
+[sdk/src/auth/index.ts:67](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L67)
 
 ## Methods
 
@@ -138,7 +138,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:281](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L281)
+[sdk/src/auth/index.ts:281](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L281)
 
 ___
 
@@ -164,7 +164,7 @@ Utility method for sending mutation graphql requests
 
 #### Defined in
 
-[sdk/src/auth/index.ts:566](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L566)
+[sdk/src/auth/index.ts:566](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L566)
 
 ___
 
@@ -191,7 +191,7 @@ Throws an UserNotRegistered error for addresses that are not registered
 
 #### Defined in
 
-[sdk/src/auth/index.ts:136](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L136)
+[sdk/src/auth/index.ts:136](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L136)
 
 ___
 
@@ -211,7 +211,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:296](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L296)
+[sdk/src/auth/index.ts:296](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L296)
 
 ___
 
@@ -237,7 +237,7 @@ Allows decryption of privately sent messages to the current identity
 
 #### Defined in
 
-[sdk/src/auth/index.ts:578](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L578)
+[sdk/src/auth/index.ts:578](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L578)
 
 ___
 
@@ -261,7 +261,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:714](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L714)
+[sdk/src/auth/index.ts:714](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L714)
 
 ___
 
@@ -281,7 +281,7 @@ enable key sync between opened tabs
 
 #### Defined in
 
-[sdk/src/auth/index.ts:95](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L95)
+[sdk/src/auth/index.ts:95](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L95)
 
 ___
 
@@ -301,7 +301,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:660](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L660)
+[sdk/src/auth/index.ts:660](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L660)
 
 ___
 
@@ -322,7 +322,7 @@ It will try to login if there is a previous session detected
 
 #### Defined in
 
-[sdk/src/auth/index.ts:448](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L448)
+[sdk/src/auth/index.ts:448](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L448)
 
 ___
 
@@ -348,7 +348,7 @@ Returns all the inbox messages from Textile Users
 
 #### Defined in
 
-[sdk/src/auth/index.ts:624](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L624)
+[sdk/src/auth/index.ts:624](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L624)
 
 ___
 
@@ -368,7 +368,7 @@ Returns current session objects for textile
 
 #### Defined in
 
-[sdk/src/auth/index.ts:401](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L401)
+[sdk/src/auth/index.ts:401](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L401)
 
 ___
 
@@ -388,7 +388,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:719](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L719)
+[sdk/src/auth/index.ts:719](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L719)
 
 ___
 
@@ -408,7 +408,7 @@ Generate a textile access token
 
 #### Defined in
 
-[sdk/src/auth/index.ts:428](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L428)
+[sdk/src/auth/index.ts:428](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L428)
 
 ___
 
@@ -429,7 +429,7 @@ notification message type
 
 #### Defined in
 
-[sdk/src/auth/index.ts:683](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L683)
+[sdk/src/auth/index.ts:683](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L683)
 
 ___
 
@@ -453,7 +453,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:694](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L694)
+[sdk/src/auth/index.ts:694](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L694)
 
 ___
 
@@ -474,7 +474,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:611](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L611)
+[sdk/src/auth/index.ts:611](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L611)
 
 ___
 
@@ -488,7 +488,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:300](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L300)
+[sdk/src/auth/index.ts:300](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L300)
 
 ___
 
@@ -502,7 +502,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:315](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L315)
+[sdk/src/auth/index.ts:315](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L315)
 
 ___
 
@@ -529,7 +529,7 @@ Sign data with the identity key
 
 #### Defined in
 
-[sdk/src/auth/index.ts:500](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L500)
+[sdk/src/auth/index.ts:500](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L500)
 
 ___
 
@@ -556,7 +556,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:157](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L157)
+[sdk/src/auth/index.ts:157](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L157)
 
 ___
 
@@ -576,7 +576,7 @@ Destroy all the session objects
 
 #### Defined in
 
-[sdk/src/auth/index.ts:472](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L472)
+[sdk/src/auth/index.ts:472](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L472)
 
 ___
 
@@ -590,7 +590,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:334](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L334)
+[sdk/src/auth/index.ts:334](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L334)
 
 ___
 
@@ -614,7 +614,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:739](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L739)
+[sdk/src/auth/index.ts:739](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L739)
 
 ___
 
@@ -643,7 +643,7 @@ Verify if a signature was made by a specific Public Key
 
 #### Defined in
 
-[sdk/src/auth/index.ts:530](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L530)
+[sdk/src/auth/index.ts:530](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L530)
 
 ___
 
@@ -663,4 +663,4 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:601](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L601)
+[sdk/src/auth/index.ts:601](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/auth/index.ts#L601)

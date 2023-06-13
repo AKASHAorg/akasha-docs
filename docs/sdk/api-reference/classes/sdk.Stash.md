@@ -43,7 +43,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/stash/index.ts:31](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/stash/index.ts#L31)
+[sdk/src/stash/index.ts:31](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/stash/index.ts#L31)
 
 ___
 
@@ -69,7 +69,7 @@ a new instance of QuickLRU
 
 #### Defined in
 
-[sdk/src/stash/index.ts:16](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/stash/index.ts#L16)
+[sdk/src/stash/index.ts:16](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/stash/index.ts#L16)
 
 ___
 
@@ -89,4 +89,4 @@ General purpose stash for caching ui related data
 
 #### Defined in
 
-[sdk/src/stash/index.ts:24](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/stash/index.ts#L24)
+[sdk/src/stash/index.ts:24](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/stash/index.ts#L24)

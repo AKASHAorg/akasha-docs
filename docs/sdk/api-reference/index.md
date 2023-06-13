@@ -44,7 +44,7 @@ const sdk = getSDK();
 
 #### Defined in
 
-[sdk/src/index.ts:70](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/index.ts#L70)
+[sdk/src/index.ts:70](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/index.ts#L70)
 
 ___
 
@@ -66,4 +66,4 @@ const sdk = init();
 
 #### Defined in
 
-[sdk/src/index.ts:87](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/index.ts#L87)
+[sdk/src/index.ts:87](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/index.ts#L87)

@@ -19,7 +19,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:20](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/apps.ts#L20)
+[sdk/src/settings/apps.ts:20](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/settings/apps.ts#L20)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:19](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/apps.ts#L19)
+[sdk/src/settings/apps.ts:19](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/settings/apps.ts#L19)

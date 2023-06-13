@@ -35,7 +35,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L43)
+[sdk/src/registry/icRegistry.ts:43](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/registry/icRegistry.ts#L43)
 
 ## Properties
 
@@ -45,7 +45,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:36](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L36)
+[sdk/src/registry/icRegistry.ts:36](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/registry/icRegistry.ts#L36)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:37](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L37)
+[sdk/src/registry/icRegistry.ts:37](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/registry/icRegistry.ts#L37)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:38](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L38)
+[sdk/src/registry/icRegistry.ts:38](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/registry/icRegistry.ts#L38)
 
 ## Methods
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:155](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L155)
+[sdk/src/registry/icRegistry.ts:155](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/registry/icRegistry.ts#L155)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:146](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L146)
+[sdk/src/registry/icRegistry.ts:146](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/registry/icRegistry.ts#L146)
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:205](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L205)
+[sdk/src/registry/icRegistry.ts:205](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/registry/icRegistry.ts#L205)
 
 ___
 
@@ -163,7 +163,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:164](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L164)
+[sdk/src/registry/icRegistry.ts:164](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/registry/icRegistry.ts#L164)
 
 ___
 
@@ -187,7 +187,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:75](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L75)
+[sdk/src/registry/icRegistry.ts:75](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/registry/icRegistry.ts#L75)
 
 ___
 
@@ -212,7 +212,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:169](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L169)
+[sdk/src/registry/icRegistry.ts:169](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/registry/icRegistry.ts#L169)
 
 ___
 
@@ -237,7 +237,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:89](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L89)
+[sdk/src/registry/icRegistry.ts:89](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/registry/icRegistry.ts#L89)
 
 ___
 
@@ -255,7 +255,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:138](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L138)
+[sdk/src/registry/icRegistry.ts:138](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/registry/icRegistry.ts#L138)
 
 ___
 
@@ -279,7 +279,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:182](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L182)
+[sdk/src/registry/icRegistry.ts:182](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/registry/icRegistry.ts#L182)
 
 ___
 
@@ -303,7 +303,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:193](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L193)
+[sdk/src/registry/icRegistry.ts:193](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/registry/icRegistry.ts#L193)
 
 ___
 
@@ -325,4 +325,4 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/icRegistry.ts:132](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/registry/icRegistry.ts#L132)
+[sdk/src/registry/icRegistry.ts:132](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/registry/icRegistry.ts#L132)

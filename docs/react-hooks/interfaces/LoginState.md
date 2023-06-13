@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-login.ts:49](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-login.ts#L49)
+[ui/hooks/src/use-login.ts:49](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-login.ts#L49)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-login.ts:42](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-login.ts#L42)
+[ui/hooks/src/use-login.ts:42](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-login.ts#L42)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-login.ts:44](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-login.ts#L44)
+[ui/hooks/src/use-login.ts:44](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-login.ts#L44)
 
 ___
 
@@ -106,4 +106,4 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-login.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-login.ts#L43)
+[ui/hooks/src/use-login.ts:43](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-login.ts#L43)

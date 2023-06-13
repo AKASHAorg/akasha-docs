@@ -41,7 +41,7 @@ Create a new DB instance
 
 #### Defined in
 
-[sdk/src/db/index.ts:24](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/db/index.ts#L24)
+[sdk/src/db/index.ts:24](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/db/index.ts#L24)
 
 ___
 
@@ -73,7 +73,7 @@ Get access to the db collection by name
 
 #### Defined in
 
-[sdk/src/db/index.ts:58](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/db/index.ts#L58)
+[sdk/src/db/index.ts:58](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/db/index.ts#L58)
 
 ___
 
@@ -93,7 +93,7 @@ Get access to the local db
 
 #### Defined in
 
-[sdk/src/db/index.ts:49](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/db/index.ts#L49)
+[sdk/src/db/index.ts:49](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/db/index.ts#L49)
 
 ___
 
@@ -117,4 +117,4 @@ ___
 
 #### Defined in
 
-[sdk/src/db/index.ts:34](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/db/index.ts#L34)
+[sdk/src/db/index.ts:34](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/db/index.ts#L34)

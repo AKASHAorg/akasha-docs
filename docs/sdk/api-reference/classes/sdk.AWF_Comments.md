@@ -36,7 +36,7 @@ Comments Module
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/comments.ts#L43)
+[sdk/src/posts/comments.ts:43](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/posts/comments.ts#L43)
 
 ## Properties
 
@@ -56,7 +56,7 @@ Comments Module
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:35](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/comments.ts#L35)
+[sdk/src/posts/comments.ts:35](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/posts/comments.ts#L35)
 
 ## Methods
 
@@ -88,7 +88,7 @@ Create a new comment
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:86](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/comments.ts#L86)
+[sdk/src/posts/comments.ts:86](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/posts/comments.ts#L86)
 
 ___
 
@@ -121,7 +121,7 @@ Update an existing comment
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:130](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/comments.ts#L130)
+[sdk/src/posts/comments.ts:130](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/posts/comments.ts#L130)
 
 ___
 
@@ -147,7 +147,7 @@ Get comment data
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:58](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/comments.ts#L58)
+[sdk/src/posts/comments.ts:58](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/posts/comments.ts#L58)
 
 ___
 
@@ -176,7 +176,7 @@ Get a list of comments for a post
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:72](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/comments.ts#L72)
+[sdk/src/posts/comments.ts:72](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/posts/comments.ts#L72)
 
 ___
 
@@ -202,4 +202,4 @@ Remove a comment's data by ID
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:172](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/comments.ts#L172)
+[sdk/src/posts/comments.ts:172](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/posts/comments.ts#L172)

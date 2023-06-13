@@ -45,4 +45,4 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/stash/index.ts:7](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/stash/index.ts#L7)
+[sdk/src/stash/index.ts:7](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/sdk/src/stash/index.ts#L7)
