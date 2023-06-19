@@ -26,7 +26,7 @@ custom_edit_url: null
 
 • `Const` **ThemeWrapper**: `React.FC`<`RootComponentProps`\>
 
-React component that fetches the user selected theme name from the localstorage
+React component that fetches the user-selected theme name from localStorage
 and passes it to the ThemeSelector component along with all available themes.
 
 #### Defined in
@@ -1795,7 +1795,7 @@ infinitePendingQuery.fetchNextPage();
 
 [ui/hooks/src/use-moderation.ts:308](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-moderation.ts#L308)
 
-___
+<!-- ___
 
 ### useInfinitePosts
 
@@ -1836,6 +1836,594 @@ postsQuery.fetchNextPage();
 #### Defined in
 
 [ui/hooks/src/use-posts.ts:94](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-posts.ts#L94)
+
+___ -->
+
+___
+
+### useGetBeamsQuery
+
+▸ **useGetBeamsQuery**(`after?`, `before?`, `first?`, `last?`): `UseQueryResult`<{ `beamIndex?`: { `edges?`: { `node?`: { `id`: `string` ; `reflectionsCount`: `number` ; `active`: `boolean`; `tags?`: `<string | null> | null`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[]; } []}}}, `Error`\>
+
+Hook to get beams for the Antenna
+
+**`example`** useGetBeamsQuery hook
+```typescript
+// get the first 10 beams
+const beamsQuery = useGetBeamsQuery( { first: 10 }, { select: response => response.beamIndex });
+
+// get the last 10 beams
+const beamsQuery = useGetBeamsQuery( { last: 10 }, { select: response => response.beamIndex });
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `after?` | `string` |
+| `before?` | `string` |
+| `first?` | `number` |
+| `last?` | `number` |
+
+#### Returns
+
+`UseQueryResult`<{ `beamIndex?`: { `edges?`: { `node?`: { `id`: `string` ; `reflectionsCount`: `number` ; `active`: `boolean`; `tags?`: `<string | null> | null`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[]; } []}}}, `Error`\>
+
+
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:114](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L114)
+
+___
+
+### useInfiniteGetBeamsQuery
+
+▸ **useInfiniteGetBeamsQuery**(`after?`, `before?`, `first?`, `last?`): `UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
+
+Hook to get beams for the Antenna
+
+**`example`** useInfiniteGetBeamsQuery hook
+```typescript
+// get the first 50 beams
+const beamsQuery = useInfiniteGetBeamsQuery('first', { first: 50 })
+
+ const beams = React.useMemo(() => {
+    if (beamsQuery.data) {
+      return beamsQuery.data.pages;
+    }
+    return [];
+  }, [beamsQuery.data]);
+
+// load more if there's a next page
+ const handleLoadMore = React.useCallback(() => {
+    if (!beamsQuery.isLoading && beamsQuery.hasNextPage) {
+      beamsQuery.fetchNextPage();
+    }
+  }, [beamsQuery]);
+
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `after?` | `string` |
+| `before?` | `string` |
+| `first?` | `number` |
+| `last?` | `number` |
+
+#### Returns
+
+`UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
+
+
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:132](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L132)
+
+___
+
+### useGetBeamsByAuthorDidQuery
+
+▸ **useGetBeamsByAuthorDidQuery**(`id`, `after?`, `before?`, `first?`, `last?`): `UseQueryResult`<{} | {`isViewer`: `boolean`; `beamList?`: { `edges?`: { `node?`:  { `id`: `string` ; `reflectionsCount`: `number` ; `active`: `boolean`; `tags?`: `<string | null> | null`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[]; } []; `pageInfo`: {...};}}}, `Error`\>
+
+Hook to get beams by DID.
+
+**`example`** useGetBeamsByAuthorDidQuery hook
+```typescript
+  const beams = useGetBeamsByAuthorDidQuery(
+    { id: 'did:key:z6MkhaXgBZDvotDkL5257faiztiGiC2QtKLGpbnnEGta2doK' },
+    { select: response => response.node },
+  );
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+| `after?` | `string` |
+| `before?` | `string` |
+| `first?` | `number` |
+| `last?` | `number` |
+
+#### Returns
+
+`UseQueryResult`<{} | {`isViewer`: `boolean`; `beamList?`: { `edges?`: { `node?`:  { `id`: `string` ; `reflectionsCount`: `number` ; `active`: `boolean`; `tags?`: `<string | null> | null`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[]; } []; `pageInfo`: {...};}}}, `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:174](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L174)
+
+___
+
+### useInfiniteGetBeamsByAuthorDidQuery
+
+▸ **useInfiniteGetBeamsByAuthorDidQuery**(`id`, `after?`, `before?`, `first?`, `last?`): `UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
+
+Hook to get beams from an author identified by DID (supports infinite scrolling).
+
+**`example`** useInfiniteGetBeamsByAuthorDidQuery hook
+```typescript
+ // get the last 30 beams by account with DID z6MkhaXgBZDvotDkL5257faiztiGiC2QtKLGpbnnEGta2doK
+  const beamsReq = useInfiniteGetBeamsByAuthorDidQuery('last', { last: 30, id: 'z6MkhaXgBZDvotDkL5257faiztiGiC2QtKLGpbnnEGta2doK' });
+
+  const fetchedBeams = React.useMemo(() => {
+    if (beamsReq.data) {
+      return beamsReq.data.pages;
+    }
+    return [];
+  }, [beamsReq.data]);
+
+  // load more if there's a next page
+ const handleLoadMore = React.useCallback(() => {
+    if (!beamsReq.isLoading && beamsReq.hasNextPage) {
+      beamsReq.fetchNextPage();
+    }
+  }, [beamsReq]);
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+| `after?` | `string` |
+| `before?` | `string` |
+| `first?` | `number` |
+| `last?` | `number` |
+
+#### Returns
+
+`UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:174](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L174)
+
+___
+
+### useGetBeamByIdQuery
+
+▸ **useGetBeamByIdQuery**(`id`): `UseQueryResult`<{ `node?`: {} | { `id`: `string` ; `reflectionsCount`: `number` ; `active`: `boolean`; `tags?`: `<string | null> | null`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[]; } []}, `Error`\>
+
+Hook to get one beam by its ID.
+
+**`example`** useGetBeamByIdQuery hook
+```typescript
+    // get beam by ID 123456789
+    const beam = useGetBeamByIdQuery(
+    { id: '123456789' },
+    {
+      select: data => data.node,
+    },
+  );
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+
+#### Returns
+
+`UseQueryResult`<{ `node?`: {} | { `id`: `string` ; `reflectionsCount`: `number` ; `active`: `boolean`; `tags?`: `<string | null> | null`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[]; } []}, `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:221](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L221)
+
+___
+
+### useInfiniteGetBeamByIdQuery
+
+▸ **useInfiniteGetBeamByIdQuery**(`id`): `UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
+
+Hook to get a beam by its ID (supports infinite scrolling).
+
+**`example`** useInfiniteGetBeamByIdQuery hook
+```typescript
+    // get beam by ID 123456789
+   const beamReq = useInfiniteGetBeamByIdQuery(
+    'id',
+    { id: '123456789' },
+  );
+
+  const beam = React.useMemo(() => {
+    if (beamReq.data) {
+      return beamReq.data.pages;
+    }
+    return [];
+  }, [beamReq.data]);
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+
+#### Returns
+
+`UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:239](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L239)
+
+___
+
+### useGetRebeamsFromBeamQuery
+
+▸ **useGetRebeamsFromBeamQuery**(`id`): `UseQueryResult`<{ `node?`: {} | {`rebeams`: {`edges?`: {`node?`: {`quotedBeam?`: {`id`: `string`; `reflectionsCount`: `number` ; `rebeamsCount`: `number` ;  `active`: `boolean`; `tags?`: `string`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[];}; `beam?`: { ...; };};}[];};}; }, `Error`\>
+
+Hook to get rebeams for a beam identified by its ID.
+
+**`example`** useGetRebeamsFromBeamQuery hook
+```typescript
+    // get rebeams for beam with ID 123456789
+    const beamReq = useGetRebeamsFromBeamQuery({ id: '123456789' }, { select: data => data.node });
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+
+#### Returns
+
+`UseQueryResult`<{ `node?`: {} | {`rebeams`: {`edges?`: {`node?`: {`quotedBeam?`: {`id`: `string`; `reflectionsCount`: `number` ; `rebeamsCount`: `number` ;  `active`: `boolean`; `tags?`: `string`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[];}; `beam?`: { ...; };};}[];};}; }, `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:279](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L279)
+
+___
+
+### useInfiniteGetRebeamsFromBeamQuery
+
+▸ **useInfiniteGetRebeamsFromBeamQuery**(`id`): `UseInfiniteQueryResult`< `Types.GetRebeamsFromBeamQuery`, `Error`\>
+
+Hook to get rebeams for a beam identified by its ID (support infinite scrolling).
+
+**`example`** useInfiniteGetRebeamsFromBeamQuery hook
+```typescript
+    // get rebeams for beam with ID 123456789
+    const rebeamsReq = useInfiniteGetRebeamsFromBeamQuery(
+    'id',
+    { id: '123456789' },
+  );
+
+  const rebeams = React.useMemo(() => {
+    if (rebeamReq.data) {
+      return rebeamReq.data.pages;
+    }
+    return [];
+  }, [rebeamReq.data]);
+
+  // load more
+  const handleLoadMore = React.useCallback(() => {
+    if (!rebeamReq.isLoading && rebeamReq.hasNextPage) {
+      rebeamReq.fetchNextPage();
+    }
+  }, [rebeamReq]);
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+
+#### Returns
+
+`UseInfiniteQueryResult`< `Types.GetRebeamsFromBeamQuery`, `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:297](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L297)
+
+___
+
+### useGetMentionsFromBeamQuery
+
+▸ **useGetMentionsFromBeamQuery**(`id`): `UseQueryResult`<`Types.GetMentionsFromBeamQuer`, `Error`\>
+
+Hook to get mentions for a beam identified by its ID.
+
+**`example`** useGetMentionsFromBeamQuery hook
+```typescript
+    // get mentions for beam with ID 123456789
+    const mentions = useGetMentionsFromBeamQuery(
+    { id: '123456789' },
+    { select: data => data.node }
+  );
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+
+#### Returns
+
+`UseQueryResult`< `Types.GetMentionsFromBeamQuer`, `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:338](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L338)
+
+___
+
+### useInfiniteGetMentionsFromBeamQuery
+
+▸ **useInfiniteGetMentionsFromBeamQuery**(`id`): `UseInfiniteQueryResult`<`Types.GetMentionsFromBeamQuery`, `Error`\>
+
+Hook to get mentions for a beam identified by its ID (supports infinite scrolling).
+
+**`example`** useInfiniteGetMentionsFromBeamQuery hook
+```typescript
+    // get mentions for beam with ID 123456789
+    const mentionsReq = useGetMentionsFromBeamQuery(
+      'id',
+    { id: '123456789' },
+  );
+
+   const mentions = React.useMemo(() => {
+    if (mentionsReq.data) {
+      return mentionsReq.data.pages;
+    }
+    return [];
+  }, [mentionsReq.data]);
+
+  // load more
+  const handleLoadMore = React.useCallback(() => {
+    if (!mentionsReq.isLoading && mentionsReq.hasNextPage) {
+      mentionsReq.fetchNextPage();
+    }
+  }, [mentionsReq]);
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+
+#### Returns
+
+`UseInfiniteQueryResult`< `Types.GetMentionsFromBeamQuery`, `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:356](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L356)
+
+___
+
+### useCreateBeamMutation
+
+▸ **useCreateBeamMutation**(`i`): `UseMutationResult`<`Types.CreateBeamMutation`, `unknown`\>
+
+Hook to create a new beam.
+
+**`example`** useCreateBeamMutation hook
+```typescript
+    const beamMutation = useCreateBeamMutation();
+
+    const beamData = {
+    content: {
+      active: true,
+      content: [
+        {
+          property: 'test',
+          provider: 'test',
+          value: 'test',
+        },
+      ],
+      createdAt: Date.now(),
+    },
+  };
+
+    createBeam.mutate({
+      i: beamData,
+    });
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `i` | `CreateBeamInput` |
+
+#### Returns
+
+`UseMutationResult`<`Types.CreateBeamMutation`, `unknown`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:385](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L385)
+
+___
+### useUpdateBeamMutation
+
+▸ **useUpdateBeamMutation**(`i`): `UseMutationResult`<`Types.UpdateBeamMutation`, `unknown`\>
+
+Hook to update an existing beam.
+
+**`example`** useUpdateBeamMutation hook
+```typescript
+    const updateBeamMutation = useUpdateBeamMutation();
+
+    // updated data for beam ID 1234
+    const beamData = {
+    id: '1234',
+    content: {
+      active: true,
+      content: [
+        {
+          property: 'test',
+          provider: 'test',
+          value: 'test',
+        },
+      ],
+      createdAt: Date.now(),
+    },
+  };
+
+    // call the mutate function to update
+    updateBeamMutation.mutate({
+      i: beamData,
+    });
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `i` | `UpdateBeamInput` |
+
+#### Returns
+
+`UseMutationResult`<`Types.UpdateBeamMutation`, `unknown`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:407](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L407)
+
+___
+
+### useCreateRebeamMutation
+
+▸ **useCreateRebeamMutation**(`i`): `UseMutationResult`<`Types.CreateRebeamMutation`, `unknown`\>
+
+Hook to create a rebeam for a beam.
+
+**`example`** useCreateRebeamMutation hook
+```typescript
+    const createRebeamMutation = useCreateRebeamMutation();
+
+    const beamData = {
+    content: {
+      active: true,
+      beamID: 'CeramicStreamID',
+      quotedBeamID: 'CeramicStreamID',
+    },
+  };
+
+    createRebeamMutation.mutate({
+      i: beamData,
+    });
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `i` | `CreateRebeamInput` |
+
+#### Returns
+
+`UseMutationResult`<`Types.CreateRebeamMutation`, `unknown`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:435](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L435)
+
+___
+
+### useCreateBeamProfileMentionMutation
+
+▸ **useCreateBeamProfileMentionMutation**(`i`): `UseMutationResult`<`Types.CreateBeamProfileMentionMutation`, `unknown`\>
+
+Hook to create a mention for a profile from a beam.
+
+**`example`** useCreateBeamProfileMentionMutation hook
+```typescript
+    const createBeamProfileMention = useCreateBeamProfileMentionMutation();
+
+    const mentionData = {
+      content: {
+        beamID: 'CeramicStreamID',
+        profileID: 'CeramicStreamID',
+      },
+    };
+
+    createBeamProfileMention.mutate({
+      i: mentionData,
+    });
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `i` | `CreateProfileMentionInput` |
+
+#### Returns
+
+`UseMutationResult`<`Types.CreateBeamProfileMentionMutation`, `unknown`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:462](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L462)
+
+___
+
+### useGetReflectionsFromBeamQuery
+
+▸ **useGetReflectionsFromBeamQuery**(`id`): `UseQueryResult`<{ `node?`: {} | { `id`: `string` ; `reflectionsCount`: `number` ; `active`: `boolean`; `tags?`: `<string | null> | null`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[]; } []}, `Error`\>
+
+Hook to get one beam by its ID.
+
+**`example`** useGetReflectionsFromBeamQuery hook
+```typescript
+    // get beam by ID 123456789
+    const beam = useGetBeamByIdQuery(
+    { id: '123456789' },
+    {
+      select: data => data.node,
+    },
+  );
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+
+#### Returns
+
+`UseQueryResult`<{ `node?`: {} | { `id`: `string` ; `reflectionsCount`: `number` ; `active`: `boolean`; `tags?`: `<string | null> | null`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[]; } []}, `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:495](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L495)
 
 ___
 

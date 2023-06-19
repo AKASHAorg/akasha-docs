@@ -18,7 +18,7 @@ With AKASHA Core, we make it easier for people to create and sustain social tech
 
 ### Applications
 
-Applications are standalone components that complement and extend Ethereans social network experience.
+Applications are standalone components that complement and extend your web3 social network experience.
 
 [Learn more](/integrations/applications)
 
