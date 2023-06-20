@@ -2172,7 +2172,7 @@ Hook to get mentions for a beam identified by its ID.
 
 #### Returns
 
-`UseQueryResult`< `Types.GetMentionsFromBeamQuer`, `Error`\>
+`UseQueryResult`< `Types.GetMentionsFromBeamQuery`, `Error`\>
 
 #### Defined in
 
@@ -2396,14 +2396,14 @@ ___
 
 ### useGetReflectionsFromBeamQuery
 
-▸ **useGetReflectionsFromBeamQuery**(`id`): `UseQueryResult`<{ `node?`: {} | { `id`: `string` ; `reflectionsCount`: `number` ; `active`: `boolean`; `tags?`: `<string | null> | null`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[]; } []}, `Error`\>
+▸ **useGetReflectionsFromBeamQuery**(`id`): `UseQueryResult`<[`Types.GetReflectionsFromBeamQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L86), `Error`\>
 
-Hook to get one beam by its ID.
+Hook to get reflections of a beam identified by its ID.
 
 **`example`** useGetReflectionsFromBeamQuery hook
 ```typescript
-    // get beam by ID 123456789
-    const beam = useGetBeamByIdQuery(
+    // get the reflecions for a beam with ID 123456789
+    const reflections = useGetReflectionsFromBeamQuery(
     { id: '123456789' },
     {
       select: data => data.node,
@@ -2416,14 +2416,332 @@ Hook to get one beam by its ID.
 | Name | Type |
 | :------ | :------ |
 | `id` | `string` |
+| `before?` | `string` |
+| `after?` | `string` |
+| `first?` | `number` |
+| `last?` | `number` |
+
 
 #### Returns
 
-`UseQueryResult`<{ `node?`: {} | { `id`: `string` ; `reflectionsCount`: `number` ; `active`: `boolean`; `tags?`: `<string | null> | null`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[]; } []}, `Error`\>
+`UseQueryResult`<[`Types.GetReflectionsFromBeamQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L86), `Error`\>
 
 #### Defined in
 
 [ui/hooks/src/generated/hooks-new.ts:495](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L495)
+
+___
+
+### useInfiniteGetReflectionsFromBeamQuery
+
+▸ **useInfiniteGetReflectionsFromBeamQuery**(`id`): `UseInfiniteQueryResult`<[`Types.GetReflectionsFromBeamQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L86), `Error`\>
+
+Hook to get reflections of a beam identified by its ID (supports infinite scrolling).
+
+**`example`** useInfiniteGetReflectionsFromBeamQuery hook
+```typescript
+    // get the reflecions for a beam with ID 123456789
+    const reflectionsReq = useInfiniteGetReflectionsFromBeamQuery(
+      'id',
+      { id: '123456789' },
+    );
+
+    const reflections = React.useMemo(() => {
+    if (reflectionsReq.data) {
+      return reflectionsReq.data.pages;
+    }
+    return [];
+    }, [reflectionsReq.data]);
+
+    // load more
+    const handleLoadMore = React.useCallback(() => {
+      if (!reflectionsReq.isLoading && reflectionsReq.hasNextPage) {
+        reflectionsReq.fetchNextPage();
+      }
+    }, [reflectionsReq]);
+
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+| `before?` | `string` |
+| `after?` | `string` |
+| `first?` | `number` |
+| `last?` | `number` |
+
+
+#### Returns
+
+`UseInfiniteQueryResult`<[`Types.GetReflectionsFromBeamQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L86), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:513](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L513)
+
+___
+
+### useGetReflectionsByAuthorDidQuery
+
+▸ **useGetReflectionsByAuthorDidQuery**(`id`): `UseQueryResult`<[`Types.GetReflectionsByAuthorDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L88), `Error`\>
+
+Hook to get reflections belonging to a member identified by their DID.
+
+**`example`** useGetReflectionsByAuthorDidQuery hook
+```typescript
+    // get the reflecions of a member with DID did:key::123456789
+    const reflections = useGetReflectionsByAuthorDidQuery(
+    { id: 'did:key::123456789' },
+    {
+      select: data => data.node,
+    },
+  );
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+| `before?` | `string` |
+| `after?` | `string` |
+| `first?` | `number` |
+| `last?` | `number` |
+
+
+#### Returns
+
+`UseQueryResult`<[`Types.GetReflectionsByAuthorDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L88), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:555](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L555)
+
+___
+
+### useInfiniteGetReflectionsByAuthorDidQuery
+
+▸ **useInfiniteGetReflectionsByAuthorDidQuery**(`id`): `UseQueryResult`<[`Types.GetReflectionsByAuthorDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L88), `Error`\>
+
+Hook to get reflections belonging to a member identified by their DID (supports infinite scrolling).
+
+**`example`** useInfiniteGetReflectionsByAuthorDidQuery hook
+```typescript
+    // get the reflecions of a member with DID did:key::123456789
+    const reflectionsReq = useInfiniteGetReflectionsByAuthorDidQuery(
+      'id',
+    { id: 'did:key::123456789' },
+    );
+
+    const reflections = React.useMemo(() => {
+    if (reflectionsReq.data) {
+      return reflectionsReq.data.pages;
+    }
+    return [];
+    }, [reflectionsReq.data]);
+
+    // load more
+    const handleLoadMore = React.useCallback(() => {
+      if (!reflectionsReq.isLoading && reflectionsReq.hasNextPage) {
+        reflectionsReq.fetchNextPage();
+      }
+    }, [reflectionsReq]);
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+| `before?` | `string` |
+| `after?` | `string` |
+| `first?` | `number` |
+| `last?` | `number` |
+
+
+#### Returns
+
+`UseQueryResult`<[`Types.GetReflectionsByAuthorDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L88), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:573](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L573)
+
+___
+
+### useGetReflectReflectionsQuery
+
+▸ **useGetReflectReflectionsQuery**(`id`): `UseQueryResult`<[`Types.GetReflectReflectionsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L108), `Error`\>
+
+Hook to get the reflects of a reflection.
+
+**`example`** useGetReflectReflectionsQuery hook
+```typescript
+    // get the reflect of a reflection with ID 123456789
+    const reflectionReflects = useGetReflectReflectionsQuery(
+    { id: '123456789' },
+     {
+      select: data => data.node,
+    },
+    );
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+| `before?` | `string` |
+| `after?` | `string` |
+| `first?` | `number` |
+| `last?` | `number` |
+
+
+#### Returns
+
+`UseQueryResult`<[`Types.GetReflectReflectionsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L108), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:616](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L616)
+
+___
+
+### useInfiniteGetReflectReflectionsQuery
+
+▸ **useInfiniteGetReflectReflectionsQuery**(`id`): `UseInfiniteQueryResult`<[`Types.GetReflectReflectionsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L108), `Error`\>
+
+Hook to get the reflects of a reflection (supports infinite scrolling).
+
+**`example`** useInfiniteGetReflectReflectionsQuery hook
+```typescript
+    // get the reflects of a reflection with ID 123456789
+    const reflectionReflectsReq = useInfiniteGetReflectReflectionsQuery(
+      'id',
+    { id: '123456789' },
+    );
+
+      const reflectionsReflects = React.useMemo(() => {
+    if (reflectionReflectsReq.data) {
+      return reflectionReflectsReq.data.pages;
+    }
+    return [];
+    }, [reflectionReflectsReq.data]);
+
+    // load more
+    const handleLoadMore = React.useCallback(() => {
+      if (!reflectionReflectsReq.isLoading && reflectionReflectsReq.hasNextPage) {
+        reflectionReflectsReq.fetchNextPage();
+      }
+    }, [reflectionReflectsReq]);
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+| `before?` | `string` |
+| `after?` | `string` |
+| `first?` | `number` |
+| `last?` | `number` |
+
+
+#### Returns
+
+`UseQueryResult`<[`Types.GetReflectReflectionsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L108), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:634](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L634)
+
+___
+
+### useCreateReflectMutation
+
+▸ **useCreateReflectMutation**(`i`): `UseMutationResult`<[`Types.CreateReflectMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L115), `unknown`\>
+
+Hook to create a reflect.
+
+**`example`** useCreateReflectMutation hook
+```typescript
+    const createReflect = useCreateReflectMutation();
+
+    // example of a reflect's data
+    const reflectData = {
+      content: {
+        active: true,
+        beamID: 'CeramicStreamID',
+        content: {
+          property: 'test',
+          provider: 'test',
+          value: 'test',
+        },
+        createdAt: Date.now(),
+        isReply: true
+      },
+    };
+
+    createReflect.mutate({
+      i: reflectData,
+    });
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `i` | `CreateReflectInput` |
+
+#### Returns
+
+ `UseMutationResult`<[`Types.CreateReflectMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L115), `unknown`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:664](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L664)
+
+___
+
+### useCreateReflectReflectionMutation
+
+▸ **useCreateReflectReflectionMutation**(`i`): `UseMutationResult`<[`Types.CreateReflectReflectionMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L129), `unknown`\>
+
+Hook to create a reflect of a reflect.
+
+**`example`** useCreateReflectReflectionMutation hook
+```typescript
+    const createReflect = useCreateReflectReflectionMutation();
+
+    // example of a reflect's data
+    const reflectData = {
+      content: {
+        active: true,
+        reflectID: 'CeramicStreamID',
+        reflectionID: 'CeramicStreamID',
+      },
+    };
+
+    createReflect.mutate({
+      i: reflectData,
+    });
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `i` | `CreateReflectionInput` |
+
+#### Returns
+
+`UseMutationResult`<[`Types.CreateReflectReflectionMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L129), `unknown`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:713](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L713)
 
 ___
 

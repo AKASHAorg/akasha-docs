@@ -141,7 +141,14 @@ Currently we have the following hooks:
 ## Reflections
 
 - [`useGetReflectionsFromBeamQuery`](/react-hooks/modules#usegetreflectionsfrombeamquery)
-  
+- [`useInfiniteGetReflectionsFromBeamQuery`](/react-hooks/modules#useinfinitegetreflectionsfrombeamquery)
+- [`useGetReflectionsByAuthorDidQuery`](/react-hooks/modules#usegetreflectionsbyauthordidquery)
+- [`useInfiniteGetReflectionsByAuthorDidQuery`](/react-hooks/modules#useinfinitegetreflectionsbyauthordidquery)
+- [`useGetReflectReflectionsQuery`](/react-hooks/modules#usegetreflectreflectionsquery)
+- [`useInfiniteGetReflectReflectionsQuery`](/react-hooks/modules#useinfinitegetreflectreflectionsquery)
+- [`useCreateReflectMutation`](/react-hooks/modules#usecreatereflectmutation)
+- [`useCreateReflectReflectionMutation`](/react-hooks/modules#usecreatereflectreflectionmutation)
+
 ## Profile
 
 - [`useGetProfile`](/react-hooks/modules#usegetprofile)
