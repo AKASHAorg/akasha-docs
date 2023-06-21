@@ -148,6 +148,7 @@ Currently we have the following hooks:
 - [`useInfiniteGetReflectReflectionsQuery`](/react-hooks/modules#useinfinitegetreflectreflectionsquery)
 - [`useCreateReflectMutation`](/react-hooks/modules#usecreatereflectmutation)
 - [`useCreateReflectReflectionMutation`](/react-hooks/modules#usecreatereflectreflectionmutation)
+- [`useUpdateReflectReflectionMutation`](/react-hooks/modules#useupdatereflectreflectionmutation)
 
 ## Profile
 
@@ -158,6 +159,15 @@ Currently we have the following hooks:
 - [`useFollowing`](/react-hooks/modules#usefollowing)
 - [`useInterests`](/react-hooks/modules#useinterests)
 - [`useProfileUpdate`](/react-hooks/modules#useprofileupdate)
+- [`useGetProfileByIdQuery`](/react-hooks/modules#usegetprofilebyidquery)
+- [`useInfiniteGetProfileByIdQuery`](/react-hooks/modules#useinfinitegetprofilebyidquery)
+- [`useGetProfileByDidQuery`](/react-hooks/modules#usegetprofilebydidquery)
+- [`useInfiniteGetProfileByDidQuery`](/react-hooks/modules#useinfinitegetprofilebydidquery)
+- [`useGetProfilesQuery`](/react-hooks/modules#usegetprofilesquery)
+- [`useInfiniteGetProfilesQuery`](/react-hooks/modules#useinfinitegetprofilesquery)
+- [`useGetInterestsQuery`](/react-hooks/modules#usegetinterestsquery)
+- [`useInfiniteGetInterestsQuery`](/react-hooks/modules#useinfinitegetinterestsquery)
+- [`useGetInterestsByDidQuery`](/react-hooks/modules#usegetinterestsbydidquery)
 
 ## Reasons
 

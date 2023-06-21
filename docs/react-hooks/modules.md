@@ -1422,7 +1422,7 @@ const loggedProfileData = profileDataQuery.data;
 [ui/hooks/src/use-login.ts:76](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-login.ts#L76)
 
 ___
-
+<!-- 
 ### useGetProfile
 
 ▸ **useGetProfile**(`pubKey`, `loggedUser?`, `enabler?`): `UseQueryResult`<`IProfileData`, `Error`\>
@@ -1451,6 +1451,336 @@ const profile = getProfileQuery.data;
 #### Defined in
 
 [ui/hooks/src/use-profile.ts:97](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-profile.ts#L97)
+
+___ -->
+
+### useGetProfileByIdQuery
+
+▸ **useGetProfileByIdQuery**(`id`): `UseQueryResult`<[`Types.GetProfileByIdQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L145), `Error`\>
+
+Hook to get a user's profile data by his/her ID.
+
+**`example`** useGetProfileByIdQuery hook
+```typescript
+  const getProfileQuery = useGetProfileByIdQuery( { id: 'some-ID' },
+    {
+      select: data => {
+        if (data.node && 'profile' in data.node) {
+          return data.node;
+        }
+        return null;
+      },
+    },
+  );
+```
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `id` | `string` | `undefined` |
+
+#### Returns
+
+`UseQueryResult`<[`Types.GetProfileByIdQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L145), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:769](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L769)
+
+___
+
+### useInfiniteGetProfileByIdQuery
+
+▸ **useInfiniteGetProfileByIdQuery**(`id`): `UseInfiniteQueryResult`<[`Types.GetProfileByIdQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L145), `Error`\>
+
+Hook to get a user's profile data by his/her ID (supports infinite scrolling).
+
+**`example`** useInfiniteGetProfileByIdQuery hook
+```typescript
+  const getProfileQuery = useInfiniteGetProfileByIdQuery('id', { id: 'some-ID' },);
+
+  const profileData = React.useMemo(() => {
+  if (getProfileQuery.data) {
+  return getProfileQuery.data.pages;
+  }
+  return [];
+  }, [getProfileQuery.data]);
+```
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `id` | `string` | `undefined` |
+
+#### Returns
+
+`UseInfiniteQueryResult`<[`Types.GetProfileByIdQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L145), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:779](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L779)
+
+___
+
+### useGetProfileByDidQuery
+
+▸ **useGetProfileByDidQuery**(`id`): `UseQueryResult`<[`Types.GetProfileByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L152), `Error`\>
+
+Hook to get a user's profile data by his/her DID.
+
+**`example`** useGetProfileByDidQuery hook
+```typescript
+  const getProfileQuery = useGetProfileByDidQuery(
+    { id: 'did:key:some-ID-sequence' },
+    {
+      select: data => {
+        if (data.node && 'profile' in data.node) {
+          return data.node;
+        }
+        return null;
+      },
+    },
+  );
+```
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `id` | `string` | `undefined` |
+
+#### Returns
+
+`UseQueryResult`<[`Types.GetProfileByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L152), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:811](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L811)
+
+___
+
+### useInfiniteGetProfileByDidQuery
+
+▸ **useInfiniteGetProfileByDidQuery**(`id`): `UseInfiniteQueryResult`<[`Types.GetProfileByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L152), `Error`\>
+
+Hook to get a user's profile data by his/her DID (supports infinite scrolling).
+
+**`example`** useInfiniteGetProfileByDidQuery hook
+```typescript
+  const getProfileQuery = useInfiniteGetProfileByDidQuery('id', { id: 'some-ID' },);
+
+  const profileData = React.useMemo(() => {
+  if (getProfileQuery.data) {
+  return getProfileQuery.data.pages;
+  }
+  return [];
+  }, [getProfileQuery.data]);
+```
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `id` | `string` | `undefined` |
+
+#### Returns
+
+`UseInfiniteQueryResult`<[`Types.GetProfileByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L152), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:829](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L829)
+
+___
+
+### useGetProfilesQuery
+
+▸ **useGetProfilesQuery**(`id`): `UseQueryResult`<[`Types.GetProfilesQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L162), `Error`\>
+
+Hook to get multiple users' profile data.
+
+**`example`** useGetProfilesQuery hook
+```typescript
+  const getProfilesQuery = useGetProfilesQuery(
+    { first: 50 },
+    {
+      select: data => data.profileIndex?.edges,
+    },
+  );
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `before?` | `string` |
+| `after?` | `string` |
+| `first?` | `number` |
+| `last?` | `number` |
+
+#### Returns
+
+`UseQueryResult`<[`Types.GetProfilesQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L162), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:866](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L866)
+
+___
+
+### useInfiniteGetProfilesQuery
+
+▸ **useInfiniteGetProfilesQuery**(`id`): `UseInfiniteQueryResult`<[`Types.GetProfilesQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L162), `Error`\>
+
+Hook to get multiple users' profile data (supports infinite scrolling).
+
+**`example`** useInfiniteGetProfilesQuery hook
+```typescript
+  // get the last 50 users' profile data
+  const getProfilesQuery = useInfiniteGetProfilesQuery('last', { last: 50 });
+
+  const profilesData = React.useMemo(() => {
+    if (getProfilesQuery.data) {
+      return getProfilesQuery.data.pages;
+    }
+    return [];
+  }, [getProfilesQuery.data]);
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `before?` | `string` |
+| `after?` | `string` |
+| `first?` | `number` |
+| `last?` | `number` |
+
+#### Returns
+
+`UseInfiniteQueryResult`<[`Types.GetProfilesQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L162), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:884](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L884)
+
+___
+
+### useGetInterestsQuery
+
+▸ **useGetInterestsQuery**(`id`): `UseQueryResult`<[`Types.GetInterestsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L172), `Error`\>
+
+Hook to get interest data.
+
+**`example`** useGetInterestsQuery hook
+```typescript
+  const getInterestsQuery = useGetInterestsQuery(
+    { first: 10 },
+    {
+      select: data => data.interestsIndex?.edges,
+    },
+  );
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `before?` | `string` |
+| `after?` | `string` |
+| `first?` | `number` |
+| `last?` | `number` |
+
+#### Returns
+
+`UseQueryResult`<[`Types.GetInterestsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L172), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:928](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L928)
+
+___
+
+### useInfiniteGetInterestsQuery
+
+▸ **useInfiniteGetInterestsQuery**(`id`): `UseInfiniteQueryResult`<[`Types.GetInterestsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L162), `Error`\>
+
+Hook to get interest data (supports infinite scrolling).
+
+**`example`** useInfiniteGetInterestsQuery hook
+```typescript
+  // get the last 50 interests
+  const getInterestsQuery = useInfiniteGetInterestsQuery('last', { last: 50 });
+
+  const interestsData = React.useMemo(() => {
+    if (getInterestsQuery.data) {
+      return getProfilesQuery.data.pages;
+    }
+    return [];
+  }, [getInterestsQuery.data]);
+
+  // load more items
+  const handleLoadMore = React.useCallback(() => {
+    if (!getInterestsQuery.isLoading && getInterestsQuery.hasNextPage) {
+    getInterestsQuery.fetchNextPage();
+    }
+  }, [getInterestsQuery]);
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `before?` | `string` |
+| `after?` | `string` |
+| `first?` | `number` |
+| `last?` | `number` |
+
+#### Returns
+
+`UseInfiniteQueryResult`<[`Types.GetInterestsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L162), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:946](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L946)
+
+___
+### useGetInterestsByDidQuery
+
+▸ **useGetInterestsByDidQuery**(`id`): `UseQueryResult`<[`Types.GetInterestsByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L179), `Error`\>
+
+Hook to get interest data by DID.
+
+**`example`** useGetInterestsByDidQuery hook
+```typescript
+  const getInterestsQuery = useGetInterestsByDidQuery(
+    { id: 'did:key:some-key' },
+    {
+      select: data => {
+        if (data.node && 'interests' in data.node) {
+          return data.node.interests;
+        }
+        return null;
+      },
+    },
+  );
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+
+#### Returns
+
+`UseQueryResult`<[`Types.GetInterestsByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L179), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:985](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L985)
 
 ___
 
@@ -2742,6 +3072,47 @@ Hook to create a reflect of a reflect.
 #### Defined in
 
 [ui/hooks/src/generated/hooks-new.ts:713](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L713)
+
+___
+
+### useUpdateReflectReflectionMutation
+
+▸ **useUpdateReflectReflectionMutation**(`i`): `UseMutationResult`<[`Types.UpdateReflectReflectionMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L129), `unknown`\>
+
+Hook to update a reflect of a reflection.
+
+**`example`** useUpdateReflectReflectionMutation hook
+```typescript
+    const createReflect = useUpdateReflectReflectionMutation();
+
+    // example of a reflect's data
+    const reflectData = {
+      id: '1234',
+      content: {
+        active: true,
+        reflectID: 'CeramicStreamID',
+        reflectionID: 'CeramicStreamID',
+      },
+    };
+
+    createReflect.mutate({
+      i: reflectData,
+    });
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `i` | `UpdateReflectionInput` |
+
+#### Returns
+
+`UseMutationResult`<[`Types.UpdateReflectReflectionMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L136), `unknown`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:713](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L740)
 
 ___
 
