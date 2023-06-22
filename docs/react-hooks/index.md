@@ -29,19 +29,10 @@ Currently we have the following hooks:
 - [`useSaveBookmark`](/react-hooks/modules#usesavebookmark)
 - [`useDeleteBookmark`](/react-hooks/modules#usedeletebookmark)
 
-## Comments
-
-- [`useInfiniteComments`](/react-hooks/modules#useinfinitecomments)
-- [`useComment`](/react-hooks/modules#usecomment)
-- [`useDeleteComment`](/react-hooks/modules#usedeletecomment)
-- [`useCreateComment`](/react-hooks/modules#usecreatecomment)
-- [`useEditComment`](/react-hooks/modules#useeditcomment)
-
 ## Follow/Unfollow
 
-- [`useIsFollowingMultiple`](/react-hooks/modules#useisfollowingmultiple)
-- [`useFollow`](/react-hooks/modules#usefollow)
-- [`useUnfollow`](/react-hooks/modules#useunfollow)
+- [`useCreateFollowMutation`](/react-hooks/modules#usecreatefollowmutation)
+- [`useUpdateFollowMutation`](/react-hooks/modules#useupdatefollowmutation)
 
 ## GlobalLogin
 
@@ -82,6 +73,8 @@ Currently we have the following hooks:
 - [`signAuthMessage`](/react-hooks/modules#signauthmessage)
 - [`useLogout`](/react-hooks/modules#uselogout)
 - [`useCheckSignup`](/react-hooks/modules#usechecksignup)
+
+- [`useCreateProfileMutation`](/react-hooks/modules#usecreateprofilemutation)
 
 ## Mentions
 
@@ -130,13 +123,6 @@ Currently we have the following hooks:
 - [`useUpdateBeamMutation`](/react-hooks/modules#useupdatebeammutation)
 - [`useCreateRebeamMutation`](/react-hooks/modules#usecreaterebeammutation)
 - [`useCreateBeamProfileMentionMutation`](/react-hooks/modules#usecreatebeamprofilementionmutation)
-- [`useInfinitePosts`](/react-hooks/modules#useinfiniteposts)
-- [`useInfinitePostsByTag`](/react-hooks/modules#useinfinitepostsbytag)
-- [`useInfinitePostsByAuthor`](/react-hooks/modules#useinfinitepostsbyauthor)
-- [`usePost`](/react-hooks/modules#usepost)
-- [`useDeletePost`](/react-hooks/modules#usedeletepost)
-- [`useCreatePost`](/react-hooks/modules#usecreatepost)
-- [`useEditPost`](/react-hooks/modules#useeditpost)
   
 ## Reflections
 
@@ -152,13 +138,7 @@ Currently we have the following hooks:
 
 ## Profile
 
-- [`useGetProfile`](/react-hooks/modules#usegetprofile)
-- [`useGetProfileByEthAddress`](/react-hooks/modules#usegetprofilebyethaddress)
-- [`useGetEntryAuthor`](/react-hooks/modules#usegetentryauthor)
-- [`useFollowers`](/react-hooks/modules#usefollowers)
-- [`useFollowing`](/react-hooks/modules#usefollowing)
-- [`useInterests`](/react-hooks/modules#useinterests)
-- [`useProfileUpdate`](/react-hooks/modules#useprofileupdate)
+- [`useGetEntryAuthor <!-- old -->`](/react-hooks/modules#usegetentryauthor) 
 - [`useGetProfileByIdQuery`](/react-hooks/modules#usegetprofilebyidquery)
 - [`useInfiniteGetProfileByIdQuery`](/react-hooks/modules#useinfinitegetprofilebyidquery)
 - [`useGetProfileByDidQuery`](/react-hooks/modules#usegetprofilebydidquery)
@@ -168,6 +148,18 @@ Currently we have the following hooks:
 - [`useGetInterestsQuery`](/react-hooks/modules#usegetinterestsquery)
 - [`useInfiniteGetInterestsQuery`](/react-hooks/modules#useinfinitegetinterestsquery)
 - [`useGetInterestsByDidQuery`](/react-hooks/modules#usegetinterestsbydidquery)
+- [`useInfiniteGetInterestsByDidQuery`](/react-hooks/modules#useinfinitegetinterestsbydidquery)
+- [`useGetInterestsByIdQuery`](/react-hooks/modules#usegetinterestsbyidquery)
+- [`useInfiniteGetInterestsByIdQuery`](/react-hooks/modules#useinfinitegetinterestsbyidquery)
+- [`useGetFollowingListByDidQuery`](/react-hooks/modules#usegetfollowinglistbydidquery)
+- [`useInfiniteGetFollowingListByDidQuery`](/react-hooks/modules#useinfinitegetfollowinglistbydidquery)
+- [`useGetFollowersListByDidQuery`](/react-hooks/modules#usegetfollowerslistbydidquery)
+- [`useInfiniteGetFollowersListByDidQuery`](/react-hooks/modules#useinfinitegetfollowerslistbydidquery)
+- [`useGetMyProfileQuery`](/react-hooks/modules#usegetmyprofilequery)
+- [`useInfiniteGetMyProfileQuery`](/react-hooks/modules#useinfinitegetmyprofilequery)
+- [`useUpdateProfileMutation`](/react-hooks/modules#useupdateprofilemutation)
+- [`useCreateInterestsMutation`](/react-hooks/modules#usecreateinterestsmutation)
+- [`useUpdateInterestsMutation`](/react-hooks/modules#useupdateinterestsmutation)
 
 ## Reasons
 
@@ -194,7 +186,7 @@ Currently we have the following hooks:
 - [`useTrendingTags`](/react-hooks/modules#usetrendingtags)
 - [`useTrendingProfiles`](/react-hooks/modules#usetrendingprofiles)
 
-## Username
+## Username (no longer available)
 
 - [`useUpdateUsernameProvider`](/react-hooks/modules#useupdateusernameprovider)
 - [`useEnsRegistration`](/react-hooks/modules#useensregistration)

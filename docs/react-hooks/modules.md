@@ -812,97 +812,6 @@ const notifications = fetchNotificationsQuery.data;
 
 ___
 
-### useFollow
-
-▸ **useFollow**(): `UseMutationResult`<{ `data`: { `follow`: `boolean`  }  }, `unknown`, `string`, { `previousFollowedProfiles`: `string`[]  }\>
-
-Hook to follow another user
-
-**`example`** useFollow hook
-```typescript
-const followQuery = useFollow();
-
-followQuery.mutate('pubkey-of-user-to-follow');
-```
-
-#### Returns
-
-`UseMutationResult`<{ `data`: { `follow`: `boolean`  }  }, `unknown`, `string`, { `previousFollowedProfiles`: `string`[]  }\>
-
-#### Defined in
-
-[ui/hooks/src/use-follow.ts:279](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-follow.ts#L279)
-
-___
-
-### useFollowers
-
-▸ **useFollowers**(`pubKey`, `limit`, `offset?`): `UseInfiniteQueryResult`<`UserFollowers_Response`, `Error`\>
-
-Hook to get followers for a user
-
-**`example`** useFollowers hook
-```typescript
-const followersQuery = useFollowers('some-pubkey', 10);
-
-const followers = React.useMemo(
-() => followersQuery.data?.pages?.reduce((acc, curr) => [...acc, ...curr.results], []),
-[followersQuery.data?.pages],
-);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pubKey` | `string` |
-| `limit` | `number` |
-| `offset?` | `number` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<`UserFollowers_Response`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-profile.ts:198](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-profile.ts#L198)
-
-___
-
-### useFollowing
-
-▸ **useFollowing**(`pubKey`, `limit`, `offset?`): `UseInfiniteQueryResult`<`UserFollowers_Response`, `Error`\>
-
-Hook to get a list of profiles following the user
-
-**`example`** useFollowing hook
-```typescript
-const followingQuery = useFollowing('some-pubkey', 10);
-
-const following = React.useMemo(
-() => followingQuery.data?.pages?.reduce((acc, curr) => [...acc, ...curr.results], []),
-[followingQuery.data?.pages],
-);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pubKey` | `string` |
-| `limit` | `number` |
-| `offset?` | `number` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<`UserFollowers_Response`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-profile.ts:233](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-profile.ts#L233)
-
-___
-
 ### useGetAllInstalledApps
 
 ▸ **useGetAllInstalledApps**(`enabler?`): `UseQueryResult`<`any`, `Error`\>
@@ -1422,37 +1331,6 @@ const loggedProfileData = profileDataQuery.data;
 [ui/hooks/src/use-login.ts:76](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-login.ts#L76)
 
 ___
-<!-- 
-### useGetProfile
-
-▸ **useGetProfile**(`pubKey`, `loggedUser?`, `enabler?`): `UseQueryResult`<`IProfileData`, `Error`\>
-
-Hook to get a user's profile data
-
-**`example`** useGetProfile hook
-```typescript
-const getProfileQuery = useGetProfile('some-pubkey');
-
-const profile = getProfileQuery.data;
-```
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `pubKey` | `string` | `undefined` |
-| `loggedUser?` | `string` | `undefined` |
-| `enabler` | `boolean` | `true` |
-
-#### Returns
-
-`UseQueryResult`<`IProfileData`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-profile.ts:97](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-profile.ts#L97)
-
-___ -->
 
 ### useGetProfileByIdQuery
 
@@ -1597,7 +1475,7 @@ ___
 
 ### useGetProfilesQuery
 
-▸ **useGetProfilesQuery**(`id`): `UseQueryResult`<[`Types.GetProfilesQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L162), `Error`\>
+▸ **useGetProfilesQuery**(`before?`, `after?`, `first?`, `last?): `UseQueryResult`<[`Types.GetProfilesQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L162), `Error`\>
 
 Hook to get multiple users' profile data.
 
@@ -1632,7 +1510,7 @@ ___
 
 ### useInfiniteGetProfilesQuery
 
-▸ **useInfiniteGetProfilesQuery**(`id`): `UseInfiniteQueryResult`<[`Types.GetProfilesQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L162), `Error`\>
+▸ **useInfiniteGetProfilesQuery**(`before?`, `after?`, `first?`, `last?`): `UseInfiniteQueryResult`<[`Types.GetProfilesQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L162), `Error`\>
 
 Hook to get multiple users' profile data (supports infinite scrolling).
 
@@ -1705,7 +1583,7 @@ ___
 
 ### useInfiniteGetInterestsQuery
 
-▸ **useInfiniteGetInterestsQuery**(`id`): `UseInfiniteQueryResult`<[`Types.GetInterestsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L162), `Error`\>
+▸ **useInfiniteGetInterestsQuery**(`before?`, `after?`,`first?`, `last?`): `UseInfiniteQueryResult`<[`Types.GetInterestsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L162), `Error`\>
 
 Hook to get interest data (supports infinite scrolling).
 
@@ -1747,11 +1625,12 @@ Hook to get interest data (supports infinite scrolling).
 [ui/hooks/src/generated/hooks-new.ts:946](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L946)
 
 ___
+
 ### useGetInterestsByDidQuery
 
 ▸ **useGetInterestsByDidQuery**(`id`): `UseQueryResult`<[`Types.GetInterestsByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L179), `Error`\>
 
-Hook to get interest data by DID.
+Hook to get interest data by profile's DID.
 
 **`example`** useGetInterestsByDidQuery hook
 ```typescript
@@ -1784,34 +1663,643 @@ Hook to get interest data by DID.
 
 ___
 
-### useGetProfileByEthAddress
+### useInfiniteGetInterestsByDidQuery
 
-▸ **useGetProfileByEthAddress**(`ethAddress`, `loggedUser?`, `enabler?`): `UseQueryResult`<`IProfileData`, `Error`\>
+▸ **useInfiniteGetInterestsByDidQuery**(`id`): `UseInfiniteQueryResult`<[`Types.GetInterestsByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L179), `Error`\>
 
-Hook to get a user's profile data
+Hook to get interest data by profile's DID (supports infinite scrolling).
 
-**`example`** useGetProfileByEthAddress hook
+**`example`** useInfiniteGetInterestsByDidQuery hook
 ```typescript
-const getProfileByEthAddressQuery = useGetProfileByEthAddress( 'some-eth-address');
+  const getInterestsByDidQuery = useInfiniteGetInterestsByDidQuery('id', {
+    id: 'did:key:some-key',
+  });
 
-const profile = getProfileByEthAddressQuery.data;
+  const interestData = React.useMemo(() => {
+    if (getInterestsByDidQuery.data) {
+      return getInterestsByDidQuery.data.pages;
+    }
+    return [];
+  }, [getInterestsByDidQuery.data]);
+
 ```
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `ethAddress` | `string` | `undefined` |
-| `loggedUser?` | `string` | `undefined` |
-| `enabler` | `boolean` | `true` |
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
 
 #### Returns
 
-`UseQueryResult`<`IProfileData`, `Error`\>
+`UseInfiniteQueryResult`<[`Types.GetInterestsByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L179), `Error`\>
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:133](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-profile.ts#L133)
+[ui/hooks/src/generated/hooks-new.ts:1003](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1003)
+
+___
+
+### useGetInterestsByIdQuery
+
+▸ **useGetInterestsByIdQuery**(`id`): `UseQueryResult`<[`Types.GetInterestsByIdQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L186), `Error`\>
+
+Hook to get interest data by profile's ID.
+
+**`example`** useGetInterestsByIdQuery hook
+```typescript
+  const getInterestsByIdQuery = useGetInterestsByIdQuery(
+    { id: 'some-key' },
+    {
+      select: data => {
+        if (data.node && 'interests' in data.node) {
+          return data.node.interests;
+        }
+        return null;
+      },
+    },
+  );
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+
+#### Returns
+
+`UseQueryResult`<[`Types.GetInterestsByIdQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L186), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:1039](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1039)
+
+___
+
+### useInfiniteGetInterestsByIdQuery
+
+▸ **useInfiniteGetInterestsByIdQuery**(`id`): `UseInfiniteQueryResult`<[`Types.GetInterestsByIdQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L186), `Error`\>
+
+Hook to get interest data by profile's ID (supports infinite scrolling).
+
+**`example`** useInfiniteGetInterestsByIdQuery hook
+```typescript
+  const getInterestsByIdQuery = useInfiniteGetInterestsByIdQuery(
+    'id',
+    { id: 'some-key' },
+  )
+
+  const InterestsByIdData  = React.useMemo(() => {
+  if (getInterestsByIdQuery.data) {
+  return getInterestsByIdQuery.data.pages;
+  }
+  return [];
+  }, [getInterestsByIdQuery.data]);
+
+  // load more
+  const handleLoadMore = React.useCallback(() => {
+  if (!getInterestsByIdQuery.isLoading && getInterestsByIdQuery.hasNextPage) {
+  getInterestsByIdQuery.fetchNextPage();
+  }
+  }, [getInterestsByIdQuery]);
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+
+#### Returns
+
+`UseInfiniteQueryResult`<[`Types.GetInterestsByIdQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L186), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:1039](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1057)
+
+___
+
+### useGetFollowingListByDidQuery
+
+▸ **useGetFollowingListByDidQuery**(`id`, `before?`, `after?`, `first?`, `last?`): `UseQueryResult`<[`Types.GetFollowingListByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L197), `Error`\>
+
+Hook to get a list of people a profile (identified by its ID) is following.
+
+**`example`** useGetFollowingListByDidQuery hook
+```typescript
+   const getFollowingListBydQuery = useGetFollowingListByDidQuery(
+    { id: 'did:key:some-key' },
+    {
+      select: data => {
+        if (data.node && 'followList' in data.node) {
+          return data.node.followList.edges;
+        }
+        return null;
+      },
+    },
+  );
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+| `before?` | `string` |
+| `after?` | `string` |
+| `first?` | `number` |
+| `last?` | `number` |
+
+#### Returns
+
+`UseQueryResult`<[`Types.GetFollowingListByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L197), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:1102](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1102)
+
+___
+
+### useInfiniteGetFollowingListByDidQuery
+
+▸ **useInfiniteGetFollowingListByDidQuery**(`id`, `before?`, `after?`, `first?`, `last?`): `UseInfiniteQueryResult`<[`Types.GetFollowingListByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L186), `Error`\>
+
+Hook to get interest data by profile's ID (supports infinite scrolling).
+
+**`example`** useInfiniteGetFollowingListByDidQuery hook
+```typescript
+  const getFollowingListByDidQuery = useInfiniteGetFollowingListByDidQuery(
+    'id',
+    { id: 'did:key:some-did-key' },
+  )
+
+  const followingListData  = React.useMemo(() => {
+  if (getFollowingListByDidQuery.data) {
+  return getFollowingListByDidQuery.data.pages;
+  }
+  return [];
+  }, [getFollowingListByDidQuery.data]);
+
+  // load more
+  const handleLoadMore = React.useCallback(() => {
+  if (!getFollowingListByDidQuery.isLoading && getFollowingListByDidQuery.hasNextPage) {
+  getFollowingListByDidQuery.fetchNextPage();
+  }
+  }, [getFollowingListByDidQuery]);
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+| `before?` | `string` |
+| `after?` | `string` |
+| `first?` | `number` |
+| `last?` | `number` |
+
+#### Returns
+
+`UseInfiniteQueryResult`<[`Types.GetInterestsByIdQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L186), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:1120](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1120)
+
+___
+
+### useGetFollowersListByDidQuery
+
+▸ **useGetFollowersListByDidQuery**(`id`, `before?`, `after?`, `first?`, `last?`): `UseQueryResult`<[`Types.GetFollowersListByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L208), `Error`\>
+
+Hook to get a list of followers for a profile (identified by its DID).
+
+**`example`** useGetFollowersListByDidQuery hook
+```typescript
+   const getFollowerListBydQuery = useGetFollowersListByDidQuery(
+    { id: 'did:key:some-key' },
+    {
+      select: data => {
+        if (data.node && 'profile' in data.node) {
+          return data.node.profile.followers.edges;
+        }
+        return null;
+      },
+    },
+  );
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+| `before?` | `string` |
+| `after?` | `string` |
+| `first?` | `number` |
+| `last?` | `number` |
+
+#### Returns
+
+`UseQueryResult`<[`Types.GetFollowersListByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L208), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:1102](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1167)
+
+___
+
+### useInfiniteGetFollowersListByDidQuery
+
+▸ **useInfiniteGetFollowersListByDidQuery**(`id`, `before?`, `after?`, `first?`, `last?`): `UseInfiniteQueryResult`<[`Types.GetFollowersListByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L186), `Error`\>
+
+Hook to get interest data by profile's ID (supports infinite scrolling).
+
+**`example`** useInfiniteGetFollowersListByDidQuery hook
+```typescript
+  const getFollowerListByDidQuery = useInfiniteGetFollowersListByDidQuery(
+    'id',
+    { id: 'did:key:some-did-key' },
+  )
+
+  const followerListData  = React.useMemo(() => {
+  if (getFollowerListByDidQuery.data) {
+  return getFollowerListByDidQuery.data.pages;
+  }
+  return [];
+  }, [getFollowerListByDidQuery.data]);
+
+  // load more
+  const handleLoadMore = React.useCallback(() => {
+  if (!getFollowerListByDidQuery.isLoading && getFollowerListByDidQuery.hasNextPage) {
+  getFollowerListByDidQuery.fetchNextPage();
+  }
+  }, [getFollowerListByDidQuery]);
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `id` | `string` |
+| `before?` | `string` |
+| `after?` | `string` |
+| `first?` | `number` |
+| `last?` | `number` |
+
+#### Returns
+
+`UseInfiniteQueryResult`<[`Types.GetFollowersListByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L186), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:1185](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1185)
+
+___
+
+### useGetMyProfileQuery
+
+▸ **useGetMyProfileQuery**(): `UseQueryResult`<[`Types.GetMyProfileQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L213), `Error`\>
+
+Hook to get the currently logged-in profile.
+
+**`example`** useGetMyProfileQuery hook
+```typescript
+   const profileDataReq = useGetMyProfileQuery(null, {
+    select: resp => {
+      return resp.viewer?.profile;
+    },
+  });
+
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+
+#### Returns
+
+`UseQueryResult`<[`Types.GetMyProfileQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L213), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:1214](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1214)
+
+___
+
+### useInfiniteGetMyProfileQuery
+
+▸ **useInfiniteGetMyProfileQuery**(): `UseInfiniteQueryResult`<[`Types.GetMyProfileQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L213), `Error`\>
+
+Hook to get the currently logged-in profile (supports infinite scrolling).
+
+**`example`** useInfiniteGetMyProfileQuery hook
+```typescript
+  const profileDataReq = useInfiniteGetMyProfileQuery(0);
+
+  const profileData  = React.useMemo(() => {
+  if (profileDataReq.data) {
+  return profileDataReq.data.pages;
+  }
+  return [];
+  }, [profileDataReq.data]);
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+
+#### Returns
+
+`UseInfiniteQueryResult`<[`Types.GetMyProfileQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L213), `Error`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:1232](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1232)
+
+___
+
+### useCreateProfileMutation
+
+▸ **useCreateProfileMutation**(`i`): `UseMutationResult`<[`Types.CreateProfileMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L220), `unknown`\>
+
+Hook to create a new profile.
+
+**`example`** useCreateProfileMutation hook
+```typescript
+   const createProfile = useCreateProfileMutation();
+
+    const profileData = {
+    content: {
+      avatar: {
+        default: {
+          height: 210,
+          src: 'http://some-url.com',
+          width: 210,
+        },
+      },
+      background: {
+        default: {
+          height: 210,
+          src: 'http://some-url.com',
+          width: 210,
+        }
+      },
+      createdAt: Date.now(),
+      description: 'A simple description/bio',
+      links: [
+        {
+          href: 'http://some-url.com',
+          label: 'Ethereum',
+        }
+      ],
+      name: 'Mr.Cat',
+    },
+  };
+
+    createProfile.mutate({
+      i: profileData,
+    });
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `i` | `CreateProfileInput` |
+
+#### Returns
+
+`UseMutationResult`<[`Types.CreateProfileMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L220), `unknown`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:1270](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1270)
+
+___
+
+### useUpdateProfileMutation
+
+▸ **useUpdateProfileMutation**(`i`): `UseMutationResult`<[`Types.UpdateProfileMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L227), `unknown`\>
+
+Hook to update data for a profile.
+
+**`example`** useUpdateProfileMutation hook
+```typescript
+   const updateProfile = useUpdateProfileMutation();
+
+    const profileData = {
+      id: 'profile-id',
+      content: {
+        avatar: {
+          default: {
+            height: 210,
+            src: 'http://some-url.com',
+            width: 210,
+          },
+        },
+        background: {
+          default: {
+            height: 210,
+            src: 'http://some-url.com',
+            width: 210,
+          }
+        },
+        createdAt: Date.now(),
+        description: 'A simple description/bio',
+        links: [
+          {
+            href: 'http://some-url.com',
+            label: 'Ethereum',
+          }
+        ],
+        name: 'Mr.Cat',
+      },
+    };
+
+    updateProfile.mutate({
+      i: profileData,
+    });
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `i` | `UpdateProfileInput` |
+
+#### Returns
+
+`UseMutationResult`<[`Types.UpdateProfileMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L227), `unknown`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:1284](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1284)
+
+___
+
+### useCreateInterestsMutation
+
+▸ **useCreateInterestsMutation**(`i`): `UseMutationResult`<[`Types.CreateInterestsMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L234), `unknown`\>
+
+Hook to create interest data for a profile.
+
+**`example`** useCreateInterestsMutation hook
+```typescript
+   const createInterests = useCreateInterestsMutation();
+
+    const interestsData = {
+      content: {
+        topics: [
+          {
+            labelType: 'example-label-type',
+            value: 'example label value',
+          }
+        ]
+      },
+    };
+
+    createInterests.mutate({
+      i: interestsData,
+    });
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `i` | `CreateInterestsInput` |
+
+#### Returns
+
+`UseMutationResult`<[`Types.CreateInterestsMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L234), `unknown`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:1313](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1313)
+
+___
+
+### useUpdateInterestsMutation
+
+▸ **useUpdateInterestsMutation**(`i`): `UseMutationResult`<[`Types.UpdateInterestsMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L241), `unknown`\>
+
+Hook to update interest data for a profile.
+
+**`example`** useUpdateInterestsMutation hook
+```typescript
+   const updateInterests = useUpdateInterestsMutation();
+
+    const interestsData = {
+      id: 'some-id',
+      content: {
+        topics: [
+          {
+            labelType: 'example-label-type',
+            value: 'example label value',
+          }
+        ]
+      },
+    };
+
+    updateInterests.mutate({
+      i: interestsData,
+    });
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `i` | `UpdateInterestsInput` |
+
+#### Returns
+
+`UseMutationResult`<[`Types.UpdateInterestsMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L241), `unknown`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:1342](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1342)
+
+___
+
+### useCreateFollowMutation
+
+▸ **useCreateFollowMutation**(`i`): `UseMutationResult`<[`Types.CreateFollowMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L248), `unknown`\>
+
+Hook to create follow data for a profile.
+
+**`example`** useCreateFollowMutation hook
+```typescript
+  const createFollow = useCreateFollowMutation();
+
+  const followData = {
+    content: {
+      isFollowing: true,
+      profileID: 'CeramicStreamID',
+    },
+  };
+
+  createFollow.mutate({
+    i: followData,
+  });
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `i` | `CreateFollowInput` |
+
+#### Returns
+
+`UseMutationResult`<[`Types.CreateFollowMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L248), `unknown`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:1370](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1327)
+
+___
+### useUpdateFollowMutation
+
+▸ **useUpdateFollowMutation**(`i`): `UseMutationResult`<[`Types.UpdateFollowMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L255), `unknown`\>
+
+Hook to update follow data for a profile.
+
+**`example`** useCreateFollowMutation hook
+```typescript
+  const updateFollow = useUpdateFollowMutation();
+
+  const followData = {
+    id: 'some-id',
+    content: {
+      isFollowing: true,
+      profileID: 'CeramicStreamID',
+    },
+  };
+
+  updateFollow.mutate({
+    i: followData,
+  });
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `i` | `UpdateFollowInput` |
+
+#### Returns
+
+`UseMutationResult`<[`Types.UpdateFollowMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L255), `unknown`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:1398](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1398)
 
 ___
 
@@ -1876,86 +2364,6 @@ onError: payload => {},
 #### Defined in
 
 [ui/hooks/src/use-global-login.ts:34](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-global-login.ts#L34)
-
-___
-
-### useInfiniteComments
-
-▸ **useInfiniteComments**(`limit`, `postID`, `offset?`): `UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
-
-Hook to get the comments for a specific post
-
-**`example`** useInfiniteComments hook
-```typescript
-const commentsQuery = useInfiniteComments(10, 'some-post-id', 'optional-comment-id-to-start-from');
-
-const commentPages = React.useMemo(() => {
-if (commentsQuery.data) {
-return commentsQuery.data.pages;
-}
-return [];
-}, [commentsQuery.data]);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `limit` | `number` |
-| `postID` | `string` |
-| `offset?` | `string` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-comments.ts:61](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-comments.ts#L61)
-
-___
-
-### useInfiniteCustomPosts
-
-▸ **useInfiniteCustomPosts**(`enabler`, `limit`, `offset?`): `UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
-
-Hook to get posts for personalised user feed from followed profiles and subscribed tags,
-sorted chronologically
-
-**`example`** useInfiniteCustomPosts hook
-```typescript
-const customPostsQuery = useInfiniteCustomPosts(true, 15);
-
-const postPages = React.useMemo(() => {
-if (customPostsQuery.data) {
-return customPostsQuery.data.pages;
-}
-return [];
-}, [customPostsQuery.data]);
-
-// load more posts
-const handleLoadMore = React.useCallback(() => {
-if (!customPostsQuery.isLoading && customPostsQuery.hasNextPage && loginState?.fromCache) {
-customPostsQuery.fetchNextPage();
-}
-}, [customPostsQuery, loginState?.fromCache]);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `enabler` | `boolean` |
-| `limit` | `number` |
-| `offset?` | `string` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-posts.ts:149](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-posts.ts#L149)
 
 ___
 
@@ -2125,57 +2533,13 @@ infinitePendingQuery.fetchNextPage();
 
 [ui/hooks/src/use-moderation.ts:308](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-moderation.ts#L308)
 
-<!-- ___
-
-### useInfinitePosts
-
-▸ **useInfinitePosts**(`limit`, `offset?`): `UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
-
-Hook to get posts for feed, sorted chronologically
-
-**`example`** useInfinitePosts hook
-```typescript
-const postsQuery = useInfinitePosts(15);
-
-const postPages = React.useMemo(() => {
-if (postsQuery.data) {
-return postsQuery.data.pages;
-}
-return [];
-}, [postsQuery.data]);
-
-// load more posts
-const handleLoadMore = React.useCallback(() => {
-if (!postsQuery.isLoading && postsQuery.hasNextPage && loginState?.fromCache) {
-postsQuery.fetchNextPage();
-}
-}, [postsQuery, loginState?.fromCache]);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `limit` | `number` |
-| `offset?` | `string` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-posts.ts:94](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-posts.ts#L94)
-
-___ -->
-
 ___
 
 ### useGetBeamsQuery
 
 ▸ **useGetBeamsQuery**(`after?`, `before?`, `first?`, `last?`): `UseQueryResult`<{ `beamIndex?`: { `edges?`: { `node?`: { `id`: `string` ; `reflectionsCount`: `number` ; `active`: `boolean`; `tags?`: `<string | null> | null`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[]; } []}}}, `Error`\>
 
-Hook to get beams for the Antenna
+Hook to get available beams.
 
 **`example`** useGetBeamsQuery hook
 ```typescript
@@ -2563,7 +2927,7 @@ Hook to create a new beam.
 
 **`example`** useCreateBeamMutation hook
 ```typescript
-    const beamMutation = useCreateBeamMutation();
+    const createBeam = useCreateBeamMutation();
 
     const beamData = {
     content: {
@@ -3252,35 +3616,6 @@ installAppQuery.mutate({ name: 'awesome integration', id: 'fhyuhjfhyrtl' });
 
 ___
 
-### useInterests
-
-▸ **useInterests**(`pubKey`): `UseQueryResult`<`Tag_Response`[], `Error`\>
-
-Fetch the list of subscribed tags for a specific pub key
-
-**`example`** useInterests hook
-```typescript
-const interestsQuery = useInterests('some-pubkey');
-
-const interests = interestsQuery.data;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pubKey` | `string` |
-
-#### Returns
-
-`UseQueryResult`<`Tag_Response`[], `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-profile.ts:275](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-profile.ts#L275)
-
-___
-
 ### useIsContactMultiple
 
 ▸ **useIsContactMultiple**(`mainProfile`, `checkIfContactsPubkeys`): `UseQueryResult`<`string`[], `Error`\>
@@ -3698,40 +4033,6 @@ const entryData = postQueries.map(postQuery=>postQuery.data);
 #### Defined in
 
 [ui/hooks/src/use-posts.ts:326](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-posts.ts#L326)
-
-___
-
-### useProfileUpdate
-
-▸ **useProfileUpdate**(`pubKey`): `UseMutationResult`<`void`, `unknown`, `UpdateProfileFormData`, { `currentProfile`: `IProfileData`  }\>
-
-Hook to update a user's profile data.
-Pass updated profile form data to the mutate function
-
-**`example`** useProfileUpdate hook
-```typescript
-const profileUpdateMutation = useProfileUpdate('logged-in-user-pubkey');
-
-// call mutate on form submit
-profileUpdateMutation.mutate({ profileData: { username: 'awesomeusername', ethAddress: 'logged-in-user-eth-address', ... }, changedFields: ['username', 'ethAddress'] });
-
-// reset mutation, if needed, for example on modal close;
-profileUpdateMutation.reset();
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pubKey` | `string` |
-
-#### Returns
-
-`UseMutationResult`<`void`, `unknown`, `UpdateProfileFormData`, { `currentProfile`: `IProfileData`  }\>
-
-#### Defined in
-
-[ui/hooks/src/use-profile.ts:421](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-profile.ts#L421)
 
 ___
 
@@ -4202,29 +4503,6 @@ const trendingTags = trendingTagsQuery.data;
 #### Defined in
 
 [ui/hooks/src/use-trending.ts:27](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-trending.ts#L27)
-
-___
-
-### useUnfollow
-
-▸ **useUnfollow**(): `UseMutationResult`<{ `data`: { `unFollow`: `boolean`  }  }, `unknown`, `string`, { `previousFollowedProfiles`: `string`[]  }\>
-
-Hook to unfollow another user
-
-**`example`** useUnfollow hook
-```typescript
-const unfollowQuery = useUnfollow();
-
-unfollowQuery.mutate('pubkey-of-user-to-unfollow');
-```
-
-#### Returns
-
-`UseMutationResult`<{ `data`: { `unFollow`: `boolean`  }  }, `unknown`, `string`, { `previousFollowedProfiles`: `string`[]  }\>
-
-#### Defined in
-
-[ui/hooks/src/use-follow.ts:358](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-follow.ts#L358)
 
 ___
 
