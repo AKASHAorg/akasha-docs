@@ -7,7 +7,7 @@ pagination_next: integrations/applications/create-an-app
 
 ### Requirements
 
-- [Node.js](https://nodejs.org) v16.x
+- [Node.js](https://nodejs.org) v18.x
 - [yarn](https://classic.yarnpkg.com/lang/en/) v1.x
 
 :::caution Windows OS
