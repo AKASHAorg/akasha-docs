@@ -1777,7 +1777,7 @@ Hook to get interest data by profile's ID (supports infinite scrolling).
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:1039](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1057)
+[ui/hooks/src/generated/hooks-new.ts:1065](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1065)
 
 ___
 
@@ -1818,7 +1818,7 @@ Hook to get a list of people a profile (identified by its ID) is following.
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:1102](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1102)
+[ui/hooks/src/generated/hooks-new.ts:1110](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1110)
 
 ___
 
@@ -1866,7 +1866,7 @@ Hook to get interest data by profile's ID (supports infinite scrolling).
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:1120](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1120)
+[ui/hooks/src/generated/hooks-new.ts:1128](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1128)
 
 ___
 
@@ -1907,7 +1907,7 @@ Hook to get a list of followers for a profile (identified by its DID).
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:1102](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1167)
+[ui/hooks/src/generated/hooks-new.ts:1175](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1175)
 
 ___
 
@@ -1955,7 +1955,7 @@ Hook to get interest data by profile's ID (supports infinite scrolling).
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:1185](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1185)
+[ui/hooks/src/generated/hooks-new.ts:1193](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1193)
 
 ___
 
@@ -1986,7 +1986,7 @@ Hook to get the currently logged-in profile.
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:1214](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1214)
+[ui/hooks/src/generated/hooks-new.ts:1222](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1222)
 
 ___
 
@@ -2019,7 +2019,7 @@ Hook to get the currently logged-in profile (supports infinite scrolling).
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:1232](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1232)
+[ui/hooks/src/generated/hooks-new.ts:1240](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1240)
 
 ___
 
@@ -2138,7 +2138,7 @@ Hook to update data for a profile.
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:1284](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1284)
+[ui/hooks/src/generated/hooks-new.ts:1292](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1292)
 
 ___
 
@@ -2180,7 +2180,7 @@ Hook to create interest data for a profile.
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:1313](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1313)
+[ui/hooks/src/generated/hooks-new.ts:1321](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1321)
 
 ___
 
@@ -2223,7 +2223,7 @@ Hook to update interest data for a profile.
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:1342](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1342)
+[ui/hooks/src/generated/hooks-new.ts:1350](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1350)
 
 ___
 
@@ -2261,7 +2261,7 @@ Hook to create follow data for a profile.
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:1370](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1327)
+[ui/hooks/src/generated/hooks-new.ts:1378](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1378)
 
 ___
 ### useUpdateFollowMutation
@@ -2299,7 +2299,7 @@ Hook to update follow data for a profile.
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:1398](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1398)
+[ui/hooks/src/generated/hooks-new.ts:1406](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1406)
 
 ___
 
@@ -2537,7 +2537,7 @@ ___
 
 ### useGetBeamsQuery
 
-▸ **useGetBeamsQuery**(`after?`, `before?`, `first?`, `last?`): `UseQueryResult`<{ `beamIndex?`: { `edges?`: { `node?`: { `id`: `string` ; `reflectionsCount`: `number` ; `active`: `boolean`; `tags?`: `<string | null> | null`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[]; } []}}}, `Error`\>
+▸ **useGetBeamsQuery**(`after?`, `before?`, `first?`, `last?`): `UseQueryResult`<[`Types.GetBeamsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L13), `Error`\>
 
 Hook to get available beams.
 
@@ -2561,21 +2561,19 @@ const beamsQuery = useGetBeamsQuery( { last: 10 }, { select: response => respons
 
 #### Returns
 
-`UseQueryResult`<{ `beamIndex?`: { `edges?`: { `node?`: { `id`: `string` ; `reflectionsCount`: `number` ; `active`: `boolean`; `tags?`: `<string | null> | null`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[]; } []}}}, `Error`\>
-
-
+ `UseQueryResult`<[`Types.GetBeamsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L13), `Error`\>
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:114](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L114)
+[ui/hooks/src/generated/hooks-new.ts:122](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L122)
 
 ___
 
 ### useInfiniteGetBeamsQuery
 
-▸ **useInfiniteGetBeamsQuery**(`after?`, `before?`, `first?`, `last?`): `UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
+▸ **useInfiniteGetBeamsQuery**(`after?`, `before?`, `first?`, `last?`): `UseInfiniteQueryResult`<[`Types.GetBeamsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L13), `Error`\>
 
-Hook to get beams for the Antenna
+Hook to get available beams (supports infinite scrolling).
 
 **`example`** useInfiniteGetBeamsQuery hook
 ```typescript
@@ -2609,13 +2607,13 @@ const beamsQuery = useInfiniteGetBeamsQuery('first', { first: 50 })
 
 #### Returns
 
-`UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
+`UseInfiniteQueryResult`<[`Types.GetBeamsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L13), `Error`\>
 
 
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:132](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L132)
+[ui/hooks/src/generated/hooks-new.ts:140](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L140)
 
 ___
 
@@ -2649,7 +2647,7 @@ Hook to get beams by DID.
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:174](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L174)
+[ui/hooks/src/generated/hooks-new.ts:182](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L182)
 
 ___
 
@@ -2695,7 +2693,7 @@ Hook to get beams from an author identified by DID (supports infinite scrolling)
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:174](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L174)
+[ui/hooks/src/generated/hooks-new.ts:200](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L200)
 
 ___
 
@@ -2703,7 +2701,7 @@ ___
 
 ▸ **useGetBeamByIdQuery**(`id`): `UseQueryResult`<{ `node?`: {} | { `id`: `string` ; `reflectionsCount`: `number` ; `active`: `boolean`; `tags?`: `<string | null> | null`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[]; } []}, `Error`\>
 
-Hook to get one beam by its ID.
+Hook to get a single beam by its ID.
 
 **`example`** useGetBeamByIdQuery hook
 ```typescript
@@ -2728,7 +2726,7 @@ Hook to get one beam by its ID.
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:221](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L221)
+[ui/hooks/src/generated/hooks-new.ts:229](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L229)
 
 ___
 
@@ -2766,7 +2764,7 @@ Hook to get a beam by its ID (supports infinite scrolling).
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:239](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L239)
+[ui/hooks/src/generated/hooks-new.ts:247](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L247)
 
 ___
 
@@ -2779,7 +2777,7 @@ Hook to get rebeams for a beam identified by its ID.
 **`example`** useGetRebeamsFromBeamQuery hook
 ```typescript
     // get rebeams for beam with ID 123456789
-    const beamReq = useGetRebeamsFromBeamQuery({ id: '123456789' }, { select: data => data.node });
+    const rebeamReq = useGetRebeamsFromBeamQuery({ id: '123456789' }, { select: data => data.node });
 ```
 
 #### Parameters
@@ -2794,7 +2792,7 @@ Hook to get rebeams for a beam identified by its ID.
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:279](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L279)
+[ui/hooks/src/generated/hooks-new.ts:287](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L287)
 
 ___
 
@@ -2839,7 +2837,7 @@ Hook to get rebeams for a beam identified by its ID (support infinite scrolling)
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:297](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L297)
+[ui/hooks/src/generated/hooks-new.ts:305](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L305)
 
 ___
 
@@ -2870,7 +2868,7 @@ Hook to get mentions for a beam identified by its ID.
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:338](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L338)
+[ui/hooks/src/generated/hooks-new.ts:346](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L346)
 
 ___
 
@@ -2915,7 +2913,7 @@ Hook to get mentions for a beam identified by its ID (supports infinite scrollin
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:356](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L356)
+[ui/hooks/src/generated/hooks-new.ts:364](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L364)
 
 ___
 
@@ -2960,7 +2958,7 @@ Hook to create a new beam.
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:385](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L385)
+[ui/hooks/src/generated/hooks-new.ts:393](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L393)
 
 ___
 ### useUpdateBeamMutation
@@ -3007,13 +3005,13 @@ Hook to update an existing beam.
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:407](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L407)
+[ui/hooks/src/generated/hooks-new.ts:415](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L415)
 
 ___
 
 ### useCreateRebeamMutation
 
-▸ **useCreateRebeamMutation**(`i`): `UseMutationResult`<`Types.CreateRebeamMutation`, `unknown`\>
+▸ **useCreateRebeamMutation**(`i`): `UseMutationResult`<[`Types.CreateRebeamMutation`] (https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L66), `unknown`\>
 
 Hook to create a rebeam for a beam.
 
@@ -3042,17 +3040,17 @@ Hook to create a rebeam for a beam.
 
 #### Returns
 
-`UseMutationResult`<`Types.CreateRebeamMutation`, `unknown`\>
+`UseMutationResult`<[`Types.CreateRebeamMutation`] (https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L66), `unknown`\>
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:435](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L435)
+[ui/hooks/src/generated/hooks-new.ts:443](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L443)
 
 ___
 
 ### useCreateBeamProfileMentionMutation
 
-▸ **useCreateBeamProfileMentionMutation**(`i`): `UseMutationResult`<`Types.CreateBeamProfileMentionMutation`, `unknown`\>
+▸ **useCreateBeamProfileMentionMutation**(`i`): `UseMutationResult`<[`Types.CreateBeamProfileMentionMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L73), `unknown`\>
 
 Hook to create a mention for a profile from a beam.
 
@@ -3080,11 +3078,11 @@ Hook to create a mention for a profile from a beam.
 
 #### Returns
 
-`UseMutationResult`<`Types.CreateBeamProfileMentionMutation`, `unknown`\>
+`UseMutationResult`<[`Types.CreateBeamProfileMentionMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L73), `unknown`\>
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:462](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L462)
+[ui/hooks/src/generated/hooks-new.ts:470](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L470)
 
 ___
 
@@ -3122,7 +3120,7 @@ Hook to get reflections of a beam identified by its ID.
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:495](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L495)
+[ui/hooks/src/generated/hooks-new.ts:503](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L503)
 
 ___
 
@@ -3173,7 +3171,7 @@ Hook to get reflections of a beam identified by its ID (supports infinite scroll
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:513](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L513)
+[ui/hooks/src/generated/hooks-new.ts:521](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L521)
 
 ___
 
@@ -3211,7 +3209,7 @@ Hook to get reflections belonging to a member identified by their DID.
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:555](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L555)
+[ui/hooks/src/generated/hooks-new.ts:563](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L563)
 
 ___
 
@@ -3261,7 +3259,7 @@ Hook to get reflections belonging to a member identified by their DID (supports 
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:573](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L573)
+[ui/hooks/src/generated/hooks-new.ts:581](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L581)
 
 ___
 
@@ -3299,7 +3297,7 @@ Hook to get the reflects of a reflection.
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:616](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L616)
+[ui/hooks/src/generated/hooks-new.ts:624](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L624)
 
 ___
 
@@ -3345,11 +3343,11 @@ Hook to get the reflects of a reflection (supports infinite scrolling).
 
 #### Returns
 
-`UseQueryResult`<[`Types.GetReflectReflectionsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L108), `Error`\>
+`UseInfiniteQueryResult`<[`Types.GetReflectReflectionsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L108), `Error`\>
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:634](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L634)
+[ui/hooks/src/generated/hooks-new.ts:642](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L642)
 
 ___
 
@@ -3395,7 +3393,54 @@ Hook to create a reflect.
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:664](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L664)
+[ui/hooks/src/generated/hooks-new.ts:672](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L672)
+
+___
+
+### useUpdateReflectMutation
+
+▸ **useUpdateReflectMutation**(`i`): `UseMutationResult`<[`Types.UpdateReflectMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L122), `unknown`\>
+
+Hook to update a reflect.
+
+**`example`** useUpdateReflectMutation hook
+```typescript
+    const updateReflect = useUpdateReflectMutation();
+
+    // example of a reflect's data
+    const reflectData = {
+      id: 'some-id',
+      content: {
+        active: true,
+        beamID: 'CeramicStreamID',
+        content: {
+          property: 'test',
+          provider: 'test',
+          value: 'test',
+        },
+        createdAt: Date.now(),
+        isReply: true
+      },
+    };
+
+    updateReflect.mutate({
+      i: reflectData,
+    });
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `i` | `UpdateReflectInput` |
+
+#### Returns
+
+ `UseMutationResult`<[`Types.UpdateReflectMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L122), `unknown`\>
+
+#### Defined in
+
+[ui/hooks/src/generated/hooks-new.ts:694](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L694)
 
 ___
 
@@ -3435,7 +3480,7 @@ Hook to create a reflect of a reflect.
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:713](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L713)
+[ui/hooks/src/generated/hooks-new.ts:721](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L721)
 
 ___
 
@@ -3476,7 +3521,7 @@ Hook to update a reflect of a reflection.
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:713](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L740)
+[ui/hooks/src/generated/hooks-new.ts:748](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L748)
 
 ___
 

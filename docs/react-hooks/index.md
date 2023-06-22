@@ -133,6 +133,7 @@ Currently we have the following hooks:
 - [`useGetReflectReflectionsQuery`](/react-hooks/modules#usegetreflectreflectionsquery)
 - [`useInfiniteGetReflectReflectionsQuery`](/react-hooks/modules#useinfinitegetreflectreflectionsquery)
 - [`useCreateReflectMutation`](/react-hooks/modules#usecreatereflectmutation)
+- [`useUpdateReflectMutation`](/react-hooks/modules#useupdatereflectmutation)
 - [`useCreateReflectReflectionMutation`](/react-hooks/modules#usecreatereflectreflectionmutation)
 - [`useUpdateReflectReflectionMutation`](/react-hooks/modules#useupdatereflectreflectionmutation)
 
