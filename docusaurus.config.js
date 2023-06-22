@@ -48,9 +48,9 @@ const config = {
       "docusaurus-plugin-typedoc",
       {
         id: "akasha-sdk-main",
-        entryPoints: ["./akasha-framework/sdk/src/index.ts"],
+        entryPoints: ["./akasha-core/sdk/src/index.ts"],
         entryPointStrategy: "expand",
-        tsconfig: "akasha-framework/sdk/tsconfig.json",
+        tsconfig: "akasha-core/sdk/tsconfig.json",
         readme: "none",
         out: "./sdk/api-reference",
         name: "AKASHA SDK reference",
@@ -78,9 +78,9 @@ const config = {
       "docusaurus-plugin-typedoc",
       {
         id: "akasha-ui-hooks",
-        entryPoints: ["./akasha-framework/ui/hooks/src/index.ts"],
+        entryPoints: ["./akasha-core/ui/hooks/src/index.ts"],
         entryPointStrategy: "expand",
-        tsconfig: "./akasha-framework/ui/hooks/tsconfig.json",
+        tsconfig: "./akasha-core/ui/hooks/tsconfig.json",
         readme: "docs/react-hooks/_hooks-list_.md",
         out: "./react-hooks",
         name: "React hooks",
