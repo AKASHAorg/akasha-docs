@@ -53,7 +53,7 @@ We only support [React](https://reactjs.org/) as the UI library for now.
 
 :::
 
-### Creating a basic `Hello ethereum world` app
+### Creating a basic `Hello Akasha World` app
 
 From the root of the repository you have cloned in the [quickstart guide](/dev-quickstart):
 
@@ -177,7 +177,7 @@ export const unmount = reactLifecycles.unmount;
 import * as React from "react";
 
 const HelloEthereumWorldApp = (props) => {
-  return <div>Hello Ethereum World</div>;
+  return <div>Hello Akasha World</div>;
 };
 
 export default HelloEthereumWorldApp;

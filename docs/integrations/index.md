@@ -11,7 +11,7 @@ Good examples, still not available, could be upvoting or downvoting a comment, t
 
 Integrations are available in the **Integration Center**, a digital distribution service or marketplace that allows Ethereans to browse and manage them (install, uninstall, activate or deactivate).
 
-We believe that these integrations done by and for the Ethereum community will greatly impact how humans interact, create and exchange information. You can contribute and bring your ideas in Ethereum World by creating as many integrations as you want, publishing them in the Integration Center and making them available to a growing community of users.
+We believe that these integrations done by and for the Ethereum community will greatly impact how humans interact, create and exchange information. You can contribute and bring your ideas in Akasha World by creating as many integrations as you want, publishing them in the Integration Center and making them available to a growing community of users.
 
 Currently we have 2 different types of integrations:
 
