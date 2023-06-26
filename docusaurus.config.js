@@ -57,7 +57,7 @@ const config = {
         categorizeByGroup: false,
         // plugin
         plugin: ["typedoc-plugin-missing-exports"],
-        internalNamespace: "sdk",
+        internalModule: "sdk",
         // end_plugin
         excludeInternal: true,
         categoryOrder: ["API", "Services"],
