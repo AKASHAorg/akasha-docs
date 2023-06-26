@@ -45,7 +45,7 @@ description: "Test Description"
 - [UserProfile\_Response](../interfaces/typings.UserProfile_Response.md)
 - [VideoPreview\_Response](../interfaces/typings.VideoPreview_Response.md)
 
-## Type aliases
+## Type Aliases
 
 ### AWF\_APP\_BUILD\_MANIFEST
 
@@ -205,12 +205,12 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `author` | [`Scalars`](sdk.md#scalars)[``"String"``] |
-| `enabled` | [`Scalars`](sdk.md#scalars)[``"Boolean"``] |
-| `id` | [`Scalars`](sdk.md#scalars)[``"String"``] |
-| `integrationType` | [`Scalars`](sdk.md#scalars)[``"Int"``] |
-| `latestReleaseId` | [`Scalars`](sdk.md#scalars)[``"String"``] |
-| `name` | [`Scalars`](sdk.md#scalars)[``"String"``] |
+| `author` | [`Scalars`](../modules/sdk.md#scalars)[``"String"``] |
+| `enabled` | [`Scalars`](../modules/sdk.md#scalars)[``"Boolean"``] |
+| `id` | [`Scalars`](../modules/sdk.md#scalars)[``"String"``] |
+| `integrationType` | [`Scalars`](../modules/sdk.md#scalars)[``"Int"``] |
+| `latestReleaseId` | [`Scalars`](../modules/sdk.md#scalars)[``"String"``] |
+| `name` | [`Scalars`](../modules/sdk.md#scalars)[``"String"``] |
 
 #### Defined in
 
@@ -272,23 +272,21 @@ ___
 
  **ReleaseInfo**: `Object`
 
-Warning:  the following exported types are auto generated
-
 #### Type declaration
 
 | Name | Type |
 | :------ | :------ |
-| `author` | [`Scalars`](sdk.md#scalars)[``"String"``] |
-| `createdAt?` | [`Maybe`](sdk.md#maybe)<[`Scalars`](sdk.md#scalars)[``"Int"``]\> |
-| `enabled` | [`Scalars`](sdk.md#scalars)[``"Boolean"``] |
-| `id?` | [`Maybe`](sdk.md#maybe)<[`Scalars`](sdk.md#scalars)[``"String"``]\> |
-| `integrationID` | [`Scalars`](sdk.md#scalars)[``"String"``] |
-| `integrationType` | [`Scalars`](sdk.md#scalars)[``"Int"``] |
-| `links?` | [`Maybe`](sdk.md#maybe)<[`InfoLink`](sdk.md#infolink)\> |
-| `manifestData` | [`ManifestInfo`](sdk.md#manifestinfo) |
-| `name` | [`Scalars`](sdk.md#scalars)[``"String"``] |
-| `sources?` | [`Maybe`](sdk.md#maybe)<[`Scalars`](sdk.md#scalars)[``"String"``][]\> |
-| `version` | [`Scalars`](sdk.md#scalars)[``"String"``] |
+| `author` | [`Scalars`](../modules/sdk.md#scalars)[``"String"``] |
+| `createdAt?` | [`Maybe`](../modules/sdk.md#maybe)<[`Scalars`](../modules/sdk.md#scalars)[``"Int"``]\> |
+| `enabled` | [`Scalars`](../modules/sdk.md#scalars)[``"Boolean"``] |
+| `id?` | [`Maybe`](../modules/sdk.md#maybe)<[`Scalars`](../modules/sdk.md#scalars)[``"String"``]\> |
+| `integrationID` | [`Scalars`](../modules/sdk.md#scalars)[``"String"``] |
+| `integrationType` | [`Scalars`](../modules/sdk.md#scalars)[``"Int"``] |
+| `links?` | [`Maybe`](../modules/sdk.md#maybe)<[`InfoLink`](../modules/sdk.md#infolink)\> |
+| `manifestData` | [`ManifestInfo`](../modules/sdk.md#manifestinfo) |
+| `name` | [`Scalars`](../modules/sdk.md#scalars)[``"String"``] |
+| `sources?` | [`Maybe`](../modules/sdk.md#maybe)<[`Scalars`](../modules/sdk.md#scalars)[``"String"``][]\> |
+| `version` | [`Scalars`](../modules/sdk.md#scalars)[``"String"``] |
 
 #### Defined in
 

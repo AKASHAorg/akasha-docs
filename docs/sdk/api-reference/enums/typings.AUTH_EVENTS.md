@@ -11,11 +11,11 @@ description: "Test Description"
 
 [typings](../namespaces/typings.md).AUTH_EVENTS
 
-## Enumeration members
+## Enumeration Members
 
 ### CONNECT\_ADDRESS
 
- **CONNECT\_ADDRESS** = `"#auth#connectAddress"`
+ **CONNECT\_ADDRESS** = ``"#auth#connectAddress"``
 
 #### Defined in
 
@@ -25,7 +25,7 @@ ___
 
 ### CONNECT\_ADDRESS\_SUCCESS
 
- **CONNECT\_ADDRESS\_SUCCESS** = `"#auth#connectAddress#success"`
+ **CONNECT\_ADDRESS\_SUCCESS** = ``"#auth#connectAddress#success"``
 
 #### Defined in
 
@@ -35,7 +35,7 @@ ___
 
 ### MARK\_MSG\_READ
 
- **MARK\_MSG\_READ** = `"#auth#markMsgRead"`
+ **MARK\_MSG\_READ** = ``"#auth#markMsgRead"``
 
 #### Defined in
 
@@ -45,7 +45,7 @@ ___
 
 ### NEW\_MESSAGES
 
- **NEW\_MESSAGES** = `"#auth#hasNewMessages"`
+ **NEW\_MESSAGES** = ``"#auth#hasNewMessages"``
 
 #### Defined in
 
@@ -55,7 +55,7 @@ ___
 
 ### NEW\_NOTIFICATIONS
 
- **NEW\_NOTIFICATIONS** = `"#auth#hasNewNotifications"`
+ **NEW\_NOTIFICATIONS** = ``"#auth#hasNewNotifications"``
 
 #### Defined in
 
@@ -65,7 +65,7 @@ ___
 
 ### READY
 
- **READY** = `"#auth#ready"`
+ **READY** = ``"#auth#ready"``
 
 #### Defined in
 
@@ -75,7 +75,7 @@ ___
 
 ### SIGN\_AUTH\_MESSAGE
 
- **SIGN\_AUTH\_MESSAGE** = `"#auth#signAuthMessage"`
+ **SIGN\_AUTH\_MESSAGE** = ``"#auth#signAuthMessage"``
 
 #### Defined in
 
@@ -85,7 +85,7 @@ ___
 
 ### SIGN\_AUTH\_MESSAGE\_SUCCESS
 
- **SIGN\_AUTH\_MESSAGE\_SUCCESS** = `"#auth#signAuthMessage#success"`
+ **SIGN\_AUTH\_MESSAGE\_SUCCESS** = ``"#auth#signAuthMessage#success"``
 
 #### Defined in
 
@@ -95,7 +95,7 @@ ___
 
 ### SIGN\_COMPOSED\_MESSAGE
 
- **SIGN\_COMPOSED\_MESSAGE** = `"#auth#signComposedMessage"`
+ **SIGN\_COMPOSED\_MESSAGE** = ``"#auth#signComposedMessage"``
 
 #### Defined in
 
@@ -105,7 +105,7 @@ ___
 
 ### SIGN\_COMPOSED\_MESSAGE\_SUCCESS
 
- **SIGN\_COMPOSED\_MESSAGE\_SUCCESS** = `"#auth#signComposedMessage#success"`
+ **SIGN\_COMPOSED\_MESSAGE\_SUCCESS** = ``"#auth#signComposedMessage#success"``
 
 #### Defined in
 
@@ -115,7 +115,7 @@ ___
 
 ### SIGN\_IN
 
- **SIGN\_IN** = `"#auth#signIn"`
+ **SIGN\_IN** = ``"#auth#signIn"``
 
 #### Defined in
 
@@ -125,7 +125,7 @@ ___
 
 ### SIGN\_OUT
 
- **SIGN\_OUT** = `"#auth#signOut"`
+ **SIGN\_OUT** = ``"#auth#signOut"``
 
 #### Defined in
 
@@ -135,7 +135,7 @@ ___
 
 ### SIGN\_TOKEN\_MESSAGE
 
- **SIGN\_TOKEN\_MESSAGE** = `"#auth#signTokenMessage"`
+ **SIGN\_TOKEN\_MESSAGE** = ``"#auth#signTokenMessage"``
 
 #### Defined in
 
@@ -145,7 +145,7 @@ ___
 
 ### SIGN\_TOKEN\_MESSAGE\_SUCCESS
 
- **SIGN\_TOKEN\_MESSAGE\_SUCCESS** = `"#auth#signTokenMessage#success"`
+ **SIGN\_TOKEN\_MESSAGE\_SUCCESS** = ``"#auth#signTokenMessage#success"``
 
 #### Defined in
 
@@ -155,7 +155,7 @@ ___
 
 ### WAIT\_FOR\_AUTH
 
- **WAIT\_FOR\_AUTH** = `"#auth#waitForAuth"`
+ **WAIT\_FOR\_AUTH** = ``"#auth#waitForAuth"``
 
 #### Defined in
 

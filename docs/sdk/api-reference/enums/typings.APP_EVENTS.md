@@ -11,11 +11,11 @@ description: "Test Description"
 
 [typings](../namespaces/typings.md).APP_EVENTS
 
-## Enumeration members
+## Enumeration Members
 
 ### INFO\_READY
 
- **INFO\_READY** = `"#integration#ReleaseInfoReady"`
+ **INFO\_READY** = ``"#integration#ReleaseInfoReady"``
 
 #### Defined in
 
@@ -25,7 +25,7 @@ ___
 
 ### REMOVED
 
- **REMOVED** = `"#integration#Removed"`
+ **REMOVED** = ``"#integration#Removed"``
 
 #### Defined in
 
@@ -35,7 +35,7 @@ ___
 
 ### TOGGLE\_STATUS
 
- **TOGGLE\_STATUS** = `"#integration#ToggleStatus"`
+ **TOGGLE\_STATUS** = ``"#integration#ToggleStatus"``
 
 #### Defined in
 
@@ -45,7 +45,7 @@ ___
 
 ### UPDATE\_CONFIG
 
- **UPDATE\_CONFIG** = `"#integration#UpdateConfig"`
+ **UPDATE\_CONFIG** = ``"#integration#UpdateConfig"``
 
 #### Defined in
 
@@ -55,7 +55,7 @@ ___
 
 ### UPDATE\_VERSION
 
- **UPDATE\_VERSION** = `"#integration#UpdateVersion"`
+ **UPDATE\_VERSION** = ``"#integration#UpdateVersion"``
 
 #### Defined in
 

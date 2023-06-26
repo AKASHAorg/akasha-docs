@@ -9,7 +9,7 @@ hide_title: true
 description: "Test Description"
 ---
 
-[sdk](../namespaces/sdk.md).IntegrationSchema
+[sdk](../modules/sdk.md).IntegrationSchema
 
 ## Properties
 
@@ -55,7 +55,7 @@ ___
 
 ### sources
 
- **sources**: `undefined` \| [`Maybe`](../namespaces/sdk.md#maybe)<`string`[]\>
+ **sources**: `undefined` \| [`Maybe`](../modules/sdk.md#maybe)<`string`[]\>
 
 #### Defined in
 

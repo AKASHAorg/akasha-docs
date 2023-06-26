@@ -35,7 +35,7 @@ ___
 
 ### content
 
- **content**: [[`DataProviderInput`](../namespaces/sdk.md#dataproviderinput)]
+ **content**: [[`DataProviderInput`](../modules/sdk.md#dataproviderinput)]
 
 #### Defined in
 

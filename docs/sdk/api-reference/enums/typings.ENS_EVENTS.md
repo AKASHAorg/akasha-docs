@@ -11,11 +11,11 @@ description: "Test Description"
 
 [typings](../namespaces/typings.md).ENS_EVENTS
 
-## Enumeration members
+## Enumeration Members
 
 ### CLAIM
 
- **CLAIM** = `"#ens#Claim"`
+ **CLAIM** = ``"#ens#Claim"``
 
 #### Defined in
 
@@ -25,7 +25,7 @@ ___
 
 ### REGISTER
 
- **REGISTER** = `"#ens#Register"`
+ **REGISTER** = ``"#ens#Register"``
 
 #### Defined in
 

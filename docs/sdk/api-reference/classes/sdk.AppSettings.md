@@ -9,7 +9,7 @@ hide_title: true
 description: "Test Description"
 ---
 
-[sdk](../namespaces/sdk.md).AppSettings
+[sdk](../modules/sdk.md).AppSettings
 
 ## Constructors
 
@@ -50,7 +50,7 @@ Returns an app configuration object
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:53](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L53)
+[sdk/src/settings/apps.ts:52](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L52)
 
 ___
 
@@ -91,7 +91,7 @@ Persist installed app configuration for the current user
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:77](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L77)
+[sdk/src/settings/apps.ts:73](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L73)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:138](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L138)
+[sdk/src/settings/apps.ts:137](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L137)
 
 ___
 
@@ -133,7 +133,7 @@ Uninstall app by name
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:126](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L126)
+[sdk/src/settings/apps.ts:125](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L125)
 
 ___
 

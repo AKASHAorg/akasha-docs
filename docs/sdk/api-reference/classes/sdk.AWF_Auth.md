@@ -9,7 +9,7 @@ hide_title: true
 description: "Test Description"
 ---
 
-[sdk](../namespaces/sdk.md).AWF_Auth
+[sdk](../modules/sdk.md).AWF_Auth
 
 # sdk.api.auth
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:292](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L292)
+[sdk/src/auth/index.ts:291](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L291)
 
 ___
 
@@ -159,7 +159,7 @@ validate and add pubKey to the dev account
 
 #### Defined in
 
-[sdk/src/auth/index.ts:534](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L534)
+[sdk/src/auth/index.ts:533](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L533)
 
 ___
 
@@ -181,7 +181,7 @@ Utility method for sending mutation graphql requests
 
 #### Defined in
 
-[sdk/src/auth/index.ts:434](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L434)
+[sdk/src/auth/index.ts:428](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L428)
 
 ___
 
@@ -204,7 +204,7 @@ Throws an UserNotRegistered error for addresses that are not registered
 
 #### Defined in
 
-[sdk/src/auth/index.ts:138](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L138)
+[sdk/src/auth/index.ts:137](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L137)
 
 ___
 
@@ -224,7 +224,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:308](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L308)
+[sdk/src/auth/index.ts:307](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L307)
 
 ___
 
@@ -402,7 +402,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:622](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L622)
+[sdk/src/auth/index.ts:621](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L621)
 
 ___
 
@@ -422,7 +422,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:551](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L551)
+[sdk/src/auth/index.ts:550](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L550)
 
 ___
 
@@ -443,7 +443,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:580](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L580)
+[sdk/src/auth/index.ts:579](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L579)
 
 ___
 
@@ -476,9 +476,9 @@ Sign data with the identity key
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `data` | `string` \| `Record`<`string`, `unknown`\> | - |
+| Name | Type |
+| :------ | :------ |
+| `data` | `string` \| `Record`<`string`, `unknown`\> |
 
 #### Returns
 
@@ -486,7 +486,7 @@ Sign data with the identity key
 
 #### Defined in
 
-[sdk/src/auth/index.ts:394](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L394)
+[sdk/src/auth/index.ts:393](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L393)
 
 ___
 
@@ -509,7 +509,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:157](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L157)
+[sdk/src/auth/index.ts:144](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L144)
 
 ___
 
@@ -545,7 +545,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:478](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L478)
+[sdk/src/auth/index.ts:477](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L477)
 
 ___
 
@@ -565,7 +565,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:641](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L641)
+[sdk/src/auth/index.ts:640](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L640)
 
 ___
 
@@ -587,7 +587,7 @@ Verify if a signature was made by a specific Public Key
 
 #### Defined in
 
-[sdk/src/auth/index.ts:416](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L416)
+[sdk/src/auth/index.ts:409](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L409)
 
 ___
 

@@ -11,11 +11,11 @@ description: "Test Description"
 
 [typings](../namespaces/typings.md).WEB3_EVENTS
 
-## Enumeration members
+## Enumeration Members
 
 ### ACCOUNT\_CHANGED
 
- **ACCOUNT\_CHANGED** = `"#web3#accountChanged"`
+ **ACCOUNT\_CHANGED** = ``"#web3#accountChanged"``
 
 #### Defined in
 
@@ -25,7 +25,7 @@ ___
 
 ### CHAIN\_CHANGED
 
- **CHAIN\_CHANGED** = `"#web3#chainChanged"`
+ **CHAIN\_CHANGED** = ``"#web3#chainChanged"``
 
 #### Defined in
 
@@ -35,7 +35,7 @@ ___
 
 ### CONNECTED
 
- **CONNECTED** = `"#web3#connected"`
+ **CONNECTED** = ``"#web3#connected"``
 
 #### Defined in
 
@@ -45,7 +45,7 @@ ___
 
 ### DISCONNECTED
 
- **DISCONNECTED** = `"#web3#disconnected"`
+ **DISCONNECTED** = ``"#web3#disconnected"``
 
 #### Defined in
 
@@ -55,7 +55,7 @@ ___
 
 ### WC\_MODAL\_CLOSED
 
- **WC\_MODAL\_CLOSED** = `"#web3#modalClosed"`
+ **WC\_MODAL\_CLOSED** = ``"#web3#modalClosed"``
 
 #### Defined in
 

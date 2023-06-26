@@ -9,7 +9,7 @@ hide_title: true
 description: "Test Description"
 ---
 
-[sdk](../namespaces/sdk.md).AWF_Tags
+[sdk](../modules/sdk.md).AWF_Tags
 
 ## Constructors
 
@@ -34,7 +34,7 @@ description: "Test Description"
 
 ### createTag
 
-**createTag**(`tagName`): `Promise`<[`CreateTagMutation`](../namespaces/sdk.md#createtagmutation)\>
+**createTag**(`tagName`): `Promise`<[`CreateTagMutation`](../modules/sdk.md#createtagmutation)\>
 
 #### Parameters
 
@@ -44,17 +44,17 @@ description: "Test Description"
 
 #### Returns
 
-`Promise`<[`CreateTagMutation`](../namespaces/sdk.md#createtagmutation)\>
+`Promise`<[`CreateTagMutation`](../modules/sdk.md#createtagmutation)\>
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:69](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/tags.ts#L69)
+[sdk/src/posts/tags.ts:68](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/tags.ts#L68)
 
 ___
 
 ### getTag
 
-**getTag**(`tagName`): `Promise`<`undefined` \| { `data`: [`GetTagQuery`](../namespaces/sdk.md#gettagquery)  }\>
+**getTag**(`tagName`): `Promise`<`undefined` \| { `data`: [`GetTagQuery`](../modules/sdk.md#gettagquery)  }\>
 
 #### Parameters
 
@@ -64,17 +64,17 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| { `data`: [`GetTagQuery`](../namespaces/sdk.md#gettagquery)  }\>
+`Promise`<`undefined` \| { `data`: [`GetTagQuery`](../modules/sdk.md#gettagquery)  }\>
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:37](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/tags.ts#L37)
+[sdk/src/posts/tags.ts:36](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/tags.ts#L36)
 
 ___
 
 ### getTags
 
-**getTags**(`opt`): `Promise`<[`GetTagsQuery`](../namespaces/sdk.md#gettagsquery)\>
+**getTags**(`opt`): `Promise`<[`GetTagsQuery`](../modules/sdk.md#gettagsquery)\>
 
 #### Parameters
 
@@ -86,23 +86,23 @@ ___
 
 #### Returns
 
-`Promise`<[`GetTagsQuery`](../namespaces/sdk.md#gettagsquery)\>
+`Promise`<[`GetTagsQuery`](../modules/sdk.md#gettagsquery)\>
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:51](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/tags.ts#L51)
+[sdk/src/posts/tags.ts:50](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/tags.ts#L50)
 
 ___
 
 ### getTrending
 
-**getTrending**(): `Promise`<[`SearchTagsQuery`](../namespaces/sdk.md#searchtagsquery)\>
+**getTrending**(): `Promise`<[`SearchTagsQuery`](../modules/sdk.md#searchtagsquery)\>
 
 Returns most recent used tags
 
 #### Returns
 
-`Promise`<[`SearchTagsQuery`](../namespaces/sdk.md#searchtagsquery)\>
+`Promise`<[`SearchTagsQuery`](../modules/sdk.md#searchtagsquery)\>
 
 #### Defined in
 
@@ -112,7 +112,7 @@ ___
 
 ### searchTags
 
-**searchTags**(`name`): `Promise`<[`SearchTagsQuery`](../namespaces/sdk.md#searchtagsquery)\>
+**searchTags**(`name`): `Promise`<[`SearchTagsQuery`](../modules/sdk.md#searchtagsquery)\>
 
 #### Parameters
 
@@ -122,8 +122,8 @@ ___
 
 #### Returns
 
-`Promise`<[`SearchTagsQuery`](../namespaces/sdk.md#searchtagsquery)\>
+`Promise`<[`SearchTagsQuery`](../modules/sdk.md#searchtagsquery)\>
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:60](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/tags.ts#L60)
+[sdk/src/posts/tags.ts:59](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/tags.ts#L59)

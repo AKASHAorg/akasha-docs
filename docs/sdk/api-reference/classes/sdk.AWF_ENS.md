@@ -9,7 +9,7 @@ hide_title: true
 description: "Test Description"
 ---
 
-[sdk](../namespaces/sdk.md).AWF_ENS
+[sdk](../modules/sdk.md).AWF_ENS
 
 ## Constructors
 
@@ -71,13 +71,13 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:212](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/registry/ens.ts#L212)
+[sdk/src/registry/ens.ts:211](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/registry/ens.ts#L211)
 
 ___
 
 ### isAvailable
 
-**isAvailable**(`name`): `Promise`<[`IsUserNameAvailableQuery`](../namespaces/sdk.md#isusernameavailablequery)\>
+**isAvailable**(`name`): `Promise`<[`IsUserNameAvailableQuery`](../modules/sdk.md#isusernameavailablequery)\>
 
 #### Parameters
 
@@ -87,11 +87,11 @@ ___
 
 #### Returns
 
-`Promise`<[`IsUserNameAvailableQuery`](../namespaces/sdk.md#isusernameavailablequery)\>
+`Promise`<[`IsUserNameAvailableQuery`](../modules/sdk.md#isusernameavailablequery)\>
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:151](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/registry/ens.ts#L151)
+[sdk/src/registry/ens.ts:150](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/registry/ens.ts#L150)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:84](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/registry/ens.ts#L84)
+[sdk/src/registry/ens.ts:83](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/registry/ens.ts#L83)
 
 ___
 
@@ -133,7 +133,7 @@ Returns ENS name associated with the ethereum address
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:175](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/registry/ens.ts#L175)
+[sdk/src/registry/ens.ts:174](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/registry/ens.ts#L174)
 
 ___
 
@@ -155,7 +155,7 @@ Returns eth address associated with the ens name
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:196](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/registry/ens.ts#L196)
+[sdk/src/registry/ens.ts:195](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/registry/ens.ts#L195)
 
 ___
 
@@ -189,4 +189,4 @@ ___
 
 #### Defined in
 
-[sdk/src/registry/ens.ts:140](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/registry/ens.ts#L140)
+[sdk/src/registry/ens.ts:139](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/registry/ens.ts#L139)

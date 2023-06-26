@@ -9,7 +9,7 @@ hide_title: true
 description: "Test Description"
 ---
 
-[sdk](../namespaces/sdk.md).default
+[sdk](../modules/sdk.md).default
 
 ## Constructors
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/lit.ts:88](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/lit.ts#L88)
+[sdk/src/common/lit.ts:87](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/lit.ts#L87)
 
 ___
 
@@ -109,4 +109,4 @@ ___
 
 #### Defined in
 
-[sdk/src/common/lit.ts:62](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/lit.ts#L62)
+[sdk/src/common/lit.ts:61](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/lit.ts#L61)

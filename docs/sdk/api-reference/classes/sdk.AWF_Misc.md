@@ -9,7 +9,7 @@ hide_title: true
 description: "Test Description"
 ---
 
-[sdk](../namespaces/sdk.md).AWF_Misc
+[sdk](../modules/sdk.md).AWF_Misc
 
 ## Constructors
 
@@ -50,7 +50,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/common/misc.ts:23](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/misc.ts#L23)
+[sdk/src/common/misc.ts:22](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/misc.ts#L22)
 
 ___
 

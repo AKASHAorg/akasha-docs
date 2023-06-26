@@ -9,7 +9,7 @@ hide_title: true
 description: "Test Description"
 ---
 
-[sdk](../namespaces/sdk.md).AWF_Profile
+[sdk](../modules/sdk.md).AWF_Profile
 
 ## Constructors
 
@@ -53,7 +53,7 @@ Mutation request to add a profile provider to the profile object
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `opt` | [`DataProviderInput`](../namespaces/sdk.md#dataproviderinput)[] | DataProviderInput |
+| `opt` | [`DataProviderInput`](../modules/sdk.md#dataproviderinput)[] | DataProviderInput |
 
 #### Returns
 
@@ -61,7 +61,7 @@ Mutation request to add a profile provider to the profile object
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:210](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L210)
+[sdk/src/profiles/index.ts:209](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L209)
 
 ___
 
@@ -89,7 +89,7 @@ Create a new profile
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `profileData` | [`ProfileInput`](../namespaces/sdk.md#profileinput) | [ProfileInput](../namespaces/sdk.md#profileinput) - profileData.name is mandatory |
+| `profileData` | [`ProfileInput`](../modules/sdk.md#profileinput) | [ProfileInput](../modules/sdk.md#profileinput) - profileData.name is mandatory |
 
 #### Returns
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:254](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L254)
+[sdk/src/profiles/index.ts:253](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L253)
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:387](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L387)
+[sdk/src/profiles/index.ts:386](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L386)
 
 ___
 
@@ -181,7 +181,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:398](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L398)
+[sdk/src/profiles/index.ts:397](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L397)
 
 ___
 
@@ -223,7 +223,7 @@ Retrieve subscription list
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:407](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L407)
+[sdk/src/profiles/index.ts:406](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L406)
 
 ___
 
@@ -261,7 +261,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:245](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L245)
+[sdk/src/profiles/index.ts:239](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L239)
 
 ___
 
@@ -297,7 +297,7 @@ Get a list of profiles. Defaults to last 5 profiles.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `opt?` | [`Exact`](../namespaces/sdk.md#exact)<{ `after?`: [`InputMaybe`](../namespaces/sdk.md#inputmaybe)<`string`\> ; `before?`: [`InputMaybe`](../namespaces/sdk.md#inputmaybe)<`string`\> ; `first?`: [`InputMaybe`](../namespaces/sdk.md#inputmaybe)<`number`\> ; `last?`: [`InputMaybe`](../namespaces/sdk.md#inputmaybe)<`number`\>  }\> | GetProfilesQueryVariables |
+| `opt?` | [`Exact`](../modules/sdk.md#exact)<{ `after?`: [`InputMaybe`](../modules/sdk.md#inputmaybe)<`string`\> ; `before?`: [`InputMaybe`](../modules/sdk.md#inputmaybe)<`string`\> ; `first?`: [`InputMaybe`](../modules/sdk.md#inputmaybe)<`number`\> ; `last?`: [`InputMaybe`](../modules/sdk.md#inputmaybe)<`number`\>  }\> | GetProfilesQueryVariables |
 
 #### Returns
 
@@ -353,7 +353,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:376](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L376)
+[sdk/src/profiles/index.ts:375](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L375)
 
 ___
 
@@ -375,7 +375,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:272](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L272)
+[sdk/src/profiles/index.ts:271](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L271)
 
 ___
 
@@ -395,7 +395,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:367](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L367)
+[sdk/src/profiles/index.ts:366](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L366)
 
 ___
 
@@ -407,7 +407,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `opt` | [`DataProviderInput`](../namespaces/sdk.md#dataproviderinput)[] | DataProviderInput |
+| `opt` | [`DataProviderInput`](../modules/sdk.md#dataproviderinput)[] | DataProviderInput |
 
 #### Returns
 
@@ -415,7 +415,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:222](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L222)
+[sdk/src/profiles/index.ts:221](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L221)
 
 ___
 
@@ -435,7 +435,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:231](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L231)
+[sdk/src/profiles/index.ts:230](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L230)
 
 ___
 
@@ -485,7 +485,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:335](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L335)
+[sdk/src/profiles/index.ts:334](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L334)
 
 ___
 
@@ -505,7 +505,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:351](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L351)
+[sdk/src/profiles/index.ts:350](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L350)
 
 ___
 
@@ -525,7 +525,7 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:263](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L263)
+[sdk/src/profiles/index.ts:262](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L262)
 
 ___
 
@@ -535,16 +535,20 @@ ___
 
 Update a profile using the profile id.
 
-**`remarks`** The id can be found on the root object returned from getProfileByDid call
+**`Remarks`**
 
-**`see`** [GetProfileByDidQuery](../namespaces/sdk.md#getprofilebydidquery) for the profileData.id
+The id can be found on the root object returned from getProfileByDid call
+
+**`See`**
+
+[GetProfileByDidQuery](../modules/sdk.md#getprofilebydidquery) for the profileData.id
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `id` | `string` | string - profileData.id received from getProfileByDid call |
-| `profileData` | [`ProfileInput`](../namespaces/sdk.md#profileinput) | ProfileInput - fields of the profile to update |
+| `profileData` | [`ProfileInput`](../modules/sdk.md#profileinput) | ProfileInput - fields of the profile to update |
 
 #### Returns
 

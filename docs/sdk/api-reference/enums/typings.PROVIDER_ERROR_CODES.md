@@ -11,11 +11,11 @@ description: "Test Description"
 
 [typings](../namespaces/typings.md).PROVIDER_ERROR_CODES
 
-## Enumeration members
+## Enumeration Members
 
 ### RequestTimeout
 
- **RequestTimeout** = `4003`
+ **RequestTimeout** = ``4003``
 
 #### Defined in
 
@@ -25,7 +25,7 @@ ___
 
 ### UserRejected
 
- **UserRejected** = `4001`
+ **UserRejected** = ``4001``
 
 #### Defined in
 
@@ -35,7 +35,7 @@ ___
 
 ### WrongNetwork
 
- **WrongNetwork** = `4002`
+ **WrongNetwork** = ``4002``
 
 #### Defined in
 

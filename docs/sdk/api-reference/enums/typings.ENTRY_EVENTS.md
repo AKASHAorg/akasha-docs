@@ -11,11 +11,11 @@ description: "Test Description"
 
 [typings](../namespaces/typings.md).ENTRY_EVENTS
 
-## Enumeration members
+## Enumeration Members
 
 ### CREATE
 
- **CREATE** = `"#entries#Create"`
+ **CREATE** = ``"#entries#Create"``
 
 #### Defined in
 
@@ -25,7 +25,7 @@ ___
 
 ### EDIT
 
- **EDIT** = `"#entries#Edit"`
+ **EDIT** = ``"#entries#Edit"``
 
 #### Defined in
 
@@ -35,7 +35,7 @@ ___
 
 ### REMOVE
 
- **REMOVE** = `"#entries#Remove"`
+ **REMOVE** = ``"#entries#Remove"``
 
 #### Defined in
 

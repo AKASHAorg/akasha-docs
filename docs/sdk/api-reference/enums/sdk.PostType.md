@@ -9,13 +9,13 @@ hide_title: true
 description: "Test Description"
 ---
 
-[sdk](../namespaces/sdk.md).PostType
+[sdk](../modules/sdk.md).PostType
 
-## Enumeration members
+## Enumeration Members
 
 ### App
 
- **App** = `"APP"`
+ **App** = ``"APP"``
 
 #### Defined in
 
@@ -25,7 +25,7 @@ ___
 
 ### Article
 
- **Article** = `"ARTICLE"`
+ **Article** = ``"ARTICLE"``
 
 #### Defined in
 
@@ -35,7 +35,7 @@ ___
 
 ### Default
 
- **Default** = `"DEFAULT"`
+ **Default** = ``"DEFAULT"``
 
 #### Defined in
 
@@ -45,7 +45,7 @@ ___
 
 ### Removed
 
- **Removed** = `"REMOVED"`
+ **Removed** = ``"REMOVED"``
 
 #### Defined in
 

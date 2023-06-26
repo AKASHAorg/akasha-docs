@@ -13,9 +13,12 @@ description: "Test Description"
 AKASHA SDK is a modular set of utilities and apis that can be used to build
 your own app.
 
+## Modules
+
+- [sdk](modules/sdk.md)
+
 ## Namespaces
 
-- [sdk](namespaces/sdk.md)
 - [typings](namespaces/typings.md)
 
 ## Interfaces
@@ -23,7 +26,7 @@ your own app.
 - [SDK\_API](interfaces/SDK_API.md)
 - [SDK\_Services](interfaces/SDK_Services.md)
 
-## Type aliases
+## Type Aliases
 
 ### AWF\_SDK
 
@@ -48,7 +51,8 @@ your own app.
 
 Creates a new SDK instance or returns a previusly created one.
 
-**`example`**
+**`Example`**
+
 ```ts
 import getSDK from '@akashaorg/awf-sdk';
 const sdk = getSDK();
@@ -70,7 +74,8 @@ ___
 
 Creates a new SDK instance.
 
-**`example`**
+**`Example`**
+
 ```ts
 import {init} from '@akashaorg/awf-sdk';
 const sdk = init();

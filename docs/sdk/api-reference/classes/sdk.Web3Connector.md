@@ -9,7 +9,7 @@ hide_title: true
 description: "Test Description"
 ---
 
-[sdk](../namespaces/sdk.md).Web3Connector
+[sdk](../modules/sdk.md).Web3Connector
 
 ## Constructors
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:64](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L64)
+[sdk/src/common/web3.connector.ts:63](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L63)
 
 ___
 
@@ -210,7 +210,7 @@ Enforce personal_sign method for message signature
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:127](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L127)
+[sdk/src/common/web3.connector.ts:126](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L126)
 
 ___
 

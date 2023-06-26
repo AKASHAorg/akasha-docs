@@ -9,7 +9,7 @@ hide_title: true
 description: "Test Description"
 ---
 
-[sdk](../namespaces/sdk.md).Settings
+[sdk](../modules/sdk.md).Settings
 
 ## Constructors
 
@@ -47,7 +47,7 @@ Returns the settings object for a specified service name
 
 #### Defined in
 
-[sdk/src/settings/index.ts:17](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/index.ts#L17)
+[sdk/src/settings/index.ts:16](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/index.ts#L16)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[sdk/src/settings/index.ts:52](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/index.ts#L52)
+[sdk/src/settings/index.ts:51](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/index.ts#L51)
 
 ___
 
@@ -90,4 +90,4 @@ ServiceCallResult
 
 #### Defined in
 
-[sdk/src/settings/index.ts:30](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/index.ts#L30)
+[sdk/src/settings/index.ts:29](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/index.ts#L29)

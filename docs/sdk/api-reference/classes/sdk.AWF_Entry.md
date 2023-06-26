@@ -9,7 +9,7 @@ hide_title: true
 description: "Test Description"
 ---
 
-[sdk](../namespaces/sdk.md).AWF_Entry
+[sdk](../modules/sdk.md).AWF_Entry
 
 ## Constructors
 
@@ -34,7 +34,7 @@ description: "Test Description"
 
 ### editEntry
 
-**editEntry**(`opt`): `Promise`<`undefined` \| [`EditEntryMutation`](../namespaces/sdk.md#editentrymutation)\>
+**editEntry**(`opt`): `Promise`<`undefined` \| [`EditEntryMutation`](../modules/sdk.md#editentrymutation)\>
 
 Update an existing entry
 
@@ -43,7 +43,7 @@ Update an existing entry
 | Name | Type |
 | :------ | :------ |
 | `opt` | `Object` |
-| `opt.data` | [`DataProviderInput`](../namespaces/sdk.md#dataproviderinput)[] |
+| `opt.data` | [`DataProviderInput`](../modules/sdk.md#dataproviderinput)[] |
 | `opt.entryID` | `string` |
 | `opt.post` | `Object` |
 | `opt.post.mentions?` | `string`[] |
@@ -53,17 +53,17 @@ Update an existing entry
 
 #### Returns
 
-`Promise`<`undefined` \| [`EditEntryMutation`](../namespaces/sdk.md#editentrymutation)\>
+`Promise`<`undefined` \| [`EditEntryMutation`](../modules/sdk.md#editentrymutation)\>
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:106](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L106)
+[sdk/src/posts/entry.ts:99](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L99)
 
 ___
 
 ### entriesByAuthor
 
-**entriesByAuthor**(`opt`): `Promise`<[`GetPostsByAuthorQuery`](../namespaces/sdk.md#getpostsbyauthorquery)\>
+**entriesByAuthor**(`opt`): `Promise`<[`GetPostsByAuthorQuery`](../modules/sdk.md#getpostsbyauthorquery)\>
 
 #### Parameters
 
@@ -76,17 +76,17 @@ ___
 
 #### Returns
 
-`Promise`<[`GetPostsByAuthorQuery`](../namespaces/sdk.md#getpostsbyauthorquery)\>
+`Promise`<[`GetPostsByAuthorQuery`](../modules/sdk.md#getpostsbyauthorquery)\>
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:137](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L137)
+[sdk/src/posts/entry.ts:136](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L136)
 
 ___
 
 ### entriesByTag
 
-**entriesByTag**(`opt`): `Promise`<[`GetPostsByTagQuery`](../namespaces/sdk.md#getpostsbytagquery)\>
+**entriesByTag**(`opt`): `Promise`<[`GetPostsByTagQuery`](../modules/sdk.md#getpostsbytagquery)\>
 
 #### Parameters
 
@@ -99,17 +99,17 @@ ___
 
 #### Returns
 
-`Promise`<[`GetPostsByTagQuery`](../namespaces/sdk.md#getpostsbytagquery)\>
+`Promise`<[`GetPostsByTagQuery`](../modules/sdk.md#getpostsbytagquery)\>
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:152](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L152)
+[sdk/src/posts/entry.ts:151](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L151)
 
 ___
 
 ### getEntries
 
-**getEntries**(`opt`): `Promise`<[`GetEntriesQuery`](../namespaces/sdk.md#getentriesquery)\>
+**getEntries**(`opt`): `Promise`<[`GetEntriesQuery`](../modules/sdk.md#getentriesquery)\>
 
 #### Parameters
 
@@ -121,17 +121,17 @@ ___
 
 #### Returns
 
-`Promise`<[`GetEntriesQuery`](../namespaces/sdk.md#getentriesquery)\>
+`Promise`<[`GetEntriesQuery`](../modules/sdk.md#getentriesquery)\>
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:59](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L59)
+[sdk/src/posts/entry.ts:58](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L58)
 
 ___
 
 ### getEntry
 
-**getEntry**(`entryId`): `Promise`<[`GetEntryQuery`](../namespaces/sdk.md#getentryquery)\>
+**getEntry**(`entryId`): `Promise`<[`GetEntryQuery`](../modules/sdk.md#getentryquery)\>
 
 #### Parameters
 
@@ -141,17 +141,17 @@ ___
 
 #### Returns
 
-`Promise`<[`GetEntryQuery`](../namespaces/sdk.md#getentryquery)\>
+`Promise`<[`GetEntryQuery`](../modules/sdk.md#getentryquery)\>
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:49](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L49)
+[sdk/src/posts/entry.ts:48](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L48)
 
 ___
 
 ### getFeedEntries
 
-**getFeedEntries**(`opt`): `Promise`<[`GetCustomFeedQuery`](../namespaces/sdk.md#getcustomfeedquery)\>
+**getFeedEntries**(`opt`): `Promise`<[`GetCustomFeedQuery`](../modules/sdk.md#getcustomfeedquery)\>
 
 #### Parameters
 
@@ -163,17 +163,17 @@ ___
 
 #### Returns
 
-`Promise`<[`GetCustomFeedQuery`](../namespaces/sdk.md#getcustomfeedquery)\>
+`Promise`<[`GetCustomFeedQuery`](../modules/sdk.md#getcustomfeedquery)\>
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:201](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L201)
+[sdk/src/posts/entry.ts:200](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L200)
 
 ___
 
 ### getLinkPreview
 
-**getLinkPreview**(`link`): `Promise`<[`GetLinkPreviewMutation`](../namespaces/sdk.md#getlinkpreviewmutation)\>
+**getLinkPreview**(`link`): `Promise`<[`GetLinkPreviewMutation`](../modules/sdk.md#getlinkpreviewmutation)\>
 
 #### Parameters
 
@@ -183,24 +183,24 @@ ___
 
 #### Returns
 
-`Promise`<[`GetLinkPreviewMutation`](../namespaces/sdk.md#getlinkpreviewmutation)\>
+`Promise`<[`GetLinkPreviewMutation`](../modules/sdk.md#getlinkpreviewmutation)\>
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:189](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L189)
+[sdk/src/posts/entry.ts:188](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L188)
 
 ___
 
 ### postEntry
 
-**postEntry**(`opt`): `Promise`<`undefined` \| [`CreateEntryMutation`](../namespaces/sdk.md#createentrymutation)\>
+**postEntry**(`opt`): `Promise`<`undefined` \| [`CreateEntryMutation`](../modules/sdk.md#createentrymutation)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opt` | `Object` |
-| `opt.data` | [`DataProviderInput`](../namespaces/sdk.md#dataproviderinput)[] |
+| `opt.data` | [`DataProviderInput`](../modules/sdk.md#dataproviderinput)[] |
 | `opt.post` | `Object` |
 | `opt.post.mentions?` | `string`[] |
 | `opt.post.quotes?` | `string`[] |
@@ -209,17 +209,17 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| [`CreateEntryMutation`](../namespaces/sdk.md#createentrymutation)\>
+`Promise`<`undefined` \| [`CreateEntryMutation`](../modules/sdk.md#createentrymutation)\>
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:69](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L69)
+[sdk/src/posts/entry.ts:68](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L68)
 
 ___
 
 ### removeEntry
 
-**removeEntry**(`entryID`): `Promise`<[`RemoveEntryMutation`](../namespaces/sdk.md#removeentrymutation)\>
+**removeEntry**(`entryID`): `Promise`<[`RemoveEntryMutation`](../modules/sdk.md#removeentrymutation)\>
 
 Remove an entry's content by ID
 
@@ -231,8 +231,8 @@ Remove an entry's content by ID
 
 #### Returns
 
-`Promise`<[`RemoveEntryMutation`](../namespaces/sdk.md#removeentrymutation)\>
+`Promise`<[`RemoveEntryMutation`](../modules/sdk.md#removeentrymutation)\>
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:167](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L167)
+[sdk/src/posts/entry.ts:166](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L166)

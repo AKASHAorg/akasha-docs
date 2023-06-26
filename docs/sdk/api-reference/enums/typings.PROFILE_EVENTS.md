@@ -11,11 +11,11 @@ description: "Test Description"
 
 [typings](../namespaces/typings.md).PROFILE_EVENTS
 
-## Enumeration members
+## Enumeration Members
 
 ### ADD\_PROVIDER
 
- **ADD\_PROVIDER** = `"#profile#AddProvider"`
+ **ADD\_PROVIDER** = ``"#profile#AddProvider"``
 
 #### Defined in
 
@@ -25,7 +25,7 @@ ___
 
 ### DEFAULT\_PROVIDER
 
- **DEFAULT\_PROVIDER** = `"#profile#DefaultProvider"`
+ **DEFAULT\_PROVIDER** = ``"#profile#DefaultProvider"``
 
 #### Defined in
 
@@ -35,7 +35,7 @@ ___
 
 ### FOLLOW
 
- **FOLLOW** = `"#profile#Follow"`
+ **FOLLOW** = ``"#profile#Follow"``
 
 #### Defined in
 
@@ -45,7 +45,7 @@ ___
 
 ### REGISTER\_USERNAME
 
- **REGISTER\_USERNAME** = `"#profile#RegisterUsername"`
+ **REGISTER\_USERNAME** = ``"#profile#RegisterUsername"``
 
 #### Defined in
 
@@ -55,7 +55,7 @@ ___
 
 ### TAG\_SUBSCRIPTION
 
- **TAG\_SUBSCRIPTION** = `"#profile#TagSubscription"`
+ **TAG\_SUBSCRIPTION** = ``"#profile#TagSubscription"``
 
 #### Defined in
 
@@ -65,7 +65,7 @@ ___
 
 ### UNFOLLOW
 
- **UNFOLLOW** = `"#profile#UnFollow"`
+ **UNFOLLOW** = ``"#profile#UnFollow"``
 
 #### Defined in
 

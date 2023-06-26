@@ -11,11 +11,11 @@ description: "Test Description"
 
 [typings](../namespaces/typings.md).INJECTED_PROVIDERS
 
-## Enumeration members
+## Enumeration Members
 
 ### CIPHER
 
- **CIPHER** = `"Cipher"`
+ **CIPHER** = ``"Cipher"``
 
 #### Defined in
 
@@ -25,7 +25,7 @@ ___
 
 ### COINBASE
 
- **COINBASE** = `"Coinbase"`
+ **COINBASE** = ``"Coinbase"``
 
 #### Defined in
 
@@ -35,7 +35,7 @@ ___
 
 ### DAPPER
 
- **DAPPER** = `"Dapper"`
+ **DAPPER** = ``"Dapper"``
 
 #### Defined in
 
@@ -45,7 +45,7 @@ ___
 
 ### FALLBACK
 
- **FALLBACK** = `"Web3"`
+ **FALLBACK** = ``"Web3"``
 
 #### Defined in
 
@@ -55,7 +55,7 @@ ___
 
 ### IM\_TOKEN
 
- **IM\_TOKEN** = `"imToken"`
+ **IM\_TOKEN** = ``"imToken"``
 
 #### Defined in
 
@@ -65,7 +65,7 @@ ___
 
 ### METAMASK
 
- **METAMASK** = `"MetaMask"`
+ **METAMASK** = ``"MetaMask"``
 
 #### Defined in
 
@@ -75,7 +75,7 @@ ___
 
 ### NIFTY
 
- **NIFTY** = `"Nifty"`
+ **NIFTY** = ``"Nifty"``
 
 #### Defined in
 
@@ -85,7 +85,7 @@ ___
 
 ### NOT\_DETECTED
 
- **NOT\_DETECTED** = `"NotDetected"`
+ **NOT\_DETECTED** = ``"NotDetected"``
 
 #### Defined in
 
@@ -95,7 +95,7 @@ ___
 
 ### OPERA
 
- **OPERA** = `"Opera"`
+ **OPERA** = ``"Opera"``
 
 #### Defined in
 
@@ -105,7 +105,7 @@ ___
 
 ### SAFE
 
- **SAFE** = `"Safe"`
+ **SAFE** = ``"Safe"``
 
 #### Defined in
 
@@ -115,7 +115,7 @@ ___
 
 ### STATUS
 
- **STATUS** = `"Status"`
+ **STATUS** = ``"Status"``
 
 #### Defined in
 
@@ -125,7 +125,7 @@ ___
 
 ### TRUST
 
- **TRUST** = `"Trust"`
+ **TRUST** = ``"Trust"``
 
 #### Defined in
 

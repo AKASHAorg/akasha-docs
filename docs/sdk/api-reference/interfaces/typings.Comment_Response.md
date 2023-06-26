@@ -25,7 +25,7 @@ ___
 
 ### author
 
- **author**: [`UserProfile`](../namespaces/sdk.md#userprofile)
+ **author**: [`UserProfile`](../modules/sdk.md#userprofile)
 
 #### Defined in
 
@@ -35,7 +35,7 @@ ___
 
 ### content
 
- **content**: [[`DataProviderInput`](../namespaces/sdk.md#dataproviderinput)]
+ **content**: [[`DataProviderInput`](../modules/sdk.md#dataproviderinput)]
 
 #### Defined in
 

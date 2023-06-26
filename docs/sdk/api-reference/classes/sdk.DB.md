@@ -9,7 +9,7 @@ hide_title: true
 description: "Test Description"
 ---
 
-[sdk](../namespaces/sdk.md).DB
+[sdk](../modules/sdk.md).DB
 
 ## Constructors
 
@@ -41,7 +41,7 @@ Create a new DB instance
 
 #### Defined in
 
-[sdk/src/db/index.ts:30](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/db/index.ts#L30)
+[sdk/src/db/index.ts:29](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/db/index.ts#L29)
 
 ___
 

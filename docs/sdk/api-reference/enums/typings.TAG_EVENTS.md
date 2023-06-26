@@ -11,11 +11,11 @@ description: "Test Description"
 
 [typings](../namespaces/typings.md).TAG_EVENTS
 
-## Enumeration members
+## Enumeration Members
 
 ### CREATE
 
- **CREATE** = `"#tags#Create"`
+ **CREATE** = ``"#tags#Create"``
 
 #### Defined in
 

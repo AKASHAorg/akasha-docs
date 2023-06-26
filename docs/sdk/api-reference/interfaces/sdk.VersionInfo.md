@@ -9,7 +9,7 @@ hide_title: true
 description: "Test Description"
 ---
 
-[sdk](../namespaces/sdk.md).VersionInfo
+[sdk](../modules/sdk.md).VersionInfo
 
 ## Properties
 

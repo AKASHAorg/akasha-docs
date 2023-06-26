@@ -9,7 +9,7 @@ hide_title: true
 description: "Test Description"
 ---
 
-[sdk](../namespaces/sdk.md).Stash
+[sdk](../modules/sdk.md).Stash
 
 ## Constructors
 
@@ -67,7 +67,7 @@ a new instance of QuickLRU
 
 #### Defined in
 
-[sdk/src/stash/index.ts:21](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/stash/index.ts#L21)
+[sdk/src/stash/index.ts:20](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/stash/index.ts#L20)
 
 ___
 

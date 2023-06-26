@@ -9,7 +9,7 @@ hide_title: true
 description: "Test Description"
 ---
 
-[sdk](../namespaces/sdk.md).Logging
+[sdk](../modules/sdk.md).Logging
 
 ## Constructors
 
@@ -41,4 +41,4 @@ ILogger
 
 #### Defined in
 
-[sdk/src/logging/index.ts:22](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/logging/index.ts#L22)
+[sdk/src/logging/index.ts:21](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/logging/index.ts#L21)

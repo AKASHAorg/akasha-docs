@@ -11,11 +11,11 @@ description: "Test Description"
 
 [typings](../namespaces/typings.md).PostType
 
-## Enumeration members
+## Enumeration Members
 
 ### APP
 
- **APP** = `2`
+ **APP** = ``2``
 
 #### Defined in
 
@@ -25,7 +25,7 @@ ___
 
 ### ARTICLE
 
- **ARTICLE** = `1`
+ **ARTICLE** = ``1``
 
 #### Defined in
 
@@ -35,7 +35,7 @@ ___
 
 ### DEFAULT
 
- **DEFAULT** = `0`
+ **DEFAULT** = ``0``
 
 #### Defined in
 

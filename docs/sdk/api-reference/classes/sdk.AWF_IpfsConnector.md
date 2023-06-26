@@ -9,7 +9,7 @@ hide_title: true
 description: "Test Description"
 ---
 
-[sdk](../namespaces/sdk.md).AWF_IpfsConnector
+[sdk](../modules/sdk.md).AWF_IpfsConnector
 
 ## Constructors
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:115](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L115)
+[sdk/src/common/ipfs.connector.ts:114](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L114)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:133](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L133)
+[sdk/src/common/ipfs.connector.ts:132](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L132)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:106](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L106)
+[sdk/src/common/ipfs.connector.ts:105](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L105)
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:124](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L124)
+[sdk/src/common/ipfs.connector.ts:123](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L123)
 
 ___
 
@@ -168,7 +168,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:67](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L67)
+[sdk/src/common/ipfs.connector.ts:66](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L66)
 
 ___
 
@@ -188,7 +188,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:88](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L88)
+[sdk/src/common/ipfs.connector.ts:87](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L87)
 
 ___
 
@@ -226,7 +226,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:152](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L152)
+[sdk/src/common/ipfs.connector.ts:151](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L151)
 
 ___
 
@@ -246,7 +246,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:146](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L146)
+[sdk/src/common/ipfs.connector.ts:145](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L145)
 
 ___
 
@@ -267,13 +267,13 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:42](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L42)
+[sdk/src/common/ipfs.connector.ts:41](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L41)
 
 ___
 
 ### validateCid
 
-**validateCid**(`hash`): { `cid`: `undefined` ; `link`: `string` = hash } \| { `cid`: `CID`<`unknown`, `number`, `number`, `Version`\> ; `link`: `undefined` = hash }
+**validateCid**(`hash`): { `cid`: `undefined` ; `link`: `string` = hash } \| { `cid`: `CID`<`unknown`, `number`, `number`, `Version`\> ; `link?`: `undefined` = hash }
 
 #### Parameters
 
@@ -283,8 +283,8 @@ ___
 
 #### Returns
 
-{ `cid`: `undefined` ; `link`: `string` = hash } \| { `cid`: `CID`<`unknown`, `number`, `number`, `Version`\> ; `link`: `undefined` = hash }
+{ `cid`: `undefined` ; `link`: `string` = hash } \| { `cid`: `CID`<`unknown`, `number`, `number`, `Version`\> ; `link?`: `undefined` = hash }
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:94](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L94)
+[sdk/src/common/ipfs.connector.ts:93](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L93)

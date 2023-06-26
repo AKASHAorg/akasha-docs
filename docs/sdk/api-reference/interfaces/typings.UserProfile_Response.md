@@ -55,7 +55,7 @@ ___
 
 ### default
 
- **default**: [[`DataProviderInput`](../namespaces/sdk.md#dataproviderinput)]
+ **default**: [[`DataProviderInput`](../modules/sdk.md#dataproviderinput)]
 
 #### Defined in
 
@@ -95,7 +95,7 @@ ___
 
 ### providers
 
- **providers**: [[`DataProviderInput`](../namespaces/sdk.md#dataproviderinput)]
+ **providers**: [[`DataProviderInput`](../modules/sdk.md#dataproviderinput)]
 
 #### Defined in
 
