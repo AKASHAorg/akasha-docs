@@ -19,7 +19,7 @@ description: "Test Description"
 
 #### Defined in
 
-typings/sdk/events.d.ts:20
+typings/sdk/events.d.ts:21
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:21
+typings/sdk/events.d.ts:22
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:18
+typings/sdk/events.d.ts:19
 
 ___
 
@@ -49,4 +49,14 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:19
+typings/sdk/events.d.ts:20
+
+___
+
+### WC\_MODAL\_CLOSED
+
+ **WC\_MODAL\_CLOSED** = `"#web3#modalClosed"`
+
+#### Defined in
+
+typings/sdk/events.d.ts:23

@@ -11,10 +11,6 @@ description: "Test Description"
 
 [sdk](../namespaces/sdk.md).AWF_Entry
 
-## Implements
-
-- [`AWF_IEntry`](../interfaces/typings.AWF_IEntry.md)
-
 ## Constructors
 
 ### constructor
@@ -32,37 +28,13 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:48](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L48)
-
-## Properties
-
-### graphQLDocs
-
- `Readonly` **graphQLDocs**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `CreateEntry` | `DocumentNode` |
-| `EditEntry` | `DocumentNode` |
-| `GetCustomFeed` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
-| `GetEntries` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
-| `GetEntry` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
-| `GetLinkPreview` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
-| `GetPostsByAuthor` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
-| `GetPostsByTag` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
-| `RemoveEntry` | `DocumentNode` |
-
-#### Defined in
-
-[sdk/src/posts/entry.ts:36](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L36)
+[sdk/src/posts/entry.ts:32](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L32)
 
 ## Methods
 
 ### editEntry
 
-**editEntry**(`opt`): `Observable`<{ `data`: { `editPost`: `boolean`  }  }\>
+**editEntry**(`opt`): `Promise`<`undefined` \| [`EditEntryMutation`](../namespaces/sdk.md#editentrymutation)\>
 
 Update an existing entry
 
@@ -71,7 +43,7 @@ Update an existing entry
 | Name | Type |
 | :------ | :------ |
 | `opt` | `Object` |
-| `opt.data` | [`DataProviderInput`](../interfaces/typings.DataProviderInput.md)[] |
+| `opt.data` | [`DataProviderInput`](../namespaces/sdk.md#dataproviderinput)[] |
 | `opt.entryID` | `string` |
 | `opt.post` | `Object` |
 | `opt.post.mentions?` | `string`[] |
@@ -81,21 +53,17 @@ Update an existing entry
 
 #### Returns
 
-`Observable`<{ `data`: { `editPost`: `boolean`  }  }\>
-
-#### Implementation of
-
-[AWF_IEntry](../interfaces/typings.AWF_IEntry.md).[editEntry](../interfaces/typings.AWF_IEntry.md#editentry)
+`Promise`<`undefined` \| [`EditEntryMutation`](../namespaces/sdk.md#editentrymutation)\>
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:149](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L149)
+[sdk/src/posts/entry.ts:106](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L106)
 
 ___
 
 ### entriesByAuthor
 
-**entriesByAuthor**(`opt`): `Observable`<{ `data`: { `getPostsByAuthor`: [`PostsResult_Response`](../interfaces/typings.PostsResult_Response.md)  }  }\>
+**entriesByAuthor**(`opt`): `Promise`<[`GetPostsByAuthorQuery`](../namespaces/sdk.md#getpostsbyauthorquery)\>
 
 #### Parameters
 
@@ -108,21 +76,17 @@ ___
 
 #### Returns
 
-`Observable`<{ `data`: { `getPostsByAuthor`: [`PostsResult_Response`](../interfaces/typings.PostsResult_Response.md)  }  }\>
-
-#### Implementation of
-
-[AWF_IEntry](../interfaces/typings.AWF_IEntry.md).[entriesByAuthor](../interfaces/typings.AWF_IEntry.md#entriesbyauthor)
+`Promise`<[`GetPostsByAuthorQuery`](../namespaces/sdk.md#getpostsbyauthorquery)\>
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:191](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L191)
+[sdk/src/posts/entry.ts:137](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L137)
 
 ___
 
 ### entriesByTag
 
-**entriesByTag**(`opt`): `Observable`<{ `data`: { `getPostsByTag`: [`PostsResult_Response`](../interfaces/typings.PostsResult_Response.md)  }  }\>
+**entriesByTag**(`opt`): `Promise`<[`GetPostsByTagQuery`](../namespaces/sdk.md#getpostsbytagquery)\>
 
 #### Parameters
 
@@ -131,25 +95,21 @@ ___
 | `opt` | `Object` |
 | `opt.limit` | `number` |
 | `opt.name` | `string` |
-| `opt.offset?` | `string` |
+| `opt.offset?` | `number` |
 
 #### Returns
 
-`Observable`<{ `data`: { `getPostsByTag`: [`PostsResult_Response`](../interfaces/typings.PostsResult_Response.md)  }  }\>
-
-#### Implementation of
-
-[AWF_IEntry](../interfaces/typings.AWF_IEntry.md).[entriesByTag](../interfaces/typings.AWF_IEntry.md#entriesbytag)
+`Promise`<[`GetPostsByTagQuery`](../namespaces/sdk.md#getpostsbytagquery)\>
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:216](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L216)
+[sdk/src/posts/entry.ts:152](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L152)
 
 ___
 
 ### getEntries
 
-**getEntries**(`opt`): `Observable`<{ `data`: { `posts`: [`PostsResult_Response`](../interfaces/typings.PostsResult_Response.md)  }  }\>
+**getEntries**(`opt`): `Promise`<[`GetEntriesQuery`](../namespaces/sdk.md#getentriesquery)\>
 
 #### Parameters
 
@@ -161,21 +121,17 @@ ___
 
 #### Returns
 
-`Observable`<{ `data`: { `posts`: [`PostsResult_Response`](../interfaces/typings.PostsResult_Response.md)  }  }\>
-
-#### Implementation of
-
-[AWF_IEntry](../interfaces/typings.AWF_IEntry.md).[getEntries](../interfaces/typings.AWF_IEntry.md#getentries)
+`Promise`<[`GetEntriesQuery`](../namespaces/sdk.md#getentriesquery)\>
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:84](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L84)
+[sdk/src/posts/entry.ts:59](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L59)
 
 ___
 
 ### getEntry
 
-**getEntry**(`entryId`): `Observable`<{ `data`: { `getPost`: [`Post_Response`](../interfaces/typings.Post_Response.md)  }  }\>
+**getEntry**(`entryId`): `Promise`<[`GetEntryQuery`](../namespaces/sdk.md#getentryquery)\>
 
 #### Parameters
 
@@ -185,21 +141,17 @@ ___
 
 #### Returns
 
-`Observable`<{ `data`: { `getPost`: [`Post_Response`](../interfaces/typings.Post_Response.md)  }  }\>
-
-#### Implementation of
-
-[AWF_IEntry](../interfaces/typings.AWF_IEntry.md).[getEntry](../interfaces/typings.AWF_IEntry.md#getentry)
+`Promise`<[`GetEntryQuery`](../namespaces/sdk.md#getentryquery)\>
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:64](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L64)
+[sdk/src/posts/entry.ts:49](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L49)
 
 ___
 
 ### getFeedEntries
 
-**getFeedEntries**(`opt`): `Observable`<{ `data`: { `getCustomFeed`: [`PostsResult_Response`](../interfaces/typings.PostsResult_Response.md)  }  }\>
+**getFeedEntries**(`opt`): `Promise`<[`GetCustomFeedQuery`](../namespaces/sdk.md#getcustomfeedquery)\>
 
 #### Parameters
 
@@ -211,21 +163,17 @@ ___
 
 #### Returns
 
-`Observable`<{ `data`: { `getCustomFeed`: [`PostsResult_Response`](../interfaces/typings.PostsResult_Response.md)  }  }\>
-
-#### Implementation of
-
-[AWF_IEntry](../interfaces/typings.AWF_IEntry.md).[getFeedEntries](../interfaces/typings.AWF_IEntry.md#getfeedentries)
+`Promise`<[`GetCustomFeedQuery`](../namespaces/sdk.md#getcustomfeedquery)\>
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:299](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L299)
+[sdk/src/posts/entry.ts:201](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L201)
 
 ___
 
 ### getLinkPreview
 
-**getLinkPreview**(`link`): `Observable`<{ `data`: { `getLinkPreview`: [`LinkPreview_Response`](../interfaces/typings.LinkPreview_Response.md)  }  }\>
+**getLinkPreview**(`link`): `Promise`<[`GetLinkPreviewMutation`](../namespaces/sdk.md#getlinkpreviewmutation)\>
 
 #### Parameters
 
@@ -235,28 +183,24 @@ ___
 
 #### Returns
 
-`Observable`<{ `data`: { `getLinkPreview`: [`LinkPreview_Response`](../interfaces/typings.LinkPreview_Response.md)  }  }\>
-
-#### Implementation of
-
-[AWF_IEntry](../interfaces/typings.AWF_IEntry.md).[getLinkPreview](../interfaces/typings.AWF_IEntry.md#getlinkpreview)
+`Promise`<[`GetLinkPreviewMutation`](../namespaces/sdk.md#getlinkpreviewmutation)\>
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:277](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L277)
+[sdk/src/posts/entry.ts:189](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L189)
 
 ___
 
 ### postEntry
 
-**postEntry**(`opt`): `Observable`<{ `data`: { `createPost`: `string`  }  }\>
+**postEntry**(`opt`): `Promise`<`undefined` \| [`CreateEntryMutation`](../namespaces/sdk.md#createentrymutation)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `opt` | `Object` |
-| `opt.data` | [`DataProviderInput`](../interfaces/typings.DataProviderInput.md)[] |
+| `opt.data` | [`DataProviderInput`](../namespaces/sdk.md#dataproviderinput)[] |
 | `opt.post` | `Object` |
 | `opt.post.mentions?` | `string`[] |
 | `opt.post.quotes?` | `string`[] |
@@ -265,21 +209,17 @@ ___
 
 #### Returns
 
-`Observable`<{ `data`: { `createPost`: `string`  }  }\>
-
-#### Implementation of
-
-[AWF_IEntry](../interfaces/typings.AWF_IEntry.md).[postEntry](../interfaces/typings.AWF_IEntry.md#postentry)
+`Promise`<`undefined` \| [`CreateEntryMutation`](../namespaces/sdk.md#createentrymutation)\>
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:104](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L104)
+[sdk/src/posts/entry.ts:69](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L69)
 
 ___
 
 ### removeEntry
 
-**removeEntry**(`entryID`): `Observable`<{ `data`: { `removePost`: `boolean`  }  }\>
+**removeEntry**(`entryID`): `Promise`<[`RemoveEntryMutation`](../namespaces/sdk.md#removeentrymutation)\>
 
 Remove an entry's content by ID
 
@@ -291,12 +231,8 @@ Remove an entry's content by ID
 
 #### Returns
 
-`Observable`<{ `data`: { `removePost`: `boolean`  }  }\>
-
-#### Implementation of
-
-[AWF_IEntry](../interfaces/typings.AWF_IEntry.md).[removeEntry](../interfaces/typings.AWF_IEntry.md#removeentry)
+`Promise`<[`RemoveEntryMutation`](../namespaces/sdk.md#removeentrymutation)\>
 
 #### Defined in
 
-[sdk/src/posts/entry.ts:241](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/entry.ts#L241)
+[sdk/src/posts/entry.ts:167](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/entry.ts#L167)

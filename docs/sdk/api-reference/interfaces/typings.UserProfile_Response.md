@@ -19,7 +19,7 @@ description: "Test Description"
 
 #### Defined in
 
-typings/sdk/responses.d.ts:62
+typings/sdk/responses.d.ts:67
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:69
+typings/sdk/responses.d.ts:74
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:70
+typings/sdk/responses.d.ts:75
 
 ___
 
@@ -49,17 +49,17 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:65
+typings/sdk/responses.d.ts:70
 
 ___
 
 ### default
 
- **default**: [[`DataProviderInput`](typings.DataProviderInput.md)]
+ **default**: [[`DataProviderInput`](../namespaces/sdk.md#dataproviderinput)]
 
 #### Defined in
 
-typings/sdk/responses.d.ts:73
+typings/sdk/responses.d.ts:78
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:68
+typings/sdk/responses.d.ts:73
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:63
+typings/sdk/responses.d.ts:68
 
 ___
 
@@ -89,17 +89,17 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:67
+typings/sdk/responses.d.ts:72
 
 ___
 
 ### providers
 
- **providers**: [[`DataProviderInput`](typings.DataProviderInput.md)]
+ **providers**: [[`DataProviderInput`](../namespaces/sdk.md#dataproviderinput)]
 
 #### Defined in
 
-typings/sdk/responses.d.ts:72
+typings/sdk/responses.d.ts:77
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:64
+typings/sdk/responses.d.ts:69
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:74
+typings/sdk/responses.d.ts:79
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:75
+typings/sdk/responses.d.ts:80
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:76
+typings/sdk/responses.d.ts:81
 
 ___
 
@@ -149,7 +149,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:71
+typings/sdk/responses.d.ts:76
 
 ___
 
@@ -159,4 +159,4 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:66
+typings/sdk/responses.d.ts:71

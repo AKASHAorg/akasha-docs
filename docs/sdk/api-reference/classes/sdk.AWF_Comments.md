@@ -15,10 +15,6 @@ description: "Test Description"
 
 Comments Module
 
-## Implements
-
-- [`AWF_IComments`](../interfaces/typings.AWF_IComments.md)
-
 ## Constructors
 
 ### constructor
@@ -36,33 +32,13 @@ Comments Module
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/comments.ts#L43)
-
-## Properties
-
-### graphQLDocs
-
- `Readonly` **graphQLDocs**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `AddComment` | `DocumentNode` |
-| `EditComment` | `DocumentNode` |
-| `GetComment` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
-| `GetComments` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
-| `RemoveComment` | `DocumentNode` |
-
-#### Defined in
-
-[sdk/src/posts/comments.ts:35](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/comments.ts#L35)
+[sdk/src/posts/comments.ts:34](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/comments.ts#L34)
 
 ## Methods
 
 ### addComment
 
-**addComment**(`opt`): `Observable`<{ `data`: { `addComment`: `string`  }  }\>
+**addComment**(`opt`): `Promise`<`undefined` \| [`AddCommentMutation`](../namespaces/sdk.md#addcommentmutation)\>
 
 Create a new comment
 
@@ -76,25 +52,21 @@ Create a new comment
 | `opt.comment.postID` | `string` |
 | `opt.comment.replyTo?` | `string` |
 | `opt.comment.tags?` | `string`[] |
-| `opt.data` | [`DataProviderInput`](../interfaces/typings.DataProviderInput.md)[] |
+| `opt.data` | [`DataProviderInput`](../namespaces/sdk.md#dataproviderinput)[] |
 
 #### Returns
 
-`Observable`<{ `data`: { `addComment`: `string`  }  }\>
-
-#### Implementation of
-
-[AWF_IComments](../interfaces/typings.AWF_IComments.md).[addComment](../interfaces/typings.AWF_IComments.md#addcomment)
+`Promise`<`undefined` \| [`AddCommentMutation`](../namespaces/sdk.md#addcommentmutation)\>
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:86](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/comments.ts#L86)
+[sdk/src/posts/comments.ts:103](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/comments.ts#L103)
 
 ___
 
 ### editComment
 
-**editComment**(`opt`): `Observable`<{ `data`: { `editComment`: `boolean`  }  }\>
+**editComment**(`opt`): `Promise`<`undefined` \| [`EditCommentMutation`](../namespaces/sdk.md#editcommentmutation)\>
 
 Update an existing comment
 
@@ -109,25 +81,21 @@ Update an existing comment
 | `opt.comment.replyTo?` | `string` |
 | `opt.comment.tags?` | `string`[] |
 | `opt.commentID` | `string` |
-| `opt.data` | [`DataProviderInput`](../interfaces/typings.DataProviderInput.md)[] |
+| `opt.data` | [`DataProviderInput`](../namespaces/sdk.md#dataproviderinput)[] |
 
 #### Returns
 
-`Observable`<{ `data`: { `editComment`: `boolean`  }  }\>
-
-#### Implementation of
-
-[AWF_IComments](../interfaces/typings.AWF_IComments.md).[editComment](../interfaces/typings.AWF_IComments.md#editcomment)
+`Promise`<`undefined` \| [`EditCommentMutation`](../namespaces/sdk.md#editcommentmutation)\>
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:130](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/comments.ts#L130)
+[sdk/src/posts/comments.ts:147](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/comments.ts#L147)
 
 ___
 
 ### getComment
 
-**getComment**(`commentID`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getComment`: [`Comment_Response`](../interfaces/typings.Comment_Response.md)  }\>
+**getComment**(`commentID`): `Promise`<[`GetCommentQuery`](../namespaces/sdk.md#getcommentquery)\>
 
 Get comment data
 
@@ -139,21 +107,17 @@ Get comment data
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getComment`: [`Comment_Response`](../interfaces/typings.Comment_Response.md)  }\>
-
-#### Implementation of
-
-[AWF_IComments](../interfaces/typings.AWF_IComments.md).[getComment](../interfaces/typings.AWF_IComments.md#getcomment)
+`Promise`<[`GetCommentQuery`](../namespaces/sdk.md#getcommentquery)\>
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:58](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/comments.ts#L58)
+[sdk/src/posts/comments.ts:50](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/comments.ts#L50)
 
 ___
 
 ### getComments
 
-**getComments**(`opt`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getComments`: [`Comments_Response`](../interfaces/typings.Comments_Response.md)  }\>
+**getComments**(`opt`): `Promise`<[`GetCommentsQuery`](../namespaces/sdk.md#getcommentsquery)\>
 
 Get a list of comments for a post
 
@@ -168,21 +132,43 @@ Get a list of comments for a post
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getComments`: [`Comments_Response`](../interfaces/typings.Comments_Response.md)  }\>
-
-#### Implementation of
-
-[AWF_IComments](../interfaces/typings.AWF_IComments.md).[getComments](../interfaces/typings.AWF_IComments.md#getcomments)
+`Promise`<[`GetCommentsQuery`](../namespaces/sdk.md#getcommentsquery)\>
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:72](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/comments.ts#L72)
+[sdk/src/posts/comments.ts:58](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/comments.ts#L58)
+
+___
+
+### getReplies
+
+**getReplies**(`opt`): `Promise`<[`GetRepliesQuery`](../namespaces/sdk.md#getrepliesquery)\>
+
+Get a list of replies for a comment
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `opt` | `Object` |
+| `opt.commentID` | `string` |
+| `opt.limit` | `number` |
+| `opt.offset?` | `string` |
+| `opt.postID` | `string` |
+
+#### Returns
+
+`Promise`<[`GetRepliesQuery`](../namespaces/sdk.md#getrepliesquery)\>
+
+#### Defined in
+
+[sdk/src/posts/comments.ts:75](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/comments.ts#L75)
 
 ___
 
 ### removeComment
 
-**removeComment**(`commentID`): `Observable`<{ `data`: { `removeComment`: `boolean`  }  }\>
+**removeComment**(`commentID`): `Promise`<[`RemoveCommentMutation`](../namespaces/sdk.md#removecommentmutation)\>
 
 Remove a comment's data by ID
 
@@ -194,12 +180,8 @@ Remove a comment's data by ID
 
 #### Returns
 
-`Observable`<{ `data`: { `removeComment`: `boolean`  }  }\>
-
-#### Implementation of
-
-[AWF_IComments](../interfaces/typings.AWF_IComments.md).[removeComment](../interfaces/typings.AWF_IComments.md#removecomment)
+`Promise`<[`RemoveCommentMutation`](../namespaces/sdk.md#removecommentmutation)\>
 
 #### Defined in
 
-[sdk/src/posts/comments.ts:172](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/comments.ts#L172)
+[sdk/src/posts/comments.ts:181](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/comments.ts#L181)

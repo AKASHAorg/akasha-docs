@@ -11,10 +11,6 @@ description: "Test Description"
 
 [sdk](../namespaces/sdk.md).AWF_Tags
 
-## Implements
-
-- [`AWF_ITags`](../interfaces/typings.AWF_ITags.md)
-
 ## Constructors
 
 ### constructor
@@ -32,32 +28,13 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:27](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/tags.ts#L27)
-
-## Properties
-
-### graphQLDocs
-
- `Readonly` **graphQLDocs**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `CreateTag` | `DocumentNode` |
-| `GetTag` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
-| `GetTags` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
-| `SearchTags` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
-
-#### Defined in
-
-[sdk/src/posts/tags.ts:26](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/tags.ts#L26)
+[sdk/src/posts/tags.ts:20](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/tags.ts#L20)
 
 ## Methods
 
 ### createTag
 
-**createTag**(`tagName`): `Observable`<{ `data`: { `createTag`: `string`  }  }\>
+**createTag**(`tagName`): `Promise`<[`CreateTagMutation`](../namespaces/sdk.md#createtagmutation)\>
 
 #### Parameters
 
@@ -67,21 +44,17 @@ description: "Test Description"
 
 #### Returns
 
-`Observable`<{ `data`: { `createTag`: `string`  }  }\>
-
-#### Implementation of
-
-[AWF_ITags](../interfaces/typings.AWF_ITags.md).[createTag](../interfaces/typings.AWF_ITags.md#createtag)
+`Promise`<[`CreateTagMutation`](../namespaces/sdk.md#createtagmutation)\>
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:88](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/tags.ts#L88)
+[sdk/src/posts/tags.ts:69](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/tags.ts#L69)
 
 ___
 
 ### getTag
 
-**getTag**(`tagName`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getTag`: [`Tag_Response`](../interfaces/typings.Tag_Response.md)  }\>
+**getTag**(`tagName`): `Promise`<`undefined` \| { `data`: [`GetTagQuery`](../namespaces/sdk.md#gettagquery)  }\>
 
 #### Parameters
 
@@ -91,21 +64,17 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getTag`: [`Tag_Response`](../interfaces/typings.Tag_Response.md)  }\>
-
-#### Implementation of
-
-[AWF_ITags](../interfaces/typings.AWF_ITags.md).[getTag](../interfaces/typings.AWF_ITags.md#gettag)
+`Promise`<`undefined` \| { `data`: [`GetTagQuery`](../namespaces/sdk.md#gettagquery)  }\>
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/tags.ts#L43)
+[sdk/src/posts/tags.ts:37](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/tags.ts#L37)
 
 ___
 
 ### getTags
 
-**getTags**(`opt`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `tags`: [`TagsResult_Response`](../interfaces/typings.TagsResult_Response.md)  }\>
+**getTags**(`opt`): `Promise`<[`GetTagsQuery`](../namespaces/sdk.md#gettagsquery)\>
 
 #### Parameters
 
@@ -117,41 +86,33 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `tags`: [`TagsResult_Response`](../interfaces/typings.TagsResult_Response.md)  }\>
-
-#### Implementation of
-
-[AWF_ITags](../interfaces/typings.AWF_ITags.md).[getTags](../interfaces/typings.AWF_ITags.md#gettags)
+`Promise`<[`GetTagsQuery`](../namespaces/sdk.md#gettagsquery)\>
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:58](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/tags.ts#L58)
+[sdk/src/posts/tags.ts:51](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/tags.ts#L51)
 
 ___
 
 ### getTrending
 
-**getTrending**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `searchTags`: [`SearchTagsResult_Response`](../interfaces/typings.SearchTagsResult_Response.md)[]  }\>
+**getTrending**(): `Promise`<[`SearchTagsQuery`](../namespaces/sdk.md#searchtagsquery)\>
 
 Returns most recent used tags
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `searchTags`: [`SearchTagsResult_Response`](../interfaces/typings.SearchTagsResult_Response.md)[]  }\>
-
-#### Implementation of
-
-[AWF_ITags](../interfaces/typings.AWF_ITags.md).[getTrending](../interfaces/typings.AWF_ITags.md#gettrending)
+`Promise`<[`SearchTagsQuery`](../namespaces/sdk.md#searchtagsquery)\>
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:124](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/tags.ts#L124)
+[sdk/src/posts/tags.ts:91](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/tags.ts#L91)
 
 ___
 
 ### searchTags
 
-**searchTags**(`name`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `searchTags`: [`SearchTagsResult_Response`](../interfaces/typings.SearchTagsResult_Response.md)[]  }\>
+**searchTags**(`name`): `Promise`<[`SearchTagsQuery`](../namespaces/sdk.md#searchtagsquery)\>
 
 #### Parameters
 
@@ -161,12 +122,8 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `searchTags`: [`SearchTagsResult_Response`](../interfaces/typings.SearchTagsResult_Response.md)[]  }\>
-
-#### Implementation of
-
-[AWF_ITags](../interfaces/typings.AWF_ITags.md).[searchTags](../interfaces/typings.AWF_ITags.md#searchtags)
+`Promise`<[`SearchTagsQuery`](../namespaces/sdk.md#searchtagsquery)\>
 
 #### Defined in
 
-[sdk/src/posts/tags.ts:73](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/posts/tags.ts#L73)
+[sdk/src/posts/tags.ts:60](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/posts/tags.ts#L60)

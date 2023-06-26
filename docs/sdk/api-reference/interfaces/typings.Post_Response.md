@@ -19,7 +19,7 @@ description: "Test Description"
 
 #### Defined in
 
-typings/sdk/responses.d.ts:22
+typings/sdk/responses.d.ts:27
 
 ___
 
@@ -29,17 +29,17 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:26
+typings/sdk/responses.d.ts:31
 
 ___
 
 ### content
 
- **content**: [[`DataProviderInput`](typings.DataProviderInput.md)]
+ **content**: [[`DataProviderInput`](../namespaces/sdk.md#dataproviderinput)]
 
 #### Defined in
 
-typings/sdk/responses.d.ts:28
+typings/sdk/responses.d.ts:33
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:24
+typings/sdk/responses.d.ts:29
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:32
+typings/sdk/responses.d.ts:37
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:31
+typings/sdk/responses.d.ts:36
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:34
+typings/sdk/responses.d.ts:39
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:29
+typings/sdk/responses.d.ts:34
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:30
+typings/sdk/responses.d.ts:35
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:27
+typings/sdk/responses.d.ts:32
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:33
+typings/sdk/responses.d.ts:38
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:23
+typings/sdk/responses.d.ts:28
 
 ___
 
@@ -139,4 +139,4 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:25
+typings/sdk/responses.d.ts:30

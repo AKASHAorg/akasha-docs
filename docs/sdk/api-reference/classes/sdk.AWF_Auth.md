@@ -15,15 +15,11 @@ description: "Test Description"
 
 Authentication module
 
-## Implements
-
-- [`AWF_IAuth`](../interfaces/typings.AWF_IAuth.md)
-
 ## Constructors
 
 ### constructor
 
-**new AWF_Auth**(`db`, `web3`, `globalChannel`, `log`, `settings`, `gql`)
+**new AWF_Auth**(`db`, `web3`, `globalChannel`, `log`, `settings`, `gql`, `lit`, `ceramic`)
 
 #### Parameters
 
@@ -35,10 +31,12 @@ Authentication module
 | `log` | [`Logging`](sdk.Logging.md) |
 | `settings` | [`Settings`](sdk.Settings.md) |
 | `gql` | `Gql` |
+| `lit` | [`default`](sdk.default-1.md) |
+| `ceramic` | [`default`](sdk.default.md) |
 
 #### Defined in
 
-[sdk/src/auth/index.ts:75](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L75)
+[sdk/src/auth/index.ts:72](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L72)
 
 ## Properties
 
@@ -48,7 +46,7 @@ Authentication module
 
 #### Defined in
 
-[sdk/src/auth/index.ts:73](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L73)
+[sdk/src/auth/index.ts:69](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L69)
 
 ___
 
@@ -58,7 +56,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:72](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L72)
+[sdk/src/auth/index.ts:68](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L68)
 
 ___
 
@@ -68,7 +66,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:70](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L70)
+[sdk/src/auth/index.ts:66](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L66)
 
 ___
 
@@ -78,7 +76,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:71](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L71)
+[sdk/src/auth/index.ts:67](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L67)
 
 ___
 
@@ -88,7 +86,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:69](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L69)
+[sdk/src/auth/index.ts:65](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L65)
 
 ___
 
@@ -98,7 +96,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:74](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L74)
+[sdk/src/auth/index.ts:70](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L70)
 
 ___
 
@@ -108,7 +106,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:68](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L68)
+[sdk/src/auth/index.ts:64](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L64)
 
 ___
 
@@ -118,13 +116,13 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:67](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L67)
+[sdk/src/auth/index.ts:63](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L63)
 
 ## Methods
 
 ### \_connectAddress
 
-**_connectAddress**(`provider`): `Promise`<`string`\>
+**_connectAddress**(`provider`): `Promise`<``null`` \| `string`\>
 
 #### Parameters
 
@@ -134,70 +132,85 @@ ___
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`<``null`` \| `string`\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:281](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L281)
+[sdk/src/auth/index.ts:292](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L292)
+
+___
+
+### addDevKeyFromBase64Message
+
+**addDevKeyFromBase64Message**(`message`, `name?`): `Promise`<`void`\>
+
+validate and add pubKey to the dev account
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `message` | `string` | encrypted message with claims info |
+| `name?` | `string` | human-readable string to identify the key |
+
+#### Returns
+
+`Promise`<`void`\>
+
+#### Defined in
+
+[sdk/src/auth/index.ts:534](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L534)
 
 ___
 
 ### authenticateMutationData
 
-**authenticateMutationData**(`data`): `Observable`<{ `signedData`: { `data`: { `pubKey`: `string` ; `serializedData`: `any` ; `signature`: `string` \| `Uint8Array` = sig }  } ; `token`: { `data`: `string`  }  }\>
+**authenticateMutationData**(`data`): `Promise`<{ `signedData`: { `signature`: `string` = 'fakeSignature' } ; `token`: `string` = 'fakeToken' }\>
 
 Utility method for sending mutation graphql requests
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `string` \| `Record`<`string`, `unknown`\> \| `Record`<`string`, `unknown`\>[] |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `data` | `string` \| `Record`<`string`, `unknown`\> \| `Record`<`string`, `unknown`\>[] | mutation data |
 
 #### Returns
 
-`Observable`<{ `signedData`: { `data`: { `pubKey`: `string` ; `serializedData`: `any` ; `signature`: `string` \| `Uint8Array` = sig }  } ; `token`: { `data`: `string`  }  }\>
-
-#### Implementation of
-
-[AWF_IAuth](../interfaces/typings.AWF_IAuth.md).[authenticateMutationData](../interfaces/typings.AWF_IAuth.md#authenticatemutationdata)
+`Promise`<{ `signedData`: { `signature`: `string` = 'fakeSignature' } ; `token`: `string` = 'fakeToken' }\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:566](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L566)
+[sdk/src/auth/index.ts:434](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L434)
 
 ___
 
 ### checkIfSignedUp
 
-**checkIfSignedUp**(`ethAddress`): `Observable`<{ `data`: { `errors?`: `never`  }  }\>
+**checkIfSignedUp**(`ethAddress`): `Promise`<`boolean`\>
 
 Verifies if an ethereum address is already registered
 Throws an UserNotRegistered error for addresses that are not registered
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `ethAddress` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `ethAddress` | `string` | the eth address |
 
 #### Returns
 
-`Observable`<{ `data`: { `errors?`: `never`  }  }\>
-
-#### Implementation of
-
-[AWF_IAuth](../interfaces/typings.AWF_IAuth.md).[checkIfSignedUp](../interfaces/typings.AWF_IAuth.md#checkifsignedup)
+`Promise`<`boolean`\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:136](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L136)
+[sdk/src/auth/index.ts:138](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L138)
 
 ___
 
 ### connectAddress
 
-**connectAddress**(`provider`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`string`\>
+**connectAddress**(`provider`): `Promise`<``null`` \| `string`\>
 
 #### Parameters
 
@@ -207,61 +220,32 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`string`\>
+`Promise`<``null`` \| `string`\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:296](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L296)
+[sdk/src/auth/index.ts:308](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L308)
 
 ___
 
-### decryptMessage
+### createEncryptedMessage
 
-**decryptMessage**(`message`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `body`: `Record`<`string`, `any`\> ; `createdAt`: `number` ; `from`: `string` ; `id`: `string` ; `readAt`: `number` ; `to`: `string`  }\>
-
-Allows decryption of privately sent messages to the current identity
+**createEncryptedMessage**(`to`, `message`): `Promise`<`JWE`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `message` | `any` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `to` | `string` | DID of the recipient |
+| `message` | `string` | body text to be encrypted |
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `body`: `Record`<`string`, `any`\> ; `createdAt`: `number` ; `from`: `string` ; `id`: `string` ; `readAt`: `number` ; `to`: `string`  }\>
-
-#### Implementation of
-
-[AWF_IAuth](../interfaces/typings.AWF_IAuth.md).[decryptMessage](../interfaces/typings.AWF_IAuth.md#decryptmessage)
+`Promise`<`JWE`\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:578](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L578)
-
-___
-
-### deleteMessage
-
-**deleteMessage**(`messageId`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`boolean`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `messageId` | `string` |
-
-#### Returns
-
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`boolean`\>
-
-#### Implementation of
-
-[AWF_IAuth](../interfaces/typings.AWF_IAuth.md).[deleteMessage](../interfaces/typings.AWF_IAuth.md#deletemessage)
-
-#### Defined in
-
-[sdk/src/auth/index.ts:714](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L714)
+[sdk/src/auth/index.ts:467](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L467)
 
 ___
 
@@ -275,60 +259,66 @@ enable key sync between opened tabs
 
 `void`
 
-#### Implementation of
-
-[AWF_IAuth](../interfaces/typings.AWF_IAuth.md).[enableSync](../interfaces/typings.AWF_IAuth.md#enablesync)
-
 #### Defined in
 
-[sdk/src/auth/index.ts:95](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L95)
+[sdk/src/auth/index.ts:96](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L96)
 
 ___
 
 ### getConversation
 
-**getConversation**(`pubKey`): `Promise`<`any`[]\>
+**getConversation**(`_pubKey`): `Promise`<{ `data`: `never`[]  }\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `pubKey` | `string` |
+| `_pubKey` | `string` |
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`<{ `data`: `never`[]  }\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:660](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L660)
+[sdk/src/auth/index.ts:603](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L603)
 
 ___
 
 ### getCurrentUser
 
-**getCurrentUser**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<[`CurrentUser`](../interfaces/typings.CurrentUser.md)\>
+**getCurrentUser**(): `Promise`<``null`` \| { `ethAddress?`: `string` ; `id?`: `string` ; `pubKey?`: `string`  }\>
 
-Returns the currently logged in user object
-It will try to login if there is a previous session detected
+Returns the currently logged-in user object
+It will try to log in if there is a previous session detected
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<[`CurrentUser`](../interfaces/typings.CurrentUser.md)\>
-
-#### Implementation of
-
-[AWF_IAuth](../interfaces/typings.AWF_IAuth.md).[getCurrentUser](../interfaces/typings.AWF_IAuth.md#getcurrentuser)
+`Promise`<``null`` \| { `ethAddress?`: `string` ; `id?`: `string` ; `pubKey?`: `string`  }\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:448](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L448)
+[sdk/src/auth/index.ts:336](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L336)
+
+___
+
+### getDevKeys
+
+**getDevKeys**(): `Promise`<{ `addedAt`: `string` ; `name?`: `string` ; `pubKey`: `string`  }[]\>
+
+#### Returns
+
+`Promise`<{ `addedAt`: `string` ; `name?`: `string` ; `pubKey`: `string`  }[]\>
+
+#### Defined in
+
+[sdk/src/auth/index.ts:545](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L545)
 
 ___
 
 ### getMessages
 
-**getMessages**(`args`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<[`IMessage`](../interfaces/typings.IMessage.md)[]\>
+**getMessages**(`args?`): `Promise`<{ `data`: [`IMessage`](../namespaces/typings.md#imessage)[]  }\>
 
 Returns all the inbox messages from Textile Users
 
@@ -336,106 +326,69 @@ Returns all the inbox messages from Textile Users
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `args` | `InboxListOptions` | InboxListOptions |
+| `args?` | `Object` | InboxListOptions |
+| `args.limit?` | `number` | - |
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<[`IMessage`](../interfaces/typings.IMessage.md)[]\>
-
-#### Implementation of
-
-[AWF_IAuth](../interfaces/typings.AWF_IAuth.md).[getMessages](../interfaces/typings.AWF_IAuth.md#getmessages)
+`Promise`<{ `data`: [`IMessage`](../namespaces/typings.md#imessage)[]  }\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:624](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L624)
+[sdk/src/auth/index.ts:592](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L592)
 
 ___
 
 ### getSession
 
-**getSession**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `buck`: `Buckets` ; `client`: `Client` ; `user`: `Users`  }\>
+**getSession**(): `Promise`<{ `data`: `undefined` \| { `ethAddress?`: `string` ; `id?`: `string` ; `pubKey?`: `string`  }  }\>
 
 Returns current session objects for textile
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `buck`: `Buckets` ; `client`: `Client` ; `user`: `Users`  }\>
-
-#### Implementation of
-
-[AWF_IAuth](../interfaces/typings.AWF_IAuth.md).[getSession](../interfaces/typings.AWF_IAuth.md#getsession)
+`Promise`<{ `data`: `undefined` \| { `ethAddress?`: `string` ; `id?`: `string` ; `pubKey?`: `string`  }  }\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:401](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L401)
-
-___
-
-### getTextileUsage
-
-**getTextileUsage**(`options?`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`GetUsageResponse`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `options?` | `unknown` |
-
-#### Returns
-
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`GetUsageResponse`\>
-
-#### Defined in
-
-[sdk/src/auth/index.ts:719](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L719)
+[sdk/src/auth/index.ts:315](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L315)
 
 ___
 
 ### getToken
 
-**getToken**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`string`\>
-
-Generate a textile access token
+**getToken**(): `Promise`<`string`\>
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`string`\>
-
-#### Implementation of
-
-[AWF_IAuth](../interfaces/typings.AWF_IAuth.md).[getToken](../interfaces/typings.AWF_IAuth.md#gettoken)
+`Promise`<`string`\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:428](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L428)
+[sdk/src/auth/index.ts:667](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L667)
 
 ___
 
 ### hasNewNotifications
 
-**hasNewNotifications**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`boolean`\>
+**hasNewNotifications**(): `Promise`<{ `data`: `boolean`  }\>
 
 Checks the Textile Users inbox and looks for specific
 notification message type
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`boolean`\>
-
-#### Implementation of
-
-[AWF_IAuth](../interfaces/typings.AWF_IAuth.md).[hasNewNotifications](../interfaces/typings.AWF_IAuth.md#hasnewnotifications)
+`Promise`<{ `data`: `boolean`  }\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:683](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L683)
+[sdk/src/auth/index.ts:612](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L612)
 
 ___
 
 ### markMessageAsRead
 
-**markMessageAsRead**(`messageId`): `Observable`<{ `data`: `boolean`  }\>
+**markMessageAsRead**(`messageId`): `Promise`<`boolean`\>
 
 #### Parameters
 
@@ -445,21 +398,37 @@ ___
 
 #### Returns
 
-`Observable`<{ `data`: `boolean`  }\>
-
-#### Implementation of
-
-[AWF_IAuth](../interfaces/typings.AWF_IAuth.md).[markMessageAsRead](../interfaces/typings.AWF_IAuth.md#markmessageasread)
+`Promise`<`boolean`\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:694](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L694)
+[sdk/src/auth/index.ts:622](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L622)
+
+___
+
+### removeDevKey
+
+**removeDevKey**(`pubKey`): `Promise`<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pubKey` | `string` |
+
+#### Returns
+
+`Promise`<`void`\>
+
+#### Defined in
+
+[sdk/src/auth/index.ts:551](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L551)
 
 ___
 
 ### sendMessage
 
-**sendMessage**(`to`, `content`): `Promise`<`UserMessage`\>
+**sendMessage**(`to`, `content`): `Promise`<{ `data`: {}  }\>
 
 #### Parameters
 
@@ -470,47 +439,17 @@ ___
 
 #### Returns
 
-`Promise`<`UserMessage`\>
+`Promise`<{ `data`: {}  }\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:611](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L611)
-
-___
-
-### signAuthMessage
-
-**signAuthMessage**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`void`\>
-
-#### Returns
-
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`void`\>
-
-#### Defined in
-
-[sdk/src/auth/index.ts:300](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L300)
-
-___
-
-### signComposedMessage
-
-**signComposedMessage**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`void`\>
-
-#### Returns
-
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`void`\>
-
-#### Defined in
-
-[sdk/src/auth/index.ts:315](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L315)
+[sdk/src/auth/index.ts:580](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L580)
 
 ___
 
 ### signData
 
-**signData**(`data`, `base64Format?`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `pubKey`: `string` ; `serializedData`: `any` ; `signature`: `string` \| `Uint8Array` = sig }\>
-
-Sign data with the identity key
+**signData**(`data`, `base64Format?`): `Promise`<{ `signature`: `string` = 'fakeSignature' }\>
 
 #### Parameters
 
@@ -521,21 +460,39 @@ Sign data with the identity key
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `pubKey`: `string` ; `serializedData`: `any` ; `signature`: `string` \| `Uint8Array` = sig }\>
-
-#### Implementation of
-
-[AWF_IAuth](../interfaces/typings.AWF_IAuth.md).[signData](../interfaces/typings.AWF_IAuth.md#signdata)
+`Promise`<{ `signature`: `string` = 'fakeSignature' }\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:500](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L500)
+[sdk/src/auth/index.ts:380](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L380)
+
+___
+
+### signDataWithDID
+
+**signDataWithDID**(`data`): `Promise`<`DagJWS`\>
+
+Sign data with the identity key
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `data` | `string` \| `Record`<`string`, `unknown`\> | - |
+
+#### Returns
+
+`Promise`<`DagJWS`\>
+
+#### Defined in
+
+[sdk/src/auth/index.ts:394](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L394)
 
 ___
 
 ### signIn
 
-**signIn**(`args`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<[`CurrentUser`](../interfaces/typings.CurrentUser.md) & { `isNewUser`: `boolean`  }\>
+**signIn**(`args`): `Promise`<{ `data`: ``null`` \| { `ethAddress?`: `string` ; `id?`: `string` ; `pubKey?`: `string`  } & { `isNewUser`: `boolean`  }  }\>
 
 #### Parameters
 
@@ -548,55 +505,53 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<[`CurrentUser`](../interfaces/typings.CurrentUser.md) & { `isNewUser`: `boolean`  }\>
-
-#### Implementation of
-
-[AWF_IAuth](../interfaces/typings.AWF_IAuth.md).[signIn](../interfaces/typings.AWF_IAuth.md#signin)
+`Promise`<{ `data`: ``null`` \| { `ethAddress?`: `string` ; `id?`: `string` ; `pubKey?`: `string`  } & { `isNewUser`: `boolean`  }  }\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:157](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L157)
+[sdk/src/auth/index.ts:157](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L157)
 
 ___
 
 ### signOut
 
-**signOut**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`boolean`\>
+**signOut**(): `Promise`<{ `data`: `boolean`  }\>
 
 Destroy all the session objects
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`boolean`\>
-
-#### Implementation of
-
-[AWF_IAuth](../interfaces/typings.AWF_IAuth.md).[signOut](../interfaces/typings.AWF_IAuth.md#signout)
+`Promise`<{ `data`: `boolean`  }\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:472](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L472)
+[sdk/src/auth/index.ts:360](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L360)
 
 ___
 
-### signTokenMessage
+### validateDevKeyFromBase64Message
 
-**signTokenMessage**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`void`\>
+**validateDevKeyFromBase64Message**(`message`): `Promise`<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `message` | `string` |
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`void`\>
+`Promise`<`void`\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:334](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L334)
+[sdk/src/auth/index.ts:478](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L478)
 
 ___
 
 ### validateInvite
 
-**validateInvite**(`inviteCode`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`boolean`\>
+**validateInvite**(`inviteCode`): `Promise`<`boolean`\>
 
 #### Parameters
 
@@ -606,50 +561,39 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`boolean`\>
-
-#### Implementation of
-
-[AWF_IAuth](../interfaces/typings.AWF_IAuth.md).[validateInvite](../interfaces/typings.AWF_IAuth.md#validateinvite)
+`Promise`<`boolean`\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:739](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L739)
+[sdk/src/auth/index.ts:641](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L641)
 
 ___
 
-### verifySignature
+### verifyDIDSignature
 
-**verifySignature**(`args`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`boolean`\>
+**verifyDIDSignature**(`args`): `Promise`<`undefined` \| `VerifyJWSResult`\>
 
 Verify if a signature was made by a specific Public Key
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `args` | `Object` |
-| `args.data` | `string` \| `Record`<`string`, `unknown`\> \| `Uint8Array` |
-| `args.pubKey` | `string` |
-| `args.signature` | `string` \| `Uint8Array` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `args` | `string` \| `DagJWS` | object containing the signature, the serialized data and the public key |
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`boolean`\>
-
-#### Implementation of
-
-[AWF_IAuth](../interfaces/typings.AWF_IAuth.md).[verifySignature](../interfaces/typings.AWF_IAuth.md#verifysignature)
+`Promise`<`undefined` \| `VerifyJWSResult`\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:530](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L530)
+[sdk/src/auth/index.ts:416](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L416)
 
 ___
 
 ### serializeMessage
 
-`Static` **serializeMessage**(`content`): `Uint8Array`
+`Static` **serializeMessage**(`content`): `undefined` \| `Uint8Array`
 
 #### Parameters
 
@@ -659,8 +603,8 @@ ___
 
 #### Returns
 
-`Uint8Array`
+`undefined` \| `Uint8Array`
 
 #### Defined in
 
-[sdk/src/auth/index.ts:601](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/auth/index.ts#L601)
+[sdk/src/auth/index.ts:569](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L569)

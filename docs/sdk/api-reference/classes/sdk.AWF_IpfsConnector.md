@@ -11,10 +11,6 @@ description: "Test Description"
 
 [sdk](../namespaces/sdk.md).AWF_IpfsConnector
 
-## Implements
-
-- [`AWF_IIpfsConnector`](../interfaces/typings.AWF_IIpfsConnector.md)
-
 ## Constructors
 
 ### constructor
@@ -29,17 +25,17 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:29](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/ipfs.connector.ts#L29)
+[sdk/src/common/ipfs.connector.ts:27](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L27)
 
 ## Properties
 
 ### fallbackGateway
 
- `Readonly` **fallbackGateway**: ``"ipfs.nftstorage.link"``
+ `Readonly` **fallbackGateway**: ``"ipfs.w3s.link"``
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:20](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/ipfs.connector.ts#L20)
+[sdk/src/common/ipfs.connector.ts:17](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L17)
 
 ___
 
@@ -47,13 +43,9 @@ ___
 
  `Readonly` **gateway**: ``"https://cloudflare-ipfs.com/ipfs/"``
 
-#### Implementation of
-
-[AWF_IIpfsConnector](../interfaces/typings.AWF_IIpfsConnector.md).[gateway](../interfaces/typings.AWF_IIpfsConnector.md#gateway)
-
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:18](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/ipfs.connector.ts#L18)
+[sdk/src/common/ipfs.connector.ts:15](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L15)
 
 ___
 
@@ -63,7 +55,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:19](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/ipfs.connector.ts#L19)
+[sdk/src/common/ipfs.connector.ts:16](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L16)
 
 ## Methods
 
@@ -75,7 +67,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `hash` | `string` \| `CID` |
+| `hash` | `string` \| `CID`<`unknown`, `number`, `number`, `Version`\> |
 
 #### Returns
 
@@ -83,7 +75,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:85](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/ipfs.connector.ts#L85)
+[sdk/src/common/ipfs.connector.ts:115](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L115)
 
 ___
 
@@ -95,7 +87,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `hash` | `string` \| `CID` |
+| `hash` | `string` \| `CID`<`unknown`, `number`, `number`, `Version`\> |
 
 #### Returns
 
@@ -109,7 +101,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:101](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/ipfs.connector.ts#L101)
+[sdk/src/common/ipfs.connector.ts:133](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L133)
 
 ___
 
@@ -121,7 +113,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `hash` | `string` \| `CID` |
+| `hash` | `string` \| `CID`<`unknown`, `number`, `number`, `Version`\> |
 
 #### Returns
 
@@ -129,7 +121,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:77](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/ipfs.connector.ts#L77)
+[sdk/src/common/ipfs.connector.ts:106](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L106)
 
 ___
 
@@ -141,7 +133,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `hash` | `string` \| `CID` |
+| `hash` | `string` \| `CID`<`unknown`, `number`, `number`, `Version`\> |
 
 #### Returns
 
@@ -149,13 +141,13 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:93](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/ipfs.connector.ts#L93)
+[sdk/src/common/ipfs.connector.ts:124](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L124)
 
 ___
 
 ### catDocument
 
-**catDocument**<`T`\>(`docHash`, `jsonResponse?`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`T`\>
+**catDocument**<`T`\>(`docHash`, `jsonResponse?`): `Promise`<`T`\>
 
 #### Type parameters
 
@@ -167,26 +159,22 @@ ___
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `docHash` | `string` \| `CID` | `undefined` |
+| `docHash` | `string` \| `CID`<`unknown`, `number`, `number`, `Version`\> | `undefined` |
 | `jsonResponse` | `boolean` | `false` |
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`T`\>
-
-#### Implementation of
-
-[AWF_IIpfsConnector](../interfaces/typings.AWF_IIpfsConnector.md).[catDocument](../interfaces/typings.AWF_IIpfsConnector.md#catdocument)
+`Promise`<`T`\>
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:39](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/ipfs.connector.ts#L39)
+[sdk/src/common/ipfs.connector.ts:67](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L67)
 
 ___
 
 ### getLegalDoc
 
-**getLegalDoc**(`doc`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`never`\>
+**getLegalDoc**(`doc`): `Promise`<`never`\>
 
 #### Parameters
 
@@ -196,15 +184,11 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`never`\>
-
-#### Implementation of
-
-[AWF_IIpfsConnector](../interfaces/typings.AWF_IIpfsConnector.md).[getLegalDoc](../interfaces/typings.AWF_IIpfsConnector.md#getlegaldoc)
+`Promise`<`never`\>
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:61](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/ipfs.connector.ts#L61)
+[sdk/src/common/ipfs.connector.ts:88](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L88)
 
 ___
 
@@ -220,19 +204,15 @@ ___
 | :------ | :------ |
 | `gateway` | `string` |
 
-#### Implementation of
-
-[AWF_IIpfsConnector](../interfaces/typings.AWF_IIpfsConnector.md).[getSettings](../interfaces/typings.AWF_IIpfsConnector.md#getsettings)
-
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:33](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/ipfs.connector.ts#L33)
+[sdk/src/common/ipfs.connector.ts:34](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L34)
 
 ___
 
 ### multiAddrToUri
 
-**multiAddrToUri**(`addrList`): `any`[]
+**multiAddrToUri**(`addrList`): `string`[]
 
 #### Parameters
 
@@ -242,17 +222,17 @@ ___
 
 #### Returns
 
-`any`[]
+`string`[]
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:118](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/ipfs.connector.ts#L118)
+[sdk/src/common/ipfs.connector.ts:152](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L152)
 
 ___
 
 ### transformBase16HashToV1
 
-**transformBase16HashToV1**(`hash`): `CID`
+**transformBase16HashToV1**(`hash`): `CID`<`unknown`, `number`, `number`, ``1``\>
 
 #### Parameters
 
@@ -262,28 +242,49 @@ ___
 
 #### Returns
 
-`CID`
+`CID`<`unknown`, `number`, `number`, ``1``\>
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:113](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/ipfs.connector.ts#L113)
+[sdk/src/common/ipfs.connector.ts:146](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L146)
 
 ___
 
-### validateCid
+### uploadFile
 
-**validateCid**(`hash`): { `cid`: `undefined` ; `link`: `string` = hash } \| { `cid`: `CID` ; `link`: `undefined` = hash }
+**uploadFile**(`file`, `email?`): `Promise`<`AnyLink`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `hash` | `string` \| `CID` |
+| `file` | `Blob` |
+| `email?` | \`${string}@${string}\` |
 
 #### Returns
 
-{ `cid`: `undefined` ; `link`: `string` = hash } \| { `cid`: `CID` ; `link`: `undefined` = hash }
+`Promise`<`AnyLink`\>
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:66](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/ipfs.connector.ts#L66)
+[sdk/src/common/ipfs.connector.ts:42](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L42)
+
+___
+
+### validateCid
+
+**validateCid**(`hash`): { `cid`: `undefined` ; `link`: `string` = hash } \| { `cid`: `CID`<`unknown`, `number`, `number`, `Version`\> ; `link`: `undefined` = hash }
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `hash` | `string` \| `CID`<`unknown`, `number`, `number`, `Version`\> |
+
+#### Returns
+
+{ `cid`: `undefined` ; `link`: `string` = hash } \| { `cid`: `CID`<`unknown`, `number`, `number`, `Version`\> ; `link`: `undefined` = hash }
+
+#### Defined in
+
+[sdk/src/common/ipfs.connector.ts:94](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L94)

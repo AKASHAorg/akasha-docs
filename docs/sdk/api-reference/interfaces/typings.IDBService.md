@@ -18,10 +18,6 @@ description: "Test Description"
 | `DB` |
 | `Collection` |
 
-## Implemented by
-
-- [`DB`](../classes/sdk.DB.md)
-
 ## Methods
 
 ### getCollection

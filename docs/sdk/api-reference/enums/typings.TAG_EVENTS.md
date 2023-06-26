@@ -19,4 +19,4 @@ description: "Test Description"
 
 #### Defined in
 
-typings/sdk/events.d.ts:42
+typings/sdk/events.d.ts:44

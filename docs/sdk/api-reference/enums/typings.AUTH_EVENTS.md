@@ -19,17 +19,17 @@ description: "Test Description"
 
 #### Defined in
 
-typings/sdk/events.d.ts:8
+typings/sdk/events.d.ts:9
 
 ___
 
 ### CONNECT\_ADDRESS\_SUCCESS
 
- **CONNECT\_ADDRESS\_SUCCESS** = `"#auth#aconnectAddress#success"`
+ **CONNECT\_ADDRESS\_SUCCESS** = `"#auth#connectAddress#success"`
 
 #### Defined in
 
-typings/sdk/events.d.ts:9
+typings/sdk/events.d.ts:10
 
 ___
 
@@ -39,7 +39,17 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:7
+typings/sdk/events.d.ts:8
+
+___
+
+### NEW\_MESSAGES
+
+ **NEW\_MESSAGES** = `"#auth#hasNewMessages"`
+
+#### Defined in
+
+typings/sdk/events.d.ts:5
 
 ___
 
@@ -69,7 +79,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:10
+typings/sdk/events.d.ts:11
 
 ___
 
@@ -79,7 +89,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:11
+typings/sdk/events.d.ts:12
 
 ___
 
@@ -89,7 +99,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:12
+typings/sdk/events.d.ts:13
 
 ___
 
@@ -99,7 +109,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:13
+typings/sdk/events.d.ts:14
 
 ___
 
@@ -119,7 +129,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:5
+typings/sdk/events.d.ts:6
 
 ___
 
@@ -129,7 +139,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:14
+typings/sdk/events.d.ts:15
 
 ___
 
@@ -139,7 +149,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:15
+typings/sdk/events.d.ts:16
 
 ___
 
@@ -149,4 +159,4 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:6
+typings/sdk/events.d.ts:7

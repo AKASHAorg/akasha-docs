@@ -11,10 +11,6 @@ description: "Test Description"
 
 [sdk](../namespaces/sdk.md).Web3Connector
 
-## Implements
-
-- [`IWeb3Connector`](../interfaces/typings.IWeb3Connector.md)<`ethers.providers.BaseProvider` \| `ethers.providers.Web3Provider`\>
-
 ## Constructors
 
 ### constructor
@@ -30,73 +26,57 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:47](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/web3.connector.ts#L47)
+[sdk/src/common/web3.connector.ts:46](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L46)
 
 ## Properties
 
 ### network
 
- `Readonly` **network**: ``"rinkeby"``
-
-#### Implementation of
-
-[IWeb3Connector](../interfaces/typings.IWeb3Connector.md).[network](../interfaces/typings.IWeb3Connector.md#network)
+ `Readonly` **network**: ``"goerli"``
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:33](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/web3.connector.ts#L33)
+[sdk/src/common/web3.connector.ts:31](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L31)
 
 ___
 
 ### networkId
 
- `Readonly` **networkId**: `Readonly`<{ `goerli`: `number` = 5; `kovan`: `number` = 42; `mainnet`: `number` = 1; `rinkeby`: `number` = 4; `ropsten`: `number` = 3 }\>
-
-#### Implementation of
-
-[IWeb3Connector](../interfaces/typings.IWeb3Connector.md).[networkId](../interfaces/typings.IWeb3Connector.md#networkid)
+ `Readonly` **networkId**: `Readonly`<{ `goerli`: ``5`` = 5; `kovan`: ``42`` = 42; `mainnet`: ``1`` = 1; `rinkeby`: ``4`` = 4; `ropsten`: ``3`` = 3; `sepolia`: ``11155111`` = 11155111 }\>
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:36](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/web3.connector.ts#L36)
+[sdk/src/common/web3.connector.ts:34](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L34)
 
 ## Accessors
 
 ### provider
 
-`get` **provider**(): `BaseProvider` \| `Web3Provider`
+`get` **provider**(): `BaseProvider`
 
 Get access to the web3 provider instance
 
 #### Returns
 
-`BaseProvider` \| `Web3Provider`
-
-#### Implementation of
-
-[IWeb3Connector](../interfaces/typings.IWeb3Connector.md).[provider](../interfaces/typings.IWeb3Connector.md#provider)
+`BaseProvider`
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:89](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/web3.connector.ts#L89)
+[sdk/src/common/web3.connector.ts:92](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L92)
 
 ## Methods
 
 ### checkCurrentNetwork
 
-**checkCurrentNetwork**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`void`\>
+**checkCurrentNetwork**(): `Promise`<`void`\>
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`void`\>
-
-#### Implementation of
-
-[IWeb3Connector](../interfaces/typings.IWeb3Connector.md).[checkCurrentNetwork](../interfaces/typings.IWeb3Connector.md#checkcurrentnetwork)
+`Promise`<`void`\>
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:169](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/web3.connector.ts#L169)
+[sdk/src/common/web3.connector.ts:178](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L178)
 
 ___
 
@@ -114,27 +94,23 @@ ___
 
 `Promise`<`boolean`\>
 
-#### Implementation of
-
-[IWeb3Connector](../interfaces/typings.IWeb3Connector.md).[connect](../interfaces/typings.IWeb3Connector.md#connect)
-
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:60](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/web3.connector.ts#L60)
+[sdk/src/common/web3.connector.ts:64](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L64)
 
 ___
 
 ### detectInjectedProvider
 
-**detectInjectedProvider**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<[`INJECTED_PROVIDERS`](../enums/typings.INJECTED_PROVIDERS.md)\>
+**detectInjectedProvider**(): `Promise`<{ `data`: [`INJECTED_PROVIDERS`](../enums/typings.INJECTED_PROVIDERS.md)  }\>
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<[`INJECTED_PROVIDERS`](../enums/typings.INJECTED_PROVIDERS.md)\>
+`Promise`<{ `data`: [`INJECTED_PROVIDERS`](../enums/typings.INJECTED_PROVIDERS.md)  }\>
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:172](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/web3.connector.ts#L172)
+[sdk/src/common/web3.connector.ts:182](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L182)
 
 ___
 
@@ -148,81 +124,77 @@ Remove the web3 connection
 
 `Promise`<`void`\>
 
-#### Implementation of
-
-[IWeb3Connector](../interfaces/typings.IWeb3Connector.md).[disconnect](../interfaces/typings.IWeb3Connector.md#disconnect)
-
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:99](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/web3.connector.ts#L99)
+[sdk/src/common/web3.connector.ts:110](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L110)
 
 ___
 
-### getCurrentAddress
+### getCurrentEthAddress
 
-**getCurrentAddress**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`string`\>
+**getCurrentEthAddress**(): `Promise`<``null`` \| `string`\>
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`string`\>
-
-the current eth address that is connected to the provider
-
-#### Implementation of
-
-[IWeb3Connector](../interfaces/typings.IWeb3Connector.md).[getCurrentAddress](../interfaces/typings.IWeb3Connector.md#getcurrentaddress)
+`Promise`<``null`` \| `string`\>
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:136](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/web3.connector.ts#L136)
+[sdk/src/common/web3.connector.ts:174](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L174)
 
 ___
 
-### getRequiredNetworkName
+### getRequiredNetwork
 
-**getRequiredNetworkName**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`string`\>
+**getRequiredNetwork**(): `Object`
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`string`\>
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `data` | { `chainId`: ``5`` ; `name`: `string`  } |
+| `data.chainId` | ``5`` |
+| `data.name` | `string` |
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:140](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/web3.connector.ts#L140)
+[sdk/src/common/web3.connector.ts:142](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L142)
 
 ___
 
 ### getSigner
 
-**getSigner**(): `JsonRpcSigner` \| `Wallet`
+**getSigner**(): `undefined` \| `Wallet` \| `JsonRpcSigner`
 
 #### Returns
 
-`JsonRpcSigner` \| `Wallet`
+`undefined` \| `Wallet` \| `JsonRpcSigner`
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:122](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/web3.connector.ts#L122)
+[sdk/src/common/web3.connector.ts:131](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L131)
 
 ___
 
 ### requestWalletPermissions
 
-**requestWalletPermissions**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`any`\>
+**requestWalletPermissions**(): `Promise`<`any`\> \| `Observable`<`never`\>
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`any`\>
+`Promise`<`any`\> \| `Observable`<`never`\>
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:76](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/web3.connector.ts#L76)
+[sdk/src/common/web3.connector.ts:80](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L80)
 
 ___
 
 ### signMessage
 
-**signMessage**(`message`): `Promise`<`string`\>
+**signMessage**(`message`): `undefined` \| `Promise`<`string`\>
 
 Enforce personal_sign method for message signature
 
@@ -234,26 +206,22 @@ Enforce personal_sign method for message signature
 
 #### Returns
 
-`Promise`<`string`\>
-
-#### Implementation of
-
-[IWeb3Connector](../interfaces/typings.IWeb3Connector.md).[signMessage](../interfaces/typings.IWeb3Connector.md#signmessage)
+`undefined` \| `Promise`<`string`\>
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:118](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/web3.connector.ts#L118)
+[sdk/src/common/web3.connector.ts:127](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L127)
 
 ___
 
 ### switchToRequiredNetwork
 
-**switchToRequiredNetwork**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`any`\>
+**switchToRequiredNetwork**(): `Promise`<{ `data`: `any`  }\>
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`any`\>
+`Promise`<{ `data`: `any`  }\>
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:147](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/web3.connector.ts#L147)
+[sdk/src/common/web3.connector.ts:149](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L149)

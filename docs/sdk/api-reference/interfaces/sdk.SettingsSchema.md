@@ -1,6 +1,6 @@
 ---
 id: "sdk.SettingsSchema"
-title: "Interface: SettingsSchema<T>"
+title: "Interface: SettingsSchema"
 sidebar_label: "SettingsSchema"
 custom_edit_url: null
 pagination_prev: null
@@ -11,21 +11,25 @@ description: "Test Description"
 
 [sdk](../namespaces/sdk.md).SettingsSchema
 
-## Type parameters
-
-| Name |
-| :------ |
-| `T` |
-
 ## Properties
 
-### options
+### id
 
- **options**: `T`
+ `Optional` **id**: `number`
 
 #### Defined in
 
-[sdk/src/db/settings.schema.ts:22](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/db/settings.schema.ts#L22)
+[sdk/src/db/settings.schema.ts:4](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/db/settings.schema.ts#L4)
+
+___
+
+### options
+
+ **options**: [[`string`, `string` \| `number` \| `boolean`]]
+
+#### Defined in
+
+[sdk/src/db/settings.schema.ts:3](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/db/settings.schema.ts#L3)
 
 ___
 
@@ -35,4 +39,4 @@ ___
 
 #### Defined in
 
-[sdk/src/db/settings.schema.ts:21](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/db/settings.schema.ts#L21)
+[sdk/src/db/settings.schema.ts:2](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/db/settings.schema.ts#L2)

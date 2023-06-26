@@ -20,15 +20,31 @@ your own app.
 
 ## Interfaces
 
-- [AWF\_SDK](interfaces/AWF_SDK.md)
 - [SDK\_API](interfaces/SDK_API.md)
 - [SDK\_Services](interfaces/SDK_Services.md)
+
+## Type aliases
+
+### AWF\_SDK
+
+ **AWF\_SDK**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `api` | [`SDK_API`](interfaces/SDK_API.md) |
+| `services` | [`SDK_Services`](interfaces/SDK_Services.md) |
+
+#### Defined in
+
+[sdk/src/index.ts:58](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/index.ts#L58)
 
 ## Functions
 
 ### default
 
-**default**(): [`AWF_SDK`](interfaces/AWF_SDK.md)
+**default**(): [`AWF_SDK`](#awf_sdk)
 
 Creates a new SDK instance or returns a previusly created one.
 
@@ -40,17 +56,17 @@ const sdk = getSDK();
 
 #### Returns
 
-[`AWF_SDK`](interfaces/AWF_SDK.md)
+[`AWF_SDK`](#awf_sdk)
 
 #### Defined in
 
-[sdk/src/index.ts:70](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/index.ts#L70)
+[sdk/src/index.ts:75](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/index.ts#L75)
 
 ___
 
 ### init
 
-**init**(): [`AWF_SDK`](interfaces/AWF_SDK.md)
+**init**(): [`AWF_SDK`](#awf_sdk)
 
 Creates a new SDK instance.
 
@@ -62,8 +78,8 @@ const sdk = init();
 
 #### Returns
 
-[`AWF_SDK`](interfaces/AWF_SDK.md)
+[`AWF_SDK`](#awf_sdk)
 
 #### Defined in
 
-[sdk/src/index.ts:87](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/index.ts#L87)
+[sdk/src/index.ts:92](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/index.ts#L92)

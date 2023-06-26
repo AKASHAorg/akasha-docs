@@ -19,7 +19,7 @@ description: "Test Description"
 
 #### Defined in
 
-typings/sdk/events.d.ts:49
+typings/sdk/events.d.ts:51
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:50
+typings/sdk/events.d.ts:52
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:51
+typings/sdk/events.d.ts:53
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:53
+typings/sdk/events.d.ts:55
 
 ___
 
@@ -59,4 +59,4 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:52
+typings/sdk/events.d.ts:54

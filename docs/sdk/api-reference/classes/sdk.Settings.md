@@ -11,29 +11,29 @@ description: "Test Description"
 
 [sdk](../namespaces/sdk.md).Settings
 
-## Implements
-
-- [`ISettingsService`](../interfaces/typings.ISettingsService.md)
-
 ## Constructors
 
 ### constructor
 
-**new Settings**()
+**new Settings**(`_db`)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `_db` | [`DB`](sdk.DB.md) |
+
+#### Defined in
+
+[sdk/src/settings/index.ts:10](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/index.ts#L10)
 
 ## Methods
 
 ### get
 
-**get**<`T`\>(`service`): `Observable`<{ `data`: [`SettingsSchema`](../interfaces/sdk.SettingsSchema.md)<`T`\> & {} & `Instance`  }\>
+**get**(`service`): `Promise`<{ `data`: `undefined` \| [`SettingsSchema`](../interfaces/sdk.SettingsSchema.md)  }\>
 
 Returns the settings object for a specified service name
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `T` |
 
 #### Parameters
 
@@ -43,15 +43,11 @@ Returns the settings object for a specified service name
 
 #### Returns
 
-`Observable`<{ `data`: [`SettingsSchema`](../interfaces/sdk.SettingsSchema.md)<`T`\> & {} & `Instance`  }\>
-
-#### Implementation of
-
-[ISettingsService](../interfaces/typings.ISettingsService.md).[get](../interfaces/typings.ISettingsService.md#get)
+`Promise`<{ `data`: `undefined` \| [`SettingsSchema`](../interfaces/sdk.SettingsSchema.md)  }\>
 
 #### Defined in
 
-[sdk/src/settings/index.ts:17](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/index.ts#L17)
+[sdk/src/settings/index.ts:17](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/index.ts#L17)
 
 ___
 
@@ -69,19 +65,15 @@ ___
 
 `Promise`<`void`\>
 
-#### Implementation of
-
-[ISettingsService](../interfaces/typings.ISettingsService.md).[remove](../interfaces/typings.ISettingsService.md#remove)
-
 #### Defined in
 
-[sdk/src/settings/index.ts:56](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/index.ts#L56)
+[sdk/src/settings/index.ts:52](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/index.ts#L52)
 
 ___
 
 ### set
 
-**set**(`service`, `options`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`string`[]\>
+**set**(`service`, `options`): `Promise`<{ `data`: `string`[]  }\>
 
 #### Parameters
 
@@ -92,14 +84,10 @@ ___
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`string`[]\>
+`Promise`<{ `data`: `string`[]  }\>
 
 ServiceCallResult
 
-#### Implementation of
-
-[ISettingsService](../interfaces/typings.ISettingsService.md).[set](../interfaces/typings.ISettingsService.md#set)
-
 #### Defined in
 
-[sdk/src/settings/index.ts:34](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/index.ts#L34)
+[sdk/src/settings/index.ts:30](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/index.ts#L30)

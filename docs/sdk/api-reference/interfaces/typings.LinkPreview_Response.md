@@ -19,7 +19,7 @@ description: "Test Description"
 
 #### Defined in
 
-typings/sdk/responses.d.ts:51
+typings/sdk/responses.d.ts:56
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:56
+typings/sdk/responses.d.ts:61
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:59
+typings/sdk/responses.d.ts:64
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:52
+typings/sdk/responses.d.ts:57
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:58
+typings/sdk/responses.d.ts:63
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:57
+typings/sdk/responses.d.ts:62
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:50
+typings/sdk/responses.d.ts:55
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:55
+typings/sdk/responses.d.ts:60
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:54
+typings/sdk/responses.d.ts:59
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:49
+typings/sdk/responses.d.ts:54
 
 ___
 
@@ -119,4 +119,4 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:53
+typings/sdk/responses.d.ts:58

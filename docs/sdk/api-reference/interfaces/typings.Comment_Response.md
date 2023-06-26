@@ -19,27 +19,27 @@ description: "Test Description"
 
 #### Defined in
 
-typings/sdk/responses.d.ts:7
+typings/sdk/responses.d.ts:12
 
 ___
 
 ### author
 
- **author**: [`UserProfile_Response`](typings.UserProfile_Response.md)
+ **author**: [`UserProfile`](../namespaces/sdk.md#userprofile)
 
 #### Defined in
 
-typings/sdk/responses.d.ts:10
+typings/sdk/responses.d.ts:15
 
 ___
 
 ### content
 
- **content**: [[`DataProviderInput`](typings.DataProviderInput.md)]
+ **content**: [[`DataProviderInput`](../namespaces/sdk.md#dataproviderinput)]
 
 #### Defined in
 
-typings/sdk/responses.d.ts:11
+typings/sdk/responses.d.ts:16
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:8
+typings/sdk/responses.d.ts:13
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:12
+typings/sdk/responses.d.ts:17
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:14
+typings/sdk/responses.d.ts:19
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:13
+typings/sdk/responses.d.ts:18
 
 ___
 
@@ -89,4 +89,4 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:9
+typings/sdk/responses.d.ts:14

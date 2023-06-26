@@ -11,15 +11,11 @@ description: "Test Description"
 
 [sdk](../namespaces/sdk.md).AWF_Profile
 
-## Implements
-
-- [`AWF_IProfile`](../interfaces/typings.AWF_IProfile.md)
-
 ## Constructors
 
 ### constructor
 
-**new AWF_Profile**(`log`, `gql`, `auth`, `settings`, `globalChannel`)
+**new AWF_Profile**(`log`, `gql`, `auth`, `globalChannel`, `ipfs`)
 
 #### Parameters
 
@@ -28,12 +24,12 @@ description: "Test Description"
 | `log` | [`Logging`](sdk.Logging.md) |
 | `gql` | `Gql` |
 | `auth` | [`AWF_Auth`](sdk.AWF_Auth.md) |
-| `settings` | [`Settings`](sdk.Settings.md) |
 | `globalChannel` | [`EventBus`](sdk.EventBus.md) |
+| `ipfs` | [`AWF_IpfsConnector`](sdk.AWF_IpfsConnector.md) |
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:71](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L71)
+[sdk/src/profiles/index.ts:41](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L41)
 
 ## Properties
 
@@ -43,455 +39,517 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:52](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L52)
-
-___
-
-### graphQLDocs
-
- `Readonly` **graphQLDocs**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `AddProfileProvider` | `DocumentNode` |
-| `Follow` | `DocumentNode` |
-| `GetFollowers` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
-| `GetFollowing` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
-| `GetInterests` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
-| `GetProfile` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
-| `GlobalSearch` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
-| `IsFollowing` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
-| `MakeDefaultProvider` | `DocumentNode` |
-| `RegisterUsername` | `DocumentNode` |
-| `ResolveProfile` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
-| `SaveMetaData` | `DocumentNode` |
-| `SearchProfiles` | `TypedQueryDocumentNode`<{ `[key: string]`: `any`;  }, { `[key: string]`: `any`;  }\> |
-| `ToggleInterestSub` | `DocumentNode` |
-| `UnFollow` | `DocumentNode` |
-
-#### Implementation of
-
-[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[graphQLDocs](../interfaces/typings.AWF_IProfile.md#graphqldocs)
-
-#### Defined in
-
-[sdk/src/profiles/index.ts:53](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L53)
+[sdk/src/profiles/index.ts:39](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L39)
 
 ## Methods
 
 ### addProfileProvider
 
-**addProfileProvider**(`opt`): `Observable`<{ `data`: { `addProfileProvider`: `string`  }  }\>
+**addProfileProvider**(`opt`): `Promise`<{ `data`: { `addProfileProvider`: {} = {} }  }\>
 
 Mutation request to add a profile provider to the profile object
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opt` | [`DataProviderInput`](../interfaces/typings.DataProviderInput.md)[] |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opt` | [`DataProviderInput`](../namespaces/sdk.md#dataproviderinput)[] | DataProviderInput |
 
 #### Returns
 
-`Observable`<{ `data`: { `addProfileProvider`: `string`  }  }\>
-
-#### Implementation of
-
-[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[addProfileProvider](../interfaces/typings.AWF_IProfile.md#addprofileprovider)
+`Promise`<{ `data`: { `addProfileProvider`: {} = {} }  }\>
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:89](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L89)
+[sdk/src/profiles/index.ts:210](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L210)
+
+___
+
+### createFollow
+
+**createFollow**(): `Promise`<`void`\>
+
+#### Returns
+
+`Promise`<`void`\>
+
+#### Defined in
+
+[sdk/src/profiles/index.ts:203](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L203)
+
+___
+
+### createProfile
+
+**createProfile**(`profileData`): `Promise`<`undefined` \| { `data`: { `avatar?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `background?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `createdAt`: `any` ; `description?`: ``null`` \| `string` ; `did`: { `id`: `string`  } ; `followers`: { `pageInfo`: { `endCursor?`: ``null`` \| `string` ; `hasNextPage`: `boolean` ; `hasPreviousPage`: `boolean` ; `startCursor?`: ``null`` \| `string`  }  } ; `id`: `string` ; `links?`: ``null`` \| (``null`` \| { `href`: `any` ; `label?`: ``null`` \| `string`  })[] ; `name`: `string`  }  }\>
+
+Create a new profile
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `profileData` | [`ProfileInput`](../namespaces/sdk.md#profileinput) | [ProfileInput](../namespaces/sdk.md#profileinput) - profileData.name is mandatory |
+
+#### Returns
+
+`Promise`<`undefined` \| { `data`: { `avatar?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `background?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `createdAt`: `any` ; `description?`: ``null`` \| `string` ; `did`: { `id`: `string`  } ; `followers`: { `pageInfo`: { `endCursor?`: ``null`` \| `string` ; `hasNextPage`: `boolean` ; `hasPreviousPage`: `boolean` ; `startCursor?`: ``null`` \| `string`  }  } ; `id`: `string` ; `links?`: ``null`` \| (``null`` \| { `href`: `any` ; `label?`: ``null`` \| `string`  })[] ; `name`: `string`  }  }\>
+
+#### Defined in
+
+[sdk/src/profiles/index.ts:59](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L59)
 
 ___
 
 ### follow
 
-**follow**(`pubKey`): `Observable`<{ `data`: { `follow`: `boolean`  }  }\>
+**follow**(`pubKey`): `Promise`<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `pubKey` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `pubKey` | `string` | public key |
 
 #### Returns
 
-`Observable`<{ `data`: { `follow`: `boolean`  }  }\>
-
-#### Implementation of
-
-[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[follow](../interfaces/typings.AWF_IProfile.md#follow)
+`Promise`<`any`\>
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:237](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L237)
+[sdk/src/profiles/index.ts:254](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L254)
 
 ___
 
 ### getFollowers
 
-**getFollowers**(`pubKey`, `limit`, `offset?`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getFollowers`: [`UserFollowers_Response`](../interfaces/typings.UserFollowers_Response.md)  }\>
+**getFollowers**(`pubKey`, `limit`, `offset?`): `Promise`<`any`\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `pubKey` | `string` | public key of the user |
+| `limit` | `number` | number of followers to return |
+| `offset?` | `number` | offset to start from |
+
+#### Returns
+
+`Promise`<`any`\>
+
+#### Defined in
+
+[sdk/src/profiles/index.ts:387](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L387)
+
+___
+
+### getFollowersByDid
+
+**getFollowersByDid**(`did`): `Promise`<`undefined` \| { `data`: `undefined` \| { `edges?`: ``null`` \| (``null`` \| { `node?`: ``null`` \| { `isFollowing`: `boolean` ; `profile?`: ``null`` \| { `avatar?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `background?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `createdAt`: `any` ; `description?`: ``null`` \| `string` ; `did`: { `id`: `string`  } ; `followers`: { `pageInfo`: { `endCursor?`: ``null`` \| `string` ; `hasNextPage`: `boolean` ; `hasPreviousPage`: `boolean` ; `startCursor?`: ``null`` \| `string`  }  } ; `id`: `string` ; `links?`: ``null`` \| (``null`` \| { `href`: `any` ; `label?`: ``null`` \| `string`  })[] ; `name`: `string`  }  }  })[] ; `pageInfo`: { `endCursor?`: ``null`` \| `string` ; `hasNextPage`: `boolean` ; `hasPreviousPage`: `boolean` ; `startCursor?`: ``null`` \| `string`  }  }  }\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `pubKey` | `string` |
-| `limit` | `number` |
-| `offset?` | `number` |
+| `did` | `string` |
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getFollowers`: [`UserFollowers_Response`](../interfaces/typings.UserFollowers_Response.md)  }\>
-
-#### Implementation of
-
-[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[getFollowers](../interfaces/typings.AWF_IProfile.md#getfollowers)
+`Promise`<`undefined` \| { `data`: `undefined` \| { `edges?`: ``null`` \| (``null`` \| { `node?`: ``null`` \| { `isFollowing`: `boolean` ; `profile?`: ``null`` \| { `avatar?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `background?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `createdAt`: `any` ; `description?`: ``null`` \| `string` ; `did`: { `id`: `string`  } ; `followers`: { `pageInfo`: { `endCursor?`: ``null`` \| `string` ; `hasNextPage`: `boolean` ; `hasPreviousPage`: `boolean` ; `startCursor?`: ``null`` \| `string`  }  } ; `id`: `string` ; `links?`: ``null`` \| (``null`` \| { `href`: `any` ; `label?`: ``null`` \| `string`  })[] ; `name`: `string`  }  }  })[] ; `pageInfo`: { `endCursor?`: ``null`` \| `string` ; `hasNextPage`: `boolean` ; `hasPreviousPage`: `boolean` ; `startCursor?`: ``null`` \| `string`  }  }  }\>
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:534](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L534)
+[sdk/src/profiles/index.ts:173](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L173)
 
 ___
 
 ### getFollowing
 
-**getFollowing**(`pubKey`, `limit`, `offset?`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getFollowing`: [`UserFollowers_Response`](../interfaces/typings.UserFollowers_Response.md)  }\>
+**getFollowing**(`pubKey`, `limit`, `offset?`): `Promise`<`any`\>
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `pubKey` | `string` | public key of the user |
+| `limit` | `number` | number of following to return |
+| `offset?` | `number` | offset to start from |
+
+#### Returns
+
+`Promise`<`any`\>
+
+#### Defined in
+
+[sdk/src/profiles/index.ts:398](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L398)
+
+___
+
+### getFollowingByDid
+
+**getFollowingByDid**(`did`): `Promise`<`undefined` \| { `data`: `undefined` \| ``null`` \| { `edges?`: ``null`` \| (``null`` \| { `node?`: ``null`` \| { `isFollowing`: `boolean` ; `profile?`: ``null`` \| { `avatar?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `background?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `createdAt`: `any` ; `description?`: ``null`` \| `string` ; `did`: { `id`: `string`  } ; `followers`: { `pageInfo`: { `endCursor?`: ``null`` \| `string` ; `hasNextPage`: `boolean` ; `hasPreviousPage`: `boolean` ; `startCursor?`: ``null`` \| `string`  }  } ; `id`: `string` ; `links?`: ``null`` \| (``null`` \| { `href`: `any` ; `label?`: ``null`` \| `string`  })[] ; `name`: `string`  }  }  })[] ; `pageInfo`: { `endCursor?`: ``null`` \| `string` ; `hasNextPage`: `boolean` ; `hasPreviousPage`: `boolean` ; `startCursor?`: ``null`` \| `string`  }  }  }\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `pubKey` | `string` |
-| `limit` | `number` |
-| `offset?` | `number` |
+| `did` | `string` |
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getFollowing`: [`UserFollowers_Response`](../interfaces/typings.UserFollowers_Response.md)  }\>
-
-#### Implementation of
-
-[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[getFollowing](../interfaces/typings.AWF_IProfile.md#getfollowing)
+`Promise`<`undefined` \| { `data`: `undefined` \| ``null`` \| { `edges?`: ``null`` \| (``null`` \| { `node?`: ``null`` \| { `isFollowing`: `boolean` ; `profile?`: ``null`` \| { `avatar?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `background?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `createdAt`: `any` ; `description?`: ``null`` \| `string` ; `did`: { `id`: `string`  } ; `followers`: { `pageInfo`: { `endCursor?`: ``null`` \| `string` ; `hasNextPage`: `boolean` ; `hasPreviousPage`: `boolean` ; `startCursor?`: ``null`` \| `string`  }  } ; `id`: `string` ; `links?`: ``null`` \| (``null`` \| { `href`: `any` ; `label?`: ``null`` \| `string`  })[] ; `name`: `string`  }  }  })[] ; `pageInfo`: { `endCursor?`: ``null`` \| `string` ; `hasNextPage`: `boolean` ; `hasPreviousPage`: `boolean` ; `startCursor?`: ``null`` \| `string`  }  }  }\>
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:551](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L551)
+[sdk/src/profiles/index.ts:188](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L188)
 
 ___
 
 ### getInterests
 
-**getInterests**(`pubKey`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getInterests`: `string`[]  }\>
+**getInterests**(`pubKey`): `Promise`<`any`\>
 
 Retrieve subscription list
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `pubKey` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `pubKey` | `string` | public key of the user |
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getInterests`: `string`[]  }\>
-
-#### Implementation of
-
-[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[getInterests](../interfaces/typings.AWF_IProfile.md#getinterests)
+`Promise`<`any`\>
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:566](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L566)
+[sdk/src/profiles/index.ts:407](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L407)
+
+___
+
+### getMyProfile
+
+**getMyProfile**(): `Promise`<`undefined` \| { `data`: `undefined` \| ``null`` \| { `avatar?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `background?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `createdAt`: `any` ; `description?`: ``null`` \| `string` ; `did`: { `id`: `string`  } ; `followers`: { `pageInfo`: { `endCursor?`: ``null`` \| `string` ; `hasNextPage`: `boolean` ; `hasPreviousPage`: `boolean` ; `startCursor?`: ``null`` \| `string`  }  } ; `id`: `string` ; `links?`: ``null`` \| (``null`` \| { `href`: `any` ; `label?`: ``null`` \| `string`  })[] ; `name`: `string`  }  }\>
+
+Get the current user profile
+
+#### Returns
+
+`Promise`<`undefined` \| { `data`: `undefined` \| ``null`` \| { `avatar?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `background?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `createdAt`: `any` ; `description?`: ``null`` \| `string` ; `did`: { `id`: `string`  } ; `followers`: { `pageInfo`: { `endCursor?`: ``null`` \| `string` ; `hasNextPage`: `boolean` ; `hasPreviousPage`: `boolean` ; `startCursor?`: ``null`` \| `string`  }  } ; `id`: `string` ; `links?`: ``null`` \| (``null`` \| { `href`: `any` ; `label?`: ``null`` \| `string`  })[] ; `name`: `string`  }  }\>
+
+#### Defined in
+
+[sdk/src/profiles/index.ts:141](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L141)
 
 ___
 
 ### getProfile
 
-**getProfile**(`opt`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getProfile?`: [`UserProfile_Response`](../interfaces/typings.UserProfile_Response.md)  } & { `resolveProfile`: [`UserProfile_Response`](../interfaces/typings.UserProfile_Response.md)  }\>
+**getProfile**(`opt`): `Promise`<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opt` | `Object` |
-| `opt.ethAddress?` | `string` |
-| `opt.pubKey?` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opt` | `Object` | object - ethAddress or pubKey |
+| `opt.ethAddress?` | `string` | - |
+| `opt.pubKey?` | `string` | - |
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `getProfile?`: [`UserProfile_Response`](../interfaces/typings.UserProfile_Response.md)  } & { `resolveProfile`: [`UserProfile_Response`](../interfaces/typings.UserProfile_Response.md)  }\>
-
-#### Implementation of
-
-[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[getProfile](../interfaces/typings.AWF_IProfile.md#getprofile)
+`Promise`<`any`\>
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:206](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L206)
+[sdk/src/profiles/index.ts:245](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L245)
+
+___
+
+### getProfileByDid
+
+**getProfileByDid**(`did`): `Promise`<`undefined` \| { `data`: `undefined` \| ``null`` \| { `avatar?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `background?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `createdAt`: `any` ; `description?`: ``null`` \| `string` ; `did`: { `id`: `string`  } ; `followers`: { `pageInfo`: { `endCursor?`: ``null`` \| `string` ; `hasNextPage`: `boolean` ; `hasPreviousPage`: `boolean` ; `startCursor?`: ``null`` \| `string`  }  } ; `id`: `string` ; `links?`: ``null`` \| (``null`` \| { `href`: `any` ; `label?`: ``null`` \| `string`  })[] ; `name`: `string`  }  }\>
+
+Get a profile by the profile id.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `did` | `string` | string - profile did |
+
+#### Returns
+
+`Promise`<`undefined` \| { `data`: `undefined` \| ``null`` \| { `avatar?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `background?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `createdAt`: `any` ; `description?`: ``null`` \| `string` ; `did`: { `id`: `string`  } ; `followers`: { `pageInfo`: { `endCursor?`: ``null`` \| `string` ; `hasNextPage`: `boolean` ; `hasPreviousPage`: `boolean` ; `startCursor?`: ``null`` \| `string`  }  } ; `id`: `string` ; `links?`: ``null`` \| (``null`` \| { `href`: `any` ; `label?`: ``null`` \| `string`  })[] ; `name`: `string`  }  }\>
+
+#### Defined in
+
+[sdk/src/profiles/index.ts:158](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L158)
+
+___
+
+### getProfiles
+
+**getProfiles**(`opt?`): `Promise`<`undefined` \| { `data`: { `edges?`: ``null`` \| (``null`` \| { `node?`: ``null`` \| { `avatar?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `background?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `createdAt`: `any` ; `description?`: ``null`` \| `string` ; `did`: { `id`: `string`  } ; `followers`: { `pageInfo`: { `endCursor?`: ``null`` \| `string` ; `hasNextPage`: `boolean` ; `hasPreviousPage`: `boolean` ; `startCursor?`: ``null`` \| `string`  }  } ; `id`: `string` ; `links?`: ``null`` \| (``null`` \| { `href`: `any` ; `label?`: ``null`` \| `string`  })[] ; `name`: `string`  }  })[] ; `pageInfo`: { `endCursor?`: ``null`` \| `string` ; `hasNextPage`: `boolean` ; `hasPreviousPage`: `boolean` ; `startCursor?`: ``null`` \| `string`  }  }  }\>
+
+Get a list of profiles. Defaults to last 5 profiles.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opt?` | [`Exact`](../namespaces/sdk.md#exact)<{ `after?`: [`InputMaybe`](../namespaces/sdk.md#inputmaybe)<`string`\> ; `before?`: [`InputMaybe`](../namespaces/sdk.md#inputmaybe)<`string`\> ; `first?`: [`InputMaybe`](../namespaces/sdk.md#inputmaybe)<`number`\> ; `last?`: [`InputMaybe`](../namespaces/sdk.md#inputmaybe)<`number`\>  }\> | GetProfilesQueryVariables |
+
+#### Returns
+
+`Promise`<`undefined` \| { `data`: { `edges?`: ``null`` \| (``null`` \| { `node?`: ``null`` \| { `avatar?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `background?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `createdAt`: `any` ; `description?`: ``null`` \| `string` ; `did`: { `id`: `string`  } ; `followers`: { `pageInfo`: { `endCursor?`: ``null`` \| `string` ; `hasNextPage`: `boolean` ; `hasPreviousPage`: `boolean` ; `startCursor?`: ``null`` \| `string`  }  } ; `id`: `string` ; `links?`: ``null`` \| (``null`` \| { `href`: `any` ; `label?`: ``null`` \| `string`  })[] ; `name`: `string`  }  })[] ; `pageInfo`: { `endCursor?`: ``null`` \| `string` ; `hasNextPage`: `boolean` ; `hasPreviousPage`: `boolean` ; `startCursor?`: ``null`` \| `string`  }  }  }\>
+
+#### Defined in
+
+[sdk/src/profiles/index.ts:118](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L118)
 
 ___
 
 ### getTagSubscriptions
 
-**getTagSubscriptions**(): `Observable`<{ `data`: { `getInterests`: `string`[]  }  }\>
+**getTagSubscriptions**(): `Promise`<`any`\>
 
 #### Returns
 
-`Observable`<{ `data`: { `getInterests`: `string`[]  }  }\>
-
-#### Implementation of
-
-[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[getTagSubscriptions](../interfaces/typings.AWF_IProfile.md#gettagsubscriptions)
+`Promise`<`any`\>
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:490](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L490)
+[sdk/src/profiles/index.ts:358](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L358)
 
 ___
 
 ### getTrending
 
-**getTrending**(): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `searchProfiles`: [`UserProfile_Response`](../interfaces/typings.UserProfile_Response.md)[]  }\>
+**getTrending**(): `Promise`<`any`\>
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `searchProfiles`: [`UserProfile_Response`](../interfaces/typings.UserProfile_Response.md)[]  }\>
-
-#### Implementation of
-
-[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[getTrending](../interfaces/typings.AWF_IProfile.md#gettrending)
+`Promise`<`any`\>
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:445](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L445)
+[sdk/src/profiles/index.ts:342](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L342)
 
 ___
 
 ### globalSearch
 
-**globalSearch**(`keyword`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `globalSearch`: [`GlobalSearchResult`](../interfaces/typings.GlobalSearchResult.md)  }\>
+**globalSearch**(`keyword`): `Promise`<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `keyword` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `keyword` | `string` | keyword to search for |
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `globalSearch`: [`GlobalSearchResult`](../interfaces/typings.GlobalSearchResult.md)  }\>
-
-#### Implementation of
-
-[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[globalSearch](../interfaces/typings.AWF_IProfile.md#globalsearch)
+`Promise`<`any`\>
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:517](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L517)
+[sdk/src/profiles/index.ts:376](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L376)
 
 ___
 
 ### isFollowing
 
-**isFollowing**(`opt`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `isFollowing`: `boolean`  }\>
+**isFollowing**(`opt`): `Promise`<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opt` | `Object` |
-| `opt.follower` | `string` |
-| `opt.following` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opt` | `Object` | object - follower and following public keys |
+| `opt.follower` | `string` | - |
+| `opt.following` | `string` | - |
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `isFollowing`: `boolean`  }\>
-
-#### Implementation of
-
-[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[isFollowing](../interfaces/typings.AWF_IProfile.md#isfollowing)
+`Promise`<`any`\>
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:313](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L313)
+[sdk/src/profiles/index.ts:272](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L272)
 
 ___
 
 ### isSubscribedToTag
 
-**isSubscribedToTag**(`tagName`): `Observable`<{ `data`: `boolean`  }\>
+**isSubscribedToTag**(`tagName`): `Promise`<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tagName` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `tagName` | `string` | tag name |
 
 #### Returns
 
-`Observable`<{ `data`: `boolean`  }\>
-
-#### Implementation of
-
-[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[isSubscribedToTag](../interfaces/typings.AWF_IProfile.md#issubscribedtotag)
+`Promise`<`any`\>
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:501](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L501)
+[sdk/src/profiles/index.ts:367](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L367)
 
 ___
 
 ### makeDefaultProvider
 
-**makeDefaultProvider**(`opt`): `Observable`<{ `data`: { `makeDefaultProvider`: `string`  }  }\>
+**makeDefaultProvider**(`opt`): `Promise`<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opt` | [`DataProviderInput`](../interfaces/typings.DataProviderInput.md)[] |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opt` | [`DataProviderInput`](../namespaces/sdk.md#dataproviderinput)[] | DataProviderInput |
 
 #### Returns
 
-`Observable`<{ `data`: { `makeDefaultProvider`: `string`  }  }\>
-
-#### Implementation of
-
-[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[makeDefaultProvider](../interfaces/typings.AWF_IProfile.md#makedefaultprovider)
+`Promise`<`any`\>
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:126](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L126)
+[sdk/src/profiles/index.ts:222](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L222)
 
 ___
 
 ### registerUserName
 
-**registerUserName**(`userName`): `Observable`<{ `data`: { `registerUserName`: `string`  }  }\>
+**registerUserName**(`userName`): `Promise`<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `userName` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `userName` | `string` | Username |
 
 #### Returns
 
-`Observable`<{ `data`: { `registerUserName`: `string`  }  }\>
-
-#### Implementation of
-
-[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[registerUserName](../interfaces/typings.AWF_IProfile.md#registerusername)
+`Promise`<`any`\>
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:163](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L163)
+[sdk/src/profiles/index.ts:231](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L231)
 
 ___
 
 ### saveMediaFile
 
-**saveMediaFile**(`data`): `Promise`<{ `CID`: `string` = cid; `blob`: `any` = resized.image; `size`: { `height`: `number` ; `naturalHeight`: `number` ; `naturalWidth`: `number` ; `width`: `number`  } = resized.size }\>
+**saveMediaFile**(`data`): `Promise`<{ `CID`: `string` = cid; `blob`: `Blob` = resized.image; `size`: { `height`: `number` ; `naturalHeight`: `number` ; `naturalWidth`: `number` ; `width`: `number`  } = resized.size }\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `Object` |
-| `data.config?` | `Object` |
-| `data.config.autoRotate?` | `boolean` |
-| `data.config.maxHeight` | `number` |
-| `data.config.maxWidth` | `number` |
-| `data.config.mimeType?` | `string` |
-| `data.config.quality?` | `number` |
-| `data.content` | `any` |
-| `data.isUrl?` | `boolean` |
-| `data.name?` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `data` | `Object` | media file data |
+| `data.config?` | `Object` | - |
+| `data.config.autoRotate?` | `boolean` | - |
+| `data.config.maxHeight` | `number` | - |
+| `data.config.maxWidth` | `number` | - |
+| `data.config.mimeType?` | `string` | - |
+| `data.config.quality?` | `number` | - |
+| `data.content` | `any` | - |
+| `data.email?` | \`${string}@${string}\` | - |
+| `data.isUrl?` | `boolean` | - |
+| `data.name?` | `string` | - |
 
 #### Returns
 
-`Promise`<{ `CID`: `string` = cid; `blob`: `any` = resized.image; `size`: { `height`: `number` ; `naturalHeight`: `number` ; `naturalWidth`: `number` ; `width`: `number`  } = resized.size }\>
-
-#### Implementation of
-
-[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[saveMediaFile](../interfaces/typings.AWF_IProfile.md#savemediafile)
+`Promise`<{ `CID`: `string` = cid; `blob`: `Blob` = resized.image; `size`: { `height`: `number` ; `naturalHeight`: `number` ; `naturalWidth`: `number` ; `width`: `number`  } = resized.size }\>
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:328](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L328)
+[sdk/src/profiles/index.ts:280](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L280)
 
 ___
 
 ### searchProfiles
 
-**searchProfiles**(`name`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `searchProfiles`: [`UserProfile_Response`](../interfaces/typings.UserProfile_Response.md)[]  }\>
+**searchProfiles**(`name`): `Promise`<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `name` | `string` | name to search for |
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<{ `searchProfiles`: [`UserProfile_Response`](../interfaces/typings.UserProfile_Response.md)[]  }\>
-
-#### Implementation of
-
-[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[searchProfiles](../interfaces/typings.AWF_IProfile.md#searchprofiles)
+`Promise`<`any`\>
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:431](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L431)
+[sdk/src/profiles/index.ts:335](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L335)
 
 ___
 
 ### toggleTagSubscription
 
-**toggleTagSubscription**(`tagName`): `Observable`<{ `data`: { `toggleInterestSub`: `boolean`  }  }\>
+**toggleTagSubscription**(`tagName`): `Promise`<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tagName` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `tagName` | `string` | tag name |
 
 #### Returns
 
-`Observable`<{ `data`: { `toggleInterestSub`: `boolean`  }  }\>
-
-#### Implementation of
-
-[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[toggleTagSubscription](../interfaces/typings.AWF_IProfile.md#toggletagsubscription)
+`Promise`<`any`\>
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:453](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L453)
+[sdk/src/profiles/index.ts:351](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L351)
 
 ___
 
 ### unFollow
 
-**unFollow**(`pubKey`): `Observable`<{ `data`: { `unFollow`: `boolean`  }  }\>
+**unFollow**(`pubKey`): `Promise`<`any`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `pubKey` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `pubKey` | `string` | public key |
 
 #### Returns
 
-`Observable`<{ `data`: { `unFollow`: `boolean`  }  }\>
-
-#### Implementation of
-
-[AWF_IProfile](../interfaces/typings.AWF_IProfile.md).[unFollow](../interfaces/typings.AWF_IProfile.md#unfollow)
+`Promise`<`any`\>
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:275](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/profiles/index.ts#L275)
+[sdk/src/profiles/index.ts:263](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L263)
+
+___
+
+### updateProfile
+
+**updateProfile**(`id`, `profileData`): `Promise`<`undefined` \| { `data`: { `avatar?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `background?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `createdAt`: `any` ; `description?`: ``null`` \| `string` ; `did`: { `id`: `string`  } ; `followers`: { `pageInfo`: { `endCursor?`: ``null`` \| `string` ; `hasNextPage`: `boolean` ; `hasPreviousPage`: `boolean` ; `startCursor?`: ``null`` \| `string`  }  } ; `id`: `string` ; `links?`: ``null`` \| (``null`` \| { `href`: `any` ; `label?`: ``null`` \| `string`  })[] ; `name`: `string`  }  }\>
+
+Update a profile using the profile id.
+
+**`remarks`** The id can be found on the root object returned from getProfileByDid call
+
+**`see`** [GetProfileByDidQuery](../namespaces/sdk.md#getprofilebydidquery) for the profileData.id
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `id` | `string` | string - profileData.id received from getProfileByDid call |
+| `profileData` | [`ProfileInput`](../namespaces/sdk.md#profileinput) | ProfileInput - fields of the profile to update |
+
+#### Returns
+
+`Promise`<`undefined` \| { `data`: { `avatar?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `background?`: ``null`` \| { `alternatives?`: ``null`` \| (``null`` \| { `height`: `number` ; `src`: `any` ; `width`: `number`  })[] ; `default`: { `height`: `number` ; `src`: `any` ; `width`: `number`  }  } ; `createdAt`: `any` ; `description?`: ``null`` \| `string` ; `did`: { `id`: `string`  } ; `followers`: { `pageInfo`: { `endCursor?`: ``null`` \| `string` ; `hasNextPage`: `boolean` ; `hasPreviousPage`: `boolean` ; `startCursor?`: ``null`` \| `string`  }  } ; `id`: `string` ; `links?`: ``null`` \| (``null`` \| { `href`: `any` ; `label?`: ``null`` \| `string`  })[] ; `name`: `string`  }  }\>
+
+#### Defined in
+
+[sdk/src/profiles/index.ts:89](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/profiles/index.ts#L89)

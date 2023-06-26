@@ -13,30 +13,40 @@ description: "Test Description"
 
 ## Enumeration members
 
-### APP
+### App
 
- **APP** = `2`
+ **App** = `"APP"`
 
 #### Defined in
 
-sdk/typings/lib/interfaces/responses.d.ts:116
+typings/sdk/graphql-types.d.ts:269
 
 ___
 
-### ARTICLE
+### Article
 
- **ARTICLE** = `1`
+ **Article** = `"ARTICLE"`
 
 #### Defined in
 
-sdk/typings/lib/interfaces/responses.d.ts:115
+typings/sdk/graphql-types.d.ts:270
 
 ___
 
-### DEFAULT
+### Default
 
- **DEFAULT** = `0`
+ **Default** = `"DEFAULT"`
 
 #### Defined in
 
-sdk/typings/lib/interfaces/responses.d.ts:114
+typings/sdk/graphql-types.d.ts:271
+
+___
+
+### Removed
+
+ **Removed** = `"REMOVED"`
+
+#### Defined in
+
+typings/sdk/graphql-types.d.ts:272
