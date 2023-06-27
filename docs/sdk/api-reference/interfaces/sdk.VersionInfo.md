@@ -9,7 +9,7 @@ hide_title: true
 description: "Test Description"
 ---
 
-[sdk](../namespaces/sdk.md).VersionInfo
+[sdk](../modules/sdk.md).VersionInfo
 
 ## Properties
 
@@ -19,7 +19,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:15](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/apps.ts#L15)
+[sdk/src/settings/apps.ts:22](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L22)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:16](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/apps.ts#L16)
+[sdk/src/settings/apps.ts:23](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L23)

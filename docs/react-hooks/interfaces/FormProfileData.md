@@ -23,7 +23,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:54](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-profile.ts#L54)
+[ui/hooks/src/use-profile.ts:54](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-profile.ts#L54)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:55](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-profile.ts#L55)
+[ui/hooks/src/use-profile.ts:55](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-profile.ts#L55)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:53](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-profile.ts#L53)
+[ui/hooks/src/use-profile.ts:53](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-profile.ts#L53)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:57](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-profile.ts#L57)
+[ui/hooks/src/use-profile.ts:57](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-profile.ts#L57)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:51](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-profile.ts#L51)
+[ui/hooks/src/use-profile.ts:51](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-profile.ts#L51)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:56](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-profile.ts#L56)
+[ui/hooks/src/use-profile.ts:56](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-profile.ts#L56)
 
 ___
 
@@ -92,4 +92,4 @@ ___
 
 #### Defined in
 
-[ui/hooks/src/use-profile.ts:52](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/ui/hooks/src/use-profile.ts#L52)
+[ui/hooks/src/use-profile.ts:52](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-profile.ts#L52)

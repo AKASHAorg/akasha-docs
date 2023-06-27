@@ -11,11 +11,11 @@ description: "Test Description"
 
 [typings](../namespaces/typings.md).EthProviders
 
-## Enumeration members
+## Enumeration Members
 
 ### FallbackProvider
 
- **FallbackProvider** = `4`
+ **FallbackProvider** = ``4``
 
 #### Defined in
 
@@ -25,7 +25,7 @@ ___
 
 ### None
 
- **None** = `1`
+ **None** = ``1``
 
 #### Defined in
 
@@ -35,7 +35,7 @@ ___
 
 ### Torus
 
- **Torus** = `5`
+ **Torus** = ``5``
 
 #### Defined in
 
@@ -45,7 +45,7 @@ ___
 
 ### WalletConnect
 
- **WalletConnect** = `3`
+ **WalletConnect** = ``3``
 
 #### Defined in
 
@@ -55,7 +55,7 @@ ___
 
 ### Web3Injected
 
- **Web3Injected** = `2`
+ **Web3Injected** = ``2``
 
 #### Defined in
 

@@ -11,122 +11,122 @@ description: "Test Description"
 
 [typings](../namespaces/typings.md).INJECTED_PROVIDERS
 
-## Enumeration members
+## Enumeration Members
 
 ### CIPHER
 
- **CIPHER** = `"Cipher"`
+ **CIPHER** = ``"Cipher"``
 
 #### Defined in
 
-typings/sdk/common.d.ts:33
+typings/sdk/common.d.ts:64
 
 ___
 
 ### COINBASE
 
- **COINBASE** = `"Coinbase"`
+ **COINBASE** = ``"Coinbase"``
 
 #### Defined in
 
-typings/sdk/common.d.ts:32
+typings/sdk/common.d.ts:63
 
 ___
 
 ### DAPPER
 
- **DAPPER** = `"Dapper"`
+ **DAPPER** = ``"Dapper"``
 
 #### Defined in
 
-typings/sdk/common.d.ts:29
+typings/sdk/common.d.ts:60
 
 ___
 
 ### FALLBACK
 
- **FALLBACK** = `"Web3"`
+ **FALLBACK** = ``"Web3"``
 
 #### Defined in
 
-typings/sdk/common.d.ts:36
+typings/sdk/common.d.ts:67
 
 ___
 
 ### IM\_TOKEN
 
- **IM\_TOKEN** = `"imToken"`
+ **IM\_TOKEN** = ``"imToken"``
 
 #### Defined in
 
-typings/sdk/common.d.ts:34
+typings/sdk/common.d.ts:65
 
 ___
 
 ### METAMASK
 
- **METAMASK** = `"MetaMask"`
+ **METAMASK** = ``"MetaMask"``
 
 #### Defined in
 
-typings/sdk/common.d.ts:26
+typings/sdk/common.d.ts:57
 
 ___
 
 ### NIFTY
 
- **NIFTY** = `"Nifty"`
+ **NIFTY** = ``"Nifty"``
 
 #### Defined in
 
-typings/sdk/common.d.ts:28
+typings/sdk/common.d.ts:59
 
 ___
 
 ### NOT\_DETECTED
 
- **NOT\_DETECTED** = `"NotDetected"`
+ **NOT\_DETECTED** = ``"NotDetected"``
 
 #### Defined in
 
-typings/sdk/common.d.ts:37
+typings/sdk/common.d.ts:68
 
 ___
 
 ### OPERA
 
- **OPERA** = `"Opera"`
+ **OPERA** = ``"Opera"``
 
 #### Defined in
 
-typings/sdk/common.d.ts:30
+typings/sdk/common.d.ts:61
 
 ___
 
 ### SAFE
 
- **SAFE** = `"Safe"`
+ **SAFE** = ``"Safe"``
 
 #### Defined in
 
-typings/sdk/common.d.ts:27
+typings/sdk/common.d.ts:58
 
 ___
 
 ### STATUS
 
- **STATUS** = `"Status"`
+ **STATUS** = ``"Status"``
 
 #### Defined in
 
-typings/sdk/common.d.ts:35
+typings/sdk/common.d.ts:66
 
 ___
 
 ### TRUST
 
- **TRUST** = `"Trust"`
+ **TRUST** = ``"Trust"``
 
 #### Defined in
 
-typings/sdk/common.d.ts:31
+typings/sdk/common.d.ts:62

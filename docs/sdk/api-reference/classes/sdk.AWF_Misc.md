@@ -9,7 +9,7 @@ hide_title: true
 description: "Test Description"
 ---
 
-[sdk](../namespaces/sdk.md).AWF_Misc
+[sdk](../modules/sdk.md).AWF_Misc
 
 ## Constructors
 
@@ -19,7 +19,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/common/misc.ts:8](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/misc.ts#L8)
+[sdk/src/common/misc.ts:11](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/misc.ts#L11)
 
 ## Properties
 
@@ -29,9 +29,30 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/common/misc.ts:7](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/misc.ts#L7)
+[sdk/src/common/misc.ts:9](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/misc.ts#L9)
 
 ## Methods
+
+### getAccountInfoFromID
+
+**getAccountInfoFromID**(`serialisedID`, `isDID?`): `AccountIdParams`
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `serialisedID` | `string` | `undefined` |
+| `isDID` | `boolean` | `true` |
+
+#### Returns
+
+`AccountIdParams`
+
+#### Defined in
+
+[sdk/src/common/misc.ts:22](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/misc.ts#L22)
+
+___
 
 ### getApiStatus
 
@@ -43,24 +64,4 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/common/misc.ts:13](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/misc.ts#L13)
-
-___
-
-### publicKeyFromString
-
-**publicKeyFromString**(`pubKey`): `PublicKey`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pubKey` | `string` |
-
-#### Returns
-
-`PublicKey`
-
-#### Defined in
-
-[sdk/src/common/misc.ts:19](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/common/misc.ts#L19)
+[sdk/src/common/misc.ts:16](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/misc.ts#L16)

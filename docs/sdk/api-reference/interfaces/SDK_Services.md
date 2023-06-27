@@ -18,7 +18,17 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/index.ts:44](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/index.ts#L44)
+[sdk/src/index.ts:48](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/index.ts#L48)
+
+___
+
+### ceramic
+
+ **ceramic**: [`default`](../classes/sdk.default.md)
+
+#### Defined in
+
+[sdk/src/index.ts:49](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/index.ts#L49)
 
 ___
 
@@ -36,7 +46,7 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:46](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/index.ts#L46)
+[sdk/src/index.ts:51](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/index.ts#L51)
 
 ___
 
@@ -46,7 +56,7 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:45](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/index.ts#L45)
+[sdk/src/index.ts:50](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/index.ts#L50)
 
 ___
 
@@ -56,7 +66,7 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:41](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/index.ts#L41)
+[sdk/src/index.ts:45](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/index.ts#L45)
 
 ___
 
@@ -66,7 +76,7 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:40](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/index.ts#L40)
+[sdk/src/index.ts:44](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/index.ts#L44)
 
 ___
 
@@ -76,7 +86,7 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:43](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/index.ts#L43)
+[sdk/src/index.ts:47](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/index.ts#L47)
 
 ___
 
@@ -86,4 +96,4 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:42](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/index.ts#L42)
+[sdk/src/index.ts:46](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/index.ts#L46)

@@ -9,11 +9,7 @@ hide_title: true
 description: "Test Description"
 ---
 
-[sdk](../namespaces/sdk.md).AppSettings
-
-## Implements
-
-- [`IAppSettings`](../interfaces/typings.IAppSettings.md)
+[sdk](../modules/sdk.md).AppSettings
 
 ## Constructors
 
@@ -32,13 +28,13 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:29](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/apps.ts#L29)
+[sdk/src/settings/apps.ts:36](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L36)
 
 ## Methods
 
 ### get
 
-**get**(`appName`): `Promise`<{ `data`: [`AppsSchema`](../interfaces/sdk.AppsSchema.md) & {} & `Instance`  }\>
+**get**(`appName`): `Promise`<{ `data`: `undefined` \| [`IntegrationSchema`](../interfaces/sdk.IntegrationSchema.md)  }\>
 
 Returns an app configuration object
 
@@ -50,41 +46,33 @@ Returns an app configuration object
 
 #### Returns
 
-`Promise`<{ `data`: [`AppsSchema`](../interfaces/sdk.AppsSchema.md) & {} & `Instance`  }\>
-
-#### Implementation of
-
-[IAppSettings](../interfaces/typings.IAppSettings.md).[get](../interfaces/typings.IAppSettings.md#get)
+`Promise`<{ `data`: `undefined` \| [`IntegrationSchema`](../interfaces/sdk.IntegrationSchema.md)  }\>
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:45](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/apps.ts#L45)
+[sdk/src/settings/apps.ts:52](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L52)
 
 ___
 
 ### getAll
 
-**getAll**(): `Promise`<{ `data`: [`AppsSchema`](../interfaces/sdk.AppsSchema.md) & {} & `Instance`[]  }\>
+**getAll**(): `Promise`<{ `data`: `undefined` \| [`IntegrationSchema`](../interfaces/sdk.IntegrationSchema.md)[]  }\>
 
 Returns all installed apps
 
 #### Returns
 
-`Promise`<{ `data`: [`AppsSchema`](../interfaces/sdk.AppsSchema.md) & {} & `Instance`[]  }\>
-
-#### Implementation of
-
-[IAppSettings](../interfaces/typings.IAppSettings.md).[getAll](../interfaces/typings.IAppSettings.md#getall)
+`Promise`<{ `data`: `undefined` \| [`IntegrationSchema`](../interfaces/sdk.IntegrationSchema.md)[]  }\>
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:56](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/apps.ts#L56)
+[sdk/src/settings/apps.ts:62](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L62)
 
 ___
 
 ### install
 
-**install**(`app`, `isLocal?`): `Promise`<``false`` \| `string`[]\>
+**install**(`app`, `isLocal?`): `Promise`<`undefined` \| `string` \| ``false``\>
 
 Persist installed app configuration for the current user
 
@@ -94,20 +82,16 @@ Persist installed app configuration for the current user
 | :------ | :------ | :------ | :------ |
 | `app` | `Object` | `undefined` | Object |
 | `app.id?` | `string` | `undefined` | - |
-| `app.name?` | `string` | `undefined` | - |
-| `isLocal` | `boolean` | `false` | - |
+| `app.name` | `string` | `undefined` | - |
+| `isLocal` | `boolean` | `false` | True only for development. Default is false |
 
 #### Returns
 
-`Promise`<``false`` \| `string`[]\>
-
-#### Implementation of
-
-[IAppSettings](../interfaces/typings.IAppSettings.md).[install](../interfaces/typings.IAppSettings.md#install)
+`Promise`<`undefined` \| `string` \| ``false``\>
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:68](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/apps.ts#L68)
+[sdk/src/settings/apps.ts:73](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L73)
 
 ___
 
@@ -127,7 +111,7 @@ ___
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:126](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/apps.ts#L126)
+[sdk/src/settings/apps.ts:137](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L137)
 
 ___
 
@@ -147,19 +131,15 @@ Uninstall app by name
 
 `Promise`<`void`\>
 
-#### Implementation of
-
-[IAppSettings](../interfaces/typings.IAppSettings.md).[uninstall](../interfaces/typings.IAppSettings.md#uninstall)
-
 #### Defined in
 
-[sdk/src/settings/apps.ts:112](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/apps.ts#L112)
+[sdk/src/settings/apps.ts:125](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L125)
 
 ___
 
 ### updateConfig
 
-**updateConfig**(`app`): `Promise`<`string` \| ``false``\>
+**updateConfig**(`app`): `Promise`<`undefined` \| `number` \| ``false``\>
 
 #### Parameters
 
@@ -169,17 +149,17 @@ ___
 
 #### Returns
 
-`Promise`<`string` \| ``false``\>
+`Promise`<`undefined` \| `number` \| ``false``\>
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:167](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/apps.ts#L167)
+[sdk/src/settings/apps.ts:178](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L178)
 
 ___
 
 ### updateVersion
 
-**updateVersion**(`app`): `Promise`<`string` \| ``false``\>
+**updateVersion**(`app`): `Promise`<`undefined` \| `number` \| ``false``\>
 
 #### Parameters
 
@@ -189,8 +169,8 @@ ___
 
 #### Returns
 
-`Promise`<`string` \| ``false``\>
+`Promise`<`undefined` \| `number` \| ``false``\>
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:143](https://github.com/AKASHAorg/akasha-framework/blob/c052f00c/sdk/src/settings/apps.ts#L143)
+[sdk/src/settings/apps.ts:153](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L153)

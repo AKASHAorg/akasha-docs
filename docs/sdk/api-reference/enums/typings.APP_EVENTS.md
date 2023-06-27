@@ -11,31 +11,11 @@ description: "Test Description"
 
 [typings](../namespaces/typings.md).APP_EVENTS
 
-## Enumeration members
+## Enumeration Members
 
 ### INFO\_READY
 
- **INFO\_READY** = `"#integration#ReleaseInfoReady"`
-
-#### Defined in
-
-typings/sdk/events.d.ts:49
-
-___
-
-### REMOVED
-
- **REMOVED** = `"#integration#Removed"`
-
-#### Defined in
-
-typings/sdk/events.d.ts:50
-
-___
-
-### TOGGLE\_STATUS
-
- **TOGGLE\_STATUS** = `"#integration#ToggleStatus"`
+ **INFO\_READY** = ``"#integration#ReleaseInfoReady"``
 
 #### Defined in
 
@@ -43,9 +23,19 @@ typings/sdk/events.d.ts:51
 
 ___
 
-### UPDATE\_CONFIG
+### REMOVED
 
- **UPDATE\_CONFIG** = `"#integration#UpdateConfig"`
+ **REMOVED** = ``"#integration#Removed"``
+
+#### Defined in
+
+typings/sdk/events.d.ts:52
+
+___
+
+### TOGGLE\_STATUS
+
+ **TOGGLE\_STATUS** = ``"#integration#ToggleStatus"``
 
 #### Defined in
 
@@ -53,10 +43,20 @@ typings/sdk/events.d.ts:53
 
 ___
 
-### UPDATE\_VERSION
+### UPDATE\_CONFIG
 
- **UPDATE\_VERSION** = `"#integration#UpdateVersion"`
+ **UPDATE\_CONFIG** = ``"#integration#UpdateConfig"``
 
 #### Defined in
 
-typings/sdk/events.d.ts:52
+typings/sdk/events.d.ts:55
+
+___
+
+### UPDATE\_VERSION
+
+ **UPDATE\_VERSION** = ``"#integration#UpdateVersion"``
+
+#### Defined in
+
+typings/sdk/events.d.ts:54
