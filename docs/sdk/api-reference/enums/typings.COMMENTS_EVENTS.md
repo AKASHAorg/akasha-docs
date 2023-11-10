@@ -11,32 +11,32 @@ description: "Test Description"
 
 [typings](../namespaces/typings.md).COMMENTS_EVENTS
 
-## Enumeration members
+## Enumeration Members
 
 ### CREATE
 
- **CREATE** = `"#comments#Create"`
+ **CREATE** = ``"#comments#Create"``
 
 #### Defined in
 
-typings/sdk/events.d.ts:32
+typings/sdk/events.d.ts:34
 
 ___
 
 ### EDIT
 
- **EDIT** = `"#comments#Edit"`
+ **EDIT** = ``"#comments#Edit"``
 
 #### Defined in
 
-typings/sdk/events.d.ts:33
+typings/sdk/events.d.ts:35
 
 ___
 
 ### REMOVE
 
- **REMOVE** = `"#comments#Remove"`
+ **REMOVE** = ``"#comments#Remove"``
 
 #### Defined in
 
-typings/sdk/events.d.ts:34
+typings/sdk/events.d.ts:36

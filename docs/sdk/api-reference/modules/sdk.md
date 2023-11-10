@@ -1,6 +1,6 @@
 ---
 id: "sdk"
-title: "Namespace: sdk"
+title: "Module: sdk"
 sidebar_label: "sdk"
 sidebar_position: 0
 custom_edit_url: null
@@ -43,7 +43,7 @@ description: "Test Description"
 - [SettingsSchema](../interfaces/sdk.SettingsSchema.md)
 - [VersionInfo](../interfaces/sdk.VersionInfo.md)
 
-## Type aliases
+## Type Aliases
 
 ### AddCommentMutation
 

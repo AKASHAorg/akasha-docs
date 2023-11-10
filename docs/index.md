@@ -6,19 +6,19 @@ slug: /
 
 # Welcome to the AKASHA documentation
 
-Explore how to build amazing integrations using AKASHA (applications, widgets and plugins) and create unique experiences in Ethereum World.
+Explore how to build amazing integrations using AKASHA Core (applications, widgets and plugins) and create unique experiences in the Akasha World.
 
-### What is AKASHA?
+### What is AKASHA Core?
 
-Today, AKASHA is a framework that aims to facilitate the development of integrations in our microblogging site called [Ethereum World](https://akasha.ethereum.world/). By providing it, we expect developers to have the opportunity to build and innovate in this decentralized social network ecosystem.
+Today, AKASHA Core is the open-sourced framework for building and distributing composable web3 apps, serving as the foundation for our microblogging site, [Akasha World](https://akasha.ethereum.world/). By providing this framework, we expect developers to have the opportunity to build and innovate in this decentralized social network ecosystem.
 
-In the future, we envision AKASHA as the platform that will allow people to create and sustain social technological spaces we call [Worlds](https://akasha.org/blog/2019/11/21/what-is-akasha-reloaded-what-is-ethereum-world).
+With AKASHA Core, we make it easier for people to create and sustain social technological spaces we call [Worlds](https://akasha.org/blog/2019/11/21/what-is-akasha-reloaded-what-is-ethereum-world).
 
 ## AKASHA integrations
 
 ### Applications
 
-Applications are standalone components that complement and extend Ethereans social network experience.
+Applications are standalone components that complement and extend your web3 social network experience.
 
 [Learn more](/integrations/applications)
 
@@ -40,22 +40,22 @@ Allow Ethereans to perform quick actions or access small pieces of information u
 
 All Ethereum World integrations are open source. Explore them whenever you want to get inspired or learn.
 
-- [Akasha app](https://github.com/AKASHAorg/akasha-framework/tree/next/ui/apps/akasha)
-- [Integration Center](https://github.com/AKASHAorg/akasha-framework/tree/next/ui/apps/app-center)
-- [Authentication app](https://github.com/AKASHAorg/akasha-framework/tree/next/ui/apps/auth-app)
-- [Bookmarks app](https://github.com/AKASHAorg/akasha-framework/tree/next/ui/apps/bookmarks)
-- [Legal app](https://github.com/AKASHAorg/akasha-framework/tree/next/ui/apps/legal)
-- [Moderation app](https://github.com/AKASHAorg/akasha-framework/tree/next/ui/apps/moderation)
-- [Notifications app](https://github.com/AKASHAorg/akasha-framework/tree/next/ui/apps/notifications)
-- [Profile app](https://github.com/AKASHAorg/akasha-framework/tree/next/ui/apps/profile)
-- [Routing app](https://github.com/AKASHAorg/akasha-framework/tree/next/ui/apps/routing)
-- [Search app](https://github.com/AKASHAorg/akasha-framework/tree/next/ui/apps/search)
-- [Settings app](https://github.com/AKASHAorg/akasha-framework/tree/next/ui/apps/settings-app)
-- [Translation app](https://github.com/AKASHAorg/akasha-framework/tree/next/ui/apps/translation)
-- [Analytics Widget](https://github.com/AKASHAorg/akasha-framework/tree/next/ui/widgets/analytics)
-- [Layout Widget](https://github.com/AKASHAorg/akasha-framework/tree/next/ui/widgets/layout)
-- [Mini Profile Widget](https://github.com/AKASHAorg/akasha-framework/tree/next/ui/widgets/mini-profile)
-- [My Apps Widget](https://github.com/AKASHAorg/akasha-framework/tree/next/ui/widgets/my-apps)
-- [Sidebar Widget](https://github.com/AKASHAorg/akasha-framework/tree/next/ui/widgets/sidebar)
-- [Topbar Widget](https://github.com/AKASHAorg/akasha-framework/tree/next/ui/widgets/top-bar)
-- [Trending Widget](https://github.com/AKASHAorg/akasha-framework/tree/next/ui/widgets/trending)
+- [Akasha app](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/akasha)
+- [AKASHAverse](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/app-center)
+- [Authentication app](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/auth-app)
+- [List app](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/bookmarks)
+- [Legal app](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/legal)
+- [Vibe](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/moderation)
+- [Notifications app](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/notifications)
+- [Profile app](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/profile)
+- [Routing app](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/routing)
+- [Search app](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/search)
+- [Settings app](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/settings-app)
+- [Translation app](https://github.com/AKASHAorg/akasha-core/tree/next/ui/apps/translation)
+- [Analytics Widget](https://github.com/AKASHAorg/akasha-core/tree/next/ui/widgets/analytics)
+- [Layout Widget](https://github.com/AKASHAorg/akasha-core/tree/next/ui/widgets/layout)
+- [Mini Profile Widget](https://github.com/AKASHAorg/akasha-core/tree/next/ui/widgets/mini-profile)
+- [My Apps Widget](https://github.com/AKASHAorg/akasha-core/tree/next/ui/widgets/my-apps)
+- [Sidebar Widget](https://github.com/AKASHAorg/akasha-core/tree/next/ui/widgets/sidebar)
+- [Topbar Widget](https://github.com/AKASHAorg/akasha-core/tree/next/ui/widgets/top-bar)
+- [Trending Widget](https://github.com/AKASHAorg/akasha-core/tree/next/ui/widgets/trending)

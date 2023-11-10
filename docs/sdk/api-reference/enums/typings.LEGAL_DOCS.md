@@ -11,52 +11,52 @@ description: "Test Description"
 
 [typings](../namespaces/typings.md).LEGAL_DOCS
 
-## Enumeration members
+## Enumeration Members
 
 ### APP\_GUIDE
 
- **APP\_GUIDE** = `"AppGuide"`
+ **APP\_GUIDE** = ``"AppGuide"``
 
 #### Defined in
 
-typings/sdk/common.d.ts:23
+typings/sdk/common.d.ts:53
 
 ___
 
 ### CODE\_OF\_CONDUCT
 
- **CODE\_OF\_CONDUCT** = `"CodeOfConduct"`
+ **CODE\_OF\_CONDUCT** = ``"CodeOfConduct"``
 
 #### Defined in
 
-typings/sdk/common.d.ts:22
+typings/sdk/common.d.ts:52
 
 ___
 
 ### PRIVACY\_POLICY
 
- **PRIVACY\_POLICY** = `"PrivacyPolicy"`
+ **PRIVACY\_POLICY** = ``"PrivacyPolicy"``
 
 #### Defined in
 
-typings/sdk/common.d.ts:21
+typings/sdk/common.d.ts:51
 
 ___
 
 ### TERMS\_OF\_SERVICE
 
- **TERMS\_OF\_SERVICE** = `"TermsOfService"`
+ **TERMS\_OF\_SERVICE** = ``"TermsOfService"``
 
 #### Defined in
 
-typings/sdk/common.d.ts:20
+typings/sdk/common.d.ts:50
 
 ___
 
 ### TERMS\_OF\_USE
 
- **TERMS\_OF\_USE** = `"TermsOfUse"`
+ **TERMS\_OF\_USE** = ``"TermsOfUse"``
 
 #### Defined in
 
-typings/sdk/common.d.ts:19
+typings/sdk/common.d.ts:49

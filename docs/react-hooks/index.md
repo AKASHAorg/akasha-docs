@@ -23,25 +23,16 @@ Currently we have the following hooks:
 - [`useInstallApp`](/react-hooks/modules#useinstallapp)
 - [`useUninstallApp`](/react-hooks/modules#useuninstallapp)
 
-## Bookmarks
+## List
 
 - [`useGetBookmarks`](/react-hooks/modules#usegetbookmarks)
 - [`useSaveBookmark`](/react-hooks/modules#usesavebookmark)
 - [`useDeleteBookmark`](/react-hooks/modules#usedeletebookmark)
 
-## Comments
-
-- [`useInfiniteComments`](/react-hooks/modules#useinfinitecomments)
-- [`useComment`](/react-hooks/modules#usecomment)
-- [`useDeleteComment`](/react-hooks/modules#usedeletecomment)
-- [`useCreateComment`](/react-hooks/modules#usecreatecomment)
-- [`useEditComment`](/react-hooks/modules#useeditcomment)
-
 ## Follow/Unfollow
 
-- [`useIsFollowingMultiple`](/react-hooks/modules#useisfollowingmultiple)
-- [`useFollow`](/react-hooks/modules#usefollow)
-- [`useUnfollow`](/react-hooks/modules#useunfollow)
+- [`useCreateFollowMutation`](/react-hooks/modules#usecreatefollowmutation)
+- [`useUpdateFollowMutation`](/react-hooks/modules#useupdatefollowmutation)
 
 ## GlobalLogin
 
@@ -83,6 +74,8 @@ Currently we have the following hooks:
 - [`useLogout`](/react-hooks/modules#uselogout)
 - [`useCheckSignup`](/react-hooks/modules#usechecksignup)
 
+- [`useCreateProfileMutation`](/react-hooks/modules#usecreateprofilemutation)
+
 ## Mentions
 
 - [`useMentionSearch`](/react-hooks/modules#usementionsearch)
@@ -114,25 +107,60 @@ Currently we have the following hooks:
 - [`useMarkAsRead`](/react-hooks/modules#usemarkasread)
 - [`useCheckNewNotifications`](/react-hooks/modules#usechecknewnotifications)
 
-## Posts
+## Beams
 
-- [`useInfinitePosts`](/react-hooks/modules#useinfiniteposts)
-- [`useInfinitePostsByTag`](/react-hooks/modules#useinfinitepostsbytag)
-- [`useInfinitePostsByAuthor`](/react-hooks/modules#useinfinitepostsbyauthor)
-- [`usePost`](/react-hooks/modules#usepost)
-- [`useDeletePost`](/react-hooks/modules#usedeletepost)
-- [`useCreatePost`](/react-hooks/modules#usecreatepost)
-- [`useEditPost`](/react-hooks/modules#useeditpost)
+- [`useGetBeamsQuery`](/react-hooks/modules#usegetbeamsquery)
+- [`useInfiniteGetBeamsQuery`](/react-hooks/modules#useinfinitegetbeamsquery)
+- [`useGetBeamsByAuthorDidQuery`](/react-hooks/modules#usegetbeamsbyauthordidquery)
+- [`useInfiniteGetBeamsByAuthorDidQuery`](/react-hooks/modules#useinfinitegetbeamsbyauthordidquery)
+- [`useGetBeamByIdQuery`](/react-hooks/modules#usegetbeambyidquery)
+- [`useInfiniteGetBeamByIdQuery`](/react-hooks/modules#useinfinitegetbeambyidquery)
+- [`useGetRebeamsFromBeamQuery`](/react-hooks/modules#usegetrebeamsfrombeamquery)
+- [`useInfiniteGetRebeamsFromBeamQuery`](/react-hooks/modules#useinfinitegetrebeamsfrombeamquery)
+- [`useGetMentionsFromBeamQuery`](/react-hooks/modules#usegetmentionsfrombeamquery)
+- [`useInfiniteGetMentionsFromBeamQuery`](/react-hooks/modules#useinfinitegetmentionsfrombeamquery)
+- [`useCreateBeamMutation`](/react-hooks/modules#usecreatebeammutation)
+- [`useUpdateBeamMutation`](/react-hooks/modules#useupdatebeammutation)
+- [`useCreateRebeamMutation`](/react-hooks/modules#usecreaterebeammutation)
+- [`useCreateBeamProfileMentionMutation`](/react-hooks/modules#usecreatebeamprofilementionmutation)
+  
+## Reflections
+
+- [`useGetReflectionsFromBeamQuery`](/react-hooks/modules#usegetreflectionsfrombeamquery)
+- [`useInfiniteGetReflectionsFromBeamQuery`](/react-hooks/modules#useinfinitegetreflectionsfrombeamquery)
+- [`useGetReflectionsByAuthorDidQuery`](/react-hooks/modules#usegetreflectionsbyauthordidquery)
+- [`useInfiniteGetReflectionsByAuthorDidQuery`](/react-hooks/modules#useinfinitegetreflectionsbyauthordidquery)
+- [`useGetReflectReflectionsQuery`](/react-hooks/modules#usegetreflectreflectionsquery)
+- [`useInfiniteGetReflectReflectionsQuery`](/react-hooks/modules#useinfinitegetreflectreflectionsquery)
+- [`useCreateReflectMutation`](/react-hooks/modules#usecreatereflectmutation)
+- [`useUpdateReflectMutation`](/react-hooks/modules#useupdatereflectmutation)
+- [`useCreateReflectReflectionMutation`](/react-hooks/modules#usecreatereflectreflectionmutation)
+- [`useUpdateReflectReflectionMutation`](/react-hooks/modules#useupdatereflectreflectionmutation)
 
 ## Profile
 
-- [`useGetProfile`](/react-hooks/modules#usegetprofile)
-- [`useGetProfileByEthAddress`](/react-hooks/modules#usegetprofilebyethaddress)
-- [`useGetEntryAuthor`](/react-hooks/modules#usegetentryauthor)
-- [`useFollowers`](/react-hooks/modules#usefollowers)
-- [`useFollowing`](/react-hooks/modules#usefollowing)
-- [`useInterests`](/react-hooks/modules#useinterests)
-- [`useProfileUpdate`](/react-hooks/modules#useprofileupdate)
+- [`useGetEntryAuthor <!-- old -->`](/react-hooks/modules#usegetentryauthor) 
+- [`useGetProfileByIdQuery`](/react-hooks/modules#usegetprofilebyidquery)
+- [`useInfiniteGetProfileByIdQuery`](/react-hooks/modules#useinfinitegetprofilebyidquery)
+- [`useGetProfileByDidQuery`](/react-hooks/modules#usegetprofilebydidquery)
+- [`useInfiniteGetProfileByDidQuery`](/react-hooks/modules#useinfinitegetprofilebydidquery)
+- [`useGetProfilesQuery`](/react-hooks/modules#usegetprofilesquery)
+- [`useInfiniteGetProfilesQuery`](/react-hooks/modules#useinfinitegetprofilesquery)
+- [`useGetInterestsQuery`](/react-hooks/modules#usegetinterestsquery)
+- [`useInfiniteGetInterestsQuery`](/react-hooks/modules#useinfinitegetinterestsquery)
+- [`useGetInterestsByDidQuery`](/react-hooks/modules#usegetinterestsbydidquery)
+- [`useInfiniteGetInterestsByDidQuery`](/react-hooks/modules#useinfinitegetinterestsbydidquery)
+- [`useGetInterestsByIdQuery`](/react-hooks/modules#usegetinterestsbyidquery)
+- [`useInfiniteGetInterestsByIdQuery`](/react-hooks/modules#useinfinitegetinterestsbyidquery)
+- [`useGetFollowingListByDidQuery`](/react-hooks/modules#usegetfollowinglistbydidquery)
+- [`useInfiniteGetFollowingListByDidQuery`](/react-hooks/modules#useinfinitegetfollowinglistbydidquery)
+- [`useGetFollowersListByDidQuery`](/react-hooks/modules#usegetfollowerslistbydidquery)
+- [`useInfiniteGetFollowersListByDidQuery`](/react-hooks/modules#useinfinitegetfollowerslistbydidquery)
+- [`useGetMyProfileQuery`](/react-hooks/modules#usegetmyprofilequery)
+- [`useInfiniteGetMyProfileQuery`](/react-hooks/modules#useinfinitegetmyprofilequery)
+- [`useUpdateProfileMutation`](/react-hooks/modules#useupdateprofilemutation)
+- [`useCreateInterestsMutation`](/react-hooks/modules#usecreateinterestsmutation)
+- [`useUpdateInterestsMutation`](/react-hooks/modules#useupdateinterestsmutation)
 
 ## Reasons
 
@@ -159,7 +187,7 @@ Currently we have the following hooks:
 - [`useTrendingTags`](/react-hooks/modules#usetrendingtags)
 - [`useTrendingProfiles`](/react-hooks/modules#usetrendingprofiles)
 
-## Username
+## Username (no longer available)
 
 - [`useUpdateUsernameProvider`](/react-hooks/modules#useupdateusernameprovider)
 - [`useEnsRegistration`](/react-hooks/modules#useensregistration)

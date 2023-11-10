@@ -19,7 +19,7 @@ description: "Test Description"
 
 #### Defined in
 
-typings/sdk/responses.d.ts:97
+typings/sdk/responses.d.ts:102
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:98
+typings/sdk/responses.d.ts:103

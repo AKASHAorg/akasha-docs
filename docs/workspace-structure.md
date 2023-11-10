@@ -6,7 +6,7 @@ sidebar_position: 6
 
 AKASHA Framework's main repository has a structure of a monorepo and is managed using [nx](https://nx.dev/).
 
-You can find more details in the repository's [README](https://github.com/AKASHAorg/akasha-framework/blob/next/README.md) file.
+You can find more details in the repository's [README](https://github.com/AKASHAorg/akasha-core/blob/next/README.md) file.
 
 A high level overview of the repository structure:
 

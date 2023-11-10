@@ -11,32 +11,32 @@ description: "Test Description"
 
 [typings](../namespaces/typings.md).PostType
 
-## Enumeration members
+## Enumeration Members
 
 ### APP
 
- **APP** = `2`
+ **APP** = ``2``
 
 #### Defined in
 
-typings/sdk/responses.d.ts:118
+typings/sdk/responses.d.ts:9
 
 ___
 
 ### ARTICLE
 
- **ARTICLE** = `1`
+ **ARTICLE** = ``1``
 
 #### Defined in
 
-typings/sdk/responses.d.ts:117
+typings/sdk/responses.d.ts:8
 
 ___
 
 ### DEFAULT
 
- **DEFAULT** = `0`
+ **DEFAULT** = ``0``
 
 #### Defined in
 
-typings/sdk/responses.d.ts:116
+typings/sdk/responses.d.ts:7

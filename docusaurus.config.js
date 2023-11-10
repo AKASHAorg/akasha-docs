@@ -57,7 +57,7 @@ const config = {
         categorizeByGroup: false,
         // plugin
         plugin: ["typedoc-plugin-missing-exports"],
-        internalNamespace: "sdk",
+        internalModule: "sdk",
         // end_plugin
         excludeInternal: true,
         categoryOrder: ["API", "Services"],
@@ -74,24 +74,24 @@ const config = {
         },
       },
     ],
-    [
-      "docusaurus-plugin-typedoc",
-      {
-        id: "akasha-ui-hooks",
-        entryPoints: ["./akasha-core/ui/hooks/src/index.ts"],
-        entryPointStrategy: "expand",
-        tsconfig: "./akasha-core/ui/hooks/tsconfig.json",
-        readme: "docs/react-hooks/_hooks-list_.md",
-        out: "./react-hooks",
-        name: "React hooks",
-        excludeInternal: true,
-        sidebar: {
-          categoryLabel: "React hooks",
-          position: 5,
-        },
-        frontmatter: null,
-      },
-    ],
+    // [
+    //   "docusaurus-plugin-typedoc",
+    //   {
+    //     id: "akasha-ui-hooks",
+    //     entryPoints: ["./akasha-core/ui/hooks/src/generated/hooks-new.ts"],
+    //     entryPointStrategy: "expand",
+    //     tsconfig: "./akasha-core/ui/hooks/tsconfig.json",
+    //     readme: "docs/react-hooks/_hooks-list_.md",
+    //     out: "./react-hooks",
+    //     name: "React hooks",
+    //     excludeInternal: true,
+    //     sidebar: {
+    //       categoryLabel: "React hooks",
+    //       position: 5,
+    //     },
+    //     frontmatter: null,
+    //   },
+    // ],
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */

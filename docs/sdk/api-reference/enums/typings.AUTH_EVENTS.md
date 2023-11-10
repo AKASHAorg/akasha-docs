@@ -11,21 +11,11 @@ description: "Test Description"
 
 [typings](../namespaces/typings.md).AUTH_EVENTS
 
-## Enumeration members
+## Enumeration Members
 
 ### CONNECT\_ADDRESS
 
- **CONNECT\_ADDRESS** = `"#auth#connectAddress"`
-
-#### Defined in
-
-typings/sdk/events.d.ts:8
-
-___
-
-### CONNECT\_ADDRESS\_SUCCESS
-
- **CONNECT\_ADDRESS\_SUCCESS** = `"#auth#aconnectAddress#success"`
+ **CONNECT\_ADDRESS** = ``"#auth#connectAddress"``
 
 #### Defined in
 
@@ -33,19 +23,39 @@ typings/sdk/events.d.ts:9
 
 ___
 
-### MARK\_MSG\_READ
+### CONNECT\_ADDRESS\_SUCCESS
 
- **MARK\_MSG\_READ** = `"#auth#markMsgRead"`
+ **CONNECT\_ADDRESS\_SUCCESS** = ``"#auth#connectAddress#success"``
 
 #### Defined in
 
-typings/sdk/events.d.ts:7
+typings/sdk/events.d.ts:10
+
+___
+
+### MARK\_MSG\_READ
+
+ **MARK\_MSG\_READ** = ``"#auth#markMsgRead"``
+
+#### Defined in
+
+typings/sdk/events.d.ts:8
+
+___
+
+### NEW\_MESSAGES
+
+ **NEW\_MESSAGES** = ``"#auth#hasNewMessages"``
+
+#### Defined in
+
+typings/sdk/events.d.ts:5
 
 ___
 
 ### NEW\_NOTIFICATIONS
 
- **NEW\_NOTIFICATIONS** = `"#auth#hasNewNotifications"`
+ **NEW\_NOTIFICATIONS** = ``"#auth#hasNewNotifications"``
 
 #### Defined in
 
@@ -55,7 +65,7 @@ ___
 
 ### READY
 
- **READY** = `"#auth#ready"`
+ **READY** = ``"#auth#ready"``
 
 #### Defined in
 
@@ -65,17 +75,7 @@ ___
 
 ### SIGN\_AUTH\_MESSAGE
 
- **SIGN\_AUTH\_MESSAGE** = `"#auth#signAuthMessage"`
-
-#### Defined in
-
-typings/sdk/events.d.ts:10
-
-___
-
-### SIGN\_AUTH\_MESSAGE\_SUCCESS
-
- **SIGN\_AUTH\_MESSAGE\_SUCCESS** = `"#auth#signAuthMessage#success"`
+ **SIGN\_AUTH\_MESSAGE** = ``"#auth#signAuthMessage"``
 
 #### Defined in
 
@@ -83,9 +83,9 @@ typings/sdk/events.d.ts:11
 
 ___
 
-### SIGN\_COMPOSED\_MESSAGE
+### SIGN\_AUTH\_MESSAGE\_SUCCESS
 
- **SIGN\_COMPOSED\_MESSAGE** = `"#auth#signComposedMessage"`
+ **SIGN\_AUTH\_MESSAGE\_SUCCESS** = ``"#auth#signAuthMessage#success"``
 
 #### Defined in
 
@@ -93,9 +93,9 @@ typings/sdk/events.d.ts:12
 
 ___
 
-### SIGN\_COMPOSED\_MESSAGE\_SUCCESS
+### SIGN\_COMPOSED\_MESSAGE
 
- **SIGN\_COMPOSED\_MESSAGE\_SUCCESS** = `"#auth#signComposedMessage#success"`
+ **SIGN\_COMPOSED\_MESSAGE** = ``"#auth#signComposedMessage"``
 
 #### Defined in
 
@@ -103,9 +103,19 @@ typings/sdk/events.d.ts:13
 
 ___
 
+### SIGN\_COMPOSED\_MESSAGE\_SUCCESS
+
+ **SIGN\_COMPOSED\_MESSAGE\_SUCCESS** = ``"#auth#signComposedMessage#success"``
+
+#### Defined in
+
+typings/sdk/events.d.ts:14
+
+___
+
 ### SIGN\_IN
 
- **SIGN\_IN** = `"#auth#signIn"`
+ **SIGN\_IN** = ``"#auth#signIn"``
 
 #### Defined in
 
@@ -115,27 +125,17 @@ ___
 
 ### SIGN\_OUT
 
- **SIGN\_OUT** = `"#auth#signOut"`
+ **SIGN\_OUT** = ``"#auth#signOut"``
 
 #### Defined in
 
-typings/sdk/events.d.ts:5
+typings/sdk/events.d.ts:6
 
 ___
 
 ### SIGN\_TOKEN\_MESSAGE
 
- **SIGN\_TOKEN\_MESSAGE** = `"#auth#signTokenMessage"`
-
-#### Defined in
-
-typings/sdk/events.d.ts:14
-
-___
-
-### SIGN\_TOKEN\_MESSAGE\_SUCCESS
-
- **SIGN\_TOKEN\_MESSAGE\_SUCCESS** = `"#auth#signTokenMessage#success"`
+ **SIGN\_TOKEN\_MESSAGE** = ``"#auth#signTokenMessage"``
 
 #### Defined in
 
@@ -143,10 +143,20 @@ typings/sdk/events.d.ts:15
 
 ___
 
-### WAIT\_FOR\_AUTH
+### SIGN\_TOKEN\_MESSAGE\_SUCCESS
 
- **WAIT\_FOR\_AUTH** = `"#auth#waitForAuth"`
+ **SIGN\_TOKEN\_MESSAGE\_SUCCESS** = ``"#auth#signTokenMessage#success"``
 
 #### Defined in
 
-typings/sdk/events.d.ts:6
+typings/sdk/events.d.ts:16
+
+___
+
+### WAIT\_FOR\_AUTH
+
+ **WAIT\_FOR\_AUTH** = ``"#auth#waitForAuth"``
+
+#### Defined in
+
+typings/sdk/events.d.ts:7

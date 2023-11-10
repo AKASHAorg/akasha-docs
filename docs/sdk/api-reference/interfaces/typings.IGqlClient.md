@@ -1,6 +1,6 @@
 ---
 id: "typings.IGqlClient"
-title: "Interface: IGqlClient<Operation>"
+title: "Interface: IGqlClient<T>"
 sidebar_label: "IGqlClient"
 custom_edit_url: null
 pagination_prev: null
@@ -15,24 +15,24 @@ description: "Test Description"
 
 | Name |
 | :------ |
-| `Operation` |
+| `T` |
 
 ## Methods
 
-### run
+### getAPI
 
-**run**(`operation`): [`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`Operation`\>
+**getAPI**(`withCache`): `T`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `operation` | `GraphQLRequest` |
+| `withCache` | `boolean` |
 
 #### Returns
 
-[`ServiceCallResult`](../namespaces/typings.md#servicecallresult)<`Operation`\>
+`T`
 
 #### Defined in
 
-typings/sdk/gql.d.ts:4
+typings/sdk/gql.d.ts:2
