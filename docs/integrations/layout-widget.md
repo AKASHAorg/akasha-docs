@@ -17,13 +17,13 @@ For example default layout widget, defines a few areas in which the apps and wid
 On a desktop screen, main areas are divided like in the schematic below:
 
 ```
-|----------------------------------------------------|
-|                   Topbar Area                      |
-|----------------------------------------------------|
+|------------|-------------------------|-------------|
+|            |       Topbar Area       |             |
+|            |-------------------------|             |
 |            |                         |             |
+| Sidebar    |                         |   Widget    |
+|  Area      |        App Area         |    Area     |
 |            |                         |             |
-| Sidebar    |        App Area         | Widget      |
-| Area       |                         | Area        |
 |            |                         |             |
 |            |                         |             |
 |----------------------------------------------------|
