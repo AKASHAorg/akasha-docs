@@ -9,7 +9,7 @@ The layout of a world is defined by a layout widget. It defines a few areas in w
 
 - topbar area
 - sidebar area
-- plugin/app area
+- app area
 - widget area
 
 On a desktop screen, main areas are divided like in the schematic below:
@@ -82,7 +82,7 @@ This is the main area where the apps are mounted.
 ```ts title="Mounting an app in the app area"
 export const register = (applicationRegistrationOptions) => {
   return {
-    mountsIn: applicationRegistrationOptions.layoutConfig?.pluginSlotId,
+    mountsIn: applicationRegistrationOptions.layoutConfig?.applicationSlotId,
     // ...other properties
   };
 };
