@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-sidebar_label: SDK object
+sidebar_label: SDK Object
 ---
 
 # SDK APIs

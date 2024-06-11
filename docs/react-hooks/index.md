@@ -1,12 +1,12 @@
 ---
 id: "index"
-title: "React hooks"
+title: "React Hooks"
 sidebar_label: "Readme"
 sidebar_position: 0
 custom_edit_url: null
 ---
 
-# React hooks
+# React Hooks
 
 Most of the SDK's methods are also implemented as React hooks.
 

@@ -1,6 +1,6 @@
 ---
 id: "index"
-title: "AKASHA SDK reference"
+title: "AKASHA SDK Reference"
 sidebar_label: "Exports"
 sidebar_position: 0.5
 custom_edit_url: null

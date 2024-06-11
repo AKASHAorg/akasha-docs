@@ -1,4 +1,4 @@
-# Event bus
+# Event Bus
 
 Communication between integrations is done through the event bus.
 

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-sidebar_label: Layout widget
+sidebar_label: Layout Widget
 ---
 
 # Layout Widget

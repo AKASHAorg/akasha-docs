@@ -3,7 +3,7 @@ sidebar_position: 3
 pagination_next: integrations/applications/create-an-app
 ---
 
-# Development quickstart
+# Development Quickstart
 
 ### Requirements
 
