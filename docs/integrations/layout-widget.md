@@ -5,33 +5,32 @@ sidebar_label: Layout Widget
 
 # Layout Widget
 
-The layout of a world is generally defined by a special type of widget.
+The layout of a world is controlled by its Layout widget. It outlines specific areas in which the apps and widgets can be mounted.
 
-For example default layout widget, defines a few areas in which the apps and widgets can be mounted.
+## Akasha World's default layout widget
+Akasha World's layout widget defines these areas;
 
-- topbar area
-- sidebar area
-- plugin/app area
-- widget area
+- Topbar Area
+- Sidebar Area
+- App Area
+- Widget Area
 
-On a desktop screen, main areas are divided like in the schematic below:
+On a desktop screen, it will look like in the schematic below:
 
 ```
 |------------|-------------------------|-------------|
 |            |       Topbar Area       |             |
 |            |-------------------------|             |
-|            |                         |             |
-| Sidebar    |                         |   Widget    |
-|  Area      |        App Area         |    Area     |
-|            |                         |             |
-|            |                         |             |
+|            |                         | Widget Area |
+| Sidebar    |                         |_____________|
+| Area       |        App Area         |             |
+|            |                         | Root Widget |
+|            |                         | Area        |
 |            |                         |             |
 |----------------------------------------------------|
 ```
 
 These areas are passed down to each app's and widget's `register()` function as props.
-
-## Areas that are defined in ethereum.world's default layout widget
 
 ### Topbar Area
 
@@ -61,8 +60,8 @@ The area that defines the placement of the sidebar.
 
 - sticky top
 - loaded on every page
-- can be toggled via a [uiEvents](ui-event-bus) bus
-- toggled off when on mobile
+- can be toggled via a [uiEvents](./ui-event-bus.md) bus
+- toggled off by default, on mobile
 
 **Example**
 
@@ -77,14 +76,14 @@ export const register = (widgetRegistrationOptions) => {
 
 ### App Area
 
-This is the main area where the apps are mounted.
+This is where the applications are mounted.
 
 **Example**
 
 ```ts title="Mounting an app in the app area"
 export const register = (applicationRegistrationOptions) => {
   return {
-    mountsIn: applicationRegistrationOptions.layoutConfig?.pluginSlotId,
+    mountsIn: applicationRegistrationOptions.layoutConfig?.applicationSlotId,
     // ...other properties
   };
 };
@@ -92,18 +91,29 @@ export const register = (applicationRegistrationOptions) => {
 
 ### Widget Area
 
-This is the area where the widgets are mounted.
-It is split into 2 additional sub-sections, one above the other:
+This is where the widgets are mounted. The order in which they are mounted is dependent on how fast each loads and not in the order they are defined.
 
-- root widget area - widgets that are directly related to the currently active app (example: mini profile widget that is loaded when the post page is active)
-- widget area - widgets that are not related to the currently mounted app (example: trending widget is not related to the notifications page but is still visible there).
+This area is split into 2 sub-sections, one above the other:
 
-**Example**
+- Widget Area - widgets that are directly related to the currently active app (Example: `mini profile widget` that is loaded when the full beam page is active on the antenna app)
+
+- Root Widget Area - widgets that are not related to the currently mounted app (example: `trending widget`  which shows latest profiles and trending topics).
+
+**Examples**
+
+```ts title="Mounting a widget in the widget area"
+export const register = (widgetRegistrationOptions) => {
+  return {
+    mountsIn: widgetRegistrationOptions.layoutConfig?.widgetSlotId,
+    // ...other properties
+  };
+};
+```
 
 ```ts title="Mounting a widget in the root widget area"
-export const register = (applicationRegistrationOptions) => {
+export const register = (widgetRegistrationOptions) => {
   return {
-    mountsIn: applicationRegistrationOptions.layoutConfig?.pluginSlotId,
+    mountsIn: widgetRegistrationOptions.layoutConfig?.rootWidgetSlotId,
     // ...other properties
   };
 };
