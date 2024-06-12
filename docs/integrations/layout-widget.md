@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 3
 sidebar_label: Layout Widget
 ---
 
@@ -21,6 +21,7 @@ On a desktop screen, it will look like in the schematic below:
 |------------|-------------------------|-------------|
 |            |       Topbar Area       |             |
 |            |-------------------------|             |
+|            |                         | Contextual  |
 |            |                         | Widget Area |
 | Sidebar    |                         |_____________|
 | Area       |        App Area         |             |
@@ -95,7 +96,7 @@ This is where the widgets are mounted. The order in which they are mounted is de
 
 This area is split into 2 sub-sections, one above the other:
 
-- Widget Area - widgets that are directly related to the currently active app (Example: `mini profile widget` that is loaded when the full beam page is active on the antenna app)
+- Contextual Widget Area - widgets that are directly related to the currently active app (Example: `mini profile widget` that is loaded when the full beam page is active on the antenna app)
 
 - Root Widget Area - widgets that are not related to the currently mounted app (example: `trending widget`  which shows latest profiles and trending topics).
 

@@ -9,7 +9,7 @@ sidebar_position: 7
 An Antenna is a feed of beams sorted in chronological order and can be tailored to user's interests.
 
 ### Beam
-A Beam is the equivalent of a regular post however the content of the beam is composed of one or more content blocks which are provided by apps.
+A Beam is the equivalent of a regular post (in a traditional social networking context) however the content of the beam is composed of one or more content blocks which are provided by apps.
 
 ### Profile
 A Profile depicts a user's persona in a given world. It holds their avatar, basic info and list of beams, interests ad connections with other users in a world.

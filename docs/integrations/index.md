@@ -23,4 +23,4 @@ Currently we have 2 different types of integrations:
 Integrations are loaded/unloaded by the [app-loader module](https://github.com/AKASHAorg/akasha-core/blob/next/libs/app-loader/README.md) which is an abstraction layer over the [single-spa](https://single-spa.js.org/) library.
 
 Minimum requirement for an integration to be loaded is to export a `register` function that will be called by the App Loader. It is recommended to be exported from an `index.ts` file in the `src` folder of your app.
-For more information about the registration object interface, see the [Registration Object Interface](./applications/index.md#registration-object-interface) section.
+For more information about the registration object interface, see the [Registration Object Interface](./applications/create-an-app.md#registration-object-interface) section.
