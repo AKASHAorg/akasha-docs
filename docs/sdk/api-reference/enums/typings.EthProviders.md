@@ -19,7 +19,7 @@ description: "Test Description"
 
 #### Defined in
 
-typings/sdk/web3.connector.d.ts:6
+typings/lib/sdk/web3.connector.d.ts:6
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-typings/sdk/web3.connector.d.ts:3
+typings/lib/sdk/web3.connector.d.ts:3
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-typings/sdk/web3.connector.d.ts:7
+typings/lib/sdk/web3.connector.d.ts:7
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-typings/sdk/web3.connector.d.ts:5
+typings/lib/sdk/web3.connector.d.ts:5
 
 ___
 
@@ -59,4 +59,4 @@ ___
 
 #### Defined in
 
-typings/sdk/web3.connector.d.ts:4
+typings/lib/sdk/web3.connector.d.ts:4

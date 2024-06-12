@@ -19,7 +19,7 @@ description: "Test Description"
 
 #### Defined in
 
-typings/sdk/responses.d.ts:56
+typings/lib/sdk/responses.d.ts:20
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:61
+typings/lib/sdk/responses.d.ts:25
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:64
+typings/lib/sdk/responses.d.ts:28
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:57
+typings/lib/sdk/responses.d.ts:21
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:63
+typings/lib/sdk/responses.d.ts:27
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:62
+typings/lib/sdk/responses.d.ts:26
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:55
+typings/lib/sdk/responses.d.ts:19
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:60
+typings/lib/sdk/responses.d.ts:24
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:59
+typings/lib/sdk/responses.d.ts:23
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:54
+typings/lib/sdk/responses.d.ts:18
 
 ___
 
@@ -119,4 +119,4 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:58
+typings/lib/sdk/responses.d.ts:22

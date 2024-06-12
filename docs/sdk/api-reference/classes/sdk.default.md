@@ -15,7 +15,7 @@ description: "Test Description"
 
 ### constructor
 
-**new default**(`db`, `web3`, `globalChannel`, `log`, `settings`, `gql`)
+**new default**(`db`, `web3`, `globalChannel`, `log`, `settings`, `config`)
 
 #### Parameters
 
@@ -26,11 +26,11 @@ description: "Test Description"
 | `globalChannel` | [`EventBus`](sdk.EventBus.md) |
 | `log` | [`Logging`](sdk.Logging.md) |
 | `settings` | [`Settings`](sdk.Settings.md) |
-| `gql` | `Gql` |
+| `config` | [`AWF_Config`](sdk.AWF_Config.md) |
 
 #### Defined in
 
-[sdk/src/common/ceramic.ts:29](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ceramic.ts#L29)
+[sdk/src/common/ceramic.ts:29](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ceramic.ts#L29)
 
 ## Methods
 
@@ -44,7 +44,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/common/ceramic.ts:50](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ceramic.ts#L50)
+[sdk/src/common/ceramic.ts:71](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ceramic.ts#L71)
 
 ___
 
@@ -58,7 +58,21 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ceramic.ts:100](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ceramic.ts#L100)
+[sdk/src/common/ceramic.ts:137](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ceramic.ts#L137)
+
+___
+
+### geResourcesHash
+
+**geResourcesHash**(): `Promise`<{ `hash`: `string` = hash; `resources`: `string`[]  }\>
+
+#### Returns
+
+`Promise`<{ `hash`: `string` = hash; `resources`: `string`[]  }\>
+
+#### Defined in
+
+[sdk/src/common/ceramic.ts:118](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ceramic.ts#L118)
 
 ___
 
@@ -72,7 +86,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ceramic.ts:81](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ceramic.ts#L81)
+[sdk/src/common/ceramic.ts:103](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ceramic.ts#L103)
 
 ___
 
@@ -90,7 +104,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ceramic.ts:94](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ceramic.ts#L94)
+[sdk/src/common/ceramic.ts:131](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ceramic.ts#L131)
 
 ___
 
@@ -104,7 +118,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ceramic.ts:85](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ceramic.ts#L85)
+[sdk/src/common/ceramic.ts:107](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ceramic.ts#L107)
 
 ___
 
@@ -124,7 +138,21 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ceramic.ts:72](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ceramic.ts#L72)
+[sdk/src/common/ceramic.ts:94](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ceramic.ts#L94)
+
+___
+
+### serialize
+
+**serialize**(): `undefined` \| ``null`` \| `string`
+
+#### Returns
+
+`undefined` \| ``null`` \| `string`
+
+#### Defined in
+
+[sdk/src/common/ceramic.ts:111](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ceramic.ts#L111)
 
 ___
 
@@ -144,4 +172,4 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ceramic.ts:89](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ceramic.ts#L89)
+[sdk/src/common/ceramic.ts:126](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ceramic.ts#L126)

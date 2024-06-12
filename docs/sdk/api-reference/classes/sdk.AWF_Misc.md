@@ -15,21 +15,17 @@ description: "Test Description"
 
 ### constructor
 
-**new AWF_Misc**()
+**new AWF_Misc**(`config`)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `config` | [`AWF_Config`](sdk.AWF_Config.md) |
 
 #### Defined in
 
-[sdk/src/common/misc.ts:11](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/misc.ts#L11)
-
-## Properties
-
-### statsPath
-
- `Static` `Readonly` **statsPath**: ``"/api/service-status"``
-
-#### Defined in
-
-[sdk/src/common/misc.ts:9](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/misc.ts#L9)
+[sdk/src/common/misc.ts:18](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/misc.ts#L18)
 
 ## Methods
 
@@ -50,18 +46,38 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/common/misc.ts:22](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/misc.ts#L22)
+[sdk/src/common/misc.ts:54](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/misc.ts#L54)
 
 ___
 
 ### getApiStatus
 
-**getApiStatus**(): `Promise`<{ `statusCode`: `number` = response.status; `success`: `boolean` = response.ok }\>
+**getApiStatus**(): `Promise`<{ `statusCode`: `number` = 200; `success`: `boolean` = true }\>
 
 #### Returns
 
-`Promise`<{ `statusCode`: `number` = response.status; `success`: `boolean` = response.ok }\>
+`Promise`<{ `statusCode`: `number` = 200; `success`: `boolean` = true }\>
 
 #### Defined in
 
-[sdk/src/common/misc.ts:16](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/misc.ts#L16)
+[sdk/src/common/misc.ts:41](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/misc.ts#L41)
+
+___
+
+### resolveDID
+
+**resolveDID**(`serialisedID`): `Promise`<`undefined` \| ``null`` \| `DIDDocument`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `serialisedID` | `string` |
+
+#### Returns
+
+`Promise`<`undefined` \| ``null`` \| `DIDDocument`\>
+
+#### Defined in
+
+[sdk/src/common/misc.ts:60](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/misc.ts#L60)

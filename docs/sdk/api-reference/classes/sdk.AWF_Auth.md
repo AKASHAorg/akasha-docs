@@ -36,49 +36,9 @@ Authentication module
 
 #### Defined in
 
-[sdk/src/auth/index.ts:72](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L72)
+[sdk/src/auth/index.ts:64](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L64)
 
 ## Properties
-
-### SIGN\_OUT\_EVENT
-
- `Readonly` **SIGN\_OUT\_EVENT**: ``"@sign_out"``
-
-#### Defined in
-
-[sdk/src/auth/index.ts:69](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L69)
-
-___
-
-### SYNC\_CHANNEL
-
- `Readonly` **SYNC\_CHANNEL**: ``"@sync_data"``
-
-#### Defined in
-
-[sdk/src/auth/index.ts:68](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L68)
-
-___
-
-### SYNC\_REQUEST
-
- `Readonly` **SYNC\_REQUEST**: ``"@sync_request"``
-
-#### Defined in
-
-[sdk/src/auth/index.ts:66](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L66)
-
-___
-
-### SYNC\_RESPONSE
-
- `Readonly` **SYNC\_RESPONSE**: ``"@sync_response"``
-
-#### Defined in
-
-[sdk/src/auth/index.ts:67](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L67)
-
-___
 
 ### currentUserKey
 
@@ -86,7 +46,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:65](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L65)
+[sdk/src/auth/index.ts:61](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L61)
 
 ___
 
@@ -96,17 +56,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:70](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L70)
-
-___
-
-### providerKey
-
- `Readonly` **providerKey**: ``"@providerType"``
-
-#### Defined in
-
-[sdk/src/auth/index.ts:64](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L64)
+[sdk/src/auth/index.ts:62](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L62)
 
 ___
 
@@ -116,27 +66,21 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:63](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L63)
+[sdk/src/auth/index.ts:60](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L60)
 
 ## Methods
 
 ### \_connectAddress
 
-**_connectAddress**(`provider`): `Promise`<``null`` \| `string`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `provider` | [`EthProviders`](../enums/typings.EthProviders.md) |
+**_connectAddress**(): `Promise`<`undefined` \| ``null`` \| `string`\>
 
 #### Returns
 
-`Promise`<``null`` \| `string`\>
+`Promise`<`undefined` \| ``null`` \| `string`\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:291](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L291)
+[sdk/src/auth/index.ts:250](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L250)
 
 ___
 
@@ -159,7 +103,7 @@ validate and add pubKey to the dev account
 
 #### Defined in
 
-[sdk/src/auth/index.ts:533](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L533)
+[sdk/src/auth/index.ts:523](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L523)
 
 ___
 
@@ -181,7 +125,7 @@ Utility method for sending mutation graphql requests
 
 #### Defined in
 
-[sdk/src/auth/index.ts:428](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L428)
+[sdk/src/auth/index.ts:418](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L418)
 
 ___
 
@@ -204,27 +148,21 @@ Throws an UserNotRegistered error for addresses that are not registered
 
 #### Defined in
 
-[sdk/src/auth/index.ts:137](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L137)
+[sdk/src/auth/index.ts:89](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L89)
 
 ___
 
 ### connectAddress
 
-**connectAddress**(`provider`): `Promise`<``null`` \| `string`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `provider` | [`EthProviders`](../enums/typings.EthProviders.md) |
+**connectAddress**(): `Promise`<`undefined` \| ``null`` \| `string`\>
 
 #### Returns
 
-`Promise`<``null`` \| `string`\>
+`Promise`<`undefined` \| ``null`` \| `string`\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:307](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L307)
+[sdk/src/auth/index.ts:271](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L271)
 
 ___
 
@@ -245,60 +183,21 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:467](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L467)
-
-___
-
-### enableSync
-
-**enableSync**(): `void`
-
-enable key sync between opened tabs
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[sdk/src/auth/index.ts:96](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L96)
-
-___
-
-### getConversation
-
-**getConversation**(`_pubKey`): `Promise`<{ `data`: `never`[]  }\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `_pubKey` | `string` |
-
-#### Returns
-
-`Promise`<{ `data`: `never`[]  }\>
-
-#### Defined in
-
-[sdk/src/auth/index.ts:603](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L603)
+[sdk/src/auth/index.ts:457](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L457)
 
 ___
 
 ### getCurrentUser
 
-**getCurrentUser**(): `Promise`<``null`` \| { `ethAddress?`: `string` ; `id?`: `string` ; `pubKey?`: `string`  }\>
-
-Returns the currently logged-in user object
-It will try to log in if there is a previous session detected
+**getCurrentUser**(): `Promise`<``null`` \| { `ethAddress?`: `string` ; `id?`: `string`  }\>
 
 #### Returns
 
-`Promise`<``null`` \| { `ethAddress?`: `string` ; `id?`: `string` ; `pubKey?`: `string`  }\>
+`Promise`<``null`` \| { `ethAddress?`: `string` ; `id?`: `string`  }\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:336](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L336)
+[sdk/src/auth/index.ts:298](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L298)
 
 ___
 
@@ -312,46 +211,23 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:545](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L545)
-
-___
-
-### getMessages
-
-**getMessages**(`args?`): `Promise`<{ `data`: [`IMessage`](../namespaces/typings.md#imessage)[]  }\>
-
-Returns all the inbox messages from Textile Users
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `args?` | `Object` | InboxListOptions |
-| `args.limit?` | `number` | - |
-
-#### Returns
-
-`Promise`<{ `data`: [`IMessage`](../namespaces/typings.md#imessage)[]  }\>
-
-#### Defined in
-
-[sdk/src/auth/index.ts:592](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L592)
+[sdk/src/auth/index.ts:535](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L535)
 
 ___
 
 ### getSession
 
-**getSession**(): `Promise`<{ `data`: `undefined` \| { `ethAddress?`: `string` ; `id?`: `string` ; `pubKey?`: `string`  }  }\>
+**getSession**(): `Promise`<{ `data`: `undefined` \| { `ethAddress?`: `string` ; `id?`: `string`  }  }\>
 
 Returns current session objects for textile
 
 #### Returns
 
-`Promise`<{ `data`: `undefined` \| { `ethAddress?`: `string` ; `id?`: `string` ; `pubKey?`: `string`  }  }\>
+`Promise`<{ `data`: `undefined` \| { `ethAddress?`: `string` ; `id?`: `string`  }  }\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:315](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L315)
+[sdk/src/auth/index.ts:278](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L278)
 
 ___
 
@@ -365,44 +241,27 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:667](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L667)
+[sdk/src/auth/index.ts:605](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L605)
 
 ___
 
-### hasNewNotifications
+### prepareIndexedID
 
-**hasNewNotifications**(): `Promise`<{ `data`: `boolean`  }\>
-
-Checks the Textile Users inbox and looks for specific
-notification message type
-
-#### Returns
-
-`Promise`<{ `data`: `boolean`  }\>
-
-#### Defined in
-
-[sdk/src/auth/index.ts:612](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L612)
-
-___
-
-### markMessageAsRead
-
-**markMessageAsRead**(`messageId`): `Promise`<`boolean`\>
+**prepareIndexedID**(`id`): `Promise`<{ `capability`: `undefined` \| `Cacao` ; `jws`: `DagJWS` = jws }\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `messageId` | `string` |
+| `id` | `string` |
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`<{ `capability`: `undefined` \| `Cacao` ; `jws`: `DagJWS` = jws }\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:621](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L621)
+[sdk/src/auth/index.ts:399](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L399)
 
 ___
 
@@ -422,7 +281,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:550](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L550)
+[sdk/src/auth/index.ts:540](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L540)
 
 ___
 
@@ -443,7 +302,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:579](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L579)
+[sdk/src/auth/index.ts:569](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L569)
 
 ___
 
@@ -464,7 +323,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:380](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L380)
+[sdk/src/auth/index.ts:364](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L364)
 
 ___
 
@@ -486,13 +345,13 @@ Sign data with the identity key
 
 #### Defined in
 
-[sdk/src/auth/index.ts:393](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L393)
+[sdk/src/auth/index.ts:377](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L377)
 
 ___
 
 ### signIn
 
-**signIn**(`args`): `Promise`<{ `data`: ``null`` \| { `ethAddress?`: `string` ; `id?`: `string` ; `pubKey?`: `string`  } & { `isNewUser`: `boolean`  }  }\>
+**signIn**(`args`): `Promise`<{ `data`: ``null`` \| { `ethAddress?`: `string` ; `id?`: `string`  } & { `isNewUser`: `boolean`  }  }\>
 
 #### Parameters
 
@@ -505,11 +364,11 @@ ___
 
 #### Returns
 
-`Promise`<{ `data`: ``null`` \| { `ethAddress?`: `string` ; `id?`: `string` ; `pubKey?`: `string`  } & { `isNewUser`: `boolean`  }  }\>
+`Promise`<{ `data`: ``null`` \| { `ethAddress?`: `string` ; `id?`: `string`  } & { `isNewUser`: `boolean`  }  }\>
 
 #### Defined in
 
-[sdk/src/auth/index.ts:144](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L144)
+[sdk/src/auth/index.ts:98](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L98)
 
 ___
 
@@ -525,7 +384,7 @@ Destroy all the session objects
 
 #### Defined in
 
-[sdk/src/auth/index.ts:360](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L360)
+[sdk/src/auth/index.ts:338](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L338)
 
 ___
 
@@ -545,7 +404,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:477](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L477)
+[sdk/src/auth/index.ts:467](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L467)
 
 ___
 
@@ -565,7 +424,7 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:640](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L640)
+[sdk/src/auth/index.ts:578](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L578)
 
 ___
 
@@ -573,13 +432,11 @@ ___
 
 **verifyDIDSignature**(`args`): `Promise`<`undefined` \| `VerifyJWSResult`\>
 
-Verify if a signature was made by a specific Public Key
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `args` | `string` \| `DagJWS` | object containing the signature, the serialized data and the public key |
+| Name | Type |
+| :------ | :------ |
+| `args` | `string` \| `DagJWS` |
 
 #### Returns
 
@@ -587,7 +444,7 @@ Verify if a signature was made by a specific Public Key
 
 #### Defined in
 
-[sdk/src/auth/index.ts:409](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L409)
+[sdk/src/auth/index.ts:406](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L406)
 
 ___
 
@@ -607,4 +464,4 @@ ___
 
 #### Defined in
 
-[sdk/src/auth/index.ts:569](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/auth/index.ts#L569)
+[sdk/src/auth/index.ts:559](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/auth/index.ts#L559)

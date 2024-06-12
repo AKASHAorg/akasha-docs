@@ -1,6 +1,6 @@
 ---
 id: "index"
-title: "AKASHA SDK Reference"
+title: "AKASHA SDK reference"
 sidebar_label: "Exports"
 sidebar_position: 0.5
 custom_edit_url: null
@@ -41,7 +41,7 @@ your own app.
 
 #### Defined in
 
-[sdk/src/index.ts:58](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/index.ts#L58)
+[sdk/src/index.ts:48](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/index.ts#L48)
 
 ## Functions
 
@@ -64,7 +64,7 @@ const sdk = getSDK();
 
 #### Defined in
 
-[sdk/src/index.ts:75](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/index.ts#L75)
+[sdk/src/index.ts:65](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/index.ts#L65)
 
 ___
 
@@ -87,4 +87,4 @@ const sdk = init();
 
 #### Defined in
 
-[sdk/src/index.ts:92](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/index.ts#L92)
+[sdk/src/index.ts:82](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/index.ts#L82)

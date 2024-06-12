@@ -25,7 +25,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/settings/index.ts:10](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/index.ts#L10)
+[sdk/src/settings/index.ts:10](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/settings/index.ts#L10)
 
 ## Methods
 
@@ -47,7 +47,7 @@ Returns the settings object for a specified service name
 
 #### Defined in
 
-[sdk/src/settings/index.ts:16](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/index.ts#L16)
+[sdk/src/settings/index.ts:16](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/settings/index.ts#L16)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[sdk/src/settings/index.ts:51](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/index.ts#L51)
+[sdk/src/settings/index.ts:51](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/settings/index.ts#L51)
 
 ___
 
@@ -90,4 +90,4 @@ ServiceCallResult
 
 #### Defined in
 
-[sdk/src/settings/index.ts:29](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/index.ts#L29)
+[sdk/src/settings/index.ts:29](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/settings/index.ts#L29)

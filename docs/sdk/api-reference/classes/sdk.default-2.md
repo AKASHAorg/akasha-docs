@@ -35,7 +35,7 @@ Dexie.constructor
 
 #### Defined in
 
-[sdk/src/db/db.wrapper.ts:9](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/db/db.wrapper.ts#L9)
+[sdk/src/db/db.wrapper.ts:9](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/db.wrapper.ts#L9)
 
 ## Properties
 
@@ -45,7 +45,7 @@ Dexie.constructor
 
 #### Defined in
 
-[sdk/src/db/db.wrapper.ts:6](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/db/db.wrapper.ts#L6)
+[sdk/src/db/db.wrapper.ts:6](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/db.wrapper.ts#L6)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[sdk/src/db/db.wrapper.ts:7](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/db/db.wrapper.ts#L7)
+[sdk/src/db/db.wrapper.ts:7](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/db.wrapper.ts#L7)
 
 ___
 

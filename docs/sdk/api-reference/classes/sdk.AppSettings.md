@@ -15,7 +15,7 @@ description: "Test Description"
 
 ### constructor
 
-**new AppSettings**(`log`, `db`, `icRegistry`, `globalChannel`)
+**new AppSettings**(`log`, `db`, `globalChannel`)
 
 #### Parameters
 
@@ -23,12 +23,11 @@ description: "Test Description"
 | :------ | :------ |
 | `log` | [`Logging`](sdk.Logging.md) |
 | `db` | [`DB`](sdk.DB.md) |
-| `icRegistry` | [`AWF_IC_REGISTRY`](sdk.AWF_IC_REGISTRY.md) |
 | `globalChannel` | [`EventBus`](sdk.EventBus.md) |
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:36](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L36)
+[sdk/src/settings/apps.ts:34](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/settings/apps.ts#L34)
 
 ## Methods
 
@@ -50,7 +49,7 @@ Returns an app configuration object
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:52](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L52)
+[sdk/src/settings/apps.ts:48](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/settings/apps.ts#L48)
 
 ___
 
@@ -66,13 +65,13 @@ Returns all installed apps
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:62](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L62)
+[sdk/src/settings/apps.ts:58](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/settings/apps.ts#L58)
 
 ___
 
 ### install
 
-**install**(`app`, `isLocal?`): `Promise`<`undefined` \| `string` \| ``false``\>
+**install**(`app`, `isLocal?`): `Promise`<`never`\>
 
 Persist installed app configuration for the current user
 
@@ -87,11 +86,11 @@ Persist installed app configuration for the current user
 
 #### Returns
 
-`Promise`<`undefined` \| `string` \| ``false``\>
+`Promise`<`never`\>
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:73](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L73)
+[sdk/src/settings/apps.ts:69](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/settings/apps.ts#L69)
 
 ___
 
@@ -111,7 +110,7 @@ ___
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:137](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L137)
+[sdk/src/settings/apps.ts:93](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/settings/apps.ts#L93)
 
 ___
 
@@ -133,13 +132,13 @@ Uninstall app by name
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:125](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L125)
+[sdk/src/settings/apps.ts:81](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/settings/apps.ts#L81)
 
 ___
 
 ### updateConfig
 
-**updateConfig**(`app`): `Promise`<`undefined` \| `number` \| ``false``\>
+**updateConfig**(`app`): `Promise`<`never`\>
 
 #### Parameters
 
@@ -149,17 +148,17 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| `number` \| ``false``\>
+`Promise`<`never`\>
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:178](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L178)
+[sdk/src/settings/apps.ts:113](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/settings/apps.ts#L113)
 
 ___
 
 ### updateVersion
 
-**updateVersion**(`app`): `Promise`<`undefined` \| `number` \| ``false``\>
+**updateVersion**(`app`): `Promise`<`never`\>
 
 #### Parameters
 
@@ -169,8 +168,8 @@ ___
 
 #### Returns
 
-`Promise`<`undefined` \| `number` \| ``false``\>
+`Promise`<`never`\>
 
 #### Defined in
 
-[sdk/src/settings/apps.ts:153](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/settings/apps.ts#L153)
+[sdk/src/settings/apps.ts:109](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/settings/apps.ts#L109)

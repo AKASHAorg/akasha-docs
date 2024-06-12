@@ -15,7 +15,7 @@ description: "Test Description"
 
 ### constructor
 
-**new Web3Connector**(`logFactory`, `globalChannel`)
+**new Web3Connector**(`logFactory`, `globalChannel`, `config`)
 
 #### Parameters
 
@@ -23,20 +23,21 @@ description: "Test Description"
 | :------ | :------ |
 | `logFactory` | [`Logging`](sdk.Logging.md) |
 | `globalChannel` | [`EventBus`](sdk.EventBus.md) |
+| `config` | [`AWF_Config`](sdk.AWF_Config.md) |
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:46](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L46)
+[sdk/src/common/web3.connector.ts:61](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/web3.connector.ts#L61)
 
 ## Properties
 
 ### network
 
- `Readonly` **network**: ``"goerli"``
+ `Readonly` **network**: ``"sepolia"``
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:31](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L31)
+[sdk/src/common/web3.connector.ts:29](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/web3.connector.ts#L29)
 
 ___
 
@@ -46,23 +47,58 @@ ___
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:34](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L34)
+[sdk/src/common/web3.connector.ts:32](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/web3.connector.ts#L32)
 
 ## Accessors
 
 ### provider
 
-`get` **provider**(): `BaseProvider`
+`get` **provider**(): `undefined` \| `BrowserProvider`
 
 Get access to the web3 provider instance
 
 #### Returns
 
-`BaseProvider`
+`undefined` \| `BrowserProvider`
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:92](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L92)
+[sdk/src/common/web3.connector.ts:234](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/web3.connector.ts#L234)
+
+___
+
+### state
+
+`get` **state**(): `Object`
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `address` | `undefined` \| `string` |
+| `chainId` | `undefined` \| `number` |
+| `connected` | `boolean` |
+| `providerType` | `undefined` \| ``null`` \| `string` |
+
+#### Defined in
+
+[sdk/src/common/web3.connector.ts:222](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/web3.connector.ts#L222)
+
+___
+
+### walletProvider
+
+`get` **walletProvider**(): `undefined` \| `Eip1193Provider`
+
+#### Returns
+
+`undefined` \| `Eip1193Provider`
+
+#### Defined in
+
+[sdk/src/common/web3.connector.ts:240](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/web3.connector.ts#L240)
 
 ## Methods
 
@@ -76,41 +112,21 @@ Get access to the web3 provider instance
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:178](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L178)
+[sdk/src/common/web3.connector.ts:329](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/web3.connector.ts#L329)
 
 ___
 
 ### connect
 
-**connect**(`provider?`): `Promise`<`boolean`\>
-
-#### Parameters
-
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `provider` | [`EthProviders`](../enums/typings.EthProviders.md) | `EthProviders.None` | Number representing the provider option |
+**connect**(): `Promise`<{ `connected`: `boolean` ; `unsubscribe?`: () => `void`  }\>
 
 #### Returns
 
-`Promise`<`boolean`\>
+`Promise`<{ `connected`: `boolean` ; `unsubscribe?`: () => `void`  }\>
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:63](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L63)
-
-___
-
-### detectInjectedProvider
-
-**detectInjectedProvider**(): `Promise`<{ `data`: [`INJECTED_PROVIDERS`](../enums/typings.INJECTED_PROVIDERS.md)  }\>
-
-#### Returns
-
-`Promise`<{ `data`: [`INJECTED_PROVIDERS`](../enums/typings.INJECTED_PROVIDERS.md)  }\>
-
-#### Defined in
-
-[sdk/src/common/web3.connector.ts:182](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L182)
+[sdk/src/common/web3.connector.ts:131](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/web3.connector.ts#L131)
 
 ___
 
@@ -118,15 +134,13 @@ ___
 
 **disconnect**(): `Promise`<`void`\>
 
-Remove the web3 connection
-
 #### Returns
 
 `Promise`<`void`\>
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:110](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L110)
+[sdk/src/common/web3.connector.ts:256](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/web3.connector.ts#L256)
 
 ___
 
@@ -140,7 +154,21 @@ ___
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:174](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L174)
+[sdk/src/common/web3.connector.ts:325](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/web3.connector.ts#L325)
+
+___
+
+### getCurrentTheme
+
+**getCurrentTheme**(): `ThemeMode`
+
+#### Returns
+
+`ThemeMode`
+
+#### Defined in
+
+[sdk/src/common/web3.connector.ts:149](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/web3.connector.ts#L149)
 
 ___
 
@@ -154,47 +182,53 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `data` | { `chainId`: ``5`` ; `name`: `string`  } |
-| `data.chainId` | ``5`` |
+| `data` | { `chainId`: ``11155111`` ; `name`: `string`  } |
+| `data.chainId` | ``11155111`` |
 | `data.name` | `string` |
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:142](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L142)
+[sdk/src/common/web3.connector.ts:300](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/web3.connector.ts#L300)
 
 ___
 
 ### getSigner
 
-**getSigner**(): `undefined` \| `Wallet` \| `JsonRpcSigner`
+**getSigner**(): `Promise`<`undefined` \| `JsonRpcSigner`\>
 
 #### Returns
 
-`undefined` \| `Wallet` \| `JsonRpcSigner`
+`Promise`<`undefined` \| `JsonRpcSigner`\>
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:131](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L131)
+[sdk/src/common/web3.connector.ts:280](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/web3.connector.ts#L280)
 
 ___
 
-### requestWalletPermissions
+### lookupAddress
 
-**requestWalletPermissions**(): `Promise`<`any`\> \| `Observable`<`never`\>
+**lookupAddress**(`address`): `Promise`<{ `ens`: ``null`` \| `string`  }\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `address` | `string` |
 
 #### Returns
 
-`Promise`<`any`\> \| `Observable`<`never`\>
+`Promise`<{ `ens`: ``null`` \| `string`  }\>
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:80](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L80)
+[sdk/src/common/web3.connector.ts:291](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/web3.connector.ts#L291)
 
 ___
 
 ### signMessage
 
-**signMessage**(`message`): `undefined` \| `Promise`<`string`\>
+**signMessage**(`message`): `Promise`<`undefined` \| `string`\>
 
 Enforce personal_sign method for message signature
 
@@ -206,11 +240,11 @@ Enforce personal_sign method for message signature
 
 #### Returns
 
-`undefined` \| `Promise`<`string`\>
+`Promise`<`undefined` \| `string`\>
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:126](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L126)
+[sdk/src/common/web3.connector.ts:272](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/web3.connector.ts#L272)
 
 ___
 
@@ -224,4 +258,24 @@ ___
 
 #### Defined in
 
-[sdk/src/common/web3.connector.ts:149](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/web3.connector.ts#L149)
+[sdk/src/common/web3.connector.ts:307](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/web3.connector.ts#L307)
+
+___
+
+### toggleDarkTheme
+
+**toggleDarkTheme**(`enable?`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `enable?` | `boolean` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[sdk/src/common/web3.connector.ts:165](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/web3.connector.ts#L165)

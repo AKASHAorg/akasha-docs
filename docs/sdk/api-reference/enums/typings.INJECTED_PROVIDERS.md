@@ -19,7 +19,7 @@ description: "Test Description"
 
 #### Defined in
 
-typings/sdk/common.d.ts:64
+typings/lib/sdk/common.d.ts:61
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:63
+typings/lib/sdk/common.d.ts:60
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:60
+typings/lib/sdk/common.d.ts:57
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:67
+typings/lib/sdk/common.d.ts:64
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:65
+typings/lib/sdk/common.d.ts:62
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:57
+typings/lib/sdk/common.d.ts:54
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:59
+typings/lib/sdk/common.d.ts:56
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:68
+typings/lib/sdk/common.d.ts:65
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:61
+typings/lib/sdk/common.d.ts:58
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:58
+typings/lib/sdk/common.d.ts:55
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:66
+typings/lib/sdk/common.d.ts:63
 
 ___
 
@@ -129,4 +129,4 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:62
+typings/lib/sdk/common.d.ts:59

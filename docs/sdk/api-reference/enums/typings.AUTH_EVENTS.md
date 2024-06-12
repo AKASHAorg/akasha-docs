@@ -19,7 +19,7 @@ description: "Test Description"
 
 #### Defined in
 
-typings/sdk/events.d.ts:9
+typings/lib/sdk/events.d.ts:9
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:10
+typings/lib/sdk/events.d.ts:10
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:8
+typings/lib/sdk/events.d.ts:8
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:5
+typings/lib/sdk/events.d.ts:5
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:4
+typings/lib/sdk/events.d.ts:4
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:3
+typings/lib/sdk/events.d.ts:3
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:11
+typings/lib/sdk/events.d.ts:11
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:12
+typings/lib/sdk/events.d.ts:12
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:13
+typings/lib/sdk/events.d.ts:13
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:14
+typings/lib/sdk/events.d.ts:14
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:2
+typings/lib/sdk/events.d.ts:2
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:6
+typings/lib/sdk/events.d.ts:6
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:15
+typings/lib/sdk/events.d.ts:15
 
 ___
 
@@ -149,7 +149,7 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:16
+typings/lib/sdk/events.d.ts:16
 
 ___
 
@@ -159,4 +159,4 @@ ___
 
 #### Defined in
 
-typings/sdk/events.d.ts:7
+typings/lib/sdk/events.d.ts:7

@@ -18,6 +18,7 @@ description: "Test Description"
 - [ENS\_EVENTS](../enums/typings.ENS_EVENTS.md)
 - [ENTRY\_EVENTS](../enums/typings.ENTRY_EVENTS.md)
 - [EthProviders](../enums/typings.EthProviders.md)
+- [GQL\_EVENTS](../enums/typings.GQL_EVENTS.md)
 - [INJECTED\_PROVIDERS](../enums/typings.INJECTED_PROVIDERS.md)
 - [LEGAL\_DOCS](../enums/typings.LEGAL_DOCS.md)
 - [PROFILE\_EVENTS](../enums/typings.PROFILE_EVENTS.md)
@@ -28,21 +29,9 @@ description: "Test Description"
 
 ## Interfaces
 
-- [Comment\_Response](../interfaces/typings.Comment_Response.md)
-- [Comments\_Response](../interfaces/typings.Comments_Response.md)
-- [GlobalSearchResult](../interfaces/typings.GlobalSearchResult.md)
-- [GlobalSearchResultItem](../interfaces/typings.GlobalSearchResultItem.md)
-- [GlobalSearchResultTagItem](../interfaces/typings.GlobalSearchResultTagItem.md)
 - [IDBService](../interfaces/typings.IDBService.md)
 - [IGqlClient](../interfaces/typings.IGqlClient.md)
 - [LinkPreview\_Response](../interfaces/typings.LinkPreview_Response.md)
-- [Post\_Response](../interfaces/typings.Post_Response.md)
-- [PostsResult\_Response](../interfaces/typings.PostsResult_Response.md)
-- [SearchTagsResult\_Response](../interfaces/typings.SearchTagsResult_Response.md)
-- [Tag\_Response](../interfaces/typings.Tag_Response.md)
-- [TagsResult\_Response](../interfaces/typings.TagsResult_Response.md)
-- [UserFollowers\_Response](../interfaces/typings.UserFollowers_Response.md)
-- [UserProfile\_Response](../interfaces/typings.UserProfile_Response.md)
 - [VideoPreview\_Response](../interfaces/typings.VideoPreview_Response.md)
 
 ## Type Aliases
@@ -60,17 +49,7 @@ description: "Test Description"
 
 #### Defined in
 
-typings/sdk/registry.d.ts:22
-
-___
-
-### CommentID
-
- **CommentID**: `z.infer`<typeof [`CommentIDSchema`](typings.md#commentidschema)\>
-
-#### Defined in
-
-typings/sdk/comments.d.ts:3
+typings/lib/sdk/registry.d.ts:22
 
 ___
 
@@ -80,7 +59,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:45
+typings/lib/sdk/common.d.ts:42
 
 ___
 
@@ -90,7 +69,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:26
+typings/lib/sdk/common.d.ts:26
 
 ___
 
@@ -100,17 +79,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:47
-
-___
-
-### EntryID
-
- **EntryID**: `z.infer`<typeof [`EntryIDSchema`](typings.md#entryidschema)\>
-
-#### Defined in
-
-typings/sdk/posts.d.ts:3
+typings/lib/sdk/common.d.ts:44
 
 ___
 
@@ -120,7 +89,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:4
+typings/lib/sdk/common.d.ts:4
 
 ___
 
@@ -140,50 +109,11 @@ ___
 | :------ | :------ |
 | `args?` | `unknown` |
 | `data` | `D` |
-| `event` | [`AUTH_EVENTS`](../enums/typings.AUTH_EVENTS.md) \| [`APP_EVENTS`](../enums/typings.APP_EVENTS.md) \| [`COMMENTS_EVENTS`](../enums/typings.COMMENTS_EVENTS.md) \| [`ENS_EVENTS`](../enums/typings.ENS_EVENTS.md) \| [`ENTRY_EVENTS`](../enums/typings.ENTRY_EVENTS.md) \| [`PROFILE_EVENTS`](../enums/typings.PROFILE_EVENTS.md) \| [`TAG_EVENTS`](../enums/typings.TAG_EVENTS.md) \| [`WEB3_EVENTS`](../enums/typings.WEB3_EVENTS.md) |
+| `event` | [`AUTH_EVENTS`](../enums/typings.AUTH_EVENTS.md) \| [`APP_EVENTS`](../enums/typings.APP_EVENTS.md) \| [`COMMENTS_EVENTS`](../enums/typings.COMMENTS_EVENTS.md) \| [`ENS_EVENTS`](../enums/typings.ENS_EVENTS.md) \| [`ENTRY_EVENTS`](../enums/typings.ENTRY_EVENTS.md) \| [`PROFILE_EVENTS`](../enums/typings.PROFILE_EVENTS.md) \| [`TAG_EVENTS`](../enums/typings.TAG_EVENTS.md) \| [`WEB3_EVENTS`](../enums/typings.WEB3_EVENTS.md) \| [`GQL_EVENTS`](../enums/typings.GQL_EVENTS.md) |
 
 #### Defined in
 
-typings/sdk/common.d.ts:27
-
-___
-
-### IMessage
-
- **IMessage**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `body` | [`IMessageBody`](typings.md#imessagebody) |
-| `createdAt` | `number` |
-| `from` | `string` |
-| `id` | `string` |
-| `read` | `boolean` |
-| `readAt` | `number` |
-
-#### Defined in
-
-typings/sdk/index.d.ts:41
-
-___
-
-### IMessageBody
-
- **IMessageBody**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `value` | { `author`: [`EthAddress`](typings.md#ethaddress) ; `follower`: [`EthAddress`](typings.md#ethaddress)  } |
-| `value.author` | [`EthAddress`](typings.md#ethaddress) |
-| `value.follower` | [`EthAddress`](typings.md#ethaddress) |
-
-#### Defined in
-
-typings/sdk/index.d.ts:35
+typings/lib/sdk/common.d.ts:27
 
 ___
 
@@ -193,28 +123,7 @@ ___
 
 #### Defined in
 
-typings/sdk/registry.d.ts:3
-
-___
-
-### IntegrationInfo
-
- **IntegrationInfo**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `author` | [`Scalars`](../modules/sdk.md#scalars)[``"String"``] |
-| `enabled` | [`Scalars`](../modules/sdk.md#scalars)[``"Boolean"``] |
-| `id` | [`Scalars`](../modules/sdk.md#scalars)[``"String"``] |
-| `integrationType` | [`Scalars`](../modules/sdk.md#scalars)[``"Int"``] |
-| `latestReleaseId` | [`Scalars`](../modules/sdk.md#scalars)[``"String"``] |
-| `name` | [`Scalars`](../modules/sdk.md#scalars)[``"String"``] |
-
-#### Defined in
-
-typings/sdk/graphql-types.d.ts:106
+typings/lib/sdk/registry.d.ts:3
 
 ___
 
@@ -224,7 +133,7 @@ ___
 
 #### Defined in
 
-typings/sdk/registry.d.ts:7
+typings/lib/sdk/registry.d.ts:7
 
 ___
 
@@ -234,7 +143,7 @@ ___
 
 #### Defined in
 
-typings/sdk/registry.d.ts:5
+typings/lib/sdk/registry.d.ts:5
 
 ___
 
@@ -244,17 +153,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:12
-
-___
-
-### PostToPublish
-
- **PostToPublish**: `z.infer`<typeof [`PostToPublishSchema`](typings.md#posttopublishschema)\>
-
-#### Defined in
-
-typings/sdk/posts.d.ts:20
+typings/lib/sdk/common.d.ts:12
 
 ___
 
@@ -264,33 +163,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:8
-
-___
-
-### ReleaseInfo
-
- **ReleaseInfo**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `author` | [`Scalars`](../modules/sdk.md#scalars)[``"String"``] |
-| `createdAt?` | [`Maybe`](../modules/sdk.md#maybe)<[`Scalars`](../modules/sdk.md#scalars)[``"Int"``]\> |
-| `enabled` | [`Scalars`](../modules/sdk.md#scalars)[``"Boolean"``] |
-| `id?` | [`Maybe`](../modules/sdk.md#maybe)<[`Scalars`](../modules/sdk.md#scalars)[``"String"``]\> |
-| `integrationID` | [`Scalars`](../modules/sdk.md#scalars)[``"String"``] |
-| `integrationType` | [`Scalars`](../modules/sdk.md#scalars)[``"Int"``] |
-| `links?` | [`Maybe`](../modules/sdk.md#maybe)<[`InfoLink`](../modules/sdk.md#infolink)\> |
-| `manifestData` | [`ManifestInfo`](../modules/sdk.md#manifestinfo) |
-| `name` | [`Scalars`](../modules/sdk.md#scalars)[``"String"``] |
-| `sources?` | [`Maybe`](../modules/sdk.md#maybe)<[`Scalars`](../modules/sdk.md#scalars)[``"String"``][]\> |
-| `version` | [`Scalars`](../modules/sdk.md#scalars)[``"String"``] |
-
-#### Defined in
-
-typings/sdk/graphql-types.d.ts:114
+typings/lib/sdk/common.d.ts:8
 
 ___
 
@@ -306,7 +179,7 @@ ___
 
 #### Defined in
 
-typings/sdk/responses.d.ts:3
+typings/lib/sdk/responses.d.ts:2
 
 ___
 
@@ -316,7 +189,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:6
+typings/lib/sdk/common.d.ts:6
 
 ___
 
@@ -326,27 +199,17 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:10
+typings/lib/sdk/common.d.ts:10
 
 ## Variables
 
-### CommentIDSchema
-
- `Const` **CommentIDSchema**: `z.ZodString`
-
-#### Defined in
-
-typings/sdk/comments.d.ts:2
-
-___
-
 ### CurrentUserSchema
 
- `Const` **CurrentUserSchema**: `z.ZodObject`<{ `ethAddress`: `z.ZodOptional`<`z.ZodString`\> ; `id`: `z.ZodString` ; `pubKey`: `z.ZodString`  }, ``"strip"``, `z.ZodTypeAny`, { `ethAddress?`: `string` ; `id?`: `string` ; `pubKey?`: `string`  }, { `ethAddress?`: `string` ; `id?`: `string` ; `pubKey?`: `string`  }\>
+ `Const` **CurrentUserSchema**: `z.ZodObject`<{ `ethAddress`: `z.ZodOptional`<`z.ZodString`\> ; `id`: `z.ZodString`  }, ``"strip"``, `z.ZodTypeAny`, { `ethAddress?`: `string` ; `id?`: `string`  }, { `ethAddress?`: `string` ; `id?`: `string`  }\>
 
 #### Defined in
 
-typings/sdk/common.d.ts:32
+typings/lib/sdk/common.d.ts:32
 
 ___
 
@@ -356,7 +219,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:13
+typings/lib/sdk/common.d.ts:13
 
 ___
 
@@ -366,17 +229,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:46
-
-___
-
-### EntryIDSchema
-
- `Const` **EntryIDSchema**: `z.ZodString`
-
-#### Defined in
-
-typings/sdk/posts.d.ts:2
+typings/lib/sdk/common.d.ts:43
 
 ___
 
@@ -386,7 +239,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:3
+typings/lib/sdk/common.d.ts:3
 
 ___
 
@@ -396,7 +249,7 @@ ___
 
 #### Defined in
 
-typings/sdk/web3.connector.d.ts:9
+typings/lib/sdk/web3.connector.d.ts:9
 
 ___
 
@@ -406,7 +259,7 @@ ___
 
 #### Defined in
 
-typings/sdk/registry.d.ts:2
+typings/lib/sdk/registry.d.ts:2
 
 ___
 
@@ -416,7 +269,7 @@ ___
 
 #### Defined in
 
-typings/sdk/registry.d.ts:9
+typings/lib/sdk/registry.d.ts:9
 
 ___
 
@@ -426,7 +279,7 @@ ___
 
 #### Defined in
 
-typings/sdk/registry.d.ts:6
+typings/lib/sdk/registry.d.ts:6
 
 ___
 
@@ -436,7 +289,7 @@ ___
 
 #### Defined in
 
-typings/sdk/registry.d.ts:4
+typings/lib/sdk/registry.d.ts:4
 
 ___
 
@@ -446,7 +299,7 @@ ___
 
 #### Defined in
 
-typings/sdk/registry.d.ts:8
+typings/lib/sdk/registry.d.ts:8
 
 ___
 
@@ -456,7 +309,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:11
+typings/lib/sdk/common.d.ts:11
 
 ___
 
@@ -466,17 +319,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:55
-
-___
-
-### PostToPublishSchema
-
- `Const` **PostToPublishSchema**: `z.ZodObject`<{ `mentions`: `z.ZodOptional`<`z.ZodArray`<`z.ZodString`, ``"many"``\>\> ; `quotes`: `z.ZodOptional`<`z.ZodArray`<`z.ZodString`, ``"many"``\>\> ; `tags`: `z.ZodOptional`<`z.ZodArray`<`z.ZodString`, ``"many"``\>\> ; `title`: `z.ZodOptional`<`z.ZodString`\>  }, ``"strip"``, `z.ZodTypeAny`, { `mentions?`: `string`[] ; `quotes?`: `string`[] ; `tags?`: `string`[] ; `title?`: `string`  }, { `mentions?`: `string`[] ; `quotes?`: `string`[] ; `tags?`: `string`[] ; `title?`: `string`  }\>
-
-#### Defined in
-
-typings/sdk/posts.d.ts:4
+typings/lib/sdk/common.d.ts:52
 
 ___
 
@@ -486,7 +329,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:7
+typings/lib/sdk/common.d.ts:7
 
 ___
 
@@ -502,18 +345,19 @@ ___
 | `Auth` | `symbol` |
 | `Ceramic` | `symbol` |
 | `Comment` | `symbol` |
+| `Config` | `symbol` |
 | `Db` | `symbol` |
 | `ENS` | `symbol` |
 | `Entry` | `symbol` |
 | `EventBus` | `symbol` |
 | `Gql` | `symbol` |
-| `GqlNew` | `symbol` |
 | `ICRegistry` | `symbol` |
 | `IPFS` | `symbol` |
 | `Lit` | `symbol` |
 | `Log` | `symbol` |
 | `Misc` | `symbol` |
 | `Profile` | `symbol` |
+| `ScrollState` | `symbol` |
 | `Settings` | `symbol` |
 | `Stash` | `symbol` |
 | `Tag` | `symbol` |
@@ -521,7 +365,7 @@ ___
 
 #### Defined in
 
-typings/sdk/index.d.ts:13
+typings/lib/sdk/index.d.ts:10
 
 ___
 
@@ -531,7 +375,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:5
+typings/lib/sdk/common.d.ts:5
 
 ___
 
@@ -541,4 +385,4 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:9
+typings/lib/sdk/common.d.ts:9

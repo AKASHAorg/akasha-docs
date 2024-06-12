@@ -35,4 +35,4 @@ description: "Test Description"
 
 #### Defined in
 
-typings/sdk/gql.d.ts:2
+typings/lib/sdk/gql.d.ts:2

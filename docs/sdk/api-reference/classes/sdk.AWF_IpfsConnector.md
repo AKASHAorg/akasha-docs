@@ -15,47 +15,19 @@ description: "Test Description"
 
 ### constructor
 
-**new AWF_IpfsConnector**(`log`)
+**new AWF_IpfsConnector**(`log`, `ceramic`, `config`)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `log` | [`Logging`](sdk.Logging.md) |
+| `ceramic` | [`default`](sdk.default.md) |
+| `config` | [`AWF_Config`](sdk.AWF_Config.md) |
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:27](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L27)
-
-## Properties
-
-### fallbackGateway
-
- `Readonly` **fallbackGateway**: ``"ipfs.w3s.link"``
-
-#### Defined in
-
-[sdk/src/common/ipfs.connector.ts:17](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L17)
-
-___
-
-### gateway
-
- `Readonly` **gateway**: ``"https://cloudflare-ipfs.com/ipfs/"``
-
-#### Defined in
-
-[sdk/src/common/ipfs.connector.ts:15](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L15)
-
-___
-
-### originGateway
-
- `Readonly` **originGateway**: ``"ipfs.cf-ipfs.com"``
-
-#### Defined in
-
-[sdk/src/common/ipfs.connector.ts:16](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L16)
+[sdk/src/common/ipfs.connector.ts:39](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ipfs.connector.ts#L39)
 
 ## Methods
 
@@ -75,7 +47,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:114](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L114)
+[sdk/src/common/ipfs.connector.ts:206](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ipfs.connector.ts#L206)
 
 ___
 
@@ -101,7 +73,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:132](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L132)
+[sdk/src/common/ipfs.connector.ts:224](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ipfs.connector.ts#L224)
 
 ___
 
@@ -121,7 +93,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:105](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L105)
+[sdk/src/common/ipfs.connector.ts:197](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ipfs.connector.ts#L197)
 
 ___
 
@@ -141,7 +113,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:123](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L123)
+[sdk/src/common/ipfs.connector.ts:215](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ipfs.connector.ts#L215)
 
 ___
 
@@ -168,7 +140,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:66](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L66)
+[sdk/src/common/ipfs.connector.ts:158](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ipfs.connector.ts#L158)
 
 ___
 
@@ -188,7 +160,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:87](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L87)
+[sdk/src/common/ipfs.connector.ts:179](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ipfs.connector.ts#L179)
 
 ___
 
@@ -202,11 +174,13 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `gateway` | `string` |
+| `fallbackGateway` | `string` |
+| `originGateway` | `string` |
+| `pathGateway` | `string` |
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:34](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L34)
+[sdk/src/common/ipfs.connector.ts:50](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ipfs.connector.ts#L50)
 
 ___
 
@@ -226,7 +200,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:151](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L151)
+[sdk/src/common/ipfs.connector.ts:243](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ipfs.connector.ts#L243)
 
 ___
 
@@ -246,28 +220,27 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:145](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L145)
+[sdk/src/common/ipfs.connector.ts:237](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ipfs.connector.ts#L237)
 
 ___
 
 ### uploadFile
 
-**uploadFile**(`file`, `email?`): `Promise`<`AnyLink`\>
+**uploadFile**(`file`): `Promise`<`undefined` \| `AnyLink`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `file` | `Blob` |
-| `email?` | \`${string}@${string}\` |
 
 #### Returns
 
-`Promise`<`AnyLink`\>
+`Promise`<`undefined` \| `AnyLink`\>
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:41](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L41)
+[sdk/src/common/ipfs.connector.ts:138](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ipfs.connector.ts#L138)
 
 ___
 
@@ -287,4 +260,4 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ipfs.connector.ts:93](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/common/ipfs.connector.ts#L93)
+[sdk/src/common/ipfs.connector.ts:185](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ipfs.connector.ts#L185)

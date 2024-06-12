@@ -15,11 +15,17 @@ description: "Test Description"
 
 ### constructor
 
-**new Logging**()
+**new Logging**(`config`)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `config` | [`AWF_Config`](sdk.AWF_Config.md) |
 
 #### Defined in
 
-[sdk/src/logging/index.ts:12](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/logging/index.ts#L12)
+[sdk/src/logging/index.ts:15](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/logging/index.ts#L15)
 
 ## Methods
 
@@ -41,4 +47,4 @@ ILogger
 
 #### Defined in
 
-[sdk/src/logging/index.ts:21](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/logging/index.ts#L21)
+[sdk/src/logging/index.ts:28](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/logging/index.ts#L28)

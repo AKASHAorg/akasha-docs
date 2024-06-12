@@ -19,7 +19,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/db/integrations.schema.ts:10](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/db/integrations.schema.ts#L10)
+[sdk/src/db/integrations.schema.ts:8](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/integrations.schema.ts#L8)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[sdk/src/db/integrations.schema.ts:5](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/db/integrations.schema.ts#L5)
+[sdk/src/db/integrations.schema.ts:3](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/integrations.schema.ts#L3)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[sdk/src/db/integrations.schema.ts:6](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/db/integrations.schema.ts#L6)
+[sdk/src/db/integrations.schema.ts:4](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/integrations.schema.ts#L4)
 
 ___
 
@@ -49,17 +49,17 @@ ___
 
 #### Defined in
 
-[sdk/src/db/integrations.schema.ts:4](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/db/integrations.schema.ts#L4)
+[sdk/src/db/integrations.schema.ts:2](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/integrations.schema.ts#L2)
 
 ___
 
 ### sources
 
- **sources**: `undefined` \| [`Maybe`](../modules/sdk.md#maybe)<`string`[]\>
+ **sources**: `string`[]
 
 #### Defined in
 
-[sdk/src/db/integrations.schema.ts:8](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/db/integrations.schema.ts#L8)
+[sdk/src/db/integrations.schema.ts:6](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/integrations.schema.ts#L6)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[sdk/src/db/integrations.schema.ts:9](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/db/integrations.schema.ts#L9)
+[sdk/src/db/integrations.schema.ts:7](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/integrations.schema.ts#L7)
 
 ___
 
@@ -79,4 +79,4 @@ ___
 
 #### Defined in
 
-[sdk/src/db/integrations.schema.ts:7](https://github.com/AKASHAorg/akasha-core/blob/978d02d1/sdk/src/db/integrations.schema.ts#L7)
+[sdk/src/db/integrations.schema.ts:5](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/integrations.schema.ts#L5)

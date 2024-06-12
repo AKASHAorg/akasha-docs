@@ -19,7 +19,7 @@ description: "Test Description"
 
 #### Defined in
 
-typings/sdk/common.d.ts:53
+typings/lib/sdk/common.d.ts:50
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:52
+typings/lib/sdk/common.d.ts:49
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:51
+typings/lib/sdk/common.d.ts:48
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:50
+typings/lib/sdk/common.d.ts:47
 
 ___
 
@@ -59,4 +59,4 @@ ___
 
 #### Defined in
 
-typings/sdk/common.d.ts:49
+typings/lib/sdk/common.d.ts:46

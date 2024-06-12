@@ -36,7 +36,7 @@ description: "Test Description"
 
 #### Defined in
 
-typings/sdk/db.d.ts:5
+typings/lib/sdk/db.d.ts:5
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-typings/sdk/db.d.ts:4
+typings/lib/sdk/db.d.ts:4
 
 ___
 
@@ -70,4 +70,4 @@ ___
 
 #### Defined in
 
-typings/sdk/db.d.ts:3
+typings/lib/sdk/db.d.ts:3
