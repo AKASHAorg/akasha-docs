@@ -48,9 +48,9 @@ const config = {
       "docusaurus-plugin-typedoc",
       {
         id: "akasha-sdk-main",
-        entryPoints: ["./akasha-core/sdk/src/index.ts"],
+        entryPoints: ["./akasha-core/libs/sdk/src/index.ts"],
         entryPointStrategy: "expand",
-        tsconfig: "akasha-core/sdk/tsconfig.json",
+        tsconfig: "akasha-core/libs/sdk/tsconfig.json",
         readme: "none",
         out: "./sdk/api-reference",
         name: "AKASHA SDK reference",
