@@ -1,8 +1,6 @@
 ---
-id: "index"
-title: "React Hooks"
-sidebar_label: "Readme"
-sidebar_position: 0
+sidebar_position: 6
+sidebar_label: "React Hooks"
 custom_edit_url: null
 ---
 

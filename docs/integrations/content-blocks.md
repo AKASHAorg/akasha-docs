@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 sidebar_label: Content Blocks
 ---
 
@@ -41,7 +41,7 @@ A content block should handle 2 modes which is controlled through the `props.blo
 
 ### editor-mode
 
-This mode is displayed when the block is mounted inside the editor. All the logic for data input and validation is handled internally by the block.
+This mode is displayed when the block is mounted inside the [editor](./editor). All the logic for data input and validation is handled internally by the block.
 
 In edit mode the content block must expose a simple api using React's `useImperativeHandle` to allow editor to use it for publishing. The ref is passed as prop so there is no need to use forwardRef.
 
