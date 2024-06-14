@@ -19,7 +19,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/common/config.ts:20](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/config.ts#L20)
+[sdk/src/common/config.ts:20](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/config.ts#L20)
 
 ## Methods
 
@@ -50,7 +50,7 @@ Config value
 
 #### Defined in
 
-[sdk/src/common/config.ts:63](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/config.ts#L63)
+[sdk/src/common/config.ts:63](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/config.ts#L63)
 
 ___
 
@@ -80,4 +80,4 @@ config.setOption('log_level', 'debug');
 
 #### Defined in
 
-[sdk/src/common/config.ts:47](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/config.ts#L47)
+[sdk/src/common/config.ts:47](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/config.ts#L47)

@@ -18,7 +18,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/index.ts:38](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/index.ts#L38)
+[sdk/src/index.ts:38](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/index.ts#L38)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:39](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/index.ts#L39)
+[sdk/src/index.ts:39](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/index.ts#L39)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:41](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/index.ts#L41)
+[sdk/src/index.ts:41](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/index.ts#L41)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:40](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/index.ts#L40)
+[sdk/src/index.ts:40](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/index.ts#L40)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:35](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/index.ts#L35)
+[sdk/src/index.ts:35](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/index.ts#L35)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:34](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/index.ts#L34)
+[sdk/src/index.ts:34](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/index.ts#L34)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:37](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/index.ts#L37)
+[sdk/src/index.ts:37](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/index.ts#L37)
 
 ___
 
@@ -96,4 +96,4 @@ ___
 
 #### Defined in
 
-[sdk/src/index.ts:36](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/index.ts#L36)
+[sdk/src/index.ts:36](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/index.ts#L36)

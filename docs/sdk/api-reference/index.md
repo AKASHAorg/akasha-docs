@@ -41,7 +41,7 @@ your own app.
 
 #### Defined in
 
-[sdk/src/index.ts:48](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/index.ts#L48)
+[sdk/src/index.ts:48](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/index.ts#L48)
 
 ## Functions
 
@@ -64,7 +64,7 @@ const sdk = getSDK();
 
 #### Defined in
 
-[sdk/src/index.ts:65](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/index.ts#L65)
+[sdk/src/index.ts:65](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/index.ts#L65)
 
 ___
 
@@ -87,4 +87,4 @@ const sdk = init();
 
 #### Defined in
 
-[sdk/src/index.ts:82](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/index.ts#L82)
+[sdk/src/index.ts:82](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/index.ts#L82)

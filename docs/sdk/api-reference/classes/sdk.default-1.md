@@ -30,7 +30,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/common/lit.ts:38](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/lit.ts#L38)
+[sdk/src/common/lit.ts:38](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/lit.ts#L38)
 
 ## Methods
 
@@ -44,7 +44,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/common/lit.ts:54](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/lit.ts#L54)
+[sdk/src/common/lit.ts:54](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/lit.ts#L54)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/lit.ts:87](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/lit.ts#L87)
+[sdk/src/common/lit.ts:87](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/lit.ts#L87)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/lit.ts:107](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/lit.ts#L107)
+[sdk/src/common/lit.ts:107](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/lit.ts#L107)
 
 ___
 
@@ -99,4 +99,4 @@ ___
 
 #### Defined in
 
-[sdk/src/common/lit.ts:61](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/lit.ts#L61)
+[sdk/src/common/lit.ts:61](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/lit.ts#L61)

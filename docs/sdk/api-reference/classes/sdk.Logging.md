@@ -25,7 +25,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/logging/index.ts:15](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/logging/index.ts#L15)
+[sdk/src/logging/index.ts:15](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/logging/index.ts#L15)
 
 ## Methods
 
@@ -47,4 +47,4 @@ ILogger
 
 #### Defined in
 
-[sdk/src/logging/index.ts:28](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/logging/index.ts#L28)
+[sdk/src/logging/index.ts:28](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/logging/index.ts#L28)

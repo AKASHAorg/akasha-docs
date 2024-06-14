@@ -19,7 +19,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/db/index.ts:19](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/index.ts#L19)
+[sdk/src/db/index.ts:19](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/db/index.ts#L19)
 
 ## Methods
 
@@ -41,7 +41,7 @@ Create a new DB instance
 
 #### Defined in
 
-[sdk/src/db/index.ts:28](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/index.ts#L28)
+[sdk/src/db/index.ts:28](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/db/index.ts#L28)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[sdk/src/db/index.ts:46](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/index.ts#L46)
+[sdk/src/db/index.ts:46](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/db/index.ts#L46)
 
 ___
 
@@ -76,4 +76,4 @@ Get access to the local db
 
 #### Defined in
 
-[sdk/src/db/index.ts:38](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/index.ts#L38)
+[sdk/src/db/index.ts:38](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/db/index.ts#L38)

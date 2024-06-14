@@ -28,7 +28,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:25](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/profiles/index.ts#L25)
+[sdk/src/profiles/index.ts:25](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/profiles/index.ts#L25)
 
 ## Properties
 
@@ -38,7 +38,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:23](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/profiles/index.ts#L23)
+[sdk/src/profiles/index.ts:23](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/profiles/index.ts#L23)
 
 ## Methods
 
@@ -58,7 +58,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:41](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/profiles/index.ts#L41)
+[sdk/src/profiles/index.ts:41](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/profiles/index.ts#L41)
 
 ___
 
@@ -87,4 +87,4 @@ ___
 
 #### Defined in
 
-[sdk/src/profiles/index.ts:83](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/profiles/index.ts#L83)
+[sdk/src/profiles/index.ts:83](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/profiles/index.ts#L83)

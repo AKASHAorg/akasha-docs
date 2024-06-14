@@ -25,7 +25,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/common/misc.ts:18](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/misc.ts#L18)
+[sdk/src/common/misc.ts:18](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/misc.ts#L18)
 
 ## Methods
 
@@ -46,7 +46,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/common/misc.ts:54](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/misc.ts#L54)
+[sdk/src/common/misc.ts:54](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/misc.ts#L54)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/misc.ts:41](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/misc.ts#L41)
+[sdk/src/common/misc.ts:41](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/misc.ts#L41)
 
 ___
 
@@ -80,4 +80,4 @@ ___
 
 #### Defined in
 
-[sdk/src/common/misc.ts:60](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/misc.ts#L60)
+[sdk/src/common/misc.ts:60](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/misc.ts#L60)

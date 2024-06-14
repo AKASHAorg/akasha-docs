@@ -19,7 +19,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/db/integrations.schema.ts:8](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/integrations.schema.ts#L8)
+[sdk/src/db/integrations.schema.ts:8](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/db/integrations.schema.ts#L8)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[sdk/src/db/integrations.schema.ts:3](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/integrations.schema.ts#L3)
+[sdk/src/db/integrations.schema.ts:3](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/db/integrations.schema.ts#L3)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[sdk/src/db/integrations.schema.ts:4](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/integrations.schema.ts#L4)
+[sdk/src/db/integrations.schema.ts:4](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/db/integrations.schema.ts#L4)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[sdk/src/db/integrations.schema.ts:2](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/integrations.schema.ts#L2)
+[sdk/src/db/integrations.schema.ts:2](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/db/integrations.schema.ts#L2)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[sdk/src/db/integrations.schema.ts:6](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/integrations.schema.ts#L6)
+[sdk/src/db/integrations.schema.ts:6](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/db/integrations.schema.ts#L6)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[sdk/src/db/integrations.schema.ts:7](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/integrations.schema.ts#L7)
+[sdk/src/db/integrations.schema.ts:7](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/db/integrations.schema.ts#L7)
 
 ___
 
@@ -79,4 +79,4 @@ ___
 
 #### Defined in
 
-[sdk/src/db/integrations.schema.ts:5](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/integrations.schema.ts#L5)
+[sdk/src/db/integrations.schema.ts:5](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/db/integrations.schema.ts#L5)

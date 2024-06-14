@@ -30,7 +30,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/common/ceramic.ts:29](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ceramic.ts#L29)
+[sdk/src/common/ceramic.ts:29](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/ceramic.ts#L29)
 
 ## Methods
 
@@ -44,7 +44,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/common/ceramic.ts:71](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ceramic.ts#L71)
+[sdk/src/common/ceramic.ts:71](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/ceramic.ts#L71)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ceramic.ts:137](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ceramic.ts#L137)
+[sdk/src/common/ceramic.ts:137](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/ceramic.ts#L137)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ceramic.ts:118](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ceramic.ts#L118)
+[sdk/src/common/ceramic.ts:118](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/ceramic.ts#L118)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ceramic.ts:103](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ceramic.ts#L103)
+[sdk/src/common/ceramic.ts:103](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/ceramic.ts#L103)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ceramic.ts:131](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ceramic.ts#L131)
+[sdk/src/common/ceramic.ts:131](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/ceramic.ts#L131)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ceramic.ts:107](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ceramic.ts#L107)
+[sdk/src/common/ceramic.ts:107](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/ceramic.ts#L107)
 
 ___
 
@@ -138,7 +138,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ceramic.ts:94](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ceramic.ts#L94)
+[sdk/src/common/ceramic.ts:94](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/ceramic.ts#L94)
 
 ___
 
@@ -152,7 +152,7 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ceramic.ts:111](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ceramic.ts#L111)
+[sdk/src/common/ceramic.ts:111](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/ceramic.ts#L111)
 
 ___
 
@@ -172,4 +172,4 @@ ___
 
 #### Defined in
 
-[sdk/src/common/ceramic.ts:126](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/common/ceramic.ts#L126)
+[sdk/src/common/ceramic.ts:126](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/common/ceramic.ts#L126)

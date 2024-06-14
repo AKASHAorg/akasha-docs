@@ -19,7 +19,7 @@ description: "Test Description"
 
 #### Defined in
 
-[sdk/src/db/settings.schema.ts:4](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/settings.schema.ts#L4)
+[sdk/src/db/settings.schema.ts:4](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/db/settings.schema.ts#L4)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[sdk/src/db/settings.schema.ts:3](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/settings.schema.ts#L3)
+[sdk/src/db/settings.schema.ts:3](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/db/settings.schema.ts#L3)
 
 ___
 
@@ -39,4 +39,4 @@ ___
 
 #### Defined in
 
-[sdk/src/db/settings.schema.ts:2](https://github.com/AKASHAorg/akasha-core/blob/21e566cd/libs/sdk/src/db/settings.schema.ts#L2)
+[sdk/src/db/settings.schema.ts:2](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/sdk/src/db/settings.schema.ts#L2)
