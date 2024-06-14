@@ -50,7 +50,7 @@ const config = {
         id: "akasha-sdk-main",
         entryPoints: ["./akasha-core/libs/sdk/src/index.ts"],
         entryPointStrategy: "expand",
-        tsconfig: "akasha-core/libs/sdk/tsconfig.json",
+        tsconfig: "./akasha-core/libs/sdk/tsconfig.json",
         readme: "none",
         out: "./sdk/api-reference",
         name: "AKASHA SDK reference",
@@ -63,7 +63,7 @@ const config = {
         categoryOrder: ["API", "Services"],
         sidebar: {
           categoryLabel: "SDK reference",
-          position: 3,
+          position: 5,
         },
         hideMembersSymbol: true,
         frontmatter: {
@@ -78,16 +78,16 @@ const config = {
     //   "docusaurus-plugin-typedoc",
     //   {
     //     id: "akasha-ui-hooks",
-    //     entryPoints: ["./akasha-core/ui/hooks/src/generated/hooks-new.ts"],
+    //     entryPoints: ["./akasha-core/libs/hooks/src/generated/queries.ts"],
     //     entryPointStrategy: "expand",
-    //     tsconfig: "./akasha-core/ui/hooks/tsconfig.json",
+    //     tsconfig: "./akasha-core/libs/hooks/tsconfig.json",
     //     readme: "docs/react-hooks/_hooks-list_.md",
     //     out: "./react-hooks",
     //     name: "React hooks",
     //     excludeInternal: true,
     //     sidebar: {
     //       categoryLabel: "React hooks",
-    //       position: 5,
+    //       position: 6,
     //     },
     //     frontmatter: null,
     //   },
