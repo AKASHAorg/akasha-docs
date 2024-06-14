@@ -101,10 +101,6 @@ const config = {
       },
       navbar: {
         title: "AKASHA Docs",
-        // logo: {
-        // alt: 'My Site Logo',
-        // src: 'img/logo.svg',
-        // },
         items: [
           {
             type: "doc",
@@ -112,10 +108,14 @@ const config = {
             position: "left",
             label: "Docs",
           },
-          // {to: '/blog', label: 'Tutorials', position: 'left'},
           {
             href: "https://github.com/AKASHAorg/akasha-docs",
-            label: "GitHub",
+            label: "View on GitHub",
+            position: "right",
+          },
+          {
+            href: "https://github.com/AKASHAorg/akasha-docs",
+            label: "View on GitHub",
             position: "right",
           },
         ],
@@ -138,10 +138,6 @@ const config = {
                 label: "Integrations",
                 to: "/integrations",
               },
-              {
-                label: "SDK",
-                to: "/sdk",
-              },
             ],
           },
           {
@@ -152,6 +148,10 @@ const config = {
                 href: "https://discord.com/invite/JqqKasJ",
               },
               {
+                label: "Telegram",
+                href: "https://t.me/worldofethereum",
+              },
+              {
                 label: "Twitter",
                 href: "https://twitter.com/AKASHAorg",
               },
@@ -160,10 +160,6 @@ const config = {
           {
             title: "More",
             items: [
-              // {
-              //   label: 'Tutorials',
-              //   to: '/blog',
-              // },
               {
                 label: "GitHub",
                 href: "https://github.com/AKASHAorg",
@@ -172,10 +168,14 @@ const config = {
                 label: "Docs GitHub",
                 href: "https://github.com/AKASHAorg/akasha-docs",
               },
+              {
+                label: "Blog",
+                href: "https://blog.akasha.org",
+              },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} AKASHA Foundation.`,
+        copyright: `Copyright ©${new Date().getFullYear()} AKASHA Foundation`,
       },
       prism: {
         theme: lightCodeTheme,
