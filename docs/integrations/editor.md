@@ -4,7 +4,7 @@ sidebar_label: Editor
 ---
 
 # Editor
-The Editor makes it possible to add contents to an [Antenna](./GLOSSARY.md#antenna). It is a list of [content blocks](./content-blocks), each content block being added/provided by an application. In order to use a specific content block, for example an `image` block, the application that provides it must be installed.
+The Editor makes it possible to add contents to an [Antenna](../glossary#antenna). It is a list of [content blocks](./content-blocks), each content block being added/provided by an application. In order to use a specific content block, for example an `image` block, the application that provides it must be installed.
 
 ## Loading and mounting blocks
 

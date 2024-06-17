@@ -8,7 +8,7 @@ sidebar_label: Content Blocks
 The content beamed (posted) into the apps is composed of one or more blocks. For example, a [beam](../glossary#beam) can contain a rich text format block, an image block,
 a code block etc. All of these blocks can be `injected` into the editor by different apps.
 
-To register a content-block an app should define an optional param in its [register](../apps/example-app/src/index.tsx) function, called `contentBlocks`.
+To register a content-block an app should define an optional param in its [register](https://github.com/AKASHAorg/akasha-core/blob/4f5934e4b3aef6b1920af1d196e372e5c75afe24/extensions/apps/antenna/src/index.tsx#L74) function, called `contentBlocks`.
 
 ## Interface
 
@@ -23,7 +23,7 @@ Registering content-blocks will require the following properties:
 }
 ```
 
-**[loadingFn](./loading-fn.md)** -> - defines how the application is mounted/unmounted by importing the single-spa-react lifecycle methods.
+**[loadingFn](./loading-function)** -> - defines how the application is mounted/unmounted by importing the single-spa-react lifecycle methods.
 
 **propertyType** -> used to match the content published through this content.
 
