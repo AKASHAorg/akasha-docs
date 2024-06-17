@@ -14,7 +14,7 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "bootstrap": "yarn && yarn --cwd ./akasha-core bootstrap && yarn --cwd ./akasha-core tsc:all",
+    "bootstrap": "yarn && yarn --cwd ./akasha-core install --immutable && yarn --cwd ./akasha-core prepare",
     "build:framework": "yarn --cwd ./akasha-core build:all"
   },
   "dependencies": {
