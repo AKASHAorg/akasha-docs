@@ -13,10 +13,6 @@ description: "Test Description"
 AKASHA SDK is a modular set of utilities and apis that can be used to build
 your own app.
 
-## Modules
-
-- [sdk](modules/sdk.md)
-
 ## Namespaces
 
 - [typings](namespaces/typings.md)

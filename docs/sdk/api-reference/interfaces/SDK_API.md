@@ -14,7 +14,7 @@ description: "Test Description"
 
 ### auth
 
- **auth**: [`AWF_Auth`](../classes/sdk.AWF_Auth.md)
+ **auth**: `AWF_Auth`
 
 #### Defined in
 
@@ -24,7 +24,7 @@ ___
 
 ### globalChannel
 
- **globalChannel**: [`EventBus`](../classes/sdk.EventBus.md)
+ **globalChannel**: `EventBus`
 
 #### Defined in
 
@@ -34,7 +34,7 @@ ___
 
 ### profile
 
- **profile**: [`AWF_Profile`](../classes/sdk.AWF_Profile.md)
+ **profile**: `AWF_Profile`
 
 #### Defined in
 

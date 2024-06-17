@@ -14,7 +14,7 @@ description: "Test Description"
 
 ### appSettings
 
- **appSettings**: [`AppSettings`](../classes/sdk.AppSettings.md)
+ **appSettings**: `AppSettings`
 
 #### Defined in
 
@@ -24,7 +24,7 @@ ___
 
 ### ceramic
 
- **ceramic**: [`default`](../classes/sdk.default.md)
+ **ceramic**: `default`
 
 #### Defined in
 
@@ -40,9 +40,9 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `ipfs` | [`AWF_IpfsConnector`](../classes/sdk.AWF_IpfsConnector.md) |
-| `misc` | [`AWF_Misc`](../classes/sdk.AWF_Misc.md) |
-| `web3` | [`Web3Connector`](../classes/sdk.Web3Connector.md) |
+| `ipfs` | `AWF_IpfsConnector` |
+| `misc` | `AWF_Misc` |
+| `web3` | `Web3Connector` |
 
 #### Defined in
 
@@ -52,7 +52,7 @@ ___
 
 ### db
 
- **db**: [`DB`](../classes/sdk.DB.md)
+ **db**: `DB`
 
 #### Defined in
 
@@ -72,7 +72,7 @@ ___
 
 ### log
 
- **log**: [`Logging`](../classes/sdk.Logging.md)
+ **log**: `Logging`
 
 #### Defined in
 
@@ -82,7 +82,7 @@ ___
 
 ### settings
 
- **settings**: [`Settings`](../classes/sdk.Settings.md)
+ **settings**: `Settings`
 
 #### Defined in
 
@@ -92,7 +92,7 @@ ___
 
 ### stash
 
- **stash**: [`Stash`](../classes/sdk.Stash.md)
+ **stash**: `Stash`
 
 #### Defined in
 
