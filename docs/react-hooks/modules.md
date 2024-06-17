@@ -6,4705 +6,3281 @@ sidebar_position: 0.5
 custom_edit_url: null
 ---
 
-## Enumerations
+## Namespaces
 
-- [CookieConsentTypes](enums/CookieConsentTypes.md)
-
-## Interfaces
-
-- [EntryReport](interfaces/EntryReport.md)
-- [FormProfileData](interfaces/FormProfileData.md)
-- [ICount](interfaces/ICount.md)
-- [ILogItem](interfaces/ILogItem.md)
-- [IModeratedItem](interfaces/IModeratedItem.md)
-- [IPendingItem](interfaces/IPendingItem.md)
-- [LoginState](interfaces/LoginState.md)
+- [useCreateAppMutation](namespaces/useCreateAppMutation.md)
+- [useCreateBeamMutation](namespaces/useCreateBeamMutation.md)
+- [useCreateContentBlockMutation](namespaces/useCreateContentBlockMutation.md)
+- [useCreateFollowMutation](namespaces/useCreateFollowMutation.md)
+- [useCreateInterestsMutation](namespaces/useCreateInterestsMutation.md)
+- [useCreateProfileMutation](namespaces/useCreateProfileMutation.md)
+- [useCreateReflectMutation](namespaces/useCreateReflectMutation.md)
+- [useGetAppReleaseByIdQuery](namespaces/useGetAppReleaseByIdQuery.md)
+- [useGetAppsByIdQuery](namespaces/useGetAppsByIdQuery.md)
+- [useGetAppsByPublisherDidQuery](namespaces/useGetAppsByPublisherDidQuery.md)
+- [useGetAppsQuery](namespaces/useGetAppsQuery.md)
+- [useGetAppsReleasesByPublisherDidQuery](namespaces/useGetAppsReleasesByPublisherDidQuery.md)
+- [useGetAppsReleasesQuery](namespaces/useGetAppsReleasesQuery.md)
+- [useGetAppsStreamQuery](namespaces/useGetAppsStreamQuery.md)
+- [useGetBeamByIdQuery](namespaces/useGetBeamByIdQuery.md)
+- [useGetBeamStreamQuery](namespaces/useGetBeamStreamQuery.md)
+- [useGetBeamsByAuthorDidQuery](namespaces/useGetBeamsByAuthorDidQuery.md)
+- [useGetBeamsQuery](namespaces/useGetBeamsQuery.md)
+- [useGetBlockStorageByIdQuery](namespaces/useGetBlockStorageByIdQuery.md)
+- [useGetContentBlockByIdQuery](namespaces/useGetContentBlockByIdQuery.md)
+- [useGetContentBlockStreamQuery](namespaces/useGetContentBlockStreamQuery.md)
+- [useGetFollowDocumentsByDidQuery](namespaces/useGetFollowDocumentsByDidQuery.md)
+- [useGetFollowersListByDidQuery](namespaces/useGetFollowersListByDidQuery.md)
+- [useGetFollowingListByDidQuery](namespaces/useGetFollowingListByDidQuery.md)
+- [useGetIndexedStreamCountQuery](namespaces/useGetIndexedStreamCountQuery.md)
+- [useGetIndexedStreamQuery](namespaces/useGetIndexedStreamQuery.md)
+- [useGetInterestsByDidQuery](namespaces/useGetInterestsByDidQuery.md)
+- [useGetInterestsByIdQuery](namespaces/useGetInterestsByIdQuery.md)
+- [useGetInterestsQuery](namespaces/useGetInterestsQuery.md)
+- [useGetInterestsStreamQuery](namespaces/useGetInterestsStreamQuery.md)
+- [useGetMyProfileQuery](namespaces/useGetMyProfileQuery.md)
+- [useGetProfileByDidQuery](namespaces/useGetProfileByDidQuery.md)
+- [useGetProfileByIdQuery](namespaces/useGetProfileByIdQuery.md)
+- [useGetProfileStatsByDidQuery](namespaces/useGetProfileStatsByDidQuery.md)
+- [useGetProfileStreamQuery](namespaces/useGetProfileStreamQuery.md)
+- [useGetProfilesQuery](namespaces/useGetProfilesQuery.md)
+- [useGetReflectReflectionsQuery](namespaces/useGetReflectReflectionsQuery.md)
+- [useGetReflectionByIdQuery](namespaces/useGetReflectionByIdQuery.md)
+- [useGetReflectionStreamQuery](namespaces/useGetReflectionStreamQuery.md)
+- [useGetReflectionsByAuthorDidQuery](namespaces/useGetReflectionsByAuthorDidQuery.md)
+- [useGetReflectionsFromBeamQuery](namespaces/useGetReflectionsFromBeamQuery.md)
+- [useIndexBeamMutation](namespaces/useIndexBeamMutation.md)
+- [useIndexContentBlockMutation](namespaces/useIndexContentBlockMutation.md)
+- [useIndexProfileMutation](namespaces/useIndexProfileMutation.md)
+- [useIndexReflectionMutation](namespaces/useIndexReflectionMutation.md)
+- [useInfiniteGetAppReleaseByIdQuery](namespaces/useInfiniteGetAppReleaseByIdQuery.md)
+- [useInfiniteGetAppsByIdQuery](namespaces/useInfiniteGetAppsByIdQuery.md)
+- [useInfiniteGetAppsByPublisherDidQuery](namespaces/useInfiniteGetAppsByPublisherDidQuery.md)
+- [useInfiniteGetAppsQuery](namespaces/useInfiniteGetAppsQuery.md)
+- [useInfiniteGetAppsReleasesByPublisherDidQuery](namespaces/useInfiniteGetAppsReleasesByPublisherDidQuery.md)
+- [useInfiniteGetAppsReleasesQuery](namespaces/useInfiniteGetAppsReleasesQuery.md)
+- [useInfiniteGetAppsStreamQuery](namespaces/useInfiniteGetAppsStreamQuery.md)
+- [useInfiniteGetBeamByIdQuery](namespaces/useInfiniteGetBeamByIdQuery.md)
+- [useInfiniteGetBeamStreamQuery](namespaces/useInfiniteGetBeamStreamQuery.md)
+- [useInfiniteGetBeamsByAuthorDidQuery](namespaces/useInfiniteGetBeamsByAuthorDidQuery.md)
+- [useInfiniteGetBeamsQuery](namespaces/useInfiniteGetBeamsQuery.md)
+- [useInfiniteGetBlockStorageByIdQuery](namespaces/useInfiniteGetBlockStorageByIdQuery.md)
+- [useInfiniteGetContentBlockByIdQuery](namespaces/useInfiniteGetContentBlockByIdQuery.md)
+- [useInfiniteGetContentBlockStreamQuery](namespaces/useInfiniteGetContentBlockStreamQuery.md)
+- [useInfiniteGetFollowDocumentsByDidQuery](namespaces/useInfiniteGetFollowDocumentsByDidQuery.md)
+- [useInfiniteGetFollowersListByDidQuery](namespaces/useInfiniteGetFollowersListByDidQuery.md)
+- [useInfiniteGetFollowingListByDidQuery](namespaces/useInfiniteGetFollowingListByDidQuery.md)
+- [useInfiniteGetIndexedStreamCountQuery](namespaces/useInfiniteGetIndexedStreamCountQuery.md)
+- [useInfiniteGetIndexedStreamQuery](namespaces/useInfiniteGetIndexedStreamQuery.md)
+- [useInfiniteGetInterestsByDidQuery](namespaces/useInfiniteGetInterestsByDidQuery.md)
+- [useInfiniteGetInterestsByIdQuery](namespaces/useInfiniteGetInterestsByIdQuery.md)
+- [useInfiniteGetInterestsQuery](namespaces/useInfiniteGetInterestsQuery.md)
+- [useInfiniteGetInterestsStreamQuery](namespaces/useInfiniteGetInterestsStreamQuery.md)
+- [useInfiniteGetMyProfileQuery](namespaces/useInfiniteGetMyProfileQuery.md)
+- [useInfiniteGetProfileByDidQuery](namespaces/useInfiniteGetProfileByDidQuery.md)
+- [useInfiniteGetProfileByIdQuery](namespaces/useInfiniteGetProfileByIdQuery.md)
+- [useInfiniteGetProfileStatsByDidQuery](namespaces/useInfiniteGetProfileStatsByDidQuery.md)
+- [useInfiniteGetProfileStreamQuery](namespaces/useInfiniteGetProfileStreamQuery.md)
+- [useInfiniteGetProfilesQuery](namespaces/useInfiniteGetProfilesQuery.md)
+- [useInfiniteGetReflectReflectionsQuery](namespaces/useInfiniteGetReflectReflectionsQuery.md)
+- [useInfiniteGetReflectionByIdQuery](namespaces/useInfiniteGetReflectionByIdQuery.md)
+- [useInfiniteGetReflectionStreamQuery](namespaces/useInfiniteGetReflectionStreamQuery.md)
+- [useInfiniteGetReflectionsByAuthorDidQuery](namespaces/useInfiniteGetReflectionsByAuthorDidQuery.md)
+- [useInfiniteGetReflectionsFromBeamQuery](namespaces/useInfiniteGetReflectionsFromBeamQuery.md)
+- [useSetAppReleaseMutation](namespaces/useSetAppReleaseMutation.md)
+- [useUpdateAkashaReflectMutation](namespaces/useUpdateAkashaReflectMutation.md)
+- [useUpdateAppMutation](namespaces/useUpdateAppMutation.md)
+- [useUpdateAppReleaseMutation](namespaces/useUpdateAppReleaseMutation.md)
+- [useUpdateBeamMutation](namespaces/useUpdateBeamMutation.md)
+- [useUpdateContentBlockMutation](namespaces/useUpdateContentBlockMutation.md)
+- [useUpdateFollowMutation](namespaces/useUpdateFollowMutation.md)
+- [useUpdateInterestsMutation](namespaces/useUpdateInterestsMutation.md)
+- [useUpdateProfileMutation](namespaces/useUpdateProfileMutation.md)
 
 ## Variables
 
-### ThemeWrapper
+### AkashaAppFragmentDoc
 
-• `Const` **ThemeWrapper**: `React.FC`<`RootComponentProps`\>
-
-React component that fetches the user-selected theme name from localStorage
-and passes it to the ThemeSelector component along with all available themes.
+• `Const` **AkashaAppFragmentDoc**: ``"\n    fragment AkashaAppFragment on AkashaApp {\n  id\n  applicationType\n  description\n  license\n  name\n  displayName\n  keywords\n  releases(last: 5) {\n    edges {\n      node {\n        id\n        createdAt\n        source\n        version\n      }\n      cursor\n    }\n  }\n  releasesCount\n  author {\n    id\n    isViewer\n    akashaProfile {\n      ...UserProfileFragment\n    }\n  }\n  contributors {\n    id\n    isViewer\n    akashaProfile {\n      ...UserProfileFragment\n    }\n  }\n}\n    "``
 
 #### Defined in
 
-[ui/hooks/src/utils/theme-wrapper.tsx:10](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/utils/theme-wrapper.tsx#L10)
+[hooks/src/generated/queries.ts:197](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L197)
 
 ___
 
-### constants
+### AkashaAppFragmentMFragmentDoc
 
-• **constants**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `BASE_DECISION_URL` | `string` |
-| `BASE_MODERATOR_URL` | `string` |
-| `BASE_REASONS_URL` | `string` |
-| `BASE_REPORT_URL` | `string` |
-| `BASE_STATUS_URL` | `string` |
-| `CHECK_MODERATOR_KEY` | `string` |
-| `CONNECT_PROVIDER_KEY` | `string` |
-| `DEFAULT_FETCH_TIMEOUT` | `number` |
-| `DELISTED_ITEMS_KEY` | `string` |
-| `INJECTED_PROVIDER_KEY` | `string` |
-| `KEPT_ITEMS_KEY` | `string` |
-| `LOG_ITEMS_KEY` | `string` |
-| `MODERATED_CACHE_KEY_PREFIX` | `string` |
-| `MODERATION_COUNT_CACHE_KEY_PREFIX` | `string` |
-| `MODERATION_ITEMS_COUNT_KEY` | `string` |
-| `MODERATION_ITEM_FLAGS_KEY` | `string` |
-| `MODERATION_STATUS_KEY` | `string` |
-| `PENDING_CACHE_KEY_PREFIX` | `string` |
-| `PENDING_ITEMS_KEY` | `string` |
-| `REQUIRED_NETWORK_KEY` | `string` |
-| `TOKEN_VALIDATION_KEY` | `string` |
+• `Const` **AkashaAppFragmentMFragmentDoc**: ``"\n    fragment AkashaAppFragmentM on AkashaApp {\n  id\n  applicationType\n  description\n  license\n  name\n  displayName\n  keywords\n  releases(last: 5) {\n    edges {\n      node {\n        id\n        createdAt\n        source\n        version\n      }\n      cursor\n    }\n  }\n  releasesCount\n  author {\n    id\n    isViewer\n    akashaProfile {\n      ...UserProfileFragmentM\n    }\n  }\n  contributors {\n    id\n    isViewer\n    akashaProfile {\n      ...UserProfileFragmentM\n    }\n  }\n}\n    "``
 
 #### Defined in
 
-[ui/hooks/src/constants.ts:29](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/constants.ts#L29)
+[hooks/src/generated/composedb.ts:158](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L158)
+
+___
+
+### AppReleaseFragmentDoc
+
+• `Const` **AppReleaseFragmentDoc**: ``"\n    fragment AppReleaseFragment on AkashaAppRelease {\n  application {\n    ...AkashaAppFragment\n  }\n  applicationID\n  id\n  source\n  version\n  createdAt\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:234](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L234)
+
+___
+
+### AppReleaseFragmentMFragmentDoc
+
+• `Const` **AppReleaseFragmentMFragmentDoc**: ``"\n    fragment AppReleaseFragmentM on AkashaAppRelease {\n  application {\n    ...AkashaAppFragmentM\n  }\n  applicationID\n  id\n  source\n  version\n  createdAt\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:195](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L195)
+
+___
+
+### BeamFragmentDoc
+
+• `Const` **BeamFragmentDoc**: ``"\n    fragment BeamFragment on AkashaBeam {\n  id\n  reflectionsCount\n  active\n  embeddedStream {\n    label\n    embeddedID\n  }\n  author {\n    id\n    isViewer\n  }\n  content {\n    blockID\n    order\n  }\n  tags {\n    labelType\n    value\n  }\n  mentions {\n    id\n  }\n  version\n  createdAt\n  nsfw\n  reflections(last: 1) {\n    edges {\n      cursor\n    }\n    pageInfo {\n      hasNextPage\n      hasPreviousPage\n      startCursor\n      endCursor\n    }\n  }\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:14](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L14)
+
+___
+
+### BeamFragmentMFragmentDoc
+
+• `Const` **BeamFragmentMFragmentDoc**: ``"\n    fragment BeamFragmentM on AkashaBeam {\n  id\n  reflectionsCount\n  active\n  embeddedStream {\n    label\n    embeddedID\n  }\n  author {\n    id\n    isViewer\n  }\n  content {\n    blockID\n    order\n  }\n  tags {\n    labelType\n    value\n  }\n  version\n  createdAt\n  nsfw\n  reflections(last: 1) {\n    edges {\n      cursor\n    }\n    pageInfo {\n      hasNextPage\n      hasPreviousPage\n      startCursor\n      endCursor\n    }\n  }\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:15](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L15)
+
+___
+
+### BlockStorageFragmentDoc
+
+• `Const` **BlockStorageFragmentDoc**: ``"\n    fragment BlockStorageFragment on AkashaBlockStorage {\n  id\n  appVersionID\n  appVersion {\n    application {\n      name\n      displayName\n      id\n    }\n    applicationID\n    id\n    version\n  }\n  createdAt\n  active\n  version\n  content {\n    propertyType\n    label\n    value\n  }\n  author {\n    id\n    isViewer\n  }\n  blockID\n  block {\n    id\n    active\n    author {\n      id\n      isViewer\n    }\n  }\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:84](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L84)
+
+___
+
+### ContentBlockFragmentDoc
+
+• `Const` **ContentBlockFragmentDoc**: ``"\n    fragment ContentBlockFragment on AkashaContentBlock {\n  id\n  content {\n    propertyType\n    value\n    label\n  }\n  active\n  appVersion {\n    application {\n      name\n      displayName\n      id\n    }\n    applicationID\n    id\n    version\n  }\n  appVersionID\n  createdAt\n  kind\n  author {\n    id\n    isViewer\n  }\n  version\n  nsfw\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:54](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L54)
+
+___
+
+### ContentBlockFragmentMFragmentDoc
+
+• `Const` **ContentBlockFragmentMFragmentDoc**: ``"\n    fragment ContentBlockFragmentM on AkashaContentBlock {\n  id\n  content {\n    propertyType\n    value\n    label\n  }\n  active\n  appVersion {\n    application {\n      name\n      displayName\n      id\n    }\n    applicationID\n    id\n    version\n  }\n  appVersionID\n  createdAt\n  kind\n  author {\n    id\n    isViewer\n  }\n  version\n  nsfw\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:52](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L52)
+
+___
+
+### CreateAppDocument
+
+• `Const` **CreateAppDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:665](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L665)
+
+___
+
+### CreateBeamDocument
+
+• `Const` **CreateBeamDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:207](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L207)
+
+___
+
+### CreateContentBlockDocument
+
+• `Const` **CreateContentBlockDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:251](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L251)
+
+___
+
+### CreateFollowDocument
+
+• `Const` **CreateFollowDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:441](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L441)
+
+___
+
+### CreateInterestsDocument
+
+• `Const` **CreateInterestsDocument**: ``"\n    mutation CreateInterests($i: CreateAkashaProfileInterestsInput!) {\n  createAkashaProfileInterests(input: $i) {\n    document {\n      topics {\n        value\n        labelType\n      }\n      did {\n        id\n      }\n      id\n    }\n    clientMutationId\n  }\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:383](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L383)
+
+___
+
+### CreateProfileDocument
+
+• `Const` **CreateProfileDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:339](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L339)
+
+___
+
+### CreateReflectDocument
+
+• `Const` **CreateReflectDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:295](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L295)
+
+___
+
+### GetAppReleaseByIdDocument
+
+• `Const` **GetAppReleaseByIdDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:2171](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L2171)
+
+___
+
+### GetAppsByIdDocument
+
+• `Const` **GetAppsByIdDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1935](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1935)
+
+___
+
+### GetAppsByPublisherDidDocument
+
+• `Const` **GetAppsByPublisherDidDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1983](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1983)
+
+___
+
+### GetAppsDocument
+
+• `Const` **GetAppsDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1800](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1800)
+
+___
+
+### GetAppsReleasesByPublisherDidDocument
+
+• `Const` **GetAppsReleasesByPublisherDidDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:2044](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L2044)
+
+___
+
+### GetAppsReleasesDocument
+
+• `Const` **GetAppsReleasesDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:2106](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L2106)
+
+___
+
+### GetAppsStreamDocument
+
+• `Const` **GetAppsStreamDocument**: ``"\n    query GetAppsStream($indexer: ID!, $after: String, $before: String, $first: Int, $last: Int, $filters: AkashaAppsStreamFiltersInput, $sorting: AkashaAppsStreamSortingInput) {\n  node(id: $indexer) {\n    ... on CeramicAccount {\n      akashaAppsStreamList(\n        after: $after\n        before: $before\n        first: $first\n        last: $last\n        filters: $filters\n        sorting: $sorting\n      ) {\n        edges {\n          node {\n            moderationID\n            active\n            applicationID\n            status\n            createdAt\n          }\n          cursor\n        }\n        pageInfo {\n          startCursor\n          endCursor\n          hasNextPage\n          hasPreviousPage\n        }\n      }\n    }\n  }\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1864](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1864)
+
+___
+
+### GetBeamByIdDocument
+
+• `Const` **GetBeamByIdDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:450](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L450)
+
+___
+
+### GetBeamStreamDocument
+
+• `Const` **GetBeamStreamDocument**: ``"\n    query GetBeamStream($indexer: ID!, $after: String, $before: String, $first: Int, $last: Int, $filters: AkashaBeamStreamFiltersInput, $sorting: AkashaBeamStreamSortingInput) {\n  node(id: $indexer) {\n    ... on CeramicAccount {\n      akashaBeamStreamList(\n        after: $after\n        before: $before\n        first: $first\n        last: $last\n        filters: $filters\n        sorting: $sorting\n      ) {\n        edges {\n          node {\n            beamID\n            createdAt\n            active\n            status\n            moderationID\n          }\n          cursor\n        }\n        pageInfo {\n          startCursor\n          endCursor\n          hasPreviousPage\n          hasNextPage\n        }\n      }\n      isViewer\n    }\n  }\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:246](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L246)
+
+___
+
+### GetBeamsByAuthorDidDocument
+
+• `Const` **GetBeamsByAuthorDidDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:381](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L381)
+
+___
+
+### GetBeamsDocument
+
+• `Const` **GetBeamsDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:318](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L318)
+
+___
+
+### GetBlockStorageByIdDocument
+
+• `Const` **GetBlockStorageByIdDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:617](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L617)
+
+___
+
+### GetContentBlockByIdDocument
+
+• `Const` **GetContentBlockByIdDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:570](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L570)
+
+___
+
+### GetContentBlockStreamDocument
+
+• `Const` **GetContentBlockStreamDocument**: ``"\n    query GetContentBlockStream($indexer: ID!, $after: String, $before: String, $first: Int, $last: Int, $filters: AkashaContentBlockStreamFiltersInput, $sorting: AkashaContentBlockStreamSortingInput) {\n  node(id: $indexer) {\n    ... on CeramicAccount {\n      akashaContentBlockStreamList(\n        after: $after\n        before: $before\n        first: $first\n        last: $last\n        filters: $filters\n        sorting: $sorting\n      ) {\n        edges {\n          node {\n            createdAt\n            active\n            status\n            blockID\n            moderationID\n          }\n          cursor\n        }\n        pageInfo {\n          startCursor\n          endCursor\n          hasPreviousPage\n          hasNextPage\n        }\n      }\n      akashaContentBlockStreamListCount(filters: $filters)\n      isViewer\n    }\n  }\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:497](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L497)
+
+___
+
+### GetFollowDocumentsByDidDocument
+
+• `Const` **GetFollowDocumentsByDidDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:544](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L544)
+
+___
+
+### GetFollowersListByDidDocument
+
+• `Const` **GetFollowersListByDidDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1666](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1666)
+
+___
+
+### GetFollowingListByDidDocument
+
+• `Const` **GetFollowingListByDidDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1590](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1590)
+
+___
+
+### GetIndexedStreamCountDocument
+
+• `Const` **GetIndexedStreamCountDocument**: ``"\n    query GetIndexedStreamCount($indexer: ID!, $filters: AkashaIndexedStreamFiltersInput) {\n  node(id: $indexer) {\n    ... on CeramicAccount {\n      akashaIndexedStreamListCount(filters: $filters)\n      isViewer\n    }\n  }\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:740](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L740)
+
+___
+
+### GetIndexedStreamDocument
+
+• `Const` **GetIndexedStreamDocument**: ``"\n    query GetIndexedStream($indexer: ID!, $after: String, $before: String, $first: Int, $last: Int, $filters: AkashaIndexedStreamFiltersInput, $sorting: AkashaIndexedStreamSortingInput) {\n  node(id: $indexer) {\n    ... on CeramicAccount {\n      akashaIndexedStreamList(\n        after: $after\n        before: $before\n        first: $first\n        last: $last\n        filters: $filters\n        sorting: $sorting\n      ) {\n        edges {\n          node {\n            createdAt\n            active\n            status\n            indexValue\n            indexType\n            stream\n            streamType\n            moderationID\n          }\n          cursor\n        }\n        pageInfo {\n          startCursor\n          endCursor\n          hasPreviousPage\n          hasNextPage\n        }\n      }\n      akashaIndexedStreamListCount(filters: $filters)\n      isViewer\n    }\n  }\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:664](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L664)
+
+___
+
+### GetInterestsByDidDocument
+
+• `Const` **GetInterestsByDidDocument**: ``"\n    query GetInterestsByDid($id: ID!) {\n  node(id: $id) {\n    ... on CeramicAccount {\n      akashaProfileInterests {\n        topics {\n          value\n          labelType\n        }\n        did {\n          id\n        }\n        id\n      }\n      isViewer\n    }\n  }\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1479](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1479)
+
+___
+
+### GetInterestsByIdDocument
+
+• `Const` **GetInterestsByIdDocument**: ``"\n    query GetInterestsById($id: ID!) {\n  node(id: $id) {\n    ... on AkashaProfileInterests {\n      topics {\n        value\n        labelType\n      }\n      did {\n        id\n      }\n      id\n    }\n  }\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1536](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1536)
+
+___
+
+### GetInterestsDocument
+
+• `Const` **GetInterestsDocument**: ``"\n    query GetInterests($after: String, $before: String, $first: Int, $last: Int) {\n  akashaProfileInterestsIndex(\n    after: $after\n    before: $before\n    first: $first\n    last: $last\n  ) {\n    edges {\n      node {\n        topics {\n          value\n          labelType\n        }\n        did {\n          id\n        }\n        id\n      }\n      cursor\n    }\n    pageInfo {\n      startCursor\n      endCursor\n      hasNextPage\n      hasPreviousPage\n    }\n  }\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1340](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1340)
+
+___
+
+### GetInterestsStreamDocument
+
+• `Const` **GetInterestsStreamDocument**: ``"\n    query GetInterestsStream($indexer: ID!, $after: String, $before: String, $first: Int, $last: Int, $sorting: AkashaInterestsStreamSortingInput, $filters: AkashaInterestsStreamFiltersInput) {\n  node(id: $indexer) {\n    ... on CeramicAccount {\n      akashaInterestsStreamList(\n        after: $after\n        before: $before\n        first: $first\n        last: $last\n        sorting: $sorting\n        filters: $filters\n      ) {\n        edges {\n          node {\n            labelType\n            value\n            active\n            createdAt\n            id\n          }\n          cursor\n        }\n        pageInfo {\n          startCursor\n          endCursor\n          hasNextPage\n          hasPreviousPage\n        }\n      }\n    }\n  }\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1408](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1408)
+
+___
+
+### GetMyProfileDocument
+
+• `Const` **GetMyProfileDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:497](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L497)
+
+___
+
+### GetProfileByDidDocument
+
+• `Const` **GetProfileByDidDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1156](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1156)
+
+___
+
+### GetProfileByIdDocument
+
+• `Const` **GetProfileByIdDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1109](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1109)
+
+___
+
+### GetProfileStatsByDidDocument
+
+• `Const` **GetProfileStatsByDidDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1746](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1746)
+
+___
+
+### GetProfileStreamDocument
+
+• `Const` **GetProfileStreamDocument**: ``"\n    query GetProfileStream($indexer: ID!, $after: String, $before: String, $first: Int, $last: Int, $filters: AkashaProfileStreamFiltersInput, $sorting: AkashaProfileStreamSortingInput) {\n  node(id: $indexer) {\n    ... on CeramicAccount {\n      akashaProfileStreamList(\n        after: $after\n        before: $before\n        first: $first\n        last: $last\n        filters: $filters\n        sorting: $sorting\n      ) {\n        edges {\n          node {\n            profileID\n            active\n            createdAt\n            moderationID\n            status\n          }\n          cursor\n        }\n        pageInfo {\n          startCursor\n          endCursor\n          hasNextPage\n          hasPreviousPage\n        }\n      }\n    }\n  }\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1269](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1269)
+
+___
+
+### GetProfilesDocument
+
+• `Const` **GetProfilesDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1206](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1206)
+
+___
+
+### GetReflectReflectionsDocument
+
+• `Const` **GetReflectReflectionsDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1046](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1046)
+
+___
+
+### GetReflectionByIdDocument
+
+• `Const` **GetReflectionByIdDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:999](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L999)
+
+___
+
+### GetReflectionStreamDocument
+
+• `Const` **GetReflectionStreamDocument**: ``"\n    query GetReflectionStream($indexer: ID!, $after: String, $before: String, $first: Int, $last: Int, $filters: AkashaReflectStreamFiltersInput, $sorting: AkashaReflectStreamSortingInput) {\n  node(id: $indexer) {\n    ... on CeramicAccount {\n      akashaReflectStreamList(\n        after: $after\n        before: $before\n        first: $first\n        last: $last\n        filters: $filters\n        sorting: $sorting\n      ) {\n        edges {\n          node {\n            reflectionID\n            moderationID\n            beamID\n            active\n            status\n            createdAt\n            isReply\n            replyTo\n          }\n          cursor\n        }\n        pageInfo {\n          startCursor\n          endCursor\n          hasNextPage\n          hasPreviousPage\n        }\n      }\n      isViewer\n    }\n  }\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:924](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L924)
+
+___
+
+### GetReflectionsByAuthorDidDocument
+
+• `Const` **GetReflectionsByAuthorDidDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:856](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L856)
+
+___
+
+### GetReflectionsFromBeamDocument
+
+• `Const` **GetReflectionsFromBeamDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:788](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L788)
+
+___
+
+### IndexBeamDocument
+
+• `Const` **IndexBeamDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/mutations.ts:35](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/mutations.ts#L35)
+
+___
+
+### IndexContentBlockDocument
+
+• `Const` **IndexContentBlockDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/mutations.ts:56](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/mutations.ts#L56)
+
+___
+
+### IndexProfileDocument
+
+• `Const` **IndexProfileDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/mutations.ts:98](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/mutations.ts#L98)
+
+___
+
+### IndexReflectionDocument
+
+• `Const` **IndexReflectionDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/mutations.ts:77](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/mutations.ts#L77)
+
+___
+
+### IndexedBeamFragmentDoc
+
+• `Const` **IndexedBeamFragmentDoc**: ``"\n    fragment IndexedBeamFragment on IndexBeamPayloadDocument {\n  beamID\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/mutations.ts:15](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/mutations.ts#L15)
+
+___
+
+### IndexedContentBlockFragmentDoc
+
+• `Const` **IndexedContentBlockFragmentDoc**: ``"\n    fragment IndexedContentBlockFragment on IndexContentBlockPayloadDocument {\n  blockID\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/mutations.ts:20](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/mutations.ts#L20)
+
+___
+
+### IndexedProfileFragmentDoc
+
+• `Const` **IndexedProfileFragmentDoc**: ``"\n    fragment IndexedProfileFragment on IndexProfilePayloadDocument {\n  profileID\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/mutations.ts:30](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/mutations.ts#L30)
+
+___
+
+### IndexedReflectFragmentDoc
+
+• `Const` **IndexedReflectFragmentDoc**: ``"\n    fragment IndexedReflectFragment on IndexReflectPayloadDocument {\n  reflectionID\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/mutations.ts:25](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/mutations.ts#L25)
+
+___
+
+### ReflectFragmentDoc
+
+• `Const` **ReflectFragmentDoc**: ``"\n    fragment ReflectFragment on AkashaReflect {\n  id\n  author {\n    id\n    isViewer\n  }\n  version\n  active\n  content {\n    label\n    propertyType\n    value\n  }\n  isReply\n  reflection\n  createdAt\n  beam {\n    id\n    author {\n      id\n      isViewer\n    }\n  }\n  nsfw\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:121](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L121)
+
+___
+
+### ReflectFragmentMFragmentDoc
+
+• `Const` **ReflectFragmentMFragmentDoc**: ``"\n    fragment ReflectFragmentM on AkashaReflect {\n  id\n  author {\n    id\n    isViewer\n  }\n  version\n  active\n  content {\n    label\n    propertyType\n    value\n  }\n  isReply\n  reflection\n  createdAt\n  beam {\n    id\n    author {\n      id\n      isViewer\n    }\n  }\n  nsfw\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:82](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L82)
+
+___
+
+### SetAppReleaseDocument
+
+• `Const` **SetAppReleaseDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:617](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L617)
+
+___
+
+### UpdateAkashaReflectDocument
+
+• `Const` **UpdateAkashaReflectDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:317](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L317)
+
+___
+
+### UpdateAppDocument
+
+• `Const` **UpdateAppDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:688](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L688)
+
+___
+
+### UpdateAppReleaseDocument
+
+• `Const` **UpdateAppReleaseDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:641](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L641)
+
+___
+
+### UpdateBeamDocument
+
+• `Const` **UpdateBeamDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:229](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L229)
+
+___
+
+### UpdateContentBlockDocument
+
+• `Const` **UpdateContentBlockDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:273](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L273)
+
+___
+
+### UpdateFollowDocument
+
+• `Const` **UpdateFollowDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:469](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L469)
+
+___
+
+### UpdateInterestsDocument
+
+• `Const` **UpdateInterestsDocument**: ``"\n    mutation UpdateInterests($i: UpdateAkashaProfileInterestsInput!) {\n  updateAkashaProfileInterests(input: $i) {\n    document {\n      topics {\n        value\n        labelType\n      }\n      did {\n        id\n      }\n      id\n    }\n    clientMutationId\n  }\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:412](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L412)
+
+___
+
+### UpdateProfileDocument
+
+• `Const` **UpdateProfileDocument**: `string`
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:361](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L361)
+
+___
+
+### UserProfileFragmentDoc
+
+• `Const` **UserProfileFragmentDoc**: ``"\n    fragment UserProfileFragment on AkashaProfile {\n  id\n  did {\n    id\n    isViewer\n  }\n  name\n  links {\n    href\n    label\n  }\n  background {\n    alternatives {\n      src\n      width\n      height\n    }\n    default {\n      src\n      width\n      height\n    }\n  }\n  description\n  avatar {\n    default {\n      src\n      width\n      height\n    }\n    alternatives {\n      src\n      width\n      height\n    }\n  }\n  followers(last: 5) {\n    pageInfo {\n      startCursor\n      endCursor\n      hasPreviousPage\n      hasNextPage\n    }\n  }\n  createdAt\n  nsfw\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:148](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L148)
+
+___
+
+### UserProfileFragmentMFragmentDoc
+
+• `Const` **UserProfileFragmentMFragmentDoc**: ``"\n    fragment UserProfileFragmentM on AkashaProfile {\n  id\n  did {\n    id\n    isViewer\n  }\n  name\n  links {\n    href\n    label\n  }\n  background {\n    alternatives {\n      src\n      width\n      height\n    }\n    default {\n      src\n      width\n      height\n    }\n  }\n  description\n  avatar {\n    default {\n      src\n      width\n      height\n    }\n    alternatives {\n      src\n      width\n      height\n    }\n  }\n  followers(last: 5) {\n    pageInfo {\n      startCursor\n      endCursor\n      hasPreviousPage\n      hasNextPage\n    }\n  }\n  createdAt\n  nsfw\n}\n    "``
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:109](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L109)
 
 ## Functions
 
-### checkPostActive
+### useCreateAppMutation
 
-▸ **checkPostActive**(`entry`): `boolean`
+▸ **useCreateAppMutation**<`TError`, `TContext`\>(`options?`): `UseMutationResult`<`CreateAppMutation`, `TError`, `Exact`<{ `i`: `SetAkashaAppInput`  }\>, `TContext`\>
 
-Utility to check whether a post is active or not
+#### Type parameters
 
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `entry` | `Pick`<`PostResponse`, ``"content"`` \| ``"delisted"``\> |
-
-#### Returns
-
-`boolean`
-
-#### Defined in
-
-[ui/hooks/src/utils/checkPostActive.ts:6](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/utils/checkPostActive.ts#L6)
-
-___
-
-### createPendingEntry
-
-▸ **createPendingEntry**(`author`, `entryPublishData`): `PendingEntry`
-
-Utility to create an entry yet to be published
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `author` | `IProfileData` |
-| `entryPublishData` | `IPublishData` & { `entryId?`: `string`  } |
-
-#### Returns
-
-`PendingEntry`
-
-#### Defined in
-
-[ui/hooks/src/utils/entry-utils.ts:268](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/utils/entry-utils.ts#L268)
-
-___
-
-### getLinkPreview
-
-▸ **getLinkPreview**(`url`): `Promise`<`LinkPreview`\>
-
-Utility to get preview of a specified url
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `url` | `string` |
-
-#### Returns
-
-`Promise`<`LinkPreview`\>
-
-#### Defined in
-
-[ui/hooks/src/utils/media-utils.ts:108](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/utils/media-utils.ts#L108)
-
-___
-
-### getMediaUrl
-
-▸ **getMediaUrl**(`hash?`): `Object`
-
- Utility to build gateway links to ipfs content
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `hash?` | `string` |
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `fallbackLink` | `string` |
-| `originLink` | `string` |
-| `pathLink` | `string` |
-
-#### Defined in
-
-[ui/hooks/src/utils/media-utils.ts:17](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/utils/media-utils.ts#L17)
-
-___
-
-### logError
-
-▸ **logError**(`name`, `errorInfo`): `void`
-
-Utility to log error to a specified logger
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `errorInfo` | `Error` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[ui/hooks/src/utils/error-handler.ts:21](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/utils/error-handler.ts#L21)
-
-___
-
-### mapEntry
-
-▸ **mapEntry**(`entry`, `logger?`): `IEntryData`
-
-Remap entry data coming from a response to the format expected by EntryCard
-content - from b64 to slate format
-profile images - append ipfs gateway
-entry images - append ipfs gateway
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `entry` | `PostResponse` \| `CommentResponse` |
-| `logger?` | `ILogger` |
-
-#### Returns
-
-`IEntryData`
-
-#### Defined in
-
-[ui/hooks/src/utils/entry-utils.ts:99](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/utils/entry-utils.ts#L99)
-
-___
-
-### switchToRequiredNetwork
-
-▸ **switchToRequiredNetwork**(): `Promise`<`void`\>
-
-An utility function to switch to required network - Metamask
-
-#### Returns
-
-`Promise`<`void`\>
-
-#### Defined in
-
-[ui/hooks/src/use-injected-provider.ts:37](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-injected-provider.ts#L37)
-
-___
-
-### uploadMediaToTextile
-
-▸ **uploadMediaToTextile**(`data`, `isUrl?`): `Promise`<{ `data`: { `originalSrc`: `string` ; `size`: { `height`: `number` ; `naturalHeight`: `number` ; `naturalWidth`: `number` ; `width`: `number`  } = res.size; `src`: { `fallbackUrl`: `string` = ipfsLinks.fallbackLink; `url`: `string` = ipfsLinks.originLink }  } ; `error`: `undefined` = error } \| { `data`: `undefined` ; `error`: `any` = error }\>
-
-Utility to upload media to textile bucket
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `data` | `File` | `undefined` |
-| `isUrl` | `boolean` | `false` |
-
-#### Returns
-
-`Promise`<{ `data`: { `originalSrc`: `string` ; `size`: { `height`: `number` ; `naturalHeight`: `number` ; `naturalWidth`: `number` ; `width`: `number`  } = res.size; `src`: { `fallbackUrl`: `string` = ipfsLinks.fallbackLink; `url`: `string` = ipfsLinks.originLink }  } ; `error`: `undefined` = error } \| { `data`: `undefined` ; `error`: `any` = error }\>
-
-#### Defined in
-
-[ui/hooks/src/utils/media-utils.ts:62](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/utils/media-utils.ts#L62)
-
-___
-
-### useAnalytics
-
-▸ **useAnalytics**(): [`UseAnalyticsActions`]
-
-Hook to handle analytics
-
-**`example`** useAnalytics hook
-```typescript
-const [analyticsActions] = useAnalytics();
-
-analyticsActions.trackEvent({
-category: 'some-category',
-action: 'some-action',
-});
-```
-
-#### Returns
-
-[`UseAnalyticsActions`]
-
-#### Defined in
-
-[ui/hooks/src/use-analytics.tsx:44](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-analytics.tsx#L44)
-
-___
-
-### useAppDescription
-
-▸ **useAppDescription**(`ipfsLink`): `UseQueryResult`<`string`, `Error`\>
-
-Hook to get detailed description for app
-
-**`example`** useAppDescription hook
-```typescript
-const detailedDescriptionQuery = useAppDescription('ipfslinktodescription');
-
-const description = detailedDescriptionQuery.data
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `ipfsLink` | `string` |
-
-#### Returns
-
-`UseQueryResult`<`string`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-app-description.ts:23](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-app-description.ts#L23)
-
-___
-
-### useCheckModerator
-
-▸ **useCheckModerator**(`loggedUser`): `UseQueryResult`<`number`, `Error`\>
-
-Hook to check if a user is a moderator
-
-**`example`** useCheckModerator hook
-```typescript
-const checkModeratorQuery = useCheckModerator('logged-in-user-eth-address');
-
-const isModerator = checkModeratorQuery.data === 200;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `loggedUser` | `string` |
-
-#### Returns
-
-`UseQueryResult`<`number`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-moderation.ts:207](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-moderation.ts#L207)
-
-___
-
-### useCheckNewNotifications
-
-▸ **useCheckNewNotifications**(`loggedEthAddress`): `UseQueryResult`<`boolean`, `Error`\>
-
-Hook to check for new notifications
-
-**`example`** useCheckNewNotifications hook
-```typescript
-const checkNewNotificationsQuery = useCheckNewNotifications('logged-in-user-eth-address');
-
-const hasNewNotifications = checkNewNotificationsQuery.data;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `loggedEthAddress` | `string` |
-
-#### Returns
-
-`UseQueryResult`<`boolean`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-notifications.ts:127](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-notifications.ts#L127)
-
-___
-
-### useCheckSignup
-
-▸ **useCheckSignup**(`ethAddress`): `UseQueryResult`<`boolean`, `Error`\>
-
-Hook to check if a user is already registered
-
-**`example`** useCheckSignup hook
-```typescript
-const checkSignupQuery = useCheckSignup('0x42b35jk53ifq');
-// checkSignupQuery.data returns a boolean value which determines if one should proceed with signup process or not
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `ethAddress` | `string` |
-
-#### Returns
-
-`UseQueryResult`<`boolean`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-login.ts:379](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-login.ts#L379)
-
-___
-
-### useComment
-
-▸ **useComment**(`commentID`, `enabler?`): `UseQueryResult`<`CommentResponse`, `Error`\>
-
-Hook for fetching data for a specific comment
-
-**`example`** useComment hook
-```typescript
-const itemType = 'COMMENT';
-const commentQuery = useComment('some-comment-id', true);
-
-const itemData = React.useMemo(() => {
-if (itemType === 'COMMENT' && commentQuery.isSuccess) {
-// mapEntry is a utility function that transforms the comment/post data into required format.
-return mapEntry(commentQuery.data);
-}
-}, [itemType, commentQuery.data, commentQuery.isSuccess]);
-```
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `commentID` | `string` | `undefined` |
-| `enabler` | `boolean` | `true` |
-
-#### Returns
-
-`UseQueryResult`<`CommentResponse`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-comments.ts:116](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-comments.ts#L116)
-
-___
-
-### useConnectProvider
-
-▸ **useConnectProvider**(`provider`): `UseQueryResult`<`boolean`, `unknown`\>
-
-Hook to connect with one of the supported providers
-
-**`example`** useConnectProvider hook
-```typescript
-const connectProviderQuery = useConnectProvider('selectedProvider');
-
-// can be used as enabler for useNetworkState hook; so this check works only if provider has been connected.
-const networkStateQuery = useNetworkState(connectProviderQuery.data);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `provider` | `EthProviders` |
-
-#### Returns
-
-`UseQueryResult`<`boolean`, `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/use-injected-provider.ts:78](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-injected-provider.ts#L78)
-
-___
-
-### useCreateComment
-
-▸ **useCreateComment**(): `UseMutationResult`<`string`, `unknown`, `IPublishData` & { `postID`: `string`  }, { `entryId`: `string` = pendingID; `optimisticComment`: `IPublishData` & { `postID`: `string`  }  }\>
-
-Hook for creating a new comment
-
-**`example`** useCreateComment hook
-```typescript
-const createCommentQuery = useCreateComment('some-comment-id');
-const newCommentData = { textContent: 'some text content', author: 'comment author', pubKey: 'comment-author-pubkey' }
-
-createCommentQuery.mutate({ ...newCommentData , postID: 'some-post-id' });
-```
-
-#### Returns
-
-`UseMutationResult`<`string`, `unknown`, `IPublishData` & { `postID`: `string`  }, { `entryId`: `string` = pendingID; `optimisticComment`: `IPublishData` & { `postID`: `string`  }  }\>
-
-#### Defined in
-
-[ui/hooks/src/use-comments.ts:207](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-comments.ts#L207)
-
-___
-
-### useCreatePost
-
-▸ **useCreatePost**(): `UseMutationResult`<`string`, `unknown`, `IPublishData`, { `entryId`: `string` = pendingID; `optimisticEntry`: `IPublishData` & { `isPublishing`: `boolean` = true }  }\>
-
-Hook to create a new post
-pass the publish data from the editor to the mutate function
-
-**`example`** useCreatePost hook
-```typescript
-const publishPostQuery = useCreatePost();
-
-publishPostQuery.mutate({ pubKey: 'author-public-key', ...});
-```
-
-#### Returns
-
-`UseMutationResult`<`string`, `unknown`, `IPublishData`, { `entryId`: `string` = pendingID; `optimisticEntry`: `IPublishData` & { `isPublishing`: `boolean` = true }  }\>
-
-#### Defined in
-
-[ui/hooks/src/use-posts.ts:416](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-posts.ts#L416)
-
-___
-
-### useCurrentNetwork
-
-▸ **useCurrentNetwork**(`enabler?`): `UseQueryResult`<`string`, `unknown`\>
-
-Hook to check the user's current web3 network
-
-**`example`** useCurrentNetwork hook
-```typescript
-const currentNetworkQuery = useCurrentNetwork(true);
-
-const network = currentNetworkQuery.data;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `enabler?` | `boolean` |
-
-#### Returns
-
-`UseQueryResult`<`string`, `unknown`\>
-
-network name
-
-#### Defined in
-
-[ui/hooks/src/use-network-state.ts:53](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-network-state.ts#L53)
-
-___
-
-### useDeleteBookmark
-
-▸ **useDeleteBookmark**(): `UseMutationResult`<{ `data`: `string`[]  }, `unknown`, `string`, { `prevBmks`: { `entryId`: `string` ; `type`: `EntityTypes`  }[]  }\>
-
-Hook used to delete a bookmark
-
-**`example`** useDeleteBookmark hook
-```typescript
-const deleteBookmarkQuery = useDeleteBookmark();
-
-deleteBookmarkQuery.mutate('dbkjjouyahljfe');
-```
-
-#### Returns
-
-`UseMutationResult`<{ `data`: `string`[]  }, `unknown`, `string`, { `prevBmks`: { `entryId`: `string` ; `type`: `EntityTypes`  }[]  }\>
-
-#### Defined in
-
-[ui/hooks/src/use-bookmarks.ts:111](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-bookmarks.ts#L111)
-
-___
-
-### useDeleteComment
-
-▸ **useDeleteComment**(`commentID`): `UseMutationResult`<``true``, `unknown`, `string`, { `previousComment`: `CommentResponse`  }\>
-
-Hook for deleting a specific comment
-
-**`example`** useDeleteComment hook
-```typescript
-const deleteCommentQuery = useDeleteComment('some-comment-id');
-
-deleteCommentQuery.mutate('some-comment-id');
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `commentID` | `string` |
-
-#### Returns
-
-`UseMutationResult`<``true``, `unknown`, `string`, { `previousComment`: `CommentResponse`  }\>
-
-#### Defined in
-
-[ui/hooks/src/use-comments.ts:147](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-comments.ts#L147)
-
-___
-
-### useDeletePost
-
-▸ **useDeletePost**(`postID`): `UseMutationResult`<{ `data`: { `removePost`: `boolean`  }  }, `unknown`, `string`, { `previousPost`: `Post_Response`  }\>
-
-Hook to delete a post
-
-**`example`** useDeletePost hook
-```typescript
-const deletePostQuery = useDeletePost('some-post-id');
-
-deletePostQuery.mutate('some-post-id');
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `postID` | `string` |
-
-#### Returns
-
-`UseMutationResult`<{ `data`: { `removePost`: `boolean`  }  }, `unknown`, `string`, { `previousPost`: `Post_Response`  }\>
-
-#### Defined in
-
-[ui/hooks/src/use-posts.ts:350](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-posts.ts#L350)
-
-___
-
-### useEditComment
-
-▸ **useEditComment**(`commentID`, `hasCommentData`): `UseMutationResult`<`void` \| { `data`: { `editComment`: `boolean`  }  }, `unknown`, `IPublishData` & { `postID`: `string`  }, { `comment`: `IPublishData` & { `postID`: `string`  }  }\>
-
-Hook for editing a comment
-
-**`example`** useEditComment hook
-```typescript
-const editCommentQuery = useEditComment('some-comment-id', true);
-const editedCommentData = { textContent: 'some text content', author: 'comment author', pubKey: 'comment-author-pubkey' }
-
-editCommentQuery.mutate({ ...editedCommentData, postID: 'some-post-id' });
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `commentID` | `string` |
-| `hasCommentData` | `boolean` |
-
-#### Returns
-
-`UseMutationResult`<`void` \| { `data`: { `editComment`: `boolean`  }  }, `unknown`, `IPublishData` & { `postID`: `string`  }, { `comment`: `IPublishData` & { `postID`: `string`  }  }\>
-
-#### Defined in
-
-[ui/hooks/src/use-comments.ts:259](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-comments.ts#L259)
-
-___
-
-### useEditPost
-
-▸ **useEditPost**(): `UseMutationResult`<`boolean`, `Error`, `IPublishData` & { `entryID`: `string`  }, { `editedPost`: `IPublishData` & { `entryID`: `string`  }  }\>
-
-Hook to edit a post
-pass the edited post data to the mutate function
-
-**`example`** useEditPost hook
-```typescript
-const editPostQuery = useEditPost();
-
-editPostQuery.mutate({ entryID: 'some-entry-id', ...});
-```
-
-#### Returns
-
-`UseMutationResult`<`boolean`, `Error`, `IPublishData` & { `entryID`: `string`  }, { `editedPost`: `IPublishData` & { `entryID`: `string`  }  }\>
-
-#### Defined in
-
-[ui/hooks/src/use-posts.ts:470](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-posts.ts#L470)
-
-___
-
-### useEnsByAddress
-
-▸ **useEnsByAddress**(`ethAddress`): `UseQueryResult`<`string`, `Error`\>
-
-Hook to resolve an ethereum address to an ENS name
-
-**`example`** useEnsByAddress hook
-```typescript
-const ensByAddressQuery = useEnsByAddress('logged-in-user-eth-address');
-
-// do something with the returned status of the query
-const querySuccess =  ensByAddressQuery.isSuccess
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `ethAddress` | `string` |
-
-#### Returns
-
-`UseQueryResult`<`string`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-username.ts:241](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-username.ts#L241)
-
-___
-
-### useEnsRegistration
-
-▸ **useEnsRegistration**(`pubKey?`): `UseMutationResult`<{ `makeDefaultProvider`: `string`  }, `Error`, { `userName`: `string`  }, { `currentProfile`: `IProfileData`  }\>
-
-Hook to register a new ENS name.
-Pass as payload, the username to the mutate function
-
-**`example`** useEnsRegistration hook
-```typescript
-const registerEnsQuery = useEnsRegistration('logged-in-user-pubkey');
-
-// do something with the returned status of the query
-React.useEffect(()=> {
-if (registerEnsQuery.status === 'success') {
-// perform an action
-}
-}, [registerEnsQuery])
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pubKey?` | `string` |
-
-#### Returns
-
-`UseMutationResult`<{ `makeDefaultProvider`: `string`  }, `Error`, { `userName`: `string`  }, { `currentProfile`: `IProfileData`  }\>
-
-#### Defined in
-
-[ui/hooks/src/use-username.ts:162](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-username.ts#L162)
-
-___
-
-### useEntryNavigation
-
-▸ **useEntryNavigation**(`navigateFn?`, `currentPostId?`): (`navigationDetails`: `IContentClickDetails`, `itemType`: `EntityTypes`) => `void`
-
-Hook to navigation to entry's page
-
-**`example`** useEntryNavigation hook
-```typescript
-// navigateFn handles the actual navigation
-const handleEntryNavigate = useEntryNavigation(navigateTo, 'current-post-id');
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `navigateFn?` | (`args`: `NavigateToParams`) => `void` |
-| `currentPostId?` | `string` |
-
-#### Returns
-
-`fn`
-
-▸ (`navigationDetails`, `itemType`): `void`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `navigationDetails` | `IContentClickDetails` |
-| `itemType` | `EntityTypes` |
-
-##### Returns
-
-`void`
-
-#### Defined in
-
-[ui/hooks/src/use-navigation.ts:17](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-navigation.ts#L17)
-
-___
-
-### useFetchNotifications
-
-▸ **useFetchNotifications**(`loggedEthAddress`): `UseQueryResult`<`any`[], `Error`\>
-
-Hook to get a user's notifications
-
-**`example`** useFetchNotifications hook
-```typescript
-const fetchNotificationsQuery = useFetchNotifications('logged-in-user-eth-address');
-
-const notifications = fetchNotificationsQuery.data;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `loggedEthAddress` | `string` |
-
-#### Returns
-
-`UseQueryResult`<`any`[], `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-notifications.ts:57](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-notifications.ts#L57)
-
-___
-
-### useGetAllInstalledApps
-
-▸ **useGetAllInstalledApps**(`enabler?`): `UseQueryResult`<`any`, `Error`\>
-
-Hook to get all the user's installed apps
-
-**`example`** useGetAllInstalledApps hook
-```typescript
-const installedAppsQuery = useGetAllInstalledApps(true);
-
-const installedApps = installedAppsQuery.data
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `enabler?` | `boolean` |
-
-#### Returns
-
-`UseQueryResult`<`any`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-app-settings.ts:47](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-app-settings.ts#L47)
-
-___
-
-### useGetAllIntegrationReleaseIds
-
-▸ **useGetAllIntegrationReleaseIds**(`integrationName`, `offset?`): `UseQueryResult`<{ `nextIndex`: `any` = data.next; `releaseIds`: `any`  }, `Error`\>
-
-Hook to get all the release ids for an integration
-
-**`example`** useGetAllIntegrationReleaseIds hook
-```typescript
-const releaseIdsQuery = useGetAllIntegrationReleaseIds('awesome integration');
-
-const releaseIds = releaseIdsQuery.data?.releaseIds
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `integrationName` | `string` |
-| `offset?` | `number` |
-
-#### Returns
-
-`UseQueryResult`<{ `nextIndex`: `any` = data.next; `releaseIds`: `any`  }, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-integration-registry.ts:178](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-integration-registry.ts#L178)
-
-___
-
-### useGetAllIntegrationsIds
-
-▸ **useGetAllIntegrationsIds**(`enabler?`, `offset?`): `UseQueryResult`<`any`, `Error`\>
-
-Hook to get all the published integrations ids
-
-**`example`** useGetAllIntegrationsIds hook
-```typescript
-const availableIntegrationsQuery = useGetAllIntegrationsIds(true);
-
-const availableIntegrations = availableIntegrationsQuery.data
-```
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `enabler` | `boolean` | `true` |
-| `offset?` | `number` | `undefined` |
-
-#### Returns
-
-`UseQueryResult`<`any`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-integration-registry.ts:152](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-integration-registry.ts#L152)
-
-___
-
-### useGetAppConfig
-
-▸ **useGetAppConfig**(`appName`, `enabler?`): `UseQueryResult`<`any`, `Error`\>
-
-Hook to get configuration object for an installed app
-
-**`example`** useGetAppConfig hook
-```typescript
-const appConfigQuery = useGetAppConfig('app name', true);
-
-const appConfig = appConfigQuery.data
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `appName` | `string` |
-| `enabler?` | `boolean` |
-
-#### Returns
-
-`UseQueryResult`<`any`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-app-settings.ts:24](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-app-settings.ts#L24)
-
-___
-
-### useGetBookmarks
-
-▸ **useGetBookmarks**(`loggedEthAddress`, `enabler?`): `UseQueryResult`<`Record`<`string`, `unknown`\>[], `unknown`\>
-
-Hook for gettting a user's saved posts and comments
-
-**`example`** useGetBookmarks hook
-```typescript
-const getBookmarksQuery = useGetBookmarks('0x243kb4bret');
-
-const bookmarks = getBookmarksQuery.data;
-```
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `loggedEthAddress` | `string` | `undefined` |
-| `enabler` | `boolean` | `true` |
-
-#### Returns
-
-`UseQueryResult`<`Record`<`string`, `unknown`\>[], `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/use-bookmarks.ts:20](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-bookmarks.ts#L20)
-
-___
-
-### useGetCount
-
-▸ **useGetCount**(): `UseQueryResult`<{ `delisted`: `number` = 0; `kept`: `number` = 0; `pending`: `number` = 0 }, `Error`\>
-
-Hook to get moderation counters
-
-**`example`** useGetCount hook
-```typescript
-const getCountQuery = useGetCount();
-
-const count = getCountQuery.data || { delisted: 0, kept: 0, pending: 0 };
-```
-
-#### Returns
-
-`UseQueryResult`<{ `delisted`: `number` = 0; `kept`: `number` = 0; `pending`: `number` = 0 }, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-moderation.ts:224](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-moderation.ts#L224)
-
-___
-
-### useGetEntryAuthor
-
-▸ **useGetEntryAuthor**(`entryId`): `UseQueryResult`<`IProfileData` \| { `_id`: `string` ; `avatar`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `coverImage`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `description`: `string` ; `ethAddress`: `string` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string`  }, `Error`\>
-
-Hook to get an entry author's profile data
-
-**`example`** useGetEntryAuthor hook
-```typescript
-const getEntryAuthorQuery = useGetEntryAuthor( 'some-entry-id');
-
-const profile = getEntryAuthorQuery.data;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `entryId` | `string` |
-
-#### Returns
-
-`UseQueryResult`<`IProfileData` \| { `_id`: `string` ; `avatar`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `coverImage`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `description`: `string` ; `ethAddress`: `string` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string`  }, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-profile.ts:167](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-profile.ts#L167)
-
-___
-
-### useGetFlags
-
-▸ **useGetFlags**(`entryId`): `UseQueryResult`<[`EntryReport`](interfaces/EntryReport.md)[], `Error`\>
-
-Hook to get report flags for a specific entry
-
-**`example`** useGetFlags hook
-```typescript
-const getFlagsQuery = useGetFlags('some-entry-id');
-
-const flagEntries = getFlagsQuery.data;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `entryId` | `string` |
-
-#### Returns
-
-`UseQueryResult`<[`EntryReport`](interfaces/EntryReport.md)[], `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-moderation.ts:240](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-moderation.ts#L240)
-
-___
-
-### useGetIntegrationId
-
-▸ **useGetIntegrationId**(`integrationName`): `UseQueryResult`<{ `id`: `string` = data }, `Error`\>
-
-Hook to get integration id by its name
-
-**`example`** useGetIntegrationId hook
-```typescript
-const integrationIdQuery = useGetIntegrationId('awesome integration');
-
-const integrationId = integrationIdQuery.data;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `integrationName` | `string` |
-
-#### Returns
-
-`UseQueryResult`<{ `id`: `string` = data }, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-integration-registry.ts:92](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-integration-registry.ts#L92)
-
-___
-
-### useGetIntegrationInfo
-
-▸ **useGetIntegrationInfo**(`integrationId`): `UseQueryResult`<`IntegrationInfo`, `Error`\>
-
-Hook to get integration package info
-
-**`example`** useGetIntegrationInfo hook
-```typescript
-const integrationInfoQuery = useGetIntegrationInfo('some-integration-id');
-
-const integrationInfo = integrationInfoQuery.data;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `integrationId` | `string` |
-
-#### Returns
-
-`UseQueryResult`<`IntegrationInfo`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-integration-registry.ts:24](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-integration-registry.ts#L24)
-
-___
-
-### useGetIntegrationReleaseId
-
-▸ **useGetIntegrationReleaseId**(`integrationName`, `version`, `enabler?`): `UseQueryResult`<{ `id`: `string` = data }, `Error`\>
-
-Hook to get integration release id by its name and version
-
-**`example`** useGetIntegrationReleaseId hook
-```typescript
-const integrationReleaseIdQuery = useGetIntegrationReleaseId('awesome integration', '0.1.1', true);
-
-const integrationReleaseId = integrationReleaseIdQuery.data;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `integrationName` | `string` |
-| `version` | `string` |
-| `enabler?` | `boolean` |
-
-#### Returns
-
-`UseQueryResult`<{ `id`: `string` = data }, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-integration-registry.ts:114](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-integration-registry.ts#L114)
-
-___
-
-### useGetIntegrationReleaseInfo
-
-▸ **useGetIntegrationReleaseInfo**(`releaseId`): `UseQueryResult`<`ReleaseInfo`, `Error`\>
-
-Hook to get integration release info
-
-**`example`** useGetIntegrationReleaseInfo hook
-```typescript
-const latestReleaseInfoQuery = useGetIntegrationReleaseInfo('some-release-id');
-
-const latestReleaseInfo = latestReleaseInfoQuery.data
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `releaseId` | `string` |
-
-#### Returns
-
-`UseQueryResult`<`ReleaseInfo`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-integration-registry.ts:205](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-integration-registry.ts#L205)
-
-___
-
-### useGetIntegrationsCount
-
-▸ **useGetIntegrationsCount**(): `UseQueryResult`<{ `totalCount`: `any` = data.totalCount }, `Error`\>
-
-Hook to get the number of published integrations
-
-**`example`** useGetIntegrationsCount hook
-```typescript
-const integrationsCountQuery = useGetIntegrationsCount();
-
-const integrationCount = integrationsCountQuery.data;
-```
-
-#### Returns
-
-`UseQueryResult`<{ `totalCount`: `any` = data.totalCount }, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-integration-registry.ts:70](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-integration-registry.ts#L70)
-
-___
-
-### useGetIntegrationsInfo
-
-▸ **useGetIntegrationsInfo**(`opt`): `UseQueryResult`<{ `getIntegrationInfo`: `IntegrationInfo`[]  }, `Error`\>
-
-Hook to get package info for multiple integrations by name or id
-
-**`example`** useGetIntegrationsInfo hook
-```typescript
-const integrationsInfoQuery = useGetIntegrationsInfo([{ name: 'some-integration-name-1' }, { name: 'some-integration-name-2' }]);
-
-const integrationsInfo = integrationsInfoQuery.data;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `opt` | { `id?`: `string` ; `name?`: `string`  }[] |
-
-#### Returns
-
-`UseQueryResult`<{ `getIntegrationInfo`: `IntegrationInfo`[]  }, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-integration-registry.ts:47](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-integration-registry.ts#L47)
-
-___
-
-### useGetIntegrationsReleaseInfo
-
-▸ **useGetIntegrationsReleaseInfo**(`releaseIds`): `UseQueryResult`<`any`[], `Error`\>
-
-Hook to get multiple integrations release info
-
-**`example`** useGetIntegrationsReleaseInfo hook
-```typescript
-const releaseInfoQuery = useGetIntegrationsReleaseInfo(['some-release-id-1', 'some-release-id-2', 'some-release-id-3']);
-
-const releasesInfo = releaseInfoQuery.data
-```
-example mock data for an integration to test locally
-```typescript
-if (!res.data.getLatestRelease.some(rel => rel.name === '@akashaorg/app-messaging')) {
- res.data.getLatestRelease.push({
-    id: '0x82d31f280645cb2f74a47115a36f1e1b4370eda1812cf4d38d9107996bb60560',
-    name: '@akashaorg/app-messaging',
-    version: 'v0.1.0',
-    integrationType: 0,
-    sources: [],
-    integrationID: '0x0f7b806cb610e298f4108f77c5454edafdd48a213ac6df2466816442b2814061',
-    author: '0xADE0510E72f60789DD17aAFc28629Ee4D9C0Ba72',
-   enabled: true,
-    links: {
-      publicRepository: 'https://github.com/AKASHAorg/akasha-core#readme',
-      documentation: '',
-      detailedDescription: '',
-    },
-    manifestData: {
-      mainFile: 'index.js',
-      license: 'AGPL-3.0',
-      keywords: [],
-      description:
-        'The AKASHA team builds this application so you can privately message friends.',
-      displayName: 'Messages',
-    },
-    createdAt: null,
-  });
-}
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `releaseIds` | `string`[] |
-
-#### Returns
-
-`UseQueryResult`<`any`[], `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-integration-registry.ts:262](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-integration-registry.ts#L262)
-
-___
-
-### useGetLatestReleaseInfo
-
-▸ **useGetLatestReleaseInfo**(`opt`): `UseQueryResult`<{ `getLatestRelease`: `ReleaseInfo`[]  }, `Error`\>
-
-Hook to get latest release info for integrations
-
-**`example`** useGetLatestReleaseInfo hook
-```typescript
-const latestReleaseInfoQuery = useGetLatestReleaseInfo([{ id: 'some-release-id-1' }, { id: 'some-release-id-2' }, { id: 'some-release-id-3' }]);
-
-const latestReleasesInfo = React.useMemo(() => {
-return latestReleaseInfoQuery.data?.getLatestRelease;
-}, [latestReleaseInfoQuery.data?.getLatestRelease]);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `opt` | { `id?`: `string` ; `name?`: `string`  }[] |
-
-#### Returns
-
-`UseQueryResult`<{ `getLatestRelease`: `ReleaseInfo`[]  }, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-integration-registry.ts:288](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-integration-registry.ts#L288)
-
-___
-
-### useGetLogin
-
-▸ **useGetLogin**(`onError?`): `UseQueryResult`<[`LoginState`](interfaces/LoginState.md), `unknown`\>
-
-Hook for retrieving the current authentication state of the user
-
-**`example`** useGetLogin hook
-```typescript
-const loginQuery = useGetLogin();
-// can be used with useGetProfile hook to get the logged profile data
-const profileDataQuery = useGetProfile(loginQuery.data?.pubKey);
-
-const loggedProfileData = profileDataQuery.data;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `onError?` | (`error`: `Error`) => `void` |
-
-#### Returns
-
-`UseQueryResult`<[`LoginState`](interfaces/LoginState.md), `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/use-login.ts:76](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-login.ts#L76)
-
-___
-
-### useGetProfileByIdQuery
-
-▸ **useGetProfileByIdQuery**(`id`): `UseQueryResult`<[`Types.GetProfileByIdQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L145), `Error`\>
-
-Hook to get a user's profile data by his/her ID.
-
-**`example`** useGetProfileByIdQuery hook
-```typescript
-  const getProfileQuery = useGetProfileByIdQuery( { id: 'some-ID' },
-    {
-      select: data => {
-        if (data.node && 'profile' in data.node) {
-          return data.node;
-        }
-        return null;
-      },
-    },
-  );
-```
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `id` | `string` | `undefined` |
-
-#### Returns
-
-`UseQueryResult`<[`Types.GetProfileByIdQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L145), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:769](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L769)
-
-___
-
-### useInfiniteGetProfileByIdQuery
-
-▸ **useInfiniteGetProfileByIdQuery**(`id`): `UseInfiniteQueryResult`<[`Types.GetProfileByIdQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L145), `Error`\>
-
-Hook to get a user's profile data by his/her ID (supports infinite scrolling).
-
-**`example`** useInfiniteGetProfileByIdQuery hook
-```typescript
-  const getProfileQuery = useInfiniteGetProfileByIdQuery('id', { id: 'some-ID' },);
-
-  const profileData = React.useMemo(() => {
-  if (getProfileQuery.data) {
-  return getProfileQuery.data.pages;
-  }
-  return [];
-  }, [getProfileQuery.data]);
-```
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `id` | `string` | `undefined` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<[`Types.GetProfileByIdQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L145), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:779](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L779)
-
-___
-
-### useGetProfileByDidQuery
-
-▸ **useGetProfileByDidQuery**(`id`): `UseQueryResult`<[`Types.GetProfileByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L152), `Error`\>
-
-Hook to get a user's profile data by his/her DID.
-
-**`example`** useGetProfileByDidQuery hook
-```typescript
-  const getProfileQuery = useGetProfileByDidQuery(
-    { id: 'did:key:some-ID-sequence' },
-    {
-      select: data => {
-        if (data.node && 'profile' in data.node) {
-          return data.node;
-        }
-        return null;
-      },
-    },
-  );
-```
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `id` | `string` | `undefined` |
-
-#### Returns
-
-`UseQueryResult`<[`Types.GetProfileByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L152), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:811](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L811)
-
-___
-
-### useInfiniteGetProfileByDidQuery
-
-▸ **useInfiniteGetProfileByDidQuery**(`id`): `UseInfiniteQueryResult`<[`Types.GetProfileByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L152), `Error`\>
-
-Hook to get a user's profile data by his/her DID (supports infinite scrolling).
-
-**`example`** useInfiniteGetProfileByDidQuery hook
-```typescript
-  const getProfileQuery = useInfiniteGetProfileByDidQuery('id', { id: 'some-ID' },);
-
-  const profileData = React.useMemo(() => {
-  if (getProfileQuery.data) {
-  return getProfileQuery.data.pages;
-  }
-  return [];
-  }, [getProfileQuery.data]);
-```
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `id` | `string` | `undefined` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<[`Types.GetProfileByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L152), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:829](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L829)
-
-___
-
-### useGetProfilesQuery
-
-▸ **useGetProfilesQuery**(`before?`, `after?`, `first?`, `last?): `UseQueryResult`<[`Types.GetProfilesQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L162), `Error`\>
-
-Hook to get multiple users' profile data.
-
-**`example`** useGetProfilesQuery hook
-```typescript
-  const getProfilesQuery = useGetProfilesQuery(
-    { first: 50 },
-    {
-      select: data => data.profileIndex?.edges,
-    },
-  );
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `before?` | `string` |
-| `after?` | `string` |
-| `first?` | `number` |
-| `last?` | `number` |
-
-#### Returns
-
-`UseQueryResult`<[`Types.GetProfilesQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L162), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:866](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L866)
-
-___
-
-### useInfiniteGetProfilesQuery
-
-▸ **useInfiniteGetProfilesQuery**(`before?`, `after?`, `first?`, `last?`): `UseInfiniteQueryResult`<[`Types.GetProfilesQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L162), `Error`\>
-
-Hook to get multiple users' profile data (supports infinite scrolling).
-
-**`example`** useInfiniteGetProfilesQuery hook
-```typescript
-  // get the last 50 users' profile data
-  const getProfilesQuery = useInfiniteGetProfilesQuery('last', { last: 50 });
-
-  const profilesData = React.useMemo(() => {
-    if (getProfilesQuery.data) {
-      return getProfilesQuery.data.pages;
-    }
-    return [];
-  }, [getProfilesQuery.data]);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `before?` | `string` |
-| `after?` | `string` |
-| `first?` | `number` |
-| `last?` | `number` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<[`Types.GetProfilesQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L162), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:884](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L884)
-
-___
-
-### useGetInterestsQuery
-
-▸ **useGetInterestsQuery**(`id`): `UseQueryResult`<[`Types.GetInterestsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L172), `Error`\>
-
-Hook to get interest data.
-
-**`example`** useGetInterestsQuery hook
-```typescript
-  const getInterestsQuery = useGetInterestsQuery(
-    { first: 10 },
-    {
-      select: data => data.interestsIndex?.edges,
-    },
-  );
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `before?` | `string` |
-| `after?` | `string` |
-| `first?` | `number` |
-| `last?` | `number` |
-
-#### Returns
-
-`UseQueryResult`<[`Types.GetInterestsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L172), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:928](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L928)
-
-___
-
-### useInfiniteGetInterestsQuery
-
-▸ **useInfiniteGetInterestsQuery**(`before?`, `after?`,`first?`, `last?`): `UseInfiniteQueryResult`<[`Types.GetInterestsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L162), `Error`\>
-
-Hook to get interest data (supports infinite scrolling).
-
-**`example`** useInfiniteGetInterestsQuery hook
-```typescript
-  // get the last 50 interests
-  const getInterestsQuery = useInfiniteGetInterestsQuery('last', { last: 50 });
-
-  const interestsData = React.useMemo(() => {
-    if (getInterestsQuery.data) {
-      return getProfilesQuery.data.pages;
-    }
-    return [];
-  }, [getInterestsQuery.data]);
-
-  // load more items
-  const handleLoadMore = React.useCallback(() => {
-    if (!getInterestsQuery.isLoading && getInterestsQuery.hasNextPage) {
-    getInterestsQuery.fetchNextPage();
-    }
-  }, [getInterestsQuery]);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `before?` | `string` |
-| `after?` | `string` |
-| `first?` | `number` |
-| `last?` | `number` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<[`Types.GetInterestsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L162), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:946](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L946)
-
-___
-
-### useGetInterestsByDidQuery
-
-▸ **useGetInterestsByDidQuery**(`id`): `UseQueryResult`<[`Types.GetInterestsByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L179), `Error`\>
-
-Hook to get interest data by profile's DID.
-
-**`example`** useGetInterestsByDidQuery hook
-```typescript
-  const getInterestsQuery = useGetInterestsByDidQuery(
-    { id: 'did:key:some-key' },
-    {
-      select: data => {
-        if (data.node && 'interests' in data.node) {
-          return data.node.interests;
-        }
-        return null;
-      },
-    },
-  );
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-
-#### Returns
-
-`UseQueryResult`<[`Types.GetInterestsByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L179), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:985](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L985)
-
-___
-
-### useInfiniteGetInterestsByDidQuery
-
-▸ **useInfiniteGetInterestsByDidQuery**(`id`): `UseInfiniteQueryResult`<[`Types.GetInterestsByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L179), `Error`\>
-
-Hook to get interest data by profile's DID (supports infinite scrolling).
-
-**`example`** useInfiniteGetInterestsByDidQuery hook
-```typescript
-  const getInterestsByDidQuery = useInfiniteGetInterestsByDidQuery('id', {
-    id: 'did:key:some-key',
-  });
-
-  const interestData = React.useMemo(() => {
-    if (getInterestsByDidQuery.data) {
-      return getInterestsByDidQuery.data.pages;
-    }
-    return [];
-  }, [getInterestsByDidQuery.data]);
-
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<[`Types.GetInterestsByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L179), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:1003](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1003)
-
-___
-
-### useGetInterestsByIdQuery
-
-▸ **useGetInterestsByIdQuery**(`id`): `UseQueryResult`<[`Types.GetInterestsByIdQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L186), `Error`\>
-
-Hook to get interest data by profile's ID.
-
-**`example`** useGetInterestsByIdQuery hook
-```typescript
-  const getInterestsByIdQuery = useGetInterestsByIdQuery(
-    { id: 'some-key' },
-    {
-      select: data => {
-        if (data.node && 'interests' in data.node) {
-          return data.node.interests;
-        }
-        return null;
-      },
-    },
-  );
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-
-#### Returns
-
-`UseQueryResult`<[`Types.GetInterestsByIdQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L186), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:1039](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1039)
-
-___
-
-### useInfiniteGetInterestsByIdQuery
-
-▸ **useInfiniteGetInterestsByIdQuery**(`id`): `UseInfiniteQueryResult`<[`Types.GetInterestsByIdQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L186), `Error`\>
-
-Hook to get interest data by profile's ID (supports infinite scrolling).
-
-**`example`** useInfiniteGetInterestsByIdQuery hook
-```typescript
-  const getInterestsByIdQuery = useInfiniteGetInterestsByIdQuery(
-    'id',
-    { id: 'some-key' },
-  )
-
-  const InterestsByIdData  = React.useMemo(() => {
-  if (getInterestsByIdQuery.data) {
-  return getInterestsByIdQuery.data.pages;
-  }
-  return [];
-  }, [getInterestsByIdQuery.data]);
-
-  // load more
-  const handleLoadMore = React.useCallback(() => {
-  if (!getInterestsByIdQuery.isLoading && getInterestsByIdQuery.hasNextPage) {
-  getInterestsByIdQuery.fetchNextPage();
-  }
-  }, [getInterestsByIdQuery]);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<[`Types.GetInterestsByIdQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L186), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:1065](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1065)
-
-___
-
-### useGetFollowingListByDidQuery
-
-▸ **useGetFollowingListByDidQuery**(`id`, `before?`, `after?`, `first?`, `last?`): `UseQueryResult`<[`Types.GetFollowingListByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L197), `Error`\>
-
-Hook to get a list of people a profile (identified by its ID) is following.
-
-**`example`** useGetFollowingListByDidQuery hook
-```typescript
-   const getFollowingListBydQuery = useGetFollowingListByDidQuery(
-    { id: 'did:key:some-key' },
-    {
-      select: data => {
-        if (data.node && 'followList' in data.node) {
-          return data.node.followList.edges;
-        }
-        return null;
-      },
-    },
-  );
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-| `before?` | `string` |
-| `after?` | `string` |
-| `first?` | `number` |
-| `last?` | `number` |
-
-#### Returns
-
-`UseQueryResult`<[`Types.GetFollowingListByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L197), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:1110](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1110)
-
-___
-
-### useInfiniteGetFollowingListByDidQuery
-
-▸ **useInfiniteGetFollowingListByDidQuery**(`id`, `before?`, `after?`, `first?`, `last?`): `UseInfiniteQueryResult`<[`Types.GetFollowingListByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L186), `Error`\>
-
-Hook to get interest data by profile's ID (supports infinite scrolling).
-
-**`example`** useInfiniteGetFollowingListByDidQuery hook
-```typescript
-  const getFollowingListByDidQuery = useInfiniteGetFollowingListByDidQuery(
-    'id',
-    { id: 'did:key:some-did-key' },
-  )
-
-  const followingListData  = React.useMemo(() => {
-  if (getFollowingListByDidQuery.data) {
-  return getFollowingListByDidQuery.data.pages;
-  }
-  return [];
-  }, [getFollowingListByDidQuery.data]);
-
-  // load more
-  const handleLoadMore = React.useCallback(() => {
-  if (!getFollowingListByDidQuery.isLoading && getFollowingListByDidQuery.hasNextPage) {
-  getFollowingListByDidQuery.fetchNextPage();
-  }
-  }, [getFollowingListByDidQuery]);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-| `before?` | `string` |
-| `after?` | `string` |
-| `first?` | `number` |
-| `last?` | `number` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<[`Types.GetInterestsByIdQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L186), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:1128](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1128)
-
-___
-
-### useGetFollowersListByDidQuery
-
-▸ **useGetFollowersListByDidQuery**(`id`, `before?`, `after?`, `first?`, `last?`): `UseQueryResult`<[`Types.GetFollowersListByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L208), `Error`\>
-
-Hook to get a list of followers for a profile (identified by its DID).
-
-**`example`** useGetFollowersListByDidQuery hook
-```typescript
-   const getFollowerListBydQuery = useGetFollowersListByDidQuery(
-    { id: 'did:key:some-key' },
-    {
-      select: data => {
-        if (data.node && 'profile' in data.node) {
-          return data.node.profile.followers.edges;
-        }
-        return null;
-      },
-    },
-  );
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-| `before?` | `string` |
-| `after?` | `string` |
-| `first?` | `number` |
-| `last?` | `number` |
-
-#### Returns
-
-`UseQueryResult`<[`Types.GetFollowersListByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L208), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:1175](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1175)
-
-___
-
-### useInfiniteGetFollowersListByDidQuery
-
-▸ **useInfiniteGetFollowersListByDidQuery**(`id`, `before?`, `after?`, `first?`, `last?`): `UseInfiniteQueryResult`<[`Types.GetFollowersListByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L186), `Error`\>
-
-Hook to get interest data by profile's ID (supports infinite scrolling).
-
-**`example`** useInfiniteGetFollowersListByDidQuery hook
-```typescript
-  const getFollowerListByDidQuery = useInfiniteGetFollowersListByDidQuery(
-    'id',
-    { id: 'did:key:some-did-key' },
-  )
-
-  const followerListData  = React.useMemo(() => {
-  if (getFollowerListByDidQuery.data) {
-  return getFollowerListByDidQuery.data.pages;
-  }
-  return [];
-  }, [getFollowerListByDidQuery.data]);
-
-  // load more
-  const handleLoadMore = React.useCallback(() => {
-  if (!getFollowerListByDidQuery.isLoading && getFollowerListByDidQuery.hasNextPage) {
-  getFollowerListByDidQuery.fetchNextPage();
-  }
-  }, [getFollowerListByDidQuery]);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-| `before?` | `string` |
-| `after?` | `string` |
-| `first?` | `number` |
-| `last?` | `number` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<[`Types.GetFollowersListByDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L186), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:1193](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1193)
-
-___
-
-### useGetMyProfileQuery
-
-▸ **useGetMyProfileQuery**(): `UseQueryResult`<[`Types.GetMyProfileQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L213), `Error`\>
-
-Hook to get the currently logged-in profile.
-
-**`example`** useGetMyProfileQuery hook
-```typescript
-   const profileDataReq = useGetMyProfileQuery(null, {
-    select: resp => {
-      return resp.viewer?.profile;
-    },
-  });
-
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-
-#### Returns
-
-`UseQueryResult`<[`Types.GetMyProfileQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L213), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:1222](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1222)
-
-___
-
-### useInfiniteGetMyProfileQuery
-
-▸ **useInfiniteGetMyProfileQuery**(): `UseInfiniteQueryResult`<[`Types.GetMyProfileQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L213), `Error`\>
-
-Hook to get the currently logged-in profile (supports infinite scrolling).
-
-**`example`** useInfiniteGetMyProfileQuery hook
-```typescript
-  const profileDataReq = useInfiniteGetMyProfileQuery(0);
-
-  const profileData  = React.useMemo(() => {
-  if (profileDataReq.data) {
-  return profileDataReq.data.pages;
-  }
-  return [];
-  }, [profileDataReq.data]);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-
-#### Returns
-
-`UseInfiniteQueryResult`<[`Types.GetMyProfileQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L213), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:1240](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1240)
-
-___
-
-### useCreateProfileMutation
-
-▸ **useCreateProfileMutation**(`i`): `UseMutationResult`<[`Types.CreateProfileMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L220), `unknown`\>
-
-Hook to create a new profile.
-
-**`example`** useCreateProfileMutation hook
-```typescript
-   const createProfile = useCreateProfileMutation();
-
-    const profileData = {
-    content: {
-      avatar: {
-        default: {
-          height: 210,
-          src: 'http://some-url.com',
-          width: 210,
-        },
-      },
-      background: {
-        default: {
-          height: 210,
-          src: 'http://some-url.com',
-          width: 210,
-        }
-      },
-      createdAt: Date.now(),
-      description: 'A simple description/bio',
-      links: [
-        {
-          href: 'http://some-url.com',
-          label: 'Ethereum',
-        }
-      ],
-      name: 'Mr.Cat',
-    },
-  };
-
-    createProfile.mutate({
-      i: profileData,
-    });
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `i` | `CreateProfileInput` |
-
-#### Returns
-
-`UseMutationResult`<[`Types.CreateProfileMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L220), `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:1270](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1270)
-
-___
-
-### useUpdateProfileMutation
-
-▸ **useUpdateProfileMutation**(`i`): `UseMutationResult`<[`Types.UpdateProfileMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L227), `unknown`\>
-
-Hook to update data for a profile.
-
-**`example`** useUpdateProfileMutation hook
-```typescript
-   const updateProfile = useUpdateProfileMutation();
-
-    const profileData = {
-      id: 'profile-id',
-      content: {
-        avatar: {
-          default: {
-            height: 210,
-            src: 'http://some-url.com',
-            width: 210,
-          },
-        },
-        background: {
-          default: {
-            height: 210,
-            src: 'http://some-url.com',
-            width: 210,
-          }
-        },
-        createdAt: Date.now(),
-        description: 'A simple description/bio',
-        links: [
-          {
-            href: 'http://some-url.com',
-            label: 'Ethereum',
-          }
-        ],
-        name: 'Mr.Cat',
-      },
-    };
-
-    updateProfile.mutate({
-      i: profileData,
-    });
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `i` | `UpdateProfileInput` |
-
-#### Returns
-
-`UseMutationResult`<[`Types.UpdateProfileMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L227), `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:1292](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1292)
-
-___
-
-### useCreateInterestsMutation
-
-▸ **useCreateInterestsMutation**(`i`): `UseMutationResult`<[`Types.CreateInterestsMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L234), `unknown`\>
-
-Hook to create interest data for a profile.
-
-**`example`** useCreateInterestsMutation hook
-```typescript
-   const createInterests = useCreateInterestsMutation();
-
-    const interestsData = {
-      content: {
-        topics: [
-          {
-            labelType: 'example-label-type',
-            value: 'example label value',
-          }
-        ]
-      },
-    };
-
-    createInterests.mutate({
-      i: interestsData,
-    });
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `i` | `CreateInterestsInput` |
-
-#### Returns
-
-`UseMutationResult`<[`Types.CreateInterestsMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L234), `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:1321](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1321)
-
-___
-
-### useUpdateInterestsMutation
-
-▸ **useUpdateInterestsMutation**(`i`): `UseMutationResult`<[`Types.UpdateInterestsMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L241), `unknown`\>
-
-Hook to update interest data for a profile.
-
-**`example`** useUpdateInterestsMutation hook
-```typescript
-   const updateInterests = useUpdateInterestsMutation();
-
-    const interestsData = {
-      id: 'some-id',
-      content: {
-        topics: [
-          {
-            labelType: 'example-label-type',
-            value: 'example label value',
-          }
-        ]
-      },
-    };
-
-    updateInterests.mutate({
-      i: interestsData,
-    });
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `i` | `UpdateInterestsInput` |
-
-#### Returns
-
-`UseMutationResult`<[`Types.UpdateInterestsMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L241), `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:1350](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1350)
-
-___
-
-### useCreateFollowMutation
-
-▸ **useCreateFollowMutation**(`i`): `UseMutationResult`<[`Types.CreateFollowMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L248), `unknown`\>
-
-Hook to create follow data for a profile.
-
-**`example`** useCreateFollowMutation hook
-```typescript
-  const createFollow = useCreateFollowMutation();
-
-  const followData = {
-    content: {
-      isFollowing: true,
-      profileID: 'CeramicStreamID',
-    },
-  };
-
-  createFollow.mutate({
-    i: followData,
-  });
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `i` | `CreateFollowInput` |
-
-#### Returns
-
-`UseMutationResult`<[`Types.CreateFollowMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L248), `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:1378](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1378)
-
-___
-### useUpdateFollowMutation
-
-▸ **useUpdateFollowMutation**(`i`): `UseMutationResult`<[`Types.UpdateFollowMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L255), `unknown`\>
-
-Hook to update follow data for a profile.
-
-**`example`** useCreateFollowMutation hook
-```typescript
-  const updateFollow = useUpdateFollowMutation();
-
-  const followData = {
-    id: 'some-id',
-    content: {
-      isFollowing: true,
-      profileID: 'CeramicStreamID',
-    },
-  };
-
-  updateFollow.mutate({
-    i: followData,
-  });
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `i` | `UpdateFollowInput` |
-
-#### Returns
-
-`UseMutationResult`<[`Types.UpdateFollowMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L255), `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:1406](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L1406)
-
-___
-
-### useGetTag
-
-▸ **useGetTag**(`tagName`, `enabler?`): `UseQueryResult`<`Tag_Response`, `Error`\>
-
-Hook to get a specific tag by name
-
-**`example`** useGetTag hook
-```typescript
-const getTagQuery = useGetTag('awesometag', true);
-
-const tag =  getTagQuery.data
-```
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `tagName` | `string` | `undefined` |
-| `enabler` | `boolean` | `true` |
-
-#### Returns
-
-`UseQueryResult`<`Tag_Response`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-tag.ts:139](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-tag.ts#L139)
-
-___
-
-### useGlobalLogin
-
-▸ **useGlobalLogin**(`props`): `void`
-
-Hook that will fire an action when the sign in is called
-
-**`example`** useGlobalLogin hook
-```typescript
-useGlobalLogin({
-onLogin: payload => {},
-onLogout: () => {},
-waitForAuth: payload => {}.
-onReady: payload => {},
-onLoadFromCache: payload => {},
-onError: payload => {},
-})
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `props` | `UseGlobalLoginProps` |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[ui/hooks/src/use-global-login.ts:34](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-global-login.ts#L34)
-
-___
-
-### useInfiniteDelisted
-
-▸ **useInfiniteDelisted**(`limit`, `offset?`): `UseInfiniteQueryResult`<`ModeratedItemsReponse`, `Error`\>
-
-Hook to get delisted moderated items
-
-**`example`** useInfiniteDelisted hook
-```typescript
-const infiniteDelistedQuery = useInfiniteDelisted(10);
-
-const delistedItemPages = React.useMemo(() => {
-if (infiniteDelistedQuery.data) {
-return infiniteDelistedQuery.data.pages;
-}
-return [];
-}, [infiniteDelistedQuery.data]);
-
-// load more items
-const handleLoadMore = React.useCallback(() => {
-if (!infiniteDelistedQuery.isLoading && infiniteDelistedQuery.hasNextPage) {
-infiniteDelistedQuery.fetchNextPage();
-}
-}, [infiniteDelistedQuery]);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `limit` | `number` |
-| `offset?` | `string` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<`ModeratedItemsReponse`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-moderation.ts:383](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-moderation.ts#L383)
-
-___
-
-### useInfiniteKept
-
-▸ **useInfiniteKept**(`limit`, `offset?`): `UseInfiniteQueryResult`<`ModeratedItemsReponse`, `Error`\>
-
-Hook to get kept moderated items
-
-**`example`** useInfiniteKept hook
-```typescript
-const infiniteKeptQuery = useInfiniteKept(10);
-
-const keptItemPages = React.useMemo(() => {
-if (infiniteKeptQuery.data) {
-return infiniteKeptQuery.data.pages;
-}
-return [];
-}, [infiniteKeptQuery.data]);
-
-// load more items
-const handleLoadMore = React.useCallback(() => {
-if (!infiniteKeptQuery.isLoading && infiniteKeptQuery.hasNextPage) {
-infiniteKeptQuery.fetchNextPage();
-}
-}, [infiniteKeptQuery]);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `limit` | `number` |
-| `offset?` | `string` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<`ModeratedItemsReponse`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-moderation.ts:343](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-moderation.ts#L343)
-
-___
-
-### useInfiniteLog
-
-▸ **useInfiniteLog**(`limit`, `offset?`): `UseInfiniteQueryResult`<`LogItemsReponse`, `Error`\>
-
-Hook to get log of moderated items
-
-**`example`** useInfiniteLog hook
-```typescript
-const infiniteLogQuery = useInfiniteLog(10);
-
-const logItemPages = React.useMemo(() => {
-if (infiniteLogQuery.data) {
-return infiniteLogQuery.data.pages;
-}
-return [];
-}, [infiniteLogQuery.data]);
-
-// load more items
-const handleLoadMore = React.useCallback(() => {
-if (!infiniteLogQuery.isLoading && infiniteLogQuery.hasNextPage) {
-infiniteLogQuery.fetchNextPage();
-}
-}, [infiniteLogQuery]);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `limit` | `number` |
-| `offset?` | `string` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<`LogItemsReponse`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-moderation.ts:269](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-moderation.ts#L269)
-
-___
-
-### useInfinitePending
-
-▸ **useInfinitePending**(`limit`, `offset?`): `UseInfiniteQueryResult`<`PendingItemsReponse`, `Error`\>
-
-Hook to get pending moderation items
-
-**`example`** useInfinitePending hook
-```typescript
-const infinitePendingQuery = useInfinitePending(10);
-
-const pendingItemPages = React.useMemo(() => {
-if (infinitePendingQuery.data) {
-return infinitePendingQuery.data.pages;
-}
-return [];
-}, [infinitePendingQuery.data]);
-
-// load more items
-const handleLoadMore = React.useCallback(() => {
-if (!infinitePendingQuery.isLoading && infinitePendingQuery.hasNextPage) {
-infinitePendingQuery.fetchNextPage();
-}
-}, [infinitePendingQuery]);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `limit` | `number` |
-| `offset?` | `string` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<`PendingItemsReponse`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-moderation.ts:308](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-moderation.ts#L308)
-
-___
-
-### useGetBeamsQuery
-
-▸ **useGetBeamsQuery**(`after?`, `before?`, `first?`, `last?`): `UseQueryResult`<[`Types.GetBeamsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L13), `Error`\>
-
-Hook to get available beams.
-
-**`example`** useGetBeamsQuery hook
-```typescript
-// get the first 10 beams
-const beamsQuery = useGetBeamsQuery( { first: 10 }, { select: response => response.beamIndex });
-
-// get the last 10 beams
-const beamsQuery = useGetBeamsQuery( { last: 10 }, { select: response => response.beamIndex });
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `after?` | `string` |
-| `before?` | `string` |
-| `first?` | `number` |
-| `last?` | `number` |
-
-#### Returns
-
- `UseQueryResult`<[`Types.GetBeamsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L13), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:122](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L122)
-
-___
-
-### useInfiniteGetBeamsQuery
-
-▸ **useInfiniteGetBeamsQuery**(`after?`, `before?`, `first?`, `last?`): `UseInfiniteQueryResult`<[`Types.GetBeamsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L13), `Error`\>
-
-Hook to get available beams (supports infinite scrolling).
-
-**`example`** useInfiniteGetBeamsQuery hook
-```typescript
-// get the first 50 beams
-const beamsQuery = useInfiniteGetBeamsQuery('first', { first: 50 })
-
- const beams = React.useMemo(() => {
-    if (beamsQuery.data) {
-      return beamsQuery.data.pages;
-    }
-    return [];
-  }, [beamsQuery.data]);
-
-// load more if there's a next page
- const handleLoadMore = React.useCallback(() => {
-    if (!beamsQuery.isLoading && beamsQuery.hasNextPage) {
-      beamsQuery.fetchNextPage();
-    }
-  }, [beamsQuery]);
-
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `after?` | `string` |
-| `before?` | `string` |
-| `first?` | `number` |
-| `last?` | `number` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<[`Types.GetBeamsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L13), `Error`\>
-
-
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:140](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L140)
-
-___
-
-### useGetBeamsByAuthorDidQuery
-
-▸ **useGetBeamsByAuthorDidQuery**(`id`, `after?`, `before?`, `first?`, `last?`): `UseQueryResult`<{} | {`isViewer`: `boolean`; `beamList?`: { `edges?`: { `node?`:  { `id`: `string` ; `reflectionsCount`: `number` ; `active`: `boolean`; `tags?`: `<string | null> | null`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[]; } []; `pageInfo`: {...};}}}, `Error`\>
-
-Hook to get beams by DID.
-
-**`example`** useGetBeamsByAuthorDidQuery hook
-```typescript
-  const beams = useGetBeamsByAuthorDidQuery(
-    { id: 'did:key:z6MkhaXgBZDvotDkL5257faiztiGiC2QtKLGpbnnEGta2doK' },
-    { select: response => response.node },
-  );
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-| `after?` | `string` |
-| `before?` | `string` |
-| `first?` | `number` |
-| `last?` | `number` |
-
-#### Returns
-
-`UseQueryResult`<{} | {`isViewer`: `boolean`; `beamList?`: { `edges?`: { `node?`:  { `id`: `string` ; `reflectionsCount`: `number` ; `active`: `boolean`; `tags?`: `<string | null> | null`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[]; } []; `pageInfo`: {...};}}}, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:182](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L182)
-
-___
-
-### useInfiniteGetBeamsByAuthorDidQuery
-
-▸ **useInfiniteGetBeamsByAuthorDidQuery**(`id`, `after?`, `before?`, `first?`, `last?`): `UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
-
-Hook to get beams from an author identified by DID (supports infinite scrolling).
-
-**`example`** useInfiniteGetBeamsByAuthorDidQuery hook
-```typescript
- // get the last 30 beams by account with DID z6MkhaXgBZDvotDkL5257faiztiGiC2QtKLGpbnnEGta2doK
-  const beamsReq = useInfiniteGetBeamsByAuthorDidQuery('last', { last: 30, id: 'z6MkhaXgBZDvotDkL5257faiztiGiC2QtKLGpbnnEGta2doK' });
-
-  const fetchedBeams = React.useMemo(() => {
-    if (beamsReq.data) {
-      return beamsReq.data.pages;
-    }
-    return [];
-  }, [beamsReq.data]);
-
-  // load more if there's a next page
- const handleLoadMore = React.useCallback(() => {
-    if (!beamsReq.isLoading && beamsReq.hasNextPage) {
-      beamsReq.fetchNextPage();
-    }
-  }, [beamsReq]);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-| `after?` | `string` |
-| `before?` | `string` |
-| `first?` | `number` |
-| `last?` | `number` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:200](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L200)
-
-___
-
-### useGetBeamByIdQuery
-
-▸ **useGetBeamByIdQuery**(`id`): `UseQueryResult`<{ `node?`: {} | { `id`: `string` ; `reflectionsCount`: `number` ; `active`: `boolean`; `tags?`: `<string | null> | null`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[]; } []}, `Error`\>
-
-Hook to get a single beam by its ID.
-
-**`example`** useGetBeamByIdQuery hook
-```typescript
-    // get beam by ID 123456789
-    const beam = useGetBeamByIdQuery(
-    { id: '123456789' },
-    {
-      select: data => data.node,
-    },
-  );
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-
-#### Returns
-
-`UseQueryResult`<{ `node?`: {} | { `id`: `string` ; `reflectionsCount`: `number` ; `active`: `boolean`; `tags?`: `<string | null> | null`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[]; } []}, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:229](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L229)
-
-___
-
-### useInfiniteGetBeamByIdQuery
-
-▸ **useInfiniteGetBeamByIdQuery**(`id`): `UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
-
-Hook to get a beam by its ID (supports infinite scrolling).
-
-**`example`** useInfiniteGetBeamByIdQuery hook
-```typescript
-    // get beam by ID 123456789
-   const beamReq = useInfiniteGetBeamByIdQuery(
-    'id',
-    { id: '123456789' },
-  );
-
-  const beam = React.useMemo(() => {
-    if (beamReq.data) {
-      return beamReq.data.pages;
-    }
-    return [];
-  }, [beamReq.data]);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:247](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L247)
-
-___
-
-### useGetRebeamsFromBeamQuery
-
-▸ **useGetRebeamsFromBeamQuery**(`id`): `UseQueryResult`<{ `node?`: {} | {`rebeams`: {`edges?`: {`node?`: {`quotedBeam?`: {`id`: `string`; `reflectionsCount`: `number` ; `rebeamsCount`: `number` ;  `active`: `boolean`; `tags?`: `string`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[];}; `beam?`: { ...; };};}[];};}; }, `Error`\>
-
-Hook to get rebeams for a beam identified by its ID.
-
-**`example`** useGetRebeamsFromBeamQuery hook
-```typescript
-    // get rebeams for beam with ID 123456789
-    const rebeamReq = useGetRebeamsFromBeamQuery({ id: '123456789' }, { select: data => data.node });
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-
-#### Returns
-
-`UseQueryResult`<{ `node?`: {} | {`rebeams`: {`edges?`: {`node?`: {`quotedBeam?`: {`id`: `string`; `reflectionsCount`: `number` ; `rebeamsCount`: `number` ;  `active`: `boolean`; `tags?`: `string`[]; `version`: `any`; `author`: {`id`: `string`}; `content`: {`property`: `string`; `provider`: `string`; `value`: `string`}[];}; `beam?`: { ...; };};}[];};}; }, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:287](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L287)
-
-___
-
-### useInfiniteGetRebeamsFromBeamQuery
-
-▸ **useInfiniteGetRebeamsFromBeamQuery**(`id`): `UseInfiniteQueryResult`< `Types.GetRebeamsFromBeamQuery`, `Error`\>
-
-Hook to get rebeams for a beam identified by its ID (support infinite scrolling).
-
-**`example`** useInfiniteGetRebeamsFromBeamQuery hook
-```typescript
-    // get rebeams for beam with ID 123456789
-    const rebeamsReq = useInfiniteGetRebeamsFromBeamQuery(
-    'id',
-    { id: '123456789' },
-  );
-
-  const rebeams = React.useMemo(() => {
-    if (rebeamReq.data) {
-      return rebeamReq.data.pages;
-    }
-    return [];
-  }, [rebeamReq.data]);
-
-  // load more
-  const handleLoadMore = React.useCallback(() => {
-    if (!rebeamReq.isLoading && rebeamReq.hasNextPage) {
-      rebeamReq.fetchNextPage();
-    }
-  }, [rebeamReq]);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-
-#### Returns
-
-`UseInfiniteQueryResult`< `Types.GetRebeamsFromBeamQuery`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:305](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L305)
-
-___
-
-### useGetMentionsFromBeamQuery
-
-▸ **useGetMentionsFromBeamQuery**(`id`): `UseQueryResult`<`Types.GetMentionsFromBeamQuer`, `Error`\>
-
-Hook to get mentions for a beam identified by its ID.
-
-**`example`** useGetMentionsFromBeamQuery hook
-```typescript
-    // get mentions for beam with ID 123456789
-    const mentions = useGetMentionsFromBeamQuery(
-    { id: '123456789' },
-    { select: data => data.node }
-  );
-```
-
-#### Parameters
-
 | Name | Type |
 | :------ | :------ |
-| `id` | `string` |
-
-#### Returns
-
-`UseQueryResult`< `Types.GetMentionsFromBeamQuery`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:346](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L346)
-
-___
-
-### useInfiniteGetMentionsFromBeamQuery
-
-▸ **useInfiniteGetMentionsFromBeamQuery**(`id`): `UseInfiniteQueryResult`<`Types.GetMentionsFromBeamQuery`, `Error`\>
-
-Hook to get mentions for a beam identified by its ID (supports infinite scrolling).
-
-**`example`** useInfiniteGetMentionsFromBeamQuery hook
-```typescript
-    // get mentions for beam with ID 123456789
-    const mentionsReq = useGetMentionsFromBeamQuery(
-      'id',
-    { id: '123456789' },
-  );
-
-   const mentions = React.useMemo(() => {
-    if (mentionsReq.data) {
-      return mentionsReq.data.pages;
-    }
-    return [];
-  }, [mentionsReq.data]);
-
-  // load more
-  const handleLoadMore = React.useCallback(() => {
-    if (!mentionsReq.isLoading && mentionsReq.hasNextPage) {
-      mentionsReq.fetchNextPage();
-    }
-  }, [mentionsReq]);
-```
+| `TError` | `unknown` |
+| `TContext` | `unknown` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `id` | `string` |
+| `options?` | `UseMutationOptions`<`CreateAppMutation`, `TError`, `Exact`<{ `i`: `SetAkashaAppInput`  }\>, `TContext`\> |
 
 #### Returns
 
-`UseInfiniteQueryResult`< `Types.GetMentionsFromBeamQuery`, `Error`\>
+`UseMutationResult`<`CreateAppMutation`, `TError`, `Exact`<{ `i`: `SetAkashaAppInput`  }\>, `TContext`\>
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:364](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L364)
+[hooks/src/generated/composedb.ts:676](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L676)
 
 ___
 
 ### useCreateBeamMutation
 
-▸ **useCreateBeamMutation**(`i`): `UseMutationResult`<`Types.CreateBeamMutation`, `unknown`\>
+▸ **useCreateBeamMutation**<`TError`, `TContext`\>(`options?`): `UseMutationResult`<`CreateBeamMutation`, `TError`, `Exact`<{ `i`: `CreateAkashaBeamInput`  }\>, `TContext`\>
 
-Hook to create a new beam.
+#### Type parameters
 
-**`example`** useCreateBeamMutation hook
-```typescript
-    const createBeam = useCreateBeamMutation();
-
-    const beamData = {
-    content: {
-      active: true,
-      content: [
-        {
-          property: 'test',
-          provider: 'test',
-          value: 'test',
-        },
-      ],
-      createdAt: Date.now(),
-    },
-  };
-
-    createBeam.mutate({
-      i: beamData,
-    });
-```
+| Name | Type |
+| :------ | :------ |
+| `TError` | `unknown` |
+| `TContext` | `unknown` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `i` | `CreateBeamInput` |
+| `options?` | `UseMutationOptions`<`CreateBeamMutation`, `TError`, `Exact`<{ `i`: `CreateAkashaBeamInput`  }\>, `TContext`\> |
 
 #### Returns
 
-`UseMutationResult`<`Types.CreateBeamMutation`, `unknown`\>
+`UseMutationResult`<`CreateBeamMutation`, `TError`, `Exact`<{ `i`: `CreateAkashaBeamInput`  }\>, `TContext`\>
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:393](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L393)
-
-___
-### useUpdateBeamMutation
-
-▸ **useUpdateBeamMutation**(`i`): `UseMutationResult`<`Types.UpdateBeamMutation`, `unknown`\>
-
-Hook to update an existing beam.
-
-**`example`** useUpdateBeamMutation hook
-```typescript
-    const updateBeamMutation = useUpdateBeamMutation();
-
-    // updated data for beam ID 1234
-    const beamData = {
-    id: '1234',
-    content: {
-      active: true,
-      content: [
-        {
-          property: 'test',
-          provider: 'test',
-          value: 'test',
-        },
-      ],
-      createdAt: Date.now(),
-    },
-  };
-
-    // call the mutate function to update
-    updateBeamMutation.mutate({
-      i: beamData,
-    });
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `i` | `UpdateBeamInput` |
-
-#### Returns
-
-`UseMutationResult`<`Types.UpdateBeamMutation`, `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:415](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L415)
+[hooks/src/generated/composedb.ts:217](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L217)
 
 ___
 
-### useCreateRebeamMutation
+### useCreateContentBlockMutation
 
-▸ **useCreateRebeamMutation**(`i`): `UseMutationResult`<[`Types.CreateRebeamMutation`] (https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L66), `unknown`\>
+▸ **useCreateContentBlockMutation**<`TError`, `TContext`\>(`options?`): `UseMutationResult`<`CreateContentBlockMutation`, `TError`, `Exact`<{ `i`: `CreateAkashaContentBlockInput`  }\>, `TContext`\>
 
-Hook to create a rebeam for a beam.
+#### Type parameters
 
-**`example`** useCreateRebeamMutation hook
-```typescript
-    const createRebeamMutation = useCreateRebeamMutation();
-
-    const beamData = {
-    content: {
-      active: true,
-      beamID: 'CeramicStreamID',
-      quotedBeamID: 'CeramicStreamID',
-    },
-  };
-
-    createRebeamMutation.mutate({
-      i: beamData,
-    });
-```
+| Name | Type |
+| :------ | :------ |
+| `TError` | `unknown` |
+| `TContext` | `unknown` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `i` | `CreateRebeamInput` |
+| `options?` | `UseMutationOptions`<`CreateContentBlockMutation`, `TError`, `Exact`<{ `i`: `CreateAkashaContentBlockInput`  }\>, `TContext`\> |
 
 #### Returns
 
-`UseMutationResult`<[`Types.CreateRebeamMutation`] (https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L66), `unknown`\>
+`UseMutationResult`<`CreateContentBlockMutation`, `TError`, `Exact`<{ `i`: `CreateAkashaContentBlockInput`  }\>, `TContext`\>
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:443](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L443)
+[hooks/src/generated/composedb.ts:261](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L261)
 
 ___
 
-### useCreateBeamProfileMentionMutation
+### useCreateFollowMutation
 
-▸ **useCreateBeamProfileMentionMutation**(`i`): `UseMutationResult`<[`Types.CreateBeamProfileMentionMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L73), `unknown`\>
+▸ **useCreateFollowMutation**<`TError`, `TContext`\>(`options?`): `UseMutationResult`<`CreateFollowMutation`, `TError`, `Exact`<{ `i`: `SetAkashaFollowInput`  }\>, `TContext`\>
 
-Hook to create a mention for a profile from a beam.
+#### Type parameters
 
-**`example`** useCreateBeamProfileMentionMutation hook
-```typescript
-    const createBeamProfileMention = useCreateBeamProfileMentionMutation();
-
-    const mentionData = {
-      content: {
-        beamID: 'CeramicStreamID',
-        profileID: 'CeramicStreamID',
-      },
-    };
-
-    createBeamProfileMention.mutate({
-      i: mentionData,
-    });
-```
+| Name | Type |
+| :------ | :------ |
+| `TError` | `unknown` |
+| `TContext` | `unknown` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `i` | `CreateProfileMentionInput` |
+| `options?` | `UseMutationOptions`<`CreateFollowMutation`, `TError`, `Exact`<{ `i`: `SetAkashaFollowInput`  }\>, `TContext`\> |
 
 #### Returns
 
-`UseMutationResult`<[`Types.CreateBeamProfileMentionMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L73), `unknown`\>
+`UseMutationResult`<`CreateFollowMutation`, `TError`, `Exact`<{ `i`: `SetAkashaFollowInput`  }\>, `TContext`\>
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:470](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L470)
+[hooks/src/generated/composedb.ts:457](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L457)
 
 ___
 
-### useGetReflectionsFromBeamQuery
+### useCreateInterestsMutation
 
-▸ **useGetReflectionsFromBeamQuery**(`id`): `UseQueryResult`<[`Types.GetReflectionsFromBeamQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L86), `Error`\>
+▸ **useCreateInterestsMutation**<`TError`, `TContext`\>(`options?`): `UseMutationResult`<`CreateInterestsMutation`, `TError`, `Exact`<{ `i`: `CreateAkashaProfileInterestsInput`  }\>, `TContext`\>
 
-Hook to get reflections of a beam identified by its ID.
+#### Type parameters
 
-**`example`** useGetReflectionsFromBeamQuery hook
-```typescript
-    // get the reflecions for a beam with ID 123456789
-    const reflections = useGetReflectionsFromBeamQuery(
-    { id: '123456789' },
-    {
-      select: data => data.node,
-    },
-  );
-```
+| Name | Type |
+| :------ | :------ |
+| `TError` | `unknown` |
+| `TContext` | `unknown` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `id` | `string` |
-| `before?` | `string` |
-| `after?` | `string` |
-| `first?` | `number` |
-| `last?` | `number` |
-
+| `options?` | `UseMutationOptions`<`CreateInterestsMutation`, `TError`, `Exact`<{ `i`: `CreateAkashaProfileInterestsInput`  }\>, `TContext`\> |
 
 #### Returns
 
-`UseQueryResult`<[`Types.GetReflectionsFromBeamQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L86), `Error`\>
+`UseMutationResult`<`CreateInterestsMutation`, `TError`, `Exact`<{ `i`: `CreateAkashaProfileInterestsInput`  }\>, `TContext`\>
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:503](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L503)
+[hooks/src/generated/composedb.ts:400](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L400)
 
 ___
 
-### useInfiniteGetReflectionsFromBeamQuery
+### useCreateProfileMutation
 
-▸ **useInfiniteGetReflectionsFromBeamQuery**(`id`): `UseInfiniteQueryResult`<[`Types.GetReflectionsFromBeamQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L86), `Error`\>
+▸ **useCreateProfileMutation**<`TError`, `TContext`\>(`options?`): `UseMutationResult`<`CreateProfileMutation`, `TError`, `Exact`<{ `i`: `CreateAkashaProfileInput`  }\>, `TContext`\>
 
-Hook to get reflections of a beam identified by its ID (supports infinite scrolling).
+#### Type parameters
 
-**`example`** useInfiniteGetReflectionsFromBeamQuery hook
-```typescript
-    // get the reflecions for a beam with ID 123456789
-    const reflectionsReq = useInfiniteGetReflectionsFromBeamQuery(
-      'id',
-      { id: '123456789' },
-    );
-
-    const reflections = React.useMemo(() => {
-    if (reflectionsReq.data) {
-      return reflectionsReq.data.pages;
-    }
-    return [];
-    }, [reflectionsReq.data]);
-
-    // load more
-    const handleLoadMore = React.useCallback(() => {
-      if (!reflectionsReq.isLoading && reflectionsReq.hasNextPage) {
-        reflectionsReq.fetchNextPage();
-      }
-    }, [reflectionsReq]);
-
-```
+| Name | Type |
+| :------ | :------ |
+| `TError` | `unknown` |
+| `TContext` | `unknown` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `id` | `string` |
-| `before?` | `string` |
-| `after?` | `string` |
-| `first?` | `number` |
-| `last?` | `number` |
-
+| `options?` | `UseMutationOptions`<`CreateProfileMutation`, `TError`, `Exact`<{ `i`: `CreateAkashaProfileInput`  }\>, `TContext`\> |
 
 #### Returns
 
-`UseInfiniteQueryResult`<[`Types.GetReflectionsFromBeamQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L86), `Error`\>
+`UseMutationResult`<`CreateProfileMutation`, `TError`, `Exact`<{ `i`: `CreateAkashaProfileInput`  }\>, `TContext`\>
 
 #### Defined in
 
-[ui/hooks/src/generated/hooks-new.ts:521](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L521)
-
-___
-
-### useGetReflectionsByAuthorDidQuery
-
-▸ **useGetReflectionsByAuthorDidQuery**(`id`): `UseQueryResult`<[`Types.GetReflectionsByAuthorDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L88), `Error`\>
-
-Hook to get reflections belonging to a member identified by their DID.
-
-**`example`** useGetReflectionsByAuthorDidQuery hook
-```typescript
-    // get the reflecions of a member with DID did:key::123456789
-    const reflections = useGetReflectionsByAuthorDidQuery(
-    { id: 'did:key::123456789' },
-    {
-      select: data => data.node,
-    },
-  );
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-| `before?` | `string` |
-| `after?` | `string` |
-| `first?` | `number` |
-| `last?` | `number` |
-
-
-#### Returns
-
-`UseQueryResult`<[`Types.GetReflectionsByAuthorDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L88), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:563](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L563)
-
-___
-
-### useInfiniteGetReflectionsByAuthorDidQuery
-
-▸ **useInfiniteGetReflectionsByAuthorDidQuery**(`id`): `UseQueryResult`<[`Types.GetReflectionsByAuthorDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L88), `Error`\>
-
-Hook to get reflections belonging to a member identified by their DID (supports infinite scrolling).
-
-**`example`** useInfiniteGetReflectionsByAuthorDidQuery hook
-```typescript
-    // get the reflecions of a member with DID did:key::123456789
-    const reflectionsReq = useInfiniteGetReflectionsByAuthorDidQuery(
-      'id',
-    { id: 'did:key::123456789' },
-    );
-
-    const reflections = React.useMemo(() => {
-    if (reflectionsReq.data) {
-      return reflectionsReq.data.pages;
-    }
-    return [];
-    }, [reflectionsReq.data]);
-
-    // load more
-    const handleLoadMore = React.useCallback(() => {
-      if (!reflectionsReq.isLoading && reflectionsReq.hasNextPage) {
-        reflectionsReq.fetchNextPage();
-      }
-    }, [reflectionsReq]);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-| `before?` | `string` |
-| `after?` | `string` |
-| `first?` | `number` |
-| `last?` | `number` |
-
-
-#### Returns
-
-`UseQueryResult`<[`Types.GetReflectionsByAuthorDidQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L88), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:581](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L581)
-
-___
-
-### useGetReflectReflectionsQuery
-
-▸ **useGetReflectReflectionsQuery**(`id`): `UseQueryResult`<[`Types.GetReflectReflectionsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L108), `Error`\>
-
-Hook to get the reflects of a reflection.
-
-**`example`** useGetReflectReflectionsQuery hook
-```typescript
-    // get the reflect of a reflection with ID 123456789
-    const reflectionReflects = useGetReflectReflectionsQuery(
-    { id: '123456789' },
-     {
-      select: data => data.node,
-    },
-    );
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-| `before?` | `string` |
-| `after?` | `string` |
-| `first?` | `number` |
-| `last?` | `number` |
-
-
-#### Returns
-
-`UseQueryResult`<[`Types.GetReflectReflectionsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L108), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:624](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L624)
-
-___
-
-### useInfiniteGetReflectReflectionsQuery
-
-▸ **useInfiniteGetReflectReflectionsQuery**(`id`): `UseInfiniteQueryResult`<[`Types.GetReflectReflectionsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L108), `Error`\>
-
-Hook to get the reflects of a reflection (supports infinite scrolling).
-
-**`example`** useInfiniteGetReflectReflectionsQuery hook
-```typescript
-    // get the reflects of a reflection with ID 123456789
-    const reflectionReflectsReq = useInfiniteGetReflectReflectionsQuery(
-      'id',
-    { id: '123456789' },
-    );
-
-      const reflectionsReflects = React.useMemo(() => {
-    if (reflectionReflectsReq.data) {
-      return reflectionReflectsReq.data.pages;
-    }
-    return [];
-    }, [reflectionReflectsReq.data]);
-
-    // load more
-    const handleLoadMore = React.useCallback(() => {
-      if (!reflectionReflectsReq.isLoading && reflectionReflectsReq.hasNextPage) {
-        reflectionReflectsReq.fetchNextPage();
-      }
-    }, [reflectionReflectsReq]);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-| `before?` | `string` |
-| `after?` | `string` |
-| `first?` | `number` |
-| `last?` | `number` |
-
-
-#### Returns
-
-`UseInfiniteQueryResult`<[`Types.GetReflectReflectionsQuery`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L108), `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:642](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L642)
+[hooks/src/generated/composedb.ts:349](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L349)
 
 ___
 
 ### useCreateReflectMutation
 
-▸ **useCreateReflectMutation**(`i`): `UseMutationResult`<[`Types.CreateReflectMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L115), `unknown`\>
-
-Hook to create a reflect.
-
-**`example`** useCreateReflectMutation hook
-```typescript
-    const createReflect = useCreateReflectMutation();
-
-    // example of a reflect's data
-    const reflectData = {
-      content: {
-        active: true,
-        beamID: 'CeramicStreamID',
-        content: {
-          property: 'test',
-          provider: 'test',
-          value: 'test',
-        },
-        createdAt: Date.now(),
-        isReply: true
-      },
-    };
-
-    createReflect.mutate({
-      i: reflectData,
-    });
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `i` | `CreateReflectInput` |
-
-#### Returns
-
- `UseMutationResult`<[`Types.CreateReflectMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L115), `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:672](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L672)
-
-___
-
-### useUpdateReflectMutation
-
-▸ **useUpdateReflectMutation**(`i`): `UseMutationResult`<[`Types.UpdateReflectMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L122), `unknown`\>
-
-Hook to update a reflect.
-
-**`example`** useUpdateReflectMutation hook
-```typescript
-    const updateReflect = useUpdateReflectMutation();
-
-    // example of a reflect's data
-    const reflectData = {
-      id: 'some-id',
-      content: {
-        active: true,
-        beamID: 'CeramicStreamID',
-        content: {
-          property: 'test',
-          provider: 'test',
-          value: 'test',
-        },
-        createdAt: Date.now(),
-        isReply: true
-      },
-    };
-
-    updateReflect.mutate({
-      i: reflectData,
-    });
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `i` | `UpdateReflectInput` |
-
-#### Returns
-
- `UseMutationResult`<[`Types.UpdateReflectMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L122), `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:694](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L694)
-
-___
-
-### useCreateReflectReflectionMutation
-
-▸ **useCreateReflectReflectionMutation**(`i`): `UseMutationResult`<[`Types.CreateReflectReflectionMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L129), `unknown`\>
-
-Hook to create a reflect of a reflect.
-
-**`example`** useCreateReflectReflectionMutation hook
-```typescript
-    const createReflect = useCreateReflectReflectionMutation();
-
-    // example of a reflect's data
-    const reflectData = {
-      content: {
-        active: true,
-        reflectID: 'CeramicStreamID',
-        reflectionID: 'CeramicStreamID',
-      },
-    };
-
-    createReflect.mutate({
-      i: reflectData,
-    });
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `i` | `CreateReflectionInput` |
-
-#### Returns
-
-`UseMutationResult`<[`Types.CreateReflectReflectionMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L129), `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:721](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L721)
-
-___
-
-### useUpdateReflectReflectionMutation
-
-▸ **useUpdateReflectReflectionMutation**(`i`): `UseMutationResult`<[`Types.UpdateReflectReflectionMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L129), `unknown`\>
-
-Hook to update a reflect of a reflection.
-
-**`example`** useUpdateReflectReflectionMutation hook
-```typescript
-    const createReflect = useUpdateReflectReflectionMutation();
-
-    // example of a reflect's data
-    const reflectData = {
-      id: '1234',
-      content: {
-        active: true,
-        reflectID: 'CeramicStreamID',
-        reflectionID: 'CeramicStreamID',
-      },
-    };
-
-    createReflect.mutate({
-      i: reflectData,
-    });
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `i` | `UpdateReflectionInput` |
-
-#### Returns
-
-`UseMutationResult`<[`Types.UpdateReflectReflectionMutation`](https://github.com/AKASHAorg/akasha-core/blob/next/typings/src/sdk/graphql-operation-types-new.ts#L136), `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/generated/hooks-new.ts:748](https://github.com/AKASHAorg/akasha-core/blob/next/ui/hooks/src/generated/hooks-new.ts#L748)
-
-___
-
-### useInfinitePostsByAuthor
-
-▸ **useInfinitePostsByAuthor**(`pubKey`, `limit`, `enabled?`, `offset?`): `UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
-
-Hook to get an author's posts
-
-**`example`** useInfinitePostsByAuthor hook
-```typescript
-const authorPostsQuery = useInfinitePostsByAuthor('author-public-key', 15);
-
-const postPages = React.useMemo(() => {
-if (authorPostsQuery.data) {
-return authorPostsQuery.data.pages;
-}
-return [];
-}, [authorPostsQuery.data]);
-
-// load more posts
-const handleLoadMore = React.useCallback(() => {
-if (!authorPostsQuery.isLoading && authorPostsQuery.hasNextPage && loginState?.fromCache) {
-authorPostsQuery.fetchNextPage();
-}
-}, [authorPostsQuery, loginState?.fromCache]);
-```
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `pubKey` | `string` | `undefined` |
-| `limit` | `number` | `undefined` |
-| `enabled` | `boolean` | `true` |
-| `offset?` | `number` | `undefined` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-posts.ts:255](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-posts.ts#L255)
-
-___
-
-### useInfinitePostsByTag
-
-▸ **useInfinitePostsByTag**(`tagName`, `limit`, `offset?`): `UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
-
-Hook to get posts that contain a specific tag
-
-**`example`** useInfinitePostsByTag hook
-```typescript
-const tagPostsQuery = useInfinitePostsByTag('awesometag', 15);
-
-const postPages = React.useMemo(() => {
-if (tagPostsQuery.data) {
-return tagPostsQuery.data.pages;
-}
-return [];
-}, [tagPostsQuery.data]);
-
-// load more posts
-const handleLoadMore = React.useCallback(() => {
-if (!tagPostsQuery.isLoading && tagPostsQuery.hasNextPage && loginState?.fromCache) {
-tagPostsQuery.fetchNextPage();
-}
-}, [tagPostsQuery, loginState?.fromCache]);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `tagName` | `string` |
-| `limit` | `number` |
-| `offset?` | `string` |
-
-#### Returns
-
-`UseInfiniteQueryResult`<{ `nextIndex`: `string` ; `results`: `string`[] ; `total`: `number`  }, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-posts.ts:202](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-posts.ts#L202)
-
-___
-
-### useInjectedProvider
-
-▸ **useInjectedProvider**(): `UseQueryResult`<{ `details`: { `iconType`: `string` = ''; `subtitleLabel`: `string` = ''; `titleLabel`: `string` = '' } ; `name`: `INJECTED_PROVIDERS` = INJECTED\_PROVIDERS.NOT\_DETECTED }, `Error`\>
-
-A hook to get injected provider from the SDK
-
-**`example`** useInjectedProvider hook
-```typescript
-const injectedProviderQuery = useInjectedProvider('selectedProvider');
-
-const injectedProvider = React.useMemo(
-() => injectedProviderQuery.data,
-[injectedProviderQuery.data],
-);
-```
-
-#### Returns
-
-`UseQueryResult`<{ `details`: { `iconType`: `string` = ''; `subtitleLabel`: `string` = ''; `titleLabel`: `string` = '' } ; `name`: `INJECTED_PROVIDERS` = INJECTED\_PROVIDERS.NOT\_DETECTED }, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-injected-provider.ts:54](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-injected-provider.ts#L54)
-
-___
-
-### useInstallApp
-
-▸ **useInstallApp**(): `UseMutationResult`<`string`[], `unknown`, { `id?`: `string` ; `name?`: `string`  }, `unknown`\>
-
-Hook to persist an installed app config to a user's profile
-
-**`example`** useInstallApp hook
-```typescript
-const installAppQuery = useInstallApp();
-
-installAppQuery.mutate({ name: 'awesome integration', id: 'fhyuhjfhyrtl' });
-```
-
-#### Returns
-
-`UseMutationResult`<`string`[], `unknown`, { `id?`: `string` ; `name?`: `string`  }, `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/use-app-settings.ts:76](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-app-settings.ts#L76)
-
-___
-
-### useIsContactMultiple
-
-▸ **useIsContactMultiple**(`mainProfile`, `checkIfContactsPubkeys`): `UseQueryResult`<`string`[], `Error`\>
-
-Hook to check if a list of profiles are contacts for a specific user
-A contact relationship is defined by each of the two profiles following each other
-
-**`example`** useIsContactMultiple hook
-```typescript
-const isContactMultipleQuery = useIsContactMultiple('user-pubkey', ['some-pubkey-1', 'some-pubkey-2']);
-
-const contactList = isContactMultipleQuery.data;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `mainProfile` | `string` |
-| `checkIfContactsPubkeys` | `string`[] |
-
-#### Returns
-
-`UseQueryResult`<`string`[], `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-follow.ts:181](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-follow.ts#L181)
-
-___
-
-### useIsFollowingMultiple
-
-▸ **useIsFollowingMultiple**(`followerPubKey`, `followingPubKeyArray`): `UseQueryResult`<`string`[], `Error`\>
-
-Hook to check if a user is following other users
-
-**`example`** useIsFollowingMultiple hook
-```typescript
-const isFollowingMultipleQuery = useIsFollowingMultiple('user-pubkey', ['some-pubkey-1', 'some-pubkey-2']);
-
-const followedProfiles = isFollowingMultipleQuery.data;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `followerPubKey` | `string` |
-| `followingPubKeyArray` | `string`[] |
-
-#### Returns
-
-`UseQueryResult`<`string`[], `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-follow.ts:63](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-follow.ts#L63)
-
-___
-
-### useIsSubscribedToTag
-
-▸ **useIsSubscribedToTag**(`tagName`, `loggedEthAddress`): `UseQueryResult`<`boolean`, `Error`\>
-
-Hook to check if a user is subscribed to a tag
-
-**`example`** useIsSubscribedToTag hook
-```typescript
-const isSubscribedToTagQuery = useIsSubscribedToTag('awesome tag', 'logged-in-user-eth-address');
-
-const isSubscribedToTag = isSubscribedToTagQuery.data;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `tagName` | `string` |
-| `loggedEthAddress` | `string` |
-
-#### Returns
-
-`UseQueryResult`<`boolean`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-tag.ts:51](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-tag.ts#L51)
-
-___
-
-### useIsValidToken
-
-▸ **useIsValidToken**(`props`): `UseQueryResult`<{ `data`: `boolean`  }, `Error`\>
-
-Hook to validate invitation token
-
-**`example`** useIsValidToken hook
-```typescript
-const inviteTokenQuery = useIsValidToken({ inviteToken: '5b71c9dd7bdea84c9ff2564a', enabler: true });
-
-const isValidToken = inviteTokenQuery.isSuccess;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `props` | `IUseIsValidTokenProps` |
-
-#### Returns
-
-`UseQueryResult`<{ `data`: `boolean`  }, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-invite-token-validation.ts:30](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-invite-token-validation.ts#L30)
-
-___
-
-### useLegalDoc
-
-▸ **useLegalDoc**(`docName`): `UseQueryResult`<`never`, `Error`\>
-
-Hook to get legal docs stored on ipfs
-
-**`example`** useLegalDoc hook
-```typescript
-const termsOfUseDocQuery = useLegalDoc('TermsOfUse');
-
-const termsOfUseDoc = termsOfUseDocQuery.data;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `docName` | `LEGAL_DOCS` |
-
-#### Returns
-
-`UseQueryResult`<`never`, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-legal.ts:24](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-legal.ts#L24)
-
-___
-
-### useLogin
-
-▸ **useLogin**(`onError?`): `UseMutationResult`<`CurrentUser` & { `isNewUser`: `boolean`  }, `Error`, { `checkRegistered`: `boolean` ; `selectedProvider`: `EthProviders`  }, `unknown`\>
-
-Hook to sign in a user
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `onError?` | (`err`: `Error`) => `void` |
-
-#### Returns
-
-`UseMutationResult`<`CurrentUser` & { `isNewUser`: `boolean`  }, `Error`, { `checkRegistered`: `boolean` ; `selectedProvider`: `EthProviders`  }, `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/use-login.ts:137](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-login.ts#L137)
-
-___
-
-### useLogout
-
-▸ **useLogout**(): `UseMutationResult`<``true``, `Error`, `void`, `unknown`\>
-
-Hook to sign out the current user
-
-**`example`** useLogout hook
-```typescript
-const logoutMutation = useLogout();
-
-// sample logout handler
-const handleLogout = async () => {
-await logoutMutation.mutateAsync();
-// add other logic after logout
-};
-```
-
-#### Returns
-
-`UseMutationResult`<``true``, `Error`, `void`, `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/use-login.ts:348](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-login.ts#L348)
-
-___
-
-### useMarkAsRead
-
-▸ **useMarkAsRead**(): `UseMutationResult`<{ `data`: `boolean`  }, `unknown`, `string`, { `previousCheckNotifs`: `boolean` ; `previousNotifs`: `IMessage`[]  }\>
-
-Hook to mark a notification as read
-pass the messageId to the mutate function
-
-**`example`** useMarkAsRead hook
-```typescript
-const markAsReadQuery = useMarkAsRead();
-
-markAsReadQuery.mutate('message id');
-```
-
-#### Returns
-
-`UseMutationResult`<{ `data`: `boolean`  }, `unknown`, `string`, { `previousCheckNotifs`: `boolean` ; `previousNotifs`: `IMessage`[]  }\>
-
-#### Defined in
-
-[ui/hooks/src/use-notifications.ts:75](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-notifications.ts#L75)
-
-___
-
-### useMentionSearch
-
-▸ **useMentionSearch**(`mention`): `UseQueryResult`<(`IProfileData` \| { `_id`: `string` ; `avatar`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `coverImage`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `description`: `string` ; `ethAddress`: `string` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string`  })[], `Error`\>
-
-Hook to search for profiles
-
-**`example`** useMentionSearch hook
-```typescript
-const mentionQuery = useMentionSearch('awesomemention');
-
-const mentions = mentionQuery.data;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `mention` | `string` |
-
-#### Returns
-
-`UseQueryResult`<(`IProfileData` \| { `_id`: `string` ; `avatar`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `coverImage`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `description`: `string` ; `ethAddress`: `string` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string`  })[], `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-mentions.ts:32](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-mentions.ts#L32)
-
-___
-
-### useModeration
-
-▸ **useModeration**(): `UseMutationResult`<`number`, `Error`, `UseModerationParam`, `unknown`\>
-
-Hook for creating a moderation decision
-
-**`example`** useModeration hook
-```typescript
-const moderateMutation = useModeration();
-
-moderateMutation.mutate({ dataToSign: { explanation: 'no violations detected', ... }, contentId: 'some-content-id', contentType: 'item type', url: 'https://apiendpoint', isPending: true });
-```
-
-#### Returns
-
-`UseMutationResult`<`number`, `Error`, `UseModerationParam`, `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/use-moderation.ts:78](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-moderation.ts#L78)
-
-___
-
-### useMutationListener
-
-▸ **useMutationListener**<`TVars`\>(`mutationKey`): `Mutation`<`unknown`, `unknown`, `TVars`, `unknown`\>
-
-Hook to detect changes to a mutation
-
-**`example`** useMutationListener hook
-```typescript
-const sampleMutation = useMutationListener('mutation key');
-
-const variables = sampleMutation.state.variables;
-```
+▸ **useCreateReflectMutation**<`TError`, `TContext`\>(`options?`): `UseMutationResult`<`CreateReflectMutation`, `TError`, `Exact`<{ `i`: `CreateAkashaReflectInput`  }\>, `TContext`\>
 
 #### Type parameters
 
-| Name |
-| :------ |
-| `TVars` |
+| Name | Type |
+| :------ | :------ |
+| `TError` | `unknown` |
+| `TContext` | `unknown` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `mutationKey` | `MutationKey` |
+| `options?` | `UseMutationOptions`<`CreateReflectMutation`, `TError`, `Exact`<{ `i`: `CreateAkashaReflectInput`  }\>, `TContext`\> |
 
 #### Returns
 
-`Mutation`<`unknown`, `unknown`, `TVars`, `unknown`\>
-
-Mutation | undefined
+`UseMutationResult`<`CreateReflectMutation`, `TError`, `Exact`<{ `i`: `CreateAkashaReflectInput`  }\>, `TContext`\>
 
 #### Defined in
 
-[ui/hooks/src/use-query-listener.ts:21](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-query-listener.ts#L21)
+[hooks/src/generated/composedb.ts:305](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L305)
 
 ___
 
-### useNetworkState
+### useGetAppReleaseByIdQuery
 
-▸ **useNetworkState**(`enabler?`): `UseQueryResult`<{ `networkNotSupported`: `boolean` = true }, `unknown`\>
-
-Hook to check if the web3 provider is set to function on the Rinkeby test network
-
-**`example`** useNetworkState hook
-```typescript
-const networkStateQuery = useNetworkState(true);
-
-const networkNotSupported = networkStateQuery.data.networkNotSupported;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `enabler?` | `boolean` |
-
-#### Returns
-
-`UseQueryResult`<{ `networkNotSupported`: `boolean` = true }, `unknown`\>
-
-networkNotSupported: true if web3 provider is not on the specified network
-
-#### Defined in
-
-[ui/hooks/src/use-network-state.ts:29](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-network-state.ts#L29)
-
-___
-
-### usePlaformHealthCheck
-
-▸ **usePlaformHealthCheck**(): `UseQueryResult`<{ `statusCode`: `number` = response.status; `success`: `boolean` = response.ok }, `Error`\>
-
-#### Returns
-
-`UseQueryResult`<{ `statusCode`: `number` = response.status; `success`: `boolean` = response.ok }, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-health-check.ts:13](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-health-check.ts#L13)
-
-___
-
-### usePost
-
-▸ **usePost**(`__namedParameters`): `UseQueryResult`<{ `_id`: `string` ; `author`: { `_id`: `string` ; `avatar`: `string` ; `contentId`: `string` ; `coverImage`: `string` ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `delisted`: `boolean` ; `description`: `string` ; `ethAddress`: `string` ; `moderated`: `boolean` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `reason`: `string` ; `reported`: `boolean` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string`  } ; `content`: [`DataProviderInput`] ; `contentId`: `string` ; `creationDate`: `string` ; `delisted`: `boolean` ; `mentions`: [`string`] ; `moderated`: `boolean` ; `quotedBy`: [`string`] ; `quotedByAuthors`: [`UserProfile_Response`] ; `quotes`: [`Post_Response`] ; `reason`: `string` ; `reported`: `boolean` ; `tags`: [`string`] ; `title`: `string` ; `totalComments`: `string` ; `type`: `PostType` ; `updatedAt`: `string`  }, `Error`\>
-
-Hook to get data for a specific post
-
-**`example`** usePost hook
-```typescript
-const postQuery = usePost('some-post-id', 'logged-user-pubkey', true);
-
-const entryData = React.useMemo(() => {
-if (postQuery.data) {
-// mapEntry is a utility function that transforms the comment/post data into required format.
-return mapEntry(postQuery.data);
-}
-return undefined;
-}, [postQuery.data]);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `__namedParameters` | `usePostParam` |
-
-#### Returns
-
-`UseQueryResult`<{ `_id`: `string` ; `author`: { `_id`: `string` ; `avatar`: `string` ; `contentId`: `string` ; `coverImage`: `string` ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `delisted`: `boolean` ; `description`: `string` ; `ethAddress`: `string` ; `moderated`: `boolean` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `reason`: `string` ; `reported`: `boolean` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string`  } ; `content`: [`DataProviderInput`] ; `contentId`: `string` ; `creationDate`: `string` ; `delisted`: `boolean` ; `mentions`: [`string`] ; `moderated`: `boolean` ; `quotedBy`: [`string`] ; `quotedByAuthors`: [`UserProfile_Response`] ; `quotes`: [`Post_Response`] ; `reason`: `string` ; `reported`: `boolean` ; `tags`: [`string`] ; `title`: `string` ; `totalComments`: `string` ; `type`: `PostType` ; `updatedAt`: `string`  }, `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-posts.ts:309](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-posts.ts#L309)
-
-___
-
-### usePosts
-
-▸ **usePosts**(`__namedParameters`): `UseQueryResult`<{ `_id`: `string` ; `author`: { `_id`: `string` ; `avatar`: `string` ; `contentId`: `string` ; `coverImage`: `string` ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `delisted`: `boolean` ; `description`: `string` ; `ethAddress`: `string` ; `moderated`: `boolean` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `reason`: `string` ; `reported`: `boolean` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string`  } ; `content`: [`DataProviderInput`] ; `contentId`: `string` ; `creationDate`: `string` ; `delisted`: `boolean` ; `mentions`: [`string`] ; `moderated`: `boolean` ; `quotedBy`: [`string`] ; `quotedByAuthors`: [`UserProfile_Response`] ; `quotes`: [`Post_Response`] ; `reason`: `string` ; `reported`: `boolean` ; `tags`: [`string`] ; `title`: `string` ; `totalComments`: `string` ; `type`: `PostType` ; `updatedAt`: `string`  }, `Error`\>[]
-
-Hook to get an array of post data
-
-**`example`** usePosts hook
-```typescript
-const postQueries = usePost({ postIds: ['some-post-id', 'some-other-post-id'], loggedUser: 'logged-user-pubkey', enabler: true });
-
-const entryData = postQueries.map(postQuery=>postQuery.data);
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `__namedParameters` | `usePostsParam` |
-
-#### Returns
-
-`UseQueryResult`<{ `_id`: `string` ; `author`: { `_id`: `string` ; `avatar`: `string` ; `contentId`: `string` ; `coverImage`: `string` ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `delisted`: `boolean` ; `description`: `string` ; `ethAddress`: `string` ; `moderated`: `boolean` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `reason`: `string` ; `reported`: `boolean` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string`  } ; `content`: [`DataProviderInput`] ; `contentId`: `string` ; `creationDate`: `string` ; `delisted`: `boolean` ; `mentions`: [`string`] ; `moderated`: `boolean` ; `quotedBy`: [`string`] ; `quotedByAuthors`: [`UserProfile_Response`] ; `quotes`: [`Post_Response`] ; `reason`: `string` ; `reported`: `boolean` ; `tags`: [`string`] ; `title`: `string` ; `totalComments`: `string` ; `type`: `PostType` ; `updatedAt`: `string`  }, `Error`\>[]
-
-#### Defined in
-
-[ui/hooks/src/use-posts.ts:326](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-posts.ts#L326)
-
-___
-
-### useQueryListener
-
-▸ **useQueryListener**<`TData`\>(`queryKey`): `QueryObserverResult`<`TData`, `unknown`\>
-
-Hook to detect changes to a query
-
-**`example`** useQueryListener hook
-```typescript
-const sampleQuery = useQueryListener('query key');
-
-const result = sampleQuery.data;
-```
+▸ **useGetAppReleaseByIdQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
 
 #### Type parameters
 
-| Name |
-| :------ |
-| `TData` |
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetAppReleaseByIdQuery` |
+| `TError` | `unknown` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `queryKey` | `QueryKey` |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseQueryOptions`<`GetAppReleaseByIdQuery`, `TError`, `TData`, `QueryKey`\> |
 
 #### Returns
 
-`QueryObserverResult`<`TData`, `unknown`\>
+`UseQueryResult`<`TData`, `TError`\>
 
 #### Defined in
 
-[ui/hooks/src/use-query-listener.ts:47](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-query-listener.ts#L47)
+[hooks/src/generated/queries.ts:2182](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L2182)
 
 ___
 
-### useReasons
+### useGetAppsByIdQuery
 
-▸ **useReasons**(): [`string`[], `UseReasonsActions`]
-
-A hook to get predefined reasons from moderation API
-
-**`example`** useReasons hook
-```typescript
-const [reasons, reasonsActions] = useReasons();
-
-// fetch reasons on mount
-React.useEffect(() => {
-reasonsActions.fetchReasons({ active: true });
-}, []);
-
-console.log(reasons);
-```
-
-#### Returns
-
-[`string`[], `UseReasonsActions`]
-
-#### Defined in
-
-[ui/hooks/src/use-reasons.ts:58](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-reasons.ts#L58)
-
-___
-
-### useReport
-
-▸ **useReport**(): `UseMutationResult`<`number`, `Error`, `UseModerationParam`, `unknown`\>
-
-Hook for reporting a post, reply or account
-
-**`example`** useReport hook
-```typescript
-const reportMutation = useReport();
-
-reportMutation.mutate({ dataToSign: { explanation: 'no violations detected', ... }, contentId: 'some-content-id', contentType: 'item type', url: 'https://apiendpoint' });
-```
-
-#### Returns
-
-`UseMutationResult`<`number`, `Error`, `UseModerationParam`, `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/use-moderation.ts:141](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-moderation.ts#L141)
-
-___
-
-### useRequiredNetworkName
-
-▸ **useRequiredNetworkName**(): `UseQueryResult`<`string`, `unknown`\>
-
-A hook to get required network name from the SDK
-
-**`example`** useRequiredNetworkName hook
-```typescript
-const requiredNetworkQuery = useRequiredNetworkName();
-
-const requiredNetworkName = requiredNetworkQuery.data;
-```
-
-#### Returns
-
-`UseQueryResult`<`string`, `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/use-injected-provider.ts:95](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-injected-provider.ts#L95)
-
-___
-
-### useSaveBookmark
-
-▸ **useSaveBookmark**(): `UseMutationResult`<`string`[], `unknown`, { `entryId`: `string` ; `itemType`: `EntityTypes`  }, { `prevBmks`: { `entryId`: `string` ; `type`: `EntityTypes`  }[]  }\>
-
-Hook used to bookmark resources.
-Pass as payload, entryData containing the resource id and itemType to the mutate function.
-
-**`example`** useSaveBookmark hook
-```typescript
-const saveBookmarkQuery = useSaveBookmark();
-
-saveBookmarkQuery.mutate({entryId: 'dbkjjouyahljfe', itemType: 'item type'});
-```
-
-#### Returns
-
-`UseMutationResult`<`string`[], `unknown`, { `entryId`: `string` ; `itemType`: `EntityTypes`  }, { `prevBmks`: { `entryId`: `string` ; `type`: `EntityTypes`  }[]  }\>
-
-#### Defined in
-
-[ui/hooks/src/use-bookmarks.ts:60](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-bookmarks.ts#L60)
-
-___
-
-### useSearch
-
-▸ **useSearch**(`searchQuery`, `loggedUser?`, `enabler?`): `UseQueryResult`<{ `comments`: `IEntryData`[] ; `entries`: `IEntryData`[] ; `profiles`: `any`[] ; `tags`: [] \| [`GlobalSearchResultTagItem`]  }, `Error`\>
-
-Hook for fetching search results for a specific query
-
-**`example`** useSearch hook
-```typescript
-const searchQuery = useSearch('search keyword', 'logged-in-user-pubkey');
-
-const result = searchQuery.data;
-```
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `searchQuery` | `string` | `undefined` |
-| `loggedUser?` | `string` | `undefined` |
-| `enabler` | `boolean` | `true` |
-
-#### Returns
-
-`UseQueryResult`<{ `comments`: `IEntryData`[] ; `entries`: `IEntryData`[] ; `profiles`: `any`[] ; `tags`: [] \| [`GlobalSearchResultTagItem`]  }, `Error`\>
-
-search results for posts, comments, tags and profiles
-
-#### Defined in
-
-[ui/hooks/src/use-search.ts:332](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-search.ts#L332)
-
-___
-
-### useSearchComments
-
-▸ **useSearchComments**(`searchQuery`, `page`, `loggedUser?`, `enabler?`, `pageSize?`): `UseQueryResult`<`IEntryData`[], `Error`\>
-
-Hook to search for comments
-
-**`example`** useSearchComments hook
-```typescript
-const searchCommentsQuery = useSearchComments('search keyword', 1, 'logged-in-user-pubkey');
-
-const result = searchCommentsQuery.data;
-```
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `searchQuery` | `string` | `undefined` |
-| `page` | `number` | `undefined` |
-| `loggedUser?` | `string` | `undefined` |
-| `enabler` | `boolean` | `true` |
-| `pageSize` | `number` | `5` |
-
-#### Returns
-
-`UseQueryResult`<`IEntryData`[], `Error`\>
-
-search results for comments
-
-#### Defined in
-
-[ui/hooks/src/use-search.ts:187](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-search.ts#L187)
-
-___
-
-### useSearchPosts
-
-▸ **useSearchPosts**(`searchQuery`, `page`, `loggedUser?`, `enabler?`, `pageSize?`): `UseQueryResult`<`IEntryData`[], `Error`\>
-
-Hook to search for posts
-
-**`example`** useSearchPosts hook
-```typescript
-const searchPostsQuery = useSearchPosts('search keyword', 1, 'logged-in-user-pubkey');
-
-const result = searchPostsQuery.data;
-```
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `searchQuery` | `string` | `undefined` |
-| `page` | `number` | `undefined` |
-| `loggedUser?` | `string` | `undefined` |
-| `enabler` | `boolean` | `true` |
-| `pageSize` | `number` | `5` |
-
-#### Returns
-
-`UseQueryResult`<`IEntryData`[], `Error`\>
-
-search results for posts
-
-#### Defined in
-
-[ui/hooks/src/use-search.ts:122](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-search.ts#L122)
-
-___
-
-### useSearchProfiles
-
-▸ **useSearchProfiles**(`searchQuery`, `page`, `loggedUser?`, `enabler?`, `pageSize?`): `UseQueryResult`<`any`[], `Error`\>
-
-Hook to search for profiles
-
-**`example`** useSearchProfiles hook
-```typescript
-const searchProfilesQuery = useSearchProfiles('search keyword', 1, 'logged-in-user-pubkey');
-
-const result = searchProfilesQuery.data;
-```
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `searchQuery` | `string` | `undefined` |
-| `page` | `number` | `undefined` |
-| `loggedUser?` | `string` | `undefined` |
-| `enabler` | `boolean` | `true` |
-| `pageSize` | `number` | `5` |
-
-#### Returns
-
-`UseQueryResult`<`any`[], `Error`\>
-
-search results for profiles, containing full profile data
-
-#### Defined in
-
-[ui/hooks/src/use-search.ts:60](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-search.ts#L60)
-
-___
-
-### useSearchTags
-
-▸ **useSearchTags**(`searchQuery`, `enabler?`): `UseQueryResult`<`SearchTagsResult_Response`[], `Error`\>
-
-Hook to search for tags
-
-**`example`** useSearchTags hook
-```typescript
-const searchTagsQuery = useSearchTags('search keyword');
-
-const result = searchTagsQuery.data;
-```
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `searchQuery` | `string` | `undefined` |
-| `enabler` | `boolean` | `true` |
-
-#### Returns
-
-`UseQueryResult`<`SearchTagsResult_Response`[], `Error`\>
-
-search results for posts, comments, tags and profiles
-
-#### Defined in
-
-[ui/hooks/src/use-search.ts:225](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-search.ts#L225)
-
-___
-
-### useSignUp
-
-▸ **useSignUp**(`provider`, `checkRegistered?`, `analyticsActions?`): `Object`
-
-Hook to sign up a user
-
-**`example`** useSignUp hook
-```typescript
-const { signUpState, ethAddress, fireRemainingMessages, error, fullSignUp, resetState } = useSignUp('selected provider', true);
-```
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `provider` | `EthProviders` | `undefined` |
-| `checkRegistered` | `boolean` | `false` |
-| `analyticsActions?` | `UseAnalyticsActions` | `undefined` |
-
-#### Returns
-
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `connectWallet` | `UseMutationResult`<{ `data`: `string`  }, `WalletTransactionError`, `void`, `unknown`\> |
-| `error` | `ErrorTypes` |
-| `ethAddress` | `string` |
-| `fireRemainingMessages` | () => `Promise`<`void`\> |
-| `fullSignUp` | `UseMutationResult`<{ `data`: `CurrentUser` & { `isNewUser`: `boolean`  }  }, `WalletTransactionError`, `void`, `unknown`\> |
-| `resetState` | () => `void` |
-| `signUpState` | `number` |
-
-#### Defined in
-
-[ui/hooks/src/use-login.ts:173](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-login.ts#L173)
-
-___
-
-### useTagSearch
-
-▸ **useTagSearch**(`tagName`): `UseQueryResult`<`SearchTagsResult_Response`[], `Error`\>
-
-Hook to search for tags
-
-**`example`** useTagSearch hook
-```typescript
-const tagSearchQuery = useTagSearch('awesometag');
-
-const result =  tagSearchQuery.data
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `tagName` | `string` |
-
-#### Returns
-
-`UseQueryResult`<`SearchTagsResult_Response`[], `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-tag.ts:164](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-tag.ts#L164)
-
-___
-
-### useTagSubscriptions
-
-▸ **useTagSubscriptions**(`loggedEthAddress`): `UseQueryResult`<`string`[], `Error`\>
-
-Hook to get a user's subscribed tags
-
-**`example`** useTagSubscriptions hook
-```typescript
-const subscribedTagsQuery = useTagSubscriptions('logged-in-user-eth-address');
-
-const subscribedTags = subscribedTagsQuery.data;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `loggedEthAddress` | `string` |
-
-#### Returns
-
-`UseQueryResult`<`string`[], `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-tag.ts:27](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-tag.ts#L27)
-
-___
-
-### useToggleTagSubscription
-
-▸ **useToggleTagSubscription**(): `UseMutationResult`<{ `data`: { `toggleInterestSub`: `boolean`  }  }, `unknown`, `string`, { `previousTagSubs`: `string`[]  }\>
-
-Hook to toggle a user's tag subscription.
-Pass the tagName to the mutate function
-
-**`example`** useToggleTagSubscription hook
-```typescript
-const toggleTagSubscriptionQuery = useToggleTagSubscription();
-
-toggleTagSubscriptionQuery.mutate('awesome tag');
-```
-
-#### Returns
-
-`UseMutationResult`<{ `data`: { `toggleInterestSub`: `boolean`  }  }, `unknown`, `string`, { `previousTagSubs`: `string`[]  }\>
-
-#### Defined in
-
-[ui/hooks/src/use-tag.ts:69](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-tag.ts#L69)
-
-___
-
-### useTrendingProfiles
-
-▸ **useTrendingProfiles**(): `UseQueryResult`<(`IProfileData` \| { `_id`: `string` ; `avatar`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `coverImage`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `description`: `string` ; `ethAddress`: `string` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string`  })[], `Error`\>
-
-Hook to fetch trending profiles
-
-**`example`** useTrendingProfiles hook
-```typescript
-const trendingProfilesQuery = useTrendingProfiles();
-
-const trendingProfiles = trendingProfilesQuery.data;
-```
-
-#### Returns
-
-`UseQueryResult`<(`IProfileData` \| { `_id`: `string` ; `avatar`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `coverImage`: { `fallbackUrl`: `string` ; `url`: `string`  } ; `creationDate`: `string` ; `default`: [`DataProviderInput`] ; `description`: `string` ; `ethAddress`: `string` ; `name`: `string` ; `providers`: [`DataProviderInput`] ; `pubKey`: `string` ; `totalFollowers`: `number` ; `totalFollowing`: `number` ; `totalInterests`: `number` ; `totalPosts`: `string` ; `userName`: `string`  })[], `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-trending.ts:57](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-trending.ts#L57)
-
-___
-
-### useTrendingTags
-
-▸ **useTrendingTags**(): `UseQueryResult`<`SearchTagsResult_Response`[], `Error`\>
-
-Hook to fetch trending tags
-
-**`example`** useTrendingTags hook
-```typescript
-const trendingTagsQuery = useTrendingTags();
-
-const trendingTags = trendingTagsQuery.data;
-```
-
-#### Returns
-
-`UseQueryResult`<`SearchTagsResult_Response`[], `Error`\>
-
-#### Defined in
-
-[ui/hooks/src/use-trending.ts:27](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-trending.ts#L27)
-
-___
-
-### useUninstallApp
-
-▸ **useUninstallApp**(): `UseMutationResult`<`void`, `unknown`, `string`, `unknown`\>
-
-Hook to uninstall an app
-
-**`example`** useUninstallApp hook
-```typescript
-const uninstallAppQuery = useUninstallApp();
-
-uninstallAppQuery.mutate('awesome integration');
-```
-
-#### Returns
-
-`UseMutationResult`<`void`, `unknown`, `string`, `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/use-app-settings.ts:107](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-app-settings.ts#L107)
-
-___
-
-### useUpdateUsernameProvider
-
-▸ **useUpdateUsernameProvider**(`pubKey?`): `UseMutationResult`<`void` \| { `makeDefaultProvider`: `string`  }, `Error`, { `provider`: `ProfileProviders` ; `userName`: `string`  }, { `currentProfile`: `IProfileData`  }\>
-
-Hook to register a username for the user.
-Pass as payload, the username and provider details to the mutate function
-
-**`example`** useUpdateUsernameProvider hook
-```typescript
-const updateUsernameProviderQuery = useUpdateUsernameProvider('logged-in-user-pubkey');
-
-// do something with the returned status of the query
-React.useEffect(()=> {
-if (updateUsernameProviderQuery.status === 'success') {
-// perform an action
-}
-}, [updateUsernameProviderQuery])
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `pubKey?` | `string` |
-
-#### Returns
-
-`UseMutationResult`<`void` \| { `makeDefaultProvider`: `string`  }, `Error`, { `provider`: `ProfileProviders` ; `userName`: `string`  }, { `currentProfile`: `IProfileData`  }\>
-
-#### Defined in
-
-[ui/hooks/src/use-username.ts:77](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-username.ts#L77)
-
-___
-
-### useUsernameValidation
-
-▸ **useUsernameValidation**(`username`, `enabler?`): `UseQueryResult`<`any`, `unknown`\>
-
-Hook to check if a username is available
-
-**`example`** useUsernameValidation hook
-```typescript
-const usernameValidationQuery = useUsernameValidation('awesomeusername', true);
-
-// do something with the returned status of the query
-const querySuccess =  usernameValidationQuery.isSuccess
-```
-
-#### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `username` | `string` | `undefined` |
-| `enabler` | `boolean` | `true` |
-
-#### Returns
-
-`UseQueryResult`<`any`, `unknown`\>
-
-#### Defined in
-
-[ui/hooks/src/use-username.ts:225](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/use-username.ts#L225)
-
-___
-
-### validateType
-
-▸ **validateType**<`T`\>(`arg1`, `type`): `boolean`
+▸ **useGetAppsByIdQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
 
 #### Type parameters
 
-| Name |
-| :------ |
-| `T` |
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetAppsByIdQuery` |
+| `TError` | `unknown` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `arg1` | `T` |
-| `type` | `string` |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseQueryOptions`<`GetAppsByIdQuery`, `TError`, `TData`, `QueryKey`\> |
 
 #### Returns
 
-`boolean`
+`UseQueryResult`<`TData`, `TError`\>
 
 #### Defined in
 
-[ui/hooks/src/utils/generic-utils.ts:1](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/utils/generic-utils.ts#L1)
+[hooks/src/generated/queries.ts:1945](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1945)
 
 ___
 
-### withProviders
+### useGetAppsByPublisherDidQuery
 
-▸ **withProviders**<`T`\>(`WrappedComponent`): (`props`: `any`) => `Element`
-
-Higher order component that wraps a component with all necessary providers
+▸ **useGetAppsByPublisherDidQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
 
 #### Type parameters
 
-| Name |
-| :------ |
-| `T` |
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetAppsByPublisherDidQuery` |
+| `TError` | `unknown` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `WrappedComponent` | `ComponentType`<`T`\> |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaAppFiltersInput` ; `first?`: `number` ; `id`: `string` ; `last?`: `number` ; `sorting?`: `AkashaAppSortingInput`  }\> |
+| `options?` | `UseQueryOptions`<`GetAppsByPublisherDidQuery`, `TError`, `TData`, `QueryKey`\> |
 
 #### Returns
 
-`fn`
-
-▸ (`props`): `Element`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `props` | `any` |
-
-##### Returns
-
-`Element`
-
-| Name | Type |
-| :------ | :------ |
-| `displayName` | `string` |
+`UseQueryResult`<`TData`, `TError`\>
 
 #### Defined in
 
-[ui/hooks/src/utils/provider-hoc.tsx:26](https://github.com/AKASHAorg/akasha-core/blob/c052f00c/ui/hooks/src/utils/provider-hoc.tsx#L26)
+[hooks/src/generated/queries.ts:2006](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L2006)
+
+___
+
+### useGetAppsQuery
+
+▸ **useGetAppsQuery**<`TData`, `TError`\>(`variables?`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetAppsQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables?` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaAppFiltersInput` ; `first?`: `number` ; `last?`: `number` ; `sorting?`: `AkashaAppSortingInput`  }\> |
+| `options?` | `UseQueryOptions`<`GetAppsQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1826](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1826)
+
+___
+
+### useGetAppsReleasesByPublisherDidQuery
+
+▸ **useGetAppsReleasesByPublisherDidQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetAppsReleasesByPublisherDidQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaAppReleaseFiltersInput` ; `first?`: `number` ; `id`: `string` ; `last?`: `number` ; `sorting?`: `AkashaAppReleaseSortingInput`  }\> |
+| `options?` | `UseQueryOptions`<`GetAppsReleasesByPublisherDidQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:2068](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L2068)
+
+___
+
+### useGetAppsReleasesQuery
+
+▸ **useGetAppsReleasesQuery**<`TData`, `TError`\>(`variables?`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetAppsReleasesQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables?` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaAppReleaseFiltersInput` ; `first?`: `number` ; `last?`: `number` ; `sorting?`: `AkashaAppReleaseSortingInput`  }\> |
+| `options?` | `UseQueryOptions`<`GetAppsReleasesQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:2133](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L2133)
+
+___
+
+### useGetAppsStreamQuery
+
+▸ **useGetAppsStreamQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetAppsStreamQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaAppsStreamFiltersInput` ; `first?`: `number` ; `indexer`: `string` ; `last?`: `number` ; `sorting?`: `AkashaAppsStreamSortingInput`  }\> |
+| `options?` | `UseQueryOptions`<`GetAppsStreamQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1897](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1897)
+
+___
+
+### useGetBeamByIdQuery
+
+▸ **useGetBeamByIdQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetBeamByIdQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseQueryOptions`<`GetBeamByIdQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:459](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L459)
+
+___
+
+### useGetBeamStreamQuery
+
+▸ **useGetBeamStreamQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetBeamStreamQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaBeamStreamFiltersInput` ; `first?`: `number` ; `indexer`: `string` ; `last?`: `number` ; `sorting?`: `AkashaBeamStreamSortingInput`  }\> |
+| `options?` | `UseQueryOptions`<`GetBeamStreamQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:280](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L280)
+
+___
+
+### useGetBeamsByAuthorDidQuery
+
+▸ **useGetBeamsByAuthorDidQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetBeamsByAuthorDidQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaBeamFiltersInput` ; `first?`: `number` ; `id`: `string` ; `last?`: `number` ; `sorting?`: `AkashaBeamSortingInput`  }\> |
+| `options?` | `UseQueryOptions`<`GetBeamsByAuthorDidQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:412](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L412)
+
+___
+
+### useGetBeamsQuery
+
+▸ **useGetBeamsQuery**<`TData`, `TError`\>(`variables?`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetBeamsQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables?` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaBeamFiltersInput` ; `first?`: `number` ; `last?`: `number` ; `sorting?`: `AkashaBeamSortingInput`  }\> |
+| `options?` | `UseQueryOptions`<`GetBeamsQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:343](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L343)
+
+___
+
+### useGetBlockStorageByIdQuery
+
+▸ **useGetBlockStorageByIdQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetBlockStorageByIdQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseQueryOptions`<`GetBlockStorageByIdQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:626](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L626)
+
+___
+
+### useGetContentBlockByIdQuery
+
+▸ **useGetContentBlockByIdQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetContentBlockByIdQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseQueryOptions`<`GetContentBlockByIdQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:579](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L579)
+
+___
+
+### useGetContentBlockStreamQuery
+
+▸ **useGetContentBlockStreamQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetContentBlockStreamQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaContentBlockStreamFiltersInput` ; `first?`: `number` ; `indexer`: `string` ; `last?`: `number` ; `sorting?`: `AkashaContentBlockStreamSortingInput`  }\> |
+| `options?` | `UseQueryOptions`<`GetContentBlockStreamQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:532](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L532)
+
+___
+
+### useGetFollowDocumentsByDidQuery
+
+▸ **useGetFollowDocumentsByDidQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetFollowDocumentsByDidQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `first?`: `number` ; `following?`: `string` \| `string`[] ; `id`: `string` ; `last?`: `number` ; `sorting?`: `AkashaFollowSortingInput`  }\> |
+| `options?` | `UseQueryOptions`<`GetFollowDocumentsByDidQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:579](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L579)
+
+___
+
+### useGetFollowersListByDidQuery
+
+▸ **useGetFollowersListByDidQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetFollowersListByDidQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `first?`: `number` ; `id`: `string` ; `last?`: `number` ; `sorting?`: `AkashaFollowInterfaceSortingInput`  }\> |
+| `options?` | `UseQueryOptions`<`GetFollowersListByDidQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1708](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1708)
+
+___
+
+### useGetFollowingListByDidQuery
+
+▸ **useGetFollowingListByDidQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetFollowingListByDidQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `first?`: `number` ; `id`: `string` ; `last?`: `number` ; `sorting?`: `AkashaFollowSortingInput`  }\> |
+| `options?` | `UseQueryOptions`<`GetFollowingListByDidQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1628](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1628)
+
+___
+
+### useGetIndexedStreamCountQuery
+
+▸ **useGetIndexedStreamCountQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetIndexedStreamCountQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `filters?`: `AkashaIndexedStreamFiltersInput` ; `indexer`: `string`  }\> |
+| `options?` | `UseQueryOptions`<`GetIndexedStreamCountQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:750](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L750)
+
+___
+
+### useGetIndexedStreamQuery
+
+▸ **useGetIndexedStreamQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetIndexedStreamQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaIndexedStreamFiltersInput` ; `first?`: `number` ; `indexer`: `string` ; `last?`: `number` ; `sorting?`: `AkashaIndexedStreamSortingInput`  }\> |
+| `options?` | `UseQueryOptions`<`GetIndexedStreamQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:702](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L702)
+
+___
+
+### useGetInterestsByDidQuery
+
+▸ **useGetInterestsByDidQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetInterestsByDidQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseQueryOptions`<`GetInterestsByDidQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1498](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1498)
+
+___
+
+### useGetInterestsByIdQuery
+
+▸ **useGetInterestsByIdQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetInterestsByIdQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseQueryOptions`<`GetInterestsByIdQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1552](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1552)
+
+___
+
+### useGetInterestsQuery
+
+▸ **useGetInterestsQuery**<`TData`, `TError`\>(`variables?`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetInterestsQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables?` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `first?`: `number` ; `last?`: `number`  }\> |
+| `options?` | `UseQueryOptions`<`GetInterestsQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1370](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1370)
+
+___
+
+### useGetInterestsStreamQuery
+
+▸ **useGetInterestsStreamQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetInterestsStreamQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaInterestsStreamFiltersInput` ; `first?`: `number` ; `indexer`: `string` ; `last?`: `number` ; `sorting?`: `AkashaInterestsStreamSortingInput`  }\> |
+| `options?` | `UseQueryOptions`<`GetInterestsStreamQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1441](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1441)
+
+___
+
+### useGetMyProfileQuery
+
+▸ **useGetMyProfileQuery**<`TData`, `TError`\>(`variables?`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetMyProfileQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables?` | `Exact`<{ `[key: string]`: `never`;  }\> |
+| `options?` | `UseQueryOptions`<`GetMyProfileQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:506](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L506)
+
+___
+
+### useGetProfileByDidQuery
+
+▸ **useGetProfileByDidQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetProfileByDidQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseQueryOptions`<`GetProfileByDidQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1168](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1168)
+
+___
+
+### useGetProfileByIdQuery
+
+▸ **useGetProfileByIdQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetProfileByIdQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseQueryOptions`<`GetProfileByIdQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1118](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1118)
+
+___
+
+### useGetProfileStatsByDidQuery
+
+▸ **useGetProfileStatsByDidQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetProfileStatsByDidQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseQueryOptions`<`GetProfileStatsByDidQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1762](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1762)
+
+___
+
+### useGetProfileStreamQuery
+
+▸ **useGetProfileStreamQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetProfileStreamQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaProfileStreamFiltersInput` ; `first?`: `number` ; `indexer`: `string` ; `last?`: `number` ; `sorting?`: `AkashaProfileStreamSortingInput`  }\> |
+| `options?` | `UseQueryOptions`<`GetProfileStreamQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1302](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1302)
+
+___
+
+### useGetProfilesQuery
+
+▸ **useGetProfilesQuery**<`TData`, `TError`\>(`variables?`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetProfilesQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables?` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaProfileFiltersInput` ; `first?`: `number` ; `last?`: `number` ; `sorting?`: `AkashaProfileSortingInput`  }\> |
+| `options?` | `UseQueryOptions`<`GetProfilesQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1231](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1231)
+
+___
+
+### useGetReflectReflectionsQuery
+
+▸ **useGetReflectReflectionsQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetReflectReflectionsQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `first?`: `number` ; `id`: `string` ; `last?`: `number` ; `sorting?`: `AkashaReflectSortingInput`  }\> |
+| `options?` | `UseQueryOptions`<`GetReflectReflectionsQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1071](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1071)
+
+___
+
+### useGetReflectionByIdQuery
+
+▸ **useGetReflectionByIdQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetReflectionByIdQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseQueryOptions`<`GetReflectionByIdQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1008](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1008)
+
+___
+
+### useGetReflectionStreamQuery
+
+▸ **useGetReflectionStreamQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetReflectionStreamQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaReflectStreamFiltersInput` ; `first?`: `number` ; `indexer`: `string` ; `last?`: `number` ; `sorting?`: `AkashaReflectStreamSortingInput`  }\> |
+| `options?` | `UseQueryOptions`<`GetReflectionStreamQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:961](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L961)
+
+___
+
+### useGetReflectionsByAuthorDidQuery
+
+▸ **useGetReflectionsByAuthorDidQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetReflectionsByAuthorDidQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaReflectFiltersInput` ; `first?`: `number` ; `id`: `string` ; `last?`: `number` ; `sorting?`: `AkashaReflectSortingInput`  }\> |
+| `options?` | `UseQueryOptions`<`GetReflectionsByAuthorDidQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:886](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L886)
+
+___
+
+### useGetReflectionsFromBeamQuery
+
+▸ **useGetReflectionsFromBeamQuery**<`TData`, `TError`\>(`variables`, `options?`): `UseQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetReflectionsFromBeamQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaReflectInterfaceFiltersInput` ; `first?`: `number` ; `id`: `string` ; `last?`: `number` ; `sorting?`: `AkashaReflectInterfaceSortingInput`  }\> |
+| `options?` | `UseQueryOptions`<`GetReflectionsFromBeamQuery`, `TError`, `TData`, `QueryKey`\> |
+
+#### Returns
+
+`UseQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:818](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L818)
+
+___
+
+### useIndexBeamMutation
+
+▸ **useIndexBeamMutation**<`TError`, `TContext`\>(`options?`): `UseMutationResult`<`IndexBeamMutation`, `TError`, `Exact`<{ `capability?`: `Cacao_Capability` ; `jws?`: `Did_Jws`  }\>, `TContext`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TError` | `unknown` |
+| `TContext` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | `UseMutationOptions`<`IndexBeamMutation`, `TError`, `Exact`<{ `capability?`: `Cacao_Capability` ; `jws?`: `Did_Jws`  }\>, `TContext`\> |
+
+#### Returns
+
+`UseMutationResult`<`IndexBeamMutation`, `TError`, `Exact`<{ `capability?`: `Cacao_Capability` ; `jws?`: `Did_Jws`  }\>, `TContext`\>
+
+#### Defined in
+
+[hooks/src/generated/mutations.ts:44](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/mutations.ts#L44)
+
+___
+
+### useIndexContentBlockMutation
+
+▸ **useIndexContentBlockMutation**<`TError`, `TContext`\>(`options?`): `UseMutationResult`<`IndexContentBlockMutation`, `TError`, `Exact`<{ `capability?`: `Cacao_Capability` ; `jws?`: `Did_Jws`  }\>, `TContext`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TError` | `unknown` |
+| `TContext` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | `UseMutationOptions`<`IndexContentBlockMutation`, `TError`, `Exact`<{ `capability?`: `Cacao_Capability` ; `jws?`: `Did_Jws`  }\>, `TContext`\> |
+
+#### Returns
+
+`UseMutationResult`<`IndexContentBlockMutation`, `TError`, `Exact`<{ `capability?`: `Cacao_Capability` ; `jws?`: `Did_Jws`  }\>, `TContext`\>
+
+#### Defined in
+
+[hooks/src/generated/mutations.ts:65](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/mutations.ts#L65)
+
+___
+
+### useIndexProfileMutation
+
+▸ **useIndexProfileMutation**<`TError`, `TContext`\>(`options?`): `UseMutationResult`<`IndexProfileMutation`, `TError`, `Exact`<{ `capability?`: `Cacao_Capability` ; `jws?`: `Did_Jws`  }\>, `TContext`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TError` | `unknown` |
+| `TContext` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | `UseMutationOptions`<`IndexProfileMutation`, `TError`, `Exact`<{ `capability?`: `Cacao_Capability` ; `jws?`: `Did_Jws`  }\>, `TContext`\> |
+
+#### Returns
+
+`UseMutationResult`<`IndexProfileMutation`, `TError`, `Exact`<{ `capability?`: `Cacao_Capability` ; `jws?`: `Did_Jws`  }\>, `TContext`\>
+
+#### Defined in
+
+[hooks/src/generated/mutations.ts:107](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/mutations.ts#L107)
+
+___
+
+### useIndexReflectionMutation
+
+▸ **useIndexReflectionMutation**<`TError`, `TContext`\>(`options?`): `UseMutationResult`<`IndexReflectionMutation`, `TError`, `Exact`<{ `capability?`: `Cacao_Capability` ; `jws?`: `Did_Jws`  }\>, `TContext`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TError` | `unknown` |
+| `TContext` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | `UseMutationOptions`<`IndexReflectionMutation`, `TError`, `Exact`<{ `capability?`: `Cacao_Capability` ; `jws?`: `Did_Jws`  }\>, `TContext`\> |
+
+#### Returns
+
+`UseMutationResult`<`IndexReflectionMutation`, `TError`, `Exact`<{ `capability?`: `Cacao_Capability` ; `jws?`: `Did_Jws`  }\>, `TContext`\>
+
+#### Defined in
+
+[hooks/src/generated/mutations.ts:86](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/mutations.ts#L86)
+
+___
+
+### useInfiniteGetAppReleaseByIdQuery
+
+▸ **useInfiniteGetAppReleaseByIdQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetAppReleaseByIdQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"id"`` |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetAppReleaseByIdQuery`, `TError`, `TData`, `GetAppReleaseByIdQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:2200](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L2200)
+
+___
+
+### useInfiniteGetAppsByIdQuery
+
+▸ **useInfiniteGetAppsByIdQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetAppsByIdQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"id"`` |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetAppsByIdQuery`, `TError`, `TData`, `GetAppsByIdQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1963](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1963)
+
+___
+
+### useInfiniteGetAppsByPublisherDidQuery
+
+▸ **useInfiniteGetAppsByPublisherDidQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetAppsByPublisherDidQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"id"`` \| ``"sorting"`` \| ``"filters"`` \| ``"after"`` \| ``"before"`` \| ``"first"`` \| ``"last"`` |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaAppFiltersInput` ; `first?`: `number` ; `id`: `string` ; `last?`: `number` ; `sorting?`: `AkashaAppSortingInput`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetAppsByPublisherDidQuery`, `TError`, `TData`, `GetAppsByPublisherDidQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:2024](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L2024)
+
+___
+
+### useInfiniteGetAppsQuery
+
+▸ **useInfiniteGetAppsQuery**<`TData`, `TError`\>(`pageParamKey`, `variables?`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetAppsQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"sorting"`` \| ``"filters"`` \| ``"after"`` \| ``"before"`` \| ``"first"`` \| ``"last"`` |
+| `variables?` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaAppFiltersInput` ; `first?`: `number` ; `last?`: `number` ; `sorting?`: `AkashaAppSortingInput`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetAppsQuery`, `TError`, `TData`, `GetAppsQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1844](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1844)
+
+___
+
+### useInfiniteGetAppsReleasesByPublisherDidQuery
+
+▸ **useInfiniteGetAppsReleasesByPublisherDidQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetAppsReleasesByPublisherDidQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"id"`` \| ``"sorting"`` \| ``"filters"`` \| ``"after"`` \| ``"before"`` \| ``"first"`` \| ``"last"`` |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaAppReleaseFiltersInput` ; `first?`: `number` ; `id`: `string` ; `last?`: `number` ; `sorting?`: `AkashaAppReleaseSortingInput`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetAppsReleasesByPublisherDidQuery`, `TError`, `TData`, `GetAppsReleasesByPublisherDidQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:2086](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L2086)
+
+___
+
+### useInfiniteGetAppsReleasesQuery
+
+▸ **useInfiniteGetAppsReleasesQuery**<`TData`, `TError`\>(`pageParamKey`, `variables?`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetAppsReleasesQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"sorting"`` \| ``"filters"`` \| ``"after"`` \| ``"before"`` \| ``"first"`` \| ``"last"`` |
+| `variables?` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaAppReleaseFiltersInput` ; `first?`: `number` ; `last?`: `number` ; `sorting?`: `AkashaAppReleaseSortingInput`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetAppsReleasesQuery`, `TError`, `TData`, `GetAppsReleasesQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:2151](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L2151)
+
+___
+
+### useInfiniteGetAppsStreamQuery
+
+▸ **useInfiniteGetAppsStreamQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetAppsStreamQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"sorting"`` \| ``"filters"`` \| ``"indexer"`` \| ``"after"`` \| ``"before"`` \| ``"first"`` \| ``"last"`` |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaAppsStreamFiltersInput` ; `first?`: `number` ; `indexer`: `string` ; `last?`: `number` ; `sorting?`: `AkashaAppsStreamSortingInput`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetAppsStreamQuery`, `TError`, `TData`, `GetAppsStreamQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1915](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1915)
+
+___
+
+### useInfiniteGetBeamByIdQuery
+
+▸ **useInfiniteGetBeamByIdQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetBeamByIdQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"id"`` |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetBeamByIdQuery`, `TError`, `TData`, `GetBeamByIdQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:477](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L477)
+
+___
+
+### useInfiniteGetBeamStreamQuery
+
+▸ **useInfiniteGetBeamStreamQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetBeamStreamQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"sorting"`` \| ``"filters"`` \| ``"indexer"`` \| ``"after"`` \| ``"before"`` \| ``"first"`` \| ``"last"`` |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaBeamStreamFiltersInput` ; `first?`: `number` ; `indexer`: `string` ; `last?`: `number` ; `sorting?`: `AkashaBeamStreamSortingInput`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetBeamStreamQuery`, `TError`, `TData`, `GetBeamStreamQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:298](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L298)
+
+___
+
+### useInfiniteGetBeamsByAuthorDidQuery
+
+▸ **useInfiniteGetBeamsByAuthorDidQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetBeamsByAuthorDidQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"id"`` \| ``"sorting"`` \| ``"filters"`` \| ``"after"`` \| ``"before"`` \| ``"first"`` \| ``"last"`` |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaBeamFiltersInput` ; `first?`: `number` ; `id`: `string` ; `last?`: `number` ; `sorting?`: `AkashaBeamSortingInput`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetBeamsByAuthorDidQuery`, `TError`, `TData`, `GetBeamsByAuthorDidQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:430](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L430)
+
+___
+
+### useInfiniteGetBeamsQuery
+
+▸ **useInfiniteGetBeamsQuery**<`TData`, `TError`\>(`pageParamKey`, `variables?`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetBeamsQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"sorting"`` \| ``"filters"`` \| ``"after"`` \| ``"before"`` \| ``"first"`` \| ``"last"`` |
+| `variables?` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaBeamFiltersInput` ; `first?`: `number` ; `last?`: `number` ; `sorting?`: `AkashaBeamSortingInput`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetBeamsQuery`, `TError`, `TData`, `GetBeamsQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:361](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L361)
+
+___
+
+### useInfiniteGetBlockStorageByIdQuery
+
+▸ **useInfiniteGetBlockStorageByIdQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetBlockStorageByIdQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"id"`` |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetBlockStorageByIdQuery`, `TError`, `TData`, `GetBlockStorageByIdQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:644](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L644)
+
+___
+
+### useInfiniteGetContentBlockByIdQuery
+
+▸ **useInfiniteGetContentBlockByIdQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetContentBlockByIdQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"id"`` |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetContentBlockByIdQuery`, `TError`, `TData`, `GetContentBlockByIdQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:597](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L597)
+
+___
+
+### useInfiniteGetContentBlockStreamQuery
+
+▸ **useInfiniteGetContentBlockStreamQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetContentBlockStreamQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"sorting"`` \| ``"filters"`` \| ``"indexer"`` \| ``"after"`` \| ``"before"`` \| ``"first"`` \| ``"last"`` |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaContentBlockStreamFiltersInput` ; `first?`: `number` ; `indexer`: `string` ; `last?`: `number` ; `sorting?`: `AkashaContentBlockStreamSortingInput`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetContentBlockStreamQuery`, `TError`, `TData`, `GetContentBlockStreamQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:550](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L550)
+
+___
+
+### useInfiniteGetFollowDocumentsByDidQuery
+
+▸ **useInfiniteGetFollowDocumentsByDidQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetFollowDocumentsByDidQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"id"`` \| ``"sorting"`` \| ``"after"`` \| ``"before"`` \| ``"first"`` \| ``"last"`` \| ``"following"`` |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `first?`: `number` ; `following?`: `string` \| `string`[] ; `id`: `string` ; `last?`: `number` ; `sorting?`: `AkashaFollowSortingInput`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetFollowDocumentsByDidQuery`, `TError`, `TData`, `GetFollowDocumentsByDidQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:597](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L597)
+
+___
+
+### useInfiniteGetFollowersListByDidQuery
+
+▸ **useInfiniteGetFollowersListByDidQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetFollowersListByDidQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"id"`` \| ``"sorting"`` \| ``"after"`` \| ``"before"`` \| ``"first"`` \| ``"last"`` |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `first?`: `number` ; `id`: `string` ; `last?`: `number` ; `sorting?`: `AkashaFollowInterfaceSortingInput`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetFollowersListByDidQuery`, `TError`, `TData`, `GetFollowersListByDidQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1726](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1726)
+
+___
+
+### useInfiniteGetFollowingListByDidQuery
+
+▸ **useInfiniteGetFollowingListByDidQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetFollowingListByDidQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"id"`` \| ``"sorting"`` \| ``"after"`` \| ``"before"`` \| ``"first"`` \| ``"last"`` |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `first?`: `number` ; `id`: `string` ; `last?`: `number` ; `sorting?`: `AkashaFollowSortingInput`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetFollowingListByDidQuery`, `TError`, `TData`, `GetFollowingListByDidQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1646](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1646)
+
+___
+
+### useInfiniteGetIndexedStreamCountQuery
+
+▸ **useInfiniteGetIndexedStreamCountQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetIndexedStreamCountQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"filters"`` \| ``"indexer"`` |
+| `variables` | `Exact`<{ `filters?`: `AkashaIndexedStreamFiltersInput` ; `indexer`: `string`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetIndexedStreamCountQuery`, `TError`, `TData`, `GetIndexedStreamCountQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:768](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L768)
+
+___
+
+### useInfiniteGetIndexedStreamQuery
+
+▸ **useInfiniteGetIndexedStreamQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetIndexedStreamQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"sorting"`` \| ``"filters"`` \| ``"indexer"`` \| ``"after"`` \| ``"before"`` \| ``"first"`` \| ``"last"`` |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaIndexedStreamFiltersInput` ; `first?`: `number` ; `indexer`: `string` ; `last?`: `number` ; `sorting?`: `AkashaIndexedStreamSortingInput`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetIndexedStreamQuery`, `TError`, `TData`, `GetIndexedStreamQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:720](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L720)
+
+___
+
+### useInfiniteGetInterestsByDidQuery
+
+▸ **useInfiniteGetInterestsByDidQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetInterestsByDidQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"id"`` |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetInterestsByDidQuery`, `TError`, `TData`, `GetInterestsByDidQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1516](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1516)
+
+___
+
+### useInfiniteGetInterestsByIdQuery
+
+▸ **useInfiniteGetInterestsByIdQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetInterestsByIdQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"id"`` |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetInterestsByIdQuery`, `TError`, `TData`, `GetInterestsByIdQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1570](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1570)
+
+___
+
+### useInfiniteGetInterestsQuery
+
+▸ **useInfiniteGetInterestsQuery**<`TData`, `TError`\>(`pageParamKey`, `variables?`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetInterestsQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"after"`` \| ``"before"`` \| ``"first"`` \| ``"last"`` |
+| `variables?` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `first?`: `number` ; `last?`: `number`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetInterestsQuery`, `TError`, `TData`, `GetInterestsQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1388](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1388)
+
+___
+
+### useInfiniteGetInterestsStreamQuery
+
+▸ **useInfiniteGetInterestsStreamQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetInterestsStreamQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"sorting"`` \| ``"filters"`` \| ``"indexer"`` \| ``"after"`` \| ``"before"`` \| ``"first"`` \| ``"last"`` |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaInterestsStreamFiltersInput` ; `first?`: `number` ; `indexer`: `string` ; `last?`: `number` ; `sorting?`: `AkashaInterestsStreamSortingInput`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetInterestsStreamQuery`, `TError`, `TData`, `GetInterestsStreamQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1459](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1459)
+
+___
+
+### useInfiniteGetMyProfileQuery
+
+▸ **useInfiniteGetMyProfileQuery**<`TData`, `TError`\>(`pageParamKey`, `variables?`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetMyProfileQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | `string` \| `number` |
+| `variables?` | `Exact`<{ `[key: string]`: `never`;  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetMyProfileQuery`, `TError`, `TData`, `GetMyProfileQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:524](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L524)
+
+___
+
+### useInfiniteGetProfileByDidQuery
+
+▸ **useInfiniteGetProfileByDidQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetProfileByDidQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"id"`` |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetProfileByDidQuery`, `TError`, `TData`, `GetProfileByDidQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1186](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1186)
+
+___
+
+### useInfiniteGetProfileByIdQuery
+
+▸ **useInfiniteGetProfileByIdQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetProfileByIdQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"id"`` |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetProfileByIdQuery`, `TError`, `TData`, `GetProfileByIdQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1136](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1136)
+
+___
+
+### useInfiniteGetProfileStatsByDidQuery
+
+▸ **useInfiniteGetProfileStatsByDidQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetProfileStatsByDidQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"id"`` |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetProfileStatsByDidQuery`, `TError`, `TData`, `GetProfileStatsByDidQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1780](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1780)
+
+___
+
+### useInfiniteGetProfileStreamQuery
+
+▸ **useInfiniteGetProfileStreamQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetProfileStreamQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"sorting"`` \| ``"filters"`` \| ``"indexer"`` \| ``"after"`` \| ``"before"`` \| ``"first"`` \| ``"last"`` |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaProfileStreamFiltersInput` ; `first?`: `number` ; `indexer`: `string` ; `last?`: `number` ; `sorting?`: `AkashaProfileStreamSortingInput`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetProfileStreamQuery`, `TError`, `TData`, `GetProfileStreamQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1320](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1320)
+
+___
+
+### useInfiniteGetProfilesQuery
+
+▸ **useInfiniteGetProfilesQuery**<`TData`, `TError`\>(`pageParamKey`, `variables?`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetProfilesQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"sorting"`` \| ``"filters"`` \| ``"after"`` \| ``"before"`` \| ``"first"`` \| ``"last"`` |
+| `variables?` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaProfileFiltersInput` ; `first?`: `number` ; `last?`: `number` ; `sorting?`: `AkashaProfileSortingInput`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetProfilesQuery`, `TError`, `TData`, `GetProfilesQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1249](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1249)
+
+___
+
+### useInfiniteGetReflectReflectionsQuery
+
+▸ **useInfiniteGetReflectReflectionsQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetReflectReflectionsQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"id"`` \| ``"sorting"`` \| ``"after"`` \| ``"before"`` \| ``"first"`` \| ``"last"`` |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `first?`: `number` ; `id`: `string` ; `last?`: `number` ; `sorting?`: `AkashaReflectSortingInput`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetReflectReflectionsQuery`, `TError`, `TData`, `GetReflectReflectionsQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1089](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1089)
+
+___
+
+### useInfiniteGetReflectionByIdQuery
+
+▸ **useInfiniteGetReflectionByIdQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetReflectionByIdQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"id"`` |
+| `variables` | `Exact`<{ `id`: `string`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetReflectionByIdQuery`, `TError`, `TData`, `GetReflectionByIdQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:1026](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L1026)
+
+___
+
+### useInfiniteGetReflectionStreamQuery
+
+▸ **useInfiniteGetReflectionStreamQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetReflectionStreamQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"sorting"`` \| ``"filters"`` \| ``"indexer"`` \| ``"after"`` \| ``"before"`` \| ``"first"`` \| ``"last"`` |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaReflectStreamFiltersInput` ; `first?`: `number` ; `indexer`: `string` ; `last?`: `number` ; `sorting?`: `AkashaReflectStreamSortingInput`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetReflectionStreamQuery`, `TError`, `TData`, `GetReflectionStreamQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:979](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L979)
+
+___
+
+### useInfiniteGetReflectionsByAuthorDidQuery
+
+▸ **useInfiniteGetReflectionsByAuthorDidQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetReflectionsByAuthorDidQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"id"`` \| ``"sorting"`` \| ``"filters"`` \| ``"after"`` \| ``"before"`` \| ``"first"`` \| ``"last"`` |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaReflectFiltersInput` ; `first?`: `number` ; `id`: `string` ; `last?`: `number` ; `sorting?`: `AkashaReflectSortingInput`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetReflectionsByAuthorDidQuery`, `TError`, `TData`, `GetReflectionsByAuthorDidQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:904](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L904)
+
+___
+
+### useInfiniteGetReflectionsFromBeamQuery
+
+▸ **useInfiniteGetReflectionsFromBeamQuery**<`TData`, `TError`\>(`pageParamKey`, `variables`, `options?`): `UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TData` | `GetReflectionsFromBeamQuery` |
+| `TError` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `pageParamKey` | ``"id"`` \| ``"sorting"`` \| ``"filters"`` \| ``"after"`` \| ``"before"`` \| ``"first"`` \| ``"last"`` |
+| `variables` | `Exact`<{ `after?`: `string` ; `before?`: `string` ; `filters?`: `AkashaReflectInterfaceFiltersInput` ; `first?`: `number` ; `id`: `string` ; `last?`: `number` ; `sorting?`: `AkashaReflectInterfaceSortingInput`  }\> |
+| `options?` | `UseInfiniteQueryOptions`<`GetReflectionsFromBeamQuery`, `TError`, `TData`, `GetReflectionsFromBeamQuery`, `QueryKey`\> |
+
+#### Returns
+
+`UseInfiniteQueryResult`<`TData`, `TError`\>
+
+#### Defined in
+
+[hooks/src/generated/queries.ts:836](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/queries.ts#L836)
+
+___
+
+### useSetAppReleaseMutation
+
+▸ **useSetAppReleaseMutation**<`TError`, `TContext`\>(`options?`): `UseMutationResult`<`SetAppReleaseMutation`, `TError`, `Exact`<{ `i`: `SetAkashaAppReleaseInput`  }\>, `TContext`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TError` | `unknown` |
+| `TContext` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | `UseMutationOptions`<`SetAppReleaseMutation`, `TError`, `Exact`<{ `i`: `SetAkashaAppReleaseInput`  }\>, `TContext`\> |
+
+#### Returns
+
+`UseMutationResult`<`SetAppReleaseMutation`, `TError`, `Exact`<{ `i`: `SetAkashaAppReleaseInput`  }\>, `TContext`\>
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:629](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L629)
+
+___
+
+### useUpdateAkashaReflectMutation
+
+▸ **useUpdateAkashaReflectMutation**<`TError`, `TContext`\>(`options?`): `UseMutationResult`<`UpdateAkashaReflectMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaReflectInput`  }\>, `TContext`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TError` | `unknown` |
+| `TContext` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | `UseMutationOptions`<`UpdateAkashaReflectMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaReflectInput`  }\>, `TContext`\> |
+
+#### Returns
+
+`UseMutationResult`<`UpdateAkashaReflectMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaReflectInput`  }\>, `TContext`\>
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:327](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L327)
+
+___
+
+### useUpdateAppMutation
+
+▸ **useUpdateAppMutation**<`TError`, `TContext`\>(`options?`): `UseMutationResult`<`UpdateAppMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaAppInput`  }\>, `TContext`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TError` | `unknown` |
+| `TContext` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | `UseMutationOptions`<`UpdateAppMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaAppInput`  }\>, `TContext`\> |
+
+#### Returns
+
+`UseMutationResult`<`UpdateAppMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaAppInput`  }\>, `TContext`\>
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:699](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L699)
+
+___
+
+### useUpdateAppReleaseMutation
+
+▸ **useUpdateAppReleaseMutation**<`TError`, `TContext`\>(`options?`): `UseMutationResult`<`UpdateAppReleaseMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaAppReleaseInput`  }\>, `TContext`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TError` | `unknown` |
+| `TContext` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | `UseMutationOptions`<`UpdateAppReleaseMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaAppReleaseInput`  }\>, `TContext`\> |
+
+#### Returns
+
+`UseMutationResult`<`UpdateAppReleaseMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaAppReleaseInput`  }\>, `TContext`\>
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:653](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L653)
+
+___
+
+### useUpdateBeamMutation
+
+▸ **useUpdateBeamMutation**<`TError`, `TContext`\>(`options?`): `UseMutationResult`<`UpdateBeamMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaBeamInput`  }\>, `TContext`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TError` | `unknown` |
+| `TContext` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | `UseMutationOptions`<`UpdateBeamMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaBeamInput`  }\>, `TContext`\> |
+
+#### Returns
+
+`UseMutationResult`<`UpdateBeamMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaBeamInput`  }\>, `TContext`\>
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:239](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L239)
+
+___
+
+### useUpdateContentBlockMutation
+
+▸ **useUpdateContentBlockMutation**<`TError`, `TContext`\>(`options?`): `UseMutationResult`<`UpdateContentBlockMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaContentBlockInput`  }\>, `TContext`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TError` | `unknown` |
+| `TContext` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | `UseMutationOptions`<`UpdateContentBlockMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaContentBlockInput`  }\>, `TContext`\> |
+
+#### Returns
+
+`UseMutationResult`<`UpdateContentBlockMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaContentBlockInput`  }\>, `TContext`\>
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:283](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L283)
+
+___
+
+### useUpdateFollowMutation
+
+▸ **useUpdateFollowMutation**<`TError`, `TContext`\>(`options?`): `UseMutationResult`<`UpdateFollowMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaFollowInput`  }\>, `TContext`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TError` | `unknown` |
+| `TContext` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | `UseMutationOptions`<`UpdateFollowMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaFollowInput`  }\>, `TContext`\> |
+
+#### Returns
+
+`UseMutationResult`<`UpdateFollowMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaFollowInput`  }\>, `TContext`\>
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:485](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L485)
+
+___
+
+### useUpdateInterestsMutation
+
+▸ **useUpdateInterestsMutation**<`TError`, `TContext`\>(`options?`): `UseMutationResult`<`UpdateInterestsMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaProfileInterestsInput`  }\>, `TContext`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TError` | `unknown` |
+| `TContext` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | `UseMutationOptions`<`UpdateInterestsMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaProfileInterestsInput`  }\>, `TContext`\> |
+
+#### Returns
+
+`UseMutationResult`<`UpdateInterestsMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaProfileInterestsInput`  }\>, `TContext`\>
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:429](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L429)
+
+___
+
+### useUpdateProfileMutation
+
+▸ **useUpdateProfileMutation**<`TError`, `TContext`\>(`options?`): `UseMutationResult`<`UpdateProfileMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaProfileInput`  }\>, `TContext`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `TError` | `unknown` |
+| `TContext` | `unknown` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `options?` | `UseMutationOptions`<`UpdateProfileMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaProfileInput`  }\>, `TContext`\> |
+
+#### Returns
+
+`UseMutationResult`<`UpdateProfileMutation`, `TError`, `Exact`<{ `i`: `UpdateAkashaProfileInput`  }\>, `TContext`\>
+
+#### Defined in
+
+[hooks/src/generated/composedb.ts:371](https://github.com/AKASHAorg/akasha-core/blob/6ca157f7/libs/hooks/src/generated/composedb.ts#L371)
