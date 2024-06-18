@@ -78,15 +78,16 @@ const config = {
       "docusaurus-plugin-typedoc",
       {
         id: "akasha-ui-hooks",
-        entryPoints: ["./akasha-core/libs/hooks/src/index.ts", "./akasha-core/libs/hooks/src/generated/index.ts"],
+        entryPoints: ["./akasha-core/libs/hooks/src/generated/index.ts"],
         entryPointStrategy: "expand",
         tsconfig: "./akasha-core/libs/hooks/tsconfig.json",
         readme: "none",
-        out: "./react-hooks",
+        out: "./react-hooks/hooks-reference",
         name: "React hooks",
         excludeInternal: true,
         sidebar: {
           categoryLabel: "React Hooks",
+          sidebarLabel: "React Hooks",
           position: 6,
         },
         frontmatter: null,

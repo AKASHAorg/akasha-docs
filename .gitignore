@@ -112,5 +112,5 @@ dist
 *.gz
 
 # generated docs folders
-docs/react-hooks/
+docs/react-hooks/hooks-reference/
 docs/sdk/api-reference/
