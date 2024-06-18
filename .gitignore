@@ -110,3 +110,8 @@ dist
 .docusaurus
 
 *.gz
+
+# generated docs folders
+docs/react-hooks/index.md
+docs/react-hooks/modules.md
+docs/sdk/api-reference/**/*.md
