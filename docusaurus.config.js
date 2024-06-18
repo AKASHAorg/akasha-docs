@@ -81,7 +81,7 @@ const config = {
         entryPoints: ["./akasha-core/libs/hooks/src/generated/index.ts"],
         entryPointStrategy: "expand",
         tsconfig: "./akasha-core/libs/hooks/tsconfig.json",
-        readme: "docs/react-hooks/_hooks-list_.md",
+        readme: "none",
         out: "./react-hooks",
         name: "React hooks",
         excludeInternal: true,
