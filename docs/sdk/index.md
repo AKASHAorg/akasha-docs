@@ -109,7 +109,7 @@ Below is an example of how to access the current IndexedDB database stored in th
 
 ```typescript
 import getSDK from "@akashaorg/awf-sdk";
-getSDK().services.db.getDb();
+const res = await getSDK().services.db.getDb();
 ```
 #### Access logging services
 
@@ -119,7 +119,7 @@ Below is an example of how to create a logger associated with a specific app and
 
 ```typescript
 import getSDK from "@akashaorg/awf-sdk";
- getSDK().services.log.create('example-app-name');
+const logger = getSDK().services.log.create('example-app-name');
 
   if (error) {
     logger.warn('Your error message here');
