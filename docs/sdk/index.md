@@ -33,5 +33,3 @@ const sdk = init();
 ```
 
 The main difference between the two is that `getSDK()` ensures that the sdk object is instantiated only once (singleton) whereas `init()` will instantiate it every time it's called.
-
-_returns_ [SDK instance](./sdk-instance)
