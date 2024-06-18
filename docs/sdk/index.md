@@ -143,7 +143,7 @@ const currentUser = await getSDK().api.auth.getCurrentUser();
 
 Endpoints related to the SDK's global channel are available under the `globalChannel` namespace inside `api`.
 
-For example, to access global channel and perform certain action when certain events are emitted, you can subscribe to those events:
+For example, to perform certain action when certain events are emitted, you can access the global channel and subscribe to those events:
 
 ```typescript
 import getSDK from "@akashaorg/awf-sdk";
