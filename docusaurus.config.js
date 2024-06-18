@@ -48,22 +48,22 @@ const config = {
       "docusaurus-plugin-typedoc",
       {
         id: "akasha-sdk-main",
-        entryPoints: ["./akasha-core/sdk/src/index.ts"],
+        entryPoints: ["./akasha-core/libs/sdk/src/index.ts"],
         entryPointStrategy: "expand",
-        tsconfig: "akasha-core/sdk/tsconfig.json",
+        tsconfig: "./akasha-core/libs/sdk/tsconfig.json",
         readme: "none",
         out: "./sdk/api-reference",
         name: "AKASHA SDK reference",
         categorizeByGroup: false,
         // plugin
-        plugin: ["typedoc-plugin-missing-exports"],
-        internalModule: "sdk",
+        // plugin: ["typedoc-plugin-missing-exports"],
+        // internalModule: "sdk",
         // end_plugin
         excludeInternal: true,
         categoryOrder: ["API", "Services"],
         sidebar: {
           categoryLabel: "SDK reference",
-          position: 3,
+          position: 5,
         },
         hideMembersSymbol: true,
         frontmatter: {
@@ -74,24 +74,25 @@ const config = {
         },
       },
     ],
-    // [
-    //   "docusaurus-plugin-typedoc",
-    //   {
-    //     id: "akasha-ui-hooks",
-    //     entryPoints: ["./akasha-core/ui/hooks/src/generated/hooks-new.ts"],
-    //     entryPointStrategy: "expand",
-    //     tsconfig: "./akasha-core/ui/hooks/tsconfig.json",
-    //     readme: "docs/react-hooks/_hooks-list_.md",
-    //     out: "./react-hooks",
-    //     name: "React hooks",
-    //     excludeInternal: true,
-    //     sidebar: {
-    //       categoryLabel: "React hooks",
-    //       position: 5,
-    //     },
-    //     frontmatter: null,
-    //   },
-    // ],
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        id: "akasha-ui-hooks",
+        entryPoints: ["./akasha-core/libs/hooks/src/generated/index.ts", "./akasha-core/libs/hooks/src/store/index.ts", "./akasha-core/libs/hooks/src/index.ts"],
+        entryPointStrategy: "expand",
+        tsconfig: "./akasha-core/libs/hooks/tsconfig.json",
+        readme: "none",
+        out: "./react-hooks",
+        name: "React hooks",
+        excludeInternal: true,
+        sidebar: {
+          categoryLabel: "React Hooks",
+          sidebarLabel: "React Hooks",
+          position: 6,
+        },
+        frontmatter: null,
+      },
+    ],
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -101,10 +102,6 @@ const config = {
       },
       navbar: {
         title: "AKASHA Docs",
-        // logo: {
-        // alt: 'My Site Logo',
-        // src: 'img/logo.svg',
-        // },
         items: [
           {
             type: "doc",
@@ -112,10 +109,9 @@ const config = {
             position: "left",
             label: "Docs",
           },
-          // {to: '/blog', label: 'Tutorials', position: 'left'},
           {
             href: "https://github.com/AKASHAorg/akasha-docs",
-            label: "GitHub",
+            label: "View on GitHub",
             position: "right",
           },
         ],
@@ -138,10 +134,6 @@ const config = {
                 label: "Integrations",
                 to: "/integrations",
               },
-              {
-                label: "SDK",
-                to: "/sdk",
-              },
             ],
           },
           {
@@ -152,6 +144,10 @@ const config = {
                 href: "https://discord.com/invite/JqqKasJ",
               },
               {
+                label: "Telegram",
+                href: "https://t.me/worldofethereum",
+              },
+              {
                 label: "Twitter",
                 href: "https://twitter.com/AKASHAorg",
               },
@@ -160,10 +156,6 @@ const config = {
           {
             title: "More",
             items: [
-              // {
-              //   label: 'Tutorials',
-              //   to: '/blog',
-              // },
               {
                 label: "GitHub",
                 href: "https://github.com/AKASHAorg",
@@ -172,10 +164,14 @@ const config = {
                 label: "Docs GitHub",
                 href: "https://github.com/AKASHAorg/akasha-docs",
               },
+              {
+                label: "Blog",
+                href: "https://blog.akasha.org",
+              },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} AKASHA Foundation.`,
+        copyright: `Copyright ©${new Date().getFullYear()} AKASHA Foundation`,
       },
       prism: {
         theme: lightCodeTheme,

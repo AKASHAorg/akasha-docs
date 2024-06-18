@@ -1,6 +1,25 @@
-# Website
+# AKASHA Documentation
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+
+## Local Development
+
+### Init and Update Submodules
+First time running this project locally? please use;
+```
+$ git submodule update --init --recursive
+```
+
+This fetches and updates the linked submodules. Subsequently, you may use;
+```
+$ git submodule update --recursive --remote
+```
+
+### Set up Algolia
+- Create an account on Algolia (if you already have one, skip to next step)
+- Create an Index and copy out its `Application ID` and `Search API Key`
+-  Update the matching fields in the [config file](./docusaurus.config.js)
+- Read more about the DocSearch Migration [here](https://docusaurus.io/blog/2021/11/21/algolia-docsearch-migration)
 
 ### Installation
 
@@ -8,8 +27,12 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 $ yarn
 ```
 
-### Local Development
+### Bootstrap files
+```
+$ yarn run bootstrap
+```
 
+### Start Local Server
 ```
 $ yarn start
 ```
@@ -24,7 +47,7 @@ $ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-### Deployment
+### Deploy
 
 Using SSH:
 
