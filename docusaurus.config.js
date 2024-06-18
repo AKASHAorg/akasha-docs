@@ -78,7 +78,7 @@ const config = {
       "docusaurus-plugin-typedoc",
       {
         id: "akasha-ui-hooks",
-        entryPoints: ["./akasha-core/libs/hooks/src/generated/index.ts"],
+        entryPoints: ["./akasha-core/libs/hooks/src/index.ts", "./akasha-core/libs/hooks/src/generated/index.ts"],
         entryPointStrategy: "expand",
         tsconfig: "./akasha-core/libs/hooks/tsconfig.json",
         readme: "none",
