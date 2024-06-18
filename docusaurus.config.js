@@ -113,11 +113,6 @@ const config = {
             label: "View on GitHub",
             position: "right",
           },
-          {
-            href: "https://github.com/AKASHAorg/akasha-docs",
-            label: "View on GitHub",
-            position: "right",
-          },
         ],
       },
       footer: {
