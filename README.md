@@ -2,12 +2,6 @@
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-## Installation
-
-```
-$ yarn
-```
-
 ## Local Development
 
 ### Init and Update Submodules
@@ -27,6 +21,16 @@ $ git submodule update --recursive --remote
 -  Update the matching fields in the [config file](./docusaurus.config.js)
 - Read more about the DocSearch Migration [here](https://docusaurus.io/blog/2021/11/21/algolia-docsearch-migration)
 
+### Installation
+
+```
+$ yarn
+```
+
+### Bootstrap files
+```
+$ yarn run bootstrap
+```
 
 ### Start Local Server
 ```
