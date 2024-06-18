@@ -1,10 +1,10 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Create an application
 
-Applications are the core of AKASHA. They are the building blocks that powers a world (link to world definition here).
+Applications are the core of AKASHA. They are the building blocks that powers a [World](../../glossary.md#world).
 
 ## App Folder Structure
 

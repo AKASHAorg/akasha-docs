@@ -1,9 +1,9 @@
 ---
-sidebar_position: 1
+sidebar_position: 5
 sidebar_label: SDK Overview
 ---
 
-# SDK overview
+# SDK Overview
 
 The AKASHA SDK is used in every world instance and provides the core functionality to interact with different services and 3rd parties (ex. Metamask, Lit Protocol, Ceramic, ComposeDB, Infura, etc.).
 
@@ -175,6 +175,3 @@ For example, to get the stats related to a profile, you will need to call the `g
 import getSDK from "@akashaorg/awf-sdk";
 const res = await getSDK().api.profile.getProfileStats('a profile DID');
 ```
-
-
-_returns_ [SDK instance](./sdk-instance)
