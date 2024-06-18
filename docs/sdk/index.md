@@ -9,11 +9,15 @@ The AKASHA SDK is used in every world instance and provides the core functionali
 
 The SDK is essentially divided into two parts: `services` and `api`.
 
-- `services` consists of various services related to Ceramic, error logging, GQL, cache stashing, database management, app settings, and much more.
+- `services` consists of various services related to Ceramic, error logging, GraphQL, cache stashing, database management, app settings, and much more.
 
-- `api` consists of various API endpoints related to the global channel, the authentication service and the profile service.
+- `api` contains various API endpoints related to the global channel, the authentication service and the profile service.
 
-In terms of structure, the SDK consists of the following modules:
+### Project Folder Structure
+
+This section might be helpful if you are interested in understanding how the SDK package is organized from the inside when browsing our Github repo.
+
+In terms of folder structure, the SDK consists of the following modules:
 
 - Authentication: This module is in charge of signing the user in, managing user's session, and taking care of private message decryption.
 
