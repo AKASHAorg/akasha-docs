@@ -6739,6 +6739,7 @@ __metadata:
     react-dom: "npm:^18.3.1"
     typedoc: "npm:0.25.13"
     typedoc-plugin-markdown: "npm:4.0.3"
+    typedoc-plugin-merge-modules: "npm:^5.1.0"
     typedoc-plugin-missing-exports: "npm:2.3.0"
     typescript: "npm:5.4.2"
   languageName: unknown
@@ -16730,6 +16731,15 @@ __metadata:
   peerDependencies:
     typedoc: 0.25.x
   checksum: 10/ef8eac8e8e614025552426cd265928a46a9eed57da6e5f802e9864924ec7ae99c3d04fb9fd429768cb1e3254ca31577f1b35e60ec6342d79b4229cbe77e6c6d5
+  languageName: node
+  linkType: hard
+
+"typedoc-plugin-merge-modules@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "typedoc-plugin-merge-modules@npm:5.1.0"
+  peerDependencies:
+    typedoc: 0.24.x || 0.25.x
+  checksum: 10/4ff170c03cf0942eb2184515ffb1ddb4bfb7990ee7d7d51b5a0fcf63297f997dba72321696abe57237887b28b5e9d2902806f3d450a1171923f78551042cf5d7
   languageName: node
   linkType: hard
 

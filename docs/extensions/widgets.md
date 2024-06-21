@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-sidebar_label: Widgets Overview
+sidebar_label: Widgets
 ---
 
 # Widgets Overview

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: Apps Overview
+sidebar_label: Applications
 ---
 
 # Applications Overview

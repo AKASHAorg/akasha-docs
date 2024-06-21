@@ -112,6 +112,8 @@ dist
 *.gz
 
 # generated docs folders
-docs/react-hooks/
+docs/react-hooks/.react-hooks-reference
 docs/sdk/api-reference/
-docs/event-bus/ui-events-bus
+docs/event-bus/.ui-events-bus
+docs/design-system/core
+docs/design-system/components
