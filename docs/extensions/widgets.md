@@ -71,4 +71,3 @@ pathToActiveWhen(['/some/path/1', '/app1'])
 🚫 https://app.com/other/app1
 🚫 https://app.com/some/1
 ```
-

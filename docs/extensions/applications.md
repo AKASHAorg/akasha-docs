@@ -5,7 +5,7 @@ sidebar_label: Apps Overview
 
 # Applications Overview
 
-An application is a micro-frontend that complements and extends your web3 social network experience. Applications are the main building blocks of a world and it can be seen as a standalone SPA's (Single Page Application) except that they 
+An application is a micro-frontend that complements and extends your web3 social network experience. Applications are the main building blocks of a world and it can be seen as a standalone SPA's (Single Page Application) except that they
 are loaded, mounted and unmounted by the underlying system `(App Loader)` which is a thin layer built on top of the [single-spa](https://single-spa.js.org/) microfrontends library.
 
 Some of default apps that are available in Akasha World include:

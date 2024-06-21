@@ -1,16 +1,17 @@
 ---
 sidebar_position: 1
+sidebar_label: Create an App
 ---
 
 # Create an application
 
-Applications are the core of AKASHA. They are the building blocks that powers a [World](../../glossary.md#world).
+Applications are the core of AKASHA. They are the building blocks that powers a [World](../glossary.md#world).
 
 ## App Folder Structure
 
 In order to maintain consistency between different apps, we recommend creating a similar top level folder structure:
 
-```treeview title='Basic App Directory Structure'
+```treeview title="Basic App Directory Structure"
 ├── src
 │   ├── components
 │   │   ├── app.tsx // root component of your app

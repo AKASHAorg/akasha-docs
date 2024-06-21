@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-pagination_next: integrations/applications/create-an-app
+pagination_next: extensions/index
 ---
 
 # Development Quickstart
@@ -101,4 +101,5 @@ You will need to accept the certificate in your browser.
 :::
 
 **Congrats!** You're ready to start developing.
-Let's start by [creating a super simple app](/docs/integrations/applications/create-an-app.md).
+
+Before diving into creating simple app, let's learn more about [extensions](/docs/extensions/index.md). Once you're ready, you can start by [building a super simple app](/docs/tutorials/create-an-app.md)

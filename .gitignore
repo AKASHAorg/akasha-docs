@@ -114,3 +114,4 @@ dist
 # generated docs folders
 docs/react-hooks/
 docs/sdk/api-reference/
+docs/event-bus/ui-events-bus

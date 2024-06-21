@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const {themes} = require('prism-react-renderer');
+const lightTheme = themes.github;
+const darkTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -21,17 +21,6 @@ const config = {
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        // docs: {
-        //   sidebarPath: require.resolve('./sidebars.js'),
-        //   // Please change this to your repo.
-        //   editUrl: 'https://github.com/AKASHAorg/akasha-docs',
-        // },
-        // blog: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   editUrl:
-        //     'https://github.com/AKASHAorg/akasha-docs',
-        // },
         docs: {
           // required to set the doc with / slug as landing page
           routeBasePath: "/",
@@ -52,26 +41,16 @@ const config = {
         entryPointStrategy: "expand",
         tsconfig: "./akasha-core/libs/sdk/tsconfig.json",
         readme: "none",
-        out: "./sdk/api-reference",
+        out: "./docs/sdk/api-reference",
         name: "AKASHA SDK reference",
         categorizeByGroup: false,
-        // plugin
-        // plugin: ["typedoc-plugin-missing-exports"],
-        // internalModule: "sdk",
-        // end_plugin
         excludeInternal: true,
         categoryOrder: ["API", "Services"],
         sidebar: {
           categoryLabel: "SDK reference",
           position: 5,
         },
-        hideMembersSymbol: true,
-        frontmatter: {
-          pagination_prev: null,
-          pagination_next: null,
-          hide_title: true,
-          description: "Test Description",
-        },
+        fileExtension: "mdx"
       },
     ],
     [
@@ -82,7 +61,7 @@ const config = {
         entryPointStrategy: "expand",
         tsconfig: "./akasha-core/libs/hooks/tsconfig.json",
         readme: "none",
-        out: "./react-hooks",
+        out: "./docs/react-hooks",
         name: "React hooks",
         excludeInternal: true,
         sidebar: {
@@ -90,9 +69,25 @@ const config = {
           sidebarLabel: "React Hooks",
           position: 6,
         },
-        frontmatter: null,
+        stripYamlFrontmatter: true,
+        fileExtension: "mdx"
       },
     ],
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        id: "ui-events-bus",
+        entryPoints: ["./akasha-core/libs/typings/src/ui/ui-events.ts"],
+        entryPointStrategy: "resolve",
+        tsconfig: "./akasha-core/libs/typings/tsconfig.json",
+        out: "./docs/event-bus/ui-events-bus",
+        name: "UI Events",
+        stripYamlFrontmatter: true,
+        hidePageTitle: true,
+        enumMembersFormat: 'table',
+        fileExtension: "mdx"
+      }
+    ]
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -103,12 +98,6 @@ const config = {
       navbar: {
         title: "AKASHA Docs",
         items: [
-          {
-            type: "doc",
-            docId: "index",
-            position: "left",
-            label: "Docs",
-          },
           {
             href: "https://github.com/AKASHAorg/akasha-docs",
             label: "View on GitHub",
@@ -174,33 +163,36 @@ const config = {
         copyright: `Copyright ©${new Date().getFullYear()} AKASHA Foundation`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-      algolia: {
-        // The application ID provided by Algolia
-        appId: process.env.ALGOLIA_APP_ID,
-
-        // Public API key
-        apiKey: process.env.ALGOLIA_API_KEY,
-
-        indexName: process.env.ALGOLIA_INDEX_NAME,
-
-        // Optional: see doc section below
-        contextualSearch: true,
-
-        // Optional: Specify domains where the navigation should occur through window.location instead on history.push.
-        // externalUrlRegex: 'external\\.com|domain\\.com',
-
-        // Optional: Algolia search parameters
-        searchParameters: {},
-
-        // Optional: path for search page that enabled by default (`false` to disable it)
-        searchPagePath: 'search',
-
-        //... other Algolia params
+        theme: lightTheme,
+        darkTheme: darkTheme,
       },
     }),
 };
+
+if (process.env['NODE_ENV'] === 'production' && !!config.themeConfig) {
+    config.themeConfig.algolia = {
+      // The application ID provided by Algolia
+      appId: process.env.ALGOLIA_APP_ID,
+
+      // Public API key
+      apiKey: process.env.ALGOLIA_API_KEY,
+
+      indexName: process.env.ALGOLIA_INDEX_NAME,
+
+      // Optional: see doc section below
+      contextualSearch: true,
+
+      // Optional: Specify domains where the navigation should occur through window.location instead on history.push.
+      // externalUrlRegex: 'external\\.com|domain\\.com',
+
+      // Optional: Algolia search parameters
+      searchParameters: {},
+
+      // Optional: path for search page that enabled by default (`false` to disable it)
+      searchPagePath: 'search',
+
+      //... other Algolia params
+    }
+}
 
 module.exports = config;

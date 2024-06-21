@@ -1,11 +1,17 @@
 ---
 sidebar_position: 6
-sidebar_label: Extensions
+sidebar_label: Extension Points
 ---
 
 # Extensions (extension-points)
 
 Extension points are components exposed by an app that can be mounted at any level inside the same app or other apps or widgets. These components can provide additional functionalities to the already rendered elements. For example a like button extension point can be rendered on a beam card, but also on the profile app. A follow button can be rendered on a user's profile and also on a profile-related widget etc.
+
+## Extension points example usecase
+- insert a like button into a beam-card
+- display the beam editor anywhere you want in your extension
+- display the "Flag" button on any entity - provided by the Vibes App
+
 
 ## Interface
 
@@ -26,7 +32,7 @@ To define an extension the following properties must be set:
 
 **mountsIn** -> the slot id of the area (defined in the layout widget) on which the app mounts.
 
-It is also possible to control whether the extension should be loaded or not using the `activeWhen` property. This mechanism is exactly the same as the one used for [contextual widgets](./widgets/index.md#contextual-widgets)
+It is also possible to control whether the extension should be loaded or not using the `activeWhen` property. This mechanism is exactly the same as the one used for [contextual widgets](widgets.md#contextual-widgets)
 
 ## Using extensions
 
