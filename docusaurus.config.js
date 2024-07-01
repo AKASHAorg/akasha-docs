@@ -305,9 +305,13 @@ const config = {
                 to: "/dev-quickstart",
               },
               {
-                label: "Integrations",
-                to: "/integrations",
+                label: "Glossary",
+                to: "/glossary"
               },
+              {
+                label: "Extensions",
+                to: "/extensions",
+              }
             ],
           },
           {
