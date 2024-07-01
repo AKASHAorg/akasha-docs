@@ -23,7 +23,7 @@ Registering content-blocks will require the following properties:
 }
 ```
 
-**[loadingFn](./loading-function)** -> - defines how the application is mounted/unmounted by importing the single-spa-react lifecycle methods.
+**[loadingFn](./loading_function.md)** -> - defines how the application is mounted/unmounted by importing the single-spa-react lifecycle methods.
 
 **propertyType** -> used to match the content published through this content.
 
@@ -41,7 +41,7 @@ A content block should handle 2 modes which is controlled through the `props.blo
 
 ### editor-mode
 
-This mode is displayed when the block is mounted inside the [editor](./editor). All the logic for data input and validation is handled internally by the block.
+This mode is displayed when the block is mounted inside the [editor](./editor.md). All the logic for data input and validation is handled internally by the block.
 
 In edit mode the content block must expose a simple api using React's `useImperativeHandle` to allow editor to use it for publishing. The ref is passed as prop so there is no need to use forwardRef.
 
@@ -72,12 +72,12 @@ The interface of a content-block model is:
 contentBlock = {
     // controls the visiblity of this block
     // true when visible
-    active: boolean, 
-    // the version of the app that this 
+    active: boolean,
+    // the version of the app that this
     // block was published with
     appVersionID: string,
-    // the content-nodes of this block, these are 
-    // the actual values that were inserted by the user 
+    // the content-nodes of this block, these are
+    // the actual values that were inserted by the user
     content: [titleNode, bodyNode],
     // the creation date of this content-block
     createdAt: new Date().toISOString(),

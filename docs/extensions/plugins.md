@@ -5,7 +5,7 @@ sidebar_label: Plugins
 
 # Plugins
 
-Integration with other apps can also happen at the data layer. Until now, we've presented a few ways in which apps can display different functionalities belonging to other apps (through [extension points](./extensions) and [content-blocks](./content-blocks)) but in some cases we are only interested in data. This is where we use plugins.
+Integration with other apps can also happen at the data layer. Until now, we've presented a few ways in which apps can display different functionalities belonging to other apps (through [extension points](./extension_points.md) and [content-blocks](./content_blocks.md)) but in some cases we are only interested in data. This is where we use plugins.
 
 ::::info
 Plugins do not `render` anything in the view but can be used to store, retrieve and manipulate data.

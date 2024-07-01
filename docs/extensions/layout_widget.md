@@ -61,7 +61,7 @@ The area that defines the placement of the sidebar.
 
 - sticky top
 - loaded on every page
-- can be toggled using [HideSidebar/ShowSidebar](/docs/event-bus/ui-events/#eventtypes) events fired using [uiEvents](/docs/event-bus/ui-events/) bus
+- can be toggled using [HideSidebar/ShowSidebar](../event-bus/ui-events/index.md#eventtypes) events fired using [uiEvents](../event-bus/ui-events/) bus
 - toggled off by default, on mobile
 
 **Example**
