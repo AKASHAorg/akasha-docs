@@ -11,6 +11,7 @@
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
+    "graphql-doc": "docusaurus graphql-to-doc:composedb-models",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
@@ -20,8 +21,12 @@
   "dependencies": {
     "@docusaurus/core": "^3.4.0",
     "@docusaurus/preset-classic": "^3.4.0",
+    "@graphql-markdown/helpers": "^1.0.6",
+    "@graphql-tools/graphql-file-loader": "^8.0.1",
+    "@graphql-tools/url-loader": "^8.0.2",
     "@mdx-js/react": "^3.0.1",
     "clsx": "^2.1.1",
+    "graphql-config": "^5.0.3",
     "prism-react-renderer": "^2.3.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -29,9 +34,11 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.4.0",
     "@docusaurus/tsconfig": "^3.4.0",
+    "@graphql-markdown/docusaurus": "^1.24.2",
     "@types/react": "18.3.3",
     "docusaurus-plugin-includes": "^1.1.5",
     "docusaurus-plugin-typedoc": "^1.0.1",
+    "graphql": "^16.9.0",
     "typedoc": "0.25.13",
     "typedoc-plugin-markdown": "4.0.3",
     "typedoc-plugin-merge-modules": "^5.1.0",

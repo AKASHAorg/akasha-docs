@@ -112,8 +112,11 @@ dist
 *.gz
 
 # generated docs folders
-docs/react-hooks/.react-hooks-reference
-docs/sdk/api-reference/
-docs/event-bus/.ui-events-bus
-docs/design-system/core
-docs/design-system/components
+docs/react-hooks/hooks
+docs/sdk/api-reference
+docs/event-bus/ui-events
+docs/event-bus/global-events
+docs/design-system/design-system-core
+docs/design-system/design-system-components
+docs/composedb-models/*
+!docs/composedb-models/_category_.json

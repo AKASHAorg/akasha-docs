@@ -5,30 +5,7 @@ sidebar_label: Create an App
 
 # Create an application
 
-Applications are the core of AKASHA. They are the building blocks that powers a [World](../glossary.md#world).
-
-## App Folder Structure
-
-In order to maintain consistency between different apps, we recommend creating a similar top level folder structure:
-
-```treeview title="Basic App Directory Structure"
-├── src
-│   ├── components
-│   │   ├── app.tsx // root component of your app
-│   │   ├── index.tsx // single-spa-react lifecycle exports
-│   └── index.tsx // registration function export
-├── package.json
-├── README.md
-├── tsconfig.json
-├── yarn.lock
-└── webpack.config.js
-```
-
-## Loading/Unloading Apps
-
-Before loading and unloading apps, they must be registered in the app-loader module.
-
-// @TODO: describe how to register apps
+Make sure you already followed the [extension bootstrapping](index.md) steps and after you have the whole setups done, proceed by creating a `src` folder in the root of you plugin.
 
 ## Registration Object Interface
 
@@ -74,7 +51,7 @@ $ mkdir ui/apps/hello-ethereum-world
 
 ```bash
 $ yarn init
-yarn init v1.22.18
+yarn init
 question name (hello-ethereum-world): @test/hello-ethereum-world
 question version (1.0.0): (empty)
 question description: A simple hello world app
@@ -178,7 +155,7 @@ export const unmount = reactLifecycles.unmount;
 import * as React from "react";
 
 const HelloEthereumWorldApp = (props) => {
-  return <div>Hello Akasha World</div>;
+  return <div>Hello Ethereum World</div>;
 };
 
 export default HelloEthereumWorldApp;

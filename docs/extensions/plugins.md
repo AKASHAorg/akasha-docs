@@ -15,31 +15,33 @@ For example, let's say we are building an app, and we require a property from a 
 
 It is **NOT** mandatory for the applications to also provide a plugin. However, the plugin system is a quite powerful way to integrate with other apps at the data layer.
 
-## Creating plugins
+## Registration
+Unlike the apps and widget plugins are registered using the `getPlugin` function. getPlugin should be a named export from the entry file. This is an `async` method that should return an object. There is no standard in the shape on this object however keep in mind that changing it should be done preserving backward compatibility.
 
-Creating a plugin requires another named export from the root index file called `getPlugin`. This is an `async` method that should return an object. There is no standard in the shape on this object however keep in mind that changing it should be done preserving backward compatibility.
+Example of a plugin registration function:
 
-Example of a plugin:
+```ts title="index.ts"
 
-```ts
-// this plugin saves data to localstorage.
 export const getPlugin = async () => {
   return {
-    saveToLocalStorage: (key: string, data: string) => localStorage.setItem(key, data),
-    getFromLocalStorage: (key) => localStorage.getItem(key),
+    // my plugin properties
   };
 };
 ```
 
+Plugins are registered first, before
+
 ## Accessing and using plugins
 
-To access a plugin in the register function you should use the function's param. Example:
+Plugins are passed to the register function and as well as to the root extension's component via props.
+
+Example of usage of a plugin in the register function:
 
 ```ts
 export const register = (opts) => {
-  const plugin = opts.plugins[appNameHere];
+  const plugin = opts.plugins[someAppName];
 
-  plugin.saveToLocalStorage('someKey', someData);
+  plugin.someFunction();
 
   return {
     // ...
@@ -47,13 +49,12 @@ export const register = (opts) => {
 };
 ```
 
-In the same way you can access the plugins from your root React component through props.
-Example:
+Example of using plugins in the React root component:
 
 ```tsx
 const MyRootComponent = (props: RootComponentProps) => {
   const examplePlugin = props.plugins[appNameHere];
-  examplePlugin.saveToLocalStorage('someKey', someData);
+  examplePlugin.someFunction();
 
   return <>Hello World!</>;
 };
@@ -65,6 +66,7 @@ In React you can use the already provided `useRootComponentProps` to avoid prop-
 ```tsx
 import { useRootComponentProps } from '@akashaorg/ui-awf-hooks';
 
+// deeply nested react component
 const MyReactComponent = () => {
   const { plugins } = useRootComponentProps();
   const examplePlugin = plugins[appNameHere];

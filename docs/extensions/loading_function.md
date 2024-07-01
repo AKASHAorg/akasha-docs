@@ -5,6 +5,8 @@ sidebar_label: Loading Function
 
 # Loading Function
 
+Please also read the overview of the [bootstrapping mounting and unmounting](./index.md#the-bootstrapping-mounting-and-unmounting-part) lifecycles.
+
 The `loadingFn` is the primary function for mounting the view. It is required to be defined for each of the AKASHA Core's micro-frontend type:
 
 - application

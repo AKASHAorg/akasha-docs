@@ -5,9 +5,74 @@ sidebar_label: Create a Widget
 
 # Create a widget
 
-Creating a widget is similar to [creating an app](/docs/tutorials/create-an-app.md) but with a few differences:
+This tutorial asumes that you already bootstrapped an extension as explained [here](./index.md).
 
-- by convention, widgets can only be mounted in the `widget-area`, `sidebar-area` or `topbar-area`. See [Layout Widget](/docs/extensions/layout-widget.md) for more details.
-- widgets are not allowed to have their own routes so you cannot navigate to them.
+After the bootstrap is done, change directory to the extension you've just created and add a new folder `src`
 
-You can find a complete example of a widget as the [Trending Widget](https://github.com/AKASHAorg/akasha-world-framework/tree/next/ui/widgets/trending).
+Now let's create the entry file for the widget.
+
+```bash
+touch src/index.ts
+```
+
+Open the index file and create and export the registration function
+
+```ts title="export widget's registration function"
+
+export const register = () => {
+  return {}
+}
+
+```
+
+Next, we'll need to add the following properties to the config object:
+
+|           |  Required  |                     Description                                 |
+|:---------:|:----------:|:---------------------------------------------------------------:|
+| loadingFn |   true     |  the [loading function](../extensions/loading_function.md)      |
+| mountsIn  |   true     |  where to show this widget                                      |
+
+
+Let's create a simple React component in a new file in the `src` folder.
+
+```bash
+touch src/my-widget-component.tsx
+```
+
+This file will be dynamically imported using the `loadingFn` and must export `single-spa-react` lifecycle methods:
+
+```tsx title="src/my-widget-component.tsx"
+
+import React from 'react';
+import ReactDOMClient from 'react-dom/client';
+import singleSpaReact from 'single-spa-react';
+
+const MyWidget = () => {
+  return <div>Hello World</div>
+}
+
+export const {bootstrap, mount, unmount} = singleSpaReact({
+  React,
+  ReactDOMClient,
+  rootComponent: MyWidget,
+  errorBoundary: () => {
+    return (
+      <div>Error in widget</div>
+    )
+  }
+})
+
+```
+
+Now we are ready to complete the configuration of our widget:
+
+```ts
+export const register = (options: IntegrationRegistrationOptions) => {
+  return {
+    loadingFn: () => import('my-widget-component'),
+    mountsIn: options.layoutConfig.widgetSlotId,
+  }
+}
+```
+
+Well done! Now if you rebuild the project you will see the widget in the right side of the page.

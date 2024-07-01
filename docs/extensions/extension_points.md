@@ -12,33 +12,61 @@ Extension points are components exposed by an app that can be mounted at any lev
 - display the beam editor anywhere you want in your extension
 - display the "Flag" button on any entity - provided by the Vibes App
 
+## Registration
+The extension points are automatically registered when the parent app registers. Extension points cannot be standalone, they are provided by an app via the app's configuration object.
 
-## Interface
-
-Creating an extension requires defining the `extensions` property into the returned object of the `register` function:
-
-```ts
+```ts title="index.js of MyApplication"
 export const register = () => {
   return {
     // ...
-    extensions: [{ ...myExtension }],
+    extensions: [{ ...myExtensionConfig }],
   };
 };
 ```
 
-To define an extension the following properties must be set:
+## Configuration Object interface
+The config object is defined within the parent app's config. This is managed using the `extensions` key,
+which is an array containing the config object for each extension-point.
 
-**[loadingFn](./loading-function)** -> - defines how the application is mounted/unmounted by importing the single-spa-react lifecycle methods.
+To define an extension-point the following properties must be set:
 
-**mountsIn** -> the slot id of the area (defined in the layout widget) on which the app mounts.
+|            | Required |                 Description                        |
+|:----------:|:--------:|:--------------------------------------------------:|
+| loadingFn  |   yes    | the [loadingFn](../extensions/loading_function.md) |
+| mountsIn   |   yes    | the slot in which this extension will be mounted   |
+<!-- | activeWhen |   no     | the activity function                              | -->
 
-It is also possible to control whether the extension should be loaded or not using the `activeWhen` property. This mechanism is exactly the same as the one used for [contextual widgets](widgets.md#contextual-widgets)
 
-## Using extensions
+Example:
 
-To enable a smooth usage of these extension, AKASHA Core provides a small library which is already available under the name `@akashaorg/ui-lib-extensions`
+```ts title="index.ts of MyAwesomeApp"
 
-The library comes with a React component [`<Extension />`](https://github.com/AKASHAorg/akasha-core/blob/next/libs/extensions/src/react/extension.tsx) which will do the heavy lifting for mounting/unmounting the extensions by matching the `name` prop with the `mountsIn` property on the extension's interface.
+// the register function of an app
+export const register = () => {
+  // this is the config object of an app
+  return {
+    // ...app's config options
+    extensions: [
+      {
+        loadingFn: () => import('path/to/extension1.tsx'),
+        mountsIn: 'profile-card/profile-menu-extensions'
+      },
+      {
+        loadingFn: () => import('path/to/extension2.tsx'),
+        mountsIn: 'beam-card/beam-card-footer-extensions'
+      }
+    ]
+  }
+}
+
+```
+## Declaring extension slots
+
+It is a good idea to allow other apps to extend your components with additional functionality.
+
+For apps written with React, AKASHA Core provides a small library which is already available under the name [@akashaorg/ui-lib-extensions](https://github.com/AKASHAorg/akasha-core/tree/next/libs/extensions/src/react)
+
+The library exports React component [`<Extension />`](https://github.com/AKASHAorg/akasha-core/blob/next/libs/extensions/src/react/extension.tsx) which will do the heavy lifting for mounting/unmounting the extensions by matching the `name` prop with the `mountsIn` property on the extension's interface.
 
 ::::info
 Extensions are not namespaced because the idea is to have multiple extensions from multiple apps matching into a slot.
@@ -46,18 +74,21 @@ Extensions are not namespaced because the idea is to have multiple extensions fr
 
 Example usage:
 
-```tsx
+```tsx title="Defining a mounting point of an extension-point"
 import { Extension } from '@akashaorg/ui-lib-extensions/lib/react/extension';
 
 const MyReactComponent = () => {
   return (
     <>
-      <Extension name="some-extension" {...requiredProps} />
+      <Extension
+        name="my-app/some-extension-id"
+        {...someProps}
+      />
     </>
   );
 };
 ```
 
 ::::info
-`requiredProps` may vary according to needs. It is highly recommended to limit the use of props when developing an extension (use as less as possible)
+`someProps` may vary according to needs but make sure that you provide most common resource ids. for example if MyReactComponent is presenting a beam, make sure you pass down a beam id so that the extension-point can use this data to identify the resource.
 ::::

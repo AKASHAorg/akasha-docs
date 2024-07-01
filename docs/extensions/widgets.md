@@ -19,9 +19,18 @@ Examples of widgets are:
 - `Topbar` widget showing the World logo and buttons for navigation, authentication and sidebar toggle.
 - `Mini Profile` widget which shows brief overview of the beam author's profile on the full beam page
 
-## Interface
+## Registration
+Widget registration follows the same steps as any extension registration which is documented [here](./index.md#the-registration-part)
 
-The overall structure and interface of the widget is similar to an app. Widgets should export (named) a `register` function which returns an object with two required properties:
+::::info
+The register function must be synchronous and defined as a named export.
+::::
+
+The register function takes only one argument which is an object of the type [IntegrationRegistrationOptions](https://github.com/AKASHAorg/akasha-core/blob/next/libs/typings/src/ui/app-loader.ts).
+
+## Configuration object interface
+
+The config object returned returned has the [IAppConfig](https://github.com/AKASHAorg/akasha-core/blob/next/libs/typings/src/ui/apps.ts) type. The required parameters are:
 
 ```tsx
 export const register = () => {
@@ -32,9 +41,9 @@ export const register = () => {
 };
 ```
 
-**[loadingFn](../loading-function)** - defines how the application is mounted/unmounted by importing the single-spa-react lifecycle methods.
+**[loadingFn](loading_function.md)** - defines how the application is mounted/unmounted by importing the single-spa-react lifecycle methods.
 
-**mountsIn** -> the slot id of the area (defined in the layout widget) on which the app mounts.
+**mountsIn** -> the slot id of the area (defined in the layout widget) on which the widget mounts.
 
 ## Contextual widgets
 
@@ -61,13 +70,14 @@ Example:
 pathToActiveWhen(/users/:userId/profile)
 ✅ https://app.com/users/123/profile
 ✅ https://app.com/users/123/profile/sub-profile/
-🚫 https://app.com/users//profile/sub-profile/
 🚫 https://app.com/users/profile/sub-profile/
-
-<!-- multiple paths -->
-pathToActiveWhen(['/some/path/1', '/app1'])
-✅ https://app.com/some/path/1
-✅ https://app.com/app1/anything/everything
-🚫 https://app.com/other/app1
-🚫 https://app.com/some/1
+🚫 https://app.com/users/profile/sub-profile/
+```
+You can also use your own matching logic like:
+```
+{
+  activeWhen: (location) => {
+    return location.pathname === 'some/path'
+  }
+}
 ```

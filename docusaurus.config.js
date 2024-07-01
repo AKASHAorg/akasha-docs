@@ -1,6 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 const {themes} = require('prism-react-renderer');
+const { directiveDescriptor } = require("@graphql-markdown/helpers");
 const lightTheme = themes.github;
 const darkTheme = themes.dracula;
 
@@ -46,54 +47,6 @@ const config = {
         categorizeByGroup: false,
         excludeInternal: true,
         categoryOrder: ["API", "Services"],
-        sidebar: {
-          categoryLabel: "SDK reference",
-          position: 5,
-        },
-        fileExtension: "mdx"
-      },
-    ],
-    [
-      "docusaurus-plugin-typedoc",
-      {
-        id: "akasha-ui-hooks",
-        entryPoints: ["./akasha-core/libs/hooks/src/generated/index.ts", "./akasha-core/libs/hooks/src/store/index.ts", "./akasha-core/libs/hooks/src/index.ts"],
-        entryPointStrategy: "expand",
-        tsconfig: "./akasha-core/libs/hooks/tsconfig.json",
-        readme: "none",
-        out: "./docs/react-hooks/.react-hooks-reference",
-        name: "React hooks",
-        excludeInternal: true,
-        stripYamlFrontmatter: true,
-        fileExtension: "mdx"
-      },
-    ],
-    [
-      "docusaurus-plugin-typedoc",
-      {
-        id: "ui-events-bus",
-        entryPoints: ["./akasha-core/libs/typings/src/ui/ui-events.ts"],
-        entryPointStrategy: "expand",
-        tsconfig: "./akasha-core/libs/typings/tsconfig.json",
-        out: "./docs/event-bus/.ui-events-bus",
-        name: "UI Events",
-        stripYamlFrontmatter: true,
-        hidePageTitle: true,
-        enumMembersFormat: 'table',
-        fileExtension: "mdx",
-        typeDeclarationFormat: "table",
-      }
-    ],
-    [
-      "docusaurus-plugin-typedoc",
-      {
-        id: "design-system-core",
-        entryPoints: ["./akasha-core/libs/design-system-core/src/components/*"],
-        entryPointStrategy: "expand",
-        exclude: ["**/*+(.test|.spec).tsx"],
-        tsconfig: "./akasha-core/libs/design-system-core/tsconfig.json",
-        out: "./docs/design-system/core",
-        name: "Design System Core",
         stripYamlFrontmatter: true,
         hidePageTitle: true,
         hidePageHeader: true,
@@ -112,8 +65,145 @@ const config = {
         plugin: ["typedoc-plugin-merge-modules"],
         mergeModulesRenameDefaults: true,
         mergeModulesMergeMode: "module",
+        sidebar: {
+          categoryLabel: "SDK reference",
+          position: 5,
+        }
+      },
+    ],
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        id: "akasha-ui-hooks",
+        entryPoints: [
+          "./akasha-core/libs/hooks/src/generated/index.ts",
+          "./akasha-core/libs/hooks/src/index.ts"
+        ],
+        entryPointStrategy: "expand",
+        tsconfig: "./akasha-core/libs/hooks/tsconfig.json",
+        readme: "none",
+        out: "./docs/react-hooks/hooks",
+        name: "Hooks List",
+        stripYamlFrontmatter: true,
+        fileExtension: '.md',
+        flattenOutputFiles: true,
+        enumMembersFormat: 'table',
+        typeDeclarationFormat: "table",
+        parametersFormat: "table",
+        propertiesFormat: "table",
+        indexFormat: "table",
+        membersWithOwnFile: [],
+        groupOrder: ["Functions", "*"],
+        navigationModel: {
+          excludeFolders: true,
+          excludeGroups: true,
+        },
+        plugin: ["typedoc-plugin-merge-modules"],
+        mergeModulesRenameDefaults: true,
+        mergeModulesMergeMode: "project",
+        textContentMappings: {
+          "kind.function.plural": "Hooks",
+          "kind.function.singular": "Hook",
+        }
+      },
+    ],
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        id: "ui-events-bus",
+        entryPoints: ["./akasha-core/libs/typings/src/ui/ui-events.ts"],
+        entryPointStrategy: "resolve",
+        tsconfig: "./akasha-core/libs/typings/tsconfig.json",
+        out: "./docs/event-bus/ui-events",
+        name: "UI Events",
+        stripYamlFrontmatter: true,
+        hidePageHeader: true,
+        hidePageTitle: true,
+        flattenOutputFiles: true,
+        entryFileName: 'index.md',
+        readme: './docs/event-bus/_ui_event_bus.md',
+        mergeReadme: true,
+        enumMembersFormat: 'table',
+        typeDeclarationFormat: "table",
+        parametersFormat: "table",
+        propertiesFormat: "table",
+        membersWithOwnFile: [],
+        groupOrder: ["Type Aliases", "*"],
+        navigationModel: {
+          excludeFolders: true,
+        },
+        plugin: ["typedoc-plugin-merge-modules"],
+        mergeModulesRenameDefaults: true,
+        mergeModulesMergeMode: "project",
+      }
+    ],
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        id: "global-events-bus",
+        entryPoints: ["./akasha-core/libs/sdk/src/common/event-bus.ts"],
+        entryPointStrategy: "resolve",
+        tsconfig: "./akasha-core/libs/sdk/tsconfig.json",
+        out: "./docs/event-bus/global-events",
+        name: "Global Events",
+        stripYamlFrontmatter: true,
+        hidePageHeader: true,
+        hidePageTitle: true,
+        flattenOutputFiles: true,
+        entryFileName: 'index.md',
+        readme: './docs/event-bus/_global_event_bus.md',
+        mergeReadme: true,
+        enumMembersFormat: 'table',
+        typeDeclarationFormat: "table",
+        parametersFormat: "table",
+        propertiesFormat: "table",
+        membersWithOwnFile: [],
+        groupOrder: ["Type Aliases", "*"],
+        navigationModel: {
+          excludeFolders: true,
+        },
+        plugin: ["typedoc-plugin-merge-modules"],
+        mergeModulesRenameDefaults: true,
+        mergeModulesMergeMode: "project",
+      }
+    ],
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        id: "design-system-core",
+        entryPoints: ["./akasha-core/libs/design-system-core/src/components/*"],
+        entryPointStrategy: "expand",
+        exclude: ["**/*+(.test|.spec).tsx"],
+        tsconfig: "./akasha-core/libs/design-system-core/tsconfig.json",
+        out: "./docs/design-system/design-system-core",
+        name: "Design System Core",
+        stripYamlFrontmatter: true,
+        hidePageTitle: true,
+        hidePageHeader: true,
+        flattenOutputFiles: true,
+        sidebarLinks: {},
+        enumMembersFormat: 'table',
+        typeDeclarationFormat: "table",
+        parametersFormat: "table",
+        propertiesFormat: "table",
+        indexFormat: "table",
+        membersWithOwnFile: [],
+        groupOrder: ["Classes", "Functions", "Type Aliases", "*"],
+        // entryFileName is required because there is a link
+        // in the design-system-components to the readme file
+        entryFileName: "README.md",
+        navigationModel: {
+          excludeFolders: true,
+        },
+        plugin: ["typedoc-plugin-merge-modules"],
+        mergeModulesRenameDefaults: true,
+        mergeModulesMergeMode: "module",
         textContentMappings: {
           "kind.function.plural": "Components",
+          "kind.class.singular": "Class Component",
+          "kind.class.plural": "Class Components",
+          "kind.typeAlias.singular": "Prop",
+          "kind.typeAlias.plural": "Props",
         }
       }
     ],
@@ -125,14 +215,49 @@ const config = {
         entryPointStrategy: "expand",
         exclude: ["**/*+(.test|.spec).tsx"],
         tsconfig: "./akasha-core/libs/design-system-components/tsconfig.json",
-        out: "./docs/design-system/components",
+        out: "./docs/design-system/design-system-components",
         name: "Design System Components",
         stripYamlFrontmatter: true,
         hidePageTitle: true,
         hidePageHeader: true,
-        fileExtension: ".mdx",
         flattenOutputFiles: true,
         sidebarLinks: {},
+        enumMembersFormat: 'table',
+        typeDeclarationFormat: "table",
+        parametersFormat: "table",
+        propertiesFormat: "table",
+        indexFormat: "table",
+        membersWithOwnFile: [],
+        groupOrder: ["Classes", "Functions", "Type Aliases", "*"],
+        navigationModel: {
+          excludeFolders: true,
+        },
+        plugin: ["typedoc-plugin-merge-modules"],
+        mergeModulesRenameDefaults: true,
+        mergeModulesMergeMode: "module",
+        textContentMappings: {
+          "kind.function.plural": "Components",
+          "kind.class.singular": "Class Component",
+          "kind.class.plural": "Class Components",
+          "kind.typeAlias.singular": "Prop",
+          "kind.typeAlias.plural": "Props",
+        }
+      }
+    ],
+    [
+      "@graphql-markdown/docusaurus",
+      /** @type {import('@graphql-markdown/types').ConfigOptions} */
+      {
+        id: "composedb-models",
+        schema: "./akasha-core/libs/composedb/lib/schema.graphql",
+        rootPath: "./docs",
+        baseURL: "composedb-models",
+        // homepage: "./docs/composedb-models/index.md",
+        runOnBuild: true,
+        loaders: {
+          GraphQLFileLoader: "@graphql-tools/graphql-file-loader"
+        },
+        groupByDirective: true,
         enumMembersFormat: 'table',
         typeDeclarationFormat: "table",
         parametersFormat: "table",
@@ -142,11 +267,9 @@ const config = {
         navigationModel: {
           excludeFolders: true,
         },
-        plugin: ["typedoc-plugin-merge-modules"],
-        mergeModulesRenameDefaults: true,
-        mergeModulesMergeMode: "module",
-        textContentMappings: {
-          "kind.function.plural": "Components",
+        printTypeOptions: {
+          useApiGroup: true,
+          deprecated: 'skip'
         }
       }
     ]
@@ -227,6 +350,7 @@ const config = {
       prism: {
         theme: lightTheme,
         darkTheme: darkTheme,
+        additionalLanguages: ['bash', 'diff', 'graphql', 'yaml', 'json', 'json5'],
       },
     }),
 };

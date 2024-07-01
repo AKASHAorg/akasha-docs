@@ -16,42 +16,55 @@ Some of default apps that are available in Akasha World include:
 - Profile
 - Settings
 
-## Interface
+## Registration
+Application registration follows the same steps as any extension registration which is documented [here](./index.md#the-registration-part)
 
-To ensure compatibility with AKASHA Core and our loading system, applications are required to export a `register function`. For instance, in the `antenna` the main
-[index](https://github.com/AKASHAorg/akasha-core/blob/next/extensions/apps/antenna/src/index.tsx), there is a named export `register` added which can also be modified to suit your needs.
+### Example of a registration function
+```ts title="src/index.ts"
+export function register() {
+  return {
+    // ...config object
+  }
+}
+```
 
 ::::info
-The register function should be synchronous and defined as a named export.
+The register function must be synchronous and defined as a named export.
 ::::
 
-The register function takes only one argument which is an object of the type [IntegrationRegistrationOptions](https://github.com/AKASHAorg/akasha-core/blob/next/libs/typings/src/ui/app-loader.ts). The returned value of the `register` function should be an object with the [IAppConfig](https://github.com/AKASHAorg/akasha-core/blob/next/libs/typings/src/ui/apps.ts) type. The required parameters are:
+## Configuration object interface
 
-**[loadingFn](../loading-function)** - defines how the application is mounted/unmounted by importing the single-spa-react lifecycle methods.
+The register function takes only one argument which is an object of the type [IntegrationRegistrationOptions](https://github.com/AKASHAorg/akasha-core/blob/next/libs/typings/src/ui/app-loader.ts).
+The config object returned returned has the [IAppConfig](https://github.com/AKASHAorg/akasha-core/blob/next/libs/typings/src/ui/apps.ts) type. The required parameters are:
+
+**[loadingFn](loading_function.md)** - defines how the application is mounted/unmounted by importing the single-spa-react lifecycle methods.
 
 **mountsIn** -> the slot id of the area (defined in the layout widget) on which the app mounts.
 
 **menuItems** -> used by the Sidebar Widget to construct the menu.
 
 Optionally apps (and widgets) can also define
-[extensions](../extensions) and
-[contentBlocks](../content-blocks) properties which are explained in their own docs.
+[extensions](extension_points.md) and
+[contentBlocks](content_blocks.md) properties which are explained in their own docs.
 
-## Application's layout and the mounting point.
+## Application's mounting point.
 
-Applications have a specific mounting area that is defined by the layout widget. This configuration is then passed down to app register function's `opts` parameter as `layoutConfig`. The layout Widhet used in the Akasha World defines the application's mount point in the central area, right below the topbar. (More details [here](../layout-widget))
+Applications have a specific mounting area that is defined by the layout widget. This configuration is then passed down to app register function's `opts` parameter as `layoutConfig`. The layout Widget used in the Akasha World defines the application's mount point in the central area, right below the topbar. (More details [here](layout_widget.md))
 
-Only one app can be loaded at any given time based on the URL's pathname.
-Example:
+:::info
+Applications does not have an activity function. The activity function is calculated from the name of the app.
 - url: `https://localhost:8181/example-app`
   - -> will load the `example-app`
 - url: `https://localhost:8181/@akashaorg/app-settings-ewa`
   - -> will load the `@akashaorg/app-settings-ewa`
 
+Only one application can be rendered on any given route.
+:::
+
 ## Plugins
 
 Apps and Widgets can also provide additional functionalities
-through [plugins](../plugins). Plugins are not rendered
+through [plugins](plugins.md). Plugins are not rendered
 into the view and their purpose is to allow other apps to implement additional (domain specific) logic provided. Some examples of plugins include:
 
 - a custom profile app can expose an api to fetch or update a profile
