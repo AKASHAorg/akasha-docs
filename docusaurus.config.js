@@ -194,6 +194,9 @@ const config = {
         indexFormat: "table",
         membersWithOwnFile: [],
         groupOrder: ["Classes", "Functions", "Type Aliases", "*"],
+        // entryFileName is required because there is a link
+        // in the design-system-components to the readme file
+        entryFileName: "README.md",
         navigationModel: {
           excludeFolders: true,
         },
@@ -362,29 +365,29 @@ const config = {
 };
 
 if (process.env['NODE_ENV'] === 'production' && !!config.themeConfig) {
-    config.themeConfig.algolia = {
-      // The application ID provided by Algolia
-      appId: process.env.ALGOLIA_APP_ID,
+    // config.themeConfig.algolia = {
+    //   // The application ID provided by Algolia
+    //   appId: process.env.ALGOLIA_APP_ID,
 
-      // Public API key
-      apiKey: process.env.ALGOLIA_API_KEY,
+    //   // Public API key
+    //   apiKey: process.env.ALGOLIA_API_KEY,
 
-      indexName: process.env.ALGOLIA_INDEX_NAME,
+    //   indexName: process.env.ALGOLIA_INDEX_NAME,
 
-      // Optional: see doc section below
-      contextualSearch: true,
+    //   // Optional: see doc section below
+    //   contextualSearch: true,
 
-      // Optional: Specify domains where the navigation should occur through window.location instead on history.push.
-      // externalUrlRegex: 'external\\.com|domain\\.com',
+    //   // Optional: Specify domains where the navigation should occur through window.location instead on history.push.
+    //   // externalUrlRegex: 'external\\.com|domain\\.com',
 
-      // Optional: Algolia search parameters
-      searchParameters: {},
+    //   // Optional: Algolia search parameters
+    //   searchParameters: {},
 
-      // Optional: path for search page that enabled by default (`false` to disable it)
-      searchPagePath: 'search',
+    //   // Optional: path for search page that enabled by default (`false` to disable it)
+    //   searchPagePath: 'search',
 
-      //... other Algolia params
-    }
+    //   //... other Algolia params
+    // }
 }
 
 module.exports = config;
