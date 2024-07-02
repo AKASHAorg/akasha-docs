@@ -20,13 +20,13 @@ With AKASHA Core, we make it easier for people to create and sustain social tech
 
 Applications are standalone components that complement and extend your web3 social network experience.
 
-[Learn more](/integrations/applications)
+[Learn more](./extensions/applications.md)
 
 ### Widgets
 
 Widgets allow Ethereans to perform quick actions or access small pieces of information relating to an app (app-specific widgets) or the world (general widgets).
 
-[Learn more](/integrations/widgets)
+[Learn more](./extensions/widgets.md)
 
 ## Explore using AKASHA Core
 
