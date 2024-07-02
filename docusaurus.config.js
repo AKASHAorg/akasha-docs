@@ -82,6 +82,7 @@ const config = {
         entryPointStrategy: "expand",
         tsconfig: "./akasha-core/libs/hooks/tsconfig.json",
         readme: "none",
+        entryFileName: "readme.md",
         out: "./docs/react-hooks/hooks",
         name: "Hooks List",
         stripYamlFrontmatter: true,
@@ -112,7 +113,7 @@ const config = {
       {
         id: "ui-events-bus",
         entryPoints: ["./akasha-core/libs/typings/src/ui/ui-events.ts"],
-        entryPointStrategy: "resolve",
+        entryPointStrategy: "expand",
         tsconfig: "./akasha-core/libs/typings/tsconfig.json",
         out: "./docs/event-bus/ui-events",
         name: "UI Events",
@@ -120,7 +121,9 @@ const config = {
         hidePageHeader: true,
         hidePageTitle: true,
         flattenOutputFiles: true,
-        entryFileName: 'index.md',
+        // the output result is the same because readme.md is the same as index.md
+        // but in this case it's clearer where we are linking
+        entryFileName: 'readme.md',
         readme: './docs/event-bus/_ui_event_bus.md',
         mergeReadme: true,
         enumMembersFormat: 'table',
@@ -142,7 +145,7 @@ const config = {
       {
         id: "global-events-bus",
         entryPoints: ["./akasha-core/libs/sdk/src/common/event-bus.ts"],
-        entryPointStrategy: "resolve",
+        entryPointStrategy: "expand",
         tsconfig: "./akasha-core/libs/sdk/tsconfig.json",
         out: "./docs/event-bus/global-events",
         name: "Global Events",
@@ -150,7 +153,9 @@ const config = {
         hidePageHeader: true,
         hidePageTitle: true,
         flattenOutputFiles: true,
-        entryFileName: 'index.md',
+        // the output result is the same because readme.md is the same as index.md
+        // but in this case it's clearer where we are linking
+        entryFileName: 'readme.md',
         readme: './docs/event-bus/_global_event_bus.md',
         mergeReadme: true,
         enumMembersFormat: 'table',
