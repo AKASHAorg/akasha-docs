@@ -197,10 +197,14 @@ const config = {
         // entryFileName is required because there is a link
         // in the design-system-components to the readme file
 <<<<<<< HEAD
+<<<<<<< HEAD
         entryFileName: "README.md",
 =======
         entryFileName: "readme.md",
 >>>>>>> 609ca50 (chore(): reconfigure index pages)
+=======
+        entryFileName: "README.md",
+>>>>>>> 97a0d83 (chore(): fix links)
         navigationModel: {
           excludeFolders: true,
         },
