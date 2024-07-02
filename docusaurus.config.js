@@ -94,6 +94,9 @@ const config = {
         propertiesFormat: "table",
         indexFormat: "table",
         membersWithOwnFile: [],
+        // the output result is the same because readme.md is the same as index.md
+        // but in this case it's clearer where we are linking
+        entryFileName: 'readme.md',
         groupOrder: ["Functions", "*"],
         navigationModel: {
           excludeFolders: true,
