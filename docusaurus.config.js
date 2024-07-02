@@ -196,7 +196,11 @@ const config = {
         groupOrder: ["Classes", "Functions", "Type Aliases", "*"],
         // entryFileName is required because there is a link
         // in the design-system-components to the readme file
+<<<<<<< HEAD
         entryFileName: "README.md",
+=======
+        entryFileName: "readme.md",
+>>>>>>> 609ca50 (chore(): reconfigure index pages)
         navigationModel: {
           excludeFolders: true,
         },
