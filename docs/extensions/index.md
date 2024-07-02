@@ -143,7 +143,7 @@ It is highly recommended to only have an internal router for apps. Widgets are c
 ### The Installing and Uninstalling part
 The extensions can be discovered, installed and uninstalled in the [Extensions App](https://github.com/AKASHAorg/akasha-core/tree/next/extensions/apps/extensions).
 
-The installation process for extensions begins with the [app release model](../composedb-models/types/interfaces/akasha-app-release-interface.mdx), which includes a sources field specifying the locations (URLs or file paths) from where the extension scripts should be loaded.
+The installation process for extensions begins with the app release model, which includes a sources field specifying the locations (URLs or file paths) from where the extension scripts should be loaded.
 
 The AppLoader will import the sources and then proceed to the registration part.
 

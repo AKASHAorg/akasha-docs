@@ -194,9 +194,6 @@ const config = {
         indexFormat: "table",
         membersWithOwnFile: [],
         groupOrder: ["Classes", "Functions", "Type Aliases", "*"],
-        // entryFileName is required because there is a link
-        // in the design-system-components to the readme file
-        entryFileName: "README.md",
         navigationModel: {
           excludeFolders: true,
         },
