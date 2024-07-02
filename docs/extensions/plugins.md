@@ -56,7 +56,7 @@ const MyRootComponent = (props: RootComponentProps) => {
   const examplePlugin = props.plugins[appNameHere];
   examplePlugin.someFunction();
 
-  return <>Hello World!</>;
+  return <div>Hello World!</div>;
 };
 ```
 
