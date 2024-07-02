@@ -1,4 +1,0 @@
-[submodule "akasha-core"]
-	path = akasha-core
-	url = https://github.com/AKASHAorg/akasha-core.git
-	branch = next
