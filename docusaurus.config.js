@@ -1,8 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const {themes} = require('prism-react-renderer');
+const { directiveDescriptor } = require("@graphql-markdown/helpers");
+const lightTheme = themes.github;
+const darkTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -21,17 +22,6 @@ const config = {
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        // docs: {
-        //   sidebarPath: require.resolve('./sidebars.js'),
-        //   // Please change this to your repo.
-        //   editUrl: 'https://github.com/AKASHAorg/akasha-docs',
-        // },
-        // blog: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   editUrl:
-        //     'https://github.com/AKASHAorg/akasha-docs',
-        // },
         docs: {
           // required to set the doc with / slug as landing page
           routeBasePath: "/",
@@ -52,47 +42,242 @@ const config = {
         entryPointStrategy: "expand",
         tsconfig: "./akasha-core/libs/sdk/tsconfig.json",
         readme: "none",
-        out: "./sdk/api-reference",
+        out: "./docs/sdk/api-reference",
         name: "AKASHA SDK reference",
         categorizeByGroup: false,
-        // plugin
-        // plugin: ["typedoc-plugin-missing-exports"],
-        // internalModule: "sdk",
-        // end_plugin
         excludeInternal: true,
         categoryOrder: ["API", "Services"],
+        stripYamlFrontmatter: true,
+        hidePageTitle: true,
+        hidePageHeader: true,
+        fileExtension: ".mdx",
+        flattenOutputFiles: true,
+        sidebarLinks: {},
+        enumMembersFormat: 'table',
+        typeDeclarationFormat: "table",
+        parametersFormat: "table",
+        propertiesFormat: "table",
+        indexFormat: "table",
+        membersWithOwnFile: [],
+        navigationModel: {
+          excludeFolders: true,
+        },
+        plugin: ["typedoc-plugin-merge-modules"],
+        mergeModulesRenameDefaults: true,
+        mergeModulesMergeMode: "module",
         sidebar: {
           categoryLabel: "SDK reference",
           position: 5,
-        },
-        hideMembersSymbol: true,
-        frontmatter: {
-          pagination_prev: null,
-          pagination_next: null,
-          hide_title: true,
-          description: "Test Description",
-        },
+        }
       },
     ],
     [
       "docusaurus-plugin-typedoc",
       {
         id: "akasha-ui-hooks",
-        entryPoints: ["./akasha-core/libs/hooks/src/generated/index.ts", "./akasha-core/libs/hooks/src/store/index.ts", "./akasha-core/libs/hooks/src/index.ts"],
+        entryPoints: [
+          "./akasha-core/libs/hooks/src/generated/index.ts",
+          "./akasha-core/libs/hooks/src/index.ts"
+        ],
         entryPointStrategy: "expand",
         tsconfig: "./akasha-core/libs/hooks/tsconfig.json",
         readme: "none",
-        out: "./react-hooks",
-        name: "React hooks",
-        excludeInternal: true,
-        sidebar: {
-          categoryLabel: "React Hooks",
-          sidebarLabel: "React Hooks",
-          position: 6,
+        entryFileName: "readme.md",
+        out: "./docs/react-hooks/hooks",
+        name: "Hooks List",
+        stripYamlFrontmatter: true,
+        fileExtension: '.md',
+        flattenOutputFiles: true,
+        enumMembersFormat: 'table',
+        typeDeclarationFormat: "table",
+        parametersFormat: "table",
+        propertiesFormat: "table",
+        indexFormat: "table",
+        membersWithOwnFile: [],
+        groupOrder: ["Functions", "*"],
+        navigationModel: {
+          excludeFolders: true,
+          excludeGroups: true,
         },
-        frontmatter: null,
+        plugin: ["typedoc-plugin-merge-modules"],
+        mergeModulesRenameDefaults: true,
+        mergeModulesMergeMode: "project",
+        textContentMappings: {
+          "kind.function.plural": "Hooks",
+          "kind.function.singular": "Hook",
+        }
       },
     ],
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        id: "ui-events-bus",
+        entryPoints: ["./akasha-core/libs/typings/src/ui/ui-events.ts"],
+        entryPointStrategy: "expand",
+        tsconfig: "./akasha-core/libs/typings/tsconfig.json",
+        out: "./docs/event-bus/ui-events",
+        name: "UI Events",
+        stripYamlFrontmatter: true,
+        hidePageHeader: true,
+        hidePageTitle: true,
+        flattenOutputFiles: true,
+        // the output result is the same because readme.md is the same as index.md
+        // but in this case it's clearer where we are linking
+        entryFileName: 'readme.md',
+        readme: './docs/event-bus/_ui_event_bus.md',
+        mergeReadme: true,
+        enumMembersFormat: 'table',
+        typeDeclarationFormat: "table",
+        parametersFormat: "table",
+        propertiesFormat: "table",
+        membersWithOwnFile: [],
+        groupOrder: ["Type Aliases", "*"],
+        navigationModel: {
+          excludeFolders: true,
+        },
+        plugin: ["typedoc-plugin-merge-modules"],
+        mergeModulesRenameDefaults: true,
+        mergeModulesMergeMode: "project",
+      }
+    ],
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        id: "global-events-bus",
+        entryPoints: ["./akasha-core/libs/sdk/src/common/event-bus.ts"],
+        entryPointStrategy: "expand",
+        tsconfig: "./akasha-core/libs/sdk/tsconfig.json",
+        out: "./docs/event-bus/global-events",
+        name: "Global Events",
+        stripYamlFrontmatter: true,
+        hidePageHeader: true,
+        hidePageTitle: true,
+        flattenOutputFiles: true,
+        // the output result is the same because readme.md is the same as index.md
+        // but in this case it's clearer where we are linking
+        entryFileName: 'readme.md',
+        readme: './docs/event-bus/_global_event_bus.md',
+        mergeReadme: true,
+        enumMembersFormat: 'table',
+        typeDeclarationFormat: "table",
+        parametersFormat: "table",
+        propertiesFormat: "table",
+        membersWithOwnFile: [],
+        groupOrder: ["Type Aliases", "*"],
+        navigationModel: {
+          excludeFolders: true,
+        },
+        plugin: ["typedoc-plugin-merge-modules"],
+        mergeModulesRenameDefaults: true,
+        mergeModulesMergeMode: "project",
+      }
+    ],
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        id: "design-system-core",
+        entryPoints: ["./akasha-core/libs/design-system-core/src/components/*"],
+        entryPointStrategy: "expand",
+        exclude: ["**/*+(.test|.spec).tsx"],
+        tsconfig: "./akasha-core/libs/design-system-core/tsconfig.json",
+        out: "./docs/design-system/design-system-core",
+        name: "Design System Core",
+        stripYamlFrontmatter: true,
+        hidePageTitle: true,
+        hidePageHeader: true,
+        flattenOutputFiles: true,
+        sidebarLinks: {},
+        enumMembersFormat: 'table',
+        typeDeclarationFormat: "table",
+        parametersFormat: "table",
+        propertiesFormat: "table",
+        indexFormat: "table",
+        membersWithOwnFile: [],
+        groupOrder: ["Classes", "Functions", "Type Aliases", "*"],
+        // entryFileName is required because there is a link
+        // in the design-system-components to the readme file
+        entryFileName: "README.md",
+        navigationModel: {
+          excludeFolders: true,
+        },
+        plugin: ["typedoc-plugin-merge-modules"],
+        mergeModulesRenameDefaults: true,
+        mergeModulesMergeMode: "module",
+        textContentMappings: {
+          "kind.function.plural": "Components",
+          "kind.class.singular": "Class Component",
+          "kind.class.plural": "Class Components",
+          "kind.typeAlias.singular": "Prop",
+          "kind.typeAlias.plural": "Props",
+        }
+      }
+    ],
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        id: "design-system-components",
+        entryPoints: ["./akasha-core/libs/design-system-components/src/components/*"],
+        entryPointStrategy: "expand",
+        exclude: ["**/*+(.test|.spec).tsx"],
+        tsconfig: "./akasha-core/libs/design-system-components/tsconfig.json",
+        out: "./docs/design-system/design-system-components",
+        name: "Design System Components",
+        stripYamlFrontmatter: true,
+        hidePageTitle: true,
+        hidePageHeader: true,
+        flattenOutputFiles: true,
+        sidebarLinks: {},
+        enumMembersFormat: 'table',
+        typeDeclarationFormat: "table",
+        parametersFormat: "table",
+        propertiesFormat: "table",
+        indexFormat: "table",
+        membersWithOwnFile: [],
+        groupOrder: ["Classes", "Functions", "Type Aliases", "*"],
+        navigationModel: {
+          excludeFolders: true,
+        },
+        plugin: ["typedoc-plugin-merge-modules"],
+        mergeModulesRenameDefaults: true,
+        mergeModulesMergeMode: "module",
+        textContentMappings: {
+          "kind.function.plural": "Components",
+          "kind.class.singular": "Class Component",
+          "kind.class.plural": "Class Components",
+          "kind.typeAlias.singular": "Prop",
+          "kind.typeAlias.plural": "Props",
+        }
+      }
+    ],
+    [
+      "@graphql-markdown/docusaurus",
+      /** @type {import('@graphql-markdown/types').ConfigOptions} */
+      {
+        id: "composedb-models",
+        schema: "./akasha-core/libs/composedb/lib/schema.graphql",
+        rootPath: "./docs",
+        baseURL: "composedb-models",
+        // homepage: "./docs/composedb-models/index.md",
+        runOnBuild: true,
+        loaders: {
+          GraphQLFileLoader: "@graphql-tools/graphql-file-loader"
+        },
+        groupByDirective: true,
+        enumMembersFormat: 'table',
+        typeDeclarationFormat: "table",
+        parametersFormat: "table",
+        propertiesFormat: "table",
+        indexFormat: "table",
+        membersWithOwnFile: [],
+        navigationModel: {
+          excludeFolders: true,
+        },
+        printTypeOptions: {
+          useApiGroup: true,
+          deprecated: 'skip'
+        }
+      }
+    ]
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -103,12 +288,6 @@ const config = {
       navbar: {
         title: "AKASHA Docs",
         items: [
-          {
-            type: "doc",
-            docId: "index",
-            position: "left",
-            label: "Docs",
-          },
           {
             href: "https://github.com/AKASHAorg/akasha-docs",
             label: "View on GitHub",
@@ -131,9 +310,13 @@ const config = {
                 to: "/dev-quickstart",
               },
               {
-                label: "Integrations",
-                to: "/integrations",
+                label: "Glossary",
+                to: "/glossary"
               },
+              {
+                label: "Extensions",
+                to: "/extensions",
+              }
             ],
           },
           {
@@ -174,33 +357,37 @@ const config = {
         copyright: `Copyright ©${new Date().getFullYear()} AKASHA Foundation`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-      algolia: {
-        // The application ID provided by Algolia
-        appId: process.env.ALGOLIA_APP_ID,
-
-        // Public API key
-        apiKey: process.env.ALGOLIA_API_KEY,
-
-        indexName: process.env.ALGOLIA_INDEX_NAME,
-
-        // Optional: see doc section below
-        contextualSearch: true,
-
-        // Optional: Specify domains where the navigation should occur through window.location instead on history.push.
-        // externalUrlRegex: 'external\\.com|domain\\.com',
-
-        // Optional: Algolia search parameters
-        searchParameters: {},
-
-        // Optional: path for search page that enabled by default (`false` to disable it)
-        searchPagePath: 'search',
-
-        //... other Algolia params
+        theme: lightTheme,
+        darkTheme: darkTheme,
+        additionalLanguages: ['bash', 'diff', 'graphql', 'yaml', 'json', 'json5'],
       },
     }),
 };
+
+if (process.env['NODE_ENV'] === 'production' && !!config.themeConfig) {
+    config.themeConfig.algolia = {
+      // The application ID provided by Algolia
+      appId: process.env.ALGOLIA_APP_ID,
+
+      // Public API key
+      apiKey: process.env.ALGOLIA_API_KEY,
+
+      indexName: process.env.ALGOLIA_INDEX_NAME,
+
+      // Optional: see doc section below
+      contextualSearch: true,
+
+      // Optional: Specify domains where the navigation should occur through window.location instead on history.push.
+      // externalUrlRegex: 'external\\.com|domain\\.com',
+
+      // Optional: Algolia search parameters
+      searchParameters: {},
+
+      // Optional: path for search page that enabled by default (`false` to disable it)
+      searchPagePath: 'search',
+
+      //... other Algolia params
+    }
+}
 
 module.exports = config;
