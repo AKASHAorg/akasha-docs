@@ -178,6 +178,7 @@ and in the next lines:
     },
     layout: '@akashaorg/ui-widget-layout',
     homepageApp: '@akashaorg/app-antenna',
+    extensionsApp: '@akashaorg/app-extensions',
     defaultApps: [
       // ..some app names
     ],
@@ -202,8 +203,7 @@ const overrides = [
   {
     name: 'my-awesome-extension',
     integrationType: AkashaAppApplicationType.App, // change this to reflect the kind of extension you are creating
-    sources: [`${origin}/{extensionType}/my-awesome-extension`],
-    ...missingRequiredFields // these are not important in development
+    sources: [`https://localhost:8131/{extensionType}/my-awesome-extension`],
   }
   // ...the already existing overrides
 ]
