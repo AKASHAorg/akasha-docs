@@ -61,7 +61,22 @@ export const register = () => {
 ```
 
 The second parameter of `activeWhen` is a utility function. This utility function converts a URL path into an activity function which when called with the current Location, returns a boolean.
-The path that is passed to `pathToActiveWhen` can also contain dynamic values.
+`activeWhen` property can be a string, a function or an array of strings and functions:
+
+`
+  activeWhen: '/users'
+  // or
+  activeWhen: ['/user', '/users/:userId']
+  // or
+  activeWhen: (location, pathToActiveWhen) => pathToActiveWhen('/user')(location)
+  // or
+  activeWhen: [
+    '/user',
+    (location, pathToActiveWhen) => pathToActiveWhen('/users/my-user-id')(location)
+  ]
+`
+
+`activeWhen` property also supports dynamic values.
 
 Example:
 

@@ -70,7 +70,7 @@ Now we are ready to complete the configuration of our widget:
 export const register = (options: IntegrationRegistrationOptions) => {
   return {
     loadingFn: () => import('my-widget-component'),
-    mountsIn: options.layoutConfig.widgetSlotId,
+    mountsIn: options.layoutSlots.widgetSlotId,
   }
 }
 ```

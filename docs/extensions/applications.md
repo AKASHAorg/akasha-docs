@@ -74,7 +74,7 @@ into the view and their purpose is to allow other apps to implement additional (
 
 Initialization and registration is done by the `app-loader` in the following order:
 
-- initialize plugins (calls the `getPlugin` function of every app)
+- initialize plugins (calls the `registerPlugin` function of every app)
 - register `layout-widget` (calls the `register` method on the layout-widget)
 - initialize apps and widgets (calls the `initialize` method on the apps and widgets - if provided)
 - register apps and widgets (calls the `register` method on the apps and widgets)

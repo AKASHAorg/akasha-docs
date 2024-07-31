@@ -17,7 +17,7 @@ Finally let's create the entry file in the `src`
 Let's add the registration function in the `index.ts` file and create the required methods.
 
 ```ts title="registration function"
-export const getPlugin = (options) => {
+export const registerPlugin = (options) => {
   return {
     storage: {
       saveData<T>(key: string, data: T): void {
@@ -41,7 +41,7 @@ export const getPlugin = (options) => {
   }
 }
 ```
-`getPlugin` - the registration function for plugins
+`registerPlugin` - the registration function for plugins
 `storage` - just a namespace we've chosen to allow extending this plugin with other namespaces in the future. This is just a preference and it also works without it. However as soon as other extensions is using it it's hard to change without introducing breaking changes. It can also be used as a versioning namespace, for example `v1`.
 
 Once installed, this plugin will be available to all other installed extensions using:

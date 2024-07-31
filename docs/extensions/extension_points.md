@@ -34,7 +34,6 @@ To define an extension-point the following properties must be set:
 |:----------:|:--------:|:--------------------------------------------------:|
 | loadingFn  |   yes    | the [loadingFn](../extensions/loading_function.md) |
 | mountsIn   |   yes    | the slot in which this extension will be mounted   |
-<!-- | activeWhen |   no     | the activity function                              | -->
 
 
 Example:

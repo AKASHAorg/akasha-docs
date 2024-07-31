@@ -16,13 +16,13 @@ For example, let's say we are building an app, and we require a property from a 
 It is **NOT** mandatory for the applications to also provide a plugin. However, the plugin system is a quite powerful way to integrate with other apps at the data layer.
 
 ## Registration
-Unlike the apps and widget plugins are registered using the `getPlugin` function. getPlugin should be a named export from the entry file. This is an `async` method that should return an object. There is no standard in the shape on this object however keep in mind that changing it should be done preserving backward compatibility.
+Unlike the apps and widget plugins are registered using the `registerPlugin` function. registerPlugin should be a named export from the entry file. This is an `async` method that should return an object. There is no standard in the shape on this object however keep in mind that changing it should be done preserving backward compatibility.
 
 Example of a plugin registration function:
 
 ```ts title="index.ts"
 
-export const getPlugin = async () => {
+export const registerPlugin = async () => {
   return {
     // my plugin properties
   };
