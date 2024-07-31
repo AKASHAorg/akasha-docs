@@ -112,8 +112,20 @@ import "systemjs-webpack-interop/auto-public-path";
 
 export const register = (options) => ({
   loadingFn: () => import("./components"),
-  mountsIn: opts.layoutConfig?.pluginSlotId,
-  logo: { type: LogoTypeSource.ICON, value: "appAkasha" },
+  menuItems: {
+    label: 'MyApp',
+    type: MenuItemType.App,
+    logo: { type: LogoTypeSource.ICON, value: <svg></svg> },
+    area: [MenuItemAreaType.AppArea],
+    subRoutes: [
+      {
+        label: 'Submenu',
+        index: 0,
+        route: '/my-subroute',
+        type: MenuItemType.Internal,
+      },
+    ],
+  },
   i18nNamespace: ["app-hello-ethereum-world"],
 });
 ```
