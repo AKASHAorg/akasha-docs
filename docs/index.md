@@ -28,14 +28,6 @@ Widgets allow Ethereans to perform quick actions or access small pieces of infor
 
 [Learn more](./extensions/widgets.md)
 
-## Explore using AKASHA Core
-
-- [Developer Tools - ](https://www.notion.so/Development-quickstart-6a8f3565e6e64b0a87bccb97a35e81c3)
-  Get up and running with our quick start guide, CLI tool
-- [Developer Account - ](https://www.notion.so/Developer-account-54b6e161c2de4c42aa7db3c8e408f04f)
-  Create your developer account to submit your integrations
-- [APIs and SDKs - ](https://www.notion.so/SKD-8ef60f4e79734e3a973ce6e4d67a0a6c) Build and integrate with our API
-
 ## Explore integrations built with AKASHA Core
 
 All AKASHA World's integrations are open source. Explore them whenever you want to get inspired or learn.
