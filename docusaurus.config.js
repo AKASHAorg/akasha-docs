@@ -47,7 +47,6 @@ const config = {
         categorizeByGroup: false,
         excludeInternal: true,
         categoryOrder: ["API", "Services"],
-        stripYamlFrontmatter: true,
         hidePageTitle: true,
         hidePageHeader: true,
         fileExtension: ".mdx",
@@ -85,7 +84,6 @@ const config = {
         entryFileName: "readme.md",
         out: "./docs/react-hooks/hooks",
         name: "Hooks List",
-        stripYamlFrontmatter: true,
         fileExtension: '.md',
         flattenOutputFiles: true,
         enumMembersFormat: 'table',
@@ -117,7 +115,6 @@ const config = {
         tsconfig: "./akasha-core/libs/typings/tsconfig.json",
         out: "./docs/event-bus/ui-events",
         name: "UI Events",
-        stripYamlFrontmatter: true,
         hidePageHeader: true,
         hidePageTitle: true,
         flattenOutputFiles: true,
@@ -149,7 +146,6 @@ const config = {
         tsconfig: "./akasha-core/libs/sdk/tsconfig.json",
         out: "./docs/event-bus/global-events",
         name: "Global Events",
-        stripYamlFrontmatter: true,
         hidePageHeader: true,
         hidePageTitle: true,
         flattenOutputFiles: true,
@@ -182,7 +178,6 @@ const config = {
         tsconfig: "./akasha-core/libs/design-system-core/tsconfig.json",
         out: "./docs/design-system/design-system-core",
         name: "Design System Core",
-        stripYamlFrontmatter: true,
         hidePageTitle: true,
         hidePageHeader: true,
         flattenOutputFiles: true,
@@ -222,7 +217,6 @@ const config = {
         tsconfig: "./akasha-core/libs/design-system-components/tsconfig.json",
         out: "./docs/design-system/design-system-components",
         name: "Design System Components",
-        stripYamlFrontmatter: true,
         hidePageTitle: true,
         hidePageHeader: true,
         flattenOutputFiles: true,
@@ -273,7 +267,7 @@ const config = {
           excludeFolders: true,
         },
         printTypeOptions: {
-          useApiGroup: true,
+          hierachy: 'api',
           deprecated: 'skip'
         }
       }
