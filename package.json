@@ -43,7 +43,7 @@
     "typedoc-plugin-markdown": "4.4.1",
     "typedoc-plugin-merge-modules": "^6.1.0",
     "typedoc-plugin-missing-exports": "3.1.0",
-    "typescript": "5.7.2"
+    "typescript": "5.6.3"
   },
   "browserslist": {
     "production": [
@@ -57,8 +57,9 @@
       "last 1 safari version"
     ]
   },
-  "packageManager": "yarn@4.1.1",
+  "packageManager": "yarn@4.4.0",
   "engines": {
-    "node": ">=18.0"
+    "node": ">=18.0",
+    "yarn": "^4.1.1"
   }
 }
