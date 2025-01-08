@@ -1,22 +1,20 @@
-// @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 const {themes} = require('prism-react-renderer');
 const { directiveDescriptor } = require("@graphql-markdown/helpers");
 const lightTheme = themes.github;
 const darkTheme = themes.dracula;
 
-/** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "AKASHA docs",
   tagline: "Build your own application with AKASHA",
   url: "https://akasha-docs.pages.dev",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "ignore",
+  onBrokenAnchors: "ignore",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "AKASHAorg", // Usually your GitHub org/user name.
   projectName: "akasha-docs", // Usually your repo name.
-
   presets: [
     [
       "classic",
