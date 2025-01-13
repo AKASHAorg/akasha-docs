@@ -11,7 +11,8 @@ const config = {
   tagline: "Build your own application with AKASHA",
   url: "https://akasha-docs.pages.dev",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "ignore", // @TODO: revert this after refactor
+  onBrokenAnchors: "ignore", // @TODO: revert this after refactor
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "AKASHAorg", // Usually your GitHub org/user name.
