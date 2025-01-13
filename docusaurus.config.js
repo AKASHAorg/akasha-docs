@@ -43,7 +43,7 @@ const config = {
         entryPointStrategy: "expand",
         tsconfig: "./akasha-core/libs/sdk/tsconfig.json",
         readme: "none",
-        out: "./docs/sdk/api-reference",
+        out: "./docs/data-fetching-and-mutations/sdk/api-reference",
         name: "AKASHA SDK reference",
         categorizeByGroup: false,
         excludeInternal: true,
@@ -82,9 +82,9 @@ const config = {
         entryPointStrategy: "expand",
         tsconfig: "./akasha-core/libs/hooks/tsconfig.json",
         readme: "none",
-        entryFileName: "readme.md",
-        out: "./docs/react-hooks/hooks",
-        name: "Hooks List",
+        entryFileName: "index.md",
+        out: "./docs/data-fetching-and-mutations/hooks",
+        name: "Hooks",
         fileExtension: '.md',
         flattenOutputFiles: true,
         enumMembersFormat: 'table',
@@ -107,110 +107,6 @@ const config = {
         }
       },
     ],
-    [
-      "docusaurus-plugin-typedoc",
-      {
-        id: "design-system-core",
-        entryPoints: ["./akasha-core/libs/design-system-core/src/components/*"],
-        entryPointStrategy: "expand",
-        exclude: ["**/*+(.test|.spec).tsx"],
-        tsconfig: "./akasha-core/libs/design-system-core/tsconfig.json",
-        out: "./docs/design-system/design-system-core",
-        name: "Design System Core",
-        hidePageTitle: true,
-        hidePageHeader: true,
-        flattenOutputFiles: true,
-        sidebarLinks: {},
-        enumMembersFormat: 'table',
-        typeDeclarationFormat: "table",
-        parametersFormat: "table",
-        propertiesFormat: "table",
-        indexFormat: "table",
-        membersWithOwnFile: [],
-        groupOrder: ["Classes", "Functions", "Type Aliases", "*"],
-        // entryFileName is required because there is a link
-        // in the design-system-components to the readme file
-        entryFileName: "README.md",
-        navigationModel: {
-          excludeFolders: true,
-        },
-        plugin: ["typedoc-plugin-merge-modules"],
-        mergeModulesRenameDefaults: true,
-        mergeModulesMergeMode: "module",
-        textContentMappings: {
-          "kind.function.plural": "Components",
-          "kind.class.singular": "Class Component",
-          "kind.class.plural": "Class Components",
-          "kind.typeAlias.singular": "Prop",
-          "kind.typeAlias.plural": "Props",
-        }
-      }
-    ],
-    [
-      "docusaurus-plugin-typedoc",
-      {
-        id: "design-system-components",
-        entryPoints: ["./akasha-core/libs/design-system-components/src/components/*"],
-        entryPointStrategy: "expand",
-        exclude: ["**/*+(.test|.spec).tsx"],
-        tsconfig: "./akasha-core/libs/design-system-components/tsconfig.json",
-        out: "./docs/design-system/design-system-components",
-        name: "Design System Components",
-        hidePageTitle: true,
-        hidePageHeader: true,
-        flattenOutputFiles: true,
-        sidebarLinks: {},
-        enumMembersFormat: 'table',
-        typeDeclarationFormat: "table",
-        parametersFormat: "table",
-        propertiesFormat: "table",
-        indexFormat: "table",
-        membersWithOwnFile: [],
-        groupOrder: ["Classes", "Functions", "Type Aliases", "*"],
-        navigationModel: {
-          excludeFolders: true,
-        },
-        plugin: ["typedoc-plugin-merge-modules"],
-        mergeModulesRenameDefaults: true,
-        mergeModulesMergeMode: "module",
-        textContentMappings: {
-          "kind.function.plural": "Components",
-          "kind.class.singular": "Class Component",
-          "kind.class.plural": "Class Components",
-          "kind.typeAlias.singular": "Prop",
-          "kind.typeAlias.plural": "Props",
-        }
-      }
-    ],
-    [
-      "@graphql-markdown/docusaurus",
-      /** @type {import('@graphql-markdown/types').ConfigOptions} */
-      {
-        id: "composedb-models",
-        schema: "./akasha-core/libs/composedb/lib/schema.graphql",
-        rootPath: "./docs",
-        baseURL: "composedb-models",
-        // homepage: "./docs/composedb-models/index.md",
-        runOnBuild: true,
-        loaders: {
-          GraphQLFileLoader: "@graphql-tools/graphql-file-loader"
-        },
-        groupByDirective: true,
-        enumMembersFormat: 'table',
-        typeDeclarationFormat: "table",
-        parametersFormat: "table",
-        propertiesFormat: "table",
-        indexFormat: "table",
-        membersWithOwnFile: [],
-        navigationModel: {
-          excludeFolders: true,
-        },
-        printTypeOptions: {
-          useApiGroup: true,
-          deprecated: 'skip'
-        }
-      }
-    ]
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */

@@ -1,21 +1,18 @@
----
-sidebar_position: 42
-sidebar_label: Hooks
----
-
 # Hooks
 
-## Hooks
+## Functions
 
 ### AnalyticsProvider()
 
 > **AnalyticsProvider**(`__namedParameters`): `Element`
 
+Defined in: [libs/hooks/src/use-analytics.tsx:24](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-analytics.tsx#L24)
+
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `__namedParameters` | `object` |
+| ------ | ------ |
+| `__namedParameters` | \{ `children`: `ReactNode`; `uiEvents`: `Subject`\<`UIEventData`\>; \} |
 | `__namedParameters.children`? | `ReactNode` |
 | `__namedParameters.uiEvents` | `Subject`\<`UIEventData`\> |
 
@@ -23,55 +20,29 @@ sidebar_label: Hooks
 
 `Element`
 
-#### Source
-
-[libs/hooks/src/use-analytics.tsx:24](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-analytics.tsx#L24)
-
-***
-
-### RootComponentPropsProvider()
-
-> **RootComponentPropsProvider**(`__namedParameters`): `Element`
-
-#### Parameters
-
-| Parameter | Type |
-| :------ | :------ |
-| `__namedParameters` | `IRootComponentProps` \| `IRootExtensionProps`\<`Record`\<`string`, `unknown`\>\> |
-
-#### Returns
-
-`Element`
-
-#### Source
-
-[libs/hooks/src/use-root-props.tsx:10](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-root-props.tsx#L10)
-
 ***
 
 ### createReactiveVar()
 
 > **createReactiveVar**\<`T`\>(`initialState`): `ReactiveVar`\<`T`\>
 
-#### Type parameters
+Defined in: [libs/hooks/src/utils/create-reactive-var.ts:3](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/create-reactive-var.ts#L3)
 
-| Type parameter |
-| :------ |
+#### Type Parameters
+
+| Type Parameter |
+| ------ |
 | `T` |
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `initialState` | `T` |
 
 #### Returns
 
 `ReactiveVar`\<`T`\>
-
-#### Source
-
-[libs/hooks/src/utils/create-reactive-var.ts:3](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/create-reactive-var.ts#L3)
 
 ***
 
@@ -79,12 +50,14 @@ sidebar_label: Hooks
 
 > **decodeb64SlateContent**(`base64Content`, `logger`?): `any`
 
+Defined in: [libs/hooks/src/utils/entry-utils.ts:14](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/entry-utils.ts#L14)
+
 Utility to decode base64 slate content
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `base64Content` | `string` |
 | `logger`? | `Logger` |
 
@@ -92,51 +65,43 @@ Utility to decode base64 slate content
 
 `any`
 
-#### Source
-
-[libs/hooks/src/utils/entry-utils.ts:14](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/entry-utils.ts#L14)
-
 ***
 
 ### encodeSlateToBase64()
 
 > **encodeSlateToBase64**(`slateContent`): `string`
 
+Defined in: [libs/hooks/src/utils/entry-utils.ts:30](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/entry-utils.ts#L30)
+
 Utility to encode slate content to base64
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `slateContent` | `Descendant`[] |
 
 #### Returns
 
 `string`
 
-#### Source
-
-[libs/hooks/src/utils/entry-utils.ts:30](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/entry-utils.ts#L30)
-
 ***
 
 ### filterEvent()
 
-> **filterEvent**(`eventType`): `MonoTypeOperatorFunction`\<`Extract`\<`UIEventData`, `object`\>\>
+> **filterEvent**(`eventType`): `MonoTypeOperatorFunction`\<`Extract`\<`UIEventData`, \{ `event`: *typeof* [`eventType`](index.md#eventtype); \}\>\>
+
+Defined in: [libs/hooks/src/utils/event-utils.ts:5](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/event-utils.ts#L5)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `eventType` | `AnalyticsEventTypes` \| `EventTypes` \| `RegisterContentBlock` \| `RegisterExtension` \| `RegisterWidget` \| `RegisterApplication` \| `RegisterRoutes` \| `ThemeChange` \| `NotificationEvents` |
+| ------ | ------ |
+| `eventType` | `AnalyticsEventTypes` \| `EventTypes` \| `ContentBlockEvents` \| `ExtensionEvents` \| `WidgetEvents` \| `AppEvents` \| `RouteRegistrationEvents` \| `ThemingEvents` \| `NotificationEvents` |
 
 #### Returns
 
-`MonoTypeOperatorFunction`\<`Extract`\<`UIEventData`, `object`\>\>
-
-#### Source
-
-[libs/hooks/src/utils/event-utils.ts:5](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/event-utils.ts#L5)
+`MonoTypeOperatorFunction`\<`Extract`\<`UIEventData`, \{ `event`: *typeof* [`eventType`](index.md#eventtype); \}\>\>
 
 ***
 
@@ -144,19 +109,17 @@ Utility to encode slate content to base64
 
 > **filterEvents**(`eventTypes`): `MonoTypeOperatorFunction`\<`UIEventData`\>
 
+Defined in: [libs/hooks/src/utils/event-utils.ts:18](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/event-utils.ts#L18)
+
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `eventTypes` | (`AnalyticsEventTypes` \| `EventTypes` \| `RegisterContentBlock` \| `RegisterExtension` \| `RegisterWidget` \| `RegisterApplication` \| `RegisterRoutes` \| `ThemeChange` \| `NotificationEvents`)[] |
+| ------ | ------ |
+| `eventTypes` | (`AnalyticsEventTypes` \| `EventTypes` \| `ContentBlockEvents` \| `ExtensionEvents` \| `WidgetEvents` \| `AppEvents` \| `RouteRegistrationEvents` \| `ThemingEvents` \| `NotificationEvents`)[] |
 
 #### Returns
 
 `MonoTypeOperatorFunction`\<`UIEventData`\>
-
-#### Source
-
-[libs/hooks/src/utils/event-utils.ts:18](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/event-utils.ts#L18)
 
 ***
 
@@ -164,19 +127,17 @@ Utility to encode slate content to base64
 
 > **getFollowList**(`followDocuments`): `FollowList`
 
+Defined in: [libs/hooks/src/utils/getFollowList.ts:3](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/getFollowList.ts#L3)
+
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `followDocuments` | `AkashaFollowDocument`[] |
 
 #### Returns
 
 `FollowList`
-
-#### Source
-
-[libs/hooks/src/utils/getFollowList.ts:3](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/getFollowList.ts#L3)
 
 ***
 
@@ -184,15 +145,13 @@ Utility to encode slate content to base64
 
 > **getLinkPreview**(): `Promise`\<`any`\>
 
+Defined in: [libs/hooks/src/utils/media-utils.ts:49](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/media-utils.ts#L49)
+
 Utility to get preview of a specified url
 
 #### Returns
 
 `Promise`\<`any`\>
-
-#### Source
-
-[libs/hooks/src/utils/media-utils.ts:49](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/media-utils.ts#L49)
 
 ***
 
@@ -200,27 +159,25 @@ Utility to get preview of a specified url
 
 > **getMediaUrl**(`hash`?): `object`
 
+Defined in: [libs/hooks/src/utils/media-utils.ts:19](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/media-utils.ts#L19)
+
 Utility to build gateway links to ipfs content
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `hash`? | `string` |
 
 #### Returns
 
 `object`
 
-| Member | Type |
-| :------ | :------ |
-| `fallbackLink` | `string` |
-| `originLink` | `string` |
-| `pathLink` | `string` |
-
-#### Source
-
-[libs/hooks/src/utils/media-utils.ts:19](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/media-utils.ts#L19)
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="fallbacklink"></a> `fallbackLink` | `string` | [libs/hooks/src/utils/media-utils.ts:24](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/media-utils.ts#L24) |
+| <a id="originlink"></a> `originLink` | `string` | [libs/hooks/src/utils/media-utils.ts:23](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/media-utils.ts#L23) |
+| <a id="pathlink"></a> `pathLink` | `string` | [libs/hooks/src/utils/media-utils.ts:25](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/media-utils.ts#L25) |
 
 ***
 
@@ -228,17 +185,19 @@ Utility to build gateway links to ipfs content
 
 > **hasOwn**\<`T`, `K`\>(`o`, `v`): o is K extends KeyofUnion\<T\> ? ExtractByKey\<T, K\<K\>\> : T & \{ \[P in string \| number \| symbol\]: unknown \}
 
-#### Type parameters
+Defined in: [libs/hooks/src/utils/has-own.ts:10](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/has-own.ts#L10)
 
-| Type parameter |
-| :------ |
+#### Type Parameters
+
+| Type Parameter |
+| ------ |
 | `T` *extends* `Record`\<`string` \| `number` \| `symbol`, `any`\> |
 | `K` *extends* `string` \| `number` \| `symbol` |
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `o` | `T` |
 | `v` | `K` |
 
@@ -246,31 +205,25 @@ Utility to build gateway links to ipfs content
 
 o is K extends KeyofUnion\<T\> ? ExtractByKey\<T, K\<K\>\> : T & \{ \[P in string \| number \| symbol\]: unknown \}
 
-#### Source
-
-[libs/hooks/src/utils/has-own.ts:10](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/has-own.ts#L10)
-
 ***
 
 ### mapBeamEntryData()
 
 > **mapBeamEntryData**(`beam`?): `BeamData`
 
+Defined in: [libs/hooks/src/utils/entry-utils.ts:77](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/entry-utils.ts#L77)
+
 Utility to map beam entry data
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `beam`? | `RawBeamData` |
 
 #### Returns
 
 `BeamData`
-
-#### Source
-
-[libs/hooks/src/utils/entry-utils.ts:77](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/entry-utils.ts#L77)
 
 ***
 
@@ -278,53 +231,57 @@ Utility to map beam entry data
 
 > **mapReflectEntryData**(`reflection`?): `ReflectionData`
 
+Defined in: [libs/hooks/src/utils/entry-utils.ts:60](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/entry-utils.ts#L60)
+
 Utility to map reflect entry data
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `reflection`? | `RawReflectionData` |
 
 #### Returns
 
 `ReflectionData`
 
-#### Source
+***
 
-[libs/hooks/src/utils/entry-utils.ts:60](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/entry-utils.ts#L60)
+### RootComponentPropsProvider()
+
+> **RootComponentPropsProvider**(`__namedParameters`): `Element`
+
+Defined in: [libs/hooks/src/use-root-props.tsx:10](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-root-props.tsx#L10)
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `__namedParameters` | `IRootComponentProps` \| `IRootExtensionProps` |
+
+#### Returns
+
+`Element`
 
 ***
 
 ### saveMediaFile()
 
-> **saveMediaFile**(`__namedParameters`): `Promise`\<`object`\>
+> **saveMediaFile**(`__namedParameters`): `Promise`\<\{ `blob`: `Blob`; `CID`: `string`; `size`: \{ `height`: `number`; `naturalHeight`: `number`; `naturalWidth`: `number`; `width`: `number`; \}; \}\>
+
+Defined in: [libs/hooks/src/utils/media-utils.ts:82](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/media-utils.ts#L82)
 
 Utility to save media file
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `__namedParameters` | `ISaveMediaFile` |
 
 #### Returns
 
-`Promise`\<`object`\>
-
-| Member | Type | Value |
-| :------ | :------ | :------ |
-| `CID` | `string` | cid |
-| `blob` | `Blob` | resized.image |
-| `size` | `object` | resized.size |
-| `size.height` | `number` | - |
-| `size.naturalHeight` | `number` | - |
-| `size.naturalWidth` | `number` | - |
-| `size.width` | `number` | - |
-
-#### Source
-
-[libs/hooks/src/utils/media-utils.ts:82](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/media-utils.ts#L82)
+`Promise`\<\{ `blob`: `Blob`; `CID`: `string`; `size`: \{ `height`: `number`; `naturalHeight`: `number`; `naturalWidth`: `number`; `width`: `number`; \}; \}\>
 
 ***
 
@@ -332,16 +289,18 @@ Utility to save media file
 
 > **sortByKey**\<`T`\>(`array`, `key`): `T`[]
 
-#### Type parameters
+Defined in: [libs/hooks/src/utils/sort-by-key.ts:1](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/sort-by-key.ts#L1)
 
-| Type parameter |
-| :------ |
+#### Type Parameters
+
+| Type Parameter |
+| ------ |
 | `T` |
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `array` | `T`[] |
 | `key` | `string` |
 
@@ -349,15 +308,13 @@ Utility to save media file
 
 `T`[]
 
-#### Source
-
-[libs/hooks/src/utils/sort-by-key.ts:1](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/sort-by-key.ts#L1)
-
 ***
 
 ### switchToRequiredNetwork()
 
 > **switchToRequiredNetwork**(): `Promise`\<`void`\>
+
+Defined in: [libs/hooks/src/use-network-state.ts:10](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L10)
 
 A utility function to switch to required network for supported wallets
 
@@ -365,37 +322,33 @@ A utility function to switch to required network for supported wallets
 
 `Promise`\<`void`\>
 
-#### Source
-
-[libs/hooks/src/use-network-state.ts:10](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L10)
-
 ***
 
 ### transformSource()
 
 > **transformSource**(`image`?): `Image`
 
+Defined in: [libs/hooks/src/utils/media-utils.ts:99](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/media-utils.ts#L99)
+
 Utility to transform source
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `image`? | `Image` |
 
 #### Returns
 
 `Image`
 
-#### Source
-
-[libs/hooks/src/utils/media-utils.ts:99](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/media-utils.ts#L99)
-
 ***
 
 ### useAccordion()
 
 > **useAccordion**(): `object`
+
+Defined in: [libs/hooks/src/use-accordion.ts:12](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-accordion.ts#L12)
 
 Hook to manipulate the state of the Accordion component.
 
@@ -406,11 +359,11 @@ Hook to manipulate the state of the Accordion component.
 - Object containing the active accordion ID, and
 methods for handling click events and setting an active ID.
 
-| Member | Type |
-| :------ | :------ |
-| `activeAccordionId` | `string` |
-| `handleAccordionClick` | (`accordionId`) => `void` |
-| `setActiveAccordionId` | `Dispatch`\<`SetStateAction`\<`string`\>\> |
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="activeaccordionid"></a> `activeAccordionId` | `string` | [libs/hooks/src/use-accordion.ts:26](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-accordion.ts#L26) |
+| <a id="handleaccordionclick"></a> `handleAccordionClick` | (`accordionId`) => `void` | [libs/hooks/src/use-accordion.ts:26](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-accordion.ts#L26) |
+| <a id="setactiveaccordionid"></a> `setActiveAccordionId` | `Dispatch`\<`SetStateAction`\<`string`\>\> | [libs/hooks/src/use-accordion.ts:26](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-accordion.ts#L26) |
 
 #### Example
 
@@ -418,40 +371,36 @@ methods for handling click events and setting an active ID.
  const { activeAccordionId, setActiveAccordionId, handleAccordionClick } = useAccordion();
 ```
 
-#### Source
-
-[libs/hooks/src/use-accordion.ts:12](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-accordion.ts#L12)
-
 ***
 
 ### useAkashaStore()
 
 > **useAkashaStore**(): `object`
 
+Defined in: [libs/hooks/src/store/use-akasha-store.ts:5](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/store/use-akasha-store.ts#L5)
+
 #### Returns
 
 `object`
 
-| Member | Type |
-| :------ | :------ |
-| `data` | `IUserState`\<`AkashaProfile`\> |
-| `userStore` | `IUserStore`\<`AkashaProfile`\> |
-
-#### Source
-
-[libs/hooks/src/store/use-akasha-store.ts:5](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/store/use-akasha-store.ts#L5)
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="data"></a> `data` | `IUserState`\<`AkashaProfile`\> | [libs/hooks/src/store/use-akasha-store.ts:10](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/store/use-akasha-store.ts#L10) |
+| <a id="userstore"></a> `userStore` | `IUserStore`\<`AkashaProfile`\> | [libs/hooks/src/store/use-akasha-store.ts:10](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/store/use-akasha-store.ts#L10) |
 
 ***
 
 ### useAnalytics()
 
-> **useAnalytics**(): [[`UseAnalyticsActions`](readme.md#useanalyticsactions)]
+> **useAnalytics**(): \[[`UseAnalyticsActions`](index.md#useanalyticsactions)\]
+
+Defined in: [libs/hooks/src/use-analytics.tsx:54](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-analytics.tsx#L54)
 
 Hook to handle analytics
 
 #### Returns
 
-[[`UseAnalyticsActions`](readme.md#useanalyticsactions)]
+\[[`UseAnalyticsActions`](index.md#useanalyticsactions)\]
 
 #### Example
 
@@ -464,15 +413,13 @@ action: 'some-action',
 });
 ```
 
-#### Source
-
-[libs/hooks/src/use-analytics.tsx:54](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-analytics.tsx#L54)
-
 ***
 
 ### useConnectWallet()
 
 > **useConnectWallet**(): `object`
+
+Defined in: [libs/hooks/src/use-connect-wallet.ts:15](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-connect-wallet.ts#L15)
 
 Hook for connecting to a user's wallet (through Metamask or any other compatible applications)
 
@@ -480,14 +427,14 @@ Hook for connecting to a user's wallet (through Metamask or any other compatible
 
 `object`
 
-| Member | Type | Value |
-| :------ | :------ | :------ |
-| `connect` | () => `void` | - |
-| `data` | `string` | - |
-| `error` | `Error` | - |
-| `isError` | `boolean` | !!error |
-| `isLoading` | `boolean` | - |
-| `isSuccess` | `boolean` | !!data |
+| Name | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="connect"></a> `connect` | () => `void` | - | [libs/hooks/src/use-connect-wallet.ts:52](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-connect-wallet.ts#L52) |
+| <a id="data-1"></a> `data` | `string` | - | [libs/hooks/src/use-connect-wallet.ts:52](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-connect-wallet.ts#L52) |
+| <a id="error"></a> `error` | `Error` | - | [libs/hooks/src/use-connect-wallet.ts:52](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-connect-wallet.ts#L52) |
+| <a id="iserror"></a> `isError` | `boolean` | !!error | [libs/hooks/src/use-connect-wallet.ts:52](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-connect-wallet.ts#L52) |
+| <a id="isloading"></a> `isLoading` | `boolean` | - | [libs/hooks/src/use-connect-wallet.ts:52](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-connect-wallet.ts#L52) |
+| <a id="issuccess"></a> `isSuccess` | `boolean` | !!data | [libs/hooks/src/use-connect-wallet.ts:52](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-connect-wallet.ts#L52) |
 
 #### Example
 
@@ -497,15 +444,13 @@ const connectWalletCall = useConnectWallet();
 connectWalletCall.connect();
 ```
 
-#### Source
-
-[libs/hooks/src/use-connect-wallet.ts:15](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-connect-wallet.ts#L15)
-
 ***
 
 ### useCreateAppMutation()
 
-> **useCreateAppMutation**(`baseOptions`?): `MutationTuple`\<`CreateAppMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+> **useCreateAppMutation**(`baseOptions`?): `MutationTuple`\<`CreateAppMutation`, `Exact`\<\{ `i`: `SetAkashaAppInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2801](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2801)
 
 __useCreateAppMutation__
 
@@ -517,12 +462,12 @@ When your component renders, `useCreateAppMutation` returns a tuple that include
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `MutationHookOptions`\<`CreateAppMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `MutationHookOptions`\<`CreateAppMutation`, `Exact`\<\{ `i`: `SetAkashaAppInput`; \}\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
 
 #### Returns
 
-`MutationTuple`\<`CreateAppMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+`MutationTuple`\<`CreateAppMutation`, `Exact`\<\{ `i`: `SetAkashaAppInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
 
 #### Example
 
@@ -534,15 +479,13 @@ const [createAppMutation, { data, loading, error }] = useCreateAppMutation({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2801](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2801)
-
 ***
 
 ### useCreateBeamMutation()
 
-> **useCreateBeamMutation**(`baseOptions`?): `MutationTuple`\<`CreateBeamMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+> **useCreateBeamMutation**(`baseOptions`?): `MutationTuple`\<`CreateBeamMutation`, `Exact`\<\{ `i`: `CreateAkashaBeamInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:567](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L567)
 
 __useCreateBeamMutation__
 
@@ -554,12 +497,12 @@ When your component renders, `useCreateBeamMutation` returns a tuple that includ
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `MutationHookOptions`\<`CreateBeamMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `MutationHookOptions`\<`CreateBeamMutation`, `Exact`\<\{ `i`: `CreateAkashaBeamInput`; \}\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
 
 #### Returns
 
-`MutationTuple`\<`CreateBeamMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+`MutationTuple`\<`CreateBeamMutation`, `Exact`\<\{ `i`: `CreateAkashaBeamInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
 
 #### Example
 
@@ -571,15 +514,13 @@ const [createBeamMutation, { data, loading, error }] = useCreateBeamMutation({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:567](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L567)
-
 ***
 
 ### useCreateContentBlockMutation()
 
-> **useCreateContentBlockMutation**(`baseOptions`?): `MutationTuple`\<`CreateContentBlockMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+> **useCreateContentBlockMutation**(`baseOptions`?): `MutationTuple`\<`CreateContentBlockMutation`, `Exact`\<\{ `i`: `CreateAkashaContentBlockInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:639](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L639)
 
 __useCreateContentBlockMutation__
 
@@ -591,12 +532,12 @@ When your component renders, `useCreateContentBlockMutation` returns a tuple tha
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `MutationHookOptions`\<`CreateContentBlockMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `MutationHookOptions`\<`CreateContentBlockMutation`, `Exact`\<\{ `i`: `CreateAkashaContentBlockInput`; \}\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
 
 #### Returns
 
-`MutationTuple`\<`CreateContentBlockMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+`MutationTuple`\<`CreateContentBlockMutation`, `Exact`\<\{ `i`: `CreateAkashaContentBlockInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
 
 #### Example
 
@@ -608,15 +549,13 @@ const [createContentBlockMutation, { data, loading, error }] = useCreateContentB
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:639](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L639)
-
 ***
 
 ### useCreateFollowMutation()
 
-> **useCreateFollowMutation**(`baseOptions`?): `MutationTuple`\<`CreateFollowMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+> **useCreateFollowMutation**(`baseOptions`?): `MutationTuple`\<`CreateFollowMutation`, `Exact`\<\{ `i`: `SetAkashaFollowInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1865](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1865)
 
 __useCreateFollowMutation__
 
@@ -628,12 +567,12 @@ When your component renders, `useCreateFollowMutation` returns a tuple that incl
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `MutationHookOptions`\<`CreateFollowMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `MutationHookOptions`\<`CreateFollowMutation`, `Exact`\<\{ `i`: `SetAkashaFollowInput`; \}\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
 
 #### Returns
 
-`MutationTuple`\<`CreateFollowMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+`MutationTuple`\<`CreateFollowMutation`, `Exact`\<\{ `i`: `SetAkashaFollowInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
 
 #### Example
 
@@ -645,15 +584,13 @@ const [createFollowMutation, { data, loading, error }] = useCreateFollowMutation
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1865](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1865)
-
 ***
 
 ### useCreateInterestsMutation()
 
-> **useCreateInterestsMutation**(`baseOptions`?): `MutationTuple`\<`CreateInterestsMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+> **useCreateInterestsMutation**(`baseOptions`?): `MutationTuple`\<`CreateInterestsMutation`, `Exact`\<\{ `i`: `CreateAkashaProfileInterestsInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1780](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1780)
 
 __useCreateInterestsMutation__
 
@@ -665,12 +602,12 @@ When your component renders, `useCreateInterestsMutation` returns a tuple that i
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `MutationHookOptions`\<`CreateInterestsMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `MutationHookOptions`\<`CreateInterestsMutation`, `Exact`\<\{ `i`: `CreateAkashaProfileInterestsInput`; \}\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
 
 #### Returns
 
-`MutationTuple`\<`CreateInterestsMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+`MutationTuple`\<`CreateInterestsMutation`, `Exact`\<\{ `i`: `CreateAkashaProfileInterestsInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
 
 #### Example
 
@@ -682,15 +619,13 @@ const [createInterestsMutation, { data, loading, error }] = useCreateInterestsMu
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1780](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1780)
-
 ***
 
 ### useCreateProfileMutation()
 
-> **useCreateProfileMutation**(`baseOptions`?): `MutationTuple`\<`CreateProfileMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+> **useCreateProfileMutation**(`baseOptions`?): `MutationTuple`\<`CreateProfileMutation`, `Exact`\<\{ `i`: `CreateAkashaProfileInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1701](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1701)
 
 __useCreateProfileMutation__
 
@@ -702,12 +637,12 @@ When your component renders, `useCreateProfileMutation` returns a tuple that inc
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `MutationHookOptions`\<`CreateProfileMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `MutationHookOptions`\<`CreateProfileMutation`, `Exact`\<\{ `i`: `CreateAkashaProfileInput`; \}\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
 
 #### Returns
 
-`MutationTuple`\<`CreateProfileMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+`MutationTuple`\<`CreateProfileMutation`, `Exact`\<\{ `i`: `CreateAkashaProfileInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
 
 #### Example
 
@@ -719,15 +654,13 @@ const [createProfileMutation, { data, loading, error }] = useCreateProfileMutati
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1701](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1701)
-
 ***
 
 ### useCreateReflectMutation()
 
-> **useCreateReflectMutation**(`baseOptions`?): `MutationTuple`\<`CreateReflectMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+> **useCreateReflectMutation**(`baseOptions`?): `MutationTuple`\<`CreateReflectMutation`, `Exact`\<\{ `i`: `CreateAkashaReflectInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1274](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1274)
 
 __useCreateReflectMutation__
 
@@ -739,12 +672,12 @@ When your component renders, `useCreateReflectMutation` returns a tuple that inc
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `MutationHookOptions`\<`CreateReflectMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `MutationHookOptions`\<`CreateReflectMutation`, `Exact`\<\{ `i`: `CreateAkashaReflectInput`; \}\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
 
 #### Returns
 
-`MutationTuple`\<`CreateReflectMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+`MutationTuple`\<`CreateReflectMutation`, `Exact`\<\{ `i`: `CreateAkashaReflectInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
 
 #### Example
 
@@ -756,22 +689,20 @@ const [createReflectMutation, { data, loading, error }] = useCreateReflectMutati
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1274](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1274)
-
 ***
 
 ### useCurrentNetwork()
 
 > **useCurrentNetwork**(`enabler`?): `object`
 
+Defined in: [libs/hooks/src/use-network-state.ts:86](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L86)
+
 Hook to check the user's current web3 network
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `enabler`? | `boolean` |
 
 #### Returns
@@ -780,11 +711,11 @@ Hook to check the user's current web3 network
 
 network name
 
-| Member | Type |
-| :------ | :------ |
-| `data` | `string` |
-| `error` | `Error` |
-| `isLoading` | `boolean` |
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="data-2"></a> `data` | `string` | [libs/hooks/src/use-network-state.ts:111](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L111) |
+| <a id="error-1"></a> `error` | `Error` | [libs/hooks/src/use-network-state.ts:111](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L111) |
+| <a id="isloading-1"></a> `isLoading` | `boolean` | [libs/hooks/src/use-network-state.ts:111](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L111) |
 
 #### Example
 
@@ -794,15 +725,13 @@ const currentNetworkQuery = useCurrentNetwork(true);
 const network = currentNetworkQuery.data;
 ```
 
-#### Source
-
-[libs/hooks/src/use-network-state.ts:86](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L86)
-
 ***
 
 ### useDismissedCard()
 
-> **useDismissedCard**(`id`, `statusStorage`?): [`boolean`, () => `void`]
+> **useDismissedCard**(`id`, `statusStorage`?): \[`boolean`, () => `void`\]
+
+Defined in: [libs/hooks/src/use-dismissed-card.ts:25](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-dismissed-card.ts#L25)
 
 Hook to manage the information cards displayed in the sidebar or inside
 the apps which users can dismiss by clicking the close button.
@@ -810,13 +739,13 @@ the apps which users can dismiss by clicking the close button.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `id` | `string` | string |
 | `statusStorage`? | `IStorage` | IStorage (optional) to specify from which storage to retrieve the saved dismissed card IDs. |
 
 #### Returns
 
-[`boolean`, () => `void`]
+\[`boolean`, () => `void`\]
 
 #### Example
 
@@ -824,22 +753,20 @@ the apps which users can dismiss by clicking the close button.
 const [dismissed, dismissCard] = useDismissedCard('@akashaorg/ui-widget-sidebar_cta-card');
 ```
 
-#### Source
-
-[libs/hooks/src/use-dismissed-card.ts:25](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-dismissed-card.ts#L25)
-
 ***
 
 ### useEntryNavigation()
 
 > **useEntryNavigation**(`navigateFn`?, `currentBeamId`?): (`navigationDetails`, `itemType`) => `void`
 
+Defined in: [libs/hooks/src/use-navigation.ts:14](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-navigation.ts#L14)
+
 Hook to navigation to entry's page
 
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `navigateFn`? | (`args`) => `void` | function (optional) that can control the actual navigation. |
 | `currentBeamId`? | `string` | string (optional) |
 
@@ -850,7 +777,7 @@ Hook to navigation to entry's page
 ##### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `navigationDetails` | `IContentClickDetails` |
 | `itemType` | `EntityTypes` |
 
@@ -865,35 +792,31 @@ Hook to navigation to entry's page
 const handleEntryNavigate = useEntryNavigation(navigateTo, 'current-beam-id');
 ```
 
-#### Source
-
-[libs/hooks/src/use-navigation.ts:14](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-navigation.ts#L14)
-
 ***
 
 ### useGetAppReleaseByIdLazyQuery()
 
-> **useGetAppReleaseByIdLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetAppReleaseByIdQuery`, `Exact`\<`object`\>\>
+> **useGetAppReleaseByIdLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetAppReleaseByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:3260](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3260)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetAppReleaseByIdQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetAppReleaseByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetAppReleaseByIdQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3260](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3260)
+`LazyQueryResultTuple`\<`GetAppReleaseByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 ***
 
 ### useGetAppReleaseByIdQuery()
 
-> **useGetAppReleaseByIdQuery**(`baseOptions`): `QueryResult`\<`GetAppReleaseByIdQuery`, `Exact`\<`object`\>\>
+> **useGetAppReleaseByIdQuery**(`baseOptions`): `QueryResult`\<`GetAppReleaseByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:3256](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3256)
 
 __useGetAppReleaseByIdQuery__
 
@@ -904,12 +827,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetAppReleaseByIdQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetAppReleaseByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `id`: `string`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetAppReleaseByIdQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetAppReleaseByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 #### Example
 
@@ -921,55 +844,49 @@ const { data, loading, error } = useGetAppReleaseByIdQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3256](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3256)
-
 ***
 
 ### useGetAppReleaseByIdSuspenseQuery()
 
-> **useGetAppReleaseByIdSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetAppReleaseByIdQuery`, `Exact`\<`object`\>\>
+> **useGetAppReleaseByIdSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetAppReleaseByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:3264](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3264)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetAppReleaseByIdQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetAppReleaseByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetAppReleaseByIdQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3264](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3264)
+`UseSuspenseQueryResult`\<`GetAppReleaseByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 ***
 
 ### useGetAppsByIdLazyQuery()
 
-> **useGetAppsByIdLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetAppsByIdQuery`, `Exact`\<`object`\>\>
+> **useGetAppsByIdLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetAppsByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:3012](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3012)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetAppsByIdQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetAppsByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetAppsByIdQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3012](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3012)
+`LazyQueryResultTuple`\<`GetAppsByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 ***
 
 ### useGetAppsByIdQuery()
 
-> **useGetAppsByIdQuery**(`baseOptions`): `QueryResult`\<`GetAppsByIdQuery`, `Exact`\<`object`\>\>
+> **useGetAppsByIdQuery**(`baseOptions`): `QueryResult`\<`GetAppsByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:3008](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3008)
 
 __useGetAppsByIdQuery__
 
@@ -980,12 +897,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetAppsByIdQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetAppsByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `id`: `string`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetAppsByIdQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetAppsByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 #### Example
 
@@ -997,55 +914,49 @@ const { data, loading, error } = useGetAppsByIdQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3008](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3008)
-
 ***
 
 ### useGetAppsByIdSuspenseQuery()
 
-> **useGetAppsByIdSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetAppsByIdQuery`, `Exact`\<`object`\>\>
+> **useGetAppsByIdSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetAppsByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:3016](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3016)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetAppsByIdQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetAppsByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetAppsByIdQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3016](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3016)
+`UseSuspenseQueryResult`\<`GetAppsByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 ***
 
 ### useGetAppsByPublisherDidLazyQuery()
 
-> **useGetAppsByPublisherDidLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetAppsByPublisherDidQuery`, `Exact`\<`object`\>\>
+> **useGetAppsByPublisherDidLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetAppsByPublisherDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaAppSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:3081](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3081)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetAppsByPublisherDidQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetAppsByPublisherDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaAppSortingInput`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetAppsByPublisherDidQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3081](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3081)
+`LazyQueryResultTuple`\<`GetAppsByPublisherDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaAppSortingInput`; \}\>\>
 
 ***
 
 ### useGetAppsByPublisherDidQuery()
 
-> **useGetAppsByPublisherDidQuery**(`baseOptions`): `QueryResult`\<`GetAppsByPublisherDidQuery`, `Exact`\<`object`\>\>
+> **useGetAppsByPublisherDidQuery**(`baseOptions`): `QueryResult`\<`GetAppsByPublisherDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaAppSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:3077](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3077)
 
 __useGetAppsByPublisherDidQuery__
 
@@ -1056,12 +967,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetAppsByPublisherDidQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetAppsByPublisherDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaAppSortingInput`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaAppSortingInput`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetAppsByPublisherDidQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetAppsByPublisherDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaAppSortingInput`; \}\>\>
 
 #### Example
 
@@ -1079,55 +990,49 @@ const { data, loading, error } = useGetAppsByPublisherDidQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3077](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3077)
-
 ***
 
 ### useGetAppsByPublisherDidSuspenseQuery()
 
-> **useGetAppsByPublisherDidSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetAppsByPublisherDidQuery`, `Exact`\<`object`\>\>
+> **useGetAppsByPublisherDidSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetAppsByPublisherDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaAppSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:3085](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3085)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetAppsByPublisherDidQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetAppsByPublisherDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaAppSortingInput`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetAppsByPublisherDidQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3085](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3085)
+`UseSuspenseQueryResult`\<`GetAppsByPublisherDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaAppSortingInput`; \}\>\>
 
 ***
 
 ### useGetAppsLazyQuery()
 
-> **useGetAppsLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetAppsQuery`, `Exact`\<`object`\>\>
+> **useGetAppsLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetAppsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaAppSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2897](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2897)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetAppsQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetAppsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaAppSortingInput`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetAppsQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2897](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2897)
+`LazyQueryResultTuple`\<`GetAppsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaAppSortingInput`; \}\>\>
 
 ***
 
 ### useGetAppsQuery()
 
-> **useGetAppsQuery**(`baseOptions`?): `QueryResult`\<`GetAppsQuery`, `Exact`\<`object`\>\>
+> **useGetAppsQuery**(`baseOptions`?): `QueryResult`\<`GetAppsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaAppSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2893](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2893)
 
 __useGetAppsQuery__
 
@@ -1138,12 +1043,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `QueryHookOptions`\<`GetAppsQuery`, `Exact`\<`object`\>\> | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `QueryHookOptions`\<`GetAppsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaAppSortingInput`; \}\>\> | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetAppsQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetAppsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaAppSortingInput`; \}\>\>
 
 #### Example
 
@@ -1160,35 +1065,31 @@ const { data, loading, error } = useGetAppsQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2893](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2893)
-
 ***
 
 ### useGetAppsReleasesByPublisherDidLazyQuery()
 
-> **useGetAppsReleasesByPublisherDidLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetAppsReleasesByPublisherDidQuery`, `Exact`\<`object`\>\>
+> **useGetAppsReleasesByPublisherDidLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetAppsReleasesByPublisherDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppReleaseFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaAppReleaseSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:3151](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3151)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetAppsReleasesByPublisherDidQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetAppsReleasesByPublisherDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppReleaseFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaAppReleaseSortingInput`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetAppsReleasesByPublisherDidQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3151](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3151)
+`LazyQueryResultTuple`\<`GetAppsReleasesByPublisherDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppReleaseFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaAppReleaseSortingInput`; \}\>\>
 
 ***
 
 ### useGetAppsReleasesByPublisherDidQuery()
 
-> **useGetAppsReleasesByPublisherDidQuery**(`baseOptions`): `QueryResult`\<`GetAppsReleasesByPublisherDidQuery`, `Exact`\<`object`\>\>
+> **useGetAppsReleasesByPublisherDidQuery**(`baseOptions`): `QueryResult`\<`GetAppsReleasesByPublisherDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppReleaseFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaAppReleaseSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:3147](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3147)
 
 __useGetAppsReleasesByPublisherDidQuery__
 
@@ -1199,12 +1100,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetAppsReleasesByPublisherDidQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetAppsReleasesByPublisherDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppReleaseFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaAppReleaseSortingInput`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppReleaseFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaAppReleaseSortingInput`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetAppsReleasesByPublisherDidQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetAppsReleasesByPublisherDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppReleaseFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaAppReleaseSortingInput`; \}\>\>
 
 #### Example
 
@@ -1222,55 +1123,49 @@ const { data, loading, error } = useGetAppsReleasesByPublisherDidQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3147](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3147)
-
 ***
 
 ### useGetAppsReleasesByPublisherDidSuspenseQuery()
 
-> **useGetAppsReleasesByPublisherDidSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetAppsReleasesByPublisherDidQuery`, `Exact`\<`object`\>\>
+> **useGetAppsReleasesByPublisherDidSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetAppsReleasesByPublisherDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppReleaseFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaAppReleaseSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:3155](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3155)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetAppsReleasesByPublisherDidQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetAppsReleasesByPublisherDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppReleaseFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaAppReleaseSortingInput`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetAppsReleasesByPublisherDidQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3155](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3155)
+`UseSuspenseQueryResult`\<`GetAppsReleasesByPublisherDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppReleaseFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaAppReleaseSortingInput`; \}\>\>
 
 ***
 
 ### useGetAppsReleasesLazyQuery()
 
-> **useGetAppsReleasesLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetAppsReleasesQuery`, `Exact`\<`object`\>\>
+> **useGetAppsReleasesLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetAppsReleasesQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppReleaseFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaAppReleaseSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:3216](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3216)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetAppsReleasesQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetAppsReleasesQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppReleaseFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaAppReleaseSortingInput`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetAppsReleasesQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3216](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3216)
+`LazyQueryResultTuple`\<`GetAppsReleasesQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppReleaseFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaAppReleaseSortingInput`; \}\>\>
 
 ***
 
 ### useGetAppsReleasesQuery()
 
-> **useGetAppsReleasesQuery**(`baseOptions`?): `QueryResult`\<`GetAppsReleasesQuery`, `Exact`\<`object`\>\>
+> **useGetAppsReleasesQuery**(`baseOptions`?): `QueryResult`\<`GetAppsReleasesQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppReleaseFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaAppReleaseSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:3212](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3212)
 
 __useGetAppsReleasesQuery__
 
@@ -1281,12 +1176,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `QueryHookOptions`\<`GetAppsReleasesQuery`, `Exact`\<`object`\>\> | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `QueryHookOptions`\<`GetAppsReleasesQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppReleaseFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaAppReleaseSortingInput`; \}\>\> | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetAppsReleasesQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetAppsReleasesQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppReleaseFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaAppReleaseSortingInput`; \}\>\>
 
 #### Example
 
@@ -1303,55 +1198,49 @@ const { data, loading, error } = useGetAppsReleasesQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3212](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3212)
-
 ***
 
 ### useGetAppsReleasesSuspenseQuery()
 
-> **useGetAppsReleasesSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetAppsReleasesQuery`, `Exact`\<`object`\>\>
+> **useGetAppsReleasesSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetAppsReleasesQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppReleaseFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaAppReleaseSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:3220](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3220)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetAppsReleasesQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetAppsReleasesQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppReleaseFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaAppReleaseSortingInput`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetAppsReleasesQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3220](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3220)
+`UseSuspenseQueryResult`\<`GetAppsReleasesQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppReleaseFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaAppReleaseSortingInput`; \}\>\>
 
 ***
 
 ### useGetAppsStreamLazyQuery()
 
-> **useGetAppsStreamLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetAppsStreamQuery`, `Exact`\<`object`\>\>
+> **useGetAppsStreamLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetAppsStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppsStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaAppsStreamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2969](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2969)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetAppsStreamQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetAppsStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppsStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaAppsStreamSortingInput`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetAppsStreamQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2969](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2969)
+`LazyQueryResultTuple`\<`GetAppsStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppsStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaAppsStreamSortingInput`; \}\>\>
 
 ***
 
 ### useGetAppsStreamQuery()
 
-> **useGetAppsStreamQuery**(`baseOptions`): `QueryResult`\<`GetAppsStreamQuery`, `Exact`\<`object`\>\>
+> **useGetAppsStreamQuery**(`baseOptions`): `QueryResult`\<`GetAppsStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppsStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaAppsStreamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2965](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2965)
 
 __useGetAppsStreamQuery__
 
@@ -1362,12 +1251,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetAppsStreamQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetAppsStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppsStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaAppsStreamSortingInput`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppsStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaAppsStreamSortingInput`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetAppsStreamQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetAppsStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppsStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaAppsStreamSortingInput`; \}\>\>
 
 #### Example
 
@@ -1385,75 +1274,67 @@ const { data, loading, error } = useGetAppsStreamQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2965](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2965)
-
 ***
 
 ### useGetAppsStreamSuspenseQuery()
 
-> **useGetAppsStreamSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetAppsStreamQuery`, `Exact`\<`object`\>\>
+> **useGetAppsStreamSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetAppsStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppsStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaAppsStreamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2973](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2973)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetAppsStreamQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetAppsStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppsStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaAppsStreamSortingInput`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetAppsStreamQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2973](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2973)
+`UseSuspenseQueryResult`\<`GetAppsStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppsStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaAppsStreamSortingInput`; \}\>\>
 
 ***
 
 ### useGetAppsSuspenseQuery()
 
-> **useGetAppsSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetAppsQuery`, `Exact`\<`object`\>\>
+> **useGetAppsSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetAppsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaAppSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2901](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2901)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetAppsQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetAppsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaAppSortingInput`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetAppsQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2901](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2901)
+`UseSuspenseQueryResult`\<`GetAppsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaAppFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaAppSortingInput`; \}\>\>
 
 ***
 
 ### useGetBeamByIdLazyQuery()
 
-> **useGetBeamByIdLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetBeamByIdQuery`, `Exact`\<`object`\>\>
+> **useGetBeamByIdLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetBeamByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:918](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L918)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetBeamByIdQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetBeamByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetBeamByIdQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:918](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L918)
+`LazyQueryResultTuple`\<`GetBeamByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 ***
 
 ### useGetBeamByIdQuery()
 
-> **useGetBeamByIdQuery**(`baseOptions`): `QueryResult`\<`GetBeamByIdQuery`, `Exact`\<`object`\>\>
+> **useGetBeamByIdQuery**(`baseOptions`): `QueryResult`\<`GetBeamByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:914](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L914)
 
 __useGetBeamByIdQuery__
 
@@ -1464,12 +1345,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetBeamByIdQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetBeamByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `id`: `string`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetBeamByIdQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetBeamByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 #### Example
 
@@ -1481,137 +1362,49 @@ const { data, loading, error } = useGetBeamByIdQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:914](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L914)
-
 ***
 
 ### useGetBeamByIdSuspenseQuery()
 
-> **useGetBeamByIdSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetBeamByIdQuery`, `Exact`\<`object`\>\>
+> **useGetBeamByIdSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetBeamByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:922](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L922)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetBeamByIdQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetBeamByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetBeamByIdQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:922](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L922)
-
-***
-
-### useGetBeamStreamLazyQuery()
-
-> **useGetBeamStreamLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetBeamStreamQuery`, `Exact`\<`object`\>\>
-
-#### Parameters
-
-| Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetBeamStreamQuery`, `Exact`\<`object`\>\> |
-
-#### Returns
-
-`LazyQueryResultTuple`\<`GetBeamStreamQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:743](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L743)
-
-***
-
-### useGetBeamStreamQuery()
-
-> **useGetBeamStreamQuery**(`baseOptions`): `QueryResult`\<`GetBeamStreamQuery`, `Exact`\<`object`\>\>
-
-__useGetBeamStreamQuery__
-
-To run a query within a React component, call `useGetBeamStreamQuery` and pass it any options that fit your needs.
-When your component renders, `useGetBeamStreamQuery` returns an object from Apollo Client that contains loading, error, and data properties
-you can use to render your UI.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetBeamStreamQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
-
-#### Returns
-
-`QueryResult`\<`GetBeamStreamQuery`, `Exact`\<`object`\>\>
-
-#### Example
-
-```ts
-const { data, loading, error } = useGetBeamStreamQuery({
-  variables: {
-     indexer: // value for 'indexer'
-     after: // value for 'after'
-     before: // value for 'before'
-     first: // value for 'first'
-     last: // value for 'last'
-     filters: // value for 'filters'
-     sorting: // value for 'sorting'
-  },
-});
-```
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:739](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L739)
-
-***
-
-### useGetBeamStreamSuspenseQuery()
-
-> **useGetBeamStreamSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetBeamStreamQuery`, `Exact`\<`object`\>\>
-
-#### Parameters
-
-| Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetBeamStreamQuery`, `Exact`\<`object`\>\> |
-
-#### Returns
-
-`UseSuspenseQueryResult`\<`GetBeamStreamQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:747](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L747)
+`UseSuspenseQueryResult`\<`GetBeamByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 ***
 
 ### useGetBeamsByAuthorDidLazyQuery()
 
-> **useGetBeamsByAuthorDidLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetBeamsByAuthorDidQuery`, `Exact`\<`object`\>\>
+> **useGetBeamsByAuthorDidLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetBeamsByAuthorDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaBeamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:876](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L876)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetBeamsByAuthorDidQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetBeamsByAuthorDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaBeamSortingInput`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetBeamsByAuthorDidQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:876](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L876)
+`LazyQueryResultTuple`\<`GetBeamsByAuthorDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaBeamSortingInput`; \}\>\>
 
 ***
 
 ### useGetBeamsByAuthorDidQuery()
 
-> **useGetBeamsByAuthorDidQuery**(`baseOptions`): `QueryResult`\<`GetBeamsByAuthorDidQuery`, `Exact`\<`object`\>\>
+> **useGetBeamsByAuthorDidQuery**(`baseOptions`): `QueryResult`\<`GetBeamsByAuthorDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaBeamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:872](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L872)
 
 __useGetBeamsByAuthorDidQuery__
 
@@ -1622,12 +1415,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetBeamsByAuthorDidQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetBeamsByAuthorDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaBeamSortingInput`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaBeamSortingInput`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetBeamsByAuthorDidQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetBeamsByAuthorDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaBeamSortingInput`; \}\>\>
 
 #### Example
 
@@ -1645,55 +1438,49 @@ const { data, loading, error } = useGetBeamsByAuthorDidQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:872](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L872)
-
 ***
 
 ### useGetBeamsByAuthorDidSuspenseQuery()
 
-> **useGetBeamsByAuthorDidSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetBeamsByAuthorDidQuery`, `Exact`\<`object`\>\>
+> **useGetBeamsByAuthorDidSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetBeamsByAuthorDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaBeamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:880](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L880)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetBeamsByAuthorDidQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetBeamsByAuthorDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaBeamSortingInput`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetBeamsByAuthorDidQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:880](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L880)
+`UseSuspenseQueryResult`\<`GetBeamsByAuthorDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaBeamSortingInput`; \}\>\>
 
 ***
 
 ### useGetBeamsLazyQuery()
 
-> **useGetBeamsLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetBeamsQuery`, `Exact`\<`object`\>\>
+> **useGetBeamsLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetBeamsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaBeamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:806](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L806)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetBeamsQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetBeamsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaBeamSortingInput`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetBeamsQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:806](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L806)
+`LazyQueryResultTuple`\<`GetBeamsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaBeamSortingInput`; \}\>\>
 
 ***
 
 ### useGetBeamsQuery()
 
-> **useGetBeamsQuery**(`baseOptions`?): `QueryResult`\<`GetBeamsQuery`, `Exact`\<`object`\>\>
+> **useGetBeamsQuery**(`baseOptions`?): `QueryResult`\<`GetBeamsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaBeamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:802](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L802)
 
 __useGetBeamsQuery__
 
@@ -1704,12 +1491,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `QueryHookOptions`\<`GetBeamsQuery`, `Exact`\<`object`\>\> | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `QueryHookOptions`\<`GetBeamsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaBeamSortingInput`; \}\>\> | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetBeamsQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetBeamsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaBeamSortingInput`; \}\>\>
 
 #### Example
 
@@ -1726,55 +1513,125 @@ const { data, loading, error } = useGetBeamsQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:802](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L802)
-
 ***
 
 ### useGetBeamsSuspenseQuery()
 
-> **useGetBeamsSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetBeamsQuery`, `Exact`\<`object`\>\>
+> **useGetBeamsSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetBeamsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaBeamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:810](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L810)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetBeamsQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetBeamsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaBeamSortingInput`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetBeamsQuery`, `Exact`\<`object`\>\>
+`UseSuspenseQueryResult`\<`GetBeamsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaBeamSortingInput`; \}\>\>
 
-#### Source
+***
 
-[libs/hooks/src/generated/apollo.ts:810](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L810)
+### useGetBeamStreamLazyQuery()
+
+> **useGetBeamStreamLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetBeamStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaBeamStreamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:743](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L743)
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetBeamStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaBeamStreamSortingInput`; \}\>\> |
+
+#### Returns
+
+`LazyQueryResultTuple`\<`GetBeamStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaBeamStreamSortingInput`; \}\>\>
+
+***
+
+### useGetBeamStreamQuery()
+
+> **useGetBeamStreamQuery**(`baseOptions`): `QueryResult`\<`GetBeamStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaBeamStreamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:739](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L739)
+
+__useGetBeamStreamQuery__
+
+To run a query within a React component, call `useGetBeamStreamQuery` and pass it any options that fit your needs.
+When your component renders, `useGetBeamStreamQuery` returns an object from Apollo Client that contains loading, error, and data properties
+you can use to render your UI.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetBeamStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaBeamStreamSortingInput`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaBeamStreamSortingInput`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+
+#### Returns
+
+`QueryResult`\<`GetBeamStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaBeamStreamSortingInput`; \}\>\>
+
+#### Example
+
+```ts
+const { data, loading, error } = useGetBeamStreamQuery({
+  variables: {
+     indexer: // value for 'indexer'
+     after: // value for 'after'
+     before: // value for 'before'
+     first: // value for 'first'
+     last: // value for 'last'
+     filters: // value for 'filters'
+     sorting: // value for 'sorting'
+  },
+});
+```
+
+***
+
+### useGetBeamStreamSuspenseQuery()
+
+> **useGetBeamStreamSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetBeamStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaBeamStreamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:747](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L747)
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetBeamStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaBeamStreamSortingInput`; \}\>\> |
+
+#### Returns
+
+`UseSuspenseQueryResult`\<`GetBeamStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaBeamStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaBeamStreamSortingInput`; \}\>\>
 
 ***
 
 ### useGetBlockStorageByIdLazyQuery()
 
-> **useGetBlockStorageByIdLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetBlockStorageByIdQuery`, `Exact`\<`object`\>\>
+> **useGetBlockStorageByIdLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetBlockStorageByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1076](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1076)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetBlockStorageByIdQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetBlockStorageByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetBlockStorageByIdQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1076](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1076)
+`LazyQueryResultTuple`\<`GetBlockStorageByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 ***
 
 ### useGetBlockStorageByIdQuery()
 
-> **useGetBlockStorageByIdQuery**(`baseOptions`): `QueryResult`\<`GetBlockStorageByIdQuery`, `Exact`\<`object`\>\>
+> **useGetBlockStorageByIdQuery**(`baseOptions`): `QueryResult`\<`GetBlockStorageByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1072](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1072)
 
 __useGetBlockStorageByIdQuery__
 
@@ -1785,12 +1642,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetBlockStorageByIdQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetBlockStorageByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `id`: `string`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetBlockStorageByIdQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetBlockStorageByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 #### Example
 
@@ -1802,55 +1659,49 @@ const { data, loading, error } = useGetBlockStorageByIdQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1072](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1072)
-
 ***
 
 ### useGetBlockStorageByIdSuspenseQuery()
 
-> **useGetBlockStorageByIdSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetBlockStorageByIdQuery`, `Exact`\<`object`\>\>
+> **useGetBlockStorageByIdSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetBlockStorageByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1080](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1080)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetBlockStorageByIdQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetBlockStorageByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetBlockStorageByIdQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1080](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1080)
+`UseSuspenseQueryResult`\<`GetBlockStorageByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 ***
 
 ### useGetContentBlockByIdLazyQuery()
 
-> **useGetContentBlockByIdLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetContentBlockByIdQuery`, `Exact`\<`object`\>\>
+> **useGetContentBlockByIdLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetContentBlockByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1034](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1034)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetContentBlockByIdQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetContentBlockByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetContentBlockByIdQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1034](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1034)
+`LazyQueryResultTuple`\<`GetContentBlockByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 ***
 
 ### useGetContentBlockByIdQuery()
 
-> **useGetContentBlockByIdQuery**(`baseOptions`): `QueryResult`\<`GetContentBlockByIdQuery`, `Exact`\<`object`\>\>
+> **useGetContentBlockByIdQuery**(`baseOptions`): `QueryResult`\<`GetContentBlockByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1030](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1030)
 
 __useGetContentBlockByIdQuery__
 
@@ -1861,12 +1712,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetContentBlockByIdQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetContentBlockByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `id`: `string`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetContentBlockByIdQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetContentBlockByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 #### Example
 
@@ -1878,55 +1729,49 @@ const { data, loading, error } = useGetContentBlockByIdQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1030](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1030)
-
 ***
 
 ### useGetContentBlockByIdSuspenseQuery()
 
-> **useGetContentBlockByIdSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetContentBlockByIdQuery`, `Exact`\<`object`\>\>
+> **useGetContentBlockByIdSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetContentBlockByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1038](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1038)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetContentBlockByIdQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetContentBlockByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetContentBlockByIdQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1038](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1038)
+`UseSuspenseQueryResult`\<`GetContentBlockByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 ***
 
 ### useGetContentBlockStreamLazyQuery()
 
-> **useGetContentBlockStreamLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetContentBlockStreamQuery`, `Exact`\<`object`\>\>
+> **useGetContentBlockStreamLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetContentBlockStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaContentBlockStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaContentBlockStreamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:992](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L992)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetContentBlockStreamQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetContentBlockStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaContentBlockStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaContentBlockStreamSortingInput`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetContentBlockStreamQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:992](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L992)
+`LazyQueryResultTuple`\<`GetContentBlockStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaContentBlockStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaContentBlockStreamSortingInput`; \}\>\>
 
 ***
 
 ### useGetContentBlockStreamQuery()
 
-> **useGetContentBlockStreamQuery**(`baseOptions`): `QueryResult`\<`GetContentBlockStreamQuery`, `Exact`\<`object`\>\>
+> **useGetContentBlockStreamQuery**(`baseOptions`): `QueryResult`\<`GetContentBlockStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaContentBlockStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaContentBlockStreamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:988](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L988)
 
 __useGetContentBlockStreamQuery__
 
@@ -1937,12 +1782,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetContentBlockStreamQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetContentBlockStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaContentBlockStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaContentBlockStreamSortingInput`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaContentBlockStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaContentBlockStreamSortingInput`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetContentBlockStreamQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetContentBlockStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaContentBlockStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaContentBlockStreamSortingInput`; \}\>\>
 
 #### Example
 
@@ -1960,55 +1805,49 @@ const { data, loading, error } = useGetContentBlockStreamQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:988](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L988)
-
 ***
 
 ### useGetContentBlockStreamSuspenseQuery()
 
-> **useGetContentBlockStreamSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetContentBlockStreamQuery`, `Exact`\<`object`\>\>
+> **useGetContentBlockStreamSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetContentBlockStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaContentBlockStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaContentBlockStreamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:996](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L996)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetContentBlockStreamQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetContentBlockStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaContentBlockStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaContentBlockStreamSortingInput`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetContentBlockStreamQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:996](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L996)
+`UseSuspenseQueryResult`\<`GetContentBlockStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaContentBlockStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaContentBlockStreamSortingInput`; \}\>\>
 
 ***
 
 ### useGetFollowDocumentsByDidLazyQuery()
 
-> **useGetFollowDocumentsByDidLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetFollowDocumentsByDidQuery`, `Exact`\<`object`\>\>
+> **useGetFollowDocumentsByDidLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetFollowDocumentsByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `following`: `string` \| `string`[]; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2017](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2017)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetFollowDocumentsByDidQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetFollowDocumentsByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `following`: `string` \| `string`[]; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowSortingInput`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetFollowDocumentsByDidQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2017](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2017)
+`LazyQueryResultTuple`\<`GetFollowDocumentsByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `following`: `string` \| `string`[]; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowSortingInput`; \}\>\>
 
 ***
 
 ### useGetFollowDocumentsByDidQuery()
 
-> **useGetFollowDocumentsByDidQuery**(`baseOptions`): `QueryResult`\<`GetFollowDocumentsByDidQuery`, `Exact`\<`object`\>\>
+> **useGetFollowDocumentsByDidQuery**(`baseOptions`): `QueryResult`\<`GetFollowDocumentsByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `following`: `string` \| `string`[]; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2013](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2013)
 
 __useGetFollowDocumentsByDidQuery__
 
@@ -2019,12 +1858,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetFollowDocumentsByDidQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetFollowDocumentsByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `following`: `string` \| `string`[]; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowSortingInput`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `following`: `string` \| `string`[]; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowSortingInput`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetFollowDocumentsByDidQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetFollowDocumentsByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `following`: `string` \| `string`[]; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowSortingInput`; \}\>\>
 
 #### Example
 
@@ -2042,55 +1881,49 @@ const { data, loading, error } = useGetFollowDocumentsByDidQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2013](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2013)
-
 ***
 
 ### useGetFollowDocumentsByDidSuspenseQuery()
 
-> **useGetFollowDocumentsByDidSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetFollowDocumentsByDidQuery`, `Exact`\<`object`\>\>
+> **useGetFollowDocumentsByDidSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetFollowDocumentsByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `following`: `string` \| `string`[]; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2021](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2021)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetFollowDocumentsByDidQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetFollowDocumentsByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `following`: `string` \| `string`[]; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowSortingInput`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetFollowDocumentsByDidQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2021](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2021)
+`UseSuspenseQueryResult`\<`GetFollowDocumentsByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `following`: `string` \| `string`[]; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowSortingInput`; \}\>\>
 
 ***
 
 ### useGetFollowersListByDidLazyQuery()
 
-> **useGetFollowersListByDidLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetFollowersListByDidQuery`, `Exact`\<`object`\>\>
+> **useGetFollowersListByDidLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetFollowersListByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowInterfaceSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2634](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2634)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetFollowersListByDidQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetFollowersListByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowInterfaceSortingInput`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetFollowersListByDidQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2634](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2634)
+`LazyQueryResultTuple`\<`GetFollowersListByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowInterfaceSortingInput`; \}\>\>
 
 ***
 
 ### useGetFollowersListByDidQuery()
 
-> **useGetFollowersListByDidQuery**(`baseOptions`): `QueryResult`\<`GetFollowersListByDidQuery`, `Exact`\<`object`\>\>
+> **useGetFollowersListByDidQuery**(`baseOptions`): `QueryResult`\<`GetFollowersListByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowInterfaceSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2630](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2630)
 
 __useGetFollowersListByDidQuery__
 
@@ -2101,12 +1934,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetFollowersListByDidQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetFollowersListByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowInterfaceSortingInput`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowInterfaceSortingInput`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetFollowersListByDidQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetFollowersListByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowInterfaceSortingInput`; \}\>\>
 
 #### Example
 
@@ -2123,55 +1956,49 @@ const { data, loading, error } = useGetFollowersListByDidQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2630](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2630)
-
 ***
 
 ### useGetFollowersListByDidSuspenseQuery()
 
-> **useGetFollowersListByDidSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetFollowersListByDidQuery`, `Exact`\<`object`\>\>
+> **useGetFollowersListByDidSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetFollowersListByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowInterfaceSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2638](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2638)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetFollowersListByDidQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetFollowersListByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowInterfaceSortingInput`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetFollowersListByDidQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2638](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2638)
+`UseSuspenseQueryResult`\<`GetFollowersListByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowInterfaceSortingInput`; \}\>\>
 
 ***
 
 ### useGetFollowingListByDidLazyQuery()
 
-> **useGetFollowingListByDidLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetFollowingListByDidQuery`, `Exact`\<`object`\>\>
+> **useGetFollowingListByDidLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetFollowingListByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2554](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2554)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetFollowingListByDidQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetFollowingListByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowSortingInput`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetFollowingListByDidQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2554](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2554)
+`LazyQueryResultTuple`\<`GetFollowingListByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowSortingInput`; \}\>\>
 
 ***
 
 ### useGetFollowingListByDidQuery()
 
-> **useGetFollowingListByDidQuery**(`baseOptions`): `QueryResult`\<`GetFollowingListByDidQuery`, `Exact`\<`object`\>\>
+> **useGetFollowingListByDidQuery**(`baseOptions`): `QueryResult`\<`GetFollowingListByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2550](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2550)
 
 __useGetFollowingListByDidQuery__
 
@@ -2182,12 +2009,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetFollowingListByDidQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetFollowingListByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowSortingInput`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowSortingInput`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetFollowingListByDidQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetFollowingListByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowSortingInput`; \}\>\>
 
 #### Example
 
@@ -2204,55 +2031,49 @@ const { data, loading, error } = useGetFollowingListByDidQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2550](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2550)
-
 ***
 
 ### useGetFollowingListByDidSuspenseQuery()
 
-> **useGetFollowingListByDidSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetFollowingListByDidQuery`, `Exact`\<`object`\>\>
+> **useGetFollowingListByDidSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetFollowingListByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2558](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2558)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetFollowingListByDidQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetFollowingListByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowSortingInput`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetFollowingListByDidQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2558](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2558)
+`UseSuspenseQueryResult`\<`GetFollowingListByDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaFollowSortingInput`; \}\>\>
 
 ***
 
 ### useGetIndexedStreamCountLazyQuery()
 
-> **useGetIndexedStreamCountLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetIndexedStreamCountQuery`, `Exact`\<`object`\>\>
+> **useGetIndexedStreamCountLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetIndexedStreamCountQuery`, `Exact`\<\{ `filters`: `AkashaIndexedStreamFiltersInput`; `indexer`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1197](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1197)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetIndexedStreamCountQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetIndexedStreamCountQuery`, `Exact`\<\{ `filters`: `AkashaIndexedStreamFiltersInput`; `indexer`: `string`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetIndexedStreamCountQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1197](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1197)
+`LazyQueryResultTuple`\<`GetIndexedStreamCountQuery`, `Exact`\<\{ `filters`: `AkashaIndexedStreamFiltersInput`; `indexer`: `string`; \}\>\>
 
 ***
 
 ### useGetIndexedStreamCountQuery()
 
-> **useGetIndexedStreamCountQuery**(`baseOptions`): `QueryResult`\<`GetIndexedStreamCountQuery`, `Exact`\<`object`\>\>
+> **useGetIndexedStreamCountQuery**(`baseOptions`): `QueryResult`\<`GetIndexedStreamCountQuery`, `Exact`\<\{ `filters`: `AkashaIndexedStreamFiltersInput`; `indexer`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1193](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1193)
 
 __useGetIndexedStreamCountQuery__
 
@@ -2263,12 +2084,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetIndexedStreamCountQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetIndexedStreamCountQuery`, `Exact`\<\{ `filters`: `AkashaIndexedStreamFiltersInput`; `indexer`: `string`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `filters`: `AkashaIndexedStreamFiltersInput`; `indexer`: `string`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetIndexedStreamCountQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetIndexedStreamCountQuery`, `Exact`\<\{ `filters`: `AkashaIndexedStreamFiltersInput`; `indexer`: `string`; \}\>\>
 
 #### Example
 
@@ -2281,55 +2102,49 @@ const { data, loading, error } = useGetIndexedStreamCountQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1193](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1193)
-
 ***
 
 ### useGetIndexedStreamCountSuspenseQuery()
 
-> **useGetIndexedStreamCountSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetIndexedStreamCountQuery`, `Exact`\<`object`\>\>
+> **useGetIndexedStreamCountSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetIndexedStreamCountQuery`, `Exact`\<\{ `filters`: `AkashaIndexedStreamFiltersInput`; `indexer`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1201](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1201)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetIndexedStreamCountQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetIndexedStreamCountQuery`, `Exact`\<\{ `filters`: `AkashaIndexedStreamFiltersInput`; `indexer`: `string`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetIndexedStreamCountQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1201](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1201)
+`UseSuspenseQueryResult`\<`GetIndexedStreamCountQuery`, `Exact`\<\{ `filters`: `AkashaIndexedStreamFiltersInput`; `indexer`: `string`; \}\>\>
 
 ***
 
 ### useGetIndexedStreamLazyQuery()
 
-> **useGetIndexedStreamLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetIndexedStreamQuery`, `Exact`\<`object`\>\>
+> **useGetIndexedStreamLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetIndexedStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaIndexedStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaIndexedStreamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1153](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1153)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetIndexedStreamQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetIndexedStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaIndexedStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaIndexedStreamSortingInput`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetIndexedStreamQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1153](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1153)
+`LazyQueryResultTuple`\<`GetIndexedStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaIndexedStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaIndexedStreamSortingInput`; \}\>\>
 
 ***
 
 ### useGetIndexedStreamQuery()
 
-> **useGetIndexedStreamQuery**(`baseOptions`): `QueryResult`\<`GetIndexedStreamQuery`, `Exact`\<`object`\>\>
+> **useGetIndexedStreamQuery**(`baseOptions`): `QueryResult`\<`GetIndexedStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaIndexedStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaIndexedStreamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1149](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1149)
 
 __useGetIndexedStreamQuery__
 
@@ -2340,12 +2155,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetIndexedStreamQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetIndexedStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaIndexedStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaIndexedStreamSortingInput`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaIndexedStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaIndexedStreamSortingInput`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetIndexedStreamQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetIndexedStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaIndexedStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaIndexedStreamSortingInput`; \}\>\>
 
 #### Example
 
@@ -2363,55 +2178,49 @@ const { data, loading, error } = useGetIndexedStreamQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1149](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1149)
-
 ***
 
 ### useGetIndexedStreamSuspenseQuery()
 
-> **useGetIndexedStreamSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetIndexedStreamQuery`, `Exact`\<`object`\>\>
+> **useGetIndexedStreamSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetIndexedStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaIndexedStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaIndexedStreamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1157](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1157)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetIndexedStreamQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetIndexedStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaIndexedStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaIndexedStreamSortingInput`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetIndexedStreamQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1157](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1157)
+`UseSuspenseQueryResult`\<`GetIndexedStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaIndexedStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaIndexedStreamSortingInput`; \}\>\>
 
 ***
 
 ### useGetInterestsByDidLazyQuery()
 
-> **useGetInterestsByDidLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetInterestsByDidQuery`, `Exact`\<`object`\>\>
+> **useGetInterestsByDidLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetInterestsByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2429](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2429)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetInterestsByDidQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetInterestsByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetInterestsByDidQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2429](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2429)
+`LazyQueryResultTuple`\<`GetInterestsByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 ***
 
 ### useGetInterestsByDidQuery()
 
-> **useGetInterestsByDidQuery**(`baseOptions`): `QueryResult`\<`GetInterestsByDidQuery`, `Exact`\<`object`\>\>
+> **useGetInterestsByDidQuery**(`baseOptions`): `QueryResult`\<`GetInterestsByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2425](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2425)
 
 __useGetInterestsByDidQuery__
 
@@ -2422,12 +2231,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetInterestsByDidQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetInterestsByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `id`: `string`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetInterestsByDidQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetInterestsByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 #### Example
 
@@ -2439,55 +2248,49 @@ const { data, loading, error } = useGetInterestsByDidQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2425](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2425)
-
 ***
 
 ### useGetInterestsByDidSuspenseQuery()
 
-> **useGetInterestsByDidSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetInterestsByDidQuery`, `Exact`\<`object`\>\>
+> **useGetInterestsByDidSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetInterestsByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2433](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2433)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetInterestsByDidQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetInterestsByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetInterestsByDidQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2433](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2433)
+`UseSuspenseQueryResult`\<`GetInterestsByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 ***
 
 ### useGetInterestsByIdLazyQuery()
 
-> **useGetInterestsByIdLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetInterestsByIdQuery`, `Exact`\<`object`\>\>
+> **useGetInterestsByIdLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetInterestsByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2478](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2478)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetInterestsByIdQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetInterestsByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetInterestsByIdQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2478](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2478)
+`LazyQueryResultTuple`\<`GetInterestsByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 ***
 
 ### useGetInterestsByIdQuery()
 
-> **useGetInterestsByIdQuery**(`baseOptions`): `QueryResult`\<`GetInterestsByIdQuery`, `Exact`\<`object`\>\>
+> **useGetInterestsByIdQuery**(`baseOptions`): `QueryResult`\<`GetInterestsByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2474](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2474)
 
 __useGetInterestsByIdQuery__
 
@@ -2498,12 +2301,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetInterestsByIdQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetInterestsByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `id`: `string`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetInterestsByIdQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetInterestsByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 #### Example
 
@@ -2515,55 +2318,49 @@ const { data, loading, error } = useGetInterestsByIdQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2474](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2474)
-
 ***
 
 ### useGetInterestsByIdSuspenseQuery()
 
-> **useGetInterestsByIdSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetInterestsByIdQuery`, `Exact`\<`object`\>\>
+> **useGetInterestsByIdSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetInterestsByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2482](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2482)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetInterestsByIdQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetInterestsByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetInterestsByIdQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2482](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2482)
+`UseSuspenseQueryResult`\<`GetInterestsByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 ***
 
 ### useGetInterestsLazyQuery()
 
-> **useGetInterestsLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetInterestsQuery`, `Exact`\<`object`\>\>
+> **useGetInterestsLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetInterestsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `last`: `number`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2305](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2305)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetInterestsQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetInterestsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `last`: `number`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetInterestsQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2305](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2305)
+`LazyQueryResultTuple`\<`GetInterestsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `last`: `number`; \}\>\>
 
 ***
 
 ### useGetInterestsQuery()
 
-> **useGetInterestsQuery**(`baseOptions`?): `QueryResult`\<`GetInterestsQuery`, `Exact`\<`object`\>\>
+> **useGetInterestsQuery**(`baseOptions`?): `QueryResult`\<`GetInterestsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `last`: `number`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2301](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2301)
 
 __useGetInterestsQuery__
 
@@ -2574,12 +2371,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `QueryHookOptions`\<`GetInterestsQuery`, `Exact`\<`object`\>\> | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `QueryHookOptions`\<`GetInterestsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `last`: `number`; \}\>\> | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetInterestsQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetInterestsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `last`: `number`; \}\>\>
 
 #### Example
 
@@ -2594,35 +2391,31 @@ const { data, loading, error } = useGetInterestsQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2301](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2301)
-
 ***
 
 ### useGetInterestsStreamLazyQuery()
 
-> **useGetInterestsStreamLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetInterestsStreamQuery`, `Exact`\<`object`\>\>
+> **useGetInterestsStreamLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetInterestsStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaInterestsStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaInterestsStreamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2377](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2377)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetInterestsStreamQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetInterestsStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaInterestsStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaInterestsStreamSortingInput`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetInterestsStreamQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2377](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2377)
+`LazyQueryResultTuple`\<`GetInterestsStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaInterestsStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaInterestsStreamSortingInput`; \}\>\>
 
 ***
 
 ### useGetInterestsStreamQuery()
 
-> **useGetInterestsStreamQuery**(`baseOptions`): `QueryResult`\<`GetInterestsStreamQuery`, `Exact`\<`object`\>\>
+> **useGetInterestsStreamQuery**(`baseOptions`): `QueryResult`\<`GetInterestsStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaInterestsStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaInterestsStreamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2373](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2373)
 
 __useGetInterestsStreamQuery__
 
@@ -2633,12 +2426,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetInterestsStreamQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetInterestsStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaInterestsStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaInterestsStreamSortingInput`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaInterestsStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaInterestsStreamSortingInput`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetInterestsStreamQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetInterestsStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaInterestsStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaInterestsStreamSortingInput`; \}\>\>
 
 #### Example
 
@@ -2656,75 +2449,67 @@ const { data, loading, error } = useGetInterestsStreamQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2373](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2373)
-
 ***
 
 ### useGetInterestsStreamSuspenseQuery()
 
-> **useGetInterestsStreamSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetInterestsStreamQuery`, `Exact`\<`object`\>\>
+> **useGetInterestsStreamSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetInterestsStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaInterestsStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaInterestsStreamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2381](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2381)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetInterestsStreamQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetInterestsStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaInterestsStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaInterestsStreamSortingInput`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetInterestsStreamQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2381](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2381)
+`UseSuspenseQueryResult`\<`GetInterestsStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaInterestsStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaInterestsStreamSortingInput`; \}\>\>
 
 ***
 
 ### useGetInterestsSuspenseQuery()
 
-> **useGetInterestsSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetInterestsQuery`, `Exact`\<`object`\>\>
+> **useGetInterestsSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetInterestsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `last`: `number`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2309](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2309)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetInterestsQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetInterestsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `last`: `number`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetInterestsQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2309](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2309)
+`UseSuspenseQueryResult`\<`GetInterestsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `last`: `number`; \}\>\>
 
 ***
 
 ### useGetMyProfileLazyQuery()
 
-> **useGetMyProfileLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetMyProfileQuery`, `Exact`\<`object`\>\>
+> **useGetMyProfileLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetMyProfileQuery`, `Exact`\<\{\}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1943](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1943)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetMyProfileQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetMyProfileQuery`, `Exact`\<\{\}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetMyProfileQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1943](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1943)
+`LazyQueryResultTuple`\<`GetMyProfileQuery`, `Exact`\<\{\}\>\>
 
 ***
 
 ### useGetMyProfileQuery()
 
-> **useGetMyProfileQuery**(`baseOptions`?): `QueryResult`\<`GetMyProfileQuery`, `Exact`\<`object`\>\>
+> **useGetMyProfileQuery**(`baseOptions`?): `QueryResult`\<`GetMyProfileQuery`, `Exact`\<\{\}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1939](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1939)
 
 __useGetMyProfileQuery__
 
@@ -2735,12 +2520,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `QueryHookOptions`\<`GetMyProfileQuery`, `Exact`\<`object`\>\> | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `QueryHookOptions`\<`GetMyProfileQuery`, `Exact`\<\{\}\>\> | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetMyProfileQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetMyProfileQuery`, `Exact`\<\{\}\>\>
 
 #### Example
 
@@ -2751,55 +2536,49 @@ const { data, loading, error } = useGetMyProfileQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1939](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1939)
-
 ***
 
 ### useGetMyProfileSuspenseQuery()
 
-> **useGetMyProfileSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetMyProfileQuery`, `Exact`\<`object`\>\>
+> **useGetMyProfileSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetMyProfileQuery`, `Exact`\<\{\}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1947](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1947)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetMyProfileQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetMyProfileQuery`, `Exact`\<\{\}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetMyProfileQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1947](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1947)
+`UseSuspenseQueryResult`\<`GetMyProfileQuery`, `Exact`\<\{\}\>\>
 
 ***
 
 ### useGetProfileByDidLazyQuery()
 
-> **useGetProfileByDidLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetProfileByDidQuery`, `Exact`\<`object`\>\>
+> **useGetProfileByDidLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetProfileByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2104](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2104)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetProfileByDidQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetProfileByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetProfileByDidQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2104](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2104)
+`LazyQueryResultTuple`\<`GetProfileByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 ***
 
 ### useGetProfileByDidQuery()
 
-> **useGetProfileByDidQuery**(`baseOptions`): `QueryResult`\<`GetProfileByDidQuery`, `Exact`\<`object`\>\>
+> **useGetProfileByDidQuery**(`baseOptions`): `QueryResult`\<`GetProfileByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2100](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2100)
 
 __useGetProfileByDidQuery__
 
@@ -2810,12 +2589,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetProfileByDidQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetProfileByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `id`: `string`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetProfileByDidQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetProfileByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 #### Example
 
@@ -2827,55 +2606,49 @@ const { data, loading, error } = useGetProfileByDidQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2100](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2100)
-
 ***
 
 ### useGetProfileByDidSuspenseQuery()
 
-> **useGetProfileByDidSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetProfileByDidQuery`, `Exact`\<`object`\>\>
+> **useGetProfileByDidSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetProfileByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2108](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2108)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetProfileByDidQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetProfileByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetProfileByDidQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2108](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2108)
+`UseSuspenseQueryResult`\<`GetProfileByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 ***
 
 ### useGetProfileByIdLazyQuery()
 
-> **useGetProfileByIdLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetProfileByIdQuery`, `Exact`\<`object`\>\>
+> **useGetProfileByIdLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetProfileByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2059](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2059)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetProfileByIdQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetProfileByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetProfileByIdQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2059](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2059)
+`LazyQueryResultTuple`\<`GetProfileByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 ***
 
 ### useGetProfileByIdQuery()
 
-> **useGetProfileByIdQuery**(`baseOptions`): `QueryResult`\<`GetProfileByIdQuery`, `Exact`\<`object`\>\>
+> **useGetProfileByIdQuery**(`baseOptions`): `QueryResult`\<`GetProfileByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2055](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2055)
 
 __useGetProfileByIdQuery__
 
@@ -2886,12 +2659,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetProfileByIdQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetProfileByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `id`: `string`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetProfileByIdQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetProfileByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 #### Example
 
@@ -2903,55 +2676,124 @@ const { data, loading, error } = useGetProfileByIdQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2055](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2055)
-
 ***
 
 ### useGetProfileByIdSuspenseQuery()
 
-> **useGetProfileByIdSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetProfileByIdQuery`, `Exact`\<`object`\>\>
+> **useGetProfileByIdSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetProfileByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2063](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2063)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetProfileByIdQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetProfileByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetProfileByIdQuery`, `Exact`\<`object`\>\>
+`UseSuspenseQueryResult`\<`GetProfileByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
-#### Source
+***
 
-[libs/hooks/src/generated/apollo.ts:2063](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2063)
+### useGetProfilesLazyQuery()
+
+> **useGetProfilesLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetProfilesQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaProfileFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaProfileSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2167](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2167)
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetProfilesQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaProfileFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaProfileSortingInput`; \}\>\> |
+
+#### Returns
+
+`LazyQueryResultTuple`\<`GetProfilesQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaProfileFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaProfileSortingInput`; \}\>\>
+
+***
+
+### useGetProfilesQuery()
+
+> **useGetProfilesQuery**(`baseOptions`?): `QueryResult`\<`GetProfilesQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaProfileFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaProfileSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2163](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2163)
+
+__useGetProfilesQuery__
+
+To run a query within a React component, call `useGetProfilesQuery` and pass it any options that fit your needs.
+When your component renders, `useGetProfilesQuery` returns an object from Apollo Client that contains loading, error, and data properties
+you can use to render your UI.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `baseOptions`? | `QueryHookOptions`\<`GetProfilesQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaProfileFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaProfileSortingInput`; \}\>\> | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+
+#### Returns
+
+`QueryResult`\<`GetProfilesQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaProfileFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaProfileSortingInput`; \}\>\>
+
+#### Example
+
+```ts
+const { data, loading, error } = useGetProfilesQuery({
+  variables: {
+     after: // value for 'after'
+     before: // value for 'before'
+     first: // value for 'first'
+     last: // value for 'last'
+     filters: // value for 'filters'
+     sorting: // value for 'sorting'
+  },
+});
+```
+
+***
+
+### useGetProfilesSuspenseQuery()
+
+> **useGetProfilesSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetProfilesQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaProfileFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaProfileSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2171](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2171)
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetProfilesQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaProfileFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaProfileSortingInput`; \}\>\> |
+
+#### Returns
+
+`UseSuspenseQueryResult`\<`GetProfilesQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaProfileFiltersInput`; `first`: `number`; `last`: `number`; `sorting`: `AkashaProfileSortingInput`; \}\>\>
 
 ***
 
 ### useGetProfileStatsByDidLazyQuery()
 
-> **useGetProfileStatsByDidLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetProfileStatsByDidQuery`, `Exact`\<`object`\>\>
+> **useGetProfileStatsByDidLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetProfileStatsByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2683](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2683)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetProfileStatsByDidQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetProfileStatsByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetProfileStatsByDidQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2683](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2683)
+`LazyQueryResultTuple`\<`GetProfileStatsByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 ***
 
 ### useGetProfileStatsByDidQuery()
 
-> **useGetProfileStatsByDidQuery**(`baseOptions`): `QueryResult`\<`GetProfileStatsByDidQuery`, `Exact`\<`object`\>\>
+> **useGetProfileStatsByDidQuery**(`baseOptions`): `QueryResult`\<`GetProfileStatsByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2679](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2679)
 
 __useGetProfileStatsByDidQuery__
 
@@ -2962,12 +2804,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetProfileStatsByDidQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetProfileStatsByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `id`: `string`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetProfileStatsByDidQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetProfileStatsByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 #### Example
 
@@ -2979,55 +2821,49 @@ const { data, loading, error } = useGetProfileStatsByDidQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2679](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2679)
-
 ***
 
 ### useGetProfileStatsByDidSuspenseQuery()
 
-> **useGetProfileStatsByDidSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetProfileStatsByDidQuery`, `Exact`\<`object`\>\>
+> **useGetProfileStatsByDidSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetProfileStatsByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2687](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2687)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetProfileStatsByDidQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetProfileStatsByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetProfileStatsByDidQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2687](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2687)
+`UseSuspenseQueryResult`\<`GetProfileStatsByDidQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 ***
 
 ### useGetProfileStreamLazyQuery()
 
-> **useGetProfileStreamLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetProfileStreamQuery`, `Exact`\<`object`\>\>
+> **useGetProfileStreamLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetProfileStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaProfileStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaProfileStreamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2239](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2239)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetProfileStreamQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetProfileStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaProfileStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaProfileStreamSortingInput`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetProfileStreamQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2239](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2239)
+`LazyQueryResultTuple`\<`GetProfileStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaProfileStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaProfileStreamSortingInput`; \}\>\>
 
 ***
 
 ### useGetProfileStreamQuery()
 
-> **useGetProfileStreamQuery**(`baseOptions`): `QueryResult`\<`GetProfileStreamQuery`, `Exact`\<`object`\>\>
+> **useGetProfileStreamQuery**(`baseOptions`): `QueryResult`\<`GetProfileStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaProfileStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaProfileStreamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2235](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2235)
 
 __useGetProfileStreamQuery__
 
@@ -3038,12 +2874,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetProfileStreamQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetProfileStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaProfileStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaProfileStreamSortingInput`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaProfileStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaProfileStreamSortingInput`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetProfileStreamQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetProfileStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaProfileStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaProfileStreamSortingInput`; \}\>\>
 
 #### Example
 
@@ -3061,217 +2897,49 @@ const { data, loading, error } = useGetProfileStreamQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2235](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2235)
-
 ***
 
 ### useGetProfileStreamSuspenseQuery()
 
-> **useGetProfileStreamSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetProfileStreamQuery`, `Exact`\<`object`\>\>
+> **useGetProfileStreamSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetProfileStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaProfileStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaProfileStreamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2243](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2243)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetProfileStreamQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetProfileStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaProfileStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaProfileStreamSortingInput`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetProfileStreamQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2243](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2243)
-
-***
-
-### useGetProfilesLazyQuery()
-
-> **useGetProfilesLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetProfilesQuery`, `Exact`\<`object`\>\>
-
-#### Parameters
-
-| Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetProfilesQuery`, `Exact`\<`object`\>\> |
-
-#### Returns
-
-`LazyQueryResultTuple`\<`GetProfilesQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2167](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2167)
-
-***
-
-### useGetProfilesQuery()
-
-> **useGetProfilesQuery**(`baseOptions`?): `QueryResult`\<`GetProfilesQuery`, `Exact`\<`object`\>\>
-
-__useGetProfilesQuery__
-
-To run a query within a React component, call `useGetProfilesQuery` and pass it any options that fit your needs.
-When your component renders, `useGetProfilesQuery` returns an object from Apollo Client that contains loading, error, and data properties
-you can use to render your UI.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `QueryHookOptions`\<`GetProfilesQuery`, `Exact`\<`object`\>\> | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
-
-#### Returns
-
-`QueryResult`\<`GetProfilesQuery`, `Exact`\<`object`\>\>
-
-#### Example
-
-```ts
-const { data, loading, error } = useGetProfilesQuery({
-  variables: {
-     after: // value for 'after'
-     before: // value for 'before'
-     first: // value for 'first'
-     last: // value for 'last'
-     filters: // value for 'filters'
-     sorting: // value for 'sorting'
-  },
-});
-```
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2163](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2163)
-
-***
-
-### useGetProfilesSuspenseQuery()
-
-> **useGetProfilesSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetProfilesQuery`, `Exact`\<`object`\>\>
-
-#### Parameters
-
-| Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetProfilesQuery`, `Exact`\<`object`\>\> |
-
-#### Returns
-
-`UseSuspenseQueryResult`\<`GetProfilesQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2171](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2171)
-
-***
-
-### useGetReflectReflectionsLazyQuery()
-
-> **useGetReflectReflectionsLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetReflectReflectionsQuery`, `Exact`\<`object`\>\>
-
-#### Parameters
-
-| Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetReflectReflectionsQuery`, `Exact`\<`object`\>\> |
-
-#### Returns
-
-`LazyQueryResultTuple`\<`GetReflectReflectionsQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1624](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1624)
-
-***
-
-### useGetReflectReflectionsQuery()
-
-> **useGetReflectReflectionsQuery**(`baseOptions`): `QueryResult`\<`GetReflectReflectionsQuery`, `Exact`\<`object`\>\>
-
-__useGetReflectReflectionsQuery__
-
-To run a query within a React component, call `useGetReflectReflectionsQuery` and pass it any options that fit your needs.
-When your component renders, `useGetReflectReflectionsQuery` returns an object from Apollo Client that contains loading, error, and data properties
-you can use to render your UI.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetReflectReflectionsQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
-
-#### Returns
-
-`QueryResult`\<`GetReflectReflectionsQuery`, `Exact`\<`object`\>\>
-
-#### Example
-
-```ts
-const { data, loading, error } = useGetReflectReflectionsQuery({
-  variables: {
-     id: // value for 'id'
-     after: // value for 'after'
-     before: // value for 'before'
-     first: // value for 'first'
-     last: // value for 'last'
-     sorting: // value for 'sorting'
-  },
-});
-```
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1620](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1620)
-
-***
-
-### useGetReflectReflectionsSuspenseQuery()
-
-> **useGetReflectReflectionsSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetReflectReflectionsQuery`, `Exact`\<`object`\>\>
-
-#### Parameters
-
-| Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetReflectReflectionsQuery`, `Exact`\<`object`\>\> |
-
-#### Returns
-
-`UseSuspenseQueryResult`\<`GetReflectReflectionsQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1628](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1628)
+`UseSuspenseQueryResult`\<`GetProfileStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaProfileStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaProfileStreamSortingInput`; \}\>\>
 
 ***
 
 ### useGetReflectionByIdLazyQuery()
 
-> **useGetReflectionByIdLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetReflectionByIdQuery`, `Exact`\<`object`\>\>
+> **useGetReflectionByIdLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetReflectionByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1561](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1561)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetReflectionByIdQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetReflectionByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetReflectionByIdQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1561](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1561)
+`LazyQueryResultTuple`\<`GetReflectionByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 ***
 
 ### useGetReflectionByIdQuery()
 
-> **useGetReflectionByIdQuery**(`baseOptions`): `QueryResult`\<`GetReflectionByIdQuery`, `Exact`\<`object`\>\>
+> **useGetReflectionByIdQuery**(`baseOptions`): `QueryResult`\<`GetReflectionByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1557](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1557)
 
 __useGetReflectionByIdQuery__
 
@@ -3282,12 +2950,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetReflectionByIdQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetReflectionByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `id`: `string`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetReflectionByIdQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetReflectionByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 #### Example
 
@@ -3299,137 +2967,49 @@ const { data, loading, error } = useGetReflectionByIdQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1557](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1557)
-
 ***
 
 ### useGetReflectionByIdSuspenseQuery()
 
-> **useGetReflectionByIdSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetReflectionByIdQuery`, `Exact`\<`object`\>\>
+> **useGetReflectionByIdSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetReflectionByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1565](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1565)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetReflectionByIdQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetReflectionByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetReflectionByIdQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1565](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1565)
-
-***
-
-### useGetReflectionStreamLazyQuery()
-
-> **useGetReflectionStreamLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetReflectionStreamQuery`, `Exact`\<`object`\>\>
-
-#### Parameters
-
-| Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetReflectionStreamQuery`, `Exact`\<`object`\>\> |
-
-#### Returns
-
-`LazyQueryResultTuple`\<`GetReflectionStreamQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1519](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1519)
-
-***
-
-### useGetReflectionStreamQuery()
-
-> **useGetReflectionStreamQuery**(`baseOptions`): `QueryResult`\<`GetReflectionStreamQuery`, `Exact`\<`object`\>\>
-
-__useGetReflectionStreamQuery__
-
-To run a query within a React component, call `useGetReflectionStreamQuery` and pass it any options that fit your needs.
-When your component renders, `useGetReflectionStreamQuery` returns an object from Apollo Client that contains loading, error, and data properties
-you can use to render your UI.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetReflectionStreamQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
-
-#### Returns
-
-`QueryResult`\<`GetReflectionStreamQuery`, `Exact`\<`object`\>\>
-
-#### Example
-
-```ts
-const { data, loading, error } = useGetReflectionStreamQuery({
-  variables: {
-     indexer: // value for 'indexer'
-     after: // value for 'after'
-     before: // value for 'before'
-     first: // value for 'first'
-     last: // value for 'last'
-     filters: // value for 'filters'
-     sorting: // value for 'sorting'
-  },
-});
-```
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1515](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1515)
-
-***
-
-### useGetReflectionStreamSuspenseQuery()
-
-> **useGetReflectionStreamSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetReflectionStreamQuery`, `Exact`\<`object`\>\>
-
-#### Parameters
-
-| Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetReflectionStreamQuery`, `Exact`\<`object`\>\> |
-
-#### Returns
-
-`UseSuspenseQueryResult`\<`GetReflectionStreamQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1523](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1523)
+`UseSuspenseQueryResult`\<`GetReflectionByIdQuery`, `Exact`\<\{ `id`: `string`; \}\>\>
 
 ***
 
 ### useGetReflectionsByAuthorDidLazyQuery()
 
-> **useGetReflectionsByAuthorDidLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetReflectionsByAuthorDidQuery`, `Exact`\<`object`\>\>
+> **useGetReflectionsByAuthorDidLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetReflectionsByAuthorDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1443](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1443)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetReflectionsByAuthorDidQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetReflectionsByAuthorDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectSortingInput`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetReflectionsByAuthorDidQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1443](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1443)
+`LazyQueryResultTuple`\<`GetReflectionsByAuthorDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectSortingInput`; \}\>\>
 
 ***
 
 ### useGetReflectionsByAuthorDidQuery()
 
-> **useGetReflectionsByAuthorDidQuery**(`baseOptions`): `QueryResult`\<`GetReflectionsByAuthorDidQuery`, `Exact`\<`object`\>\>
+> **useGetReflectionsByAuthorDidQuery**(`baseOptions`): `QueryResult`\<`GetReflectionsByAuthorDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1439](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1439)
 
 __useGetReflectionsByAuthorDidQuery__
 
@@ -3440,12 +3020,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetReflectionsByAuthorDidQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetReflectionsByAuthorDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectSortingInput`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectSortingInput`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetReflectionsByAuthorDidQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetReflectionsByAuthorDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectSortingInput`; \}\>\>
 
 #### Example
 
@@ -3463,55 +3043,49 @@ const { data, loading, error } = useGetReflectionsByAuthorDidQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1439](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1439)
-
 ***
 
 ### useGetReflectionsByAuthorDidSuspenseQuery()
 
-> **useGetReflectionsByAuthorDidSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetReflectionsByAuthorDidQuery`, `Exact`\<`object`\>\>
+> **useGetReflectionsByAuthorDidSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetReflectionsByAuthorDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1447](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1447)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetReflectionsByAuthorDidQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetReflectionsByAuthorDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectSortingInput`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetReflectionsByAuthorDidQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1447](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1447)
+`UseSuspenseQueryResult`\<`GetReflectionsByAuthorDidQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectSortingInput`; \}\>\>
 
 ***
 
 ### useGetReflectionsFromBeamLazyQuery()
 
-> **useGetReflectionsFromBeamLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetReflectionsFromBeamQuery`, `Exact`\<`object`\>\>
+> **useGetReflectionsFromBeamLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetReflectionsFromBeamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectInterfaceFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectInterfaceSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1374](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1374)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `LazyQueryHookOptions`\<`GetReflectionsFromBeamQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetReflectionsFromBeamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectInterfaceFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectInterfaceSortingInput`; \}\>\> |
 
 #### Returns
 
-`LazyQueryResultTuple`\<`GetReflectionsFromBeamQuery`, `Exact`\<`object`\>\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1374](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1374)
+`LazyQueryResultTuple`\<`GetReflectionsFromBeamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectInterfaceFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectInterfaceSortingInput`; \}\>\>
 
 ***
 
 ### useGetReflectionsFromBeamQuery()
 
-> **useGetReflectionsFromBeamQuery**(`baseOptions`): `QueryResult`\<`GetReflectionsFromBeamQuery`, `Exact`\<`object`\>\>
+> **useGetReflectionsFromBeamQuery**(`baseOptions`): `QueryResult`\<`GetReflectionsFromBeamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectInterfaceFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectInterfaceSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1370](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1370)
 
 __useGetReflectionsFromBeamQuery__
 
@@ -3522,12 +3096,12 @@ you can use to render your UI.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions` | `QueryHookOptions`\<`GetReflectionsFromBeamQuery`, `Exact`\<`object`\>\> & `object` \| `object` | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetReflectionsFromBeamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectInterfaceFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectInterfaceSortingInput`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectInterfaceFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectInterfaceSortingInput`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
 
 #### Returns
 
-`QueryResult`\<`GetReflectionsFromBeamQuery`, `Exact`\<`object`\>\>
+`QueryResult`\<`GetReflectionsFromBeamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectInterfaceFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectInterfaceSortingInput`; \}\>\>
 
 #### Example
 
@@ -3545,29 +3119,174 @@ const { data, loading, error } = useGetReflectionsFromBeamQuery({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1370](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1370)
-
 ***
 
 ### useGetReflectionsFromBeamSuspenseQuery()
 
-> **useGetReflectionsFromBeamSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetReflectionsFromBeamQuery`, `Exact`\<`object`\>\>
+> **useGetReflectionsFromBeamSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetReflectionsFromBeamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectInterfaceFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectInterfaceSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1378](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1378)
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetReflectionsFromBeamQuery`, `Exact`\<`object`\>\> |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetReflectionsFromBeamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectInterfaceFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectInterfaceSortingInput`; \}\>\> |
 
 #### Returns
 
-`UseSuspenseQueryResult`\<`GetReflectionsFromBeamQuery`, `Exact`\<`object`\>\>
+`UseSuspenseQueryResult`\<`GetReflectionsFromBeamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectInterfaceFiltersInput`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectInterfaceSortingInput`; \}\>\>
 
-#### Source
+***
 
-[libs/hooks/src/generated/apollo.ts:1378](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1378)
+### useGetReflectionStreamLazyQuery()
+
+> **useGetReflectionStreamLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetReflectionStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaReflectStreamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1519](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1519)
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetReflectionStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaReflectStreamSortingInput`; \}\>\> |
+
+#### Returns
+
+`LazyQueryResultTuple`\<`GetReflectionStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaReflectStreamSortingInput`; \}\>\>
+
+***
+
+### useGetReflectionStreamQuery()
+
+> **useGetReflectionStreamQuery**(`baseOptions`): `QueryResult`\<`GetReflectionStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaReflectStreamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1515](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1515)
+
+__useGetReflectionStreamQuery__
+
+To run a query within a React component, call `useGetReflectionStreamQuery` and pass it any options that fit your needs.
+When your component renders, `useGetReflectionStreamQuery` returns an object from Apollo Client that contains loading, error, and data properties
+you can use to render your UI.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetReflectionStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaReflectStreamSortingInput`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaReflectStreamSortingInput`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+
+#### Returns
+
+`QueryResult`\<`GetReflectionStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaReflectStreamSortingInput`; \}\>\>
+
+#### Example
+
+```ts
+const { data, loading, error } = useGetReflectionStreamQuery({
+  variables: {
+     indexer: // value for 'indexer'
+     after: // value for 'after'
+     before: // value for 'before'
+     first: // value for 'first'
+     last: // value for 'last'
+     filters: // value for 'filters'
+     sorting: // value for 'sorting'
+  },
+});
+```
+
+***
+
+### useGetReflectionStreamSuspenseQuery()
+
+> **useGetReflectionStreamSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetReflectionStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaReflectStreamSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1523](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1523)
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetReflectionStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaReflectStreamSortingInput`; \}\>\> |
+
+#### Returns
+
+`UseSuspenseQueryResult`\<`GetReflectionStreamQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `filters`: `AkashaReflectStreamFiltersInput`; `first`: `number`; `indexer`: `string`; `last`: `number`; `sorting`: `AkashaReflectStreamSortingInput`; \}\>\>
+
+***
+
+### useGetReflectReflectionsLazyQuery()
+
+> **useGetReflectReflectionsLazyQuery**(`baseOptions`?): `LazyQueryResultTuple`\<`GetReflectReflectionsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1624](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1624)
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `baseOptions`? | `LazyQueryHookOptions`\<`GetReflectReflectionsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectSortingInput`; \}\>\> |
+
+#### Returns
+
+`LazyQueryResultTuple`\<`GetReflectReflectionsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectSortingInput`; \}\>\>
+
+***
+
+### useGetReflectReflectionsQuery()
+
+> **useGetReflectReflectionsQuery**(`baseOptions`): `QueryResult`\<`GetReflectReflectionsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1620](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1620)
+
+__useGetReflectReflectionsQuery__
+
+To run a query within a React component, call `useGetReflectReflectionsQuery` and pass it any options that fit your needs.
+When your component renders, `useGetReflectReflectionsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+you can use to render your UI.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `baseOptions` | `QueryHookOptions`\<`GetReflectReflectionsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectSortingInput`; \}\>\> & \{ `skip`: `boolean`; `variables`: `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectSortingInput`; \}\>; \} \| \{ `skip`: `boolean`; \} | options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options; |
+
+#### Returns
+
+`QueryResult`\<`GetReflectReflectionsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectSortingInput`; \}\>\>
+
+#### Example
+
+```ts
+const { data, loading, error } = useGetReflectReflectionsQuery({
+  variables: {
+     id: // value for 'id'
+     after: // value for 'after'
+     before: // value for 'before'
+     first: // value for 'first'
+     last: // value for 'last'
+     sorting: // value for 'sorting'
+  },
+});
+```
+
+***
+
+### useGetReflectReflectionsSuspenseQuery()
+
+> **useGetReflectReflectionsSuspenseQuery**(`baseOptions`?): `UseSuspenseQueryResult`\<`GetReflectReflectionsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectSortingInput`; \}\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1628](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1628)
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `baseOptions`? | `SuspenseQueryHookOptions`\<`GetReflectReflectionsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectSortingInput`; \}\>\> |
+
+#### Returns
+
+`UseSuspenseQueryResult`\<`GetReflectReflectionsQuery`, `Exact`\<\{ `after`: `string`; `before`: `string`; `first`: `number`; `id`: `string`; `last`: `number`; `sorting`: `AkashaReflectSortingInput`; \}\>\>
 
 ***
 
@@ -3575,24 +3294,26 @@ const { data, loading, error } = useGetReflectionsFromBeamQuery({
 
 > **useGetSettings**(`app`): `object`
 
+Defined in: [libs/hooks/src/use-settings.ts:88](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-settings.ts#L88)
+
 Hook to get saved settings for an app
 
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `app` | `string` | string: The app's name for example @akashaorg/app-extensions |
 
 #### Returns
 
 `object`
 
-| Member | Type | Value |
-| :------ | :------ | :------ |
-| `data` | `any` | settings |
-| `error` | `object` | - |
-| `error.message` | `string` | - |
-| `isLoading` | `boolean` | - |
+| Name | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="data-3"></a> `data` | `any` | settings | [libs/hooks/src/use-settings.ts:124](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-settings.ts#L124) |
+| <a id="error-2"></a> `error` | `object` | - | [libs/hooks/src/use-settings.ts:124](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-settings.ts#L124) |
+| `error.message` | `string` | - | [libs/hooks/src/use-settings.ts:95](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-settings.ts#L95) |
+| <a id="isloading-2"></a> `isLoading` | `boolean` | - | [libs/hooks/src/use-settings.ts:124](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-settings.ts#L124) |
 
 #### Example
 
@@ -3601,15 +3322,13 @@ const savedSettingsQuery = useGetSettings('@akashaorg/app-akasha-verse');
 const savedSettings = savedSettingsQuery.data;
 ```
 
-#### Source
-
-[libs/hooks/src/use-settings.ts:88](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-settings.ts#L88)
-
 ***
 
 ### useIndexBeamMutation()
 
-> **useIndexBeamMutation**(`baseOptions`?): `MutationTuple`\<`IndexBeamMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+> **useIndexBeamMutation**(`baseOptions`?): `MutationTuple`\<`IndexBeamMutation`, `Exact`\<\{ `capability`: `Cacao_Capability`; `jws`: `Did_Jws`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:495](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L495)
 
 __useIndexBeamMutation__
 
@@ -3621,12 +3340,12 @@ When your component renders, `useIndexBeamMutation` returns a tuple that include
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `MutationHookOptions`\<`IndexBeamMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `MutationHookOptions`\<`IndexBeamMutation`, `Exact`\<\{ `capability`: `Cacao_Capability`; `jws`: `Did_Jws`; \}\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
 
 #### Returns
 
-`MutationTuple`\<`IndexBeamMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+`MutationTuple`\<`IndexBeamMutation`, `Exact`\<\{ `capability`: `Cacao_Capability`; `jws`: `Did_Jws`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
 
 #### Example
 
@@ -3639,15 +3358,13 @@ const [indexBeamMutation, { data, loading, error }] = useIndexBeamMutation({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:495](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L495)
-
 ***
 
 ### useIndexContentBlockMutation()
 
-> **useIndexContentBlockMutation**(`baseOptions`?): `MutationTuple`\<`IndexContentBlockMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+> **useIndexContentBlockMutation**(`baseOptions`?): `MutationTuple`\<`IndexContentBlockMutation`, `Exact`\<\{ `capability`: `Cacao_Capability`; `jws`: `Did_Jws`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:531](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L531)
 
 __useIndexContentBlockMutation__
 
@@ -3659,12 +3376,12 @@ When your component renders, `useIndexContentBlockMutation` returns a tuple that
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `MutationHookOptions`\<`IndexContentBlockMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `MutationHookOptions`\<`IndexContentBlockMutation`, `Exact`\<\{ `capability`: `Cacao_Capability`; `jws`: `Did_Jws`; \}\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
 
 #### Returns
 
-`MutationTuple`\<`IndexContentBlockMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+`MutationTuple`\<`IndexContentBlockMutation`, `Exact`\<\{ `capability`: `Cacao_Capability`; `jws`: `Did_Jws`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
 
 #### Example
 
@@ -3677,15 +3394,13 @@ const [indexContentBlockMutation, { data, loading, error }] = useIndexContentBlo
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:531](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L531)
-
 ***
 
 ### useIndexProfileMutation()
 
-> **useIndexProfileMutation**(`baseOptions`?): `MutationTuple`\<`IndexProfileMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+> **useIndexProfileMutation**(`baseOptions`?): `MutationTuple`\<`IndexProfileMutation`, `Exact`\<\{ `capability`: `Cacao_Capability`; `jws`: `Did_Jws`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1665](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1665)
 
 __useIndexProfileMutation__
 
@@ -3697,12 +3412,12 @@ When your component renders, `useIndexProfileMutation` returns a tuple that incl
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `MutationHookOptions`\<`IndexProfileMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `MutationHookOptions`\<`IndexProfileMutation`, `Exact`\<\{ `capability`: `Cacao_Capability`; `jws`: `Did_Jws`; \}\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
 
 #### Returns
 
-`MutationTuple`\<`IndexProfileMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+`MutationTuple`\<`IndexProfileMutation`, `Exact`\<\{ `capability`: `Cacao_Capability`; `jws`: `Did_Jws`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
 
 #### Example
 
@@ -3715,15 +3430,13 @@ const [indexProfileMutation, { data, loading, error }] = useIndexProfileMutation
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1665](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1665)
-
 ***
 
 ### useIndexReflectionMutation()
 
-> **useIndexReflectionMutation**(`baseOptions`?): `MutationTuple`\<`IndexReflectionMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+> **useIndexReflectionMutation**(`baseOptions`?): `MutationTuple`\<`IndexReflectionMutation`, `Exact`\<\{ `capability`: `Cacao_Capability`; `jws`: `Did_Jws`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1238](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1238)
 
 __useIndexReflectionMutation__
 
@@ -3735,12 +3448,12 @@ When your component renders, `useIndexReflectionMutation` returns a tuple that i
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `MutationHookOptions`\<`IndexReflectionMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `MutationHookOptions`\<`IndexReflectionMutation`, `Exact`\<\{ `capability`: `Cacao_Capability`; `jws`: `Did_Jws`; \}\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
 
 #### Returns
 
-`MutationTuple`\<`IndexReflectionMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+`MutationTuple`\<`IndexReflectionMutation`, `Exact`\<\{ `capability`: `Cacao_Capability`; `jws`: `Did_Jws`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
 
 #### Example
 
@@ -3753,34 +3466,32 @@ const [indexReflectionMutation, { data, loading, error }] = useIndexReflectionMu
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1238](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1238)
-
 ***
 
 ### useLegalDoc()
 
 > **useLegalDoc**(`docName`): `object`
 
+Defined in: [libs/hooks/src/use-legal.ts:21](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-legal.ts#L21)
+
 Hook to get legal docs stored on ipfs
 
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `docName` | `LEGAL_DOCS` | LEGAL_DOCS the type of the legal doc being retrieved |
 
 #### Returns
 
 `object`
 
-| Member | Type | Value |
-| :------ | :------ | :------ |
-| `data` | `string` | - |
-| `error` | `Error` | - |
-| `isFetched` | `boolean` | ... |
-| `isLoading` | `boolean` | - |
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="data-4"></a> `data` | `string` | [libs/hooks/src/use-legal.ts:46](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-legal.ts#L46) |
+| <a id="error-3"></a> `error` | `Error` | [libs/hooks/src/use-legal.ts:46](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-legal.ts#L46) |
+| <a id="isfetched"></a> `isFetched` | `boolean` | [libs/hooks/src/use-legal.ts:46](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-legal.ts#L46) |
+| <a id="isloading-3"></a> `isLoading` | `boolean` | [libs/hooks/src/use-legal.ts:46](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-legal.ts#L46) |
 
 #### Example
 
@@ -3790,15 +3501,13 @@ const termsOfUseDocQuery = useLegalDoc('TermsOfUse');
 const termsOfUseDoc = termsOfUseDocQuery.data;
 ```
 
-#### Source
-
-[libs/hooks/src/use-legal.ts:21](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-legal.ts#L21)
-
 ***
 
 ### useListenForMutationEvents()
 
 > **useListenForMutationEvents**(): `any`
+
+Defined in: [libs/hooks/src/use-notifications.ts:13](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-notifications.ts#L13)
 
 Hook to listen for mutation events emitted from the SDK's globalChannel.
 
@@ -3813,22 +3522,20 @@ const { messageObj, appid, success, pending } = useListenForMutationEvents();
 
 ```
 
-#### Source
-
-[libs/hooks/src/use-notifications.ts:13](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-notifications.ts#L13)
-
 ***
 
 ### useMentions()
 
 > **useMentions**(`authenticatedDID`): `object`
 
+Defined in: [libs/hooks/src/use-mentions.ts:16](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-mentions.ts#L16)
+
 Hook to retrieve and set the mentions associated with a profile.
 
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `authenticatedDID` | `string` | string |
 
 #### Returns
@@ -3839,10 +3546,10 @@ Hook to retrieve and set the mentions associated with a profile.
 with the authenticatedDID and a setMentionQuery method to control the querying
 of mention data.
 
-| Member | Type |
-| :------ | :------ |
-| `mentions` | `object`[] |
-| `setMentionQuery` | `Dispatch`\<`SetStateAction`\<`string`\>\> |
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="mentions"></a> `mentions` | `object`[] | [libs/hooks/src/use-mentions.ts:41](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-mentions.ts#L41) |
+| <a id="setmentionquery"></a> `setMentionQuery` | `Dispatch`\<`SetStateAction`\<`string`\>\> | [libs/hooks/src/use-mentions.ts:41](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-mentions.ts#L41) |
 
 #### Example
 
@@ -3850,15 +3557,13 @@ of mention data.
 const { setMentionQuery, mentions } = useMentions('an authenticated DID');
 ```
 
-#### Source
-
-[libs/hooks/src/use-mentions.ts:16](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-mentions.ts#L16)
-
 ***
 
 ### useModalData()
 
 > **useModalData**(): `object`
+
+Defined in: [libs/hooks/src/use-modal-data.ts:14](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-modal-data.ts#L14)
 
 Hook to handle the data supplied to the `LoginModal` extension.
 
@@ -3868,12 +3573,12 @@ Hook to handle the data supplied to the `LoginModal` extension.
 
 - Object containing the params passed in the url
 
-| Member | Type |
-| :------ | :------ |
-| `modalData` | `object` |
-| `modalData.message` | `string` |
-| `modalData.name` | `string` |
-| `modalData.title` | `string` |
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="modaldata"></a> `modalData` | `object` | [libs/hooks/src/use-modal-data.ts:27](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-modal-data.ts#L27) |
+| `modalData.message`? | `string` | libs/typings/lib/ui/root-component.d.ts:32 |
+| `modalData.name` | `string` | libs/typings/lib/ui/root-component.d.ts:31 |
+| `modalData.title`? | `string` | libs/typings/lib/ui/root-component.d.ts:33 |
 
 #### Example
 
@@ -3881,22 +3586,20 @@ Hook to handle the data supplied to the `LoginModal` extension.
 const { modalData } = useModalData();
 ```
 
-#### Source
-
-[libs/hooks/src/use-modal-data.ts:14](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-modal-data.ts#L14)
-
 ***
 
 ### useModerationCategory()
 
 > **useModerationCategory**(`props`): `useModerationCategoryReturnType`
 
+Defined in: [libs/hooks/src/use-moderation-categories.ts:20](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-moderation-categories.ts#L20)
+
 Hook to handle moderation/report categories
 
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `props` | `useModerationCategoryProps` | useModerationCategoryProps |
 
 #### Returns
@@ -3905,23 +3608,17 @@ Hook to handle moderation/report categories
 
 useModerationCategoryReturnType
 
-#### Source
-
-[libs/hooks/src/use-moderation-categories.ts:20](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-moderation-categories.ts#L20)
-
 ***
 
 ### useNetworkChangeListener()
 
 > **useNetworkChangeListener**(): `any`[]
 
+Defined in: [libs/hooks/src/use-network-state.ts:160](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L160)
+
 #### Returns
 
 `any`[]
-
-#### Source
-
-[libs/hooks/src/use-network-state.ts:160](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L160)
 
 ***
 
@@ -3929,12 +3626,14 @@ useModerationCategoryReturnType
 
 > **useNetworkState**(`enabler`?): `object`
 
+Defined in: [libs/hooks/src/use-network-state.ts:37](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L37)
+
 Hook to check if the web3 provider is set to function on the Rinkeby test network
 
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `enabler`? | `boolean` | boolean (optional) that can control when to start verifying network state |
 
 #### Returns
@@ -3943,13 +3642,13 @@ Hook to check if the web3 provider is set to function on the Rinkeby test networ
 
 networkNotSupported: true if web3 provider is not on the specified network
 
-| Member | Type |
-| :------ | :------ |
-| `data` | `object` |
-| `data.networkNotSupported` | `boolean` |
-| `error` | `Error` |
-| `isFetched` | `boolean` |
-| `isLoading` | `boolean` |
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="data-5"></a> `data` | `object` | [libs/hooks/src/use-network-state.ts:67](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L67) |
+| `data.networkNotSupported` | `boolean` | [libs/hooks/src/use-network-state.ts:39](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L39) |
+| <a id="error-4"></a> `error` | `Error` | [libs/hooks/src/use-network-state.ts:67](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L67) |
+| <a id="isfetched-1"></a> `isFetched` | `boolean` | [libs/hooks/src/use-network-state.ts:67](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L67) |
+| <a id="isloading-4"></a> `isLoading` | `boolean` | [libs/hooks/src/use-network-state.ts:67](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L67) |
 
 #### Example
 
@@ -3959,15 +3658,13 @@ const networkStateQuery = useNetworkState(true);
 const networkNotSupported = networkStateQuery.data.networkNotSupported;
 ```
 
-#### Source
-
-[libs/hooks/src/use-network-state.ts:37](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L37)
-
 ***
 
 ### useNsfwToggling()
 
 > **useNsfwToggling**(): `object`
+
+Defined in: [libs/hooks/src/use-nsfw.ts:13](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-nsfw.ts#L13)
 
 Hook to get and set user's choice for showing/hiding nsfw content
 
@@ -3975,10 +3672,10 @@ Hook to get and set user's choice for showing/hiding nsfw content
 
 `object`
 
-| Member | Type |
-| :------ | :------ |
-| `showNsfw` | `boolean` |
-| `toggleShowNsfw` | (`showNsfw`) => `void` |
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="shownsfw"></a> `showNsfw` | `boolean` | [libs/hooks/src/use-nsfw.ts:31](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-nsfw.ts#L31) |
+| <a id="toggleshownsfw"></a> `toggleShowNsfw` | (`showNsfw`) => `void` | [libs/hooks/src/use-nsfw.ts:31](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-nsfw.ts#L31) |
 
 #### Example
 
@@ -3988,15 +3685,13 @@ const {showNsfw, toggleShowNsfw} = useNsfwToggling();
 To toggle the nsfw state, pass a boolean value to the toggleShowNsfw function,
  e.g. `toggleShowNsfw(true)`
 
-#### Source
-
-[libs/hooks/src/use-nsfw.ts:13](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-nsfw.ts#L13)
-
 ***
 
 ### usePlaformHealthCheck()
 
 > **usePlaformHealthCheck**(): `object`
+
+Defined in: [libs/hooks/src/use-health-check.ts:19](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-health-check.ts#L19)
 
 Hook to check the overall status of the platform.
 
@@ -4006,12 +3701,12 @@ Hook to check the overall status of the platform.
 
 - Object containing the data and query status
 
-| Member | Type |
-| :------ | :------ |
-| `data` | `object` |
-| `data.statusCode` | `number` |
-| `data.success` | `boolean` |
-| `isLoading` | `boolean` |
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="data-6"></a> `data` | `object` | [libs/hooks/src/use-health-check.ts:44](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-health-check.ts#L44) |
+| `data.statusCode` | `number` | [libs/hooks/src/use-health-check.ts:21](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-health-check.ts#L21) |
+| `data.success` | `boolean` | [libs/hooks/src/use-health-check.ts:22](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-health-check.ts#L22) |
+| <a id="isloading-5"></a> `isLoading` | `boolean` | [libs/hooks/src/use-health-check.ts:44](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-health-check.ts#L44) |
 
 #### Example
 
@@ -4019,22 +3714,20 @@ Hook to check the overall status of the platform.
 const { data, isLoading } = usePlaformHealthCheck();
 ```
 
-#### Source
-
-[libs/hooks/src/use-health-check.ts:19](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-health-check.ts#L19)
-
 ***
 
 ### useProfileStats()
 
 > **useProfileStats**(`profileId`, `readCache`?): `object`
 
+Defined in: [libs/hooks/src/use-profile-stats.ts:27](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-profile-stats.ts#L27)
+
 Hook to get a profile's stats (number of beams, followers, following, etc. )
 
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `profileId` | `string` | string |
 | `readCache`? | `boolean` | boolean (optional) to indicate whether to read from the cache |
 
@@ -4042,16 +3735,16 @@ Hook to get a profile's stats (number of beams, followers, following, etc. )
 
 `object`
 
-| Member | Type | Value |
-| :------ | :------ | :------ |
-| `data` | `object` | stat.data |
-| `data.totalBeams` | `number` | 0 |
-| `data.totalFollowers` | `number` | 0 |
-| `data.totalFollowing` | `number` | 0 |
-| `data.totalReflections` | `number` | 0 |
-| `data.totalTopics` | `number` | 0 |
-| `error` | `any` | - |
-| `loading` | `boolean` | - |
+| Name | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="data-7"></a> `data` | `object` | stat.data | [libs/hooks/src/use-profile-stats.ts:61](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-profile-stats.ts#L61) |
+| `data.totalBeams` | `number` | 0 | [libs/sdk/src/profiles/index.ts:46](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/sdk/src/profiles/index.ts#L46) |
+| `data.totalFollowers` | `number` | 0 | [libs/sdk/src/profiles/index.ts:45](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/sdk/src/profiles/index.ts#L45) |
+| `data.totalFollowing` | `number` | 0 | [libs/sdk/src/profiles/index.ts:44](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/sdk/src/profiles/index.ts#L44) |
+| `data.totalReflections` | `number` | 0 | [libs/sdk/src/profiles/index.ts:48](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/sdk/src/profiles/index.ts#L48) |
+| `data.totalTopics` | `number` | 0 | [libs/sdk/src/profiles/index.ts:47](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/sdk/src/profiles/index.ts#L47) |
+| <a id="error-5"></a> `error` | `any` | - | [libs/hooks/src/use-profile-stats.ts:63](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-profile-stats.ts#L63) |
+| <a id="loading"></a> `loading` | `boolean` | - | [libs/hooks/src/use-profile-stats.ts:62](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-profile-stats.ts#L62) |
 
 #### Example
 
@@ -4061,15 +3754,13 @@ const profileStatsQuery = useProfileStats('did:pkh:eip155:5:0xadc81c169...');
 console.log(profileStatsQuery.data)
 ```
 
-#### Source
-
-[libs/hooks/src/use-profile-stats.ts:27](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-profile-stats.ts#L27)
-
 ***
 
 ### useRequiredNetwork()
 
 > **useRequiredNetwork**(): `object`
+
+Defined in: [libs/hooks/src/use-network-state.ts:129](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L129)
 
 A hook to get required network name from the SDK
 
@@ -4077,14 +3768,14 @@ A hook to get required network name from the SDK
 
 `object`
 
-| Member | Type |
-| :------ | :------ |
-| `data` | `object` |
-| `data.chainId` | `11155111` |
-| `data.name` | `string` |
-| `error` | `Error` |
-| `isLoading` | `boolean` |
-| `isSuccess` | `boolean` |
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="data-8"></a> `data` | `object` | [libs/hooks/src/use-network-state.ts:157](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L157) |
+| `data.chainId` | `11155111` | [libs/hooks/src/use-network-state.ts:132](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L132) |
+| `data.name` | `string` | [libs/hooks/src/use-network-state.ts:131](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L131) |
+| <a id="error-6"></a> `error` | `Error` | [libs/hooks/src/use-network-state.ts:157](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L157) |
+| <a id="isloading-6"></a> `isLoading` | `boolean` | [libs/hooks/src/use-network-state.ts:157](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L157) |
+| <a id="issuccess-1"></a> `isSuccess` | `boolean` | [libs/hooks/src/use-network-state.ts:157](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L157) |
 
 #### Example
 
@@ -4094,25 +3785,23 @@ const requiredNetworkQuery = useRequiredNetworkName();
 const requiredNetworkName = requiredNetworkQuery.data;
 ```
 
-#### Source
-
-[libs/hooks/src/use-network-state.ts:129](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-network-state.ts#L129)
-
 ***
 
 ### useRootComponentProps()
 
 > **useRootComponentProps**\<`T`\>(): `object` & `T`
 
+Defined in: [libs/hooks/src/use-root-props.tsx:31](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-root-props.tsx#L31)
+
 Hook to manage and access the context of the plugins for routing, translation, and extensions.
 For example, through this hook, the `getRoutingPlugin`method can be used to
 navigate between apps, or the `worldConfig` object can be used for accessing
 the config info related to the World the whole application belongs to.
 
-#### Type parameters
+#### Type Parameters
 
-| Type parameter |
-| :------ |
+| Type Parameter |
+| ------ |
 | `T` *extends* `IRootComponentProps` |
 
 #### Returns
@@ -4125,15 +3814,13 @@ the config info related to the World the whole application belongs to.
   const { getTranslationPlugin, baseRouteName,getRoutingPlugin, navigateToModal, worldConfig } = useRootComponentProps();
 ```
 
-#### Source
-
-[libs/hooks/src/use-root-props.tsx:31](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-root-props.tsx#L31)
-
 ***
 
 ### useSaveSettings()
 
 > **useSaveSettings**(): `object`
+
+Defined in: [libs/hooks/src/use-settings.ts:38](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-settings.ts#L38)
 
 Hook to save app's settings using sdk settings service
 
@@ -4141,13 +3828,13 @@ Hook to save app's settings using sdk settings service
 
 `object`
 
-| Member | Type |
-| :------ | :------ |
-| `data` | `unknown` |
-| `error` | `object` |
-| `error.message` | `string` |
-| `isLoading` | `boolean` |
-| `saveNotificationSettings` | (`params`, `callback`?) => `void` |
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="data-9"></a> `data` | `unknown` | [libs/hooks/src/use-settings.ts:67](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-settings.ts#L67) |
+| <a id="error-7"></a> `error` | `object` | [libs/hooks/src/use-settings.ts:67](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-settings.ts#L67) |
+| `error.message` | `string` | [libs/hooks/src/use-settings.ts:41](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-settings.ts#L41) |
+| <a id="isloading-7"></a> `isLoading` | `boolean` | [libs/hooks/src/use-settings.ts:67](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-settings.ts#L67) |
+| <a id="savenotificationsettings"></a> `saveNotificationSettings` | (`params`, `callback`?) => `void` | [libs/hooks/src/use-settings.ts:67](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-settings.ts#L67) |
 
 #### Example
 
@@ -4159,15 +3846,13 @@ saveNotificationSettings(
  )
 ```
 
-#### Source
-
-[libs/hooks/src/use-settings.ts:38](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-settings.ts#L38)
-
 ***
 
 ### useSetAppReleaseMutation()
 
-> **useSetAppReleaseMutation**(`baseOptions`?): `MutationTuple`\<`SetAppReleaseMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+> **useSetAppReleaseMutation**(`baseOptions`?): `MutationTuple`\<`SetAppReleaseMutation`, `Exact`\<\{ `i`: `SetAkashaAppReleaseInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2726](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2726)
 
 __useSetAppReleaseMutation__
 
@@ -4179,12 +3864,12 @@ When your component renders, `useSetAppReleaseMutation` returns a tuple that inc
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `MutationHookOptions`\<`SetAppReleaseMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `MutationHookOptions`\<`SetAppReleaseMutation`, `Exact`\<\{ `i`: `SetAkashaAppReleaseInput`; \}\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
 
 #### Returns
 
-`MutationTuple`\<`SetAppReleaseMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+`MutationTuple`\<`SetAppReleaseMutation`, `Exact`\<\{ `i`: `SetAkashaAppReleaseInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
 
 #### Example
 
@@ -4196,27 +3881,25 @@ const [setAppReleaseMutation, { data, loading, error }] = useSetAppReleaseMutati
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2726](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2726)
-
 ***
 
 ### useShowFeedback()
 
-> **useShowFeedback**(`initialShowValue`?): [`boolean`, `Dispatch`\<`SetStateAction`\<`boolean`\>\>]
+> **useShowFeedback**(`initialShowValue`?): \[`boolean`, `Dispatch`\<`SetStateAction`\<`boolean`\>\>\]
+
+Defined in: [libs/hooks/src/use-show-feedback.ts:13](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-show-feedback.ts#L13)
 
 Hook to manage the state of the feedback shown in the snackbar.
 
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `initialShowValue`? | `boolean` | boolean (optional) |
 
 #### Returns
 
-[`boolean`, `Dispatch`\<`SetStateAction`\<`boolean`\>\>]
+\[`boolean`, `Dispatch`\<`SetStateAction`\<`boolean`\>\>\]
 
 The state of whether to
 show the feedback message and a function to set that state.
@@ -4227,15 +3910,13 @@ show the feedback message and a function to set that state.
   const [showFeedback, setShowFeedback] = useShowFeedback();
 ```
 
-#### Source
-
-[libs/hooks/src/use-show-feedback.ts:13](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-show-feedback.ts#L13)
-
 ***
 
 ### useTheme()
 
 > **useTheme**(): `TUseThemeReturn`
+
+Defined in: [libs/hooks/src/use-theme.ts:23](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-theme.ts#L23)
 
 Hook to check the current theme or set one
 
@@ -4254,15 +3935,13 @@ a second (optional) one is a boolean to indicate whether you want to save the th
 const { theme, propagateTheme } = useTheme();
 ```
 
-#### Source
-
-[libs/hooks/src/use-theme.ts:23](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-theme.ts#L23)
-
 ***
 
 ### useUpdateAkashaReflectMutation()
 
-> **useUpdateAkashaReflectMutation**(`baseOptions`?): `MutationTuple`\<`UpdateAkashaReflectMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+> **useUpdateAkashaReflectMutation**(`baseOptions`?): `MutationTuple`\<`UpdateAkashaReflectMutation`, `Exact`\<\{ `i`: `UpdateAkashaReflectInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1310](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1310)
 
 __useUpdateAkashaReflectMutation__
 
@@ -4274,12 +3953,12 @@ When your component renders, `useUpdateAkashaReflectMutation` returns a tuple th
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `MutationHookOptions`\<`UpdateAkashaReflectMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `MutationHookOptions`\<`UpdateAkashaReflectMutation`, `Exact`\<\{ `i`: `UpdateAkashaReflectInput`; \}\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
 
 #### Returns
 
-`MutationTuple`\<`UpdateAkashaReflectMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+`MutationTuple`\<`UpdateAkashaReflectMutation`, `Exact`\<\{ `i`: `UpdateAkashaReflectInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
 
 #### Example
 
@@ -4291,15 +3970,13 @@ const [updateAkashaReflectMutation, { data, loading, error }] = useUpdateAkashaR
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1310](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1310)
-
 ***
 
 ### useUpdateAppMutation()
 
-> **useUpdateAppMutation**(`baseOptions`?): `MutationTuple`\<`UpdateAppMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+> **useUpdateAppMutation**(`baseOptions`?): `MutationTuple`\<`UpdateAppMutation`, `Exact`\<\{ `i`: `UpdateAkashaAppInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2838](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2838)
 
 __useUpdateAppMutation__
 
@@ -4311,12 +3988,12 @@ When your component renders, `useUpdateAppMutation` returns a tuple that include
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `MutationHookOptions`\<`UpdateAppMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `MutationHookOptions`\<`UpdateAppMutation`, `Exact`\<\{ `i`: `UpdateAkashaAppInput`; \}\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
 
 #### Returns
 
-`MutationTuple`\<`UpdateAppMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+`MutationTuple`\<`UpdateAppMutation`, `Exact`\<\{ `i`: `UpdateAkashaAppInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
 
 #### Example
 
@@ -4328,15 +4005,13 @@ const [updateAppMutation, { data, loading, error }] = useUpdateAppMutation({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2838](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2838)
-
 ***
 
 ### useUpdateAppReleaseMutation()
 
-> **useUpdateAppReleaseMutation**(`baseOptions`?): `MutationTuple`\<`UpdateAppReleaseMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+> **useUpdateAppReleaseMutation**(`baseOptions`?): `MutationTuple`\<`UpdateAppReleaseMutation`, `Exact`\<\{ `i`: `UpdateAkashaAppReleaseInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2764](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2764)
 
 __useUpdateAppReleaseMutation__
 
@@ -4348,12 +4023,12 @@ When your component renders, `useUpdateAppReleaseMutation` returns a tuple that 
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `MutationHookOptions`\<`UpdateAppReleaseMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `MutationHookOptions`\<`UpdateAppReleaseMutation`, `Exact`\<\{ `i`: `UpdateAkashaAppReleaseInput`; \}\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
 
 #### Returns
 
-`MutationTuple`\<`UpdateAppReleaseMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+`MutationTuple`\<`UpdateAppReleaseMutation`, `Exact`\<\{ `i`: `UpdateAkashaAppReleaseInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
 
 #### Example
 
@@ -4365,15 +4040,13 @@ const [updateAppReleaseMutation, { data, loading, error }] = useUpdateAppRelease
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2764](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2764)
-
 ***
 
 ### useUpdateBeamMutation()
 
-> **useUpdateBeamMutation**(`baseOptions`?): `MutationTuple`\<`UpdateBeamMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+> **useUpdateBeamMutation**(`baseOptions`?): `MutationTuple`\<`UpdateBeamMutation`, `Exact`\<\{ `i`: `UpdateAkashaBeamInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:603](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L603)
 
 __useUpdateBeamMutation__
 
@@ -4385,12 +4058,12 @@ When your component renders, `useUpdateBeamMutation` returns a tuple that includ
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `MutationHookOptions`\<`UpdateBeamMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `MutationHookOptions`\<`UpdateBeamMutation`, `Exact`\<\{ `i`: `UpdateAkashaBeamInput`; \}\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
 
 #### Returns
 
-`MutationTuple`\<`UpdateBeamMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+`MutationTuple`\<`UpdateBeamMutation`, `Exact`\<\{ `i`: `UpdateAkashaBeamInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
 
 #### Example
 
@@ -4402,15 +4075,13 @@ const [updateBeamMutation, { data, loading, error }] = useUpdateBeamMutation({
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:603](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L603)
-
 ***
 
 ### useUpdateContentBlockMutation()
 
-> **useUpdateContentBlockMutation**(`baseOptions`?): `MutationTuple`\<`UpdateContentBlockMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+> **useUpdateContentBlockMutation**(`baseOptions`?): `MutationTuple`\<`UpdateContentBlockMutation`, `Exact`\<\{ `i`: `UpdateAkashaContentBlockInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:675](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L675)
 
 __useUpdateContentBlockMutation__
 
@@ -4422,12 +4093,12 @@ When your component renders, `useUpdateContentBlockMutation` returns a tuple tha
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `MutationHookOptions`\<`UpdateContentBlockMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `MutationHookOptions`\<`UpdateContentBlockMutation`, `Exact`\<\{ `i`: `UpdateAkashaContentBlockInput`; \}\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
 
 #### Returns
 
-`MutationTuple`\<`UpdateContentBlockMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+`MutationTuple`\<`UpdateContentBlockMutation`, `Exact`\<\{ `i`: `UpdateAkashaContentBlockInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
 
 #### Example
 
@@ -4439,15 +4110,13 @@ const [updateContentBlockMutation, { data, loading, error }] = useUpdateContentB
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:675](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L675)
-
 ***
 
 ### useUpdateFollowMutation()
 
-> **useUpdateFollowMutation**(`baseOptions`?): `MutationTuple`\<`UpdateFollowMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+> **useUpdateFollowMutation**(`baseOptions`?): `MutationTuple`\<`UpdateFollowMutation`, `Exact`\<\{ `i`: `UpdateAkashaFollowInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1907](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1907)
 
 __useUpdateFollowMutation__
 
@@ -4459,12 +4128,12 @@ When your component renders, `useUpdateFollowMutation` returns a tuple that incl
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `MutationHookOptions`\<`UpdateFollowMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `MutationHookOptions`\<`UpdateFollowMutation`, `Exact`\<\{ `i`: `UpdateAkashaFollowInput`; \}\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
 
 #### Returns
 
-`MutationTuple`\<`UpdateFollowMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+`MutationTuple`\<`UpdateFollowMutation`, `Exact`\<\{ `i`: `UpdateAkashaFollowInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
 
 #### Example
 
@@ -4476,15 +4145,13 @@ const [updateFollowMutation, { data, loading, error }] = useUpdateFollowMutation
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1907](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1907)
-
 ***
 
 ### useUpdateInterestsMutation()
 
-> **useUpdateInterestsMutation**(`baseOptions`?): `MutationTuple`\<`UpdateInterestsMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+> **useUpdateInterestsMutation**(`baseOptions`?): `MutationTuple`\<`UpdateInterestsMutation`, `Exact`\<\{ `i`: `UpdateAkashaProfileInterestsInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1823](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1823)
 
 __useUpdateInterestsMutation__
 
@@ -4496,12 +4163,12 @@ When your component renders, `useUpdateInterestsMutation` returns a tuple that i
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `MutationHookOptions`\<`UpdateInterestsMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `MutationHookOptions`\<`UpdateInterestsMutation`, `Exact`\<\{ `i`: `UpdateAkashaProfileInterestsInput`; \}\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
 
 #### Returns
 
-`MutationTuple`\<`UpdateInterestsMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+`MutationTuple`\<`UpdateInterestsMutation`, `Exact`\<\{ `i`: `UpdateAkashaProfileInterestsInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
 
 #### Example
 
@@ -4513,15 +4180,13 @@ const [updateInterestsMutation, { data, loading, error }] = useUpdateInterestsMu
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1823](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1823)
-
 ***
 
 ### useUpdateProfileMutation()
 
-> **useUpdateProfileMutation**(`baseOptions`?): `MutationTuple`\<`UpdateProfileMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+> **useUpdateProfileMutation**(`baseOptions`?): `MutationTuple`\<`UpdateProfileMutation`, `Exact`\<\{ `i`: `UpdateAkashaProfileInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1737](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1737)
 
 __useUpdateProfileMutation__
 
@@ -4533,12 +4198,12 @@ When your component renders, `useUpdateProfileMutation` returns a tuple that inc
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
-| `baseOptions`? | `MutationHookOptions`\<`UpdateProfileMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
+| ------ | ------ | ------ |
+| `baseOptions`? | `MutationHookOptions`\<`UpdateProfileMutation`, `Exact`\<\{ `i`: `UpdateAkashaProfileInput`; \}\>\> | options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2; |
 
 #### Returns
 
-`MutationTuple`\<`UpdateProfileMutation`, `Exact`\<`object`\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
+`MutationTuple`\<`UpdateProfileMutation`, `Exact`\<\{ `i`: `UpdateAkashaProfileInput`; \}\>, `DefaultContext`, `ApolloCache`\<`any`\>\>
 
 #### Example
 
@@ -4550,22 +4215,20 @@ const [updateProfileMutation, { data, loading, error }] = useUpdateProfileMutati
 });
 ```
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1737](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1737)
-
 ***
 
 ### useValidDid()
 
 > **useValidDid**(`profileId`, `enabled`?): `object`
 
+Defined in: [libs/hooks/src/use-valid-did.ts:19](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-valid-did.ts#L19)
+
 Hook to check the validity of an address
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `profileId` | `string` |
 | `enabled`? | `boolean` |
 
@@ -4573,11 +4236,11 @@ Hook to check the validity of an address
 
 `object`
 
-| Member | Type |
-| :------ | :------ |
-| `isEthAddress` | `boolean` |
-| `isLoading` | `boolean` |
-| `validDid` | `boolean` |
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="isethaddress"></a> `isEthAddress` | `boolean` | [libs/hooks/src/use-valid-did.ts:38](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-valid-did.ts#L38) |
+| <a id="isloading-8"></a> `isLoading` | `boolean` | [libs/hooks/src/use-valid-did.ts:38](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-valid-did.ts#L38) |
+| <a id="validdid"></a> `validDid` | `boolean` | [libs/hooks/src/use-valid-did.ts:38](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-valid-did.ts#L38) |
 
 #### Example
 
@@ -4588,26 +4251,24 @@ const { validDid, isEthAddress } = useValidDid(profileDID, !!profileDID)
 If you want to conditionally eable or disable address check from the hook,
  include the `enabled`param, which is `!!profileDID` in the example above.
 
-#### Source
-
-[libs/hooks/src/use-valid-did.ts:19](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-valid-did.ts#L19)
-
 ***
 
 ### validateType()
 
 > **validateType**\<`T`\>(`arg1`, `type`): `boolean`
 
-#### Type parameters
+Defined in: [libs/hooks/src/utils/generic-utils.ts:1](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/generic-utils.ts#L1)
 
-| Type parameter |
-| :------ |
+#### Type Parameters
+
+| Type Parameter |
+| ------ |
 | `T` |
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `arg1` | `T` |
 | `type` | `string` |
 
@@ -4615,28 +4276,26 @@ If you want to conditionally eable or disable address check from the hook,
 
 `boolean`
 
-#### Source
-
-[libs/hooks/src/utils/generic-utils.ts:1](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/generic-utils.ts#L1)
-
 ***
 
 ### withProviders()
 
 > **withProviders**\<`T`\>(`WrappedComponent`): (`props`) => `Element`
 
+Defined in: [libs/hooks/src/utils/provider-hoc.tsx:11](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/provider-hoc.tsx#L11)
+
 Higher order component that wraps a component with all necessary providers
 
-#### Type parameters
+#### Type Parameters
 
-| Type parameter |
-| :------ |
+| Type Parameter |
+| ------ |
 | `T` *extends* `IRootComponentProps` |
 
 #### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `WrappedComponent` | `ComponentType`\<`T`\> |
 
 #### Returns
@@ -4646,32 +4305,30 @@ Higher order component that wraps a component with all necessary providers
 ##### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
+| ------ | ------ |
 | `props` | `T` |
 
 ##### Returns
 
 `Element`
 
-| Member | Type |
-| :------ | :------ |
-| `displayName` | `string` |
-
-#### Source
-
-[libs/hooks/src/utils/provider-hoc.tsx:11](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/provider-hoc.tsx#L11)
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="displayname"></a> `displayName` | `string` | [libs/hooks/src/utils/provider-hoc.tsx:28](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/provider-hoc.tsx#L28) |
 
 ## Classes
 
 ### UserStore\<T\>
 
+Defined in: [libs/hooks/src/store/user-store.ts:12](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/store/user-store.ts#L12)
+
 Singleton store for managing login, logout, session restoration and fetching profile.
 It uses jotai to manage the store
 
-#### Type parameters
+#### Type Parameters
 
-| Type parameter |
-| :------ |
+| Type Parameter |
+| ------ |
 | `T` |
 
 #### Implements
@@ -4684,6 +4341,8 @@ It uses jotai to manage the store
 
 > **getSnapshot**(): `IUserState`\<`T`\>
 
+Defined in: [libs/hooks/src/store/user-store.ts:143](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/store/user-store.ts#L143)
+
 Get a snapshot of store data
 
 ###### Returns
@@ -4694,24 +4353,22 @@ Get a snapshot of store data
 
 `IUserStore.getSnapshot`
 
-###### Source
-
-[libs/hooks/src/store/user-store.ts:143](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/store/user-store.ts#L143)
-
 ***
 
 ##### login()
 
 > **login**(`__namedParameters`): `Promise`\<`void`\>
 
+Defined in: [libs/hooks/src/store/user-store.ts:46](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/store/user-store.ts#L46)
+
 Handles login
 
 ###### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `__namedParameters` | `object` |
-| `__namedParameters.checkRegistered` | `boolean` |
+| ------ | ------ |
+| `__namedParameters` | \{ `checkRegistered`: `boolean`; `provider`: `any`; \} |
+| `__namedParameters.checkRegistered`? | `boolean` |
 | `__namedParameters.provider` | `any` |
 
 ###### Returns
@@ -4722,15 +4379,13 @@ Handles login
 
 `IUserStore.login`
 
-###### Source
-
-[libs/hooks/src/store/user-store.ts:46](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/store/user-store.ts#L46)
-
 ***
 
 ##### logout()
 
 > **logout**(): `void`
+
+Defined in: [libs/hooks/src/store/user-store.ts:77](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/store/user-store.ts#L77)
 
 Handles logout
 Reset the store to the initial state
@@ -4743,15 +4398,13 @@ Reset the store to the initial state
 
 `IUserStore.logout`
 
-###### Source
-
-[libs/hooks/src/store/user-store.ts:77](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/store/user-store.ts#L77)
-
 ***
 
 ##### restoreSession()
 
 > **restoreSession**(): `Promise`\<`void`\>
+
+Defined in: [libs/hooks/src/store/user-store.ts:105](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/store/user-store.ts#L105)
 
 Initiates session restore for current authenticated user
 
@@ -4763,15 +4416,13 @@ Initiates session restore for current authenticated user
 
 `IUserStore.restoreSession`
 
-###### Source
-
-[libs/hooks/src/store/user-store.ts:105](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/store/user-store.ts#L105)
-
 ***
 
 ##### subscribe()
 
 > **subscribe**(`listener`): () => `void`
+
+Defined in: [libs/hooks/src/store/user-store.ts:135](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/store/user-store.ts#L135)
 
 Takes a callback function and subscribes it to the store, when the store changes the callback is invoked.
 This in turns causes a component to re-render
@@ -4779,7 +4430,7 @@ This in turns causes a component to re-render
 ###### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `listener` | () => `void` | callback listener which subscribes to the store |
 
 ###### Returns
@@ -4796,72 +4447,78 @@ function that cleans up the subscription
 
 `IUserStore.subscribe`
 
-###### Source
-
-[libs/hooks/src/store/user-store.ts:135](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/store/user-store.ts#L135)
-
 ***
 
 ##### getInstance()
 
-> `static` **getInstance**\<`T`\>(`getProfileInfo`): [`UserStore`](readme.md#userstoret)\<`T`\>
+> `static` **getInstance**\<`T`\>(`getProfileInfo`): [`UserStore`](index.md#userstoret)\<`T`\>
+
+Defined in: [libs/hooks/src/store/user-store.ts:36](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/store/user-store.ts#L36)
 
 Get the singleton instance of the user store
 
-###### Type parameters
+###### Type Parameters
 
-| Type parameter |
-| :------ |
+| Type Parameter |
+| ------ |
 | `T` |
 
 ###### Parameters
 
 | Parameter | Type |
-| :------ | :------ |
-| `getProfileInfo` | (`params`) => `Promise`\<`object`\> |
+| ------ | ------ |
+| `getProfileInfo` | (`params`) => `Promise`\<\{ `data`: `T`; `error`: `string`; \}\> |
 
 ###### Returns
 
-[`UserStore`](readme.md#userstoret)\<`T`\>
-
-###### Source
-
-[libs/hooks/src/store/user-store.ts:36](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/store/user-store.ts#L36)
+[`UserStore`](index.md#userstoret)\<`T`\>
 
 ## Enumerations
 
 ### CookieConsentTypes
 
+Defined in: [libs/hooks/src/use-analytics.tsx:17](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-analytics.tsx#L17)
+
+**`Internal`**
+
 #### Enumeration Members
 
-| Enumeration Member | Value |
-| :------ | :------ |
-| `ALL` | `"ALL"` |
-| `ESSENTIAL` | `"ESSENTIAL"` |
+| Enumeration Member | Value | Defined in |
+| ------ | ------ | ------ |
+| <a id="all-1"></a> `ALL` | `"ALL"` | [libs/hooks/src/use-analytics.tsx:19](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-analytics.tsx#L19) |
+| <a id="essential-1"></a> `ESSENTIAL` | `"ESSENTIAL"` | [libs/hooks/src/use-analytics.tsx:18](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-analytics.tsx#L18) |
 
 ## Interfaces
 
 ### IConfig
 
+Defined in: [libs/hooks/src/utils/media-utils.ts:8](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/media-utils.ts#L8)
+
+**`Internal`**
+
 #### Properties
 
-| Property | Type |
-| :------ | :------ |
-| `autoRotate?` | `boolean` |
-| `maxHeight` | `number` |
-| `maxWidth` | `number` |
-| `mimeType?` | `string` |
-| `quality?` | `number` |
+| Property | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="autorotate-1"></a> `autoRotate?` | `boolean` | [libs/hooks/src/utils/media-utils.ts:12](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/media-utils.ts#L12) |
+| <a id="maxheight-1"></a> `maxHeight` | `number` | [libs/hooks/src/utils/media-utils.ts:11](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/media-utils.ts#L11) |
+| <a id="maxwidth-1"></a> `maxWidth` | `number` | [libs/hooks/src/utils/media-utils.ts:10](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/media-utils.ts#L10) |
+| <a id="mimetype-1"></a> `mimeType?` | `string` | [libs/hooks/src/utils/media-utils.ts:13](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/media-utils.ts#L13) |
+| <a id="quality-1"></a> `quality?` | `number` | [libs/hooks/src/utils/media-utils.ts:9](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/utils/media-utils.ts#L9) |
 
 ***
 
 ### UseAnalyticsActions
 
+Defined in: [libs/hooks/src/use-analytics.tsx:37](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-analytics.tsx#L37)
+
+**`Internal`**
+
 #### Properties
 
-| Property | Type |
-| :------ | :------ |
-| `trackEvent` | (`eventData`: `object`) => `void` |
+| Property | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="trackevent-1"></a> `trackEvent` | (`eventData`: `object`) => `void` | [libs/hooks/src/use-analytics.tsx:39](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-analytics.tsx#L39) |
 
 ## Type Aliases
 
@@ -4869,19 +4526,15 @@ Get the singleton instance of the user store
 
 > **CreateAppMutationFn**: `Apollo.MutationFunction`\<`Types.CreateAppMutation`, `Types.CreateAppMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2782](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2782)
+Defined in: [libs/hooks/src/generated/apollo.ts:2782](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2782)
 
 ***
 
 ### CreateAppMutationHookResult
 
-> **CreateAppMutationHookResult**: `ReturnType`\<*typeof* [`useCreateAppMutation`](readme.md#usecreateappmutation)\>
+> **CreateAppMutationHookResult**: `ReturnType`\<*typeof* [`useCreateAppMutation`](index.md#usecreateappmutation)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2805](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2805)
+Defined in: [libs/hooks/src/generated/apollo.ts:2805](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2805)
 
 ***
 
@@ -4889,9 +4542,7 @@ Get the singleton instance of the user store
 
 > **CreateAppMutationOptions**: `Apollo.BaseMutationOptions`\<`Types.CreateAppMutation`, `Types.CreateAppMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2807](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2807)
+Defined in: [libs/hooks/src/generated/apollo.ts:2807](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2807)
 
 ***
 
@@ -4899,9 +4550,7 @@ Get the singleton instance of the user store
 
 > **CreateAppMutationResult**: `Apollo.MutationResult`\<`Types.CreateAppMutation`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2806](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2806)
+Defined in: [libs/hooks/src/generated/apollo.ts:2806](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2806)
 
 ***
 
@@ -4909,19 +4558,15 @@ Get the singleton instance of the user store
 
 > **CreateBeamMutationFn**: `Apollo.MutationFunction`\<`Types.CreateBeamMutation`, `Types.CreateBeamMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:548](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L548)
+Defined in: [libs/hooks/src/generated/apollo.ts:548](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L548)
 
 ***
 
 ### CreateBeamMutationHookResult
 
-> **CreateBeamMutationHookResult**: `ReturnType`\<*typeof* [`useCreateBeamMutation`](readme.md#usecreatebeammutation)\>
+> **CreateBeamMutationHookResult**: `ReturnType`\<*typeof* [`useCreateBeamMutation`](index.md#usecreatebeammutation)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:571](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L571)
+Defined in: [libs/hooks/src/generated/apollo.ts:571](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L571)
 
 ***
 
@@ -4929,9 +4574,7 @@ Get the singleton instance of the user store
 
 > **CreateBeamMutationOptions**: `Apollo.BaseMutationOptions`\<`Types.CreateBeamMutation`, `Types.CreateBeamMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:573](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L573)
+Defined in: [libs/hooks/src/generated/apollo.ts:573](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L573)
 
 ***
 
@@ -4939,9 +4582,7 @@ Get the singleton instance of the user store
 
 > **CreateBeamMutationResult**: `Apollo.MutationResult`\<`Types.CreateBeamMutation`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:572](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L572)
+Defined in: [libs/hooks/src/generated/apollo.ts:572](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L572)
 
 ***
 
@@ -4949,19 +4590,15 @@ Get the singleton instance of the user store
 
 > **CreateContentBlockMutationFn**: `Apollo.MutationFunction`\<`Types.CreateContentBlockMutation`, `Types.CreateContentBlockMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:620](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L620)
+Defined in: [libs/hooks/src/generated/apollo.ts:620](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L620)
 
 ***
 
 ### CreateContentBlockMutationHookResult
 
-> **CreateContentBlockMutationHookResult**: `ReturnType`\<*typeof* [`useCreateContentBlockMutation`](readme.md#usecreatecontentblockmutation)\>
+> **CreateContentBlockMutationHookResult**: `ReturnType`\<*typeof* [`useCreateContentBlockMutation`](index.md#usecreatecontentblockmutation)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:643](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L643)
+Defined in: [libs/hooks/src/generated/apollo.ts:643](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L643)
 
 ***
 
@@ -4969,9 +4606,7 @@ Get the singleton instance of the user store
 
 > **CreateContentBlockMutationOptions**: `Apollo.BaseMutationOptions`\<`Types.CreateContentBlockMutation`, `Types.CreateContentBlockMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:645](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L645)
+Defined in: [libs/hooks/src/generated/apollo.ts:645](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L645)
 
 ***
 
@@ -4979,9 +4614,7 @@ Get the singleton instance of the user store
 
 > **CreateContentBlockMutationResult**: `Apollo.MutationResult`\<`Types.CreateContentBlockMutation`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:644](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L644)
+Defined in: [libs/hooks/src/generated/apollo.ts:644](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L644)
 
 ***
 
@@ -4989,19 +4622,15 @@ Get the singleton instance of the user store
 
 > **CreateFollowMutationFn**: `Apollo.MutationFunction`\<`Types.CreateFollowMutation`, `Types.CreateFollowMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1846](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1846)
+Defined in: [libs/hooks/src/generated/apollo.ts:1846](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1846)
 
 ***
 
 ### CreateFollowMutationHookResult
 
-> **CreateFollowMutationHookResult**: `ReturnType`\<*typeof* [`useCreateFollowMutation`](readme.md#usecreatefollowmutation)\>
+> **CreateFollowMutationHookResult**: `ReturnType`\<*typeof* [`useCreateFollowMutation`](index.md#usecreatefollowmutation)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1869](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1869)
+Defined in: [libs/hooks/src/generated/apollo.ts:1869](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1869)
 
 ***
 
@@ -5009,9 +4638,7 @@ Get the singleton instance of the user store
 
 > **CreateFollowMutationOptions**: `Apollo.BaseMutationOptions`\<`Types.CreateFollowMutation`, `Types.CreateFollowMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1871](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1871)
+Defined in: [libs/hooks/src/generated/apollo.ts:1871](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1871)
 
 ***
 
@@ -5019,9 +4646,7 @@ Get the singleton instance of the user store
 
 > **CreateFollowMutationResult**: `Apollo.MutationResult`\<`Types.CreateFollowMutation`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1870](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1870)
+Defined in: [libs/hooks/src/generated/apollo.ts:1870](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1870)
 
 ***
 
@@ -5029,19 +4654,15 @@ Get the singleton instance of the user store
 
 > **CreateInterestsMutationFn**: `Apollo.MutationFunction`\<`Types.CreateInterestsMutation`, `Types.CreateInterestsMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1761](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1761)
+Defined in: [libs/hooks/src/generated/apollo.ts:1761](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1761)
 
 ***
 
 ### CreateInterestsMutationHookResult
 
-> **CreateInterestsMutationHookResult**: `ReturnType`\<*typeof* [`useCreateInterestsMutation`](readme.md#usecreateinterestsmutation)\>
+> **CreateInterestsMutationHookResult**: `ReturnType`\<*typeof* [`useCreateInterestsMutation`](index.md#usecreateinterestsmutation)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1784](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1784)
+Defined in: [libs/hooks/src/generated/apollo.ts:1784](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1784)
 
 ***
 
@@ -5049,9 +4670,7 @@ Get the singleton instance of the user store
 
 > **CreateInterestsMutationOptions**: `Apollo.BaseMutationOptions`\<`Types.CreateInterestsMutation`, `Types.CreateInterestsMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1786](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1786)
+Defined in: [libs/hooks/src/generated/apollo.ts:1786](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1786)
 
 ***
 
@@ -5059,9 +4678,7 @@ Get the singleton instance of the user store
 
 > **CreateInterestsMutationResult**: `Apollo.MutationResult`\<`Types.CreateInterestsMutation`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1785](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1785)
+Defined in: [libs/hooks/src/generated/apollo.ts:1785](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1785)
 
 ***
 
@@ -5069,19 +4686,15 @@ Get the singleton instance of the user store
 
 > **CreateProfileMutationFn**: `Apollo.MutationFunction`\<`Types.CreateProfileMutation`, `Types.CreateProfileMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1682](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1682)
+Defined in: [libs/hooks/src/generated/apollo.ts:1682](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1682)
 
 ***
 
 ### CreateProfileMutationHookResult
 
-> **CreateProfileMutationHookResult**: `ReturnType`\<*typeof* [`useCreateProfileMutation`](readme.md#usecreateprofilemutation)\>
+> **CreateProfileMutationHookResult**: `ReturnType`\<*typeof* [`useCreateProfileMutation`](index.md#usecreateprofilemutation)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1705](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1705)
+Defined in: [libs/hooks/src/generated/apollo.ts:1705](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1705)
 
 ***
 
@@ -5089,9 +4702,7 @@ Get the singleton instance of the user store
 
 > **CreateProfileMutationOptions**: `Apollo.BaseMutationOptions`\<`Types.CreateProfileMutation`, `Types.CreateProfileMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1707](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1707)
+Defined in: [libs/hooks/src/generated/apollo.ts:1707](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1707)
 
 ***
 
@@ -5099,9 +4710,7 @@ Get the singleton instance of the user store
 
 > **CreateProfileMutationResult**: `Apollo.MutationResult`\<`Types.CreateProfileMutation`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1706](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1706)
+Defined in: [libs/hooks/src/generated/apollo.ts:1706](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1706)
 
 ***
 
@@ -5109,19 +4718,15 @@ Get the singleton instance of the user store
 
 > **CreateReflectMutationFn**: `Apollo.MutationFunction`\<`Types.CreateReflectMutation`, `Types.CreateReflectMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1255](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1255)
+Defined in: [libs/hooks/src/generated/apollo.ts:1255](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1255)
 
 ***
 
 ### CreateReflectMutationHookResult
 
-> **CreateReflectMutationHookResult**: `ReturnType`\<*typeof* [`useCreateReflectMutation`](readme.md#usecreatereflectmutation)\>
+> **CreateReflectMutationHookResult**: `ReturnType`\<*typeof* [`useCreateReflectMutation`](index.md#usecreatereflectmutation)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1278](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1278)
+Defined in: [libs/hooks/src/generated/apollo.ts:1278](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1278)
 
 ***
 
@@ -5129,9 +4734,7 @@ Get the singleton instance of the user store
 
 > **CreateReflectMutationOptions**: `Apollo.BaseMutationOptions`\<`Types.CreateReflectMutation`, `Types.CreateReflectMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1280](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1280)
+Defined in: [libs/hooks/src/generated/apollo.ts:1280](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1280)
 
 ***
 
@@ -5139,29 +4742,23 @@ Get the singleton instance of the user store
 
 > **CreateReflectMutationResult**: `Apollo.MutationResult`\<`Types.CreateReflectMutation`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1279](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1279)
+Defined in: [libs/hooks/src/generated/apollo.ts:1279](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1279)
 
 ***
 
 ### GetAppReleaseByIdLazyQueryHookResult
 
-> **GetAppReleaseByIdLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppReleaseByIdLazyQuery`](readme.md#usegetappreleasebyidlazyquery)\>
+> **GetAppReleaseByIdLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppReleaseByIdLazyQuery`](index.md#usegetappreleasebyidlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3269](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3269)
+Defined in: [libs/hooks/src/generated/apollo.ts:3269](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3269)
 
 ***
 
 ### GetAppReleaseByIdQueryHookResult
 
-> **GetAppReleaseByIdQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppReleaseByIdQuery`](readme.md#usegetappreleasebyidquery)\>
+> **GetAppReleaseByIdQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppReleaseByIdQuery`](index.md#usegetappreleasebyidquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3268](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3268)
+Defined in: [libs/hooks/src/generated/apollo.ts:3268](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3268)
 
 ***
 
@@ -5169,39 +4766,31 @@ Get the singleton instance of the user store
 
 > **GetAppReleaseByIdQueryResult**: `Apollo.QueryResult`\<`Types.GetAppReleaseByIdQuery`, `Types.GetAppReleaseByIdQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3271](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3271)
+Defined in: [libs/hooks/src/generated/apollo.ts:3271](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3271)
 
 ***
 
 ### GetAppReleaseByIdSuspenseQueryHookResult
 
-> **GetAppReleaseByIdSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppReleaseByIdSuspenseQuery`](readme.md#usegetappreleasebyidsuspensequery)\>
+> **GetAppReleaseByIdSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppReleaseByIdSuspenseQuery`](index.md#usegetappreleasebyidsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3270](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3270)
+Defined in: [libs/hooks/src/generated/apollo.ts:3270](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3270)
 
 ***
 
 ### GetAppsByIdLazyQueryHookResult
 
-> **GetAppsByIdLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsByIdLazyQuery`](readme.md#usegetappsbyidlazyquery)\>
+> **GetAppsByIdLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsByIdLazyQuery`](index.md#usegetappsbyidlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3021](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3021)
+Defined in: [libs/hooks/src/generated/apollo.ts:3021](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3021)
 
 ***
 
 ### GetAppsByIdQueryHookResult
 
-> **GetAppsByIdQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsByIdQuery`](readme.md#usegetappsbyidquery)\>
+> **GetAppsByIdQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsByIdQuery`](index.md#usegetappsbyidquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3020](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3020)
+Defined in: [libs/hooks/src/generated/apollo.ts:3020](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3020)
 
 ***
 
@@ -5209,39 +4798,31 @@ Get the singleton instance of the user store
 
 > **GetAppsByIdQueryResult**: `Apollo.QueryResult`\<`Types.GetAppsByIdQuery`, `Types.GetAppsByIdQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3023](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3023)
+Defined in: [libs/hooks/src/generated/apollo.ts:3023](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3023)
 
 ***
 
 ### GetAppsByIdSuspenseQueryHookResult
 
-> **GetAppsByIdSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsByIdSuspenseQuery`](readme.md#usegetappsbyidsuspensequery)\>
+> **GetAppsByIdSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsByIdSuspenseQuery`](index.md#usegetappsbyidsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3022](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3022)
+Defined in: [libs/hooks/src/generated/apollo.ts:3022](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3022)
 
 ***
 
 ### GetAppsByPublisherDidLazyQueryHookResult
 
-> **GetAppsByPublisherDidLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsByPublisherDidLazyQuery`](readme.md#usegetappsbypublisherdidlazyquery)\>
+> **GetAppsByPublisherDidLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsByPublisherDidLazyQuery`](index.md#usegetappsbypublisherdidlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3090](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3090)
+Defined in: [libs/hooks/src/generated/apollo.ts:3090](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3090)
 
 ***
 
 ### GetAppsByPublisherDidQueryHookResult
 
-> **GetAppsByPublisherDidQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsByPublisherDidQuery`](readme.md#usegetappsbypublisherdidquery)\>
+> **GetAppsByPublisherDidQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsByPublisherDidQuery`](index.md#usegetappsbypublisherdidquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3089](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3089)
+Defined in: [libs/hooks/src/generated/apollo.ts:3089](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3089)
 
 ***
 
@@ -5249,39 +4830,31 @@ Get the singleton instance of the user store
 
 > **GetAppsByPublisherDidQueryResult**: `Apollo.QueryResult`\<`Types.GetAppsByPublisherDidQuery`, `Types.GetAppsByPublisherDidQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3092](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3092)
+Defined in: [libs/hooks/src/generated/apollo.ts:3092](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3092)
 
 ***
 
 ### GetAppsByPublisherDidSuspenseQueryHookResult
 
-> **GetAppsByPublisherDidSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsByPublisherDidSuspenseQuery`](readme.md#usegetappsbypublisherdidsuspensequery)\>
+> **GetAppsByPublisherDidSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsByPublisherDidSuspenseQuery`](index.md#usegetappsbypublisherdidsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3091](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3091)
+Defined in: [libs/hooks/src/generated/apollo.ts:3091](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3091)
 
 ***
 
 ### GetAppsLazyQueryHookResult
 
-> **GetAppsLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsLazyQuery`](readme.md#usegetappslazyquery)\>
+> **GetAppsLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsLazyQuery`](index.md#usegetappslazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2906](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2906)
+Defined in: [libs/hooks/src/generated/apollo.ts:2906](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2906)
 
 ***
 
 ### GetAppsQueryHookResult
 
-> **GetAppsQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsQuery`](readme.md#usegetappsquery)\>
+> **GetAppsQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsQuery`](index.md#usegetappsquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2905](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2905)
+Defined in: [libs/hooks/src/generated/apollo.ts:2905](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2905)
 
 ***
 
@@ -5289,29 +4862,23 @@ Get the singleton instance of the user store
 
 > **GetAppsQueryResult**: `Apollo.QueryResult`\<`Types.GetAppsQuery`, `Types.GetAppsQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2908](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2908)
+Defined in: [libs/hooks/src/generated/apollo.ts:2908](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2908)
 
 ***
 
 ### GetAppsReleasesByPublisherDidLazyQueryHookResult
 
-> **GetAppsReleasesByPublisherDidLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsReleasesByPublisherDidLazyQuery`](readme.md#usegetappsreleasesbypublisherdidlazyquery)\>
+> **GetAppsReleasesByPublisherDidLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsReleasesByPublisherDidLazyQuery`](index.md#usegetappsreleasesbypublisherdidlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3160](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3160)
+Defined in: [libs/hooks/src/generated/apollo.ts:3160](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3160)
 
 ***
 
 ### GetAppsReleasesByPublisherDidQueryHookResult
 
-> **GetAppsReleasesByPublisherDidQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsReleasesByPublisherDidQuery`](readme.md#usegetappsreleasesbypublisherdidquery)\>
+> **GetAppsReleasesByPublisherDidQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsReleasesByPublisherDidQuery`](index.md#usegetappsreleasesbypublisherdidquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3159](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3159)
+Defined in: [libs/hooks/src/generated/apollo.ts:3159](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3159)
 
 ***
 
@@ -5319,39 +4886,31 @@ Get the singleton instance of the user store
 
 > **GetAppsReleasesByPublisherDidQueryResult**: `Apollo.QueryResult`\<`Types.GetAppsReleasesByPublisherDidQuery`, `Types.GetAppsReleasesByPublisherDidQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3162](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3162)
+Defined in: [libs/hooks/src/generated/apollo.ts:3162](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3162)
 
 ***
 
 ### GetAppsReleasesByPublisherDidSuspenseQueryHookResult
 
-> **GetAppsReleasesByPublisherDidSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsReleasesByPublisherDidSuspenseQuery`](readme.md#usegetappsreleasesbypublisherdidsuspensequery)\>
+> **GetAppsReleasesByPublisherDidSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsReleasesByPublisherDidSuspenseQuery`](index.md#usegetappsreleasesbypublisherdidsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3161](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3161)
+Defined in: [libs/hooks/src/generated/apollo.ts:3161](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3161)
 
 ***
 
 ### GetAppsReleasesLazyQueryHookResult
 
-> **GetAppsReleasesLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsReleasesLazyQuery`](readme.md#usegetappsreleaseslazyquery)\>
+> **GetAppsReleasesLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsReleasesLazyQuery`](index.md#usegetappsreleaseslazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3225](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3225)
+Defined in: [libs/hooks/src/generated/apollo.ts:3225](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3225)
 
 ***
 
 ### GetAppsReleasesQueryHookResult
 
-> **GetAppsReleasesQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsReleasesQuery`](readme.md#usegetappsreleasesquery)\>
+> **GetAppsReleasesQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsReleasesQuery`](index.md#usegetappsreleasesquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3224](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3224)
+Defined in: [libs/hooks/src/generated/apollo.ts:3224](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3224)
 
 ***
 
@@ -5359,39 +4918,31 @@ Get the singleton instance of the user store
 
 > **GetAppsReleasesQueryResult**: `Apollo.QueryResult`\<`Types.GetAppsReleasesQuery`, `Types.GetAppsReleasesQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3227](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3227)
+Defined in: [libs/hooks/src/generated/apollo.ts:3227](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3227)
 
 ***
 
 ### GetAppsReleasesSuspenseQueryHookResult
 
-> **GetAppsReleasesSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsReleasesSuspenseQuery`](readme.md#usegetappsreleasessuspensequery)\>
+> **GetAppsReleasesSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsReleasesSuspenseQuery`](index.md#usegetappsreleasessuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3226](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3226)
+Defined in: [libs/hooks/src/generated/apollo.ts:3226](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3226)
 
 ***
 
 ### GetAppsStreamLazyQueryHookResult
 
-> **GetAppsStreamLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsStreamLazyQuery`](readme.md#usegetappsstreamlazyquery)\>
+> **GetAppsStreamLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsStreamLazyQuery`](index.md#usegetappsstreamlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2978](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2978)
+Defined in: [libs/hooks/src/generated/apollo.ts:2978](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2978)
 
 ***
 
 ### GetAppsStreamQueryHookResult
 
-> **GetAppsStreamQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsStreamQuery`](readme.md#usegetappsstreamquery)\>
+> **GetAppsStreamQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsStreamQuery`](index.md#usegetappsstreamquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2977](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2977)
+Defined in: [libs/hooks/src/generated/apollo.ts:2977](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2977)
 
 ***
 
@@ -5399,49 +4950,39 @@ Get the singleton instance of the user store
 
 > **GetAppsStreamQueryResult**: `Apollo.QueryResult`\<`Types.GetAppsStreamQuery`, `Types.GetAppsStreamQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2980](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2980)
+Defined in: [libs/hooks/src/generated/apollo.ts:2980](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2980)
 
 ***
 
 ### GetAppsStreamSuspenseQueryHookResult
 
-> **GetAppsStreamSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsStreamSuspenseQuery`](readme.md#usegetappsstreamsuspensequery)\>
+> **GetAppsStreamSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsStreamSuspenseQuery`](index.md#usegetappsstreamsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2979](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2979)
+Defined in: [libs/hooks/src/generated/apollo.ts:2979](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2979)
 
 ***
 
 ### GetAppsSuspenseQueryHookResult
 
-> **GetAppsSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsSuspenseQuery`](readme.md#usegetappssuspensequery)\>
+> **GetAppsSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetAppsSuspenseQuery`](index.md#usegetappssuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2907](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2907)
+Defined in: [libs/hooks/src/generated/apollo.ts:2907](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2907)
 
 ***
 
 ### GetBeamByIdLazyQueryHookResult
 
-> **GetBeamByIdLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamByIdLazyQuery`](readme.md#usegetbeambyidlazyquery)\>
+> **GetBeamByIdLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamByIdLazyQuery`](index.md#usegetbeambyidlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:927](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L927)
+Defined in: [libs/hooks/src/generated/apollo.ts:927](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L927)
 
 ***
 
 ### GetBeamByIdQueryHookResult
 
-> **GetBeamByIdQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamByIdQuery`](readme.md#usegetbeambyidquery)\>
+> **GetBeamByIdQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamByIdQuery`](index.md#usegetbeambyidquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:926](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L926)
+Defined in: [libs/hooks/src/generated/apollo.ts:926](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L926)
 
 ***
 
@@ -5449,79 +4990,31 @@ Get the singleton instance of the user store
 
 > **GetBeamByIdQueryResult**: `Apollo.QueryResult`\<`Types.GetBeamByIdQuery`, `Types.GetBeamByIdQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:929](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L929)
+Defined in: [libs/hooks/src/generated/apollo.ts:929](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L929)
 
 ***
 
 ### GetBeamByIdSuspenseQueryHookResult
 
-> **GetBeamByIdSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamByIdSuspenseQuery`](readme.md#usegetbeambyidsuspensequery)\>
+> **GetBeamByIdSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamByIdSuspenseQuery`](index.md#usegetbeambyidsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:928](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L928)
-
-***
-
-### GetBeamStreamLazyQueryHookResult
-
-> **GetBeamStreamLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamStreamLazyQuery`](readme.md#usegetbeamstreamlazyquery)\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:752](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L752)
-
-***
-
-### GetBeamStreamQueryHookResult
-
-> **GetBeamStreamQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamStreamQuery`](readme.md#usegetbeamstreamquery)\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:751](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L751)
-
-***
-
-### GetBeamStreamQueryResult
-
-> **GetBeamStreamQueryResult**: `Apollo.QueryResult`\<`Types.GetBeamStreamQuery`, `Types.GetBeamStreamQueryVariables`\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:754](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L754)
-
-***
-
-### GetBeamStreamSuspenseQueryHookResult
-
-> **GetBeamStreamSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamStreamSuspenseQuery`](readme.md#usegetbeamstreamsuspensequery)\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:753](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L753)
+Defined in: [libs/hooks/src/generated/apollo.ts:928](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L928)
 
 ***
 
 ### GetBeamsByAuthorDidLazyQueryHookResult
 
-> **GetBeamsByAuthorDidLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamsByAuthorDidLazyQuery`](readme.md#usegetbeamsbyauthordidlazyquery)\>
+> **GetBeamsByAuthorDidLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamsByAuthorDidLazyQuery`](index.md#usegetbeamsbyauthordidlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:885](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L885)
+Defined in: [libs/hooks/src/generated/apollo.ts:885](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L885)
 
 ***
 
 ### GetBeamsByAuthorDidQueryHookResult
 
-> **GetBeamsByAuthorDidQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamsByAuthorDidQuery`](readme.md#usegetbeamsbyauthordidquery)\>
+> **GetBeamsByAuthorDidQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamsByAuthorDidQuery`](index.md#usegetbeamsbyauthordidquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:884](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L884)
+Defined in: [libs/hooks/src/generated/apollo.ts:884](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L884)
 
 ***
 
@@ -5529,39 +5022,31 @@ Get the singleton instance of the user store
 
 > **GetBeamsByAuthorDidQueryResult**: `Apollo.QueryResult`\<`Types.GetBeamsByAuthorDidQuery`, `Types.GetBeamsByAuthorDidQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:887](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L887)
+Defined in: [libs/hooks/src/generated/apollo.ts:887](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L887)
 
 ***
 
 ### GetBeamsByAuthorDidSuspenseQueryHookResult
 
-> **GetBeamsByAuthorDidSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamsByAuthorDidSuspenseQuery`](readme.md#usegetbeamsbyauthordidsuspensequery)\>
+> **GetBeamsByAuthorDidSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamsByAuthorDidSuspenseQuery`](index.md#usegetbeamsbyauthordidsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:886](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L886)
+Defined in: [libs/hooks/src/generated/apollo.ts:886](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L886)
 
 ***
 
 ### GetBeamsLazyQueryHookResult
 
-> **GetBeamsLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamsLazyQuery`](readme.md#usegetbeamslazyquery)\>
+> **GetBeamsLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamsLazyQuery`](index.md#usegetbeamslazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:815](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L815)
+Defined in: [libs/hooks/src/generated/apollo.ts:815](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L815)
 
 ***
 
 ### GetBeamsQueryHookResult
 
-> **GetBeamsQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamsQuery`](readme.md#usegetbeamsquery)\>
+> **GetBeamsQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamsQuery`](index.md#usegetbeamsquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:814](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L814)
+Defined in: [libs/hooks/src/generated/apollo.ts:814](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L814)
 
 ***
 
@@ -5569,39 +5054,63 @@ Get the singleton instance of the user store
 
 > **GetBeamsQueryResult**: `Apollo.QueryResult`\<`Types.GetBeamsQuery`, `Types.GetBeamsQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:817](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L817)
+Defined in: [libs/hooks/src/generated/apollo.ts:817](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L817)
 
 ***
 
 ### GetBeamsSuspenseQueryHookResult
 
-> **GetBeamsSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamsSuspenseQuery`](readme.md#usegetbeamssuspensequery)\>
+> **GetBeamsSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamsSuspenseQuery`](index.md#usegetbeamssuspensequery)\>
 
-#### Source
+Defined in: [libs/hooks/src/generated/apollo.ts:816](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L816)
 
-[libs/hooks/src/generated/apollo.ts:816](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L816)
+***
+
+### GetBeamStreamLazyQueryHookResult
+
+> **GetBeamStreamLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamStreamLazyQuery`](index.md#usegetbeamstreamlazyquery)\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:752](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L752)
+
+***
+
+### GetBeamStreamQueryHookResult
+
+> **GetBeamStreamQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamStreamQuery`](index.md#usegetbeamstreamquery)\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:751](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L751)
+
+***
+
+### GetBeamStreamQueryResult
+
+> **GetBeamStreamQueryResult**: `Apollo.QueryResult`\<`Types.GetBeamStreamQuery`, `Types.GetBeamStreamQueryVariables`\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:754](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L754)
+
+***
+
+### GetBeamStreamSuspenseQueryHookResult
+
+> **GetBeamStreamSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetBeamStreamSuspenseQuery`](index.md#usegetbeamstreamsuspensequery)\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:753](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L753)
 
 ***
 
 ### GetBlockStorageByIdLazyQueryHookResult
 
-> **GetBlockStorageByIdLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetBlockStorageByIdLazyQuery`](readme.md#usegetblockstoragebyidlazyquery)\>
+> **GetBlockStorageByIdLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetBlockStorageByIdLazyQuery`](index.md#usegetblockstoragebyidlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1085](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1085)
+Defined in: [libs/hooks/src/generated/apollo.ts:1085](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1085)
 
 ***
 
 ### GetBlockStorageByIdQueryHookResult
 
-> **GetBlockStorageByIdQueryHookResult**: `ReturnType`\<*typeof* [`useGetBlockStorageByIdQuery`](readme.md#usegetblockstoragebyidquery)\>
+> **GetBlockStorageByIdQueryHookResult**: `ReturnType`\<*typeof* [`useGetBlockStorageByIdQuery`](index.md#usegetblockstoragebyidquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1084](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1084)
+Defined in: [libs/hooks/src/generated/apollo.ts:1084](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1084)
 
 ***
 
@@ -5609,39 +5118,31 @@ Get the singleton instance of the user store
 
 > **GetBlockStorageByIdQueryResult**: `Apollo.QueryResult`\<`Types.GetBlockStorageByIdQuery`, `Types.GetBlockStorageByIdQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1087](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1087)
+Defined in: [libs/hooks/src/generated/apollo.ts:1087](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1087)
 
 ***
 
 ### GetBlockStorageByIdSuspenseQueryHookResult
 
-> **GetBlockStorageByIdSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetBlockStorageByIdSuspenseQuery`](readme.md#usegetblockstoragebyidsuspensequery)\>
+> **GetBlockStorageByIdSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetBlockStorageByIdSuspenseQuery`](index.md#usegetblockstoragebyidsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1086](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1086)
+Defined in: [libs/hooks/src/generated/apollo.ts:1086](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1086)
 
 ***
 
 ### GetContentBlockByIdLazyQueryHookResult
 
-> **GetContentBlockByIdLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetContentBlockByIdLazyQuery`](readme.md#usegetcontentblockbyidlazyquery)\>
+> **GetContentBlockByIdLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetContentBlockByIdLazyQuery`](index.md#usegetcontentblockbyidlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1043](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1043)
+Defined in: [libs/hooks/src/generated/apollo.ts:1043](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1043)
 
 ***
 
 ### GetContentBlockByIdQueryHookResult
 
-> **GetContentBlockByIdQueryHookResult**: `ReturnType`\<*typeof* [`useGetContentBlockByIdQuery`](readme.md#usegetcontentblockbyidquery)\>
+> **GetContentBlockByIdQueryHookResult**: `ReturnType`\<*typeof* [`useGetContentBlockByIdQuery`](index.md#usegetcontentblockbyidquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1042](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1042)
+Defined in: [libs/hooks/src/generated/apollo.ts:1042](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1042)
 
 ***
 
@@ -5649,39 +5150,31 @@ Get the singleton instance of the user store
 
 > **GetContentBlockByIdQueryResult**: `Apollo.QueryResult`\<`Types.GetContentBlockByIdQuery`, `Types.GetContentBlockByIdQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1045](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1045)
+Defined in: [libs/hooks/src/generated/apollo.ts:1045](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1045)
 
 ***
 
 ### GetContentBlockByIdSuspenseQueryHookResult
 
-> **GetContentBlockByIdSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetContentBlockByIdSuspenseQuery`](readme.md#usegetcontentblockbyidsuspensequery)\>
+> **GetContentBlockByIdSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetContentBlockByIdSuspenseQuery`](index.md#usegetcontentblockbyidsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1044](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1044)
+Defined in: [libs/hooks/src/generated/apollo.ts:1044](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1044)
 
 ***
 
 ### GetContentBlockStreamLazyQueryHookResult
 
-> **GetContentBlockStreamLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetContentBlockStreamLazyQuery`](readme.md#usegetcontentblockstreamlazyquery)\>
+> **GetContentBlockStreamLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetContentBlockStreamLazyQuery`](index.md#usegetcontentblockstreamlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1001](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1001)
+Defined in: [libs/hooks/src/generated/apollo.ts:1001](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1001)
 
 ***
 
 ### GetContentBlockStreamQueryHookResult
 
-> **GetContentBlockStreamQueryHookResult**: `ReturnType`\<*typeof* [`useGetContentBlockStreamQuery`](readme.md#usegetcontentblockstreamquery)\>
+> **GetContentBlockStreamQueryHookResult**: `ReturnType`\<*typeof* [`useGetContentBlockStreamQuery`](index.md#usegetcontentblockstreamquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1000](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1000)
+Defined in: [libs/hooks/src/generated/apollo.ts:1000](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1000)
 
 ***
 
@@ -5689,39 +5182,31 @@ Get the singleton instance of the user store
 
 > **GetContentBlockStreamQueryResult**: `Apollo.QueryResult`\<`Types.GetContentBlockStreamQuery`, `Types.GetContentBlockStreamQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1003](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1003)
+Defined in: [libs/hooks/src/generated/apollo.ts:1003](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1003)
 
 ***
 
 ### GetContentBlockStreamSuspenseQueryHookResult
 
-> **GetContentBlockStreamSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetContentBlockStreamSuspenseQuery`](readme.md#usegetcontentblockstreamsuspensequery)\>
+> **GetContentBlockStreamSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetContentBlockStreamSuspenseQuery`](index.md#usegetcontentblockstreamsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1002](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1002)
+Defined in: [libs/hooks/src/generated/apollo.ts:1002](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1002)
 
 ***
 
 ### GetFollowDocumentsByDidLazyQueryHookResult
 
-> **GetFollowDocumentsByDidLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetFollowDocumentsByDidLazyQuery`](readme.md#usegetfollowdocumentsbydidlazyquery)\>
+> **GetFollowDocumentsByDidLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetFollowDocumentsByDidLazyQuery`](index.md#usegetfollowdocumentsbydidlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2026](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2026)
+Defined in: [libs/hooks/src/generated/apollo.ts:2026](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2026)
 
 ***
 
 ### GetFollowDocumentsByDidQueryHookResult
 
-> **GetFollowDocumentsByDidQueryHookResult**: `ReturnType`\<*typeof* [`useGetFollowDocumentsByDidQuery`](readme.md#usegetfollowdocumentsbydidquery)\>
+> **GetFollowDocumentsByDidQueryHookResult**: `ReturnType`\<*typeof* [`useGetFollowDocumentsByDidQuery`](index.md#usegetfollowdocumentsbydidquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2025](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2025)
+Defined in: [libs/hooks/src/generated/apollo.ts:2025](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2025)
 
 ***
 
@@ -5729,39 +5214,31 @@ Get the singleton instance of the user store
 
 > **GetFollowDocumentsByDidQueryResult**: `Apollo.QueryResult`\<`Types.GetFollowDocumentsByDidQuery`, `Types.GetFollowDocumentsByDidQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2028](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2028)
+Defined in: [libs/hooks/src/generated/apollo.ts:2028](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2028)
 
 ***
 
 ### GetFollowDocumentsByDidSuspenseQueryHookResult
 
-> **GetFollowDocumentsByDidSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetFollowDocumentsByDidSuspenseQuery`](readme.md#usegetfollowdocumentsbydidsuspensequery)\>
+> **GetFollowDocumentsByDidSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetFollowDocumentsByDidSuspenseQuery`](index.md#usegetfollowdocumentsbydidsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2027](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2027)
+Defined in: [libs/hooks/src/generated/apollo.ts:2027](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2027)
 
 ***
 
 ### GetFollowersListByDidLazyQueryHookResult
 
-> **GetFollowersListByDidLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetFollowersListByDidLazyQuery`](readme.md#usegetfollowerslistbydidlazyquery)\>
+> **GetFollowersListByDidLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetFollowersListByDidLazyQuery`](index.md#usegetfollowerslistbydidlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2643](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2643)
+Defined in: [libs/hooks/src/generated/apollo.ts:2643](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2643)
 
 ***
 
 ### GetFollowersListByDidQueryHookResult
 
-> **GetFollowersListByDidQueryHookResult**: `ReturnType`\<*typeof* [`useGetFollowersListByDidQuery`](readme.md#usegetfollowerslistbydidquery)\>
+> **GetFollowersListByDidQueryHookResult**: `ReturnType`\<*typeof* [`useGetFollowersListByDidQuery`](index.md#usegetfollowerslistbydidquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2642](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2642)
+Defined in: [libs/hooks/src/generated/apollo.ts:2642](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2642)
 
 ***
 
@@ -5769,39 +5246,31 @@ Get the singleton instance of the user store
 
 > **GetFollowersListByDidQueryResult**: `Apollo.QueryResult`\<`Types.GetFollowersListByDidQuery`, `Types.GetFollowersListByDidQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2645](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2645)
+Defined in: [libs/hooks/src/generated/apollo.ts:2645](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2645)
 
 ***
 
 ### GetFollowersListByDidSuspenseQueryHookResult
 
-> **GetFollowersListByDidSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetFollowersListByDidSuspenseQuery`](readme.md#usegetfollowerslistbydidsuspensequery)\>
+> **GetFollowersListByDidSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetFollowersListByDidSuspenseQuery`](index.md#usegetfollowerslistbydidsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2644](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2644)
+Defined in: [libs/hooks/src/generated/apollo.ts:2644](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2644)
 
 ***
 
 ### GetFollowingListByDidLazyQueryHookResult
 
-> **GetFollowingListByDidLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetFollowingListByDidLazyQuery`](readme.md#usegetfollowinglistbydidlazyquery)\>
+> **GetFollowingListByDidLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetFollowingListByDidLazyQuery`](index.md#usegetfollowinglistbydidlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2563](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2563)
+Defined in: [libs/hooks/src/generated/apollo.ts:2563](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2563)
 
 ***
 
 ### GetFollowingListByDidQueryHookResult
 
-> **GetFollowingListByDidQueryHookResult**: `ReturnType`\<*typeof* [`useGetFollowingListByDidQuery`](readme.md#usegetfollowinglistbydidquery)\>
+> **GetFollowingListByDidQueryHookResult**: `ReturnType`\<*typeof* [`useGetFollowingListByDidQuery`](index.md#usegetfollowinglistbydidquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2562](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2562)
+Defined in: [libs/hooks/src/generated/apollo.ts:2562](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2562)
 
 ***
 
@@ -5809,39 +5278,31 @@ Get the singleton instance of the user store
 
 > **GetFollowingListByDidQueryResult**: `Apollo.QueryResult`\<`Types.GetFollowingListByDidQuery`, `Types.GetFollowingListByDidQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2565](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2565)
+Defined in: [libs/hooks/src/generated/apollo.ts:2565](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2565)
 
 ***
 
 ### GetFollowingListByDidSuspenseQueryHookResult
 
-> **GetFollowingListByDidSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetFollowingListByDidSuspenseQuery`](readme.md#usegetfollowinglistbydidsuspensequery)\>
+> **GetFollowingListByDidSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetFollowingListByDidSuspenseQuery`](index.md#usegetfollowinglistbydidsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2564](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2564)
+Defined in: [libs/hooks/src/generated/apollo.ts:2564](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2564)
 
 ***
 
 ### GetIndexedStreamCountLazyQueryHookResult
 
-> **GetIndexedStreamCountLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetIndexedStreamCountLazyQuery`](readme.md#usegetindexedstreamcountlazyquery)\>
+> **GetIndexedStreamCountLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetIndexedStreamCountLazyQuery`](index.md#usegetindexedstreamcountlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1206](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1206)
+Defined in: [libs/hooks/src/generated/apollo.ts:1206](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1206)
 
 ***
 
 ### GetIndexedStreamCountQueryHookResult
 
-> **GetIndexedStreamCountQueryHookResult**: `ReturnType`\<*typeof* [`useGetIndexedStreamCountQuery`](readme.md#usegetindexedstreamcountquery)\>
+> **GetIndexedStreamCountQueryHookResult**: `ReturnType`\<*typeof* [`useGetIndexedStreamCountQuery`](index.md#usegetindexedstreamcountquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1205](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1205)
+Defined in: [libs/hooks/src/generated/apollo.ts:1205](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1205)
 
 ***
 
@@ -5849,39 +5310,31 @@ Get the singleton instance of the user store
 
 > **GetIndexedStreamCountQueryResult**: `Apollo.QueryResult`\<`Types.GetIndexedStreamCountQuery`, `Types.GetIndexedStreamCountQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1208](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1208)
+Defined in: [libs/hooks/src/generated/apollo.ts:1208](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1208)
 
 ***
 
 ### GetIndexedStreamCountSuspenseQueryHookResult
 
-> **GetIndexedStreamCountSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetIndexedStreamCountSuspenseQuery`](readme.md#usegetindexedstreamcountsuspensequery)\>
+> **GetIndexedStreamCountSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetIndexedStreamCountSuspenseQuery`](index.md#usegetindexedstreamcountsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1207](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1207)
+Defined in: [libs/hooks/src/generated/apollo.ts:1207](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1207)
 
 ***
 
 ### GetIndexedStreamLazyQueryHookResult
 
-> **GetIndexedStreamLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetIndexedStreamLazyQuery`](readme.md#usegetindexedstreamlazyquery)\>
+> **GetIndexedStreamLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetIndexedStreamLazyQuery`](index.md#usegetindexedstreamlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1162](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1162)
+Defined in: [libs/hooks/src/generated/apollo.ts:1162](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1162)
 
 ***
 
 ### GetIndexedStreamQueryHookResult
 
-> **GetIndexedStreamQueryHookResult**: `ReturnType`\<*typeof* [`useGetIndexedStreamQuery`](readme.md#usegetindexedstreamquery)\>
+> **GetIndexedStreamQueryHookResult**: `ReturnType`\<*typeof* [`useGetIndexedStreamQuery`](index.md#usegetindexedstreamquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1161](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1161)
+Defined in: [libs/hooks/src/generated/apollo.ts:1161](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1161)
 
 ***
 
@@ -5889,39 +5342,31 @@ Get the singleton instance of the user store
 
 > **GetIndexedStreamQueryResult**: `Apollo.QueryResult`\<`Types.GetIndexedStreamQuery`, `Types.GetIndexedStreamQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1164](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1164)
+Defined in: [libs/hooks/src/generated/apollo.ts:1164](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1164)
 
 ***
 
 ### GetIndexedStreamSuspenseQueryHookResult
 
-> **GetIndexedStreamSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetIndexedStreamSuspenseQuery`](readme.md#usegetindexedstreamsuspensequery)\>
+> **GetIndexedStreamSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetIndexedStreamSuspenseQuery`](index.md#usegetindexedstreamsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1163](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1163)
+Defined in: [libs/hooks/src/generated/apollo.ts:1163](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1163)
 
 ***
 
 ### GetInterestsByDidLazyQueryHookResult
 
-> **GetInterestsByDidLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsByDidLazyQuery`](readme.md#usegetinterestsbydidlazyquery)\>
+> **GetInterestsByDidLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsByDidLazyQuery`](index.md#usegetinterestsbydidlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2438](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2438)
+Defined in: [libs/hooks/src/generated/apollo.ts:2438](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2438)
 
 ***
 
 ### GetInterestsByDidQueryHookResult
 
-> **GetInterestsByDidQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsByDidQuery`](readme.md#usegetinterestsbydidquery)\>
+> **GetInterestsByDidQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsByDidQuery`](index.md#usegetinterestsbydidquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2437](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2437)
+Defined in: [libs/hooks/src/generated/apollo.ts:2437](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2437)
 
 ***
 
@@ -5929,39 +5374,31 @@ Get the singleton instance of the user store
 
 > **GetInterestsByDidQueryResult**: `Apollo.QueryResult`\<`Types.GetInterestsByDidQuery`, `Types.GetInterestsByDidQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2440](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2440)
+Defined in: [libs/hooks/src/generated/apollo.ts:2440](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2440)
 
 ***
 
 ### GetInterestsByDidSuspenseQueryHookResult
 
-> **GetInterestsByDidSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsByDidSuspenseQuery`](readme.md#usegetinterestsbydidsuspensequery)\>
+> **GetInterestsByDidSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsByDidSuspenseQuery`](index.md#usegetinterestsbydidsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2439](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2439)
+Defined in: [libs/hooks/src/generated/apollo.ts:2439](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2439)
 
 ***
 
 ### GetInterestsByIdLazyQueryHookResult
 
-> **GetInterestsByIdLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsByIdLazyQuery`](readme.md#usegetinterestsbyidlazyquery)\>
+> **GetInterestsByIdLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsByIdLazyQuery`](index.md#usegetinterestsbyidlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2487](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2487)
+Defined in: [libs/hooks/src/generated/apollo.ts:2487](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2487)
 
 ***
 
 ### GetInterestsByIdQueryHookResult
 
-> **GetInterestsByIdQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsByIdQuery`](readme.md#usegetinterestsbyidquery)\>
+> **GetInterestsByIdQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsByIdQuery`](index.md#usegetinterestsbyidquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2486](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2486)
+Defined in: [libs/hooks/src/generated/apollo.ts:2486](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2486)
 
 ***
 
@@ -5969,39 +5406,31 @@ Get the singleton instance of the user store
 
 > **GetInterestsByIdQueryResult**: `Apollo.QueryResult`\<`Types.GetInterestsByIdQuery`, `Types.GetInterestsByIdQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2489](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2489)
+Defined in: [libs/hooks/src/generated/apollo.ts:2489](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2489)
 
 ***
 
 ### GetInterestsByIdSuspenseQueryHookResult
 
-> **GetInterestsByIdSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsByIdSuspenseQuery`](readme.md#usegetinterestsbyidsuspensequery)\>
+> **GetInterestsByIdSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsByIdSuspenseQuery`](index.md#usegetinterestsbyidsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2488](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2488)
+Defined in: [libs/hooks/src/generated/apollo.ts:2488](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2488)
 
 ***
 
 ### GetInterestsLazyQueryHookResult
 
-> **GetInterestsLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsLazyQuery`](readme.md#usegetinterestslazyquery)\>
+> **GetInterestsLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsLazyQuery`](index.md#usegetinterestslazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2314](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2314)
+Defined in: [libs/hooks/src/generated/apollo.ts:2314](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2314)
 
 ***
 
 ### GetInterestsQueryHookResult
 
-> **GetInterestsQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsQuery`](readme.md#usegetinterestsquery)\>
+> **GetInterestsQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsQuery`](index.md#usegetinterestsquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2313](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2313)
+Defined in: [libs/hooks/src/generated/apollo.ts:2313](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2313)
 
 ***
 
@@ -6009,29 +5438,23 @@ Get the singleton instance of the user store
 
 > **GetInterestsQueryResult**: `Apollo.QueryResult`\<`Types.GetInterestsQuery`, `Types.GetInterestsQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2316](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2316)
+Defined in: [libs/hooks/src/generated/apollo.ts:2316](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2316)
 
 ***
 
 ### GetInterestsStreamLazyQueryHookResult
 
-> **GetInterestsStreamLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsStreamLazyQuery`](readme.md#usegetinterestsstreamlazyquery)\>
+> **GetInterestsStreamLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsStreamLazyQuery`](index.md#usegetinterestsstreamlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2386](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2386)
+Defined in: [libs/hooks/src/generated/apollo.ts:2386](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2386)
 
 ***
 
 ### GetInterestsStreamQueryHookResult
 
-> **GetInterestsStreamQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsStreamQuery`](readme.md#usegetinterestsstreamquery)\>
+> **GetInterestsStreamQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsStreamQuery`](index.md#usegetinterestsstreamquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2385](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2385)
+Defined in: [libs/hooks/src/generated/apollo.ts:2385](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2385)
 
 ***
 
@@ -6039,49 +5462,39 @@ Get the singleton instance of the user store
 
 > **GetInterestsStreamQueryResult**: `Apollo.QueryResult`\<`Types.GetInterestsStreamQuery`, `Types.GetInterestsStreamQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2388](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2388)
+Defined in: [libs/hooks/src/generated/apollo.ts:2388](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2388)
 
 ***
 
 ### GetInterestsStreamSuspenseQueryHookResult
 
-> **GetInterestsStreamSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsStreamSuspenseQuery`](readme.md#usegetinterestsstreamsuspensequery)\>
+> **GetInterestsStreamSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsStreamSuspenseQuery`](index.md#usegetinterestsstreamsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2387](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2387)
+Defined in: [libs/hooks/src/generated/apollo.ts:2387](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2387)
 
 ***
 
 ### GetInterestsSuspenseQueryHookResult
 
-> **GetInterestsSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsSuspenseQuery`](readme.md#usegetinterestssuspensequery)\>
+> **GetInterestsSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetInterestsSuspenseQuery`](index.md#usegetinterestssuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2315](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2315)
+Defined in: [libs/hooks/src/generated/apollo.ts:2315](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2315)
 
 ***
 
 ### GetMyProfileLazyQueryHookResult
 
-> **GetMyProfileLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetMyProfileLazyQuery`](readme.md#usegetmyprofilelazyquery)\>
+> **GetMyProfileLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetMyProfileLazyQuery`](index.md#usegetmyprofilelazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1952](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1952)
+Defined in: [libs/hooks/src/generated/apollo.ts:1952](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1952)
 
 ***
 
 ### GetMyProfileQueryHookResult
 
-> **GetMyProfileQueryHookResult**: `ReturnType`\<*typeof* [`useGetMyProfileQuery`](readme.md#usegetmyprofilequery)\>
+> **GetMyProfileQueryHookResult**: `ReturnType`\<*typeof* [`useGetMyProfileQuery`](index.md#usegetmyprofilequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1951](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1951)
+Defined in: [libs/hooks/src/generated/apollo.ts:1951](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1951)
 
 ***
 
@@ -6089,39 +5502,31 @@ Get the singleton instance of the user store
 
 > **GetMyProfileQueryResult**: `Apollo.QueryResult`\<`Types.GetMyProfileQuery`, `Types.GetMyProfileQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1954](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1954)
+Defined in: [libs/hooks/src/generated/apollo.ts:1954](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1954)
 
 ***
 
 ### GetMyProfileSuspenseQueryHookResult
 
-> **GetMyProfileSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetMyProfileSuspenseQuery`](readme.md#usegetmyprofilesuspensequery)\>
+> **GetMyProfileSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetMyProfileSuspenseQuery`](index.md#usegetmyprofilesuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1953](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1953)
+Defined in: [libs/hooks/src/generated/apollo.ts:1953](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1953)
 
 ***
 
 ### GetProfileByDidLazyQueryHookResult
 
-> **GetProfileByDidLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileByDidLazyQuery`](readme.md#usegetprofilebydidlazyquery)\>
+> **GetProfileByDidLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileByDidLazyQuery`](index.md#usegetprofilebydidlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2113](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2113)
+Defined in: [libs/hooks/src/generated/apollo.ts:2113](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2113)
 
 ***
 
 ### GetProfileByDidQueryHookResult
 
-> **GetProfileByDidQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileByDidQuery`](readme.md#usegetprofilebydidquery)\>
+> **GetProfileByDidQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileByDidQuery`](index.md#usegetprofilebydidquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2112](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2112)
+Defined in: [libs/hooks/src/generated/apollo.ts:2112](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2112)
 
 ***
 
@@ -6129,39 +5534,31 @@ Get the singleton instance of the user store
 
 > **GetProfileByDidQueryResult**: `Apollo.QueryResult`\<`Types.GetProfileByDidQuery`, `Types.GetProfileByDidQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2115](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2115)
+Defined in: [libs/hooks/src/generated/apollo.ts:2115](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2115)
 
 ***
 
 ### GetProfileByDidSuspenseQueryHookResult
 
-> **GetProfileByDidSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileByDidSuspenseQuery`](readme.md#usegetprofilebydidsuspensequery)\>
+> **GetProfileByDidSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileByDidSuspenseQuery`](index.md#usegetprofilebydidsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2114](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2114)
+Defined in: [libs/hooks/src/generated/apollo.ts:2114](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2114)
 
 ***
 
 ### GetProfileByIdLazyQueryHookResult
 
-> **GetProfileByIdLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileByIdLazyQuery`](readme.md#usegetprofilebyidlazyquery)\>
+> **GetProfileByIdLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileByIdLazyQuery`](index.md#usegetprofilebyidlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2068](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2068)
+Defined in: [libs/hooks/src/generated/apollo.ts:2068](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2068)
 
 ***
 
 ### GetProfileByIdQueryHookResult
 
-> **GetProfileByIdQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileByIdQuery`](readme.md#usegetprofilebyidquery)\>
+> **GetProfileByIdQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileByIdQuery`](index.md#usegetprofilebyidquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2067](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2067)
+Defined in: [libs/hooks/src/generated/apollo.ts:2067](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2067)
 
 ***
 
@@ -6169,119 +5566,31 @@ Get the singleton instance of the user store
 
 > **GetProfileByIdQueryResult**: `Apollo.QueryResult`\<`Types.GetProfileByIdQuery`, `Types.GetProfileByIdQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2070](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2070)
+Defined in: [libs/hooks/src/generated/apollo.ts:2070](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2070)
 
 ***
 
 ### GetProfileByIdSuspenseQueryHookResult
 
-> **GetProfileByIdSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileByIdSuspenseQuery`](readme.md#usegetprofilebyidsuspensequery)\>
+> **GetProfileByIdSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileByIdSuspenseQuery`](index.md#usegetprofilebyidsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2069](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2069)
-
-***
-
-### GetProfileStatsByDidLazyQueryHookResult
-
-> **GetProfileStatsByDidLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileStatsByDidLazyQuery`](readme.md#usegetprofilestatsbydidlazyquery)\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2692](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2692)
-
-***
-
-### GetProfileStatsByDidQueryHookResult
-
-> **GetProfileStatsByDidQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileStatsByDidQuery`](readme.md#usegetprofilestatsbydidquery)\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2691](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2691)
-
-***
-
-### GetProfileStatsByDidQueryResult
-
-> **GetProfileStatsByDidQueryResult**: `Apollo.QueryResult`\<`Types.GetProfileStatsByDidQuery`, `Types.GetProfileStatsByDidQueryVariables`\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2694](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2694)
-
-***
-
-### GetProfileStatsByDidSuspenseQueryHookResult
-
-> **GetProfileStatsByDidSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileStatsByDidSuspenseQuery`](readme.md#usegetprofilestatsbydidsuspensequery)\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2693](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2693)
-
-***
-
-### GetProfileStreamLazyQueryHookResult
-
-> **GetProfileStreamLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileStreamLazyQuery`](readme.md#usegetprofilestreamlazyquery)\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2248](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2248)
-
-***
-
-### GetProfileStreamQueryHookResult
-
-> **GetProfileStreamQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileStreamQuery`](readme.md#usegetprofilestreamquery)\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2247](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2247)
-
-***
-
-### GetProfileStreamQueryResult
-
-> **GetProfileStreamQueryResult**: `Apollo.QueryResult`\<`Types.GetProfileStreamQuery`, `Types.GetProfileStreamQueryVariables`\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2250](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2250)
-
-***
-
-### GetProfileStreamSuspenseQueryHookResult
-
-> **GetProfileStreamSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileStreamSuspenseQuery`](readme.md#usegetprofilestreamsuspensequery)\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2249](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2249)
+Defined in: [libs/hooks/src/generated/apollo.ts:2069](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2069)
 
 ***
 
 ### GetProfilesLazyQueryHookResult
 
-> **GetProfilesLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfilesLazyQuery`](readme.md#usegetprofileslazyquery)\>
+> **GetProfilesLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfilesLazyQuery`](index.md#usegetprofileslazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2176](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2176)
+Defined in: [libs/hooks/src/generated/apollo.ts:2176](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2176)
 
 ***
 
 ### GetProfilesQueryHookResult
 
-> **GetProfilesQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfilesQuery`](readme.md#usegetprofilesquery)\>
+> **GetProfilesQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfilesQuery`](index.md#usegetprofilesquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2175](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2175)
+Defined in: [libs/hooks/src/generated/apollo.ts:2175](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2175)
 
 ***
 
@@ -6289,79 +5598,95 @@ Get the singleton instance of the user store
 
 > **GetProfilesQueryResult**: `Apollo.QueryResult`\<`Types.GetProfilesQuery`, `Types.GetProfilesQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2178](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2178)
+Defined in: [libs/hooks/src/generated/apollo.ts:2178](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2178)
 
 ***
 
 ### GetProfilesSuspenseQueryHookResult
 
-> **GetProfilesSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfilesSuspenseQuery`](readme.md#usegetprofilessuspensequery)\>
+> **GetProfilesSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfilesSuspenseQuery`](index.md#usegetprofilessuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2177](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2177)
+Defined in: [libs/hooks/src/generated/apollo.ts:2177](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2177)
 
 ***
 
-### GetReflectReflectionsLazyQueryHookResult
+### GetProfileStatsByDidLazyQueryHookResult
 
-> **GetReflectReflectionsLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectReflectionsLazyQuery`](readme.md#usegetreflectreflectionslazyquery)\>
+> **GetProfileStatsByDidLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileStatsByDidLazyQuery`](index.md#usegetprofilestatsbydidlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1633](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1633)
+Defined in: [libs/hooks/src/generated/apollo.ts:2692](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2692)
 
 ***
 
-### GetReflectReflectionsQueryHookResult
+### GetProfileStatsByDidQueryHookResult
 
-> **GetReflectReflectionsQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectReflectionsQuery`](readme.md#usegetreflectreflectionsquery)\>
+> **GetProfileStatsByDidQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileStatsByDidQuery`](index.md#usegetprofilestatsbydidquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1632](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1632)
+Defined in: [libs/hooks/src/generated/apollo.ts:2691](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2691)
 
 ***
 
-### GetReflectReflectionsQueryResult
+### GetProfileStatsByDidQueryResult
 
-> **GetReflectReflectionsQueryResult**: `Apollo.QueryResult`\<`Types.GetReflectReflectionsQuery`, `Types.GetReflectReflectionsQueryVariables`\>
+> **GetProfileStatsByDidQueryResult**: `Apollo.QueryResult`\<`Types.GetProfileStatsByDidQuery`, `Types.GetProfileStatsByDidQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1635](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1635)
+Defined in: [libs/hooks/src/generated/apollo.ts:2694](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2694)
 
 ***
 
-### GetReflectReflectionsSuspenseQueryHookResult
+### GetProfileStatsByDidSuspenseQueryHookResult
 
-> **GetReflectReflectionsSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectReflectionsSuspenseQuery`](readme.md#usegetreflectreflectionssuspensequery)\>
+> **GetProfileStatsByDidSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileStatsByDidSuspenseQuery`](index.md#usegetprofilestatsbydidsuspensequery)\>
 
-#### Source
+Defined in: [libs/hooks/src/generated/apollo.ts:2693](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2693)
 
-[libs/hooks/src/generated/apollo.ts:1634](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1634)
+***
+
+### GetProfileStreamLazyQueryHookResult
+
+> **GetProfileStreamLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileStreamLazyQuery`](index.md#usegetprofilestreamlazyquery)\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2248](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2248)
+
+***
+
+### GetProfileStreamQueryHookResult
+
+> **GetProfileStreamQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileStreamQuery`](index.md#usegetprofilestreamquery)\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2247](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2247)
+
+***
+
+### GetProfileStreamQueryResult
+
+> **GetProfileStreamQueryResult**: `Apollo.QueryResult`\<`Types.GetProfileStreamQuery`, `Types.GetProfileStreamQueryVariables`\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2250](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2250)
+
+***
+
+### GetProfileStreamSuspenseQueryHookResult
+
+> **GetProfileStreamSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetProfileStreamSuspenseQuery`](index.md#usegetprofilestreamsuspensequery)\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2249](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2249)
 
 ***
 
 ### GetReflectionByIdLazyQueryHookResult
 
-> **GetReflectionByIdLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionByIdLazyQuery`](readme.md#usegetreflectionbyidlazyquery)\>
+> **GetReflectionByIdLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionByIdLazyQuery`](index.md#usegetreflectionbyidlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1570](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1570)
+Defined in: [libs/hooks/src/generated/apollo.ts:1570](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1570)
 
 ***
 
 ### GetReflectionByIdQueryHookResult
 
-> **GetReflectionByIdQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionByIdQuery`](readme.md#usegetreflectionbyidquery)\>
+> **GetReflectionByIdQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionByIdQuery`](index.md#usegetreflectionbyidquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1569](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1569)
+Defined in: [libs/hooks/src/generated/apollo.ts:1569](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1569)
 
 ***
 
@@ -6369,79 +5694,31 @@ Get the singleton instance of the user store
 
 > **GetReflectionByIdQueryResult**: `Apollo.QueryResult`\<`Types.GetReflectionByIdQuery`, `Types.GetReflectionByIdQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1572](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1572)
+Defined in: [libs/hooks/src/generated/apollo.ts:1572](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1572)
 
 ***
 
 ### GetReflectionByIdSuspenseQueryHookResult
 
-> **GetReflectionByIdSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionByIdSuspenseQuery`](readme.md#usegetreflectionbyidsuspensequery)\>
+> **GetReflectionByIdSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionByIdSuspenseQuery`](index.md#usegetreflectionbyidsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1571](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1571)
-
-***
-
-### GetReflectionStreamLazyQueryHookResult
-
-> **GetReflectionStreamLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionStreamLazyQuery`](readme.md#usegetreflectionstreamlazyquery)\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1528](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1528)
-
-***
-
-### GetReflectionStreamQueryHookResult
-
-> **GetReflectionStreamQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionStreamQuery`](readme.md#usegetreflectionstreamquery)\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1527](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1527)
-
-***
-
-### GetReflectionStreamQueryResult
-
-> **GetReflectionStreamQueryResult**: `Apollo.QueryResult`\<`Types.GetReflectionStreamQuery`, `Types.GetReflectionStreamQueryVariables`\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1530](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1530)
-
-***
-
-### GetReflectionStreamSuspenseQueryHookResult
-
-> **GetReflectionStreamSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionStreamSuspenseQuery`](readme.md#usegetreflectionstreamsuspensequery)\>
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1529](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1529)
+Defined in: [libs/hooks/src/generated/apollo.ts:1571](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1571)
 
 ***
 
 ### GetReflectionsByAuthorDidLazyQueryHookResult
 
-> **GetReflectionsByAuthorDidLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionsByAuthorDidLazyQuery`](readme.md#usegetreflectionsbyauthordidlazyquery)\>
+> **GetReflectionsByAuthorDidLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionsByAuthorDidLazyQuery`](index.md#usegetreflectionsbyauthordidlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1452](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1452)
+Defined in: [libs/hooks/src/generated/apollo.ts:1452](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1452)
 
 ***
 
 ### GetReflectionsByAuthorDidQueryHookResult
 
-> **GetReflectionsByAuthorDidQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionsByAuthorDidQuery`](readme.md#usegetreflectionsbyauthordidquery)\>
+> **GetReflectionsByAuthorDidQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionsByAuthorDidQuery`](index.md#usegetreflectionsbyauthordidquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1451](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1451)
+Defined in: [libs/hooks/src/generated/apollo.ts:1451](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1451)
 
 ***
 
@@ -6449,39 +5726,31 @@ Get the singleton instance of the user store
 
 > **GetReflectionsByAuthorDidQueryResult**: `Apollo.QueryResult`\<`Types.GetReflectionsByAuthorDidQuery`, `Types.GetReflectionsByAuthorDidQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1454](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1454)
+Defined in: [libs/hooks/src/generated/apollo.ts:1454](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1454)
 
 ***
 
 ### GetReflectionsByAuthorDidSuspenseQueryHookResult
 
-> **GetReflectionsByAuthorDidSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionsByAuthorDidSuspenseQuery`](readme.md#usegetreflectionsbyauthordidsuspensequery)\>
+> **GetReflectionsByAuthorDidSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionsByAuthorDidSuspenseQuery`](index.md#usegetreflectionsbyauthordidsuspensequery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1453](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1453)
+Defined in: [libs/hooks/src/generated/apollo.ts:1453](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1453)
 
 ***
 
 ### GetReflectionsFromBeamLazyQueryHookResult
 
-> **GetReflectionsFromBeamLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionsFromBeamLazyQuery`](readme.md#usegetreflectionsfrombeamlazyquery)\>
+> **GetReflectionsFromBeamLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionsFromBeamLazyQuery`](index.md#usegetreflectionsfrombeamlazyquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1383](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1383)
+Defined in: [libs/hooks/src/generated/apollo.ts:1383](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1383)
 
 ***
 
 ### GetReflectionsFromBeamQueryHookResult
 
-> **GetReflectionsFromBeamQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionsFromBeamQuery`](readme.md#usegetreflectionsfrombeamquery)\>
+> **GetReflectionsFromBeamQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionsFromBeamQuery`](index.md#usegetreflectionsfrombeamquery)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1382](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1382)
+Defined in: [libs/hooks/src/generated/apollo.ts:1382](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1382)
 
 ***
 
@@ -6489,19 +5758,79 @@ Get the singleton instance of the user store
 
 > **GetReflectionsFromBeamQueryResult**: `Apollo.QueryResult`\<`Types.GetReflectionsFromBeamQuery`, `Types.GetReflectionsFromBeamQueryVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1385](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1385)
+Defined in: [libs/hooks/src/generated/apollo.ts:1385](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1385)
 
 ***
 
 ### GetReflectionsFromBeamSuspenseQueryHookResult
 
-> **GetReflectionsFromBeamSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionsFromBeamSuspenseQuery`](readme.md#usegetreflectionsfrombeamsuspensequery)\>
+> **GetReflectionsFromBeamSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionsFromBeamSuspenseQuery`](index.md#usegetreflectionsfrombeamsuspensequery)\>
 
-#### Source
+Defined in: [libs/hooks/src/generated/apollo.ts:1384](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1384)
 
-[libs/hooks/src/generated/apollo.ts:1384](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1384)
+***
+
+### GetReflectionStreamLazyQueryHookResult
+
+> **GetReflectionStreamLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionStreamLazyQuery`](index.md#usegetreflectionstreamlazyquery)\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1528](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1528)
+
+***
+
+### GetReflectionStreamQueryHookResult
+
+> **GetReflectionStreamQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionStreamQuery`](index.md#usegetreflectionstreamquery)\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1527](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1527)
+
+***
+
+### GetReflectionStreamQueryResult
+
+> **GetReflectionStreamQueryResult**: `Apollo.QueryResult`\<`Types.GetReflectionStreamQuery`, `Types.GetReflectionStreamQueryVariables`\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1530](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1530)
+
+***
+
+### GetReflectionStreamSuspenseQueryHookResult
+
+> **GetReflectionStreamSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectionStreamSuspenseQuery`](index.md#usegetreflectionstreamsuspensequery)\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1529](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1529)
+
+***
+
+### GetReflectReflectionsLazyQueryHookResult
+
+> **GetReflectReflectionsLazyQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectReflectionsLazyQuery`](index.md#usegetreflectreflectionslazyquery)\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1633](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1633)
+
+***
+
+### GetReflectReflectionsQueryHookResult
+
+> **GetReflectReflectionsQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectReflectionsQuery`](index.md#usegetreflectreflectionsquery)\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1632](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1632)
+
+***
+
+### GetReflectReflectionsQueryResult
+
+> **GetReflectReflectionsQueryResult**: `Apollo.QueryResult`\<`Types.GetReflectReflectionsQuery`, `Types.GetReflectReflectionsQueryVariables`\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1635](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1635)
+
+***
+
+### GetReflectReflectionsSuspenseQueryHookResult
+
+> **GetReflectReflectionsSuspenseQueryHookResult**: `ReturnType`\<*typeof* [`useGetReflectReflectionsSuspenseQuery`](index.md#usegetreflectreflectionssuspensequery)\>
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1634](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1634)
 
 ***
 
@@ -6509,19 +5838,15 @@ Get the singleton instance of the user store
 
 > **IndexBeamMutationFn**: `Apollo.MutationFunction`\<`Types.IndexBeamMutation`, `Types.IndexBeamMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:475](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L475)
+Defined in: [libs/hooks/src/generated/apollo.ts:475](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L475)
 
 ***
 
 ### IndexBeamMutationHookResult
 
-> **IndexBeamMutationHookResult**: `ReturnType`\<*typeof* [`useIndexBeamMutation`](readme.md#useindexbeammutation)\>
+> **IndexBeamMutationHookResult**: `ReturnType`\<*typeof* [`useIndexBeamMutation`](index.md#useindexbeammutation)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:499](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L499)
+Defined in: [libs/hooks/src/generated/apollo.ts:499](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L499)
 
 ***
 
@@ -6529,9 +5854,7 @@ Get the singleton instance of the user store
 
 > **IndexBeamMutationOptions**: `Apollo.BaseMutationOptions`\<`Types.IndexBeamMutation`, `Types.IndexBeamMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:501](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L501)
+Defined in: [libs/hooks/src/generated/apollo.ts:501](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L501)
 
 ***
 
@@ -6539,9 +5862,7 @@ Get the singleton instance of the user store
 
 > **IndexBeamMutationResult**: `Apollo.MutationResult`\<`Types.IndexBeamMutation`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:500](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L500)
+Defined in: [libs/hooks/src/generated/apollo.ts:500](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L500)
 
 ***
 
@@ -6549,19 +5870,15 @@ Get the singleton instance of the user store
 
 > **IndexContentBlockMutationFn**: `Apollo.MutationFunction`\<`Types.IndexContentBlockMutation`, `Types.IndexContentBlockMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:511](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L511)
+Defined in: [libs/hooks/src/generated/apollo.ts:511](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L511)
 
 ***
 
 ### IndexContentBlockMutationHookResult
 
-> **IndexContentBlockMutationHookResult**: `ReturnType`\<*typeof* [`useIndexContentBlockMutation`](readme.md#useindexcontentblockmutation)\>
+> **IndexContentBlockMutationHookResult**: `ReturnType`\<*typeof* [`useIndexContentBlockMutation`](index.md#useindexcontentblockmutation)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:535](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L535)
+Defined in: [libs/hooks/src/generated/apollo.ts:535](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L535)
 
 ***
 
@@ -6569,9 +5886,7 @@ Get the singleton instance of the user store
 
 > **IndexContentBlockMutationOptions**: `Apollo.BaseMutationOptions`\<`Types.IndexContentBlockMutation`, `Types.IndexContentBlockMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:537](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L537)
+Defined in: [libs/hooks/src/generated/apollo.ts:537](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L537)
 
 ***
 
@@ -6579,9 +5894,7 @@ Get the singleton instance of the user store
 
 > **IndexContentBlockMutationResult**: `Apollo.MutationResult`\<`Types.IndexContentBlockMutation`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:536](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L536)
+Defined in: [libs/hooks/src/generated/apollo.ts:536](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L536)
 
 ***
 
@@ -6589,19 +5902,15 @@ Get the singleton instance of the user store
 
 > **IndexProfileMutationFn**: `Apollo.MutationFunction`\<`Types.IndexProfileMutation`, `Types.IndexProfileMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1645](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1645)
+Defined in: [libs/hooks/src/generated/apollo.ts:1645](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1645)
 
 ***
 
 ### IndexProfileMutationHookResult
 
-> **IndexProfileMutationHookResult**: `ReturnType`\<*typeof* [`useIndexProfileMutation`](readme.md#useindexprofilemutation)\>
+> **IndexProfileMutationHookResult**: `ReturnType`\<*typeof* [`useIndexProfileMutation`](index.md#useindexprofilemutation)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1669](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1669)
+Defined in: [libs/hooks/src/generated/apollo.ts:1669](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1669)
 
 ***
 
@@ -6609,9 +5918,7 @@ Get the singleton instance of the user store
 
 > **IndexProfileMutationOptions**: `Apollo.BaseMutationOptions`\<`Types.IndexProfileMutation`, `Types.IndexProfileMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1671](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1671)
+Defined in: [libs/hooks/src/generated/apollo.ts:1671](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1671)
 
 ***
 
@@ -6619,9 +5926,7 @@ Get the singleton instance of the user store
 
 > **IndexProfileMutationResult**: `Apollo.MutationResult`\<`Types.IndexProfileMutation`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1670](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1670)
+Defined in: [libs/hooks/src/generated/apollo.ts:1670](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1670)
 
 ***
 
@@ -6629,19 +5934,15 @@ Get the singleton instance of the user store
 
 > **IndexReflectionMutationFn**: `Apollo.MutationFunction`\<`Types.IndexReflectionMutation`, `Types.IndexReflectionMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1218](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1218)
+Defined in: [libs/hooks/src/generated/apollo.ts:1218](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1218)
 
 ***
 
 ### IndexReflectionMutationHookResult
 
-> **IndexReflectionMutationHookResult**: `ReturnType`\<*typeof* [`useIndexReflectionMutation`](readme.md#useindexreflectionmutation)\>
+> **IndexReflectionMutationHookResult**: `ReturnType`\<*typeof* [`useIndexReflectionMutation`](index.md#useindexreflectionmutation)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1242](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1242)
+Defined in: [libs/hooks/src/generated/apollo.ts:1242](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1242)
 
 ***
 
@@ -6649,9 +5950,7 @@ Get the singleton instance of the user store
 
 > **IndexReflectionMutationOptions**: `Apollo.BaseMutationOptions`\<`Types.IndexReflectionMutation`, `Types.IndexReflectionMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1244](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1244)
+Defined in: [libs/hooks/src/generated/apollo.ts:1244](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1244)
 
 ***
 
@@ -6659,9 +5958,7 @@ Get the singleton instance of the user store
 
 > **IndexReflectionMutationResult**: `Apollo.MutationResult`\<`Types.IndexReflectionMutation`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1243](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1243)
+Defined in: [libs/hooks/src/generated/apollo.ts:1243](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1243)
 
 ***
 
@@ -6669,19 +5966,15 @@ Get the singleton instance of the user store
 
 > **SetAppReleaseMutationFn**: `Apollo.MutationFunction`\<`Types.SetAppReleaseMutation`, `Types.SetAppReleaseMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2707](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2707)
+Defined in: [libs/hooks/src/generated/apollo.ts:2707](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2707)
 
 ***
 
 ### SetAppReleaseMutationHookResult
 
-> **SetAppReleaseMutationHookResult**: `ReturnType`\<*typeof* [`useSetAppReleaseMutation`](readme.md#usesetappreleasemutation)\>
+> **SetAppReleaseMutationHookResult**: `ReturnType`\<*typeof* [`useSetAppReleaseMutation`](index.md#usesetappreleasemutation)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2730](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2730)
+Defined in: [libs/hooks/src/generated/apollo.ts:2730](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2730)
 
 ***
 
@@ -6689,9 +5982,7 @@ Get the singleton instance of the user store
 
 > **SetAppReleaseMutationOptions**: `Apollo.BaseMutationOptions`\<`Types.SetAppReleaseMutation`, `Types.SetAppReleaseMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2732](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2732)
+Defined in: [libs/hooks/src/generated/apollo.ts:2732](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2732)
 
 ***
 
@@ -6699,9 +5990,7 @@ Get the singleton instance of the user store
 
 > **SetAppReleaseMutationResult**: `Apollo.MutationResult`\<`Types.SetAppReleaseMutation`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2731](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2731)
+Defined in: [libs/hooks/src/generated/apollo.ts:2731](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2731)
 
 ***
 
@@ -6709,19 +5998,15 @@ Get the singleton instance of the user store
 
 > **UpdateAkashaReflectMutationFn**: `Apollo.MutationFunction`\<`Types.UpdateAkashaReflectMutation`, `Types.UpdateAkashaReflectMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1291](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1291)
+Defined in: [libs/hooks/src/generated/apollo.ts:1291](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1291)
 
 ***
 
 ### UpdateAkashaReflectMutationHookResult
 
-> **UpdateAkashaReflectMutationHookResult**: `ReturnType`\<*typeof* [`useUpdateAkashaReflectMutation`](readme.md#useupdateakashareflectmutation)\>
+> **UpdateAkashaReflectMutationHookResult**: `ReturnType`\<*typeof* [`useUpdateAkashaReflectMutation`](index.md#useupdateakashareflectmutation)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1314](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1314)
+Defined in: [libs/hooks/src/generated/apollo.ts:1314](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1314)
 
 ***
 
@@ -6729,9 +6014,7 @@ Get the singleton instance of the user store
 
 > **UpdateAkashaReflectMutationOptions**: `Apollo.BaseMutationOptions`\<`Types.UpdateAkashaReflectMutation`, `Types.UpdateAkashaReflectMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1316](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1316)
+Defined in: [libs/hooks/src/generated/apollo.ts:1316](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1316)
 
 ***
 
@@ -6739,9 +6022,7 @@ Get the singleton instance of the user store
 
 > **UpdateAkashaReflectMutationResult**: `Apollo.MutationResult`\<`Types.UpdateAkashaReflectMutation`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1315](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1315)
+Defined in: [libs/hooks/src/generated/apollo.ts:1315](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1315)
 
 ***
 
@@ -6749,19 +6030,15 @@ Get the singleton instance of the user store
 
 > **UpdateAppMutationFn**: `Apollo.MutationFunction`\<`Types.UpdateAppMutation`, `Types.UpdateAppMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2819](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2819)
+Defined in: [libs/hooks/src/generated/apollo.ts:2819](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2819)
 
 ***
 
 ### UpdateAppMutationHookResult
 
-> **UpdateAppMutationHookResult**: `ReturnType`\<*typeof* [`useUpdateAppMutation`](readme.md#useupdateappmutation)\>
+> **UpdateAppMutationHookResult**: `ReturnType`\<*typeof* [`useUpdateAppMutation`](index.md#useupdateappmutation)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2842](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2842)
+Defined in: [libs/hooks/src/generated/apollo.ts:2842](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2842)
 
 ***
 
@@ -6769,9 +6046,7 @@ Get the singleton instance of the user store
 
 > **UpdateAppMutationOptions**: `Apollo.BaseMutationOptions`\<`Types.UpdateAppMutation`, `Types.UpdateAppMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2844](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2844)
+Defined in: [libs/hooks/src/generated/apollo.ts:2844](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2844)
 
 ***
 
@@ -6779,9 +6054,7 @@ Get the singleton instance of the user store
 
 > **UpdateAppMutationResult**: `Apollo.MutationResult`\<`Types.UpdateAppMutation`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2843](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2843)
+Defined in: [libs/hooks/src/generated/apollo.ts:2843](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2843)
 
 ***
 
@@ -6789,19 +6062,15 @@ Get the singleton instance of the user store
 
 > **UpdateAppReleaseMutationFn**: `Apollo.MutationFunction`\<`Types.UpdateAppReleaseMutation`, `Types.UpdateAppReleaseMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2745](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2745)
+Defined in: [libs/hooks/src/generated/apollo.ts:2745](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2745)
 
 ***
 
 ### UpdateAppReleaseMutationHookResult
 
-> **UpdateAppReleaseMutationHookResult**: `ReturnType`\<*typeof* [`useUpdateAppReleaseMutation`](readme.md#useupdateappreleasemutation)\>
+> **UpdateAppReleaseMutationHookResult**: `ReturnType`\<*typeof* [`useUpdateAppReleaseMutation`](index.md#useupdateappreleasemutation)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2768](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2768)
+Defined in: [libs/hooks/src/generated/apollo.ts:2768](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2768)
 
 ***
 
@@ -6809,9 +6078,7 @@ Get the singleton instance of the user store
 
 > **UpdateAppReleaseMutationOptions**: `Apollo.BaseMutationOptions`\<`Types.UpdateAppReleaseMutation`, `Types.UpdateAppReleaseMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2770](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2770)
+Defined in: [libs/hooks/src/generated/apollo.ts:2770](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2770)
 
 ***
 
@@ -6819,9 +6086,7 @@ Get the singleton instance of the user store
 
 > **UpdateAppReleaseMutationResult**: `Apollo.MutationResult`\<`Types.UpdateAppReleaseMutation`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2769](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2769)
+Defined in: [libs/hooks/src/generated/apollo.ts:2769](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2769)
 
 ***
 
@@ -6829,19 +6094,15 @@ Get the singleton instance of the user store
 
 > **UpdateBeamMutationFn**: `Apollo.MutationFunction`\<`Types.UpdateBeamMutation`, `Types.UpdateBeamMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:584](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L584)
+Defined in: [libs/hooks/src/generated/apollo.ts:584](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L584)
 
 ***
 
 ### UpdateBeamMutationHookResult
 
-> **UpdateBeamMutationHookResult**: `ReturnType`\<*typeof* [`useUpdateBeamMutation`](readme.md#useupdatebeammutation)\>
+> **UpdateBeamMutationHookResult**: `ReturnType`\<*typeof* [`useUpdateBeamMutation`](index.md#useupdatebeammutation)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:607](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L607)
+Defined in: [libs/hooks/src/generated/apollo.ts:607](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L607)
 
 ***
 
@@ -6849,9 +6110,7 @@ Get the singleton instance of the user store
 
 > **UpdateBeamMutationOptions**: `Apollo.BaseMutationOptions`\<`Types.UpdateBeamMutation`, `Types.UpdateBeamMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:609](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L609)
+Defined in: [libs/hooks/src/generated/apollo.ts:609](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L609)
 
 ***
 
@@ -6859,9 +6118,7 @@ Get the singleton instance of the user store
 
 > **UpdateBeamMutationResult**: `Apollo.MutationResult`\<`Types.UpdateBeamMutation`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:608](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L608)
+Defined in: [libs/hooks/src/generated/apollo.ts:608](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L608)
 
 ***
 
@@ -6869,19 +6126,15 @@ Get the singleton instance of the user store
 
 > **UpdateContentBlockMutationFn**: `Apollo.MutationFunction`\<`Types.UpdateContentBlockMutation`, `Types.UpdateContentBlockMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:656](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L656)
+Defined in: [libs/hooks/src/generated/apollo.ts:656](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L656)
 
 ***
 
 ### UpdateContentBlockMutationHookResult
 
-> **UpdateContentBlockMutationHookResult**: `ReturnType`\<*typeof* [`useUpdateContentBlockMutation`](readme.md#useupdatecontentblockmutation)\>
+> **UpdateContentBlockMutationHookResult**: `ReturnType`\<*typeof* [`useUpdateContentBlockMutation`](index.md#useupdatecontentblockmutation)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:679](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L679)
+Defined in: [libs/hooks/src/generated/apollo.ts:679](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L679)
 
 ***
 
@@ -6889,9 +6142,7 @@ Get the singleton instance of the user store
 
 > **UpdateContentBlockMutationOptions**: `Apollo.BaseMutationOptions`\<`Types.UpdateContentBlockMutation`, `Types.UpdateContentBlockMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:681](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L681)
+Defined in: [libs/hooks/src/generated/apollo.ts:681](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L681)
 
 ***
 
@@ -6899,9 +6150,7 @@ Get the singleton instance of the user store
 
 > **UpdateContentBlockMutationResult**: `Apollo.MutationResult`\<`Types.UpdateContentBlockMutation`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:680](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L680)
+Defined in: [libs/hooks/src/generated/apollo.ts:680](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L680)
 
 ***
 
@@ -6909,19 +6158,15 @@ Get the singleton instance of the user store
 
 > **UpdateFollowMutationFn**: `Apollo.MutationFunction`\<`Types.UpdateFollowMutation`, `Types.UpdateFollowMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1888](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1888)
+Defined in: [libs/hooks/src/generated/apollo.ts:1888](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1888)
 
 ***
 
 ### UpdateFollowMutationHookResult
 
-> **UpdateFollowMutationHookResult**: `ReturnType`\<*typeof* [`useUpdateFollowMutation`](readme.md#useupdatefollowmutation)\>
+> **UpdateFollowMutationHookResult**: `ReturnType`\<*typeof* [`useUpdateFollowMutation`](index.md#useupdatefollowmutation)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1911](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1911)
+Defined in: [libs/hooks/src/generated/apollo.ts:1911](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1911)
 
 ***
 
@@ -6929,9 +6174,7 @@ Get the singleton instance of the user store
 
 > **UpdateFollowMutationOptions**: `Apollo.BaseMutationOptions`\<`Types.UpdateFollowMutation`, `Types.UpdateFollowMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1913](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1913)
+Defined in: [libs/hooks/src/generated/apollo.ts:1913](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1913)
 
 ***
 
@@ -6939,9 +6182,7 @@ Get the singleton instance of the user store
 
 > **UpdateFollowMutationResult**: `Apollo.MutationResult`\<`Types.UpdateFollowMutation`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1912](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1912)
+Defined in: [libs/hooks/src/generated/apollo.ts:1912](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1912)
 
 ***
 
@@ -6949,19 +6190,15 @@ Get the singleton instance of the user store
 
 > **UpdateInterestsMutationFn**: `Apollo.MutationFunction`\<`Types.UpdateInterestsMutation`, `Types.UpdateInterestsMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1804](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1804)
+Defined in: [libs/hooks/src/generated/apollo.ts:1804](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1804)
 
 ***
 
 ### UpdateInterestsMutationHookResult
 
-> **UpdateInterestsMutationHookResult**: `ReturnType`\<*typeof* [`useUpdateInterestsMutation`](readme.md#useupdateinterestsmutation)\>
+> **UpdateInterestsMutationHookResult**: `ReturnType`\<*typeof* [`useUpdateInterestsMutation`](index.md#useupdateinterestsmutation)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1827](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1827)
+Defined in: [libs/hooks/src/generated/apollo.ts:1827](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1827)
 
 ***
 
@@ -6969,9 +6206,7 @@ Get the singleton instance of the user store
 
 > **UpdateInterestsMutationOptions**: `Apollo.BaseMutationOptions`\<`Types.UpdateInterestsMutation`, `Types.UpdateInterestsMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1829](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1829)
+Defined in: [libs/hooks/src/generated/apollo.ts:1829](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1829)
 
 ***
 
@@ -6979,9 +6214,7 @@ Get the singleton instance of the user store
 
 > **UpdateInterestsMutationResult**: `Apollo.MutationResult`\<`Types.UpdateInterestsMutation`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1828](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1828)
+Defined in: [libs/hooks/src/generated/apollo.ts:1828](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1828)
 
 ***
 
@@ -6989,19 +6222,15 @@ Get the singleton instance of the user store
 
 > **UpdateProfileMutationFn**: `Apollo.MutationFunction`\<`Types.UpdateProfileMutation`, `Types.UpdateProfileMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1718](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1718)
+Defined in: [libs/hooks/src/generated/apollo.ts:1718](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1718)
 
 ***
 
 ### UpdateProfileMutationHookResult
 
-> **UpdateProfileMutationHookResult**: `ReturnType`\<*typeof* [`useUpdateProfileMutation`](readme.md#useupdateprofilemutation)\>
+> **UpdateProfileMutationHookResult**: `ReturnType`\<*typeof* [`useUpdateProfileMutation`](index.md#useupdateprofilemutation)\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1741](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1741)
+Defined in: [libs/hooks/src/generated/apollo.ts:1741](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1741)
 
 ***
 
@@ -7009,9 +6238,7 @@ Get the singleton instance of the user store
 
 > **UpdateProfileMutationOptions**: `Apollo.BaseMutationOptions`\<`Types.UpdateProfileMutation`, `Types.UpdateProfileMutationVariables`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1743](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1743)
+Defined in: [libs/hooks/src/generated/apollo.ts:1743](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1743)
 
 ***
 
@@ -7019,9 +6246,7 @@ Get the singleton instance of the user store
 
 > **UpdateProfileMutationResult**: `Apollo.MutationResult`\<`Types.UpdateProfileMutation`\>
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1742](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1742)
+Defined in: [libs/hooks/src/generated/apollo.ts:1742](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1742)
 
 ## Variables
 
@@ -7029,9 +6254,7 @@ Get the singleton instance of the user store
 
 > `const` **AkashaAppFragmentDoc**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:401](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L401)
+Defined in: [libs/hooks/src/generated/apollo.ts:401](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L401)
 
 ***
 
@@ -7039,9 +6262,7 @@ Get the singleton instance of the user store
 
 > `const` **AkashaAppFragmentMFragmentDoc**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:303](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L303)
+Defined in: [libs/hooks/src/generated/apollo.ts:303](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L303)
 
 ***
 
@@ -7049,9 +6270,7 @@ Get the singleton instance of the user store
 
 > `const` **AppReleaseFragmentDoc**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:454](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L454)
+Defined in: [libs/hooks/src/generated/apollo.ts:454](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L454)
 
 ***
 
@@ -7059,9 +6278,7 @@ Get the singleton instance of the user store
 
 > `const` **AppReleaseFragmentMFragmentDoc**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:340](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L340)
+Defined in: [libs/hooks/src/generated/apollo.ts:340](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L340)
 
 ***
 
@@ -7069,9 +6286,7 @@ Get the singleton instance of the user store
 
 > `const` **BeamFragmentDoc**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:83](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L83)
+Defined in: [libs/hooks/src/generated/apollo.ts:83](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L83)
 
 ***
 
@@ -7079,9 +6294,7 @@ Get the singleton instance of the user store
 
 > `const` **BeamFragmentMFragmentDoc**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:16](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L16)
+Defined in: [libs/hooks/src/generated/apollo.ts:16](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L16)
 
 ***
 
@@ -7089,21 +6302,7 @@ Get the singleton instance of the user store
 
 > `const` **BlockStorageFragmentDoc**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:153](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L153)
-
-***
-
-### COOKIE\_CONSENT\_NAME
-
-`Internal`
-
-> `const` **COOKIE\_CONSENT\_NAME**: `"ewa-cookie-consent"` = `'ewa-cookie-consent'`
-
-#### Source
-
-[libs/hooks/src/use-analytics.tsx:12](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-analytics.tsx#L12)
+Defined in: [libs/hooks/src/generated/apollo.ts:153](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L153)
 
 ***
 
@@ -7111,9 +6310,7 @@ Get the singleton instance of the user store
 
 > `const` **ContentBlockFragmentDoc**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:123](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L123)
+Defined in: [libs/hooks/src/generated/apollo.ts:123](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L123)
 
 ***
 
@@ -7121,9 +6318,17 @@ Get the singleton instance of the user store
 
 > `const` **ContentBlockFragmentMFragmentDoc**: `DocumentNode`
 
-#### Source
+Defined in: [libs/hooks/src/generated/apollo.ts:53](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L53)
 
-[libs/hooks/src/generated/apollo.ts:53](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L53)
+***
+
+### COOKIE\_CONSENT\_NAME
+
+> `const` **COOKIE\_CONSENT\_NAME**: `"ewa-cookie-consent"` = `'ewa-cookie-consent'`
+
+Defined in: [libs/hooks/src/use-analytics.tsx:12](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/use-analytics.tsx#L12)
+
+**`Internal`**
 
 ***
 
@@ -7131,9 +6336,7 @@ Get the singleton instance of the user store
 
 > `const` **CreateAppDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2771](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2771)
+Defined in: [libs/hooks/src/generated/apollo.ts:2771](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2771)
 
 ***
 
@@ -7141,9 +6344,7 @@ Get the singleton instance of the user store
 
 > `const` **CreateBeamDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:538](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L538)
+Defined in: [libs/hooks/src/generated/apollo.ts:538](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L538)
 
 ***
 
@@ -7151,9 +6352,7 @@ Get the singleton instance of the user store
 
 > `const` **CreateContentBlockDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:610](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L610)
+Defined in: [libs/hooks/src/generated/apollo.ts:610](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L610)
 
 ***
 
@@ -7161,9 +6360,7 @@ Get the singleton instance of the user store
 
 > `const` **CreateFollowDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1830](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1830)
+Defined in: [libs/hooks/src/generated/apollo.ts:1830](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1830)
 
 ***
 
@@ -7171,9 +6368,7 @@ Get the singleton instance of the user store
 
 > `const` **CreateInterestsDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1744](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1744)
+Defined in: [libs/hooks/src/generated/apollo.ts:1744](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1744)
 
 ***
 
@@ -7181,9 +6376,7 @@ Get the singleton instance of the user store
 
 > `const` **CreateProfileDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1672](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1672)
+Defined in: [libs/hooks/src/generated/apollo.ts:1672](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1672)
 
 ***
 
@@ -7191,9 +6384,7 @@ Get the singleton instance of the user store
 
 > `const` **CreateReflectDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1245](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1245)
+Defined in: [libs/hooks/src/generated/apollo.ts:1245](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1245)
 
 ***
 
@@ -7201,9 +6392,7 @@ Get the singleton instance of the user store
 
 > `const` **GetAppReleaseByIdDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3228](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3228)
+Defined in: [libs/hooks/src/generated/apollo.ts:3228](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3228)
 
 ***
 
@@ -7211,9 +6400,7 @@ Get the singleton instance of the user store
 
 > `const` **GetAppsByIdDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2981](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2981)
+Defined in: [libs/hooks/src/generated/apollo.ts:2981](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2981)
 
 ***
 
@@ -7221,9 +6408,7 @@ Get the singleton instance of the user store
 
 > `const` **GetAppsByPublisherDidDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3024](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3024)
+Defined in: [libs/hooks/src/generated/apollo.ts:3024](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3024)
 
 ***
 
@@ -7231,9 +6416,7 @@ Get the singleton instance of the user store
 
 > `const` **GetAppsDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2845](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2845)
+Defined in: [libs/hooks/src/generated/apollo.ts:2845](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2845)
 
 ***
 
@@ -7241,9 +6424,7 @@ Get the singleton instance of the user store
 
 > `const` **GetAppsReleasesByPublisherDidDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3093](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3093)
+Defined in: [libs/hooks/src/generated/apollo.ts:3093](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3093)
 
 ***
 
@@ -7251,9 +6432,7 @@ Get the singleton instance of the user store
 
 > `const` **GetAppsReleasesDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:3163](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3163)
+Defined in: [libs/hooks/src/generated/apollo.ts:3163](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L3163)
 
 ***
 
@@ -7261,9 +6440,7 @@ Get the singleton instance of the user store
 
 > `const` **GetAppsStreamDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2909](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2909)
+Defined in: [libs/hooks/src/generated/apollo.ts:2909](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2909)
 
 ***
 
@@ -7271,19 +6448,7 @@ Get the singleton instance of the user store
 
 > `const` **GetBeamByIdDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:888](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L888)
-
-***
-
-### GetBeamStreamDocument
-
-> `const` **GetBeamStreamDocument**: `DocumentNode`
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:682](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L682)
+Defined in: [libs/hooks/src/generated/apollo.ts:888](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L888)
 
 ***
 
@@ -7291,9 +6456,7 @@ Get the singleton instance of the user store
 
 > `const` **GetBeamsByAuthorDidDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:818](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L818)
+Defined in: [libs/hooks/src/generated/apollo.ts:818](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L818)
 
 ***
 
@@ -7301,9 +6464,15 @@ Get the singleton instance of the user store
 
 > `const` **GetBeamsDocument**: `DocumentNode`
 
-#### Source
+Defined in: [libs/hooks/src/generated/apollo.ts:755](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L755)
 
-[libs/hooks/src/generated/apollo.ts:755](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L755)
+***
+
+### GetBeamStreamDocument
+
+> `const` **GetBeamStreamDocument**: `DocumentNode`
+
+Defined in: [libs/hooks/src/generated/apollo.ts:682](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L682)
 
 ***
 
@@ -7311,9 +6480,7 @@ Get the singleton instance of the user store
 
 > `const` **GetBlockStorageByIdDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1046](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1046)
+Defined in: [libs/hooks/src/generated/apollo.ts:1046](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1046)
 
 ***
 
@@ -7321,9 +6488,7 @@ Get the singleton instance of the user store
 
 > `const` **GetContentBlockByIdDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1004](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1004)
+Defined in: [libs/hooks/src/generated/apollo.ts:1004](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1004)
 
 ***
 
@@ -7331,9 +6496,7 @@ Get the singleton instance of the user store
 
 > `const` **GetContentBlockStreamDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:930](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L930)
+Defined in: [libs/hooks/src/generated/apollo.ts:930](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L930)
 
 ***
 
@@ -7341,9 +6504,7 @@ Get the singleton instance of the user store
 
 > `const` **GetFollowDocumentsByDidDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1955](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1955)
+Defined in: [libs/hooks/src/generated/apollo.ts:1955](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1955)
 
 ***
 
@@ -7351,9 +6512,7 @@ Get the singleton instance of the user store
 
 > `const` **GetFollowersListByDidDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2566](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2566)
+Defined in: [libs/hooks/src/generated/apollo.ts:2566](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2566)
 
 ***
 
@@ -7361,9 +6520,7 @@ Get the singleton instance of the user store
 
 > `const` **GetFollowingListByDidDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2490](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2490)
+Defined in: [libs/hooks/src/generated/apollo.ts:2490](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2490)
 
 ***
 
@@ -7371,9 +6528,7 @@ Get the singleton instance of the user store
 
 > `const` **GetIndexedStreamCountDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1165](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1165)
+Defined in: [libs/hooks/src/generated/apollo.ts:1165](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1165)
 
 ***
 
@@ -7381,9 +6536,7 @@ Get the singleton instance of the user store
 
 > `const` **GetIndexedStreamDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1088](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1088)
+Defined in: [libs/hooks/src/generated/apollo.ts:1088](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1088)
 
 ***
 
@@ -7391,9 +6544,7 @@ Get the singleton instance of the user store
 
 > `const` **GetInterestsByDidDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2389](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2389)
+Defined in: [libs/hooks/src/generated/apollo.ts:2389](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2389)
 
 ***
 
@@ -7401,9 +6552,7 @@ Get the singleton instance of the user store
 
 > `const` **GetInterestsByIdDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2441](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2441)
+Defined in: [libs/hooks/src/generated/apollo.ts:2441](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2441)
 
 ***
 
@@ -7411,9 +6560,7 @@ Get the singleton instance of the user store
 
 > `const` **GetInterestsDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2251](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2251)
+Defined in: [libs/hooks/src/generated/apollo.ts:2251](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2251)
 
 ***
 
@@ -7421,9 +6568,7 @@ Get the singleton instance of the user store
 
 > `const` **GetInterestsStreamDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2317](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2317)
+Defined in: [libs/hooks/src/generated/apollo.ts:2317](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2317)
 
 ***
 
@@ -7431,9 +6576,7 @@ Get the singleton instance of the user store
 
 > `const` **GetMyProfileDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1914](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1914)
+Defined in: [libs/hooks/src/generated/apollo.ts:1914](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1914)
 
 ***
 
@@ -7441,9 +6584,7 @@ Get the singleton instance of the user store
 
 > `const` **GetProfileByDidDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2071](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2071)
+Defined in: [libs/hooks/src/generated/apollo.ts:2071](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2071)
 
 ***
 
@@ -7451,29 +6592,7 @@ Get the singleton instance of the user store
 
 > `const` **GetProfileByIdDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2029](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2029)
-
-***
-
-### GetProfileStatsByDidDocument
-
-> `const` **GetProfileStatsByDidDocument**: `DocumentNode`
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2646](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2646)
-
-***
-
-### GetProfileStreamDocument
-
-> `const` **GetProfileStreamDocument**: `DocumentNode`
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2179](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2179)
+Defined in: [libs/hooks/src/generated/apollo.ts:2029](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2029)
 
 ***
 
@@ -7481,19 +6600,23 @@ Get the singleton instance of the user store
 
 > `const` **GetProfilesDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2116](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2116)
+Defined in: [libs/hooks/src/generated/apollo.ts:2116](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2116)
 
 ***
 
-### GetReflectReflectionsDocument
+### GetProfileStatsByDidDocument
 
-> `const` **GetReflectReflectionsDocument**: `DocumentNode`
+> `const` **GetProfileStatsByDidDocument**: `DocumentNode`
 
-#### Source
+Defined in: [libs/hooks/src/generated/apollo.ts:2646](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2646)
 
-[libs/hooks/src/generated/apollo.ts:1573](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1573)
+***
+
+### GetProfileStreamDocument
+
+> `const` **GetProfileStreamDocument**: `DocumentNode`
+
+Defined in: [libs/hooks/src/generated/apollo.ts:2179](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2179)
 
 ***
 
@@ -7501,19 +6624,7 @@ Get the singleton instance of the user store
 
 > `const` **GetReflectionByIdDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1531](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1531)
-
-***
-
-### GetReflectionStreamDocument
-
-> `const` **GetReflectionStreamDocument**: `DocumentNode`
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1455](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1455)
+Defined in: [libs/hooks/src/generated/apollo.ts:1531](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1531)
 
 ***
 
@@ -7521,9 +6632,7 @@ Get the singleton instance of the user store
 
 > `const` **GetReflectionsByAuthorDidDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1386](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1386)
+Defined in: [libs/hooks/src/generated/apollo.ts:1386](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1386)
 
 ***
 
@@ -7531,9 +6640,23 @@ Get the singleton instance of the user store
 
 > `const` **GetReflectionsFromBeamDocument**: `DocumentNode`
 
-#### Source
+Defined in: [libs/hooks/src/generated/apollo.ts:1317](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1317)
 
-[libs/hooks/src/generated/apollo.ts:1317](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1317)
+***
+
+### GetReflectionStreamDocument
+
+> `const` **GetReflectionStreamDocument**: `DocumentNode`
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1455](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1455)
+
+***
+
+### GetReflectReflectionsDocument
+
+> `const` **GetReflectReflectionsDocument**: `DocumentNode`
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1573](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1573)
 
 ***
 
@@ -7541,9 +6664,7 @@ Get the singleton instance of the user store
 
 > `const` **IndexBeamDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:466](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L466)
+Defined in: [libs/hooks/src/generated/apollo.ts:466](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L466)
 
 ***
 
@@ -7551,29 +6672,7 @@ Get the singleton instance of the user store
 
 > `const` **IndexContentBlockDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:502](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L502)
-
-***
-
-### IndexProfileDocument
-
-> `const` **IndexProfileDocument**: `DocumentNode`
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1636](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1636)
-
-***
-
-### IndexReflectionDocument
-
-> `const` **IndexReflectionDocument**: `DocumentNode`
-
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1209](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1209)
+Defined in: [libs/hooks/src/generated/apollo.ts:502](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L502)
 
 ***
 
@@ -7581,9 +6680,7 @@ Get the singleton instance of the user store
 
 > `const` **IndexedBeamFragmentDoc**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:6](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L6)
+Defined in: [libs/hooks/src/generated/apollo.ts:6](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L6)
 
 ***
 
@@ -7591,9 +6688,7 @@ Get the singleton instance of the user store
 
 > `const` **IndexedContentBlockFragmentDoc**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:11](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L11)
+Defined in: [libs/hooks/src/generated/apollo.ts:11](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L11)
 
 ***
 
@@ -7601,9 +6696,7 @@ Get the singleton instance of the user store
 
 > `const` **IndexedProfileFragmentDoc**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:249](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L249)
+Defined in: [libs/hooks/src/generated/apollo.ts:249](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L249)
 
 ***
 
@@ -7611,9 +6704,23 @@ Get the singleton instance of the user store
 
 > `const` **IndexedReflectFragmentDoc**: `DocumentNode`
 
-#### Source
+Defined in: [libs/hooks/src/generated/apollo.ts:190](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L190)
 
-[libs/hooks/src/generated/apollo.ts:190](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L190)
+***
+
+### IndexProfileDocument
+
+> `const` **IndexProfileDocument**: `DocumentNode`
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1636](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1636)
+
+***
+
+### IndexReflectionDocument
+
+> `const` **IndexReflectionDocument**: `DocumentNode`
+
+Defined in: [libs/hooks/src/generated/apollo.ts:1209](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1209)
 
 ***
 
@@ -7621,9 +6728,7 @@ Get the singleton instance of the user store
 
 > `const` **ReflectFragmentDoc**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:222](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L222)
+Defined in: [libs/hooks/src/generated/apollo.ts:222](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L222)
 
 ***
 
@@ -7631,9 +6736,7 @@ Get the singleton instance of the user store
 
 > `const` **ReflectFragmentMFragmentDoc**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:195](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L195)
+Defined in: [libs/hooks/src/generated/apollo.ts:195](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L195)
 
 ***
 
@@ -7641,9 +6744,7 @@ Get the singleton instance of the user store
 
 > `const` **SetAppReleaseDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2695](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2695)
+Defined in: [libs/hooks/src/generated/apollo.ts:2695](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2695)
 
 ***
 
@@ -7651,9 +6752,7 @@ Get the singleton instance of the user store
 
 > `const` **UpdateAkashaReflectDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1281](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1281)
+Defined in: [libs/hooks/src/generated/apollo.ts:1281](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1281)
 
 ***
 
@@ -7661,9 +6760,7 @@ Get the singleton instance of the user store
 
 > `const` **UpdateAppDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2808](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2808)
+Defined in: [libs/hooks/src/generated/apollo.ts:2808](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2808)
 
 ***
 
@@ -7671,9 +6768,7 @@ Get the singleton instance of the user store
 
 > `const` **UpdateAppReleaseDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:2733](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2733)
+Defined in: [libs/hooks/src/generated/apollo.ts:2733](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L2733)
 
 ***
 
@@ -7681,9 +6776,7 @@ Get the singleton instance of the user store
 
 > `const` **UpdateBeamDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:574](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L574)
+Defined in: [libs/hooks/src/generated/apollo.ts:574](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L574)
 
 ***
 
@@ -7691,9 +6784,7 @@ Get the singleton instance of the user store
 
 > `const` **UpdateContentBlockDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:646](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L646)
+Defined in: [libs/hooks/src/generated/apollo.ts:646](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L646)
 
 ***
 
@@ -7701,9 +6792,7 @@ Get the singleton instance of the user store
 
 > `const` **UpdateFollowDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1872](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1872)
+Defined in: [libs/hooks/src/generated/apollo.ts:1872](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1872)
 
 ***
 
@@ -7711,9 +6800,7 @@ Get the singleton instance of the user store
 
 > `const` **UpdateInterestsDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1787](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1787)
+Defined in: [libs/hooks/src/generated/apollo.ts:1787](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1787)
 
 ***
 
@@ -7721,9 +6808,7 @@ Get the singleton instance of the user store
 
 > `const` **UpdateProfileDocument**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:1708](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1708)
+Defined in: [libs/hooks/src/generated/apollo.ts:1708](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L1708)
 
 ***
 
@@ -7731,9 +6816,7 @@ Get the singleton instance of the user store
 
 > `const` **UserProfileFragmentDoc**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:352](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L352)
+Defined in: [libs/hooks/src/generated/apollo.ts:352](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L352)
 
 ***
 
@@ -7741,6 +6824,4 @@ Get the singleton instance of the user store
 
 > `const` **UserProfileFragmentMFragmentDoc**: `DocumentNode`
 
-#### Source
-
-[libs/hooks/src/generated/apollo.ts:254](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L254)
+Defined in: [libs/hooks/src/generated/apollo.ts:254](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/hooks/src/generated/apollo.ts#L254)

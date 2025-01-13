@@ -3,7 +3,7 @@ sidebar_position: 55
 sidebar_label: App Loader
 ---
 
-# Loading Function
+# App Loader
 
 Please also read the overview of the [bootstrapping mounting and unmounting](./index.md#the-bootstrapping-mounting-and-unmounting-part) lifecycles.
 

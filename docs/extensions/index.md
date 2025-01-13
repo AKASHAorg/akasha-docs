@@ -3,7 +3,7 @@ sidebar_position: 5
 sidebar_label: Extensions
 ---
 
-# Extensions Overview
+# Overview
 
 The functionality of a world is split into multiple individual, semi-independent micro-apps ([micro-frontends](https://micro-frontends.org/)) that are developed by independent teams and submitted to the AKASHA Core's integration registry.
 
