@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-pagination_next: extensions/index
+sidebar_label: Setup
 ---
 
 # Development Quickstart

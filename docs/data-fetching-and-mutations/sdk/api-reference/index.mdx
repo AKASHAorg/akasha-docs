@@ -1,0 +1,105 @@
+# API Reference
+
+AKASHA SDK is a modular set of utilities and apis that can be used to build
+your own app.
+
+## Namespaces
+
+| Namespace | Description |
+| :------ | :------ |
+| [typings](Namespace.typings.mdx) | - |
+
+## Interfaces
+
+### SDK\_API
+
+#### Properties
+
+| Property | Type |
+| :------ | :------ |
+| `auth` | `AWF_Auth` |
+| `globalChannel` | `EventBus` |
+| `profile` | `AWF_Profile` |
+
+***
+
+### SDK\_Services
+
+#### Properties
+
+| Property | Type |
+| :------ | :------ |
+| `appSettings` | `AppSettings` |
+| `ceramic` | `default` |
+| `common` | `object` |
+| `common.ipfs` | `AWF_IpfsConnector` |
+| `common.misc` | `AWF_Misc` |
+| `common.web3` | `Web3Connector` |
+| `db` | `DB` |
+| `gql` | `Gql` |
+| `log` | `Logging` |
+| `settings` | `Settings` |
+| `stash` | `Stash` |
+
+## Type Aliases
+
+### AWF\_SDK
+
+> **AWF\_SDK**: `object`
+
+#### Type declaration
+
+| Member | Type |
+| :------ | :------ |
+| `api` | [`SDK_API`](index.mdx#sdk_api) |
+| `services` | [`SDK_Services`](index.mdx#sdk_services) |
+
+#### Source
+
+[sdk/src/index.ts:48](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/sdk/src/index.ts#L48)
+
+## Functions
+
+### getSDK()
+
+> **getSDK**(): [`AWF_SDK`](index.mdx#awf_sdk)
+
+Creates a new SDK instance or returns a previusly created one.
+
+#### Returns
+
+[`AWF_SDK`](index.mdx#awf_sdk)
+
+#### Example
+
+```ts
+import getSDK from '@akashaorg/awf-sdk';
+const sdk = getSDK();
+```
+
+#### Source
+
+[sdk/src/index.ts:65](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/sdk/src/index.ts#L65)
+
+***
+
+### init()
+
+> **init**(): [`AWF_SDK`](index.mdx#awf_sdk)
+
+Creates a new SDK instance.
+
+#### Returns
+
+[`AWF_SDK`](index.mdx#awf_sdk)
+
+#### Example
+
+```ts
+import {init} from '@akashaorg/awf-sdk';
+const sdk = init();
+```
+
+#### Source
+
+[sdk/src/index.ts:82](https://github.com/AKASHAorg/akasha-core/blob/accdc017e1e65c245b76ccd71c1f84921b51b3d5/libs/sdk/src/index.ts#L82)

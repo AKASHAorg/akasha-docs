@@ -1,7 +1,8 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 sidebar_label: Design System
 ---
+
 # Design System
 
 AKASHA Core's Design System is a library of UI components built with [Twind](https://twind.dev/), a tailwind-in-js solution. The components implement the visual design language of AKASHA, and can be customised with tailwind style directives through the `customStyle` property.

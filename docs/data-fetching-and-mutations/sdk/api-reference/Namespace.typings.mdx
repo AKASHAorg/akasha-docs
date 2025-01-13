@@ -1,0 +1,705 @@
+## Enumerations
+
+### APP\_EVENTS
+
+#### Enumeration Members
+
+| Enumeration Member | Value |
+| :------ | :------ |
+| `INFO_READY` | `"#integration#ReleaseInfoReady"` |
+| `REMOVED` | `"#integration#Removed"` |
+| `TOGGLE_STATUS` | `"#integration#ToggleStatus"` |
+| `UPDATE_CONFIG` | `"#integration#UpdateConfig"` |
+| `UPDATE_VERSION` | `"#integration#UpdateVersion"` |
+
+***
+
+### AUTH\_EVENTS
+
+#### Enumeration Members
+
+| Enumeration Member | Value |
+| :------ | :------ |
+| `CONNECT_ADDRESS` | `"#auth#connectAddress"` |
+| `CONNECT_ADDRESS_SUCCESS` | `"#auth#connectAddress#success"` |
+| `MARK_MSG_READ` | `"#auth#markMsgRead"` |
+| `NEW_MESSAGES` | `"#auth#hasNewMessages"` |
+| `NEW_NOTIFICATIONS` | `"#auth#hasNewNotifications"` |
+| `READY` | `"#auth#ready"` |
+| `SIGN_AUTH_MESSAGE` | `"#auth#signAuthMessage"` |
+| `SIGN_AUTH_MESSAGE_SUCCESS` | `"#auth#signAuthMessage#success"` |
+| `SIGN_COMPOSED_MESSAGE` | `"#auth#signComposedMessage"` |
+| `SIGN_COMPOSED_MESSAGE_SUCCESS` | `"#auth#signComposedMessage#success"` |
+| `SIGN_IN` | `"#auth#signIn"` |
+| `SIGN_OUT` | `"#auth#signOut"` |
+| `SIGN_TOKEN_MESSAGE` | `"#auth#signTokenMessage"` |
+| `SIGN_TOKEN_MESSAGE_SUCCESS` | `"#auth#signTokenMessage#success"` |
+| `WAIT_FOR_AUTH` | `"#auth#waitForAuth"` |
+
+***
+
+### COMMENTS\_EVENTS
+
+#### Enumeration Members
+
+| Enumeration Member | Value |
+| :------ | :------ |
+| `CREATE` | `"#comments#Create"` |
+| `EDIT` | `"#comments#Edit"` |
+| `REMOVE` | `"#comments#Remove"` |
+
+***
+
+### ENS\_EVENTS
+
+#### Enumeration Members
+
+| Enumeration Member | Value |
+| :------ | :------ |
+| `CLAIM` | `"#ens#Claim"` |
+| `REGISTER` | `"#ens#Register"` |
+
+***
+
+### ENTRY\_EVENTS
+
+#### Enumeration Members
+
+| Enumeration Member | Value |
+| :------ | :------ |
+| `CREATE` | `"#entries#Create"` |
+| `EDIT` | `"#entries#Edit"` |
+| `REMOVE` | `"#entries#Remove"` |
+
+***
+
+### EthProviders
+
+#### Enumeration Members
+
+| Enumeration Member | Value |
+| :------ | :------ |
+| `FallbackProvider` | `4` |
+| `None` | `1` |
+| `Torus` | `5` |
+| `WalletConnect` | `3` |
+| `Web3Injected` | `2` |
+
+***
+
+### GQL\_EVENTS
+
+#### Enumeration Members
+
+| Enumeration Member | Value |
+| :------ | :------ |
+| `MUTATION` | `"gql#mutation#event"` |
+
+***
+
+### INJECTED\_PROVIDERS
+
+#### Enumeration Members
+
+| Enumeration Member | Value |
+| :------ | :------ |
+| `CIPHER` | `"Cipher"` |
+| `COINBASE` | `"Coinbase"` |
+| `DAPPER` | `"Dapper"` |
+| `FALLBACK` | `"Web3"` |
+| `IM_TOKEN` | `"imToken"` |
+| `METAMASK` | `"MetaMask"` |
+| `NIFTY` | `"Nifty"` |
+| `NOT_DETECTED` | `"NotDetected"` |
+| `OPERA` | `"Opera"` |
+| `SAFE` | `"Safe"` |
+| `STATUS` | `"Status"` |
+| `TRUST` | `"Trust"` |
+
+***
+
+### LEGAL\_DOCS
+
+#### Enumeration Members
+
+| Enumeration Member | Value |
+| :------ | :------ |
+| `APP_GUIDE` | `"AppGuide"` |
+| `CODE_OF_CONDUCT` | `"CodeOfConduct"` |
+| `PRIVACY_POLICY` | `"PrivacyPolicy"` |
+| `TERMS_OF_SERVICE` | `"TermsOfService"` |
+| `TERMS_OF_USE` | `"TermsOfUse"` |
+
+***
+
+### PROFILE\_EVENTS
+
+#### Enumeration Members
+
+| Enumeration Member | Value |
+| :------ | :------ |
+| `ADD_PROVIDER` | `"#profile#AddProvider"` |
+| `DEFAULT_PROVIDER` | `"#profile#DefaultProvider"` |
+| `FOLLOW` | `"#profile#Follow"` |
+| `REGISTER_USERNAME` | `"#profile#RegisterUsername"` |
+| `TAG_SUBSCRIPTION` | `"#profile#TagSubscription"` |
+| `UNFOLLOW` | `"#profile#UnFollow"` |
+
+***
+
+### PROVIDER\_ERROR\_CODES
+
+#### Enumeration Members
+
+| Enumeration Member | Value |
+| :------ | :------ |
+| `RequestTimeout` | `4003` |
+| `UserRejected` | `4001` |
+| `WrongNetwork` | `4002` |
+
+***
+
+### PostType
+
+#### Enumeration Members
+
+| Enumeration Member | Value |
+| :------ | :------ |
+| `APP` | `2` |
+| `ARTICLE` | `1` |
+| `DEFAULT` | `0` |
+
+***
+
+### TAG\_EVENTS
+
+#### Enumeration Members
+
+| Enumeration Member | Value |
+| :------ | :------ |
+| `CREATE` | `"#tags#Create"` |
+
+***
+
+### WEB3\_EVENTS
+
+#### Enumeration Members
+
+| Enumeration Member | Value |
+| :------ | :------ |
+| `ACCOUNT_CHANGED` | `"#web3#accountChanged"` |
+| `CHAIN_CHANGED` | `"#web3#chainChanged"` |
+| `CONNECTED` | `"#web3#connected"` |
+| `DISCONNECTED` | `"#web3#disconnected"` |
+| `WC_MODAL_CLOSED` | `"#web3#modalClosed"` |
+
+## Interfaces
+
+### IDBService\<DB, Collection\>
+
+#### Type parameters
+
+| Type parameter |
+| :------ |
+| `DB` |
+| `Collection` |
+
+#### Methods
+
+##### getCollection()
+
+> **getCollection**(`name`): [`ServiceCallResult`](Namespace.typings.mdx#servicecallresultt)\<`Collection`\>
+
+###### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `name` | `string` |
+
+###### Returns
+
+[`ServiceCallResult`](Namespace.typings.mdx#servicecallresultt)\<`Collection`\>
+
+###### Source
+
+typings/lib/sdk/db.d.ts:5
+
+***
+
+##### getDb()
+
+> **getDb**(): [`ServiceCallResult`](Namespace.typings.mdx#servicecallresultt)\<`DB`\>
+
+###### Returns
+
+[`ServiceCallResult`](Namespace.typings.mdx#servicecallresultt)\<`DB`\>
+
+###### Source
+
+typings/lib/sdk/db.d.ts:4
+
+***
+
+##### open()
+
+> **open**(`version`): [`ServiceCallResult`](Namespace.typings.mdx#servicecallresultt)\<`DB`\>
+
+###### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `version` | `number` |
+
+###### Returns
+
+[`ServiceCallResult`](Namespace.typings.mdx#servicecallresultt)\<`DB`\>
+
+###### Source
+
+typings/lib/sdk/db.d.ts:3
+
+***
+
+### IGqlClient\<T\>
+
+#### Type parameters
+
+| Type parameter |
+| :------ |
+| `T` |
+
+#### Methods
+
+##### getAPI()
+
+> **getAPI**(`withCache`): `T`
+
+###### Parameters
+
+| Parameter | Type |
+| :------ | :------ |
+| `withCache` | `boolean` |
+
+###### Returns
+
+`T`
+
+###### Source
+
+typings/lib/sdk/gql.d.ts:2
+
+***
+
+### LinkPreview\_Response
+
+#### Properties
+
+| Property | Type |
+| :------ | :------ |
+| `contentType` | `string` |
+| `description` | `string` |
+| `faviconPreviewHash?` | `string` |
+| `favicons` | [`string`] |
+| `imagePreviewHash?` | `string` |
+| `images` | [`string`] |
+| `mediaType` | `string` |
+| `siteName` | `string` |
+| `title` | `string` |
+| `url` | `string` |
+| `videos` | [[`VideoPreview_Response`](Namespace.typings.mdx#videopreview_response)] |
+
+***
+
+### VideoPreview\_Response
+
+#### Properties
+
+| Property | Type |
+| :------ | :------ |
+| `height` | `string` |
+| `secureUrl` | `string` |
+| `type` | `string` |
+| `url` | `string` |
+| `width` | `string` |
+
+## Type Aliases
+
+### AWF\_APP\_BUILD\_MANIFEST
+
+> **AWF\_APP\_BUILD\_MANIFEST**: `object`
+
+#### Type declaration
+
+| Member | Type |
+| :------ | :------ |
+| `links` | `z.infer`\<*typeof* [`IntegrationInfoLinksSchema`](Namespace.typings.mdx#integrationinfolinksschema)\> |
+| `sources` | `string`[] |
+
+#### Source
+
+typings/lib/sdk/registry.d.ts:22
+
+***
+
+### CurrentUser
+
+> **CurrentUser**: `z.infer`\<*typeof* [`CurrentUserSchema`](Namespace.typings.mdx#currentuserschema)\>
+
+#### Source
+
+typings/lib/sdk/common.d.ts:42
+
+***
+
+### DataProviderInput
+
+> **DataProviderInput**: `z.infer`\<*typeof* [`DataProviderInputSchema`](Namespace.typings.mdx#dataproviderinputschema)\>
+
+#### Source
+
+typings/lib/sdk/common.d.ts:26
+
+***
+
+### Ens
+
+> **Ens**: `z.infer`\<*typeof* [`EnsSchema`](Namespace.typings.mdx#ensschema)\>
+
+#### Source
+
+typings/lib/sdk/common.d.ts:44
+
+***
+
+### EthAddress
+
+> **EthAddress**: `z.infer`\<*typeof* [`EthAddressSchema`](Namespace.typings.mdx#ethaddressschema)\>
+
+#### Source
+
+typings/lib/sdk/common.d.ts:4
+
+***
+
+### GlobalEventBusData\<D\>
+
+> **GlobalEventBusData**\<`D`\>: `object`
+
+#### Type parameters
+
+| Type parameter | Value |
+| :------ | :------ |
+| `D` | `unknown` |
+
+#### Type declaration
+
+| Member | Type |
+| :------ | :------ |
+| `args` | `unknown` |
+| `data` | `D` |
+| `event` | [`AUTH_EVENTS`](Namespace.typings.mdx#auth_events) \| [`APP_EVENTS`](Namespace.typings.mdx#app_events) \| [`COMMENTS_EVENTS`](Namespace.typings.mdx#comments_events) \| [`ENS_EVENTS`](Namespace.typings.mdx#ens_events) \| [`ENTRY_EVENTS`](Namespace.typings.mdx#entry_events) \| [`PROFILE_EVENTS`](Namespace.typings.mdx#profile_events) \| [`TAG_EVENTS`](Namespace.typings.mdx#tag_events) \| [`WEB3_EVENTS`](Namespace.typings.mdx#web3_events) \| [`GQL_EVENTS`](Namespace.typings.mdx#gql_events) |
+
+#### Source
+
+typings/lib/sdk/common.d.ts:27
+
+***
+
+### IntegrationId
+
+> **IntegrationId**: `z.infer`\<*typeof* [`IntegrationIdSchema`](Namespace.typings.mdx#integrationidschema)\>
+
+#### Source
+
+typings/lib/sdk/registry.d.ts:3
+
+***
+
+### IntegrationName
+
+> **IntegrationName**: `z.infer`\<*typeof* [`IntegrationNameSchema`](Namespace.typings.mdx#integrationnameschema)\>
+
+#### Source
+
+typings/lib/sdk/registry.d.ts:7
+
+***
+
+### IntegrationReleaseId
+
+> **IntegrationReleaseId**: `z.infer`\<*typeof* [`IntegrationReleaseIdSchema`](Namespace.typings.mdx#integrationreleaseidschema)\>
+
+#### Source
+
+typings/lib/sdk/registry.d.ts:5
+
+***
+
+### InviteCode
+
+> **InviteCode**: `z.infer`\<*typeof* [`InviteCodeSchema`](Namespace.typings.mdx#invitecodeschema)\>
+
+#### Source
+
+typings/lib/sdk/common.d.ts:12
+
+***
+
+### PubKey
+
+> **PubKey**: `z.infer`\<*typeof* [`PubKeySchema`](Namespace.typings.mdx#pubkeyschema)\>
+
+#### Source
+
+typings/lib/sdk/common.d.ts:8
+
+***
+
+### ServiceCallResult\<T\>
+
+> **ServiceCallResult**\<`T`\>: `Observable`\<`object`\>
+
+#### Type declaration
+
+| Member | Type |
+| :------ | :------ |
+| `data` | `T` |
+
+#### Type parameters
+
+| Type parameter |
+| :------ |
+| `T` |
+
+#### Source
+
+typings/lib/sdk/responses.d.ts:2
+
+***
+
+### TagName
+
+> **TagName**: `z.infer`\<*typeof* [`TagNameSchema`](Namespace.typings.mdx#tagnameschema)\>
+
+#### Source
+
+typings/lib/sdk/common.d.ts:6
+
+***
+
+### Username
+
+> **Username**: `z.infer`\<*typeof* [`UsernameSchema`](Namespace.typings.mdx#usernameschema)\>
+
+#### Source
+
+typings/lib/sdk/common.d.ts:10
+
+## Variables
+
+### CurrentUserSchema
+
+> `const` **CurrentUserSchema**: `z.ZodObject`\<`object`, `"strip"`, `z.ZodTypeAny`, `object`, `object`\>
+
+#### Type declaration
+
+| Member | Type |
+| :------ | :------ |
+| `ethAddress` | `z.ZodOptional`\<`z.ZodString`\> |
+| `id` | `z.ZodString` |
+
+#### Source
+
+typings/lib/sdk/common.d.ts:32
+
+***
+
+### DataProviderInputSchema
+
+> `const` **DataProviderInputSchema**: `z.ZodObject`\<`object`, `"strip"`, `z.ZodTypeAny`, `object`, `object`\>
+
+#### Type declaration
+
+| Member | Type |
+| :------ | :------ |
+| `property` | `z.ZodString` |
+| `provider` | `z.ZodString` |
+| `value` | `z.ZodString` |
+
+#### Source
+
+typings/lib/sdk/common.d.ts:13
+
+***
+
+### EnsSchema
+
+> `const` **EnsSchema**: `z.ZodEffects`\<`z.ZodString`, `string`, `string`\>
+
+#### Source
+
+typings/lib/sdk/common.d.ts:43
+
+***
+
+### EthAddressSchema
+
+> `const` **EthAddressSchema**: `z.ZodString`
+
+#### Source
+
+typings/lib/sdk/common.d.ts:3
+
+***
+
+### EthProvidersSchema
+
+> `const` **EthProvidersSchema**: `z.ZodNativeEnum`\<*typeof* [`EthProviders`](Namespace.typings.mdx#ethproviders)\>
+
+#### Source
+
+typings/lib/sdk/web3.connector.d.ts:9
+
+***
+
+### IntegrationIdSchema
+
+> `const` **IntegrationIdSchema**: `z.ZodString`
+
+#### Source
+
+typings/lib/sdk/registry.d.ts:2
+
+***
+
+### IntegrationInfoLinksSchema
+
+> `const` **IntegrationInfoLinksSchema**: `z.ZodObject`\<`object`, `"strip"`, `z.ZodTypeAny`, `object`, `object`\>
+
+#### Type declaration
+
+| Member | Type |
+| :------ | :------ |
+| `detailedDescription` | `z.ZodOptional`\<`z.ZodString`\> |
+| `documentation` | `z.ZodOptional`\<`z.ZodString`\> |
+| `publicRepository` | `z.ZodOptional`\<`z.ZodString`\> |
+
+#### Source
+
+typings/lib/sdk/registry.d.ts:9
+
+***
+
+### IntegrationNameSchema
+
+> `const` **IntegrationNameSchema**: `z.ZodString`
+
+#### Source
+
+typings/lib/sdk/registry.d.ts:6
+
+***
+
+### IntegrationReleaseIdSchema
+
+> `const` **IntegrationReleaseIdSchema**: `z.ZodString`
+
+#### Source
+
+typings/lib/sdk/registry.d.ts:4
+
+***
+
+### IntegrationTypeSchema
+
+> `const` **IntegrationTypeSchema**: `z.ZodNumber`
+
+#### Source
+
+typings/lib/sdk/registry.d.ts:8
+
+***
+
+### InviteCodeSchema
+
+> `const` **InviteCodeSchema**: `z.ZodString`
+
+#### Source
+
+typings/lib/sdk/common.d.ts:11
+
+***
+
+### LegalDocsSchema
+
+> `const` **LegalDocsSchema**: `z.ZodNativeEnum`\<*typeof* [`LEGAL_DOCS`](Namespace.typings.mdx#legal_docs)\>
+
+#### Source
+
+typings/lib/sdk/common.d.ts:52
+
+***
+
+### PubKeySchema
+
+> `const` **PubKeySchema**: `z.ZodString`
+
+#### Source
+
+typings/lib/sdk/common.d.ts:7
+
+***
+
+### TYPES
+
+> `const` **TYPES**: `object`
+
+#### Type declaration
+
+| Member | Type |
+| :------ | :------ |
+| `AppSettings` | `symbol` |
+| `Auth` | `symbol` |
+| `Ceramic` | `symbol` |
+| `Comment` | `symbol` |
+| `Config` | `symbol` |
+| `Db` | `symbol` |
+| `ENS` | `symbol` |
+| `Entry` | `symbol` |
+| `EventBus` | `symbol` |
+| `Gql` | `symbol` |
+| `ICRegistry` | `symbol` |
+| `IPFS` | `symbol` |
+| `Lit` | `symbol` |
+| `Log` | `symbol` |
+| `Misc` | `symbol` |
+| `Profile` | `symbol` |
+| `ScrollState` | `symbol` |
+| `Settings` | `symbol` |
+| `Stash` | `symbol` |
+| `Tag` | `symbol` |
+| `Web3` | `symbol` |
+
+#### Source
+
+typings/lib/sdk/index.d.ts:10
+
+***
+
+### TagNameSchema
+
+> `const` **TagNameSchema**: `z.ZodString`
+
+#### Source
+
+typings/lib/sdk/common.d.ts:5
+
+***
+
+### UsernameSchema
+
+> `const` **UsernameSchema**: `z.ZodString`
+
+#### Source
+
+typings/lib/sdk/common.d.ts:9
