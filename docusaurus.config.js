@@ -44,6 +44,7 @@ const config = {
         tsconfig: "./akasha-core/libs/sdk/tsconfig.json",
         readme: "none",
         out: "./docs/data-fetching-and-mutations/sdk/api-reference",
+        entryFileName: "index.mdx",
         name: "AKASHA SDK reference",
         categorizeByGroup: false,
         excludeInternal: true,
@@ -65,10 +66,6 @@ const config = {
         plugin: ["typedoc-plugin-merge-modules"],
         mergeModulesRenameDefaults: true,
         mergeModulesMergeMode: "module",
-        sidebar: {
-          categoryLabel: "SDK reference",
-          position: 5,
-        }
       },
     ],
     [
@@ -76,14 +73,13 @@ const config = {
       {
         id: "akasha-ui-hooks",
         entryPoints: [
-          "./akasha-core/libs/hooks/src/generated/index.ts",
           "./akasha-core/libs/hooks/src/index.ts"
         ],
         entryPointStrategy: "expand",
         tsconfig: "./akasha-core/libs/hooks/tsconfig.json",
         readme: "none",
-        entryFileName: "index.md",
         out: "./docs/data-fetching-and-mutations/hooks",
+        entryFileName: "index.md",
         name: "Hooks",
         fileExtension: '.md',
         flattenOutputFiles: true,
