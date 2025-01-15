@@ -71,16 +71,16 @@ const config = {
     [
       "docusaurus-plugin-typedoc",
       {
-        id: "akasha-ui-hooks",
+        id: "akasha-ui-hooks-custom",
         entryPoints: [
           "./akasha-core/libs/hooks/src/index.ts"
         ],
-        entryPointStrategy: "expand",
+        entryPointStrategy: "resolve",
         tsconfig: "./akasha-core/libs/hooks/tsconfig.json",
         readme: "none",
-        out: "./docs/data-fetching-and-mutations/hooks",
+        out: "./docs/data-fetching-and-mutations/hooks/custom-hooks",
         entryFileName: "index.md",
-        name: "Hooks",
+        name: "Custom Hooks",
         fileExtension: '.md',
         flattenOutputFiles: true,
         enumMembersFormat: 'table',
