@@ -6,7 +6,7 @@ Mutations are often used to interact with the GraphQL API resulting to changes (
 When initializing a mutation hook, it is important to pass to it a `context` which provides a different network endpoint needed by the mutations. Calling a mutation returns a tuple that includes:
 - A `mutate` function that you can call at any time to execute the mutation.
 - An object with fields that represent the current status of the mutation's execution.
-
+_________
 ### useCreateAppMutation
 Create an application with **useCreateAppMutation**
 
@@ -14,7 +14,7 @@ Create an application with **useCreateAppMutation**
 
 **Example usage**
 ```jsx
-import { useCreateAppMutation } from  '@akashaorg/ui-awf-hooks/lib/generated'
+import { useCreateAppMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
 const sdk = getSDK();
@@ -32,7 +32,7 @@ const handleCreateApp = () => {
     variables: {
       i: {
         content: {
-          name: 'appID',
+          name: 'appId',
           license: 'License',
           applicationType: 'APP',
           displayName: 'AmazingApp',
@@ -51,7 +51,7 @@ const handleCreateApp = () => {
   })
 }
 ```
-
+_________
 ### useCreateBeamMutation
 Create a beam with **useCreateBeamMutation**
 
@@ -59,7 +59,7 @@ Create a beam with **useCreateBeamMutation**
 
 **Example usage**
 ```jsx
-import { useCreateBeamMutation } from  '@akashaorg/ui-awf-hooks/lib/generated'
+import { useCreateBeamMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
 const sdk = getSDK();
@@ -109,7 +109,7 @@ const handleCreateBeam = () => {
   )
 }
 ```
-
+_________
 ### useCreateContentBlockMutation
 Create a [content block](../../../extensions/editor/content_blocks.md) with **useCreateContentBlockMutation**
 
@@ -117,7 +117,7 @@ Create a [content block](../../../extensions/editor/content_blocks.md) with **us
 
 **Example usage**
 ```jsx
-import { useCreateContentBlockMutation } from  '@akashaorg/ui-awf-hooks/lib/generated'
+import { useCreateContentBlockMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 
 const [createContentBlock, { data, error, loading }] = useCreateContentBlockMutation();
 
@@ -149,7 +149,7 @@ const handleCreateContentBlock = () => {
   )
 }
 ```
-
+_________
 ### useCreateFollowMutation
 Create a follow document to a profile with **useCreateFollowMutation**
 
@@ -158,7 +158,7 @@ The mutation is called only when there is no existing follow document id for the
 
 **Example usage**
 ```jsx
-import { useCreateFollowMutation } from  '@akashaorg/ui-awf-hooks/lib/generated'
+import { useCreateFollowMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
 const sdk = getSDK();
@@ -170,7 +170,11 @@ const [createFollow, { data, error, loading }] = useCreateFollowMutation(
   }
 );
 
-const followId = null; // use createFollowMutation, only when there is no follow document id.
+/**
+ * use this mutation,
+ * only when there is no follow document id.
+*/
+const followId = null;
 
 const handleCreateFollow = () => {
   if (!followId) {
@@ -195,16 +199,16 @@ const handleCreateFollow = () => {
   }
 }
 ```
-
+_________
 ### useCreateInterestsMutation
 Create an interest or list of interests with **useCreateInterestsMutation**
 
-> This hook provides the mutation function to create the underlying model's data. It is helpful in subscribing to topic or list of topics
+> This hook provides the mutation function to create the underlying model's data. It is helpful in subscribing to a topic or list of topics
 The mutation is called only when there is no existing `tagSubscriptionId` for the given profile. If it exists, [useUpdateInterestsMutation](#useupdateinterestsmutation) should be used instead.
 
 **Example usage**
 ```jsx
-import { useCreateInterestsMutation } from  '@akashaorg/ui-awf-hooks/lib/generated'
+import { useCreateInterestsMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
 const sdk = getSDK();
@@ -216,7 +220,11 @@ const [createInterests, { data, error, loading }] = useCreateInterestsMutation(
   }
 );
 
-const tagSubscriptionId = null; // use createInterestsMutation, only when there is no tag subscription id.
+/**
+ * use this mutation,
+ * only when there is no tag subscription id.
+*/
+const tagSubscriptionId = null;
 
 const handleCreateInterests = () => {
   if (!tagSubscriptionId) {
@@ -247,7 +255,7 @@ const handleCreateInterests = () => {
   }
 }
 ```
-
+_________
 ### useCreateProfileMutation
 Create a profile with **useCreateProfileMutation**
 
@@ -255,7 +263,7 @@ Create a profile with **useCreateProfileMutation**
 
 **Example usage**
 ```jsx
-import { useCreateProfileMutation } from  '@akashaorg/ui-awf-hooks/lib/generated'
+import { useCreateProfileMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
 const sdk = getSDK();
@@ -299,15 +307,15 @@ const handleCreateProfile = () => {
   )
 }
 ```
-
+_________
 ### useCreateReflectMutation
 Create a reflection to a beam or a beam's reflection with **useCreateReflectMutation**
 
-> This hook provides the mutation function to create the underlying model's data. It is helpful in creating a reflection to a beam.
+> This hook provides the mutation function to create the underlying model's data. It is helpful in creating a reflection to a beam or a beam's reflection.
 
 **Example usage**
 ```jsx
-import { useCreateReflectMutation } from  '@akashaorg/ui-awf-hooks/lib/generated'
+import { useCreateReflectMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
 const sdk = getSDK();
@@ -349,23 +357,308 @@ const handleCreateReflection = () => {
   )
 }
 ```
-
-### useIndexBeamMutation
-
-### useIndexContentBlockMutation
-
-### useIndexProfileMutation
-
-### useIndexReflectionMutation
-
-### useSetAppReleaseMutation
-### useUpdateAkashaReflectMutation
+_________
 ### useUpdateAppMutation
-### useUpdateAppReleaseMutation
+Update an application with **useUpdateAppMutation**
+
+> This hook provides the mutation function to update the underlying model's data. It is helpful in removing an application.
+
+**Example usage**
+```jsx
+import { useUpdateAppMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+import getSDK from '@akashaorg/awf-sdk';
+
+const sdk = getSDK();
+const [updateApp, { data, error, loading }] = useUpdateAppMutation(
+  {
+    context: {
+      source: sdk.services.gql.contextSources.composeDB
+    },
+  }
+);
+
+const handleRemoveApp = () => {
+  // call the mutation function
+  updateApp({
+    variables: {
+      i: {
+        id: 'appId',
+        content: {},
+        options: {
+          shouldIndex: false
+        }
+      }
+    },
+    onError,
+    OnCompleted,
+    ...
+  }).then(resp => {
+    // ...
+  }).catch(err => {
+    // ...
+  })
+}
+```
+_________
 ### useUpdateBeamMutation
+Update a beam with **useUpdateBeamMutation**
+
+> This hook provides the mutation function to update the underlying model's data. It is helpful in removing a beam.
+
+**Example usage**
+```jsx
+import { useUpdateBeamMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+import getSDK from '@akashaorg/awf-sdk';
+
+const sdk = getSDK();
+const [updateBeam, { data, error, loading }] = useUpdateBeamMutation(
+  {
+    context: {
+      source: sdk.services.gql.contextSources.composeDB
+    },
+  }
+);
+
+const handleRemoveBeam = () => {
+  updateBeam({
+    variables: {
+      i: {
+        id: 'beamId',
+        content: {
+          active: false
+        },
+        options: {
+          shouldIndex: false
+        }
+      }
+    },
+    onError,
+    OnCompleted,
+    ...
+  }).then(
+    // ...
+  ).catch(
+    // ...
+  )
+}
+```
+_________
 ### useUpdateContentBlockMutation
+Update a content block with **useUpdateContentBlockMutation**
+
+> This hook provides the mutation function to update the underlying model's data. It is helpful in removing a content block.
+_________
 ### useUpdateFollowMutation
+Update a follow document to a profile with **useUpdateFollowMutation**
+
+> This hook provides the mutation function to update the underlying model's data. It is helpful in updating a profile's followers or following data.
+The mutation is called only when there is an existing follow document id for the profile. If it does not exist, [useCreateFollowMutation](#usecreatefollowmutation) should be used instead.
+
+**Example usage**
+```jsx
+import { useUpdateFollowMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+import getSDK from '@akashaorg/awf-sdk';
+
+const sdk = getSDK();
+const [updateFollow, { data, error, loading }] = useUpdateFollowMutation(
+  {
+    context: {
+      source: sdk.services.gql.contextSources.composeDB
+    },
+  }
+);
+
+/**
+ * use this mutation,
+ * only when there is a follow document id.
+*/
+const followId = 'followDocumentId';
+
+const handleUpdateFollow = () => {
+  if (followId) {
+    updateFollow({
+    variables: {
+      i: {
+        id: followId,
+        content: {
+          isFollowing: true, // set to false to unfollow a profile
+        }
+      }
+    },
+    onError,
+    OnCompleted,
+    ...
+  }).then(
+    // ...
+  ).catch(
+    // ...
+  )
+  }
+}
+```
+_________
 ### useUpdateInterestsMutation
+Update an interest or list of interests with **useUpdateInterestsMutation**
+
+> This hook provides the mutation function to create the underlying model's data. It is helpful in unsubscribing to topic or list of topics
+The mutation is called only when there is an existing `tagSubscriptionId` for the given profile. If it does not exist, [useCreateInterestsMutation](#usecreateinterestsmutation) should be used instead.
+
+**Example usage**
+```jsx
+import { useUpdateInterestsMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+import getSDK from '@akashaorg/awf-sdk';
+
+const sdk = getSDK();
+const [updateInterests, { data, error, loading }] = useUpdateInterestsMutation(
+  {
+    context: {
+      source: sdk.services.gql.contextSources.composeDB
+    },
+  }
+);
+
+/**
+ * use this mutation,
+ * only when there is a tag subscription id.
+*/
+const tagSubscriptionId = 'tagSubscriptionId';
+
+const handleUpdateInterests = () => {
+  if (tagSubscriptionId) {
+    updateInterests({
+    variables: {
+      i: {
+        id: tagSubscriptionId,
+        content: {
+          topics: [{
+            value: 'akasha',
+            labelType: sdk.services.gql.labelTypes.INTEREST
+          },
+          {
+            value: 'world',
+            labelType: sdk.services.gql.labelTypes.INTEREST
+          }
+          ]
+        }
+      }
+    },
+    onError,
+    OnCompleted,
+    ...
+  }).then(
+    // ...
+  ).catch(
+    // ...
+  )
+  }
+}
+```
+_________
 ### useUpdateProfileMutation
+Update a profile with **useUpdateProfileMutation**
+
+> This hook provides the mutation function to update the underlying model's data. It is helpful in updating a user's profile.
+
+**Example usage**
+```jsx
+import { useUpdateProfileMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+import getSDK from '@akashaorg/awf-sdk';
+
+const sdk = getSDK();
+const [updateProfile, { data, error, loading }] = useUpdateProfileMutation(
+  {
+    context: {
+      source: sdk.services.gql.contextSources.composeDB
+    },
+  }
+);
+
+const handleUpdateProfile = () => {
+  updateProfile({
+    variables: {
+      i: {
+        id: 'profileId',
+        content: {
+          nsfw: false,
+          name: 'Updated Profile',
+          description: 'this profile is updated',
+          links: [
+            {
+              href: 'http://sociallink10'
+            },
+            {
+              href: 'http://sociallink20'
+            }
+          ],
+          avatar: '', // new profile's avatar
+          background: '', // new profile's cover image
+        }
+      }
+    },
+    onError,
+    OnCompleted,
+    ...
+  }).then(
+    // ...
+  ).catch(
+    // ...
+  )
+}
+```
+_________
+### useUpdateAkashaReflectMutation
+Update a reflection to a beam or a beam's reflection with **useUpdateAkashaReflectMutation**
+
+> This hook provides the mutation function to create the underlying model's data. It is helpful in editing a reflection to a beam or a beam's reflection.
+
+**Example usage**
+```jsx
+import { useUpdateAkashaReflectMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+import getSDK from '@akashaorg/awf-sdk';
+
+const sdk = getSDK();
+const [editReflection, { data, error, loading }] = useUpdateAkashaReflectMutation(
+  {
+    context: {
+      source: sdk.services.gql.contextSources.composeDB
+    },
+  }
+);
+
+const handleEditReflection = () => {
+  editReflection({
+    variables: {
+      i: {
+        id: 'reflectionId',
+        content: {
+          // reflection content is immutable
+        }
+      }
+    },
+    onError,
+    OnCompleted,
+    ...
+  }).then(
+    // ...
+  ).catch(
+    // ...
+  )
+}
+```
+_________
+### useSetAppReleaseMutation
+Create an application's release with **useSetAppReleaseMutation**
+
+> This hook provides the mutation function to create the underlying model's data. It is helpful in creating a release linked to an application.
+_________
+### useUpdateAppReleaseMutation
+Update an application's release with **useUpdateAppReleaseMutation**
+
+> This hook provides the mutation function to create the underlying model's data. It is helpful in creating a release linked to an application.
+_________
+### useIndexBeamMutation
+### useIndexContentBlockMutation
+### useIndexProfileMutation
+### useIndexReflectionMutation
 
 ## Queries
