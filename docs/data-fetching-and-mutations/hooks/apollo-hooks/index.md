@@ -118,8 +118,15 @@ Create a [content block](../../../extensions/editor/content_blocks.md) with **us
 **Example usage**
 ```jsx
 import { useCreateContentBlockMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+import getSDK from '@akashaorg/awf-sdk';
 
-const [createContentBlock, { data, error, loading }] = useCreateContentBlockMutation();
+const [createContentBlock, { data, error, loading }] = useCreateContentBlockMutation(
+  {
+    context: {
+      source: sdk.services.gql.contextSources.composeDB
+    },
+  }
+);
 
 const handleCreateContentBlock = () => {
   createContentBlock({
@@ -343,6 +350,55 @@ const handleCreateReflection = () => {
           ],
           reflection: 'reflectToId' // optional - used when reflecting to a reflection
           isReply: true // optional - used when reflecting to a reflection
+          createdAt: new Date().toISOString(),
+        }
+      }
+    },
+    onError,
+    OnCompleted,
+    ...
+  }).then(
+    // ...
+  ).catch(
+    // ...
+  )
+}
+```
+_________
+### useSetAppReleaseMutation
+Create an application's release with **useSetAppReleaseMutation**
+
+> This hook provides the mutation function to create the underlying model's data. It is helpful in creating a release linked to an application.
+
+**Example usage**
+```jsx
+import { useSetAppReleaseMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+import getSDK from '@akashaorg/awf-sdk';
+
+const sdk = getSDK();
+const [setAppRelease, { data, error, loading }] = useSetAppReleaseMutation(
+  {
+    context: {
+      source: sdk.services.gql.contextSources.composeDB
+    },
+  }
+);
+
+const handleSetAppRelease = () => {
+  setAppRelease({
+    variables: {
+      i: {
+        content: {
+          applicationID: 'applicationId',
+          version: '0.0.1',
+          source:'http://someurl',
+          meta: [
+            {
+              provider: 'Extensions App',
+              property: 'description',
+              value: 'some description',
+            },
+          ]
           createdAt: new Date().toISOString(),
         }
       }
@@ -646,19 +702,192 @@ const handleEditReflection = () => {
 }
 ```
 _________
-### useSetAppReleaseMutation
-Create an application's release with **useSetAppReleaseMutation**
-
-> This hook provides the mutation function to create the underlying model's data. It is helpful in creating a release linked to an application.
-_________
 ### useUpdateAppReleaseMutation
 Update an application's release with **useUpdateAppReleaseMutation**
 
 > This hook provides the mutation function to create the underlying model's data. It is helpful in creating a release linked to an application.
 _________
 ### useIndexBeamMutation
+Index a beam with **useIndexBeamMutation**
+_________
 ### useIndexContentBlockMutation
+Index a content block with **useIndexBeamMutation**
+_________
 ### useIndexProfileMutation
+Index a profile with **useIndexBeamMutation**
+_________
 ### useIndexReflectionMutation
-
+Index a reflection with **useIndexBeamMutation**
+_________
 ## Queries
+Queries are often used to fetch data from the GraphQL API with no resulting changes to the underlying model's data.
+When initializing a query hook, you can pass to it the required parameters specifying what aspects of the model's data you are interested in. Calling a query returns returns an object from Apollo Client that contains loading, error, and data properties that can be used on the UI.
+
+:::info
+@TODO: provide extra information about query variants like lazy query, suspense query, stream query
+:::
+_________
+### useGetAppReleaseByIdQuery
+Get an app release by id with **useGetAppReleaseByIdQuery**
+
+> This hook provides the query function to get a specific app release using its id. It is useful in showing more info relating to a particular release of a given application
+
+**Example usage**
+```jsx
+import { useGetAppReleaseByIdQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+
+const { data, loading, error } = useGetAppReleaseByIdQuery({
+  variables: { id: 'releaseId' },
+  fetchPolicy: 'cache-first', // use this to control caching and improve network requests 
+  notifyOnNetworkStatusChange: true,
+  // ...
+});
+
+const appReleaseData = useMemo(() => {
+  if (data?.node && 'id' in data.node) {
+    return data.node;
+  }
+  return null;
+}, [data]);
+
+// do something with 'appReleaseData'.
+// For instance you can get the version like so;
+const version = releaseData?.version
+
+// you can use the 'loading' state to show a spinner
+if (loading) {
+  return <Spinner/>
+}
+```
+_________
+### useGetAppsQuery
+Get a list of apps with **useGetAppsQuery**
+
+> This hook provides the query function to get a list of applications. It is useful in showing a list of all apps available in a world.
+
+**Example usage**
+```jsx
+import { useGetAppsQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+
+const { data, loading, error } = useGetAppsQuery({
+  variables: {
+    first: 1,
+    filters: {
+    // ...
+    },
+    sorting: {
+    // ...
+    },
+  },
+});
+```
+_________
+### useGetAppsByIdQuery
+Get a specific app from list of apps using its id with **useGetAppsByIdQuery**
+
+> This hook provides the query function to get a specific app using its id from list of all available apps.
+
+**Example usage**
+```jsx
+import { useGetAppsByIdQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+
+const { data, loading, error } = useGetAppsByIdQuery({
+  variables: { id: 'extensionId' },
+  fetchPolicy: 'cache-first', 
+  notifyOnNetworkStatusChange: true,
+  // ...
+});
+
+const extensionData = useMemo(() => {
+  if (data?.node && 'id' in data.node) {
+    return data.node;
+  }
+  return null;
+}, [data]);
+
+// do something with 'extensionData',
+// For instance you can get the displayName like so;
+const displayName = extensionData?.displayName
+
+// you can use the 'loading' state to show a spinner
+if (loading) {
+  return <Spinner/>
+}
+```
+_________
+### useGetAppsByPublisherDidQuery
+Get a list of apps using the indexing DID with **useGetAppsByPublisherDidQuery**
+
+> This hook provides the query function to get a list of applications by a publisher/developer. It is useful in showing a list of all apps published by a developer.
+
+**Example usage**
+```jsx
+import { useGetAppsByPublisherDidQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+import getSDK from '@akashaorg/awf-sdk';
+
+const sdk = getSDK();
+
+const { data, loading, error } = useGetAppsByPublisherDidQuery({
+  variables: {
+    id: sdk.current.services.gql.indexingDID,
+    first: 1, // number of entries to be returned starting from the first. You may also change it to 'last' to start from the last entry.
+    filters: {
+    // ...
+    }, // use filter to specify specific aspects to be included in the returned data
+    sorting: {
+    // ...
+    }, // specify the order in which the data is arranged or presented
+  },
+});
+```
+_________
+### useGetAppsReleasesByPublisherDidQuery
+_________
+### useGetAppsReleasesQuery
+Get a list of apps releases with **useGetAppsReleasesQuery**
+
+> This hook provides the query function to get a list of applications releases. It is useful in showing a list of releases for a specific app.
+
+**Example usage**
+```jsx
+import { useGetAppsReleasesQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+
+const { data, loading, error } = useGetAppsReleasesQuery({
+  variables: {
+    first: 10,
+    filters: { where: { applicationID: { equalTo: 'extensionId' } } }, // specify an extensionId to filter only releases for the particular app
+    sorting: { createdAt: 'DESC' }
+  },
+  fetchPolicy: 'cache-first',
+  notifyOnNetworkStatusChange: true,
+});
+```
+_________
+### useGetAppsStreamQuery
+Get a list of apps with **useGetAppsStreamQuery**
+
+> provide extra info
+
+**Example usage**
+```jsx
+import { useGetAppsStreamQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+import getSDK from '@akashaorg/awf-sdk';
+
+const sdk = getSDK();
+
+const { data, loading, error } = useGetAppsStreamQuery({
+  variables: {
+    indexer: sdk.current.services.gql.indexingDID,
+    first: 1,
+    filters: {
+    // ...
+    },
+  },
+});
+```
+_________
+### useGetBeamByIdQuery
+_________
+### useGetBeamStreamQuery
+_________
+### useGetBeamsByAuthorDidQuery
