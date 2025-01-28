@@ -3,7 +3,12 @@ This section provides in-depth information on the hooks for Apollo mutations and
 
 ## Mutations
 Mutations are often used to interact with the GraphQL API resulting to changes (creating / updating) to the underlying model's data.
-When initializing a mutation hook, it is important to pass to it a `context` which provides a different network endpoint needed by the mutations. Calling a mutation returns a tuple that includes:
+
+:::info
+When initializing a mutation hook, it is important to pass to it a `context` which provides a different network endpoint needed by the mutations
+:::
+
+Calling a mutation returns a tuple that includes:
 - A `mutate` function that you can call at any time to execute the mutation.
 - An object with fields that represent the current status of the mutation's execution.
 _________
@@ -719,18 +724,19 @@ _________
 ### useIndexReflectionMutation
 Index a reflection with **useIndexBeamMutation**
 _________
-## Queries
-Queries are often used to fetch data from the GraphQL API with no resulting changes to the underlying model's data.
+## Queries - (Standard)
+Queries are used to fetch data from the GraphQL API with no resulting changes to the underlying model's data.
 When initializing a query hook, you can pass to it the required parameters specifying what aspects of the model's data you are interested in. Calling a query returns returns an object from Apollo Client that contains loading, error, and data properties that can be used on the UI.
 
 :::info
-@TODO: provide extra information about query variants like lazy query, suspense query, stream query
+Queries could be either of `Standard` or`Stream` queries.
+* `Standard` queries provide hooks to access data directly from the model
 :::
 _________
 ### useGetAppReleaseByIdQuery
 Get an app release by id with **useGetAppReleaseByIdQuery**
 
-> This hook provides the query function to get a specific app release using its id. It is useful in showing more info relating to a particular release of a given application
+> This hook provides the query function to get a specific app release using its id. It is useful in showing more info regarding a particular release of a given application.
 
 **Example usage**
 ```jsx
@@ -751,10 +757,10 @@ const appReleaseData = useMemo(() => {
 }, [data]);
 
 // do something with 'appReleaseData'.
-// For instance you can get the version like so;
+// For example, you can get the version like so;
 const version = releaseData?.version
 
-// you can use the 'loading' state to show a spinner
+// the 'loading' state can be used to render a spinner;
 if (loading) {
   return <Spinner/>
 }
@@ -774,10 +780,10 @@ const { data, loading, error } = useGetAppsQuery({
     first: 1,
     filters: {
     // ...
-    },
+    }, // specify aspects to be included in the returned data
     sorting: {
     // ...
-    },
+    }, // specify the order in which the data is arranged or presented
   },
 });
 ```
@@ -792,7 +798,7 @@ Get a specific app from list of apps using its id with **useGetAppsByIdQuery**
 import { useGetAppsByIdQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 
 const { data, loading, error } = useGetAppsByIdQuery({
-  variables: { id: 'extensionId' },
+  variables: { id: 'id of the application' },
   fetchPolicy: 'cache-first', 
   notifyOnNetworkStatusChange: true,
   // ...
@@ -816,9 +822,9 @@ if (loading) {
 ```
 _________
 ### useGetAppsByPublisherDidQuery
-Get a list of apps using the indexing DID with **useGetAppsByPublisherDidQuery**
+Get a list of apps using the publisher's DID with **useGetAppsByPublisherDidQuery**
 
-> This hook provides the query function to get a list of applications by a publisher/developer. It is useful in showing a list of all apps published by a developer.
+> This hook provides the query function to get a list of applications by a publisher/developer. It is useful in showing a list of all apps published by a specific developer.
 
 **Example usage**
 ```jsx
@@ -829,14 +835,14 @@ const sdk = getSDK();
 
 const { data, loading, error } = useGetAppsByPublisherDidQuery({
   variables: {
-    id: sdk.current.services.gql.indexingDID,
+    id: sdk.services.gql.indexingDID,
     first: 1, // number of entries to be returned starting from the first. You may also change it to 'last' to start from the last entry.
     filters: {
     // ...
-    }, // use filter to specify specific aspects to be included in the returned data
+    },
     sorting: {
     // ...
-    }, // specify the order in which the data is arranged or presented
+    },
   },
 });
 ```
@@ -855,7 +861,7 @@ import { useGetAppsReleasesQuery } from  '@akashaorg/ui-core-hooks/lib/generated
 const { data, loading, error } = useGetAppsReleasesQuery({
   variables: {
     first: 10,
-    filters: { where: { applicationID: { equalTo: 'extensionId' } } }, // specify an extensionId to filter only releases for the particular app
+    filters: { where: { applicationID: { equalTo: 'id of the application' } } }, // specify an application id to filter only releases for the particular app
     sorting: { createdAt: 'DESC' }
   },
   fetchPolicy: 'cache-first',
@@ -863,10 +869,97 @@ const { data, loading, error } = useGetAppsReleasesQuery({
 });
 ```
 _________
-### useGetAppsStreamQuery
-Get a list of apps with **useGetAppsStreamQuery**
+### useGetBeamByIdQuery
+Get a specific beam from list of beams using its id with **useGetBeamByIdQuery**
 
-> provide extra info
+> This hook provides the query function to get a specific beam using its id from list of all beams.
+
+**Example usage**
+```jsx
+import { useGetBeamByIdQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+
+const beamId = 'id of the beam'
+
+const { data, loading, error } = useGetBeamByIdQuery({
+  variables: { id: beamId },
+  skip: !beamId, // this hook will not execute when beamId is not defined
+  // ...
+});
+
+// we can check if a beam is active like so;
+const isBeamActive = useMemo(() => {
+  if (data?.node && 'active' in data.node) {
+    return data.node.active;
+  }
+  return null;
+}, [data]);
+```
+:::info
+It is important to check and compare received data fields against [useGetBeamStreamQuery](#usegetbeamstreamquery) which has the current indexed version of the beam.
+:::
+_________
+### useGetBeamsByAuthorDidQuery
+_________
+### useGetInterestsByIdQuery
+_________
+### useGetInterestsQuery
+_________
+### useGetMyProfileQuery
+_________
+### useGetProfileByDidQuery
+Get a profile using its DID with **useGetProfileByDidQuery**
+
+> This hook provides the query function to get a profile using its decentralized ID (DID). It is useful in showing thr details for a single profile.
+
+**Example usage**
+```jsx
+import { useGetProfileByDidQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+
+const profileDID = 'DID of the profile being queried'
+const authenticatedDID = 'DID of the currently authenticated profile'
+
+const { data, loading, error } = useGetProfileByDidQuery({
+  variables: {
+    id: profileDID,
+  },
+  fetchPolicy: 'cache-first',
+  skip: authenticatedDID !== profileDID
+})
+```
+_________
+### useGetProfileByIdQuery
+Get a profile using its id with **useGetProfileByIdQuery**
+
+> This hook provides the query function to get a profile using its id. It is useful in showing thr details for a single profile.
+
+**Example usage**
+```jsx
+import { useGetProfileByIdQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+
+const profileID = 'id of the profile being queried'
+
+const { data, loading, error } = useGetProfileByIdQuery({
+  variables: {
+    id: profileID,
+  },
+});
+```
+_________
+### useGetProfileStatsByDidQuery
+_________
+### useGetProfilesQuery
+_________
+### useGetReflectReflectionsQuery
+_________
+## Queries - (Stream)
+:::info
+* `Stream` queries provide hooks to access data from the indexing service. They require the `indexer` to be passed to the hook upon initialization.
+:::
+_________
+### useGetAppsStreamQuery
+Get a list of apps from the indexing service with **useGetAppsStreamQuery**
+
+> Using the filter param, this hook can be used to read the most recently indexed version of an application from list of all apps.
 
 **Example usage**
 ```jsx
@@ -877,17 +970,97 @@ const sdk = getSDK();
 
 const { data, loading, error } = useGetAppsStreamQuery({
   variables: {
-    indexer: sdk.current.services.gql.indexingDID,
+    indexer: sdk.services.gql.indexingDID,
     first: 1,
     filters: {
-    // ...
+      where: {
+        applicationID: {
+          equalTo: 'id of the application',
+        }
+      }
     },
   },
 });
 ```
 _________
-### useGetBeamByIdQuery
-_________
 ### useGetBeamStreamQuery
+Get a list of beams from the indexing service with **useGetBeamStreamQuery**
+
+> Using the filter param, this hook can be used to read the most recently indexed version of a beam from list of all beams.
+
+**Example usage**
+```jsx
+import { useGetBeamStreamQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+import getSDK from '@akashaorg/awf-sdk';
+
+const sdk = getSDK();
+
+const { data, loading, error } = useGetBeamStreamQuery({
+  variables: {
+    indexer: sdk.services.gql.indexingDID,
+    filters: {
+      where: {
+        beamID: {
+          equalTo: 'id of the beam',
+        }
+      }
+    },
+    last: 1,
+  },
+});
+```
 _________
-### useGetBeamsByAuthorDidQuery
+### useGetInterestsStreamQuery
+Get a list of interests from the indexing service with **useGetInterestsStreamQuery**
+
+> Using the filter param, this hook can be used to read the most recently indexed version of an interest from list of all interests.
+
+**Example usage**
+```jsx
+import { useGetInterestsStreamQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+import getSDK from '@akashaorg/awf-sdk';
+
+const sdk = getSDK();
+
+const { data, loading, error } = useGetInterestsStreamQuery({
+  variables: {
+    indexer: sdk.services.gql.indexingDID,
+    filters: {
+      where: {
+        interestID: {
+          equalTo: 'id of the interest',
+        }
+      }
+    },
+    last: 1,
+  },
+});
+```
+_________
+### useGetProfileStreamQuery
+Get a list of profiles from the indexing service with **useGetProfileStreamQuery**
+
+> Using the filter param, this hook can be used to read the most recently indexed version of a profile from list of all profiles.
+
+**Example usage**
+```jsx
+import { useGetProfileStreamQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+import getSDK from '@akashaorg/awf-sdk';
+
+const sdk = getSDK();
+
+const { data, loading, error } = useGetProfileStreamQuery({
+  variables: {
+    indexer: sdk.services.gql.indexingDID,
+    filters: {
+      where: {
+        profileID: {
+          equalTo: 'id of the profile',
+        }
+      }
+    },
+    last: 1,
+  },
+});
+```
+_________
