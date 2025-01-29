@@ -950,6 +950,49 @@ _________
 ### useGetProfilesQuery
 _________
 ### useGetReflectReflectionsQuery
+Get list of reflections to a specific reflection with **useGetReflectReflectionsQuery**
+
+> This hook provides the query function to fetch reflections of a given reflection.
+
+**Example usage**
+```jsx
+import { useGetReflectReflectionsQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+
+const reflectionId = 'id of the reflection'
+
+const { data, loading, error } = useGetReflectReflectionsQuery({
+  variables: {
+    id: reflectionId,
+    first: 5 // number of reflections to be returned in the data
+  },
+  // ...
+});
+
+// the reflections can be read from the data like so;
+const reflections = data?.akashaReflectIndex?.edges
+```
+_________
+### useGetReflectionByIdQuery
+Get a specific reflection from list of reflections using its id with **useGetReflectionByIdQuery**
+
+> This hook provides the query function to get a specific reflection using its id from list of all reflections.
+
+**Example usage**
+```jsx
+import { useGetReflectionByIdQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+
+const reflectionId = 'id of the reflection'
+
+const { data, loading, error } = useGetReflectionByIdQuery({
+  variables: { id: reflectionId },
+  skip: !reflectionId, // this hook will not execute when reflectionId is not defined
+  // ...
+});
+```
+_________
+### useGetReflectionsByAuthorDidQuery
+_________
+### useGetReflectionsFromBeamQuery
 _________
 ## Queries - (Stream)
 :::info
@@ -959,7 +1002,7 @@ _________
 ### useGetAppsStreamQuery
 Get a list of apps from the indexing service with **useGetAppsStreamQuery**
 
-> Using the filter param, this hook can be used to read the most recently indexed version of an application from list of all apps.
+> Using the filters param, this hook can be used to read the most recently indexed version of an application from list of all apps.
 
 **Example usage**
 ```jsx
@@ -986,7 +1029,7 @@ _________
 ### useGetBeamStreamQuery
 Get a list of beams from the indexing service with **useGetBeamStreamQuery**
 
-> Using the filter param, this hook can be used to read the most recently indexed version of a beam from list of all beams.
+> Using the filters param, this hook can be used to read the most recently indexed version of a beam from list of all beams.
 
 **Example usage**
 ```jsx
@@ -1013,7 +1056,7 @@ _________
 ### useGetInterestsStreamQuery
 Get a list of interests from the indexing service with **useGetInterestsStreamQuery**
 
-> Using the filter param, this hook can be used to read the most recently indexed version of an interest from list of all interests.
+> Using the filters param, this hook can be used to read the most recently indexed version of an interest from list of all interests.
 
 **Example usage**
 ```jsx
@@ -1040,7 +1083,7 @@ _________
 ### useGetProfileStreamQuery
 Get a list of profiles from the indexing service with **useGetProfileStreamQuery**
 
-> Using the filter param, this hook can be used to read the most recently indexed version of a profile from list of all profiles.
+> Using the filters param, this hook can be used to read the most recently indexed version of a profile from list of all profiles.
 
 **Example usage**
 ```jsx
@@ -1056,6 +1099,33 @@ const { data, loading, error } = useGetProfileStreamQuery({
       where: {
         profileID: {
           equalTo: 'id of the profile',
+        }
+      }
+    },
+    last: 1,
+  },
+});
+```
+_________
+### useGetReflectionStreamQuery
+Get a list of reflections from the indexing service with **useGetReflectionStreamQuery**
+
+> Using the filters param, this hook can be used to read the most recently indexed version of a reflection from list of all reflections.
+
+**Example usage**
+```jsx
+import { useGetReflectionStreamQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+import getSDK from '@akashaorg/awf-sdk';
+
+const sdk = getSDK();
+
+const { data, loading, error } = useGetReflectionStreamQuery({
+  variables: {
+    indexer: sdk.services.gql.indexingDID,
+    filters: {
+      where: {
+        reflectionID: {
+          equalTo: 'id of the reflection',
         }
       }
     },
