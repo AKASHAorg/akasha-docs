@@ -1027,20 +1027,31 @@ const MyComponent = () => {
 
 ```
 _________
+### useGetBlockStorageByIdQuery
+A hook to get the block storage of a content-block. 
+
+### Required Query Variables
+- id: string - content block's id
+
+:::info
+  Content block storage functionality is not being used at the moment.
+:::
+
+
+
 ### useGetFollowDocumentsByDidQuery
 
-Get the list of follow relationship documents between two DIDs. Used to check if a user's profile DID follows another's.
+Get the list of follow relationship documents between the `id` and the `following` field DIDs. Used to check if a user's profile DID follows another's.
+This hook is used to determine if there is already a document created expressing the relationship and if the result is null (or empty) then the follow document should be created first using [useCreateFollowMutation](#usecreatefollowmutation). If the document is already created then it can be updated using [useUpdateFollowMutation](#useupdatefollowmutation).
+
 
 #### Required Query Variables
 - id: string - DID of the user you want to query
+- following: string[] - list of DIDs to check against
 
 #### Optional Query Variables
-- after: string
-- before: string
 - first: string
 - last: string
-- sorting: FollowSortingInput
-- following: string - if provided, the query will return the documents ....
 
 
 **Example Usage**
@@ -1057,12 +1068,20 @@ const MyComponent = () => {
       last: 1,
     },
   });
-  if (data?.node?.akashaFollowList?.edges[0].node.isFollowing) {
-    return <div>Already Following</div>
-  }
-  return <div>Not Following</div>
-}
 
+  if (data?.node?.akashaFollowList?.edges[0].node.isFollowing) {
+    return (
+      <div>Already Following</div>
+      <button onClick={updateFollow}>Unfollow</button>
+    )
+  }
+  return (
+    <div>
+      Never followed before
+      <button onClick={createFollow}></button>
+    </div>
+  )
+}
 
 ```
 _________
@@ -1325,7 +1344,98 @@ Example
 :::info
 * `StreamQuery` suffixed hooks provides access to data from the indexing service. For this reason, sometimes it may exhibit a delay between the data that is already in the Ceramic node and the indexing service. This delay should not be noticeable by the end user but it may require additional logic when doing a mutation and expecting the data to be immediately available.
 :::
+
+### useGetIndexedStreamQuery
+A hook that supports advanced querying capabilities through the filtering field. One of the main usecases at the moment is to query the beams published using a specific tag.
+
+#### Required Query Variables
+- indexer: string - the indexing service to use (ex: sdk.services.gql.indexingDID)
+- first: string - number of items from the start of the list
+- last: string - number of items from the end of the list
+- filters: [AkashaIndexedStreamFiltersInput](https://github.com/AKASHAorg/akasha-core/blob/next/libs/typings/src/sdk/graphql-types-new.ts) - filters to apply to the query
+
+#### Optional Query Variables
+- sorting: object - sorting to be aplied to the elements
+
+:::info
+  There are only a few use-cases in which this hook is needed. In general we prefer to use more specific hooks.
+:::
+
+**Example usage**
+
+```tsx
+import getSDK from '@akashaorg/awf-sdk';
+import { AkashaIndexedStreamStreamType } from '@akashaorg/typings/lib/sdk/graphql-types-new';
+import {useGetIndexedStreamQuery} from '@akashaorg/ui-core-hooks/lib/generated/apollo';
+
+const BeamListForTag = ({tagName}) => {
+  const { data, loading, error } = useGetIndexedStreamQuery({
+    variables: {
+      indexer: getSDK().services.gql.indexingDID
+      first: 10,
+      filters: {
+        and: [
+          { where: { streamType: { equalTo: AkashaIndexedStreamStreamType.Beam }}},
+          { where: { indexType: { equalTo: temp1.services.gql.labelTypes.TAG }}},
+          { where: { indexValue: { equalTo: 'akasha' }}}
+        ]
+      }
+    }
+  });
+
+  const beamIds = data.node.akashaIndexedStreamList.edges.map(edge => edge.node.stream);
+  
+  // now we can use beamIds to get the beam data for each of the beams it contains
+  // using useGetBeamStreamQuery or useGetBeamQuery
+
+  return (
+    <div>
+      <h3>Beam Ids containing the akasha tag:</h3>
+      { beamIds.map(beamId => <div key={beamId}>{beamId}</div>) }
+    </div>
+  );
+}
+
+```
 _________
+
+### useGetIndexedStreamCountQuery
+A hook that supports advanced querying capabilities through `filters` field that returns the number of elements that matches the query. Useful when you want to show how many items are matching the queries, without having to get the entire data.
+
+#### Required Query Variables
+- indexer: string - the indexing service to use (ex: sdk.services.gql.indexingDID)
+- filters: [AkashaIndexedStreamFiltersInput](https://github.com/AKASHAorg/akasha-core/blob/next/libs/typings/src/sdk/graphql-types-new.ts) - filters to apply to the query
+
+**Example usage**
+```tsx
+import getSDK from '@akashaorg/awf-sdk';
+import { AkashaIndexedStreamStreamType } from '@akashaorg/typings/lib/sdk/graphql-types-new';
+import {useGetIndexedStreamCountQuery} from '@akashaorg/ui-core-hooks/lib/generated/apollo';
+
+const BeamListForTag = ({tagName}) => {
+  const { data, loading, error } = useGetIndexedStreamCountQuery({
+    variables: {
+      indexer: getSDK().services.gql.indexingDID
+      filters: {
+        and: [
+          { where: { streamType: { equalTo: AkashaIndexedStreamStreamType.Beam }}},
+          { where: { indexType: { equalTo: temp1.services.gql.labelTypes.TAG }}},
+          { where: { indexValue: { equalTo: 'akasha' }}}
+        ]
+      }
+    }
+  });
+
+  return (
+    <div>
+      <div>akasha tag has {data.node?.akashaIndexedStreamListCount} beams</div>
+    </div>
+  );
+}
+
+```
+
+
 ### useGetAppsStreamQuery
 Get a list of apps from the indexing service with **useGetAppsStreamQuery**
 
@@ -1459,5 +1569,49 @@ const { data, loading, error } = useGetReflectionStreamQuery({
     last: 1,
   },
 });
+```
+_________
+
+### useGetContentBlockStreamQuery
+A generated hook to get a paginated list of content-blocks.
+
+#### Required Query Variables
+- indexer: string - the indexing service to use (ex: sdk.services.gql.indexingDID)
+- first: number - number of items to return from the start of the list
+- last: number - number of items to return from the end of the list
+
+#### Optional Query Variables
+- filter: object - filtering to be applied to the query
+- sorting: object - sorting to be applied to the query
+
+:::info
+  A beam can contain 1 or more content-blocks. This hook only returns content-block's id which should be used with [useGetContentBlockByIdQuery](#usegetcontentblockbyidquery) hook to get the actual block data
+:::
+
+**Example usage**
+```tsx
+import { useGetContentBlockStreamQuery } from '@akashaorg/ui-core-hooks/lib/generated/apollo';
+import getSDK from '@akashaorg/awf-sdk';
+
+const ContentBlockList = () => {
+  const { data, loading, error, fetchMore } = useGetContentBlockStreamQuery({
+    variables: {
+      indexer: getSDK().services.gql.indexingDID,
+      first: 10,
+    }
+  });
+
+  const blockIds = data.node?.akashaContentBlockStreamList?.edges?.map(edge => edge.node.blockID)
+  
+  // now we can use the blockIds to fetch the content-block's data using
+  // useGetContentBlockByIdQuery hook
+
+  return (
+    <div>
+      <h3>Latest content blocks</h3>
+      {blockIds.map(id => <div key={id}>{id}</div>)}
+    </div>
+  )
+}
 ```
 _________
