@@ -11,7 +11,9 @@ When initializing a mutation hook, it is important to pass to it a `context` whi
 Calling a mutation returns a tuple that includes:
 - A `mutate` function that you can call at any time to execute the mutation.
 - An object with fields that represent the current status of the mutation's execution.
+
 _________
+
 ### useCreateAppMutation
 Create an application with **useCreateAppMutation**
 
@@ -732,6 +734,30 @@ When initializing a query hook, you can pass to it the required parameters speci
 Queries could be either of `Standard` or`Stream` queries.
 * `Standard` queries provide hooks to access data directly from the model
 :::
+
+### Type Predicates
+Many of the fields returned from the graphql endpoints are optional or the field can be an empty object.
+This means that typescript will complain if you want to access a field of an empty object.
+To overcome this issue, and also maintain consistency in usage, the hooks package also contains a set of selectors that can be used as a basis for custom selectors or as an example to help you build your custom selectors and have the same consistency.
+
+The selectors are split into multiple files which are named after the name of the hook it's compatible with.
+
+For example, to get the selectors for a hook named `useGetBeamsByIdQuery` you will need import them from the file `get-beam-by-id-query` like this: 
+```tsx
+import { useGetBeamByIdQuery } from '@akashaorg/ui-core-hooks/lib/generated/apollo';
+import { selectBeamId } from `@akashaorg/ui-core-hooks/lib/selectors/get-beam-by-id-query`;
+
+// selectors operates directly on the hook's data object:
+
+const {data, loading} = useGetBeamsByIdQuery({/*some vars*/});
+const beamId = selectBeamId(data); // now typescript will correctly infer the beamId type
+
+```
+This will enhance the readability of the code and reduce field access errors that may occur if you forget to handle it.
+
+:::info
+  Tip: Keep the selectors as simple as possible and don't try to merge or to handle multiple data types in one selector
+:::
 _________
 ### useGetAppReleaseByIdQuery
 Get an app release by id with **useGetAppReleaseByIdQuery**
@@ -869,7 +895,70 @@ const { data, loading, error } = useGetAppsReleasesQuery({
 });
 ```
 _________
+### useGetBeamsQuery
+
+A generated hook for querying a paginated list of "Beams" (posts) with optional filtering and sorting.
+
+- Pagination uses Relay-style cursor pagination
+- Returns a query object having the standard Apollo useQuery shape (`data`, `loading`, `error`, and helper methods like `fetchMore`)
+
+#### Required query variables (Only one of the following params)
+- first - number - Number of items (nodes) to fetch from the beginning of the list
+- last - number - Number of items (nodes) to fetch from the back of the list
+
+#### Optional query variables
+- filters - `AkashaBeamFiltersInput` - Optional filters to apply to the query
+- sorting - `AkashaBeamSortingInput` - Optional sorting to apply to a query
+- after - string - Cursor for pagination (returns nodes after this id)
+- before - string - Cursor for pagination (returns nodes vefore this id)
+
+#### Returned data object
+If the query is successful, the `data` object will contain
+- `data.akashaBeamIndex` - an array of Beam nodes
+- `data.pageInfo` - pagination data
+
+**Example Usage**
+```tsx
+import { useGetBeamsQuery } from '@akashaorg/ui-core-hooks/lib/generated/apollo';
+
+
+const BeamList = () => {
+  const { data, loading, error, fetchMore } = useGetBeamsQuery({
+    variables: {
+      // Fetches first 10 beams
+      first: 10,
+      // NOTE: SortOrder enum should be imported from `@akashaorg/typings/lib/sdk/graphql-operation-types-new`
+      sorting: { createdAt: SortOrder.DESC} } 
+    }
+  });
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
+
+  const beams = data?.akashaBeamIndex?.edges || [];
+
+  return (
+    <div>
+      {beams.map((edge) => (
+        <div key={edge?.node?.id}>
+          <h2>{edge?.node?.content[0]?.blockID}</h2>
+          <p>Author: {edge?.node?.author.id}</p>
+        </div>
+      ))}
+
+      {/* Pagination example */}
+      <button
+        onClick={() => fetchMore({ variables: { after: data.akashaBeamIndex?.pageInfo.endCursor } })}
+      >
+        Load More
+      </button>
+    </div>
+  );
+};
+```
+_________
 ### useGetBeamByIdQuery
+
 Get a specific beam from list of beams using its id with **useGetBeamByIdQuery**
 
 > This hook provides the query function to get a specific beam using its id from list of all beams.
@@ -898,6 +987,234 @@ const isBeamActive = useMemo(() => {
 It is important to check and compare received data fields against [useGetBeamStreamQuery](#usegetbeamstreamquery) which has the current indexed version of the beam.
 :::
 _________
+### useGetContentBlockByIdQuery
+
+Get a specific content-block by its id. 
+
+> A Beam (post) in AKASHA Core is composed from a list of content-blocks (learn more in the content-blocks section of the documentation)
+
+#### Query Variables (Required):
+  - id - string - the id of the content block (usually obtained from a beam query)
+
+#### Returned data object
+If the query is successful, the `data` object will contain
+  - `data.node` - Content block details
+
+**Example Usage**
+```tsx
+import { useGetContentBlockByIdQuery } from '@akashaorg/ui-core-hooks/lib/generated/apollo';
+
+const MyComponent = () => {
+  const {} = useGetContentBlockByIdQuery({
+    variables: {
+      id: 'some-content-block-id'
+    }
+  });
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error! {error.message}</div>;
+
+  const contentBlock = data?.node;
+  
+  if (!contentBlock || 'id' in contentBlock === false) {
+    return <div>Block not found</div>;
+  }
+
+  return (
+    <div>{contentBlock.author.id}</div>
+  )
+}
+
+```
+_________
+### useGetFollowDocumentsByDidQuery
+
+Get the list of follow relationship documents between two DIDs. Used to check if a user's profile DID follows another's.
+
+#### Required Query Variables
+- id: string - DID of the user you want to query
+
+#### Optional Query Variables
+- after: string
+- before: string
+- first: string
+- last: string
+- sorting: FollowSortingInput
+- following: string - if provided, the query will return the documents ....
+
+
+**Example Usage**
+```tsx
+import { useGetFollowDocumentsByDidQuery } from '@akashaorg/ui-core-hooks/lib/generated/apollo';
+
+
+const MyComponent = () => {
+  const { data, error } = useGetFollowDocumentsByDidQuery({
+    fetchPolicy: 'cache-and-network',
+    variables: {
+      id: 'did-of-the-logged-in-profile',
+      following: ['other-profile-did'],
+      last: 1,
+    },
+  });
+  if (data?.node?.akashaFollowList?.edges[0].node.isFollowing) {
+    return <div>Already Following</div>
+  }
+  return <div>Not Following</div>
+}
+
+
+```
+_________
+### useGetFollowersListByDidQuery
+
+A generated hook to get a paginated list of followers for a specific profile DID
+
+#### Required Query Variables
+- id: string - DID of the user you want to query
+- first: string - number of elements to include from the start of the list
+- last: string - number of elements to include from the end of the list
+
+> You need to include either `first` or `last` variables in your query but not both
+
+#### Optional Query Variables
+- after: string - pagination cursor (returns elements after this DID)
+- before: string - pagination cursor (returns elements before this DID)
+
+**Example usage**
+
+```tsx
+import { useGetFollowersListByDidQuery } from '@akashaorg/ui-core-hooks/lib/generated/apollo';
+
+const FollowersPaginatedList = ({profileDID, isLoggedIn}) => {
+  const { data, loading, error, fetchMore } = useGetFollowersListByDidQuery({
+    fetchPolicy: 'cache-first',
+    variables: {
+      id: profileDID,
+      first: 10,
+    },
+    skip: !isLoggedIn,
+    notifyOnNetworkStatusChange: true,
+  });
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error loading data</div>;
+  return (
+    <div>
+      {data.node.akashaProfile?.followers?.edges.map(followEdge => {
+        // to get the profile data, 
+        // use useGetProfileByIdQuery passing the 
+        // akashaProfile.id from below
+        return (
+          <div key={followEdge.node?.did?.akashaProfile?.id}>
+            {followEdge.node?.did?.akashaProfile?.id}
+          </div>
+        )
+      })}
+      <button onClick={() => 
+        fetchMore({ 
+          variables: {
+            after: data.node.akashaProfile?.followers?.pageInfo.endCursor
+          } 
+        })}>Load More</button>
+    </div>
+  );
+}
+```
+_________
+
+### useGetFollowingListByDidQuery
+
+A generated hook to get a paginated list of profiles that a specific DID follows
+
+#### Required Query Variables
+- id: string - DID of the profile to get following list from
+- first: number - number of elements to fetch from start
+- last: number - number of elements to fetch from end
+
+> Note: Use either first or last, not both simultaneously
+
+#### Optional Query Variables
+- after: string - pagination cursor for next page
+- before: string - pagination cursor for previous page
+
+**Example usage**
+
+```tsx
+import { useGetFollowingListByDidQuery } from '@akashaorg/ui-core-hooks/lib/generated/apollo';
+
+const FollowingList = ({ profileDID }) => {
+  const { data, loading, error, fetchMore } = useGetFollowingListByDidQuery({
+    variables: {
+      id: profileDID,
+      first: 10,
+    },
+    fetchPolicy: 'cache-first',
+  });
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error loading following list</div>;
+
+  return (
+    <div>
+      {data?.node?.akashaProfile?.following?.edges.map(edge => (
+        <div key={edge.node?.did?.akashaProfile?.id}>
+          {edge.node?.did?.akashaProfile?.name}
+        </div>
+      ))}
+      
+      {data?.node?.akashaProfile?.following?.pageInfo.hasNextPage && (
+        <button 
+          onClick={() => 
+            fetchMore({
+              variables: {
+                after: data.node.akashaProfile?.following?.pageInfo.endCursor
+              }
+            })
+          }
+        >
+          Load More
+        </button>
+      )}
+    </div>
+  );
+};
+```
+_________
+
+### useGetInterestsByDidQuery
+Fetch the interests (tags) a specific DID is subscribed to.
+
+#### Required Query Variables
+- id: string - DID of the profile to get insterests for.
+
+**Example usage**
+
+```tsx
+import { useGetInterestsByDidQuery } from '@akashaorg/ui-core-hooks/lib/generated/apollo';
+
+const InterestsList = ({ profileDID }) => {
+  const { data, loading, error } = useGetInterestsByDidQuery({
+    variables: {
+      id: profileDID,
+    },
+    fetchPolicy: 'cache-first',
+  });
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error loading interests</div>;
+
+  return (
+    <div>
+      {data?.node?.akashaProfile?.interests?.map(interest => (
+        <div key={interest.id}>
+          {interest.label}
+        </div>
+      ))}
+    </div>
+  );
+};
+```
+
 ### useGetBeamsByAuthorDidQuery
 _________
 ### useGetInterestsByIdQuery
