@@ -1311,9 +1311,19 @@ _________
 _________
 ### useGetReflectionsFromBeamQuery
 _________
-## Queries - (Stream)
+## Queries - (Indexed Streams)
+
+In order to avoid hitting the ceramic node for every query, to speed up the query execution and enable advanced filtering capabilites some hooks have a `StreamQuery` version. Since this is a different service, provided by AKASHA, these hooks require an extra field called `indexer`. The functionality of hooks with the `StreamQuery` suffix is almost identical to the non suffixed counterparts.
+
+You can identify if a hook has an indexed version by trying to import it from the `@akashaorg/ui-core-hooks/lib/generated/apollo` package.
+
+Example 
+- `useGetAppsQuery` => `useGetAppsStreamQuery`
+- `useGetContentBlockQuery` => `useGetContentBlockStreamQuery`
+
+
 :::info
-* `Stream` queries provide hooks to access data from the indexing service. They require the `indexer` to be passed to the hook upon initialization.
+* `StreamQuery` suffixed hooks provides access to data from the indexing service. For this reason, sometimes it may exhibit a delay between the data that is already in the Ceramic node and the indexing service. This delay should not be noticeable by the end user but it may require additional logic when doing a mutation and expecting the data to be immediately available.
 :::
 _________
 ### useGetAppsStreamQuery
