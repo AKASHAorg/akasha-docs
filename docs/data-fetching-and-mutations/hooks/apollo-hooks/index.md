@@ -13,14 +13,13 @@ Calling a mutation returns a tuple that includes:
 - An object with fields that represent the current status of the mutation's execution.
 
 _________
-
 ### useCreateAppMutation
-Create an application with **useCreateAppMutation**
+Create an application
 
 > This hook provides the mutation function to create the underlying model's data. It is helpful in creating robust applications.
 
 **Example usage**
-```jsx
+```tsx
 import { useCreateAppMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
@@ -60,12 +59,12 @@ const handleCreateApp = () => {
 ```
 _________
 ### useCreateBeamMutation
-Create a beam with **useCreateBeamMutation**
+Create a beam
 
 > This hook provides the mutation function to create the underlying model's data. It is helpful in creating beams during the blocks publishing process of the editor. These beams can then be viewed in an antenna app or any other list app curating beams.
 
 **Example usage**
-```jsx
+```tsx
 import { useCreateBeamMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
@@ -118,12 +117,12 @@ const handleCreateBeam = () => {
 ```
 _________
 ### useCreateContentBlockMutation
-Create a [content block](../../../extensions/editor/content_blocks.md) with **useCreateContentBlockMutation**
+Create a [content block](../../../extensions/editor/content_blocks.md)
 
 > This hook provides the mutation function to create the underlying model's data. It is helpful in creating content blocks during the blocks publishing process of the editor.
 
 **Example usage**
-```jsx
+```tsx
 import { useCreateContentBlockMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
@@ -165,13 +164,13 @@ const handleCreateContentBlock = () => {
 ```
 _________
 ### useCreateFollowMutation
-Create a follow document to a profile with **useCreateFollowMutation**
+Create a follow document to a profile
 
 > This hook provides the mutation function to create the underlying model's data. It is helpful in keeping track of a profile's followers or following data.
 The mutation is called only when there is no existing follow document id for the profile. If it exists, [useUpdateFollowMutation](#useupdatefollowmutation) should be used instead.
 
 **Example usage**
-```jsx
+```tsx
 import { useCreateFollowMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
@@ -215,13 +214,13 @@ const handleCreateFollow = () => {
 ```
 _________
 ### useCreateInterestsMutation
-Create an interest or list of interests with **useCreateInterestsMutation**
+Create an interest or list of interests
 
 > This hook provides the mutation function to create the underlying model's data. It is helpful in subscribing to a topic or list of topics
 The mutation is called only when there is no existing `tagSubscriptionId` for the given profile. If it exists, [useUpdateInterestsMutation](#useupdateinterestsmutation) should be used instead.
 
 **Example usage**
-```jsx
+```tsx
 import { useCreateInterestsMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
@@ -271,12 +270,12 @@ const handleCreateInterests = () => {
 ```
 _________
 ### useCreateProfileMutation
-Create a profile with **useCreateProfileMutation**
+Create a profile
 
 > This hook provides the mutation function to create the underlying model's data. It is helpful in creating new user profiles upon authentication.
 
 **Example usage**
-```jsx
+```tsx
 import { useCreateProfileMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
@@ -323,12 +322,12 @@ const handleCreateProfile = () => {
 ```
 _________
 ### useCreateReflectMutation
-Create a reflection to a beam or a beam's reflection with **useCreateReflectMutation**
+Create a reflection to a beam or a beam's reflection
 
 > This hook provides the mutation function to create the underlying model's data. It is helpful in creating a reflection to a beam or a beam's reflection.
 
 **Example usage**
-```jsx
+```tsx
 import { useCreateReflectMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
@@ -373,12 +372,12 @@ const handleCreateReflection = () => {
 ```
 _________
 ### useSetAppReleaseMutation
-Create an application's release with **useSetAppReleaseMutation**
+Create an application's release
 
 > This hook provides the mutation function to create the underlying model's data. It is helpful in creating a release linked to an application.
 
 **Example usage**
-```jsx
+```tsx
 import { useSetAppReleaseMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
@@ -422,12 +421,12 @@ const handleSetAppRelease = () => {
 ```
 _________
 ### useUpdateAppMutation
-Update an application with **useUpdateAppMutation**
+Update an application
 
 > This hook provides the mutation function to update the underlying model's data. It is helpful in removing an application.
 
 **Example usage**
-```jsx
+```tsx
 import { useUpdateAppMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
@@ -464,12 +463,12 @@ const handleRemoveApp = () => {
 ```
 _________
 ### useUpdateBeamMutation
-Update a beam with **useUpdateBeamMutation**
+Update a beam
 
 > This hook provides the mutation function to update the underlying model's data. It is helpful in removing a beam.
 
 **Example usage**
-```jsx
+```tsx
 import { useUpdateBeamMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
@@ -507,18 +506,18 @@ const handleRemoveBeam = () => {
 ```
 _________
 ### useUpdateContentBlockMutation
-Update a content block with **useUpdateContentBlockMutation**
+Update a content block
 
 > This hook provides the mutation function to update the underlying model's data. It is helpful in removing a content block.
 _________
 ### useUpdateFollowMutation
-Update a follow document to a profile with **useUpdateFollowMutation**
+Update a follow document to a profile
 
 > This hook provides the mutation function to update the underlying model's data. It is helpful in updating a profile's followers or following data.
 The mutation is called only when there is an existing follow document id for the profile. If it does not exist, [useCreateFollowMutation](#usecreatefollowmutation) should be used instead.
 
 **Example usage**
-```jsx
+```tsx
 import { useUpdateFollowMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
@@ -561,13 +560,13 @@ const handleUpdateFollow = () => {
 ```
 _________
 ### useUpdateInterestsMutation
-Update an interest or list of interests with **useUpdateInterestsMutation**
+Update an interest or list of interests
 
 > This hook provides the mutation function to create the underlying model's data. It is helpful in unsubscribing to topic or list of topics
 The mutation is called only when there is an existing `tagSubscriptionId` for the given profile. If it does not exist, [useCreateInterestsMutation](#usecreateinterestsmutation) should be used instead.
 
 **Example usage**
-```jsx
+```tsx
 import { useUpdateInterestsMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
@@ -618,12 +617,12 @@ const handleUpdateInterests = () => {
 ```
 _________
 ### useUpdateProfileMutation
-Update a profile with **useUpdateProfileMutation**
+Update a profile data
 
 > This hook provides the mutation function to update the underlying model's data. It is helpful in updating a user's profile.
 
 **Example usage**
-```jsx
+```tsx
 import { useUpdateProfileMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
@@ -670,12 +669,12 @@ const handleUpdateProfile = () => {
 ```
 _________
 ### useUpdateAkashaReflectMutation
-Update a reflection to a beam or a beam's reflection with **useUpdateAkashaReflectMutation**
+Update a reflection to a beam or a beam's reflection
 
 > This hook provides the mutation function to create the underlying model's data. It is helpful in editing a reflection to a beam or a beam's reflection.
 
 **Example usage**
-```jsx
+```tsx
 import { useUpdateAkashaReflectMutation } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
@@ -710,22 +709,21 @@ const handleEditReflection = () => {
 ```
 _________
 ### useUpdateAppReleaseMutation
-Update an application's release with **useUpdateAppReleaseMutation**
-
-> This hook provides the mutation function to create the underlying model's data. It is helpful in creating a release linked to an application.
+Update an application's release
 _________
 ### useIndexBeamMutation
-Index a beam with **useIndexBeamMutation**
+Index a beam
 _________
 ### useIndexContentBlockMutation
-Index a content block with **useIndexBeamMutation**
+Index a content block
 _________
 ### useIndexProfileMutation
-Index a profile with **useIndexBeamMutation**
+Index a profile
 _________
 ### useIndexReflectionMutation
-Index a reflection with **useIndexBeamMutation**
+Index a reflection
 _________
+
 ## Queries - (Standard)
 Queries are used to fetch data from the GraphQL API with no resulting changes to the underlying model's data.
 When initializing a query hook, you can pass to it the required parameters specifying what aspects of the model's data you are interested in. Calling a query returns returns an object from Apollo Client that contains loading, error, and data properties that can be used on the UI.
@@ -742,30 +740,78 @@ To overcome this issue, and also maintain consistency in usage, the hooks packag
 
 The selectors are split into multiple files which are named after the name of the hook it's compatible with.
 
-For example, to get the selectors for a hook named `useGetBeamsByIdQuery` you will need import them from the file `get-beam-by-id-query` like this: 
+For example, to get the selectors for a hook named `useGetBeamsByIdQuery` you will need import them from the file `get-beam-by-id-query` like this:
+
 ```tsx
 import { useGetBeamByIdQuery } from '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import { selectBeamId } from `@akashaorg/ui-core-hooks/lib/selectors/get-beam-by-id-query`;
 
-// selectors operates directly on the hook's data object:
-
-const {data, loading} = useGetBeamsByIdQuery({/*some vars*/});
+// selectors operate directly on the hook's data object:
+const { data, loading } = useGetBeamsByIdQuery({/*some vars*/});
 const beamId = selectBeamId(data); // now typescript will correctly infer the beamId type
-
 ```
-This will enhance the readability of the code and reduce field access errors that may occur if you forget to handle it.
+This will enhance the readability of the code and reduce field access errors that may occur, if you forget to handle it.
 
-:::info
-  Tip: Keep the selectors as simple as possible and don't try to merge or to handle multiple data types in one selector
+:::tip
+Keep the selectors as simple as possible and don't try to merge or to handle multiple data types in one selector
 :::
 _________
-### useGetAppReleaseByIdQuery
-Get an app release by id with **useGetAppReleaseByIdQuery**
+### useGetAppsReleasesQuery
+Get a list of application releases.
 
-> This hook provides the query function to get a specific app release using its id. It is useful in showing more info regarding a particular release of a given application.
+- Pagination uses Relay-style cursor pagination.
+- Returns a query object having the standard Apollo useQuery shape (`data`, `loading`, `error`, and helper methods like `fetchMore`)
+
+#### Required query variables
+This hook does not have any required variable.
+
+#### Optional query variables
+- after: `string` - Cursor for pagination (returns nodes after this id)
+- before: `string` - Cursor for pagination (returns nodes before this id)
+- first: `number` - Number of items (nodes) to fetch from the start of the list
+- last: `number` - Number of items (nodes) to fetch from the end of the list
+- filters: `AkashaAppReleaseFiltersInput` - Optional filters to apply to the query
+- sorting: `AkashaAppReleaseSortingInput` - Optional sorting to apply to the query
+
+#### Returned data object
+When the query executes successfully, the `data` object will contain
+- `data.akashaAppReleaseIndex.edges` - an array of application releases nodes
+- `data.akashaAppReleaseIndex.pageInfo` - pagination data
 
 **Example usage**
-```jsx
+```tsx
+import { useGetAppsReleasesQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+
+const { data, loading, error } = useGetAppsReleasesQuery({
+  variables: {
+    first: 10,
+    /**
+     * specify an application id to filter only
+     * releases for the particular application
+    */
+    filters: { where: { applicationID: { equalTo: 'id of the application' } } },
+    sorting: { createdAt: 'DESC' }
+  },
+  fetchPolicy: 'cache-first',
+  notifyOnNetworkStatusChange: true,
+});
+
+const releases = data?.akashaAppReleaseIndex?.edges || [];
+```
+_________
+### useGetAppReleaseByIdQuery
+Get an application release details using its id.
+
+- Returns a query object having the standard Apollo useQuery shape (`data`, `loading`, `error`).
+
+#### Required query variables
+- id: `string` - the id of the application's release.
+
+#### Returned data object
+When the query executes successfully, the `data` object will contain a `node` which has all the information regarding the release.
+
+**Example usage**
+```tsx
 import { useGetAppReleaseByIdQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 
 const { data, loading, error } = useGetAppReleaseByIdQuery({
@@ -775,85 +821,173 @@ const { data, loading, error } = useGetAppReleaseByIdQuery({
   // ...
 });
 
-const appReleaseData = useMemo(() => {
+const appRelease = useMemo(() => {
   if (data?.node && 'id' in data.node) {
     return data.node;
   }
   return null;
 }, [data]);
-
-// do something with 'appReleaseData'.
-// For example, you can get the version like so;
-const version = releaseData?.version
 
 // the 'loading' state can be used to render a spinner;
 if (loading) {
   return <Spinner/>
 }
+
+if (error) {
+  return <div>Error: {error.message}</div>
+}
+
+return (
+  // do something with 'appRelease'.
+  // For example, you can get the version like so;
+  <div>
+  <p>This release with id: {releaseId} is of version {appRelease?.version}</p>
+  </div>
+)
+```
+_________
+### useGetAppsReleasesByPublisherDidQuery
+Get a list of applications using publisher's DID
+
+- Pagination uses Relay-style cursor pagination.
+- Returns a query object having the standard Apollo useQuery shape (`data`, `loading`, `error`, and helper methods like `fetchMore`)
+
+#### Required query variables
+- id: `string` - the id of the publisher.
+
+#### Optional query variables
+- after: `string` - Cursor for pagination (returns nodes after this id)
+- before: `string` - Cursor for pagination (returns nodes before this id)
+- first: `number` - Number of items (nodes) to fetch from the start of the list
+- last: `number` - Number of items (nodes) to fetch from the end of the list
+- filters: `AkashaAppReleaseFiltersInput` - Optional filters to apply to the query
+- sorting: `AkashaAppReleaseSortingInput` - Optional sorting to apply to the query
+
+#### Returned data object
+If the query is successful, the `data` object will contain
+- `data.node.akashaAppReleaseList.edges` - an array of application releases nodes
+- `data.node.akashaAppReleaseList.pageInfo` - pagination data
+
+**Example usage**
+```tsx
+import { useGetAppsReleasesByPublisherDidQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+
+const { data, loading, error } = useGetAppsReleasesByPublisherDidQuery({
+  variables: {
+    id: 'id of the publisher',
+    // ...
+  },
+  // ...
+});
+
+const applicationsByPublisher = data?.node?.akashaAppReleaseList?.edges || [];
 ```
 _________
 ### useGetAppsQuery
-Get a list of apps with **useGetAppsQuery**
+Get a list of applications
 
-> This hook provides the query function to get a list of applications. It is useful in showing a list of all apps available in a world.
+- Pagination uses Relay-style cursor pagination.
+- Returns a query object having the standard Apollo useQuery shape (`data`, `loading`, `error`, and helper methods like `fetchMore`)
+
+#### Required query variables
+This hook does not have any required variable.
+
+#### Optional query variables
+- after: `string` - Cursor for pagination (returns nodes after this id)
+- before: `string` - Cursor for pagination (returns nodes before this id)
+- first: `number` - Number of items (nodes) to fetch from the start of the list
+- last: `number` - Number of items (nodes) to fetch from the end of the list
+- filters: `AkashaAppFiltersInput` - Optional filters to apply to the query
+- sorting: `AkashaAppSortingInput` - Optional sorting to apply to the query
+
+#### Returned data object
+If the query is successful, the `data` object will contain
+- `data.akashaAppIndex.edges` - an array of application nodes
+- `data.akashaAppIndex.pageInfo` - pagination data
 
 **Example usage**
-```jsx
+```tsx
 import { useGetAppsQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 
 const { data, loading, error } = useGetAppsQuery({
   variables: {
-    first: 1,
-    filters: {
+    first: 3,
     // ...
-    }, // specify aspects to be included in the returned data
-    sorting: {
-    // ...
-    }, // specify the order in which the data is arranged or presented
   },
 });
+
+const applications = data?.akashaAppIndex?.edges || [];
 ```
 _________
 ### useGetAppsByIdQuery
-Get a specific app from list of apps using its id with **useGetAppsByIdQuery**
+Get a specific application's details using its id
 
-> This hook provides the query function to get a specific app using its id from list of all available apps.
+- Returns a query object having the standard Apollo useQuery shape (`data`, `loading`, `error`).
+
+#### Required query variables
+- id: `string` - the id of the application.
+
+#### Returned data object
+When the query executes successfully, the `data` object will contain a `node` which has all the information regarding the application.
 
 **Example usage**
-```jsx
+```tsx
 import { useGetAppsByIdQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 
 const { data, loading, error } = useGetAppsByIdQuery({
   variables: { id: 'id of the application' },
-  fetchPolicy: 'cache-first', 
-  notifyOnNetworkStatusChange: true,
   // ...
 });
 
-const extensionData = useMemo(() => {
+const extension = useMemo(() => {
   if (data?.node && 'id' in data.node) {
     return data.node;
   }
   return null;
 }, [data]);
 
-// do something with 'extensionData',
-// For instance you can get the displayName like so;
-const displayName = extensionData?.displayName
-
 // you can use the 'loading' state to show a spinner
 if (loading) {
   return <Spinner/>
 }
+
+if (error) {
+  return <div>Error: {error.message}</div>
+}
+
+return (
+  // do something with 'extension'.
+  // For example, you can get the displayName and releases count like so;
+  <div>
+  <p>The application {extension?.displayName} has {extension?.releasesCount} releases</p>
+  </div>
+)
 ```
 _________
 ### useGetAppsByPublisherDidQuery
-Get a list of apps using the publisher's DID with **useGetAppsByPublisherDidQuery**
+Get a list of apps using the publisher's DID
 
-> This hook provides the query function to get a list of applications by a publisher/developer. It is useful in showing a list of all apps published by a specific developer.
+- Pagination uses Relay-style cursor pagination.
+- Returns a query object having the standard Apollo useQuery shape (`data`, `loading`, `error`, and helper methods like `fetchMore`)
+
+#### Required query variables (Only one of the following params)
+- id: `string` - the id of the application's release.
+
+#### Optional query variables
+- after: `string` - Cursor for pagination (returns nodes after this id)
+- before: `string` - Cursor for pagination (returns nodes before this id)
+- first: `number` - Number of items (nodes) to fetch from the start of the list
+- last: `number` - Number of items (nodes) to fetch from the end of the list
+- filters: `AkashaAppFiltersInput` - Optional filters to apply to the query
+- sorting: `AkashaAppSortingInput` - Optional sorting to apply to the query
+
+#### Returned data object
+If the query is successful, the `data` object will contain
+- `data.node.akashaAppList.edges` - an array of App nodes
+- `data.node.akashaAppList.pageInfo` - pagination data
 
 **Example usage**
-```jsx
+```tsx
 import { useGetAppsByPublisherDidQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
@@ -871,51 +1005,30 @@ const { data, loading, error } = useGetAppsByPublisherDidQuery({
     },
   },
 });
-```
-_________
-### useGetAppsReleasesByPublisherDidQuery
-_________
-### useGetAppsReleasesQuery
-Get a list of apps releases with **useGetAppsReleasesQuery**
 
-> This hook provides the query function to get a list of applications releases. It is useful in showing a list of releases for a specific app.
-
-**Example usage**
-```jsx
-import { useGetAppsReleasesQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
-
-const { data, loading, error } = useGetAppsReleasesQuery({
-  variables: {
-    first: 10,
-    filters: { where: { applicationID: { equalTo: 'id of the application' } } }, // specify an application id to filter only releases for the particular app
-    sorting: { createdAt: 'DESC' }
-  },
-  fetchPolicy: 'cache-first',
-  notifyOnNetworkStatusChange: true,
-});
+const applicationsByPublisherDid = data?.node?.akashaAppList?.edges || [];
 ```
 _________
 ### useGetBeamsQuery
+Query a paginated list of "Beams" (posts) with optional filtering and sorting.
 
-A generated hook for querying a paginated list of "Beams" (posts) with optional filtering and sorting.
-
-- Pagination uses Relay-style cursor pagination
+- Pagination uses Relay-style cursor pagination.
 - Returns a query object having the standard Apollo useQuery shape (`data`, `loading`, `error`, and helper methods like `fetchMore`)
 
 #### Required query variables (Only one of the following params)
-- first - number - Number of items (nodes) to fetch from the beginning of the list
-- last - number - Number of items (nodes) to fetch from the back of the list
+- first: `number` - Number of items (nodes) to fetch from the start of the list
+- last: `number` - Number of items (nodes) to fetch from the end of the list
 
 #### Optional query variables
-- filters - `AkashaBeamFiltersInput` - Optional filters to apply to the query
-- sorting - `AkashaBeamSortingInput` - Optional sorting to apply to a query
-- after - string - Cursor for pagination (returns nodes after this id)
-- before - string - Cursor for pagination (returns nodes vefore this id)
+- after: `string` - Cursor for pagination (returns nodes after this id)
+- before: `string` - Cursor for pagination (returns nodes before this id)
+- filters: `AkashaBeamFiltersInput` - Optional filters to apply to the query
+- sorting: `AkashaBeamSortingInput` - Optional sorting to apply to the query
 
 #### Returned data object
 If the query is successful, the `data` object will contain
-- `data.akashaBeamIndex` - an array of Beam nodes
-- `data.pageInfo` - pagination data
+- `data.akashaBeamIndex.edges` - an array of Beam nodes
+- `data.akashaBeamIndex.pageInfo` - pagination data
 
 **Example Usage**
 ```tsx
@@ -925,10 +1038,9 @@ import { useGetBeamsQuery } from '@akashaorg/ui-core-hooks/lib/generated/apollo'
 const BeamList = () => {
   const { data, loading, error, fetchMore } = useGetBeamsQuery({
     variables: {
-      // Fetches first 10 beams
-      first: 10,
+      first: 10, // fetches first 10 beams
       // NOTE: SortOrder enum should be imported from `@akashaorg/typings/lib/sdk/graphql-operation-types-new`
-      sorting: { createdAt: SortOrder.DESC} } 
+      sorting: { createdAt: SortOrder.DESC}
     }
   });
 
@@ -958,13 +1070,16 @@ const BeamList = () => {
 ```
 _________
 ### useGetBeamByIdQuery
+Get a specific beam from list of beams using its id
 
-Get a specific beam from list of beams using its id with **useGetBeamByIdQuery**
+#### Required query variables
+- id: `string` - the id of the beam.
 
-> This hook provides the query function to get a specific beam using its id from list of all beams.
+#### Returned data object
+When the query executes successfully, the `data` object will contain a `node` which has all the information regarding the beam.
 
 **Example usage**
-```jsx
+```tsx
 import { useGetBeamByIdQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 
 const beamId = 'id of the beam'
@@ -983,9 +1098,50 @@ const isBeamActive = useMemo(() => {
   return null;
 }, [data]);
 ```
-:::info
+:::tip
 It is important to check and compare received data fields against [useGetBeamStreamQuery](#usegetbeamstreamquery) which has the current indexed version of the beam.
 :::
+_________
+### useGetBeamsByAuthorDidQuery
+Get a list of beams using author's DID.
+
+- Pagination uses Relay-style cursor pagination.
+- Returns a query object having the standard Apollo useQuery shape (`data`, `loading`, `error`, and helper methods like `fetchMore`)
+
+#### Required query variables
+- id: `string` - the id of the publisher.
+
+#### Optional query variables
+- after: `string` - Cursor for pagination (returns nodes after this id)
+- before: `string` - Cursor for pagination (returns nodes before this id)
+- first: `number` - Number of items (nodes) to fetch from the start of the list
+- last: `number` - Number of items (nodes) to fetch from the end of the list
+- filters: `AkashaBeamFiltersInput` - Optional filters to apply to the query
+- sorting: `AkashaBeamSortingInput` - Optional sorting to apply to the query
+
+#### Returned data object
+If the query is successful, the `data` object will contain
+- `data.node.akashaBeamListCount` - a count of the list of beams returned
+- `data.node.isViewer` - true, if the author DID is same as authenticated DID.
+- `data.node.akashaBeamList.edges` - an array of App nodes
+- `data.node.akashaBeamList.pageInfo` - pagination data
+
+**Example Usage**
+```tsx
+import { useGetBeamsByAuthorDidQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+import getSDK from '@akashaorg/awf-sdk';
+
+const sdk = getSDK();
+
+const { data, loading, error } = useGetBeamsByAuthorDidQuery({
+  variables: {
+    id: 'DID of the beam author',
+  },
+  // ...
+});
+
+const beamsByAuthorDid = data?.node?.akashaBeamList?.edges || [];
+```
 _________
 ### useGetContentBlockByIdQuery
 
@@ -994,7 +1150,7 @@ Get a specific content-block by its id.
 > A Beam (post) in AKASHA Core is composed from a list of content-blocks (learn more in the content-blocks section of the documentation)
 
 #### Query Variables (Required):
-  - id - string - the id of the content block (usually obtained from a beam query)
+  - id: `string` - the id of the content block (usually obtained from a beam query)
 
 #### Returned data object
 If the query is successful, the `data` object will contain
@@ -1024,7 +1180,6 @@ const MyComponent = () => {
     <div>{contentBlock.author.id}</div>
   )
 }
-
 ```
 _________
 ### useGetBlockStorageByIdQuery
@@ -1040,10 +1195,8 @@ A hook to get the block storage of a content-block.
 
 
 ### useGetFollowDocumentsByDidQuery
-
 Get the list of follow relationship documents between the `id` and the `following` field DIDs. Used to check if a user's profile DID follows another's.
 This hook is used to determine if there is already a document created expressing the relationship and if the result is null (or empty) then the follow document should be created first using [useCreateFollowMutation](#usecreatefollowmutation). If the document is already created then it can be updated using [useUpdateFollowMutation](#useupdatefollowmutation).
-
 
 #### Required Query Variables
 - id: string - DID of the user you want to query
@@ -1082,7 +1235,6 @@ const MyComponent = () => {
     </div>
   )
 }
-
 ```
 _________
 ### useGetFollowersListByDidQuery
@@ -1140,7 +1292,6 @@ const FollowersPaginatedList = ({profileDID, isLoggedIn}) => {
 }
 ```
 _________
-
 ### useGetFollowingListByDidQuery
 
 A generated hook to get a paginated list of profiles that a specific DID follows
@@ -1183,8 +1334,8 @@ const FollowingList = ({ profileDID }) => {
       
       {data?.node?.akashaProfile?.following?.pageInfo.hasNextPage && (
         <button 
-          onClick={() => 
-            fetchMore({
+          onClick={
+            () => fetchMore({
               variables: {
                 after: data.node.akashaProfile?.following?.pageInfo.endCursor
               }
@@ -1199,7 +1350,6 @@ const FollowingList = ({ profileDID }) => {
 };
 ```
 _________
-
 ### useGetInterestsByDidQuery
 Fetch the interests (tags) a specific DID is subscribed to.
 
@@ -1233,8 +1383,6 @@ const InterestsList = ({ profileDID }) => {
   );
 };
 ```
-
-### useGetBeamsByAuthorDidQuery
 _________
 ### useGetInterestsByIdQuery
 _________
@@ -1243,12 +1391,12 @@ _________
 ### useGetMyProfileQuery
 _________
 ### useGetProfileByDidQuery
-Get a profile using its DID with **useGetProfileByDidQuery**
+Get a profile using its DID
 
-> This hook provides the query function to get a profile using its decentralized ID (DID). It is useful in showing thr details for a single profile.
+> This hook provides the query function to get a profile using its decentralized ID (DID). It is useful in showing the details for a single profile.
 
 **Example usage**
-```jsx
+```tsx
 import { useGetProfileByDidQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 
 const profileDID = 'DID of the profile being queried'
@@ -1264,12 +1412,12 @@ const { data, loading, error } = useGetProfileByDidQuery({
 ```
 _________
 ### useGetProfileByIdQuery
-Get a profile using its id with **useGetProfileByIdQuery**
+Get a profile using its id
 
 > This hook provides the query function to get a profile using its id. It is useful in showing thr details for a single profile.
 
 **Example usage**
-```jsx
+```tsx
 import { useGetProfileByIdQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 
 const profileID = 'id of the profile being queried'
@@ -1286,12 +1434,12 @@ _________
 ### useGetProfilesQuery
 _________
 ### useGetReflectReflectionsQuery
-Get list of reflections to a specific reflection with **useGetReflectReflectionsQuery**
+Get list of reflections to a specific reflection
 
 > This hook provides the query function to fetch reflections of a given reflection.
 
 **Example usage**
-```jsx
+```tsx
 import { useGetReflectReflectionsQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 
 const reflectionId = 'id of the reflection'
@@ -1309,12 +1457,12 @@ const reflections = data?.akashaReflectIndex?.edges
 ```
 _________
 ### useGetReflectionByIdQuery
-Get a specific reflection from list of reflections using its id with **useGetReflectionByIdQuery**
+Get a specific reflection from list of reflections using its id
 
 > This hook provides the query function to get a specific reflection using its id from list of all reflections.
 
 **Example usage**
-```jsx
+```tsx
 import { useGetReflectionByIdQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 
 const reflectionId = 'id of the reflection'
@@ -1330,6 +1478,7 @@ _________
 _________
 ### useGetReflectionsFromBeamQuery
 _________
+
 ## Queries - (Indexed Streams)
 
 In order to avoid hitting the ceramic node for every query, to speed up the query execution and enable advanced filtering capabilites some hooks have a `StreamQuery` version. Since this is a different service, provided by AKASHA, these hooks require an extra field called `indexer`. The functionality of hooks with the `StreamQuery` suffix is almost identical to the non suffixed counterparts.
@@ -1437,12 +1586,12 @@ const BeamListForTag = ({tagName}) => {
 
 
 ### useGetAppsStreamQuery
-Get a list of apps from the indexing service with **useGetAppsStreamQuery**
+Get a list of apps from the indexing service
 
 > Using the filters param, this hook can be used to read the most recently indexed version of an application from list of all apps.
 
 **Example usage**
-```jsx
+```tsx
 import { useGetAppsStreamQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
@@ -1464,12 +1613,12 @@ const { data, loading, error } = useGetAppsStreamQuery({
 ```
 _________
 ### useGetBeamStreamQuery
-Get a list of beams from the indexing service with **useGetBeamStreamQuery**
+Get a list of beams from the indexing service
 
 > Using the filters param, this hook can be used to read the most recently indexed version of a beam from list of all beams.
 
 **Example usage**
-```jsx
+```tsx
 import { useGetBeamStreamQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
@@ -1491,12 +1640,12 @@ const { data, loading, error } = useGetBeamStreamQuery({
 ```
 _________
 ### useGetInterestsStreamQuery
-Get a list of interests from the indexing service with **useGetInterestsStreamQuery**
+Get a list of interests from the indexing service
 
 > Using the filters param, this hook can be used to read the most recently indexed version of an interest from list of all interests.
 
 **Example usage**
-```jsx
+```tsx
 import { useGetInterestsStreamQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
@@ -1518,12 +1667,12 @@ const { data, loading, error } = useGetInterestsStreamQuery({
 ```
 _________
 ### useGetProfileStreamQuery
-Get a list of profiles from the indexing service with **useGetProfileStreamQuery**
+Get a list of profiles from the indexing service
 
 > Using the filters param, this hook can be used to read the most recently indexed version of a profile from list of all profiles.
 
 **Example usage**
-```jsx
+```tsx
 import { useGetProfileStreamQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
@@ -1545,12 +1694,12 @@ const { data, loading, error } = useGetProfileStreamQuery({
 ```
 _________
 ### useGetReflectionStreamQuery
-Get a list of reflections from the indexing service with **useGetReflectionStreamQuery**
+Get a list of reflections from the indexing service
 
 > Using the filters param, this hook can be used to read the most recently indexed version of a reflection from list of all reflections.
 
 **Example usage**
-```jsx
+```tsx
 import { useGetReflectionStreamQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 import getSDK from '@akashaorg/awf-sdk';
 
