@@ -1144,7 +1144,6 @@ const beamsByAuthorDid = data?.node?.akashaBeamList?.edges || [];
 ```
 _________
 ### useGetContentBlockByIdQuery
-
 Get a specific content-block by its id. 
 
 > A Beam (post) in AKASHA Core is composed from a list of content-blocks (learn more in the content-blocks section of the documentation)
@@ -1185,27 +1184,35 @@ _________
 ### useGetBlockStorageByIdQuery
 A hook to get the block storage of a content-block. 
 
-### Required Query Variables
-- id: string - content block's id
+#### Required query variables
+- id: `string` - content block's id.
 
 :::info
-  Content block storage functionality is not being used at the moment.
+Content block storage functionality is not being used at the moment.
+:::
+_________
+### useGetFollowDocumentsByDidQuery
+Get the list of follow relationship documents between the `id` and the `following` field DIDs. This query is used to check if a user's profile DID follows another's.
+
+:::info
+If there is no document created expressing the relationship, the result is null (or empty), then the follow document should be created first using [useCreateFollowMutation](#usecreatefollowmutation). If the document is already created then it can be updated using [useUpdateFollowMutation](#useupdatefollowmutation).
 :::
 
+#### Required query variables
+- id: `string` - DID of the user you want to query.
+- following: `string[]` - list of DIDs to check against
 
+#### Optional query variables
+- after: `string` - Cursor for pagination (returns nodes after this id)
+- before: `string` - Cursor for pagination (returns nodes before this id)
+- first: `number` - Number of items (nodes) to fetch from the start of the list
+- last: `number` - Number of items (nodes) to fetch from the end of the list
+- sorting: `AkashaFollowSortingInput` - Optional sorting to apply to the query
 
-### useGetFollowDocumentsByDidQuery
-Get the list of follow relationship documents between the `id` and the `following` field DIDs. Used to check if a user's profile DID follows another's.
-This hook is used to determine if there is already a document created expressing the relationship and if the result is null (or empty) then the follow document should be created first using [useCreateFollowMutation](#usecreatefollowmutation). If the document is already created then it can be updated using [useUpdateFollowMutation](#useupdatefollowmutation).
-
-#### Required Query Variables
-- id: string - DID of the user you want to query
-- following: string[] - list of DIDs to check against
-
-#### Optional Query Variables
-- first: string
-- last: string
-
+#### Returned data object
+If the query is successful, the `data` object will contain
+- `data.akashaFollowList.edges` - an array of application nodes
+- `data.akashaFollowList.pageInfo` - pagination data
 
 **Example Usage**
 ```tsx
@@ -1238,22 +1245,29 @@ const MyComponent = () => {
 ```
 _________
 ### useGetFollowersListByDidQuery
+Get a paginated list of followers for a specific profile DID
 
-A generated hook to get a paginated list of followers for a specific profile DID
+#### Required query variables
+- id: `string` - DID of the user you want to query
+- first: `number` - number of elements to include from the start of the list
+- last: `number` - number of elements to include from the end of the list
 
-#### Required Query Variables
-- id: string - DID of the user you want to query
-- first: string - number of elements to include from the start of the list
-- last: string - number of elements to include from the end of the list
+:::info
+You need to include either `first` or `last` variables in your query but not both
+:::
 
-> You need to include either `first` or `last` variables in your query but not both
+#### Optional query variables
+- after: string - Cursor for pagination (returns nodes after this id)
+- before: string - Cursor for pagination (returns nodes after this id)
+- sorting: `AkashaFollowInterfaceSortingInput` - Optional sorting to apply to the query
 
-#### Optional Query Variables
-- after: string - pagination cursor (returns elements after this DID)
-- before: string - pagination cursor (returns elements before this DID)
+#### Returned data object
+If the query is successful, the `data` object will contain
+- `data.node.isViewer` - true, if the author DID is same as authenticated DID.
+- `data.node.akashaProfile.followers.edges` - an array of profiles nodes
+- `data.node.akashaProfile.followers.pageInfo` - pagination data
 
 **Example usage**
-
 ```tsx
 import { useGetFollowersListByDidQuery } from '@akashaorg/ui-core-hooks/lib/generated/apollo';
 
@@ -1293,22 +1307,29 @@ const FollowersPaginatedList = ({profileDID, isLoggedIn}) => {
 ```
 _________
 ### useGetFollowingListByDidQuery
+Get a paginated list of profiles that a specific DID follows
 
-A generated hook to get a paginated list of profiles that a specific DID follows
+#### Required query variables
+- id: `string` - DID of the profile to get following list from
+- first: `number` - number of elements to include from the start of the list
+- last: `number` - number of elements to include from the end of the list
 
-#### Required Query Variables
-- id: string - DID of the profile to get following list from
-- first: number - number of elements to fetch from start
-- last: number - number of elements to fetch from end
+:::info
+You need to include either `first` or `last` variables in your query but not both
+:::
 
-> Note: Use either first or last, not both simultaneously
+#### Optional query variables
+- after: string - Cursor for pagination (returns nodes after this id)
+- before: string - Cursor for pagination (returns nodes after this id)
+- sorting: `AkashaFollowInterfaceSortingInput` - Optional sorting to apply to the query
 
-#### Optional Query Variables
-- after: string - pagination cursor for next page
-- before: string - pagination cursor for previous page
+#### Returned data object
+If the query is successful, the `data` object will contain
+- `data.node.isViewer` - true, if the author DID is same as authenticated DID.
+- `data.node.akashaFollowList.edges` - an array of profiles nodes
+- `data.node.akashaFollowList.pageInfo` - pagination data
 
 **Example usage**
-
 ```tsx
 import { useGetFollowingListByDidQuery } from '@akashaorg/ui-core-hooks/lib/generated/apollo';
 
@@ -1351,13 +1372,15 @@ const FollowingList = ({ profileDID }) => {
 ```
 _________
 ### useGetInterestsByDidQuery
-Fetch the interests (tags) a specific DID is subscribed to.
+Fetch the interests (tags), a specific DID is subscribed to.
 
-#### Required Query Variables
-- id: string - DID of the profile to get insterests for.
+#### Required query variables
+- id: `string` - DID of the profile to get interests for.
+
+#### Returned data object
+When the query executes successfully, the `data` object will contain a `node` which has all the information regarding the beam.
 
 **Example usage**
-
 ```tsx
 import { useGetInterestsByDidQuery } from '@akashaorg/ui-core-hooks/lib/generated/apollo';
 
@@ -1385,36 +1408,92 @@ const InterestsList = ({ profileDID }) => {
 ```
 _________
 ### useGetInterestsByIdQuery
+Get interests by its id
+
+#### Required query variables
+- id: `string` - DID of the profile to get interests for.
+
+#### Returned data object
+When the query executes successfully, the `data` object will contain a `node` which has all the information regarding the beam.
+
+:::info
+This hook is not currently in use.
+:::
 _________
 ### useGetInterestsQuery
+Get a list of interests
+
+- Pagination uses Relay-style cursor pagination.
+- Returns a query object having the standard Apollo useQuery shape (`data`, `loading`, `error`, and helper methods like `fetchMore`)
+
+#### Required query variables
+This hook does not have any required variable.
+
+#### Optional query variables
+- after: `string` - Cursor for pagination (returns nodes after this id)
+- before: `string` - Cursor for pagination (returns nodes before this id)
+- first: `number` - Number of items (nodes) to fetch from the start of the list
+- last: `number` - Number of items (nodes) to fetch from the end of the list
+
+#### Returned data object
+If the query is successful, the `data` object will contain
+- `data.akashaProfileInterestsIndex.edges` - an array of interests nodes
+- `data.akashaProfileInterestsIndex.pageInfo` - pagination data
+
+:::info
+This hook is not currently in use.
+:::
 _________
 ### useGetMyProfileQuery
+Get a logged user's profile
+
+#### Required query variables
+This hook does not have any required variable.
+
+#### Returned data object
+If the query is successful, the `data` object will contain
+- `data.viewer.akashaProfile` - profile detaila for logged user
+
+:::info
+This hook is not currently in use.
+:::
 _________
 ### useGetProfileByDidQuery
-Get a profile using its DID
+Get a profile using its Decentralized ID (DID).
 
-> This hook provides the query function to get a profile using its decentralized ID (DID). It is useful in showing the details for a single profile.
+- Returns a query object having the standard Apollo useQuery shape (`data`, `loading`, `error`).
+
+#### Required query variables
+- id: `string` - the did of the profile.
+
+#### Returned data object
+When the query executes successfully, the `data` object will contain a `node` which has all the information regarding the profile.
 
 **Example usage**
 ```tsx
 import { useGetProfileByDidQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
 
 const profileDID = 'DID of the profile being queried'
-const authenticatedDID = 'DID of the currently authenticated profile'
 
 const { data, loading, error } = useGetProfileByDidQuery({
   variables: {
     id: profileDID,
   },
-  fetchPolicy: 'cache-first',
-  skip: authenticatedDID !== profileDID
 })
+
+const profile = data.node.akashaProfile || null
 ```
 _________
 ### useGetProfileByIdQuery
 Get a profile using its id
 
-> This hook provides the query function to get a profile using its id. It is useful in showing thr details for a single profile.
+- Returns a query object having the standard Apollo useQuery shape (`data`, `loading`, `error`).
+
+#### Required query variables
+- id: `string` - the id of the profile.
+
+#### Returned data object
+When the query executes successfully, the `data` object will contain a `node` which has all the information regarding the profile.
 
 **Example usage**
 ```tsx
@@ -1427,16 +1506,82 @@ const { data, loading, error } = useGetProfileByIdQuery({
     id: profileID,
   },
 });
+
+const profile = data.node || null
 ```
 _________
 ### useGetProfileStatsByDidQuery
+Gets the stats (number of beams, interests, followers and following) for a give profile.
+
+#### Required query variables
+- id: `string` - the id of the profile.
+
+#### Returned data object
+When the query executes successfully, the `data` object will contain a `node` which has all the information regarding the profile's stats.
+
+**Example usage**
+```tsx
+import { useGetProfileStatsByDidQuery } from  '@akashaorg/ui-core-hooks/lib/generated/apollo';
+
+const profileID = 'id of the profile being queried'
+
+const { data, loading, error } = useGetProfileStatsByDidQuery({
+  variables: {
+    id: profileID,
+  },
+});
+
+const followCount = data.node.akashaFollowListCount
+const beamCount = data.node.akashaBeamListCount
+const reflectCount = data.node.akashaReflectListCount
+```
 _________
 ### useGetProfilesQuery
+Get a list of profiles
+
+- Pagination uses Relay-style cursor pagination.
+- Returns a query object having the standard Apollo useQuery shape (`data`, `loading`, `error`, and helper methods like `fetchMore`)
+
+#### Required query variables
+This hook does not have any required variable.
+
+#### Optional query variables
+- after: `string` - Cursor for pagination (returns nodes after this id)
+- before: `string` - Cursor for pagination (returns nodes before this id)
+- first: `number` - Number of items (nodes) to fetch from the start of the list
+- last: `number` - Number of items (nodes) to fetch from the end of the list
+- filters: `AkashaProfileFiltersInput` - Optional filters to apply to the query
+- sorting: `AkashaProfileSortingInput` - Optional sorting to apply to the query
+
+#### Returned data object
+If the query is successful, the `data` object will contain
+- `data.akashaProfileIndex.edges` - an array of profile nodes
+- `data.akashaProfileIndex.pageInfo` - pagination data
+
+:::info
+This hook is not currently in use.
+:::
 _________
 ### useGetReflectReflectionsQuery
 Get list of reflections to a specific reflection
 
-> This hook provides the query function to fetch reflections of a given reflection.
+- Pagination uses Relay-style cursor pagination.
+- Returns a query object having the standard Apollo useQuery shape (`data`, `loading`, `error`, and helper methods like `fetchMore`)
+
+#### Required query variables
+- id: `string` - the id of the reflection.
+
+#### Optional query variables
+- after: `string` - Cursor for pagination (returns nodes after this id)
+- before: `string` - Cursor for pagination (returns nodes before this id)
+- first: `number` - Number of items (nodes) to fetch from the start of the list
+- last: `number` - Number of items (nodes) to fetch from the end of the list
+- sorting: `AkashaReflectSortingInput` - Optional sorting to apply to the query
+
+#### Returned data object
+If the query is successful, the `data` object will contain
+- `data.akashaReflectIndex.edges` - an array of application nodes
+- `data.akashaReflectIndex.pageInfo` - pagination data
 
 **Example usage**
 ```tsx
@@ -1453,13 +1598,19 @@ const { data, loading, error } = useGetReflectReflectionsQuery({
 });
 
 // the reflections can be read from the data like so;
-const reflections = data?.akashaReflectIndex?.edges
+const reflections = data?.akashaReflectIndex?.edges || []
 ```
 _________
 ### useGetReflectionByIdQuery
-Get a specific reflection from list of reflections using its id
+Get a specific reflection using its id
 
-> This hook provides the query function to get a specific reflection using its id from list of all reflections.
+- Returns a query object having the standard Apollo useQuery shape (`data`, `loading`, `error`).
+
+#### Required query variables
+- id: `string` - the id of the application's release.
+
+#### Returned data object
+When the query executes successfully, the `data` object will contain a `node` which has all the information regarding the reflection.
 
 **Example usage**
 ```tsx
@@ -1472,11 +1623,62 @@ const { data, loading, error } = useGetReflectionByIdQuery({
   skip: !reflectionId, // this hook will not execute when reflectionId is not defined
   // ...
 });
+
+const reflection = data.node
 ```
 _________
 ### useGetReflectionsByAuthorDidQuery
+Get reflections by a given author using their did.
+
+- Pagination uses Relay-style cursor pagination.
+- Returns a query object having the standard Apollo useQuery shape (`data`, `loading`, `error`, and helper methods like `fetchMore`)
+
+#### Required query variables
+- id: `string` - the id of the application's release.
+
+#### Optional query variables
+- after: `string` - Cursor for pagination (returns nodes after this id)
+- before: `string` - Cursor for pagination (returns nodes before this id)
+- first: `number` - Number of items (nodes) to fetch from the start of the list
+- last: `number` - Number of items (nodes) to fetch from the end of the list
+- filters: `AkashaReflectFiltersInput` - Optional filters to apply to the query
+- sorting: `AkashaReflectSortingInput` - Optional sorting to apply to the query
+
+#### Returned data object
+If the query is successful, the `data` object will contain
+- `data.node.akashaReflectList.edges` - an array of reflection nodes
+- `data.node.akashaReflectList.pageInfo` - pagination data
+
+:::info
+This hook is not currently in use.
+:::
 _________
 ### useGetReflectionsFromBeamQuery
+Get reflections for a given beam using its id.
+
+- Pagination uses Relay-style cursor pagination.
+- Returns a query object having the standard Apollo useQuery shape (`data`, `loading`, `error`, and helper methods like `fetchMore`)
+
+#### Required query variables
+- id: `string` - the id of the application's release.
+
+#### Optional query variables
+- after: `string` - Cursor for pagination (returns nodes after this id)
+- before: `string` - Cursor for pagination (returns nodes before this id)
+- first: `number` - Number of items (nodes) to fetch from the start of the list
+- last: `number` - Number of items (nodes) to fetch from the end of the list
+- filters: `AkashaReflectInterfaceFiltersInput` - Optional filters to apply to the query
+- sorting: `AkashaReflectInterfaceSortingInput` - Optional sorting to apply to the query
+
+#### Returned data object
+If the query is successful, the `data` object will contain
+- `data.node.reflectionsCount` - number of reflections
+- `data.node.reflections.edges` - an array of reflection nodes
+- `data.node.reflections.pageInfo` - pagination data
+
+:::info
+This hook is not currently in use.
+:::
 _________
 
 ## Queries - (Indexed Streams)
@@ -1497,13 +1699,13 @@ Example
 ### useGetIndexedStreamQuery
 A hook that supports advanced querying capabilities through the filtering field. One of the main usecases at the moment is to query the beams published using a specific tag.
 
-#### Required Query Variables
+#### Required query variables
 - indexer: string - the indexing service to use (ex: sdk.services.gql.indexingDID)
 - first: string - number of items from the start of the list
 - last: string - number of items from the end of the list
 - filters: [AkashaIndexedStreamFiltersInput](https://github.com/AKASHAorg/akasha-core/blob/next/libs/typings/src/sdk/graphql-types-new.ts) - filters to apply to the query
 
-#### Optional Query Variables
+#### Optional query variables
 - sorting: object - sorting to be aplied to the elements
 
 :::info
@@ -1551,7 +1753,7 @@ _________
 ### useGetIndexedStreamCountQuery
 A hook that supports advanced querying capabilities through `filters` field that returns the number of elements that matches the query. Useful when you want to show how many items are matching the queries, without having to get the entire data.
 
-#### Required Query Variables
+#### Required query variables
 - indexer: string - the indexing service to use (ex: sdk.services.gql.indexingDID)
 - filters: [AkashaIndexedStreamFiltersInput](https://github.com/AKASHAorg/akasha-core/blob/next/libs/typings/src/sdk/graphql-types-new.ts) - filters to apply to the query
 
@@ -1724,12 +1926,12 @@ _________
 ### useGetContentBlockStreamQuery
 A generated hook to get a paginated list of content-blocks.
 
-#### Required Query Variables
+#### Required query variables
 - indexer: string - the indexing service to use (ex: sdk.services.gql.indexingDID)
 - first: number - number of items to return from the start of the list
 - last: number - number of items to return from the end of the list
 
-#### Optional Query Variables
+#### Optional query variables
 - filter: object - filtering to be applied to the query
 - sorting: object - sorting to be applied to the query
 
