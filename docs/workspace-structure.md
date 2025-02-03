@@ -30,6 +30,7 @@ akasha-core/
 ├── tools/
 │   ├── executors/
 │   ├── functions/
+│   ├── package-utils-plugin/
 │   ├── scripts/
 ├── worlds/
 │   ├── akasha.world/
