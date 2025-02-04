@@ -762,14 +762,13 @@ Get a list of application releases.
 - Pagination uses Relay-style cursor pagination.
 - Returns a query object having the standard Apollo useQuery shape (`data`, `loading`, `error`, and helper methods like `fetchMore`)
 
-#### Required query variables
-This hook does not have any required variable.
+#### Required query variables (Only one of the following params)
+- first: `number` - Number of items (nodes) to fetch from the start of the list
+- last: `number` - Number of items (nodes) to fetch from the end of the list
 
 #### Optional query variables
 - after: `string` - Cursor for pagination (returns nodes after this id)
 - before: `string` - Cursor for pagination (returns nodes before this id)
-- first: `number` - Number of items (nodes) to fetch from the start of the list
-- last: `number` - Number of items (nodes) to fetch from the end of the list
 - filters: `AkashaAppReleaseFiltersInput` - Optional filters to apply to the query
 - sorting: `AkashaAppReleaseSortingInput` - Optional sorting to apply to the query
 
@@ -889,14 +888,13 @@ Get a list of applications
 - Pagination uses Relay-style cursor pagination.
 - Returns a query object having the standard Apollo useQuery shape (`data`, `loading`, `error`, and helper methods like `fetchMore`)
 
-#### Required query variables
-This hook does not have any required variable.
+#### Required query variables (Only one of the following params)
+- first: `number` - Number of items (nodes) to fetch from the start of the list
+- last: `number` - Number of items (nodes) to fetch from the end of the list
 
 #### Optional query variables
 - after: `string` - Cursor for pagination (returns nodes after this id)
 - before: `string` - Cursor for pagination (returns nodes before this id)
-- first: `number` - Number of items (nodes) to fetch from the start of the list
-- last: `number` - Number of items (nodes) to fetch from the end of the list
 - filters: `AkashaAppFiltersInput` - Optional filters to apply to the query
 - sorting: `AkashaAppSortingInput` - Optional sorting to apply to the query
 
@@ -1426,14 +1424,13 @@ Get a list of interests
 - Pagination uses Relay-style cursor pagination.
 - Returns a query object having the standard Apollo useQuery shape (`data`, `loading`, `error`, and helper methods like `fetchMore`)
 
-#### Required query variables
-This hook does not have any required variable.
+#### Required query variables (Only one of the following params)
+- first: `number` - Number of items (nodes) to fetch from the start of the list
+- last: `number` - Number of items (nodes) to fetch from the end of the list
 
 #### Optional query variables
 - after: `string` - Cursor for pagination (returns nodes after this id)
 - before: `string` - Cursor for pagination (returns nodes before this id)
-- first: `number` - Number of items (nodes) to fetch from the start of the list
-- last: `number` - Number of items (nodes) to fetch from the end of the list
 
 #### Returned data object
 If the query is successful, the `data` object will contain
@@ -1446,9 +1443,6 @@ This hook is not currently in use.
 _________
 ### useGetMyProfileQuery
 Get a logged user's profile
-
-#### Required query variables
-This hook does not have any required variable.
 
 #### Returned data object
 If the query is successful, the `data` object will contain
@@ -1542,14 +1536,13 @@ Get a list of profiles
 - Pagination uses Relay-style cursor pagination.
 - Returns a query object having the standard Apollo useQuery shape (`data`, `loading`, `error`, and helper methods like `fetchMore`)
 
-#### Required query variables
-This hook does not have any required variable.
+#### Required query variables (Only one of the following params)
+- first: `number` - Number of items (nodes) to fetch from the start of the list
+- last: `number` - Number of items (nodes) to fetch from the end of the list
 
 #### Optional query variables
 - after: `string` - Cursor for pagination (returns nodes after this id)
 - before: `string` - Cursor for pagination (returns nodes before this id)
-- first: `number` - Number of items (nodes) to fetch from the start of the list
-- last: `number` - Number of items (nodes) to fetch from the end of the list
 - filters: `AkashaProfileFiltersInput` - Optional filters to apply to the query
 - sorting: `AkashaProfileSortingInput` - Optional sorting to apply to the query
 
