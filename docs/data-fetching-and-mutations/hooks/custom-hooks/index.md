@@ -77,12 +77,6 @@ useEffect(() => {
 }, [])
 ```
 _________
-### useNetworkState [deprecated]
-Check that the web3 provider's network is set to the correct network during authentication
-_________
-### useCurrentNetwork [deprecated]
-Check user's web3 provider's network
-_________
 ### useRequiredNetwork
 Get the required network name for user authentication from the SDK
 _________
@@ -105,8 +99,6 @@ _________
 ### useModalData
 _________
 ### useListenForMutationEvents
-_________
-### useShowFeedback
 _________
 ### useTheme
 _________
