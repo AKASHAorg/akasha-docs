@@ -30,7 +30,7 @@ The register function takes only one argument which is an object of the type [In
 
 ## Configuration object interface
 
-The config object returned returned has the [IAppConfig](https://github.com/AKASHAorg/akasha-core/blob/next/libs/typings/src/ui/apps.ts) type. The required parameters are:
+The config object returned returned has the [IAppConfig](https://github.com/AKASHAorg/akasha-core/blob/next/libs/typings/src/ui/extensions.ts#L45-L117) type. The required parameters are:
 
 ```tsx
 export const register = () => {
