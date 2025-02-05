@@ -77,9 +77,77 @@ useEffect(() => {
 ```
 _________
 ### useRequiredNetwork
-Get the required network name for user authentication from the SDK
+Get the required network details from the SDK.
+
+#### Returned data object
+When the hook has successfully run, it returns an object containing:
+- `data` - an object containing required network's details such as name and chainId
+- `isLoading` - loading state of the request
+- `isSuccess` - true, if the request is successfully completed
+- `error` - error object from the request, if any
+
+**Example usage**
+```tsx
+import { useRequiredNetwork } from '@akashaorg/ui-core-hooks',
+
+const Component = () => {
+
+const { data, isLoading, error } = useRequiredNetwork();
+
+const chainId = data.chainId;
+
+if (isLoading) {
+  return (
+    <div>loading ...</div>
+  )
+};
+
+if (error) {
+  return (
+    <div>An error has occured: {error.message}</div>
+  )
+};
+
+return (
+  <div>
+    {/** do something with `chainId`*/}
+  </div>
+)
+```
 _________
 ### useNetworkChangeListener
+Listen for changes in logged user provider's current network. It can be used in conjunction with [useRequiredNetwork](#userequirednetwork) to determine when to prompt user to switch back to the correct network.
+
+#### Returned data object
+When the hook has successfully run, it returns an array containing:
+- `currentNetwork` - an object containing details of provider's current network
+- `unsubscribe` - an utility function to unsubscribe from globalChannel
+
+**Example usage**
+```tsx
+import { useNetworkChangeListener, useRequiredNetwork } from '@akashaorg/ui-core-hooks',
+
+const Component = () => {
+
+const [ changedNetwork, changedNetworkUnsubscribe ] = useNetworkChangeListener();
+const requiredNetwork = useRequiredNetwork();
+
+if (requiredNetwork.data.chainId !== changedNetwork.chainId) {
+  return <div>
+  Hello, please switch back to {requiredNetwork.data.name}
+  </div>
+}
+
+useEffect(() => {
+return () => changedNetworkUnsubscribe(); // unsubscribe from the globalChannel when component unmounts.
+}, [ changedNetwork ])
+
+return (
+  <div>
+    {/** do something with `changedNetwork`*/}
+  </div>
+)
+```
 _________
 ### useEntryNavigation
 _________
@@ -88,12 +156,96 @@ _________
 ### usePlaformHealthCheck
 _________
 ### useDismissedCard
+Manage information cards displayed in the sidebar or inside the apps which users can dismiss by clicking the close button.
+
+#### Required variables
+- id: `string` - unique id of the information card
+
+#### Optional variables
+- statusStorage: `IStorage` - type of local storage
+
+#### Returned data object
+When the hook has successfully run, it returns an array containing:
+- `dismissed` - boolean value indicating whether te card has been dismissed or not
+- `dismissCard` - an utility function to dismiss cards
+
+**Example usage**
+```tsx
+import { useDismissedCard } from '@akashaorg/ui-core-hooks',
+
+const Component = () => {
+const profileDID = 'profile DID'
+const [ dismissed, dismissCard ] = useDismissedCard('@akashaorg/ui-widget-layout_version-info-card');
+
+return (
+  <div>
+    {
+      !dismissed && <div onClick={dismissCard}>information card</div>
+    }
+  </div>
+)
+```
 _________
 ### useValidDid
-_________
-### useModerationCategory
+Check the validity of an account's Decentralized IDentity (DID) address using the SDK's services.
+
+#### Required variables
+- profileId: `string` - DID of the profile to be checked for validity
+
+#### Optional variables
+- enabled: `boolean` - indicate when to run the query
+
+#### Returned data object
+When the hook has successfully run, it returns an object containing:
+- `validDid` - boolean value indicating whether the passed DID is valid or not
+- `isLoading` - loading state of the request
+- `isEthAddress` - boolean value indicating whether the valid DID is also a valid ETH Address
+
+**Example usage**
+```tsx
+import { useValidDid } from '@akashaorg/ui-core-hooks',
+
+const Component = () => {
+const profileDID = 'profile DID'
+const { validDid, isLoading } = useValidDid(profileDID, true);
+
+if (isLoading) {
+  return (
+    <div>loading ...</div>
+  )
+};
+
+return (
+  <div>
+    {/** do something with `validDid` */}
+  </div>
+)
+```
 _________
 ### useAccordion
+Handle state of Accordion component especially when systematic control is required in a component containing more than one accordion element.
+
+#### Returned data object
+When the hook has successfully run, it returns an object containing:
+- `activeAccordionId` - id of the active accordion
+- `setActiveAccordionId` - useState hook to set the active accordion id
+- `handleAccordionClick` - an utility function to handle acordion click
+
+**Example usage**
+```tsx
+import { useAccordion } from '@akashaorg/ui-core-hooks',
+
+const Component = () => {
+
+const { activeAccordionId, handleAccordionClick } = useAccordion();
+
+return (
+  <Accordion
+  open={elementId === activeAccordionId}
+  handleClick={handleAccordionClick}
+  />
+)
+```
 _________
 ### useModalData
 Handle data supplied to the modal extension. This hook uses a helper utility method `getModalFromParams` from [useRootComponentProps](#userootcomponentprops). It needs to be called in a modal component so it can have access to the modal params.
@@ -204,7 +356,7 @@ const Component = () => {
 const { data, loading, error } = useProfileStats('some profile id');
 
 
-if (isLoading) {
+if (loading) {
   return (
     <div>loading ...</div>
   )
