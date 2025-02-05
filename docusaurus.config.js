@@ -68,41 +68,6 @@ const config = {
         mergeModulesMergeMode: "module",
       },
     ],
-    [
-      "docusaurus-plugin-typedoc",
-      {
-        id: "akasha-ui-hooks-custom",
-        entryPoints: [
-          "./akasha-core/libs/hooks/src/index.ts"
-        ],
-        entryPointStrategy: "resolve",
-        tsconfig: "./akasha-core/libs/hooks/tsconfig.json",
-        readme: "none",
-        out: "./docs/data-fetching-and-mutations/hooks/custom-hooks",
-        entryFileName: "index.md",
-        name: "Custom Hooks",
-        fileExtension: '.md',
-        flattenOutputFiles: true,
-        enumMembersFormat: 'table',
-        typeDeclarationFormat: "table",
-        parametersFormat: "table",
-        propertiesFormat: "table",
-        indexFormat: "table",
-        membersWithOwnFile: [],
-        groupOrder: ["Functions", "*"],
-        navigationModel: {
-          excludeFolders: true,
-          excludeGroups: true,
-        },
-        plugin: ["typedoc-plugin-merge-modules"],
-        mergeModulesRenameDefaults: true,
-        mergeModulesMergeMode: "project",
-        textContentMappings: {
-          "kind.function.plural": "Hooks",
-          "kind.function.singular": "Hook",
-        }
-      },
-    ],
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
