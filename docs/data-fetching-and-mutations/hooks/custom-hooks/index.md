@@ -2,19 +2,24 @@
 This section provides in-depth information on the custom hooks used in the Akasha Core.
 
 ### useRootComponentProps
-Manage and access props received by the root component. These props may contain the context of the plugins for routing, translation, and extensions. It contains some utility functions ...
+Manage and access props received by the root component.
+These props may contain the context of the plugins for routing, translation, and extensions.
+It also exposes some utility functions which may be used across the World.
 
-> This hook encompasses certain methods and values that can be applied in various instances in the Core. For example, the `worldConfig` object can be used to access the config info related to the application's World. the `navigateToModal` method, helps to load the matching modal from the modal params. `getCorePlugins` exposes the main plugins used in Core, such as the routing plugin, which is useful for navigation within an application.
-
+For example, the `worldConfig` object can be used to access the configuration info related to the application's World.
+The `navigateToModal` method helps to load the matching modal from the modal params.
+The `getCorePlugins` method exposes the main plugins used in Core, such as the routing plugin, which is useful for navigation within an application.
 
 :::info
-This hook requires the provider to mounted. show example usage
+This hook requires that the root component app be wrapped with the accompanying provider.
+The Akasha Core hooks package exposes a Higher Order Component called `withProviders` that takes care of this.
 :::
 
 **Example usage**
-```jsx
-import { transformSource, useRootComponentProps } from '@akashaorg/ui-core-hooks';
+```tsx
+import { useRootComponentProps, withProviders } from '@akashaorg/ui-core-hooks';
 
+const Component = () => {
 const {
    baseRouteName,
    uiEvents,
@@ -37,6 +42,9 @@ const handleNavigate = () => {
     }
   })
 }
+}
+
+export default withProviders(Component)
 ```
 _________
 ### useAnalytics
@@ -45,10 +53,11 @@ Handle analytics in your applications
 > This hook is helpful in managing opt-in analytics functionality in a world.
 
 **Example usage**
-```jsx
+```tsx
 import { AnalyticsCategories } from '@akashaorg/typings/lib/ui';
 import { useAnalytics } from '@akashaorg/ui-core-hooks';
 
+const Component = () => {
 const [ analyticsActions ] = useAnalytics();
 
 const subscribed = true;
@@ -60,6 +69,7 @@ const handleTopicSubscription = () => {
     action: subscribed ? 'Topic Subscribed' : 'Topic Unsubscribed'
   })
 }
+}
 ```
 _________
 ### useConnectWallet
@@ -68,12 +78,16 @@ Connect to a user's wallet during user profile authentication
 > This hook provides seamless way to connect to a user's web3 wallet during authentication (first time or returning user)
 
 **Example usage**
-```jsx
-const connectWalletCall = useConnectWallet();
+```tsx
+import { useConnectWallet } from '@akashaorg/ui-core-hooks',
 
-useEffect(() => {
-  connectWalletCall.connect(); // trigger the connect method when the component mounts
-}, [])
+const Component = () => {
+  const connectWalletCall = useConnectWallet();
+
+  useEffect(() => {
+    connectWalletCall.connect(); // trigger the connect method when the component mounts
+  }, [])
+}
 ```
 _________
 ### useRequiredNetwork
@@ -116,7 +130,8 @@ return (
 ```
 _________
 ### useNetworkChangeListener
-Listen for changes in logged user provider's current network. It can be used in conjunction with [useRequiredNetwork](#userequirednetwork) to determine when to prompt user to switch back to the correct network.
+Listen for changes in logged user provider's current network.
+It can be used in conjunction with [useRequiredNetwork](#userequirednetwork) to determine when to prompt user to switch back to the correct network.
 
 #### Returned data object
 When the hook has successfully run, it returns an array containing:
@@ -149,11 +164,66 @@ return (
 )
 ```
 _________
-### useEntryNavigation
-_________
 ### useLegalDoc
+Retrieve legal docs stored on IPFS
+
+#### Required variables
+- docName: `string` - the name of doc to be retrieved
+
+#### Returned data object
+When the hook has successfully run, it returns an object containing:
+- `data` - an object containing fetchd legal doc
+- `isLoading` - loading state of the request
+- `error` - error object from the request, if any
+- `isFetched` - boolean value that checks if the returned data is defined
+
+**Example usage**
+```tsx
+import { useLegalDoc } from '@akashaorg/ui-core-hooks',
+
+const Component = () => {
+const { data, isLoading, error, isFetched } = useLegalDoc();
+
+if (isLoading) return <div>loading ...</div>;
+
+if (error) return <div>An error has occured: {error.message}</div>;
+
+return (
+  <div>
+  {
+    isFetched ? <div>
+    {/** do something with the returned `data` */}
+    </div>
+  }
+  </div>
+)
+}
+```
 _________
 ### usePlaformHealthCheck
+Check the overall status of the Akasha World Platform and its acssociated services. This hook plays a crucial role in informing the user of any downtime when maintenance mode is triggered or enabled.
+
+#### Returned data object
+When the hook has successfully run, it returns an object containing:
+- `data` - an object containing the `statusCode` and `success` values of the request.
+- `isLoading` - loading state of the request
+
+**Example usage**
+```tsx
+import { usePlaformHealthCheck } from '@akashaorg/ui-core-hooks',
+
+const Component = () => {
+const { data, isLoading} = usePlaformHealthCheck();
+
+if (isLoading) return <div>loading ...</div>;
+
+return (
+  <div>
+    platform status: { statusCode }
+  </div>
+)
+}
+```
 _________
 ### useDismissedCard
 Manage information cards displayed in the sidebar or inside the apps which users can dismiss by clicking the close button.
@@ -184,6 +254,7 @@ return (
     }
   </div>
 )
+}
 ```
 _________
 ### useValidDid
@@ -209,17 +280,14 @@ const Component = () => {
 const profileDID = 'profile DID'
 const { validDid, isLoading } = useValidDid(profileDID, true);
 
-if (isLoading) {
-  return (
-    <div>loading ...</div>
-  )
-};
+if (isLoading) return <div>loading ...</div>;
 
 return (
   <div>
     {/** do something with `validDid` */}
   </div>
 )
+}
 ```
 _________
 ### useAccordion
@@ -236,7 +304,6 @@ When the hook has successfully run, it returns an object containing:
 import { useAccordion } from '@akashaorg/ui-core-hooks',
 
 const Component = () => {
-
 const { activeAccordionId, handleAccordionClick } = useAccordion();
 
 return (
@@ -245,6 +312,7 @@ return (
   handleClick={handleAccordionClick}
   />
 )
+}
 ```
 _________
 ### useModalData
@@ -259,7 +327,6 @@ When the hook has successfully run, it returns an object containing:
 import { useModalData } from '@akashaorg/ui-core-hooks',
 
 const BeamRemoveComponent = () => {
-
 const { modalData } = useModalData();
 
 const beamId = modalData('beamId');
@@ -269,6 +336,7 @@ return (
     {/** do something with beamId*/}
   </div>
 )
+}
 ```
 _________
 ### useListenForMutationEvents
@@ -283,7 +351,6 @@ When the hook has successfully run, it returns an object containing:
 import { useListenForMutationEvents } from '@akashaorg/ui-core-hooks',
 
 const Component = () => {
-
 const mutationEvents = useListenForMutationEvents();
 
 useEffect(() => {
@@ -298,6 +365,7 @@ useEffect(() => {
     // do something with returned data
   }
 }, [mutationEvents])
+}
 ```
 _________
 ### useTheme
@@ -313,14 +381,11 @@ When the hook has successfully run, it returns an object containing:
 import { useTheme } from '@akashaorg/ui-core-hooks',
 
 const Component = () => {
-
 const { theme, propagateTheme } = useTheme();
-
 
 const handleThemeSwitch = (value: string) => () => {
   propagateTheme(value, true);
 };
-}
 
 return (
   <div>
@@ -330,6 +395,7 @@ return (
     </button>
   </div>
 )
+}
 ```
 _________
 ### useProfileStats
@@ -352,21 +418,11 @@ When the hook has successfully run, it returns an object containing:
 import { useProfileStats } from '@akashaorg/ui-core-hooks',
 
 const Component = () => {
-
 const { data, loading, error } = useProfileStats('some profile id');
 
+if (loading) return <div>loading ...</div>;
 
-if (loading) {
-  return (
-    <div>loading ...</div>
-  )
-};
-
-if (error) {
-  return (
-    <div>An error has occured: {error.message}</div>
-  )
-};
+if (error) return <div>An error has occured: {error.message}</div>;
 
 return (
   <div>
@@ -390,7 +446,6 @@ When the hook has successfully run, it returns an object containing:
 import { useSaveSettings } from '@akashaorg/ui-core-hooks',
 
 const Component = () => {
-
 const { saveNotificationSettings, data, isLoading, error } = useSaveSettings();
 
 const handleSaveSettings = () => {
@@ -409,23 +464,16 @@ const handleSaveSettings = () => {
   );
 }
 
-if (isLoading) {
-  return (
-    <div>loading ...</div>
-  )
-};
+if (isLoading) return <div>loading ...</div>;
 
-if (error) {
-  return (
-    <div>An error has occured: {error.message}</div>
-  )
-};
+if (error) return <div>An error has occured: {error.message}</div>;
 
 return (
   <div>
     {/** do something with `data` */}
   </div>
 )
+}
 ```
 _________
 ### useGetSettings
@@ -445,49 +493,38 @@ When the hook has successfully run, it returns an object containing:
 import { useGetSettings } from '@akashaorg/ui-core-hooks',
 
 const Component = () => {
-
 const { data, isLoading, error } = useGetSettings("@akashaorg/app-notifications");
 
-if (isLoading) {
-  return (
-    <div>loading ...</div>
-  )
-};
+if (isLoading) return <div>loading ...</div>;
 
-if (error) {
-  return (
-    <div>An error has occured: {error.message}</div>
-  )
-};
+if (error) return <div>An error has occured: {error.message}</div>;
 
 return (
   <div>
     {/** do something with `data` */}
   </div>
 )
+}
 ```
 _________
 ### useNsfwToggling
-Get and set user's choice for displaying `Not Safe For Work` (NSFW) contents
+Get and set user's preference for displaying `Not Safe For Work` (NSFW) contents
 
 #### Returned data object
 When the hook has successfully run, it returns an object containing:
-- `showNsfw` - a boolean value.
-- `toggleShowNsfw` - an utility function for toggling the value of the `showNsfw`
+- `showNsfw` - a boolean value indicating user's preference
+- `toggleShowNsfw` - an utility function for toggling user's preference
 
 **Example usage**
 ```tsx
 import { useNsfwToggling } from '@akashaorg/ui-core-hooks',
 
 const Component = () => {
-
 const { showNsfw, toggleShowNsfw } = useNsfwToggling();
-
 
 const handleToggleNSFW = (value: boolean) => () => {
   toggleShowNsfw(value);
 };
-}
 
 return (
   <div>
@@ -497,17 +534,18 @@ return (
     </button>
   </div>
 )
+}
 ```
 _________
 ### useMentions
 Retrieve and/or set the mentions associated with a profile
 
 #### Required variables
-- authenticatedDID: `string` - id of the logged user
+- authenticatedDID: `string` - id of the authenticated profile
 
 #### Returned data object
 When the hook has successfully run, it returns an object containing:
-- `setMentionQuery` - a useState hook that sets the mention.
+- `setMentionQuery` - a useState hook that sets the provided mention(s).
 - `mentions` - a list of mentions object
 - `allFollowing` - a list of the profiles, the logged user is following
 
@@ -515,18 +553,17 @@ When the hook has successfully run, it returns an object containing:
 ```tsx
 import { useMentions } from '@akashaorg/ui-core-hooks',
 
-const Component = ({ authenticatedDID } ) => {
-
+const Component = ({ authenticatedDID }) => {
 const { setMentionQuery, mentions } = useMentions(authenticatedDID);
 
 const handleGetMentions = (query: string) => {
   setMentionQuery(query);
 };
-}
 
 return (
   <div>
   {/** do something with `mentions` */}
   </div>
 )
+}
 ```
