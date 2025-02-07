@@ -12,12 +12,13 @@ The `getCorePlugins` method exposes the main plugins used in Core, such as the r
 
 :::info
 This hook requires that the root component app be wrapped with the accompanying provider.
-The Akasha Core hooks package exposes a Higher Order Component called `withProviders` that takes care of this.
+The Akasha Core hooks package exposes a Higher Order Component called `withProviders` that takes care of this, in addition to other providers.
+Alternatively, you can also directly use the `RootComponentPropsProvider` required for the `useRootComponentProps` hook
 :::
 
 **Example usage**
 ```tsx
-import { useRootComponentProps, withProviders } from '@akashaorg/ui-core-hooks';
+import { useRootComponentProps, RootComponentPropsProvider } from '@akashaorg/ui-core-hooks';
 
 const Component = () => {
 const {
@@ -44,7 +45,7 @@ const handleNavigate = () => {
 }
 }
 
-export default withProviders(Component)
+export default <RootComponentPropsProvider><Component/></RootComponentPropsProvider>
 ```
 _________
 ### useAnalytics
