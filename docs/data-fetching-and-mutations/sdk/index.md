@@ -4,19 +4,17 @@ sidebar_label: SDK
 ---
 
 # SDK Overview
+The AKASHA SDK is used in every world instance and provides the core functionality to interact with different services and third parties (ex. ComposeDB, Metamask, Infura, etc.).
 
-The AKASHA SDK is used in every world instance and provides the core functionality to interact with different services and 3rd parties (ex. Metamask, Textile, Infura, etc.).
-
-### Core concepts
-
+## Core concepts
 - dependency injection (inversify)
 - RxJS
 
-### Usage
+***Example usage***
 
 To instantiate the SDK, you can use one of the methods it exports:
 
-```typescript
+```tsx title="./component-requiring-sdk.tsx"
 import getSDK from "@akashaorg/awf-sdk";
 
 const sdk = getSDK();
@@ -26,7 +24,7 @@ const sdk = getSDK();
 
 or:
 
-```ts
+```tsx
 import { init } from "@akashaorg/awf-sdk";
 
 const sdk = init();
