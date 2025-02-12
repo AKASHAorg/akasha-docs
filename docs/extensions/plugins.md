@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 53
 sidebar_label: Plugins
 ---
 

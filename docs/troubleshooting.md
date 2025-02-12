@@ -1,3 +1,8 @@
+---
+sidebar_position: 10
+sidebar_label: Errors and Troubleshooting
+---
+
 # Errors and Toubleshooting
 
 ### Error when running yarn install or yarn build:all for the first time

@@ -1,9 +1,9 @@
 ---
-sidebar_position: 2
+sidebar_position: 52
 sidebar_label: Widgets
 ---
 
-# Widgets Overview
+# Widgets
 
 A widget is a small functional unit that can be reused across multiple pages/apps. It usually covers very specific functionalities like displaying relevant information or allowing to perform common actions.
 
