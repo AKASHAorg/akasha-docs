@@ -14,5 +14,5 @@ To keep it simple, we will use a `<textarea>` element to input the code and a `<
 
 
 :::caution
-This section is a work in progress
+This page is still being actively updated. Please watch out for changes
 :::
