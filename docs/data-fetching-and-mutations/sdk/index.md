@@ -9,8 +9,8 @@ The AKASHA SDK is used in every world instance and provides the core functionali
 
 It is essentially divided into two parts:
 
-1. <span style={{color: 'green'}}>`Services`</span>: consists of various services related to Ceramic, error logging, GraphQL, cache stashing, database management, app settings, and much more.
-2. <span style={{color: 'green'}}>`API`</span>: contains various API endpoints related to the global channel, the authentication service and the profile service.
+1. <span style={{color: 'tomato'}}>`Services`</span>: consists of various services related to Ceramic, error logging, GraphQL, cache stashing, database management, app settings, and much more.
+2. <span style={{color: 'tomato'}}>`API`</span>: contains various API endpoints related to the global channel, the authentication service and the profile service.
 
 ## Project Folder Structure
 
@@ -18,17 +18,17 @@ This section might be helpful if you are interested in understanding how the SDK
 
 In terms of folder structure, the SDK consists of the following modules:
 
-1. <span style={{color: 'green'}}>`Authentication`</span>: This module is in charge of signing the user in, managing user's session, and taking care of private message decryption.
-2. <span style={{color: 'green'}}>`Common`</span>: This module contains miscellaneous methods that encompass web3, DID management, Zod schema validator, IPFS connector, Lit Protocol access configurator, Ceramic session management, Event Bus configuration, error handling, and general configuration for the app.
-3. <span style={{color: 'green'}}>`DB`</span>: This module contains methods for managing the database such as creating a new DB or getting access to the local DB.
-4. <span style={{color: 'green'}}>`GQL`</span>: This module is in charge of managing Apollo GraphQL requests and mutations sent from the client. Besides generating an Apollo client instance, it also acts as a middle man that, depending on the context source, will route the GraphQL operation to either the federated GraphQL or the Ceramic node for processing. Moderation is made possible in Akasha World thanks to the federated graph which can add moderation label to a mutation before converting it into a REST request for the Ceramic node.
-5. <span style={{color: 'green'}}>`Helpers`</span>: This module contains various helper methods for manipulating images or formatting data.
-6. <span style={{color: 'green'}}>`Logging`</span>: This module is in charge of managing the logging service. There is a create method that you can use to create a logger that is tied with a specific app.
-7. <span style={{color: 'green'}}>`Posts`</span>: This module contains GraphQL fragments related to the beams and reflections. These fragments are used for generating the hooks that will be used as API endpoints for creating/updating/deleting beams and reflections.
-8. <span style={{color: 'green'}}>`Profiles`</span>: This module contains GraphQL fragments related to the profile model. It also contains some API endpoints for getting a profile's stats `(getProfileStats)` or for saving media files related to a profile `(saveMediaFile)`.
-9. <span style={{color: 'green'}}>`Registry`</span>: This module is in charge of managing GraphQL operations related to the extension registry such as mutations to create an app/app release, indexing an app, or queries to get app info.
-10. <span style={{color: 'green'}}>`Settings`</span>: This module contains get and set methods for saving and getting an application's settings from the browser's IndexedDB storage.
-11. <span style={{color: 'green'}}>`Stash`</span>: This module contains methods for managing the LRU cache.
+1. <span style={{color: 'tomato'}}>`Authentication`</span>: This module is in charge of signing the user in, managing user's session, and taking care of private message decryption.
+2. <span style={{color: 'tomato'}}>`Common`</span>: This module contains miscellaneous methods that encompass web3, DID management, Zod schema validator, IPFS connector, Lit Protocol access configurator, Ceramic session management, Event Bus configuration, error handling, and general configuration for the app.
+3. <span style={{color: 'tomato'}}>`DB`</span>: This module contains methods for managing the database such as creating a new DB or getting access to the local DB.
+4. <span style={{color: 'tomato'}}>`GQL`</span>: This module is in charge of managing Apollo GraphQL requests and mutations sent from the client. Besides generating an Apollo client instance, it also acts as a middle man that, depending on the context source, will route the GraphQL operation to either the federated GraphQL or the Ceramic node for processing. Moderation is made possible in Akasha World thanks to the federated graph which can add moderation label to a mutation before converting it into a REST request for the Ceramic node.
+5. <span style={{color: 'tomato'}}>`Helpers`</span>: This module contains various helper methods for manipulating images or formatting data.
+6. <span style={{color: 'tomato'}}>`Logging`</span>: This module is in charge of managing the logging service. There is a create method that you can use to create a logger that is tied with a specific app.
+7. <span style={{color: 'tomato'}}>`Posts`</span>: This module contains GraphQL fragments related to the beams and reflections. These fragments are used for generating the hooks that will be used as API endpoints for creating/updating/deleting beams and reflections.
+8. <span style={{color: 'tomato'}}>`Profiles`</span>: This module contains GraphQL fragments related to the profile model. It also contains some API endpoints for getting a profile's stats `(getProfileStats)` or for saving media files related to a profile `(saveMediaFile)`.
+9. <span style={{color: 'tomato'}}>`Registry`</span>: This module is in charge of managing GraphQL operations related to the extension registry such as mutations to create an app/app release, indexing an app, or queries to get app info.
+10. <span style={{color: 'tomato'}}>`Settings`</span>: This module contains get and set methods for saving and getting an application's settings from the browser's IndexedDB storage.
+11. <span style={{color: 'tomato'}}>`Stash`</span>: This module contains methods for managing the LRU cache.
 
 ## Core Concepts
 
