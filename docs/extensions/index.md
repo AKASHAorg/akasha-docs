@@ -15,8 +15,8 @@ We believe that these extensions done by and for the Ethereum community will gre
 Good examples, though not yet available, could be:
 - an **Events** App - using [Apps](./applications.md)
 - an **Activity Overview** Widget - using [Widgets](./widgets.md)
-- upvoting or downvoting a comment - using [ExtensionPoints](./extension_points.md)
-- turning a post into an NFT - using [ContentBlocks](./content_blocks.md)
+- upvoting or downvoting a comment - using [ExtensionPoints](./extension-points.md)
+- turning a post into an NFT - using [ContentBlocks](./editor/content_blocks.md)
 - an API to a 3rd party service - using [Plugins](./plugins.md)
 
 So, there are multiple ways in which you can enrich the functionality of a world

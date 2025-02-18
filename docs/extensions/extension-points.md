@@ -32,7 +32,7 @@ To define an extension-point the following properties must be set:
 
 |            | Required |                 Description                        |
 |:----------:|:--------:|:--------------------------------------------------:|
-| loadingFn  |   yes    | the [loadingFn](../extensions/loading_function.md) |
+| loadingFn  |   yes    | the [loadingFn](./app-loader.md) |
 | mountsIn   |   yes    | the slot in which this extension will be mounted   |
 
 
