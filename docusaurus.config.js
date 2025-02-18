@@ -1,23 +1,23 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-const {themes} = require('prism-react-renderer');
+const { themes } = require("prism-react-renderer");
 const { directiveDescriptor } = require("@graphql-markdown/helpers");
 const lightTheme = themes.github;
 const darkTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "AKASHA docs",
-  tagline: "Build your own application with AKASHA",
+  title: "AKASHA Documentation",
+  tagline: "Build your own application with AKASHA Core",
   url: "https://akasha-docs.pages.dev",
   baseUrl: "/",
-  onBrokenLinks: "ignore", // @TODO: revert this after refactor
-  onBrokenAnchors: "ignore", // @TODO: revert this after refactor
+  onBrokenLinks: "throw",
+  // @ts-ignore
+  onBrokenAnchors: "ignore",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "AKASHAorg", // Usually your GitHub org/user name.
   projectName: "akasha-docs", // Usually your repo name.
-
   presets: [
     [
       "classic",
@@ -54,7 +54,7 @@ const config = {
         fileExtension: ".mdx",
         flattenOutputFiles: true,
         sidebarLinks: {},
-        enumMembersFormat: 'table',
+        enumMembersFormat: "table",
         typeDeclarationFormat: "table",
         parametersFormat: "table",
         propertiesFormat: "table",
@@ -97,16 +97,12 @@ const config = {
               },
               {
                 label: "Quick start",
-                to: "/dev-quickstart",
-              },
-              {
-                label: "Glossary",
-                to: "/glossary"
+                to: "/setup",
               },
               {
                 label: "Extensions",
                 to: "/extensions",
-              }
+              },
             ],
           },
           {
@@ -144,40 +140,47 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright ©${new Date().getFullYear()} AKASHA Foundation`,
+        copyright: `Copyright ©2015 - ${new Date().getFullYear()} AKASHA Foundation`,
       },
       prism: {
         theme: lightTheme,
         darkTheme: darkTheme,
-        additionalLanguages: ['bash', 'diff', 'graphql', 'yaml', 'json', 'json5'],
+        additionalLanguages: [
+          "bash",
+          "diff",
+          "graphql",
+          "yaml",
+          "json",
+          "json5",
+        ],
       },
     }),
 };
 
-if (process.env['NODE_ENV'] === 'production' && !!config.themeConfig) {
-    config.themeConfig.algolia = {
-      // The application ID provided by Algolia
-      appId: process.env.ALGOLIA_APP_ID,
+if (process.env["NODE_ENV"] === "production" && !!config.themeConfig) {
+  config.themeConfig.algolia = {
+    // The application ID provided by Algolia
+    appId: process.env.ALGOLIA_APP_ID,
 
-      // Public API key
-      apiKey: process.env.ALGOLIA_API_KEY,
+    // Public API key
+    apiKey: process.env.ALGOLIA_API_KEY,
 
-      indexName: process.env.ALGOLIA_INDEX_NAME,
+    indexName: process.env.ALGOLIA_INDEX_NAME,
 
-      // Optional: see doc section below
-      contextualSearch: true,
+    // Optional: see doc section below
+    contextualSearch: true,
 
-      // Optional: Specify domains where the navigation should occur through window.location instead on history.push.
-      // externalUrlRegex: 'external\\.com|domain\\.com',
+    // Optional: Specify domains where the navigation should occur through window.location instead on history.push.
+    // externalUrlRegex: 'external\\.com|domain\\.com',
 
-      // Optional: Algolia search parameters
-      searchParameters: {},
+    // Optional: Algolia search parameters
+    searchParameters: {},
 
-      // Optional: path for search page that enabled by default (`false` to disable it)
-      searchPagePath: 'search',
+    // Optional: path for search page that enabled by default (`false` to disable it)
+    searchPagePath: "search",
 
-      //... other Algolia params
-    }
+    //... other Algolia params
+  };
 }
 
-module.exports = config;
+export default config;
