@@ -1032,7 +1032,6 @@ If the query is successful, the `data` object will contain
 ```tsx
 import { useGetBeamsQuery } from '@akashaorg/ui-core-hooks/lib/generated/apollo';
 
-
 const BeamList = () => {
   const { data, loading, error, fetchMore } = useGetBeamsQuery({
     variables: {
@@ -1215,7 +1214,6 @@ If the query is successful, the `data` object will contain
 **Example Usage**
 ```tsx
 import { useGetFollowDocumentsByDidQuery } from '@akashaorg/ui-core-hooks/lib/generated/apollo';
-
 
 const MyComponent = () => {
   const { data, error } = useGetFollowDocumentsByDidQuery({
@@ -1684,7 +1682,6 @@ Example
 - `useGetAppsQuery` => `useGetAppsStreamQuery`
 - `useGetContentBlockQuery` => `useGetContentBlockStreamQuery`
 
-
 :::info
 * `StreamQuery` suffixed hooks provides access to data from the indexing service. For this reason, sometimes it may exhibit a delay between the data that is already in the Ceramic node and the indexing service. This delay should not be noticeable by the end user but it may require additional logic when doing a mutation and expecting the data to be immediately available.
 :::
@@ -1778,7 +1775,6 @@ const BeamListForTag = ({tagName}) => {
 }
 
 ```
-
 
 ### useGetAppsStreamQuery
 Get a list of apps from the indexing service

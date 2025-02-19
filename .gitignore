@@ -114,6 +114,7 @@ dist
 # generated docs folders
 docs/react-hooks/hooks
 docs/data-fetching-and-mutations/sdk/*
+docs/data-fetching-and-mutations/hooks/*
 docs/event-bus/ui-events
 docs/event-bus/global-events
 docs/design-system/design-system-core
