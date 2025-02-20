@@ -4,76 +4,122 @@ sidebar_label: Setup & Workflow
 title: Setup & Development Workflow
 ---
 
-After you've installed the devkit locally, you'll need to load it into a world.
+After you have [installed the Devkit locally](./#installation), you will need to load it into a world.
 
-The devkit can be loaded into any world but for development purposes we'll load it into AKASHA's staging enviromnent
+The Devkit can be loaded into any world but for development purposes we'll load it into AKASHA's staging enviromnent
 available at [https://next.akasha-world-framework.pages.dev/](https://next.akasha-world-framework.pages.dev/).
 
-<div style={{ borderImage: 'linear-gradient(to right, #27e1ba 0%, #8739e0 100%) 1', borderRadius: '.5rem', borderStyle: 'solid', padding: '1rem'}}>
- **Please make sure that you can load the `mainFile` - it's url should be shown in your terminal - as it will require bypassing browser's SSL warning.**
+<div
+  style={{
+    borderImage: "linear-gradient(to right, #27e1ba 0%, #8739e0 100%) 1",
+    borderRadius: ".5rem",
+    borderStyle: "solid",
+    padding: "1rem 1rem 0rem",
+  }}
+>
+  <p>
+    Make sure that you can load the `mainFile` (its url should be shown in your
+    terminal) - as it will require bypassing the browser's SSL warning.
+  </p>
 </div>
 
-**Starting from scratch** (skip the steps only if you already completed them)
+## Starting from scratch
 
-1. authenticate on https://next.akasha-world-framework.pages.dev/
-    - optionally create a profile :D
-<hr/>
+:::tip
+Skip the following steps only if you have already completed them.
+:::
 
-2. navigate to the Extensions app -> Explore page
+1. Authenticate on https://next.akasha-world-framework.pages.dev/ - optionally, create a profile, if you do not have one yet.
+   <hr />
+2. Navigate to the [**Extensions App -> Explore**](https://next.akasha-world-framework.pages.dev/@akashaorg/app-extensions/explore) page from the sidebar.
 
-<hr/>
+   <hr />
 
-3. scroll down to the last card and `Start your journey` as a developer:
-<img src="/img/start_journey.png" style={{maxWidth: '66%'}} />
-<hr/>
+3. Scroll down to the last card (image shown below) and click on `Start your journey` as a developer.
 
-4. on the next page, enable `Extensions Developer Mode`, and wait for the page to reload.
-<hr/>
+   <img src="/img/start_journey.png" style={{ maxWidth: "60%" }} />
+   <hr />
 
-5. now that you have enabled developer mode, you will have access to a new page in the Extensions App -> My Extensions
-<hr/>
+4. On the next page, enable `Extensions Developer Mode`, and wait for the page to reload.
 
-6. go to Extensions -> My Extensions, click on `Create` extension and fill out the form:
-```
-Extension Type: App
-Extension ID: extension-devkit // you can find this id in the terminal where you ran the devkit
-Extension Display Name: My Extension // choose how this extension will be displayed in it's profile page
-Extension License: MIT // or choose what licence this extension should have
-```
-<hr/>
+   <hr />
 
-7. click on `Create Locally` and on the next page click on `Manage Releases`
+5. Having enabled `Extensions Developer Mode`, you will have access to a new page in the [**Extensions App -> My Extensions**](https://next.akasha-world-framework.pages.dev/@akashaorg/app-extensions/my-extensions)
 
-<div style={{ borderImage: 'linear-gradient(to right, #27e1ba 0%, #8739e0 100%) 1', borderRadius: '.5rem', borderStyle: 'solid', padding: '1rem'}}>
-**This is your `Release Manager` page from which you can create new releases for this extension.**
-</div>
+   <hr />
 
-But for now we are only interested in loading this extension's source for testing purposes.
-<hr/>
+6. Navigate to the [**Extensions App -> My Extensions**](https://next.akasha-world-framework.pages.dev/@akashaorg/app-extensions/my-extensions), click on `Create` extension and fill out the form (example values show below)
 
-8. click on the `Test Release` button as shown in the following screenshot:
-<img src="/img/release-manager.png" />
-<hr/>
+- Extension Type: <span style={{color: 'tomato'}}>App</span> // for now, we only support App extensions
+- Extension ID: <span style={{color: 'tomato'}}>extension-devkit</span> // you can find this id in the terminal where you ran the Devkit
+- Extension Display Name: <span style={{color: 'tomato'}}>My Extension</span> // choose how this extension will be displayed in its extension profile page
+- Extension License: <span style={{color: 'tomato'}}>MIT</span> // or choose what licence this extension should have
 
-9. on the next screen fill out the `Source URL` field with the url of your `mainFile` -> it's url should be shown in your terminal. The other fields are optional.
-<hr/>
+  {" "}
 
-<div style={{ borderImage: 'linear-gradient(to right, #27e1ba 0%, #8739e0 100%) 1', borderRadius: '.5rem', borderStyle: 'solid', padding: '1rem'}}>
-The next step is very important when loading the extension in the staging environment (https://next.akasha-world-framework.pages.dev). It can be skipped if you are running the world locally (generally on https://localhost:8131).
+  <hr />
+
+7. Click on `Create Locally` button and on the next page click on `Manage Releases` button.
+
+<div
+  style={{
+    borderImage: "linear-gradient(to right, #27e1ba 0%, #8739e0 100%) 1",
+    borderRadius: ".5rem",
+    borderStyle: "solid",
+    padding: "1rem 1rem 0rem",
+  }}
+>
+  This is your `Release Manager` page from which you can create new releases for
+  this extension. But for now we are only interested in loading this extension's
+  source for testing purposes.
 </div>
 <hr />
 
-10. open the developer tools (for Chrome: right click on the page and click on inspect).
-    - go to the Application tab and then select the service worker from the side-panel
-    - enable `Bypass for network` checkbox like shown below
+8. Click on the `Test Release` button as shown in the following screenshot:
+
+<img src="/img/release-manager.png" style={{ maxWidth: "60%" }} />
+<hr />
+
+9. On the next screen, fill out the `Source URL` field with the url of your `mainFile` -> its url should be shown in your terminal. The other fields are optional.
+
+<div
+  style={{
+    borderImage: "linear-gradient(to right, #27e1ba 0%, #8739e0 100%) 1",
+    borderRadius: ".5rem",
+    borderStyle: "solid",
+    padding: "1rem 1rem 0rem",
+  }}
+>
+  The next step is very important when loading the extension in the staging
+  environment (https://next.akasha-world-framework.pages.dev). It can be skipped
+  if you are running the world locally (generally on https://localhost:8131).
+</div>
+<hr />
+
+10. Open the `Developer Tools` (for Chrome: right click on the page and click on `inspect`).
+
+- Go to the `Application` tab and then select the `service worker` from the side-panel
+- Enable `Bypass for network` checkbox like shown below
 
 <img src="/img/service-worker-bypass.png" />
+<hr />
 
-<hr/>
+11. Click on the `Test Release` button and the extension should now start to load.
 
-11. click on the `Test Release` button and the extension should now start to load.
-
-<div style={{ borderImage: 'linear-gradient(to right, #27e1ba 0%, #8739e0 100%) 1', borderRadius: '.5rem', borderStyle: 'solid', padding: '1rem'}}>
-    **Congrats!** You can not start to develop using your local installation of the devkit.
-    <div>Start playing with it! Notice that it has live-reload when you make changes to the source code.</div>
+<div
+  style={{
+    borderImage: "linear-gradient(to right, #27e1ba 0%, #8739e0 100%) 1",
+    borderRadius: ".5rem",
+    borderStyle: "solid",
+    padding: "1rem 1rem 0rem",
+  }}
+>
+  <p>
+    **Congrats!** You can now start to develop extensions using your local
+    installation of the Devkit. Start playing with it!
+  </p>
+  <p>
+    Notice that it has live-reload feature when you make changes to the source
+    code.
+  </p>
 </div>
