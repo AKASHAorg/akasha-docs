@@ -5,7 +5,7 @@ sidebar_label: Content Blocks
 
 # Content Blocks
 
-The content beamed (posted) into the apps is composed of one or more blocks. For example, a [beam](../glossary#beam) can contain a rich text format block, an image block,
+The content beamed (posted) into the apps is composed of one or more blocks. For example, a beam can contain a rich text format block, an image block,
 a code block etc. All of these blocks can be `injected` into the editor by different apps.
 
 To register a content-block an app should define an optional param in its [register](https://github.com/AKASHAorg/akasha-core/blob/4f5934e4b3aef6b1920af1d196e372e5c75afe24/extensions/apps/antenna/src/index.tsx#L74) function, called `contentBlocks`.
@@ -23,7 +23,7 @@ Registering content-blocks will require the following properties:
 }
 ```
 
-**[loadingFn](./loading_function.md)** -> - defines how the application is mounted/unmounted by importing the single-spa-react lifecycle methods.
+**[loadingFn](../app-loader.md)** -> - defines how the application is mounted/unmounted by importing the single-spa-react lifecycle methods.
 
 **propertyType** -> used to match the content published through this content.
 
@@ -41,7 +41,7 @@ A content block should handle 2 modes which is controlled through the `props.blo
 
 ### editor-mode
 
-This mode is displayed when the block is mounted inside the [editor](./editor.md). All the logic for data input and validation is handled internally by the block.
+This mode is displayed when the block is mounted inside the [editor](../editor/index.md). All the logic for data input and validation is handled internally by the block.
 
 In edit mode the content block must expose a simple api using React's `useImperativeHandle` to allow editor to use it for publishing. The ref is passed as prop so there is no need to use forwardRef.
 

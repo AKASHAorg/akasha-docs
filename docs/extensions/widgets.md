@@ -9,7 +9,7 @@ A widget is a small functional unit that can be reused across multiple pages/app
 
 A widget cannot have its own routes, hence you cannot navigate to a widget. Widgets are meant to not change or unmount when the route changes however there is no restriction for this and the interface allows [contextual widgets](#contextual-widgets).
 
-Widgets are mounted only in specific areas as defined by the [Layout Widget](./layout_widget.md) (which is also a widget) and some areas may be hidden on certain viewports/screen sizes. For example the widget area in the current implementation of the Layout Widget is hidden on mobile devices.
+Widgets are mounted only in specific areas as defined by the [Layout Widget](../layout-widget.md) (which is also a widget) and some areas may be hidden on certain viewports/screen sizes. For example the widget area in the current implementation of the Layout Widget is hidden on mobile devices.
 
 Beside the central area which is used by the apps, there are other sections in the layout that can be used by widget. As an example, the sidebar, the top bar and the cards on the right of the screen are all widgets.
 
@@ -41,7 +41,7 @@ export const register = () => {
 };
 ```
 
-**[loadingFn](loading_function.md)** - defines how the application is mounted/unmounted by importing the single-spa-react lifecycle methods.
+**[loadingFn](./app-loader.md)** - defines how the application is mounted/unmounted by importing the single-spa-react lifecycle methods.
 
 **mountsIn** -> the slot id of the area (defined in the layout widget) on which the widget mounts.
 

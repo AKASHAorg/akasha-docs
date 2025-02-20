@@ -29,7 +29,7 @@ Next, we'll need to add the following properties to the config object:
 
 |           |  Required  |                     Description                                 |
 |:---------:|:----------:|:---------------------------------------------------------------:|
-| loadingFn |   true     |  the [loading function](../extensions/loading_function.md)      |
+| loadingFn |   true     |  the [loading function](../../extensions/app-loader.md)      |
 | mountsIn  |   true     |  where to show this widget                                      |
 
 

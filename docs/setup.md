@@ -105,4 +105,4 @@ You will need to accept the certificate in your browser.
 
 **Congrats!** You're ready to start developing.
 
-Before diving into creating simple app, let's learn more about [extensions](/docs/extensions/index.md). Once you're ready, you can start by [building a super simple app](/docs/extension-tutorials/create-an-app.md)
+Before diving into creating simple app, let's learn more about [extensions](./extensions/index.md). Once you're ready, you can start by [building a super simple app](./tutorials/extension-tutorials/create-an-app.md)
