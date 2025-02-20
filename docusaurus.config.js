@@ -139,6 +139,21 @@ const config = {
         mergeModulesMergeMode: "module",
       },
     ],
+    [
+      'docusaurus-plugin-remote-content',
+      {
+        name: "extension-devkit-readme", // used by CLI, must be path safe
+        sourceBaseUrl: "https://raw.githubusercontent.com/AKASHAorg/extension-devkit/refs/heads/main/",
+        outDir: "docs/devkit", 
+        documents: ["README.md"],
+        modifyContent: (_, content) => {
+          return {
+            filename: '_devkit_readme.md',
+            content,
+          }
+        }
+      },
+    ]
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
