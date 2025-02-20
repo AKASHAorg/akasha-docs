@@ -53,7 +53,6 @@ const config = {
         excludeInternal: true,
         flattenOutputFiles: true,
         categorizeByGroup: false,
-        stripYamlFrontmatter: true,
         sidebar: {
           label: "SDK",
           position: 41,
