@@ -86,9 +86,6 @@ const config = {
         excludeInternal: true,
         flattenOutputFiles: true,
         categorizeByGroup: false,
-        sidebar: {
-          label: "SDK Services",
-        },
         enumMembersFormat: "table",
         typeDeclarationFormat: "table",
         parametersFormat: "table",
@@ -121,9 +118,6 @@ const config = {
         excludeInternal: true,
         flattenOutputFiles: true,
         categorizeByGroup: false,
-        sidebar: {
-          label: "Custom Hooks",
-        },
         enumMembersFormat: "table",
         typeDeclarationFormat: "table",
         parametersFormat: "table",
@@ -156,9 +150,6 @@ const config = {
         excludeInternal: true,
         flattenOutputFiles: true,
         categorizeByGroup: false,
-        sidebar: {
-          label: "Apollo Hooks",
-        },
         enumMembersFormat: "table",
         typeDeclarationFormat: "table",
         parametersFormat: "table",
