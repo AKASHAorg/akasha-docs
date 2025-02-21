@@ -32,7 +32,7 @@ We only support [React](https://reactjs.org/) as the UI library for now.
 
 ### Creating a basic `Hello Akasha World` app
 
-From the root of the repository you have cloned in the [quickstart guide](/dev-quickstart):
+From the root of the repository you have cloned in the [quickstart guide](/setup):
 
 **1. Create a folder in `ui/apps/hello-ethereum-world`**
 

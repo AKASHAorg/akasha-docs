@@ -9,7 +9,7 @@ The following section provides a step-by-step guide on how to create different t
 ## Bootstrapping a new extension
 
 :::info
-Before we begin make sure you have already followed the [Dev QuickStart](../dev-quickstart.md) guide
+Before we begin make sure you have already followed the [Dev QuickStart](../../setup.md) guide
 :::
 
 The extensions should be created in the `extensions` folder which is in the root of the AKASHA Core project. So if you want to bootstrap a new app you should do it by creating a new folder in `extensions/apps`, for widgets in `extensions/widgets` and for plugins in `extensions/plugins`.
@@ -34,7 +34,7 @@ This command will create a `package.json` which we will modify it for our needs:
 ```
 
 :::caution
-The extension name in the [Extension Publishing](../extension-publishing/) step should be the same as the package name you set here.
+The extension name in the [Extension Publishing](../../extensions/publishing-an-extension.md) step should be the same as the package name you set here.
 :::
 
 
@@ -156,7 +156,7 @@ Let's fix this; in development mode, we have provided a way in which you can tel
 This section is still a work in progress. Expect some flows to change.
 :::
 
-A deployed instance of the AKASHA Core is actually a [world](../glossary.md#world). Worlds contains collection of extensions installed by default and uninstallable by the users.
+A deployed instance of the AKASHA Core is actually a World. Worlds contains collection of extensions installed by default and uninstallable by the users.
 This collection of extensions is defined in the world config. The akasha.world instance has it's config file defined [here](https://github.com/AKASHAorg/akasha-core/blob/next/worlds/akasha.world/src/index.ts)
 
 The most important parts of that file are:
