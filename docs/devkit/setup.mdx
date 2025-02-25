@@ -9,14 +9,7 @@ After you have [installed the Devkit locally](./#installation), you will need to
 The Devkit can be loaded into any world but for development purposes we'll load it into AKASHA's staging enviromnent
 available at [https://next.akasha-world-framework.pages.dev/](https://next.akasha-world-framework.pages.dev/).
 
-<div
-  style={{
-    borderImage: "linear-gradient(to right, #27e1ba 0%, #8739e0 100%) 1",
-    borderRadius: ".5rem",
-    borderStyle: "solid",
-    padding: "1rem 1rem 0rem",
-  }}
->
+<div class="tip-card">
   <p>
     Make sure that you can load the `mainFile` (its url should be shown in your
     terminal) - as it will require bypassing the browser's SSL warning.
@@ -37,7 +30,7 @@ Skip the following steps only if you have already completed them.
 
 3. Scroll down to the last card (image shown below) and click on `Start your journey` as a developer.
 
-   <img src="/img/start_journey.png" style={{ maxWidth: "60%" }} />
+   <img src="/img/start_journey.gif" style={{ maxWidth: "60%" }} />
    <hr />
 
 4. On the next page, enable `Extensions Developer Mode`, and wait for the page to reload.
@@ -54,21 +47,11 @@ Skip the following steps only if you have already completed them.
 - Extension ID: <span style={{color: 'tomato'}}>extension-devkit</span> // you can find this id in the terminal where you ran the Devkit
 - Extension Display Name: <span style={{color: 'tomato'}}>My Extension</span> // choose how this extension will be displayed in its extension profile page
 - Extension License: <span style={{color: 'tomato'}}>MIT</span> // or choose what licence this extension should have
-
-  {" "}
-
   <hr />
 
 7. Click on `Create Locally` button and on the next page click on `Manage Releases` button.
 
-<div
-  style={{
-    borderImage: "linear-gradient(to right, #27e1ba 0%, #8739e0 100%) 1",
-    borderRadius: ".5rem",
-    borderStyle: "solid",
-    padding: "1rem 1rem 0rem",
-  }}
->
+<div class="tip-card">
   This is your `Release Manager` page from which you can create new releases for
   this extension. But for now we are only interested in loading this extension's
   source for testing purposes.
@@ -77,19 +60,12 @@ Skip the following steps only if you have already completed them.
 
 8. Click on the `Test Release` button as shown in the following screenshot:
 
-<img src="/img/release-manager.png" style={{ maxWidth: "60%" }} />
+<img src="/img/release-manager.gif" style={{ maxWidth: "60%" }} />
 <hr />
 
 9. On the next screen, fill out the `Source URL` field with the url of your `mainFile` -> its url should be shown in your terminal. The other fields are optional.
 
-<div
-  style={{
-    borderImage: "linear-gradient(to right, #27e1ba 0%, #8739e0 100%) 1",
-    borderRadius: ".5rem",
-    borderStyle: "solid",
-    padding: "1rem 1rem 0rem",
-  }}
->
+<div class="tip-card">
   The next step is very important when loading the extension in the staging
   environment (https://next.akasha-world-framework.pages.dev). It can be skipped
   if you are running the world locally (generally on https://localhost:8131).
@@ -106,17 +82,11 @@ Skip the following steps only if you have already completed them.
 
 11. Click on the `Test Release` button and the extension should now start to load.
 
-<div
-  style={{
-    borderImage: "linear-gradient(to right, #27e1ba 0%, #8739e0 100%) 1",
-    borderRadius: ".5rem",
-    borderStyle: "solid",
-    padding: "1rem 1rem 0rem",
-  }}
->
+<div class="tip-card">
+  <h3>🙌 Congrats!</h3>
   <p>
-    **Congrats!** You can now start to develop extensions using your local
-    installation of the Devkit. Start playing with it!
+    You can now start to develop extensions using your local installation of the
+    Devkit. Start playing with it!
   </p>
   <p>
     Notice that it has live-reload feature when you make changes to the source
