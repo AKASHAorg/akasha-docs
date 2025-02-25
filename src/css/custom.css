@@ -17,7 +17,7 @@
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -34,6 +34,35 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
-[data-theme='dark'] .docusaurus-highlight-code-line {
+[data-theme="dark"] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.tip-card {
+  border-left: 0.35rem solid rgb(77, 179, 212, 0.5);
+  padding: 1rem;
+  background-color: rgba(25, 60, 71, 0.1);
+  border-radius: 0.5rem;
+}
+
+p {
+  margin-bottom: 0rem;
+}
+
+[data-theme="dark"] .tip-card {
+  background-color: rgba(25, 60, 71, 0.4);
+}
+
+.clickable-card {
+  width: 31%;
+  padding: 1rem;
+  color: black;
+  border-radius: 1rem;
+  text-decoration: none;
+  background-color: rgba(25, 60, 71, 0.1);
+}
+
+[data-theme="dark"] .clickable-card {
+  color: white;
+  background-color: rgba(25, 60, 71, 0.4);
 }
