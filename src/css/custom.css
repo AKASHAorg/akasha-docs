@@ -6,25 +6,29 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #7c3aed;
+  --ifm-color-primary-dark: #7c3aed;
+  --ifm-color-primary-darker: #7c3aed;
+  --ifm-color-primary-darkest: #7c3aed;
+  --ifm-color-primary-light: #7c3aed;
+  --ifm-color-primary-lighter: #7c3aed;
+  --ifm-color-primary-lightest: #7c3aed;
   --ifm-code-font-size: 95%;
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #ffffff;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme="dark"] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+[data-theme="dark"] :root {
+  --ifm-color-primary: #ac7efa;
+  --ifm-color-primary-dark: #ac7efa;
+  --ifm-color-primary-darker: #ac7efa;
+  --ifm-color-primary-darkest: #ac7efa;
+  --ifm-color-primary-light: #ac7efa;
+  --ifm-color-primary-lighter: #ac7efa;
+  --ifm-color-primary-lightest: #ac7efa;
+  --ifm-background-color: #18181b;
+  --ifm-background-surface-color: #18181b;
 }
 
 .docusaurus-highlight-code-line {
@@ -39,18 +43,19 @@
 }
 
 .tip-card {
-  border-left: 0.35rem solid rgb(77, 179, 212, 0.5);
+  border-left: 0.35rem solid #e4e4e7;
   padding: 1rem;
-  background-color: rgba(25, 60, 71, 0.1);
+  background-color: #f4f4f5;
   border-radius: 0.5rem;
+}
+
+[data-theme="dark"] .tip-card {
+  border-left: 0.35rem solid #4a4a4a;
+  background-color: #27272a;
 }
 
 p {
   margin-bottom: 0rem;
-}
-
-[data-theme="dark"] .tip-card {
-  background-color: rgba(25, 60, 71, 0.4);
 }
 
 .clickable-card {
@@ -58,7 +63,7 @@ p {
   padding: 1rem;
   color: black;
   border-radius: 1rem;
-  background-color: rgba(25, 60, 71, 0.1);
+  background-color: #f4f4f5;
 }
 
 .clickable-card img {
@@ -67,7 +72,7 @@ p {
 
 [data-theme="dark"] .clickable-card {
   color: white;
-  background-color: rgba(25, 60, 71, 0.4);
+  background-color: #27272a;
 }
 
 a {
