@@ -58,7 +58,6 @@ p {
   padding: 1rem;
   color: black;
   border-radius: 1rem;
-  text-decoration: none;
   background-color: rgba(25, 60, 71, 0.1);
 }
 
@@ -69,4 +68,8 @@ p {
 [data-theme="dark"] .clickable-card {
   color: white;
   background-color: rgba(25, 60, 71, 0.4);
+}
+
+a {
+  text-decoration: none !important;
 }
