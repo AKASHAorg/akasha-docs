@@ -73,10 +73,10 @@ const config = {
       {
         id: "akasha-sdk-services",
         name: "AKASHA Core SDK Services",
-        entryPoints: ["./akasha-core/libs/sdk/src/services.sdk.ts"],
+        entryPoints: [],
         entryPointStrategy: "expand",
         tsconfig: "./akasha-core/libs/sdk/tsconfig.json",
-        readme: "none",
+        readme: "./akasha-core/libs/sdk/README_SDK_SERVICES.md",
         out: "./docs/data-fetching-and-mutations/sdk/services",
         entryFileName: "Services.md",
         fileExtension: ".md",
@@ -105,10 +105,10 @@ const config = {
       {
         id: "akasha-sdk-api",
         name: "AKASHA Core SDK API",
-        entryPoints: ["./akasha-core/libs/sdk/src/api.sdk.ts"],
+        entryPoints: [],
         entryPointStrategy: "expand",
         tsconfig: "./akasha-core/libs/sdk/tsconfig.json",
-        readme: "none",
+        readme: "./akasha-core/libs/sdk/README_SDK_API.md",
         out: "./docs/data-fetching-and-mutations/sdk/api",
         entryFileName: "API.md",
         fileExtension: ".md",
@@ -217,7 +217,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode: "dark",
+        defaultMode: "light",
       },
       navbar: {
         title: "AKASHA Docs",
