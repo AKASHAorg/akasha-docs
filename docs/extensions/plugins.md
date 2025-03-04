@@ -24,12 +24,14 @@ Example of a plugin registration function:
 
 export const registerPlugin = async () => {
   return {
-    // my plugin properties
+    getProfile() {
+      return { name: 'SeverS' }
+    }
   };
 };
 ```
 
-Plugins are registered first, before
+Plugins are registered first, before apps and widgets and are already available in their respective register function.
 
 ## Accessing and using plugins
 
@@ -41,7 +43,7 @@ Example of usage of a plugin in the register function:
 export const register = (opts) => {
   const plugin = opts.plugins[someAppName];
 
-  plugin.someFunction();
+  const { name } = plugin.getProfile();
 
   return {
     // ...
@@ -53,10 +55,10 @@ Example of using plugins in the React root component:
 
 ```tsx
 const MyRootComponent = (props: RootComponentProps) => {
-  const examplePlugin = props.plugins[appNameHere];
-  examplePlugin.someFunction();
+  const examplePlugin = props.plugins[appName];
+  const profile = examplePlugin.getProfile();
 
-  return <div>Hello World!</div>;
+  return <div>Hello {profile.name}!</div>;
 };
 ```
 
@@ -68,10 +70,12 @@ import { useRootComponentProps } from '@akashaorg/ui-awf-hooks';
 
 // deeply nested react component
 const MyReactComponent = () => {
-  const { plugins } = useRootComponentProps();
-  const examplePlugin = plugins[appNameHere];
-  examplePlugin.saveLocalData(someData);
-  return <>Hello Plugins!</>;
+  const {getPlugin} = useRootComponentProps();
+  const examplePlugin = getPlugin(appName);
+  if (examplePlugin) {
+    return <div>Hello {examplePlugin.getProfile().name}</div>
+  }
+  return <>Hello Visitor!</>;
 };
 ```
 ::::

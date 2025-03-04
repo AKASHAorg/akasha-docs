@@ -34,7 +34,7 @@ This command will create a `package.json` which we will modify it for our needs:
 ```
 
 :::caution
-The extension name in the [Extension Publishing](../../extensions/publishing-an-extension.md) step should be the same as the package name you set here.
+The extension name in the Extension Publishing step should be the same as the package name you set here.
 :::
 
 
