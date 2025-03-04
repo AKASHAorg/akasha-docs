@@ -9,52 +9,22 @@ slug: /
 Explore how to build amazing integrations with AKASHA Core and create unique experiences in the Akasha World.
 
 <div style={{ display: "flex", justifyContent: "space-between" }}>
-  <a
-    href="/devkit"
-    style={{
-      width: "31%",
-      color: "white",
-      padding: "1rem",
-      borderRadius: "1rem",
-      textDecoration: "none",
-      backgroundColor: "#242526",
-    }}
-  >
-    <img src="/img/build-with-devkit.webp" style={{ width: "25%" }}></img>
+  <a class="clickable-card" href="/devkit">
+    <img src="/img/build-with-devkit.webp"></img>
     <h3 style={{ margin: "0.5rem 0rem 0.35rem" }}>Build with Devkit</h3>
     <p style={{ margin: "0rem" }}>
       Explore, create extensions and launch your own world
     </p>
   </a>
-  <a
-    href="/setup"
-    style={{
-      width: "31%",
-      color: "white",
-      padding: "1rem",
-      borderRadius: "1rem",
-      textDecoration: "none",
-      backgroundColor: "#242526",
-    }}
-  >
-    <img src="/img/getting-started.webp" style={{ width: "25%" }}></img>
+  <a class="clickable-card" href="/setup">
+    <img src="/img/getting-started.webp"></img>
     <h3 style={{ margin: "0.5rem 0rem 0.35rem" }}>Getting started</h3>
     <p style={{ margin: "0rem" }}>
       Setup and run AKASHA Core on your local machine
     </p>
   </a>
-  <a
-    href="/data-fetching-and-mutations"
-    style={{
-      width: "31%",
-      color: "white",
-      padding: "1rem",
-      borderRadius: "1rem",
-      textDecoration: "none",
-      backgroundColor: "#242526",
-    }}
-  >
-    <img src="/img/explore-sdk-hooks.webp" style={{ width: "25%" }}></img>
+  <a class="clickable-card" href="/data-fetching-and-mutations">
+    <img src="/img/explore-sdk-hooks.webp"></img>
     <h3 style={{ margin: "0.5rem 0rem 0.35rem" }}>Explore SDK and Hooks</h3>
     <p style={{ margin: "0rem" }}>
       Deep-dive into data fetching and mutations on AKASHA Core
@@ -70,15 +40,22 @@ AKASHA Core makes it easier for people to create and sustain social technologica
 
 ## Extensions on AKASHA Core
 
-Social experiences built with AKASHA Core can often be extended through various ways like applications, widgets and plugins. These are collectively referred to as "Integratons" or "Extensions"
+Social experiences built with AKASHA Core can often be extended through various ways like applications, widgets and plugins. These are collectively referred to as "Extensions".
 
 ### Applications
 
-Applications are standalone components that complement and extend your web3 social network experience. [Learn more](./extensions/applications.md)
+Applications are standalone components that complement and extend your web3 social network experience.
+They serve specific functions within a World by providing distinct features to enhance the overall user experience. [Learn more](./extensions/applications.md).
 
 ### Widgets
 
-Widgets allow users to perform quick actions or access short but useful information relating to an application (`app-specific widgets`) or the world (`general widgets`). [Learn more](./extensions/widgets.md)
+Widgets allow users to perform quick actions or access short but useful information relating to an application (`app-specific widgets`) or the world (`general widgets`).
+They're designed to enhance the user experience in more compact and focused ways than full applications. [Learn more](./extensions/widgets.md)
+
+### Plugins
+
+Plugin allows developers to provide API's and system-level services that can be used by applications and widgets but without rendering anything in the user interface. [Learn more](./extensions/plugins.md)
+
 
 All extensions built with AKASHA Core are open-source. Find in the table below, the list of current extensions available in AKASHA World. Explore them whenever you want to get inspired or learn.
 

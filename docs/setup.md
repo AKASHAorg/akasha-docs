@@ -3,7 +3,9 @@ sidebar_position: 2
 sidebar_label: Setup
 ---
 
-# Development Quickstart
+# AKASHA Core Development Quickstart
+
+This tutorial will guide you on how to install and setup the akasha-core repository. If you want to develop an app we recommend to use the [extension devkit](./devkit/index.mdx).
 
 ## Requirements
 
@@ -20,11 +22,11 @@ This project runs on a specific version of yarn - @4.1.1. If you are already on 
 :::
 
 ## Install/Update required packages
-1. If you are using different versions of node and yarn, consider using nvm and corepack respectively to handle the versions on your computer.
+1. If you are using different versions of node and yarn, consider using [nvm](https://github.com/nvm-sh/nvm) and corepack respectively to handle the versions on your computer.
 
-2. If you already have nvm, please skip to next step. If you do not already have nvm installed, you can follow a more detailed instructions here on nvm github repo.
+2. If you already have nvm, please skip to next step. If you do not already have [nvm](https://github.com/nvm-sh/nvm) installed, you can follow a more detailed instructions here on nvm github repo.
 
-3. Once you have installed and verified your nvm installation, you can now install the specified versions of `node` and `yarn`.
+3. Once you have installed and verified your [nvm](https://github.com/nvm-sh/nvm) installation, you can now install the specified versions of `node` and `yarn`.
 > If you are already on the minimum node version (v20.9.0), you may skip to step 5
 
 4. Run `nvm install 21.7.1` to install the specified version - 21.7.1 and `nvm use 21.7.1` to use this installed version.

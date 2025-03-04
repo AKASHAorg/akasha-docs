@@ -37,7 +37,7 @@ The register function must be synchronous and defined as a named export.
 The register function takes only one argument which is an object of the type [IntegrationRegistrationOptions](https://github.com/AKASHAorg/akasha-core/blob/next/libs/typings/src/ui/app-loader.ts).
 The config object returned returned has the [IAppConfig](https://github.com/AKASHAorg/akasha-core/blob/next/libs/typings/src/ui/extensions.ts#L45-L117) type. The required parameters are:
 
-**[loadingFn](./app-loader.md)** - defines how the application is mounted/unmounted by importing the single-spa-react lifecycle methods.
+**[rootComponent](./app-loader.md)** - defines the React component to render
 
 **mountsIn** -> the slot id of the area (defined in the layout widget) on which the app mounts.
 

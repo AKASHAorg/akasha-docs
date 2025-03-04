@@ -5,16 +5,20 @@ sidebar_label: Design System
 
 # Design System
 
-AKASHA Core's Design System is a library of UI components built with [Twind](https://twind.dev/), a tailwind-in-js solution. The components implement the visual design language of AKASHA, and can be customised with tailwind style directives through the `customStyle` property.
+AKASHA Core’s user interface is built with design system components from [akasha-ui](https://akasha-ui.pages.dev/docs), aligning with AKASHA’s visual language and offering full customisation.
 
-It is split into two distinct libraries
-- Core
-- Components
+Most components from `akasha-ui` are included in the `ui` package of `akasha-core` for universal use, while others are placed in relevant extensions.
 
-For a showcase of the components you can visit our [storybook](https://storybook-awf.netlify.app/), and check out the DSCORE and DSCOMPONENTS sections.
-
-To use a component, import it from the corresponding package. For example, to use a Stack, which is defined under `Core`, you import it like so:
+Components from shadcn are inside the `components` folder of the `ui` package and are imported like so:
 
 ```tsx
-import Stack from '@akashaorg/design-system-core/lib/components/Stack';
+import { Switch } from "@akashaorg/ui/lib/components/switch";
 ```
+
+Whereas components from the `akasha-ui` are placed in the `akasha-components` folder of the `ui` package and imported like so:
+
+```tsx
+import { IconContainer } from "@akashaorg/ui/lib/akasha-components/icon-container";
+```
+
+For detailed information about `akasha-ui` and the Design System, please check the [akasha-ui documentation](https://akasha-ui.pages.dev/docs).

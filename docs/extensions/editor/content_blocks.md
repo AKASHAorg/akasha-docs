@@ -19,11 +19,11 @@ Registering content-blocks will require the following properties:
    propertyType: 'text-block',
    displayName: 'Text Block',
    icon: <GlobeAltIcon />,
-   loadingFn: () => () => import('./content-blocks/sample-block'),
+   rootComponent: () => import('./content-blocks/sample-block'),
 }
 ```
 
-**[loadingFn](../app-loader.md)** -> - defines how the application is mounted/unmounted by importing the single-spa-react lifecycle methods.
+**[rootComponent](../app-loader.md)** -> - lazy loads the root React component of the content-block.
 
 **propertyType** -> used to match the content published through this content.
 

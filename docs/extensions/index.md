@@ -41,12 +41,16 @@ Extensions are packed individually as javascript modules and loaded at runtime b
 This global routing is handled automatically by the underlying single-spa library which ensures that on every route change an activityFunction is called and in case that it no longer matches (in other words returns false) it will unmount the extension and mount another one if necessary.
 
 In the case of apps, this matching function internally called by the [AppLoader](https://github.com/AKASHAorg/akasha-core/tree/next/libs/app-loader) library which is a wrapper over the single-spa.
+
 In the case of widgets, this matching function can be provided by the config of the widget - if there is a need for a contextual widget
+
 For example, the [MiniProfileWidget](https://github.com/AKASHAorg/akasha-core/blob/next/extensions/widgets/mini-profile/src/index.ts) config contains the `activeWhen` property to control the route on which this widget should mount.
 
 Extensions - which are packed as javascript modules - have to be served from a webserver (or a gateway in case of the IPFS network) and later fetched and imported by the AppLoader (more specifically using [SystemJS](https://github.com/systemjs/systemjs) dynamic module loader).
 
-### The Registration part
+In the case of plugins, the logic is a bit different. Plugins do not have an activity function so they are allways loaded. Also, because the plugins are used by multiple apps and widgets, they must be available and passed down as props. This means that the plugins will be registered and loaded before anything else. Because of this difference, plugins have a different registration method called `registerPlugin` which should also be exported from the main index file (just like the `register` function).
+
+### The Registration
 Before rendering the extensions into the view we need first to get information about what, where and when to render them.
 To do this, all extensions must export a function called `register` which will be called by the AppLoader and the configuration object returned from that function will be stored (in memory) for the lifetime of the session.
 
@@ -57,57 +61,31 @@ After the registration function is called and the config object is retrieved, th
 - register the extension-points - if provided
 
 ### The Bootstrapping, Mounting and Unmounting part
+In order to render an app, the app-loader needs to import the React component first and pass the `RootProps` to it. This is done by specifying the rootComponent property of the config object returned by the `register` function:
 
-The lifecycles functions through which single-spa library handles the registered extensions is documented [here](https://single-spa.js.org/docs/building-applications#registered-application-lifecycle).
-
-TL;DR is that the single-spa also provides framework-specific adapter libraries and for React there is a helper library called [single-spa-react](https://single-spa.js.org/docs/ecosystem-react).
-
-Using this helper library we can wrap the root component of the extension and export the lifecycles. The required lifecycle functions are `bootstrap`, `mount` and `unmount`.
-
-These lifecycles must be provided to the AppLoader via the config object's `loadingFn` property which is an async function that dynamically imports the lifecycles.
-
-For example:
-```tsx title="MyRootReactComponent.tsx"
-import * as React from 'react';
-import ReactDOMClient from 'react-doc/client';
-
-const MyRootComponent = () => {
-  return <div>Hello World</div>
-}
-
-const lifecycles = singleSpaReact({
-  React, // required
-  ReactDOMClient, // required
-  rootComponent: MyRootComponent // required
-  errorBoundary(err, errInfo, props) {
-    return (
-      <div>
-        Something went terribly wrong and this error boundary
-        saved the entire World from a crash
-      </div>
-    )
-  }
-});
-
-// there 3 lifecycle functions are required
-export const bootstrap = lifecycles.bootstrap;
-export const mount = lifecycles.mount;
-export const unmount = lifecycles.unmount;
-```
-For additional singleSpaReact options please visit [single-spa-react options](https://single-spa.js.org/docs/ecosystem-react#options) page.
-
-
-then in the config object - which is returned from the registration function the `loadingFn` property should import the file:
 ```ts title="index.ts"
 
 export function register() {
   return {
     // the configuration object
     // ... other config options
-    loadingFn: () => import ('./myRootReactComponent')
+    rootComponent: () => import ('./myRootReactComponent')
   }
 }
 
+```
+
+The `rootComponent` is a function that lazy loads the root React Component.
+
+```tsx
+// Example of a react component that will get imported by the rootComponent function.
+const MyRootReactComponent = () => {
+  return (
+    <div>Hello World</div>
+  )
+};
+
+export default MyRootReactComponent;
 ```
 
 This allows the sigle-spa library to only load the source code of the extension when first requested and avoid downloading all
@@ -150,3 +128,4 @@ The AppLoader will import the sources and then proceed to the registration part.
 The release info will be also saved client-side using the IndexedDB api.
 
 In the uninstallation process, the app-loader unloads the application and the entry of the release info is removed from IndexedDB.
+

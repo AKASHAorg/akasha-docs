@@ -7,6 +7,10 @@ sidebar_label: Extending other apps (Extension Points)
 
 Extension points are components exposed by an app that can be mounted at any level inside the same app or other apps or widgets. These components can provide additional functionalities to the already rendered elements. For example a like button extension point can be rendered on a beam card, but also on the profile app. A follow button can be rendered on a user's profile and also on a profile-related widget etc.
 
+:::info
+  Extension points allows you to inject a small component (imagine a `like` button) into specific locations/components that are rendered inside other apps. This is only possible if that component allows this by implementing an `<Extension />` component.
+:::
+
 ## Extension points example usecase
 - insert a like button into a beam-card
 - display the beam editor anywhere you want in your extension
@@ -19,7 +23,7 @@ The extension points are automatically registered when the parent app registers.
 export const register = () => {
   return {
     // ...
-    extensions: [{ ...myExtensionConfig }],
+    extensions: [{ /** extension 1 */ }, { /** extension 2 */ }],
   };
 };
 ```
@@ -32,7 +36,7 @@ To define an extension-point the following properties must be set:
 
 |            | Required |                 Description                        |
 |:----------:|:--------:|:--------------------------------------------------:|
-| loadingFn  |   yes    | the [loadingFn](./app-loader.md) |
+| rootComponent  |   yes    | function to lazy import a React component |
 | mountsIn   |   yes    | the slot in which this extension will be mounted   |
 
 
@@ -47,11 +51,11 @@ export const register = () => {
     // ...app's config options
     extensions: [
       {
-        loadingFn: () => import('path/to/extension1.tsx'),
+        rootComponent: () => import('path/to/extension1.tsx'),
         mountsIn: 'profile-card/profile-menu-extensions'
       },
       {
-        loadingFn: () => import('path/to/extension2.tsx'),
+        rootComponent: () => import('path/to/extension2.tsx'),
         mountsIn: 'beam-card/beam-card-footer-extensions'
       }
     ]

@@ -9,7 +9,7 @@ A widget is a small functional unit that can be reused across multiple pages/app
 
 A widget cannot have its own routes, hence you cannot navigate to a widget. Widgets are meant to not change or unmount when the route changes however there is no restriction for this and the interface allows [contextual widgets](#contextual-widgets).
 
-Widgets are mounted only in specific areas as defined by the [Layout Widget](../layout-widget.md) (which is also a widget) and some areas may be hidden on certain viewports/screen sizes. For example the widget area in the current implementation of the Layout Widget is hidden on mobile devices.
+Widgets are mounted only in specific areas as defined by the [Layout Widget](../layout-widget.md) (which is also a widget because it should be rendered on every page) and some areas may be hidden on certain viewports/screen sizes. For example the widget area in the current implementation of the Layout Widget is hidden on mobile devices.
 
 Beside the central area which is used by the apps, there are other sections in the layout that can be used by widget. As an example, the sidebar, the top bar and the cards on the right of the screen are all widgets.
 
@@ -30,18 +30,18 @@ The register function takes only one argument which is an object of the type [In
 
 ## Configuration object interface
 
-The config object returned returned has the [IAppConfig](https://github.com/AKASHAorg/akasha-core/blob/next/libs/typings/src/ui/extensions.ts#L45-L117) type. The required parameters are:
+The config object returned has the [WidgetInterface](https://github.com/AKASHAorg/akasha-core/blob/next/libs/typings/src/ui/widgets.ts#L17-L19) type. The required parameters are:
 
 ```tsx
 export const register = () => {
   return {
-    loadingFn: () => importPromise,
+    rootComponent: () => importPromise,
     mountsIn: string,
   };
 };
 ```
 
-**[loadingFn](./app-loader.md)** - defines how the application is mounted/unmounted by importing the single-spa-react lifecycle methods.
+**[rootComponent](./app-loader.md)** - React component importing function.
 
 **mountsIn** -> the slot id of the area (defined in the layout widget) on which the widget mounts.
 
