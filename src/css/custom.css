@@ -14,10 +14,12 @@
   --ifm-color-primary-lighter: #7c3aed;
   --ifm-color-primary-lightest: #7c3aed;
   --ifm-code-font-size: 95%;
+  --code-block-diff-add-color: #00ff3c3d;
+  --code-block-diff-remove-color: #ff00002b;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme="dark"] :root {
+[data-theme="dark"]:root {
   --ifm-color-primary: #ac7efa;
   --ifm-color-primary-dark: #ac7efa;
   --ifm-color-primary-darker: #ac7efa;
@@ -25,6 +27,8 @@
   --ifm-color-primary-light: #ac7efa;
   --ifm-color-primary-lighter: #ac7efa;
   --ifm-color-primary-lightest: #ac7efa;
+  --code-block-diff-add-color: #00972436;
+  --code-block-diff-remove-color: #f6525224;
 }
 
 body {
@@ -97,4 +101,19 @@ p {
 .clickable-card {
   width: 31%;
   border-radius: 1rem;
+}
+
+.code-block-diff-add-line {
+  background-color: var(--code-block-diff-add-color);
+  display: block;
+}
+
+.code-block-diff-remove-line {
+  background-color: var(--code-block-diff-remove-color);
+  display: block;
+}
+
+.theme-code-block code {
+  white-space: pre-wrap;
+  word-break: break-word;
 }
