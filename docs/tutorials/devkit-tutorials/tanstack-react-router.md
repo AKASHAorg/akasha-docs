@@ -1,6 +1,7 @@
 ---
-sidebar_position: 81
+sidebar_position: 1
 sidebar_label: Add Tanstack React Router
+title: Adding a router
 ---
 
 In this tutorial we will implement @tanstack/react-router package and add a few routes to navigate to.
@@ -26,7 +27,7 @@ touch components/routes.tsx
 open it and import the required methods and components from `@tanstack/react-router` and create the rootRoute:
 
 
-```tsx title=components/routes.tsx
+```tsx title="components/routes.tsx"
 import { createRootRoute } from '@tanstack/react-router';
 
 const rootRoute = createRootRoute({
@@ -37,18 +38,23 @@ const rootRoute = createRootRoute({
 
 Next we will need to create the routeTree and then export the router instance:
 
-```diff title=components/routes.tsx
-+ import { createRootRoute, Outlet, createRouter } from '@tanstack/react-router';
+```tsx title="components/routes.tsx"
+// diff-add-start
+import {
+  createRootRoute, 
+  Outlet, 
+  createRouter } from '@tanstack/react-router';
+// diff-add-end
 
 const rootRoute = createRootRoute({
     component: () => <Outlet />;
 });
-
-+ const routeTree = rootRoute;
-
-+ export const router = createRouter({
-+    routeTree,
-+ });
+// diff-add-start
+const routeTree = rootRoute;
+export const router = createRouter({
+   routeTree,
+});
+// diff-add-end
 
 ```
 
@@ -62,7 +68,7 @@ touch components/pages/{home,docs,components}.tsx
 
 now, let's export a react component from each file
 
-```tsx title=components/pages/home.tsx
+```tsx title="components/pages/home.tsx"
 export const HomePage = () => {
     return (
       <div>
@@ -72,7 +78,7 @@ export const HomePage = () => {
   };
 ```
 
-```tsx title=components/pages/docs.tsx
+```tsx title="components/pages/docs.tsx"
 export const DocsPage = () => {
     return (
       <div>
@@ -82,7 +88,7 @@ export const DocsPage = () => {
   };
 ```
 
-```tsx title=components/pages/components.tsx
+```tsx title="components/pages/components.tsx"
 export const ComponentsPage = () => {
     return (
       <div>
@@ -94,12 +100,13 @@ export const ComponentsPage = () => {
 
 Now, using these newly created components let's add the routes to our router:
 
-```diff title=components/routes.tsx
-+ import { createRootRoute, createRoute, Outlet, redirect } from '@tanstack/react-router';
-
-+ import { HomePage } from "./pages/home";
-+ import { DocsPage } from "./pages/docs";
-+ import { ComponentsPage } from "./pages/components";
+```tsx title="components/routes.tsx"
+// diff-add-start
+import { createRootRoute, createRoute, Outlet, redirect } from '@tanstack/react-router';
+import { HomePage } from "./pages/home";
+import { DocsPage } from "./pages/docs";
+import { ComponentsPage } from "./pages/components";
+// diff-add-end
 
 const rootRoute = createRootRoute({
     component: () => <Outlet />,
@@ -107,42 +114,44 @@ const rootRoute = createRootRoute({
 
 // we will also need to add an index route
 // we can define homePage as the index route or a distinct index route that redirects to the /home path
+// diff-add-start
+const indexRoute = createRoute({
+  path: '/',
+  getParentRoute: () => rootRoute,
+  beforeLoad: () => {
+    throw redirect({
+      to: '/home',
+      replace: true
+    });
+  };
+})
+const homeRoute = createRoute({
+  component: HomePage,
+  path: '/home',
+  getParentRoute: () => rootRoute
+});
+const docsRoute = createRoute({
+  component: DocsPage,
+  path: '/docs',
+  getParentRoute: () => rootRoute
+});
+const componentsRoute = createRoute({
+  component: ComponentsPage,
+  path: '/components',
+  getParentRoute: () => rootRoute,
+});
+// diff-add-end
 
-+ const indexRoute = createRoute({
-+    path: '/',
-+    getParentRoute: () => rootRoute,
-+    beforeLoad: () => {
-+        throw redirect({
-+            to: '/home',
-+            replace: true
-+        });
-+    };
-+ });
+// diff-remove
+const routeTree = rootRoute;
 
-+ const homeRoute = createRoute({
-+   component: HomePage,
-+   path: '/home',
-+   getParentRoute: () => rootRoute,
-+ });
-
-+ const docsRoute = createRoute({
-+   component: DocsPage,
-+   path: '/docs',
-+   getParentRoute: () => rootRoute,
-+ });
-
-+ const componentsRoute = createRoute({
-+   component: ComponentsPage,
-+   path: '/components',
-+   getParentRoute: () => rootRoute,
-+ });
-
-- const routeTree = rootRoute;
-+ const routeTree = rootRoute.addChildren([
-+    homeRoute,
-+    docsRoute, 
-+    componentsRoute,
-+ ]);
+// diff-add-start
+const routeTree = rootRoute.addChildren([
+  homeRoute,
+  docsRoute,
+  componentsRoute,
+]);
+// diff-add-end
 
 export const router = createRouter({
     routeTree,
@@ -152,20 +161,26 @@ export const router = createRouter({
 Next we will change the `components/index.tsx` to import the router and export a new rootComponent:
 
 
-```diff title=components/index.tsx
-- import App from "./app";
+```tsx title="components/index.tsx"
+// diff-remove
+import App from "./app";
 import { withProviders } from "@akashaorg/ui-core-hooks";
-+ import { RouterProvider } from '@tanstack/react-router';
-+ import { router } from './routes';
+// diff-add-start
+import { RouterProvider } from '@tanstack/react-router';
+import { router } from './routes';
+// diff-add-end
 import "../assets/style.css";
 
-- export default withProviders(App);
+// diff-remove
+export default withProviders(App);
 
+// diff-add-start
 const RootComponent = () => {
-    return <RouterProvider router={router} />;
+  return <RouterProvider router={router} />;
 }
 
 export default withProviders(RootComponent);
+// diff-add-end
 
 ```
 
@@ -191,7 +206,7 @@ This means that we need instruct the router to only consider routes starting fro
 
 Let's modify the `routes.tsx` file to allow this change:
 
-```diff title=components/routes.tsx
+```tsx title="components/routes.tsx"
 import { createRootRoute, createRoute, Outlet, redirect } from '@tanstack/react-router';
 
 import { HomePage } from "./pages/home";
@@ -240,32 +255,41 @@ const routeTree = rootRoute.addChildren([
    componentsRoute,
 ]);
 
-- export const router = createRouter({
--    routeTree,
-- });
-+ export const getRouter = (basePath) => {
-+   return createRouter({
-+       routeTree,
-+       basePath,
-+ });
-+ }
+// diff-remove-start
+export const router = createRouter({
+  routeTree,
+});
+// diff-remove-end
+
+// diff-add-start
+export const getRouter = (basePath) => {
+  return createRouter({
+    routeTree,
+    basePath,
+  });
+// diff-add-end
+}
 ```
 
 With this change we can now pass the `basePath` to the router. 
 
 The value of the basePath is passed down by the app-loader to the rootComponent as prop so let's quickly do this change:
 
-```diff title=components/index.tsx
+```tsx title="components/index.tsx"
 import { withProviders } from "@akashaorg/ui-core-hooks";
 import { RouterProvider } from '@tanstack/react-router';
-- import { router } from './routes';
-+ import { getRouter } from './routes';
-+ import { IRootComponentProps } from '@akashaorg/typings/lib/ui';
+// diff-remove
+import { router } from './routes';
+// diff-add
+import { getRouter } from './routes';
+import { IRootComponentProps } from '@akashaorg/typings/lib/ui';
 import "../assets/style.css";
 
-+ const RootComponent = (props: IRootComponentProps) => {
-+    return <RouterProvider router={getRouter(props.baseRouteName)} />;
-+ }
+// diff-add-start
+const RootComponent = (props: IRootComponentProps) => {
+  return <RouterProvider router={getRouter(props.baseRouteName)} />;
+}
+// diff-add-end
 
 export default withProviders(RootComponent);
 ```
@@ -274,7 +298,7 @@ Lastly, let's populate the world's sidebar with our routes so the users can dire
 
 Lets' open the `src/index.tsx` file and create our subRoutes:
 
-```diff title=src/index.tsx
+```tsx title="src/index.tsx"
 import {
   IAppConfig,
   IntegrationRegistrationOptions,
@@ -307,31 +331,35 @@ export const register = (opts: IntegrationRegistrationOptions): IAppConfig => {
   return {
     rootComponent: () => import('./components'),
     mountsIn: opts.layoutSlots?.applicationSlotId as string,
-+    // this is required for other apps to be able to navigte to our routes
-+    routes: {
-+        defaultRoute: '/home',
-+        docs: '/docs',
-+        components: '/components',
-+    },
+    // this is required for other apps to be able to navigte to our routes
+    // diff-add-start
+    routes: {
+      defaultRoute: '/home',
+      docs: '/docs',
+      components: '/components',
+    },
+    // diff-add-end
     menuItems: {
       label: 'Extension Devkit',
       logo: { type: LogoTypeSource.ICON, value: <SidebarIcon /> },
       area: [MenuItemAreaType.UserAppArea],
-+      subRoutes: [
-+       {
-+            index: 1,
-+            label: 'Home',
-+            route: '/home'
-+        }, {
-+            index: 2,
-+            label: 'Docs',
-+            route: '/docs',
-+        }, {
-+            index: 3,
-+            label: 'Components',
-+            route: '/components'
-+        }  
-+     ],
+      // diff-add-start
+      subRoutes: [
+       {
+          index: 1,
+          label: 'Home',
+          route: '/home'
+        }, {
+          index: 2,
+          label: 'Docs',
+          route: '/docs',
+        }, {
+          index: 3,
+          label: 'Components',
+          route: '/components'
+        }  
+      // diff-add-end
+     ],
     },
   };
 };
