@@ -61,10 +61,6 @@ h6 {
   color: #ffffff;
 }
 
-a {
-  text-decoration: none !important;
-}
-
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
@@ -79,6 +75,7 @@ a {
 .card {
   padding: 1rem;
   background-color: #f4f4f5;
+  text-decoration: none !important;
 }
 
 [data-theme="dark"] .card {
