@@ -13,15 +13,15 @@ The fully working implementation is available on the devkit's [examples/tanstack
 ### Installation
 Install the package:
 
-```bash
+```bash title="Run from the root of the project"
 yarn add @tanstack/react-router
 ```
 
 ### Implementation
 Let's start by creating a new file in the `components` directory
 
-```bash
-touch components/routes.tsx
+```bash title="Run from the root of the project"
+touch src/components/routes.tsx
 ```
 
 open it and import the required methods and components from `@tanstack/react-router` and create the rootRoute:
@@ -31,7 +31,7 @@ open it and import the required methods and components from `@tanstack/react-rou
 import { createRootRoute } from '@tanstack/react-router';
 
 const rootRoute = createRootRoute({
-    component: () => <Outlet />;
+    component: () => <Outlet />,
 });
 
 ```
@@ -47,7 +47,7 @@ import {
 // diff-add-end
 
 const rootRoute = createRootRoute({
-    component: () => <Outlet />;
+    component: () => <Outlet />,
 });
 // diff-add-start
 const routeTree = rootRoute;
@@ -61,14 +61,14 @@ export const router = createRouter({
 For now, our router does not contain any routes so let's create 3 routes called `home`, `docs` and `components`.
 For these we'll need the React components so let's quickly create them:
 
-```bash
-mkdir components/pages
-touch components/pages/{home,docs,components}.tsx
+```bash title="Run from the root of the project"
+mkdir src/components/pages
+touch src/components/pages/{home,docs,components}.tsx
 ```
 
 now, let's export a react component from each file
 
-```tsx title="components/pages/home.tsx"
+```tsx title="src/components/pages/home.tsx"
 export const HomePage = () => {
     return (
       <div>
@@ -78,7 +78,7 @@ export const HomePage = () => {
   };
 ```
 
-```tsx title="components/pages/docs.tsx"
+```tsx title="src/components/pages/docs.tsx"
 export const DocsPage = () => {
     return (
       <div>
@@ -88,7 +88,7 @@ export const DocsPage = () => {
   };
 ```
 
-```tsx title="components/pages/components.tsx"
+```tsx title="src/components/pages/components.tsx"
 export const ComponentsPage = () => {
     return (
       <div>
@@ -100,9 +100,9 @@ export const ComponentsPage = () => {
 
 Now, using these newly created components let's add the routes to our router:
 
-```tsx title="components/routes.tsx"
+```tsx title="src/components/routes.tsx"
 // diff-add-start
-import { createRootRoute, createRoute, Outlet, redirect } from '@tanstack/react-router';
+import { createRootRoute, createRoute, Outlet, redirect, createRouter } from '@tanstack/react-router';
 import { HomePage } from "./pages/home";
 import { DocsPage } from "./pages/docs";
 import { ComponentsPage } from "./pages/components";
@@ -158,10 +158,10 @@ export const router = createRouter({
 });
 ```
 
-Next we will change the `components/index.tsx` to import the router and export a new rootComponent:
+Next we will change the `src/components/index.tsx` to import the router and export a new rootComponent:
 
 
-```tsx title="components/index.tsx"
+```tsx title="src/components/index.tsx"
 // diff-remove
 import App from "./app";
 import { withProviders } from "@akashaorg/ui-core-hooks";
@@ -186,8 +186,8 @@ export default withProviders(RootComponent);
 
 We can now go ahead and get rid of the old `app.tsx` file as it's not used anymore.
 
-```bash
-rm -f components/app.tsx
+```bash title="Run from the root of the project"
+rm -f src/components/app.tsx
 ```
 
 There is still one important change that we need to make because of how the routing works in the outside layer of the apps.
@@ -207,7 +207,7 @@ This means that we need instruct the router to only consider routes starting fro
 Let's modify the `routes.tsx` file to allow this change:
 
 ```tsx title="components/routes.tsx"
-import { createRootRoute, createRoute, Outlet, redirect } from '@tanstack/react-router';
+import { createRootRoute, createRoute, Outlet, redirect, createRouter } from '@tanstack/react-router';
 
 import { HomePage } from "./pages/home";
 import { DocsPage } from "./pages/docs";
@@ -265,7 +265,7 @@ export const router = createRouter({
 export const getRouter = (basePath) => {
   return createRouter({
     routeTree,
-    basePath,
+    basepath: basePath,
   });
 // diff-add-end
 }
