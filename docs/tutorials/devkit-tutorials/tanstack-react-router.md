@@ -265,7 +265,7 @@ export const router = createRouter({
 export const getRouter = (basePath) => {
   return createRouter({
     routeTree,
-    basePath,
+    basepath: basePath,
   });
 // diff-add-end
 }
