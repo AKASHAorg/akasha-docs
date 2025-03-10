@@ -14,9 +14,7 @@
   --ifm-color-primary-lighter: #7c3aed;
   --ifm-color-primary-lightest: #7c3aed;
   --ifm-code-font-size: 95%;
-  --ifm-background-color: #ffffff;
-  --ifm-background-surface-color: #ffffff;
-  --code-block-diff-add-color:  #00ff3c3d;
+  --code-block-diff-add-color: #00ff3c3d;
   --code-block-diff-remove-color: #ff00002b;
 }
 
@@ -29,10 +27,38 @@
   --ifm-color-primary-light: #ac7efa;
   --ifm-color-primary-lighter: #ac7efa;
   --ifm-color-primary-lightest: #ac7efa;
-  --ifm-background-color: #18181b;
-  --ifm-background-surface-color: #18181b;
-  --code-block-diff-add-color:  #00972436;
+  --code-block-diff-add-color: #00972436;
   --code-block-diff-remove-color: #f6525224;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+[data-theme="dark"] body {
+  background-color: #18181b;
+}
+
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #18181b;
+}
+
+[data-theme="dark"] p,
+[data-theme="dark"] span,
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: #ffffff;
 }
 
 .docusaurus-highlight-code-line {
@@ -46,16 +72,23 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.tip-card {
-  border-left: 0.35rem solid #e4e4e7;
+.card {
   padding: 1rem;
   background-color: #f4f4f5;
+  text-decoration: none !important;
+}
+
+[data-theme="dark"] .card {
+  background-color: #27272a;
+}
+
+.tip-card {
+  border-left: 0.35rem solid #e4e4e7;
   border-radius: 0.5rem;
 }
 
 [data-theme="dark"] .tip-card {
   border-left: 0.35rem solid #4a4a4a;
-  background-color: #27272a;
 }
 
 p {
@@ -64,23 +97,7 @@ p {
 
 .clickable-card {
   width: 31%;
-  padding: 1rem;
-  color: black;
   border-radius: 1rem;
-  background-color: #f4f4f5;
-}
-
-.clickable-card img {
-  width: 70%;
-}
-
-[data-theme="dark"] .clickable-card {
-  color: white;
-  background-color: #27272a;
-}
-
-a {
-  text-decoration: none !important;
 }
 
 .code-block-diff-add-line {
@@ -96,4 +113,8 @@ a {
 .theme-code-block code {
   white-space: pre-wrap;
   word-break: break-word;
+}
+
+.highlight-1 {
+  color: tomato !important;
 }
