@@ -114,3 +114,7 @@ p {
   white-space: pre-wrap;
   word-break: break-word;
 }
+
+.highlight-1 {
+  color: tomato !important;
+}
