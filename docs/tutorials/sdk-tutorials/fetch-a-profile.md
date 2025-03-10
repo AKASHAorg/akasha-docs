@@ -7,7 +7,7 @@ sidebar_label: Fetch a Profile
 
 Fetching a profile involves querying the underlying <span className='highlight-1'>profile model</span> using GraphQL API through the SDK's [GQL service](../../data-fetching-and-mutations/sdk/services/Services.md#graphql).
 
-We can fetch the profile we just created in the [previous](./create-a-profile.md) tutorial using its `id`
+We can fetch the profile we just created in the [previous](./create-a-profile.md) tutorial using its `DID`
 
 1. Let's create another file
 
@@ -23,7 +23,7 @@ import getSDK from "@akashaorg/awf-sdk";
 const gqlClient = getSDK().services.gql.client;
 ```
 
-3. Similar to steps we took while creating a profile, let's define a function to handle and return the response from the SDK service. The function will have just one parameter which is the DID of the profile we are about to fetch.
+3. Similar to steps we took while creating a profile, let's define a function to handle and return the response from the SDK service. The function will have just one parameter which is the DID of the profile we are about to fetch
 
 ```ts title="fetch-profile.ts"
 import getSDK from "@akashaorg/awf-sdk";
@@ -73,6 +73,6 @@ fetchProfileHandler(
 // diff-add-end
 ```
 
-Now that we have successfully fetched a profile using its DID, feel free to explore the profile data from the response object and build something great.
+Now that we have successfully fetched a profile using its DID, feel free to explore the profile data from the response object and build something great
 
 Ready to learn some more? Let's try [creating a beam](./create-a-beam.md)
