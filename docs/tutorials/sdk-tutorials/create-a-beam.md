@@ -123,4 +123,4 @@ The id of the newly created beam can be got from the response document object us
 `response.data?.createAkashaBeam?.document?.id`
 :::
 
-Now that we have successfully created a beam, let's proceed to [fetch the beam](./fetch-a-beam-by-id.md)
+COngratulations! We have just created our first beam, let's proceed to [fetch the beam](./fetch-a-beam-by-id.md)

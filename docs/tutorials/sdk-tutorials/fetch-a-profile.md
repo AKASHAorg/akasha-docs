@@ -73,6 +73,6 @@ fetchProfileHandler(
 // diff-add-end
 ```
 
-Now that we have successfully fetched a profile using its DID, feel free to explore the profile data from the response object and build something great
+We have just demonstrated how a profile can be fetched using its DID. Feel free to explore the profile data from the response object and build something great
 
 Ready to learn some more? Let's try [creating a beam](./create-a-beam.md)
