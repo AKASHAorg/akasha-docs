@@ -21,7 +21,7 @@ import getSDK from "@akashaorg/awf-sdk";
 const gqlClient = getSDK().services.gql.client;
 ```
 
-3. Let's define a function to handle and return the response from the SDK service. This function will have two params, first parameter being the content of the beam we wish to create. This is an array that holds the `ID` of the individual blocks in the beam and their corresponding `order`. Learn more about content blocks [here](../../extensions/editor/content_blocks.md). The second parameter is optional (defaults to `true`) and specifies whether the beam is active or has beem removed by its author
+3. Let's define a function to handle and return the response from the SDK service. This function will have two params, first parameter being the content of the beam we wish to create. This is an array that holds the `ID` of the individual [content blocks](../../extensions/editor/content_blocks.md) in the beam and their corresponding `order`. The second parameter is optional (defaults to `true`) and specifies whether the beam is active or has beem removed by its author
 
 ```ts title="create-beam.ts"
 import getSDK from "@akashaorg/awf-sdk";
@@ -71,7 +71,7 @@ const createBeamHandler = (
     });
 
     // log the response document, and take note of the beam Id
-    console.log(response.node?.createAkashaBeam?.document);
+    console.log(response.data?.createAkashaBeam?.document);
     // diff-add-end
   } catch (error) {
     console.log(`An error occured: ${error.message}`);
@@ -104,7 +104,7 @@ const createBeamHandler = (
     });
 
     // log the response document, and take note of the beam Id
-    console.log(response.node?.createAkashaBeam?.document);
+    console.log(response.data?.createAkashaBeam?.document);
   } catch (error) {
     console.log(`An error occured: ${error.message}`);
   }
@@ -120,7 +120,7 @@ createBeamHandler([
 
 :::tip
 The id of the newly created beam can be got from the response document object using;
-`response.node?.createAkashaBeam?.document?.id`
+`response.data?.createAkashaBeam?.document?.id`
 :::
 
 Now that we have successfully created a beam, let's proceed to [fetch the beam](./fetch-a-beam-by-id.md)

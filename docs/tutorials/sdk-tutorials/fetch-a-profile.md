@@ -38,7 +38,7 @@ const fetchProfileHandler = (did: string) => {
     });
 
     // the profile data is contained in a node
-    console.log(response.node);
+    console.log(response.data?.node);
   } catch (error) {
     console.log(`An error occured: ${error.message}`);
   }
@@ -46,7 +46,7 @@ const fetchProfileHandler = (did: string) => {
 // diff-add-end
 ```
 
-Let's run the function, passing to it the `did` variable
+4. Let's run the function, passing to it the `did` variable
 
 ```ts title="fetch-profile.ts"
 import getSDK from "@akashaorg/awf-sdk";
@@ -60,7 +60,7 @@ const fetchProfileHandler = (did: string) => {
     });
 
     // the profile data is contained in a node
-    console.log(response.node);
+    console.log(response.data?.node);
   } catch (error) {
     console.log(`An error occured: ${error.message}`);
   }
