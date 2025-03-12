@@ -1,11 +1,17 @@
 ---
-sidebar_position: 823
+sidebar_position: 824
 sidebar_label: Create a Beam
 ---
 
 # Create A Beam
 
 Creating a beam involves mutating the underlying <span className="highlight-1">beam model</span> using GraphQL API through the SDK's [GQL service](../../data-fetching-and-mutations/sdk/services/Services.md#graphql).
+
+A beam consists of content blocks which could be formed in an editor. In order to create a beam, we need to specify a list containing the id(s) of the [content block(s)](../../extensions/editor/content_blocks.md) in that beam. This means that before a beam is created, its individual content block(s) need to be created and stored in the content block model, first, then their respective ids will be referenced and saved to the beam model.
+
+:::tip
+To better understand this tutorial, it is important that you go through [creating a content block](./create-a-content-block.md) tutorial first
+:::
 
 1. Let's start by creating a new file
 
@@ -30,7 +36,7 @@ const gqlClient = getSDK().services.gql.client;
 // diff-add-start
 
 const createBeamHandler = (
-  content: { blockID: any; order: number }[],
+  beamContent: { blockID: any; order: number }[],
   isBeamActive = true
 ) => {
   try {
@@ -40,7 +46,6 @@ const createBeamHandler = (
   }
 };
 // diff-add-end
-``;
 ```
 
 4. We need to pass some parameters to the `CreateBeam` method. This includes the required parameters like `content`, `active` `createdAt`, `appID`, `appVersionID`. Additionally, we shall log the response from this method, so we can see the newly created beam's id
@@ -51,7 +56,7 @@ import getSDK from "@akashaorg/awf-sdk";
 const gqlClient = getSDK().services.gql.client;
 
 const createBeamHandler = (
-  content: { blockID: any; order: number }[],
+  beamContent: { blockID: any; order: number }[],
   isBeamActive = true
 ) => {
   try {
@@ -61,8 +66,8 @@ const createBeamHandler = (
     const response = await gqlClient.CreateBeam({
       i: {
         content: {
-          content: content,
           active: isBeamActive,
+          content: beamContent,
           createdAt: new Date(),
           appID: "application ID",
           appVersionID: "application version ID",
