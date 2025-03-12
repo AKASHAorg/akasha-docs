@@ -143,4 +143,4 @@ createProfileHandler("John Doe");
 createProfileHandler("John Not Doe", true);
 ```
 
-Voila! We have successfully created a new profile, let's proceed to [fetch the profile](./fetch-a-profile.md)
+Now that we have successfully created a new profile, let's proceed to [fetch the profile](./fetch-a-profile.md)
