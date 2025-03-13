@@ -64,7 +64,7 @@ const createProfileHandler = (userName: string, isNsfw = false) => {
     });
 
     // log the response document, and take note of the profile's DID
-    console.log(response.node?.setAkashaProfile?.document);
+    console.log(response.data?.setAkashaProfile?.document);
     // diff-add-end
   } catch (error) {
     console.log(`An error occured: ${error.message}`);
@@ -94,7 +94,7 @@ const createProfileHandler = (userName: string, isNsfw = false) => {
     });
 
     // log the response document, and take note of the profile's DID
-    console.log(response.node?.setAkashaProfile?.document);
+    console.log(response.data?.setAkashaProfile?.document);
   } catch (error) {
     console.log(`An error occured: ${error.message}`);
   }
@@ -107,7 +107,7 @@ createProfileHandler("John Doe");
 
 :::tip
 The Decentralized Identity (DID) of the newly created profile can be got from the response document object using;
-`response.node?.setAkashaProfile?.document?.did.id`
+`response.data?.setAkashaProfile?.document?.did.id`
 :::
 
 6. If we wish to create a `NSFW profile`, we can simply specify so in the second parameter
@@ -131,7 +131,7 @@ const createProfileHandler = (userName: string, isNsfw = false) => {
       },
     });
 
-    console.log(response.node?.setAkashaProfile?.document);
+    console.log(response.data?.setAkashaProfile?.document);
   } catch (error) {
     console.log(`An error occured: ${error.message}`);
   }
@@ -143,4 +143,4 @@ createProfileHandler("John Doe");
 createProfileHandler("John Not Doe", true);
 ```
 
-Now that we have successfully created a profile, let's proceed to [fetch the profile](./fetch-a-profile.md)
+Now that we have successfully created a new profile, let's proceed to [fetch the profile](./fetch-a-profile.md)

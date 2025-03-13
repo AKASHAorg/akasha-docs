@@ -38,7 +38,7 @@ const fetchProfileHandler = (did: string) => {
     });
 
     // the profile data is contained in a node
-    console.log(response.node);
+    console.log(response.data?.node);
   } catch (error) {
     console.log(`An error occured: ${error.message}`);
   }
@@ -46,7 +46,7 @@ const fetchProfileHandler = (did: string) => {
 // diff-add-end
 ```
 
-Let's run the function, passing to it the `did` variable
+4. Let's run the function, passing to it the `did` variable
 
 ```ts title="fetch-profile.ts"
 import getSDK from "@akashaorg/awf-sdk";
@@ -60,7 +60,7 @@ const fetchProfileHandler = (did: string) => {
     });
 
     // the profile data is contained in a node
-    console.log(response.node);
+    console.log(response.data?.node);
   } catch (error) {
     console.log(`An error occured: ${error.message}`);
   }
@@ -73,6 +73,6 @@ fetchProfileHandler(
 // diff-add-end
 ```
 
-Now that we have successfully fetched a profile using its DID, feel free to explore the profile data from the response object and build something great
+We have just demonstrated how a profile can be fetched using its DID. Feel free to explore the profile data from the response object and build something great
 
 Ready to learn some more? Let's try [creating a beam](./create-a-beam.md)
