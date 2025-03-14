@@ -4,95 +4,101 @@ sidebar_label: Setup & Workflow
 title: Setup & Development Workflow
 ---
 
-After you have [installed the Devkit locally](./index.mdx#installation), you will need to load it into a world.
+After you have [installed the Devkit locally](./index.mdx#installation), you will need to load it into a world
 
 The Devkit can be loaded into any world but for development purposes we'll load it into AKASHA's staging enviromnent
-available at [https://next.akasha-world-framework.pages.dev/](https://next.akasha-world-framework.pages.dev/).
+available at [https://next.akasha-world-framework.pages.dev/](https://next.akasha-world-framework.pages.dev/)
 
-<div className="card tip-card">
-  <span>
-    Make sure that you can load the `mainFile` (its url should be shown in your
-    terminal) - as it will require bypassing the browser's SSL warning.
-  </span>
-</div>
-
-## Starting from scratch
-
-:::tip
-Skip the following steps only if you have already completed them.
+:::caution
+We recommend using an up-to-date version of `Chrome` browser for the best experience
 :::
 
-1. Authenticate on https://next.akasha-world-framework.pages.dev/ - optionally, create a profile, if you do not have one yet.
-   <hr />
-2. Navigate to the [**Extensions App -> Explore**](https://next.akasha-world-framework.pages.dev/@akashaorg/app-extensions/explore) page from the sidebar.
+Let's get started to load the Devkit into the staging environment:
 
-   <hr />
+1. On you browser, load the `mainFile` (its url should be shown in your terminal), allow the browser to load the page by clicking on `Advanced` and then `Proceed to ...` (unsafe). This step is required to bypass the browser's SSL warning
 
-3. Scroll down to the last card (image shown below) and click on `Start your journey` as a developer.
+   ***
+
+2. On a different tab, visit https://next.akasha-world-framework.pages.dev/ and authenticate (create a new profile or connect an existing account)
+
+   ***
+
+3. After authenticating, navigate to the [**Extensions App -> Explore**](https://next.akasha-world-framework.pages.dev/@akashaorg/app-extensions/explore) page from the sidebar
+
+   ***
+
+4. Scroll down to the last card (image shown below) and click on `Start your journey` as a developer
 
    <img src="/img/start_journey.gif" style={{ maxWidth: "60%" }} />
-   <hr />
 
-4. On the next page, enable `Extensions Developer Mode`, and wait for the page to reload.
+   ***
 
-   <hr />
+5. On the next page, enable `Extensions Developer Mode`, and wait for the page to reload. This allows you to access the My Extensions page from the sidebar
 
-5. Having enabled `Extensions Developer Mode`, you will have access to a new page in the [**Extensions App -> My Extensions**](https://next.akasha-world-framework.pages.dev/@akashaorg/app-extensions/my-extensions)
+   ***
 
-   <hr />
+6. Navigate to the [**Extensions App -> My Extensions**](https://next.akasha-world-framework.pages.dev/@akashaorg/app-extensions/my-extensions) from the sidebar, click on `Create` extension and fill out the form (example values show below)
 
-6. Navigate to the [**Extensions App -> My Extensions**](https://next.akasha-world-framework.pages.dev/@akashaorg/app-extensions/my-extensions), click on `Create` extension and fill out the form (example values show below)
+   ```tsx
+   - Extension Type: "App" // for now, we only support App extensions
+   - Extension ID: "extension-devkit" // you can find this id in the terminal where you ran the Devkit
+   - Extension Display Name: "My Extension" // choose how this extension will be displayed in its extension profile page
+   - Extension License: "MIT" // or choose what licence this extension should have
+   ```
 
-```tsx
-- Extension Type: "App" // for now, we only support App extensions
-- Extension ID: "extension-devkit" // you can find this id in the terminal where you ran the Devkit
-- Extension Display Name: "My Extension" // choose how this extension will be displayed in its extension profile page
-- Extension License: "MIT" // or choose what licence this extension should have
-```
+   ***
 
-<hr />
+7. Click on `Create locally` button and on the next page, click on `Manage Releases` button
 
-7. Click on `Create Locally` button and on the next page click on `Manage Releases` button.
+   <div className=" card tip-card">
+     This is your `Release Manager` page from which you can create new releases
+     for this extension. But for now we are only interested in loading this
+     extension's source file for testing purposes
+   </div>
 
-<div className=" card tip-card">
-  This is your `Release Manager` page from which you can create new releases for
-  this extension. But for now we are only interested in loading this extension's
-  source for testing purposes.
-</div>
-<hr />
+   ***
 
 8. Click on the `Test Release` button as shown in the following screenshot:
 
-<img src="/img/release-manager.gif" style={{ maxWidth: "60%" }} />
-<hr />
+   <img src="/img/release-manager.gif" style={{ maxWidth: "60%" }} />
 
-9. On the next screen, fill out the `Source URL` field with the url of your `mainFile` -> its url should be shown in your terminal. The other fields are optional.
+   ***
 
-<div className="card tip-card">
-  The next step is very important when loading the extension in the staging
-  environment (https://next.akasha-world-framework.pages.dev). It can be skipped
-  if you are running the world locally (generally on https://localhost:8131).
-</div>
-<hr />
+9. On the next screen, fill out the `Source URL` field with the url of your `mainFile` (refer to step 1). The other fields are optional
 
-10. Open the `Developer Tools` (for Chrome: right click on the page and click on `inspect`).
+   <div className="card tip-card">
+     The next step is very important when loading the extension in the staging
+     environment (https://next.akasha-world-framework.pages.dev). It can be
+     skipped if you are running the world locally (generally on
+     https://localhost:8131).
+   </div>
 
-- Go to the `Application` tab and then select the `service worker` from the side-panel
-- Enable `Bypass for network` checkbox like shown below
+   ***
 
-<img src="/img/service-worker-bypass.png" />
-<hr />
+10. Open the `Developer Tools` (For Chrome: Right click on the page and click on `inspect`)
 
-11. Click on the `Test Release` button and the extension should now start to load.
+    - Go to the `Application` tab, then select the `service worker` from the side-panel
+    - Enable `Bypass for network` checkbox like shown below
+    - Keep the developer tools open as you proceed to the next step
 
-<div className="card tip-card">
-  <h3>🙌 Congrats!</h3>
-  <span>
-    You can now start to develop extensions using your local installation of the
-    Devkit. Start playing with it!
-  </span>
-  <span>
-    Notice that it has live-reload feature when you make changes to the source
-    code.
-  </span>
-</div>
+    <img src="/img/service-worker-bypass.png" />
+
+    ***
+
+11. Back on the web page, click on the `Test Release` button. The extension should then load in the staging environment and display the welcome page
+
+    <div className="card tip-card">
+      <h3>🙌 Congrats!</h3>
+      <span>
+        You can now start to develop extensions using your local installation of
+        the Devkit. Start playing with it!
+      </span>
+      <span>
+        Notice that it has live-reload feature when you make changes to the
+        source code.
+      </span>
+      <span>
+        Visit the [tutorials](../tutorials/index.md) section to learn more and
+        build cool stuffs using the Devkit
+      </span>
+    </div>

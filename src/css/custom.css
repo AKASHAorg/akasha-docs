@@ -83,6 +83,7 @@ h6 {
 }
 
 .tip-card {
+  margin-top: 1rem;
   border-left: 0.35rem solid #e4e4e7;
   border-radius: 0.5rem;
 }
