@@ -29,7 +29,7 @@ import getSDK from "@akashaorg/awf-sdk";
 const gqlClient = getSDK().services.gql.client;
 // diff-add-start
 
-const fetchBeamsHandler = () => {
+const fetchBeamsHandler = async () => {
   try {
     const response = await gqlClient.GetBeams({});
   } catch (error) {
@@ -55,7 +55,7 @@ import getSDK from "@akashaorg/awf-sdk";
 
 const gqlClient = getSDK().services.gql.client;
 
-const fetchBeamsHandler = () => {
+const fetchBeamsHandler = async () => {
   try {
     // diff-remove
     const response = await gqlClient.GetBeams({});
@@ -80,7 +80,7 @@ import getSDK from "@akashaorg/awf-sdk";
 
 const gqlClient = getSDK().services.gql.client;
 
-const fetchBeamsHandler = () => {
+const fetchBeamsHandler = async () => {
   try {
     const response = await gqlClient.GetBeams({
       first: 10,

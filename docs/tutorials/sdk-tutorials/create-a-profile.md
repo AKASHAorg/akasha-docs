@@ -46,7 +46,7 @@ import getSDK from "@akashaorg/awf-sdk";
 
 const gqlClient = getSDK().services.gql.client;
 
-const createProfileHandler = (userName: string, isNsfw = false) => {
+const createProfileHandler = async (userName: string, isNsfw = false) => {
   try {
     // diff-remove
     const response = await gqlClient.CreateProfile({});
@@ -79,7 +79,7 @@ import getSDK from "@akashaorg/awf-sdk";
 
 const gqlClient = getSDK().services.gql.client;
 
-const createProfileHandler = (userName: string, isNsfw = false) => {
+const createProfileHandler = async (userName: string, isNsfw = false) => {
   try {
     const response = await gqlClient.CreateProfile({
       i: {
@@ -117,7 +117,7 @@ import getSDK from "@akashaorg/awf-sdk";
 
 const gqlClient = getSDK().services.gql.client;
 
-const createProfileHandler = (userName: string, isNsfw = false) => {
+const createProfileHandler = async (userName: string, isNsfw = false) => {
   try {
     const response = await gqlClient.CreateProfile({
       i: {
