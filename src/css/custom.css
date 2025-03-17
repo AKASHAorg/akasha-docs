@@ -31,11 +31,11 @@
   --code-block-diff-remove-color: #f6525224;
 }
 
-body {
+.main-wrapper {
   background-color: #ffffff;
 }
 
-[data-theme="dark"] body {
+[data-theme="dark"] .main-wrapper {
   background-color: #18181b;
 }
 
