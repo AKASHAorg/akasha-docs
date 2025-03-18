@@ -25,6 +25,7 @@ export const HomePage = () => {
 ```
 
 We will create a button that will navigate to the world's global antenna. For this we'll need some information about that app:
+
 - name
 - routes info
 
@@ -47,8 +48,8 @@ For simplicity we will just redirect to the `defaultRoute` so let's change our h
 
 ```tsx title="components/pages/home.tsx"
 // diff-add-start
-import { useRootComponentProps } from '@akashaorg/ui-core-hooks';
-import { Button } from './ui/button';
+import { useRootComponentProps } from "@akashaorg/ui-core-hooks";
+import { Button } from "./ui/button";
 // diff-add-end
 
 export const HomePage = () => {
@@ -56,13 +57,13 @@ export const HomePage = () => {
   const { getCorePlugins } = useRootComponentProps();
 
   const globalRouter = getCorePlugins().routing;
-  
+
   const onNavigate = () => {
     globalRouter.navigateTo({
-      appName: '@akashaorg/app-antenna',
+      appName: "@akashaorg/app-antenna",
       getNavigationUrl: (appRoutes) => appRoutes.defaultRoute,
     });
-  }
+  };
   // diff-add-end
 
   return (
@@ -89,8 +90,3 @@ Now, in the `onNavigate` handler we are using `routing` plugin's method navigate
 > If an app is not exposing any routes but we still want to navigate to it and we know the path, we can just return the path string, for example `/antenna`. Moreover if we want to just navigate to index route (path `/`) we can omit the `getNavigationUrl` entirely.
 
 > Note: using this selector will ensure that the navigation will not break if the path changes. For example, if we don't select from the `appRoutes` and we return the path directly then if that path changes our navigation will no longer work.
-
-
-
-
-

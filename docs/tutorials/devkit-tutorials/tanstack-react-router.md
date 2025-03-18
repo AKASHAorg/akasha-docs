@@ -11,6 +11,7 @@ The fully working implementation is available on the devkit's [examples/tanstack
 :::
 
 ### Installation
+
 Install the package:
 
 ```bash title="Run from the root of the project"
@@ -18,6 +19,7 @@ yarn add @tanstack/react-router
 ```
 
 ### Implementation
+
 Let's start by creating a new file in the `components` directory
 
 ```bash title="Run from the root of the project"
@@ -26,36 +28,30 @@ touch src/components/routes.tsx
 
 open it and import the required methods and components from `@tanstack/react-router` and create the rootRoute:
 
-
 ```tsx title="components/routes.tsx"
-import { createRootRoute } from '@tanstack/react-router';
+import { createRootRoute } from "@tanstack/react-router";
 
 const rootRoute = createRootRoute({
-    component: () => <Outlet />,
+  component: () => <Outlet />,
 });
-
 ```
 
 Next we will need to create the routeTree and then export the router instance:
 
 ```tsx title="components/routes.tsx"
 // diff-add-start
-import {
-  createRootRoute, 
-  Outlet, 
-  createRouter } from '@tanstack/react-router';
+import { createRootRoute, Outlet, createRouter } from "@tanstack/react-router";
 // diff-add-end
 
 const rootRoute = createRootRoute({
-    component: () => <Outlet />,
+  component: () => <Outlet />,
 });
 // diff-add-start
 const routeTree = rootRoute;
 export const router = createRouter({
-   routeTree,
+  routeTree,
 });
 // diff-add-end
-
 ```
 
 For now, our router does not contain any routes so let's create 3 routes called `home`, `docs` and `components`.
@@ -101,6 +97,9 @@ export const ComponentsPage = () => {
 Now, using these newly created components let's add the routes to our router:
 
 ```tsx title="src/components/routes.tsx"
+// diff-remove-start
+import { createRootRoute, Outlet, createRouter } from "@tanstack/react-router";
+// diff-remove-end
 // diff-add-start
 import { createRootRoute, createRoute, Outlet, redirect, createRouter } from '@tanstack/react-router';
 import { HomePage } from "./pages/home";
@@ -160,14 +159,13 @@ export const router = createRouter({
 
 Next we will change the `src/components/index.tsx` to import the router and export a new rootComponent:
 
-
 ```tsx title="src/components/index.tsx"
 // diff-remove
 import App from "./app";
 import { withProviders } from "@akashaorg/ui-core-hooks";
 // diff-add-start
-import { RouterProvider } from '@tanstack/react-router';
-import { router } from './routes';
+import { RouterProvider } from "@tanstack/react-router";
+import { router } from "./routes";
 // diff-add-end
 import "../assets/style.css";
 
@@ -177,11 +175,10 @@ export default withProviders(App);
 // diff-add-start
 const RootComponent = () => {
   return <RouterProvider router={router} />;
-}
+};
 
 export default withProviders(RootComponent);
 // diff-add-end
-
 ```
 
 We can now go ahead and get rid of the old `app.tsx` file as it's not used anymore.
@@ -192,13 +189,11 @@ rm -f src/components/app.tsx
 
 There is still one important change that we need to make because of how the routing works in the outside layer of the apps.
 
-Apps are rendered in a world when their name matches the  path of the current URL, for example an app with name `my-application` will be rendered when the path of the URL will be `/my-application` (www.akasha.world/my-application). This is handled by a global router (single-spa) and apps are required to handle only the subroutes:
+Apps are rendered in a world when their name matches the path of the current URL, for example an app with name `my-application` will be rendered when the path of the URL will be `/my-application` (www.akasha.world/my-application). This is handled by a global router (single-spa) and apps are required to handle only the subroutes:
 
 assuming we are navigating to this path:
 
-`
-http://akasha.world/my-application/internal-application-path
-`
+`http://akasha.world/my-application/internal-application-path`
 
 the global router will match the app named `my-application` and render it. Then that application will take over and route to the `/internal-application-path` accordingly.
 
@@ -251,7 +246,7 @@ const componentsRoute = createRoute({
 
 const routeTree = rootRoute.addChildren([
    homeRoute,
-   docsRoute, 
+   docsRoute,
    componentsRoute,
 ]);
 
@@ -271,24 +266,24 @@ export const getRouter = (basePath) => {
 }
 ```
 
-With this change we can now pass the `basePath` to the router. 
+With this change we can now pass the `basePath` to the router.
 
 The value of the basePath is passed down by the app-loader to the rootComponent as prop so let's quickly do this change:
 
 ```tsx title="components/index.tsx"
 import { withProviders } from "@akashaorg/ui-core-hooks";
-import { RouterProvider } from '@tanstack/react-router';
+import { RouterProvider } from "@tanstack/react-router";
 // diff-remove
-import { router } from './routes';
+import { router } from "./routes";
 // diff-add
-import { getRouter } from './routes';
-import { IRootComponentProps } from '@akashaorg/typings/lib/ui';
+import { getRouter } from "./routes";
+import { IRootComponentProps } from "@akashaorg/typings/lib/ui";
 import "../assets/style.css";
 
 // diff-add-start
 const RootComponent = (props: IRootComponentProps) => {
   return <RouterProvider router={getRouter(props.baseRouteName)} />;
-}
+};
 // diff-add-end
 
 export default withProviders(RootComponent);
@@ -304,7 +299,7 @@ import {
   IntegrationRegistrationOptions,
   MenuItemAreaType,
   LogoTypeSource,
-} from '@akashaorg/typings/lib/ui';
+} from "@akashaorg/typings/lib/ui";
 
 /**
  * Changes in this file requires a full reload in the browser!
@@ -329,44 +324,45 @@ const SidebarIcon = () => (
 
 export const register = (opts: IntegrationRegistrationOptions): IAppConfig => {
   return {
-    rootComponent: () => import('./components'),
+    rootComponent: () => import("./components"),
     mountsIn: opts.layoutSlots?.applicationSlotId as string,
     // this is required for other apps to be able to navigte to our routes
     // diff-add-start
     routes: {
-      defaultRoute: '/home',
-      docs: '/docs',
-      components: '/components',
+      defaultRoute: "/home",
+      docs: "/docs",
+      components: "/components",
     },
     // diff-add-end
     menuItems: {
-      label: 'Extension Devkit',
+      label: "Extension Devkit",
       logo: { type: LogoTypeSource.ICON, value: <SidebarIcon /> },
       area: [MenuItemAreaType.UserAppArea],
       // diff-add-start
       subRoutes: [
-       {
+        {
           index: 1,
-          label: 'Home',
-          route: '/home'
-        }, {
+          label: "Home",
+          route: "/home",
+        },
+        {
           index: 2,
-          label: 'Docs',
-          route: '/docs',
-        }, {
+          label: "Docs",
+          route: "/docs",
+        },
+        {
           index: 3,
-          label: 'Components',
-          route: '/components'
-        }  
-      // diff-add-end
-     ],
+          label: "Components",
+          route: "/components",
+        },
+        // diff-add-end
+      ],
     },
   };
 };
-
 ```
 
-That's it! We should now be able to have multiple routes and expose them in the sidebar. 
+That's it! We should now be able to have multiple routes and expose them in the sidebar.
 
 [@tanstack/react-router](https://tanstack.com/router/latest) has many more features so make sure to read their [docs](https://tanstack.com/router/latest/docs/framework/react/overview).
 
