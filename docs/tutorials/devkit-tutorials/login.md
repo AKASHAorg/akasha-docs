@@ -250,10 +250,16 @@ const App = () => {
           //diff-remove
           <CardContent>DID: {data.authenticatedDID}</CardContent>
           //diff-add-start
-          <CardContent>
-            <Typography>DID: {data.authenticatedDID}</Typography>
-            <Typography>Name: {data.authenticatedProfile.name}</Typography>
-            <Typography>About: {data.authenticatedProfile.description}</Typography>
+          <CardContent className="flex-col gap-2">
+            <div>
+              <Typography>DID: {data.authenticatedDID}</Typography>
+            </div>
+            <div>
+              <Typography>Name: {data.authenticatedProfile.name}</Typography>
+            </div>
+            <div>
+              <Typography>About: {data.authenticatedProfile.description}</Typography>
+            </div>
           </CardContent>
           //diff-add-end
           <CardFooter>
