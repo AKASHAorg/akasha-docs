@@ -89,8 +89,3 @@ Now, in the `onNavigate` handler we are using `routing` plugin's method navigate
 > If an app is not exposing any routes but we still want to navigate to it and we know the path, we can just return the path string, for example `/antenna`. Moreover if we want to just navigate to index route (path `/`) we can omit the `getNavigationUrl` entirely.
 
 > Note: using this selector will ensure that the navigation will not break if the path changes. For example, if we don't select from the `appRoutes` and we return the path directly then if that path changes our navigation will no longer work.
-
-
-
-
-
