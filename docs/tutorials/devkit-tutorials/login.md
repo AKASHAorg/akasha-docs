@@ -29,21 +29,21 @@ When the login is succesful, an event is emitted on the [global event bus](../..
 
 This event is then used by the AuthenticationStore to save these details and provide them to the components.
 
-For convenience, this AuthenticationStore also fetches the logged in user's profile data automatically - almost in all cases the profile data is needed along with the login details - and for this reason, if you want to fetch the default profile used in AKASHA World it is much simple to use the provided hook [`useAkashaStore`](../../data-fetching-and-mutations/hooks/custom-hooks/index.md) which includes all this functionality by default.
+For convenience, this AuthenticationStore also fetches the logged in user's profile data automatically - almost in all cases the profile data is needed along with the login details - and for this reason, if you want to fetch the default profile used in AKASHA World it is much simple to use the provided hook [`useAkashaStore`](../../data-fetching-and-mutations/hooks/custom-hooks/index.md#useakashastore) which includes all this functionality by default.
 
 By default, the devkit already contains parts of this flow in the `src/components/app.tsx`
 
 ```tsx title="/src/components/app.tsx"
 /*@ts-ignore-next-line*/
-import logoWhite from '../assets/devkit-logo-white.png?inline';
+import logoWhite from "../assets/devkit-logo-white.png?inline";
 /*@ts-ignore-next-line*/
-import logoBlack from '../assets/devkit-logo-black.png?inline';
+import logoBlack from "../assets/devkit-logo-black.png?inline";
 
-import { Button } from './ui/button';
-import { useAkashaStore } from '@akashaorg/ui-core-hooks';
-import { Card, CardContent, CardFooter, CardHeader } from './ui/card';
-import { Image, ImageRoot } from './ui/image';
-import { Typography } from './ui/typography';
+import { Button } from "./ui/button";
+import { useAkashaStore } from "@akashaorg/ui-core-hooks";
+import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
+import { Image, ImageRoot } from "./ui/image";
+import { Typography } from "./ui/typography";
 
 const App = () => {
   const { data } = useAkashaStore();
@@ -97,7 +97,6 @@ const App = () => {
     </div>
   );
 };
-
 ```
 
 In this file, we already have the 'useAkashaStore' hook mounted and ready return the authentication data when it occurs.
@@ -110,39 +109,41 @@ So it's safe to asume that if the authenticatedDID is null and isAuthenticating 
 In most of the cases, you want to allow viewing the content for unauthenticated user but prevent it to take actions by requesting to login.
 This logic can be done using the `Profile App`'s Login modal extension point. There are quite a number of things happening behind the scenes but for now let's focus on this particular logic and the only thing that we need to now is that the profile is able to mount a login modal at our request and that modal is in turn redirecting to the `Authentication App`, preserving the `redirectTo` query string.
 
-Let's modify the handleAuth to redirect to the `Profile App`'s login modal and also make sure that after the successful login, the `Authentication App` will redirect the user back to our page. for this we'll use a method that is passed down by the `app-loader` which is called `navigateToModal`. This means that we can access this function from the `useRootComponentProps` hook.
+Let's modify the handleAuth to redirect to the `Profile App`'s login modal and also make sure that after the successful login, the `Authentication App` will redirect the user back to our page. for this we'll use a method that is passed down by the `app-loader` which is called `navigateToModal`. This means that we can access this function from the [useRootComponentProps](../../data-fetching-and-mutations/hooks/custom-hooks/index.md#userootcomponentprops) hook.
 
 ```tsx title="/src/components/app.tsx"
 /*@ts-ignore-next-line*/
-import logoWhite from '../assets/devkit-logo-white.png?inline';
+import logoWhite from "../assets/devkit-logo-white.png?inline";
 /*@ts-ignore-next-line*/
-import logoBlack from '../assets/devkit-logo-black.png?inline';
+import logoBlack from "../assets/devkit-logo-black.png?inline";
 
-import { Button } from './ui/button';
+import { Button } from "./ui/button";
 // diff-remove
-import { useAkashaStore } from '@akashaorg/ui-core-hooks';
-// diff-add
-import { useAkashaStore, useRootComponentProps } from '@akashaorg/ui-core-hooks';
-import { Card, CardContent, CardFooter, CardHeader } from './ui/card';
-import { Image, ImageRoot } from './ui/image';
-import { Typography } from './ui/typography';
-
-
+import { useAkashaStore } from "@akashaorg/ui-core-hooks";
+// diff-add-start
+import {
+  useAkashaStore,
+  useRootComponentProps,
+} from "@akashaorg/ui-core-hooks";
+// diff-add-end
+import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
+import { Image, ImageRoot } from "./ui/image";
+import { Typography } from "./ui/typography";
 
 const App = () => {
   const { data } = useAkashaStore();
-  //diff-add-start
+  // diff-add-start
   // we'll use the navigateToModal function to navigate to the Profile App's login modal
   const { navigateToModal } = useRootComponentProps();
-  //diff-add-end
+  // diff-add-end
 
   const handleAuth = () => {
     // diff-remove
     // @todo
     // diff-add-start
     navigateToModal({
-        name: 'login',
-        redirectTo: window.location.pathname
+      name: "login",
+      redirectTo: window.location.pathname,
     });
     // diff-add-end
   };
@@ -212,8 +213,8 @@ const App = () => {
 
   const handleAuth = () => {
     navigateToModal({
-        name: 'login',
-        redirectTo: window.location.pathname
+      name: "login",
+      redirectTo: window.location.pathname,
     });
   };
 
@@ -247,9 +248,9 @@ const App = () => {
           <CardHeader>
             <Typography>Authenticated User</Typography>
           </CardHeader>
-          //diff-remove
+          // diff-remove
           <CardContent>DID: {data.authenticatedDID}</CardContent>
-          //diff-add-start
+          // diff-add-start
           <CardContent className="flex-col gap-2">
             <div>
               <Typography>DID: {data.authenticatedDID}</Typography>
@@ -258,10 +259,12 @@ const App = () => {
               <Typography>Name: {data.authenticatedProfile.name}</Typography>
             </div>
             <div>
-              <Typography>About: {data.authenticatedProfile.description}</Typography>
+              <Typography>
+                About: {data.authenticatedProfile.description}
+              </Typography>
             </div>
           </CardContent>
-          //diff-add-end
+          // diff-add-end
           <CardFooter>
             <Button>View Profile</Button>
           </CardFooter>
@@ -280,16 +283,15 @@ const App = () => {
 
 ### Error handling
 
-The same hook also exposes any errors that happened during the authentication or during the profile info fetch operation. This is available via the `data.authenticatedProfileError` and `data.authenticationError` respectively.
+The same hook also exposes any errors that happened during the authentication or during the profile info fetch operation. This is available via the `data.authenticationError` and `data.authenticatedProfileError` respectively.
 
 Now that you know about how the login works and you have the data for the authenticated profile, why not [fetching other's profile data](./fetch-profile-data.md) :P
 
-
 ### So, how do modals work
 
-When `navigateToModal` is called, a new entry is added to the history's stack (this is basically navigation) and a query string is appended to the current URL. This query string contains the name of the modal that we want to navigate to. 
+When `navigateToModal` is called, a new entry is added to the history's stack (this is basically navigation) and a query string is appended to the current URL. This query string contains the name of the modal that we want to navigate to.
 
-For example `?modal[name]=login` (url encoded is `?modal%5Bname%5D=login`) will instruct the Layout widget to create a node (right now it creates a `div`) with the id `login`. When this happens, the app-loader (using the `extension-point-store` plugin) will query all the extension points provided by apps and try to find an extension point that matches this mount-point. The property that is looking for is called `mountsIn`. If any (or even more) of these extension points are matched it will try to load (render) the first one that matches - this is only applicable for the modals because you cannot have more than 1 modal rendered at any given time. The general rule for the extension points is to render all of them if they matches.
+For example `?modal[name]=login` (url encoded is `?modal%5Bname%5D=login`) will instruct the [Layout widget](../../layout-widget.md) to create a node (right now it creates a `div`) with the id `login`. When this happens, the [App Loader](../../extensions/app-loader.md) (using the `extension-point-store` plugin) will query all the extension points provided by apps and try to find an extension point that matches this mount-point. The property that the app loader is looking for in the extensions points is called `mountsIn`. If any (or even more) of these extension points is matched, it will try to load (render) the first one that matches - this is only applicable to the modals because you cannot have more than one modal rendered at any given time. The general rule for the extension points however, is to render all of them if they match.
 
 In other words, this little trick allows us to request mounting a node with the provided name thus triggering a render of the matching exension-point.
 

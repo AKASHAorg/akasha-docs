@@ -25,6 +25,7 @@ export const HomePage = () => {
 ```
 
 We will create a button that will navigate to the world's global antenna. For this we'll need some information about that app:
+
 - name
 - routes info
 
@@ -47,8 +48,8 @@ For simplicity we will just redirect to the `defaultRoute` so let's change our h
 
 ```tsx title="components/pages/home.tsx"
 // diff-add-start
-import { useRootComponentProps } from '@akashaorg/ui-core-hooks';
-import { Button } from './ui/button';
+import { useRootComponentProps } from "@akashaorg/ui-core-hooks";
+import { Button } from "./ui/button";
 // diff-add-end
 
 export const HomePage = () => {
@@ -56,13 +57,13 @@ export const HomePage = () => {
   const { getCorePlugins } = useRootComponentProps();
 
   const globalRouter = getCorePlugins().routing;
-  
+
   const onNavigate = () => {
     globalRouter.navigateTo({
-      appName: '@akashaorg/app-antenna',
+      appName: "@akashaorg/app-antenna",
       getNavigationUrl: (appRoutes) => appRoutes.defaultRoute,
     });
-  }
+  };
   // diff-add-end
 
   return (
