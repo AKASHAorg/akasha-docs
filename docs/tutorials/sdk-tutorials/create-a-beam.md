@@ -35,7 +35,7 @@ import getSDK from "@akashaorg/awf-sdk";
 const gqlClient = getSDK().services.gql.client;
 // diff-add-start
 
-const createBeamHandler = (
+const createBeamHandler = async (
   beamContent: { blockID: any; order: number }[],
   isBeamActive = true
 ) => {
@@ -55,7 +55,7 @@ import getSDK from "@akashaorg/awf-sdk";
 
 const gqlClient = getSDK().services.gql.client;
 
-const createBeamHandler = (
+const createBeamHandler = async (
   beamContent: { blockID: any; order: number }[],
   isBeamActive = true
 ) => {
@@ -91,7 +91,7 @@ import getSDK from "@akashaorg/awf-sdk";
 
 const gqlClient = getSDK().services.gql.client;
 
-const createBeamHandler = (
+const createBeamHandler = async (
   content: { blockID: any; order: number }[],
   isBeamActive = true
 ) => {

@@ -36,7 +36,7 @@ import getSDK from "@akashaorg/awf-sdk";
 const gqlClient = getSDK().services.gql.client;
 // diff-add-start
 
-const createContentBlockHandler = () => {
+const createContentBlockHandler = async () => {
   try {
     const response = await gqlClient.CreateContentBlock({});
   } catch (error) {
@@ -53,7 +53,7 @@ import getSDK from "@akashaorg/awf-sdk";
 
 const gqlClient = getSDK().services.gql.client;
 
-const createContentBlockHandler = () => {
+const createContentBlockHandler = async () => {
   try {
     // diff-remove
     const response = await gqlClient.CreateContentBlock({});
@@ -94,7 +94,7 @@ import getSDK from "@akashaorg/awf-sdk";
 
 const gqlClient = getSDK().services.gql.client;
 
-const createContentBlockHandler = () => {
+const createContentBlockHandler = async () => {
   try {
     const response = await gqlClient.CreateContentBlock({
       i: {

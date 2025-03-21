@@ -5,7 +5,7 @@ sidebar_label: Setup
 
 # AKASHA Core Development Quickstart
 
-This tutorial will guide you on how to install and setup the akasha-core repository. If you want to develop an app we recommend to use the [extension devkit](./devkit/index.mdx).
+This tutorial will guide you on how to install and setup the akasha-core repository. If you want to develop an app we recommend the [extension devkit](./devkit/index.mdx).
 
 ## Requirements
 
@@ -14,7 +14,7 @@ This tutorial will guide you on how to install and setup the akasha-core reposit
 - Operating System - Linux/MacOS
 
 :::caution Windows OS
-This guide assumes that you are using a Linux or MacOS. For Windows, please use Windows Subsystem for Linux ([WSL](https://docs.microsoft.com/en-us/windows/wsl/install)).
+This guide assumes that you are using Linux or MacOS. For Windows, please use Windows Subsystem for Linux ([WSL](https://docs.microsoft.com/en-us/windows/wsl/install)).
 :::
 
 :::info
