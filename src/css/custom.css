@@ -72,6 +72,29 @@ h6 {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.card-container {
+  display: grid;
+  gap: 1rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .card {
   padding: 1rem;
   background-color: #f4f4f5;
@@ -97,7 +120,6 @@ p {
 }
 
 .clickable-card {
-  width: 31%;
   border-radius: 1rem;
 }
 
