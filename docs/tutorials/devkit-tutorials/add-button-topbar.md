@@ -6,11 +6,13 @@ title: Enrich Topbar using extension point
 
 This tutorial adds further explanation on how extension points work and how even with Devkit, we are able to interact with extension points on other apps or widgets in a world. You can learn more about [Extension Points](../../extensions/extension-points.md) and take a look at a related tutorial on how to [create extension points](../extension-tutorials/create-extension-points.md).
 
-Before you proceed, be sure you have cloned and [set up the Devkit](../../devkit/setup.mdx) locally or on a DevContainer.
-
 :::info
 The fully working implementation is available on the devkit's [examples/extension-point](https://github.com/AKASHAorg/extension-devkit/tree/examples/extension-point) branch
 :::
+
+Before you proceed, be sure you have cloned and [set up the Devkit](../../devkit/setup.mdx) locally or on a DevContainer. Your topbar should look similar to the image below (dark theme)
+
+<img src="/img/topbar.png"></img>
 
 For this tutorial, we are going to consume already established extension points in the topbar. This will allow us to add a couple of buttons to the topbar, from the Devkit. Take a look at the how the [Extension Point](https://github.com/AKASHAorg/akasha-core/blob/next/libs/extensions/src/react/extension.tsx) component is defined in Akasha Core. To add this functionality to your app, simply use the same component, add it in the area you wish to extend, then give it a unique name.
 
@@ -147,6 +149,8 @@ export const register = (opts: IntegrationRegistrationOptions): IAppConfig => {
 };
 ```
 
-Refresh the entire page and you will see two buttons added to the topbar. Feel free to interact with them and check your console for the output.
+Refresh the entire page and you will see two buttons added to the topbar like in the image below. Feel free to interact with them and check your console for the output.
+
+<img src="/img/topbar_updated.png"></img>
 
 Congratulations, we have now interacted with extension points defined on another part of the World, from the Devkit. Go ahead, tweak the codes and make some magic with other extensions points in Akasha World.
