@@ -31,7 +31,7 @@ import getSDK from "@akashaorg/awf-sdk";
 const gqlClient = getSDK().services.gql.client;
 // diff-add-start
 
-const fetchProfileHandler = (did: string) => {
+const fetchProfileHandler = async (did: string) => {
   try {
     const response = await gqlClient.GetProfileByDid({
       id: did,
@@ -53,7 +53,7 @@ import getSDK from "@akashaorg/awf-sdk";
 
 const gqlClient = getSDK().services.gql.client;
 
-const fetchProfileHandler = (did: string) => {
+const fetchProfileHandler = async (did: string) => {
   try {
     const response = await gqlClient.GetProfileByDid({
       id: did,

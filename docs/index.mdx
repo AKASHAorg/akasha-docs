@@ -6,9 +6,9 @@ slug: /
 
 # AKASHA Core documentation
 
-Explore how to build amazing integrations with AKASHA Core and create unique experiences in the Akasha World.
+Explore how to build amazing integrations with AKASHA Core and create unique experiences in Akasha World.
 
-<div style={{ display: "flex", justifyContent: "space-between" }}>
+<div className="card-container">
   <a className="card clickable-card" href="/devkit">
     <img src="/img/build-with-devkit.webp"></img>
     <h3 style={{ margin: "0.5rem 0rem 0.35rem" }}>Build with Devkit</h3>
@@ -27,37 +27,36 @@ Explore how to build amazing integrations with AKASHA Core and create unique exp
     <img src="/img/explore-sdk-hooks.webp"></img>
     <h3 style={{ margin: "0.5rem 0rem 0.35rem" }}>Explore SDK and Hooks</h3>
     <span style={{ margin: "0rem" }}>
-      Deep-dive into data fetching and mutations on AKASHA Core
+      Deep-dive into queries and mutations on AKASHA Core
     </span>
   </a>
 </div>
 
 ## What is AKASHA Core?
 
-Today, AKASHA Core is the open-sourced framework for building and distributing composable web3 apps, serving as the foundation for our microblogging site, [Akasha World](https://next.akasha-world-framework.pages.dev/).
+**AKASHA Core** is an open-source framework for building and distributing composable web3 apps.
 
-AKASHA Core makes it easier for people to create and sustain social technological spaces we call [Worlds](https://blog.akasha.org/what-is-akasha-reloaded-what-is-ethereum-world/) and empowers developers with tools to build and innovate in the decentralized social network ecosystem.
+It enables communities to create their own online spaces, called [**Worlds**](https://akasha.org/world/). Designed as a modular system, it provides developers with the tools to create and extend decentralized social experiences.
+
+AKASHA Core is the foundation of the decentralized social platform [**AKASHA World**](https://next.akasha-world-framework.pages.dev/).
 
 ## Extensions on AKASHA Core
 
-Social experiences built with AKASHA Core can often be extended through various ways like applications, widgets and plugins. These are collectively referred to as "Extensions".
+Social experiences built with AKASHA Core can be enhanced through **Extensions**, which include **Applications, Widgets, and Plugins**.
 
 ### Applications
 
-Applications are standalone components that complement and extend your web3 social network experience.
-They serve specific functions within a World by providing distinct features to enhance the overall user experience. [Learn more](./extensions/applications.md).
+**Applications** are standalone components that complement and extend your web3 social network experience. They serve specific functions within a World by providing distinct features to enhance the overall user experience. [Learn more](./extensions/applications.md).
 
 ### Widgets
 
-Widgets allow users to perform quick actions or access short but useful information relating to an application (`app-specific widgets`) or the world (`general widgets`).
-They're designed to enhance the user experience in more compact and focused ways than full applications. [Learn more](./extensions/widgets.md)
+**Widgets** are compact UI elements that offer quick access to useful information or actions. They can be `app-specific widgets`, tied to a particular application, or `general widgets`, providing broader functionality within a World. [Learn more](./extensions/widgets.md).
 
 ### Plugins
 
-Plugin allows developers to provide API's and system-level services that can be used by applications and widgets but without rendering anything in the user interface. [Learn more](./extensions/plugins.md)
+**Plugins** provide APIs and system-level services for applications and widgets. They extend capabilities without rendering anything in the user interface. [Learn more](./extensions/plugins.md).
 
-
-All extensions built with AKASHA Core are open-source. Find in the table below, the list of current extensions available in AKASHA World. Explore them whenever you want to get inspired or learn.
+All extensions built with AKASHA Core are open-source. [Explore](https://next.akasha-world-framework.pages.dev/@akashaorg/app-extensions/installed-extensions) the available extensions in AKASHA World to get inspired or learn from existing implementations.
 
 |                                               Apps                                                |                                              Widgets                                               |                                                   Plugins                                                   |
 | :-----------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
@@ -71,3 +70,7 @@ All extensions built with AKASHA Core are open-source. Find in the table below, 
 |      [Settings](https://github.com/AKASHAorg/akasha-core/tree/next/extensions/apps/settings)      |                                                                                                    |                                                                                                             |
 |         [Vibes](https://github.com/AKASHAorg/akasha-core/tree/next/extensions/apps/vibes)         |                                                                                                    |                                                                                                             |
 | [Vibes Console](https://github.com/AKASHAorg/akasha-core/tree/next/extensions/apps/vibes-console) |                                                                                                    |                                                                                                             |
+
+## Build once, empower many
+
+When you deploy a new extension, it's not limited to just one World, it can be used by other Worlds as well. By building for yourself, you're also contributing to a shared ecosystem where others can benefit from your work. Likewise, you can leverage extensions created by others, accelerating development and fostering collaboration across multiple Worlds.

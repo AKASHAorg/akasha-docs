@@ -1,6 +1,6 @@
-# Extension devkit for Worlds
+# Extension Devkit for Worlds
 
-The starter kit allows you to develop extensions compatible with [AKASHA Core](https://github.com/AKASHAorg/akasha-core)
+The [Devkit](https://github.com/AKASHAorg/extension-devkit) (available on Github) is a starter kit that allows you to develop extensions compatible with [AKASHA Core](https://github.com/AKASHAorg/akasha-core)
 
 ## Features
 
@@ -13,6 +13,8 @@ The starter kit allows you to develop extensions compatible with [AKASHA Core](h
 - Live Reload - reloads the extension, on file change
 
 ## Installation
+
+To get started with Devkit, clone the [repository](https://github.com/AKASHAorg/extension-devkit) from Github
 
 ### Using DevContainers (Recommended)
 

@@ -4,13 +4,13 @@ sidebar_label: Fetch Profile Data
 title: Fetch Profile Data using Hooks
 ---
 
-In this tutorial we will demostrate how you can use the hooks to fetch profile data.
+In this tutorial we will demostrate how you can use the hooks to fetch profile data
 
 :::info
-The fully working implementation is available on the devkit's [examples/fetch-profile-data](https://github.com/AKASHAorg/extension-devkit/tree/examples/fetch-profile-data) branch.
+The fully working implementation is available on the devkit's [examples/fetch-profile-data](https://github.com/AKASHAorg/extension-devkit/tree/examples/fetch-profile-data) branch
 :::
 
-Akasha Core's Hooks package provides easy way to interact with the SDK methods usiing generated hooks. We shall use the [useGetProfileByDidQuery](../../data-fetching-and-mutations/hooks/apollo-hooks/index.md#usegetprofilebydidquery) hook
+Akasha Core's Hooks package provides easy way to interact with the SDK methods using generated hooks. In order to get a profile's data, we shall use the [useGetProfileByDidQuery](../../data-fetching-and-mutations/hooks/apollo-hooks/index.md#usegetprofilebydidquery) hook
 
 To complete this tutorial, you must have [installed and setup the devkit](../../devkit/index.mdx) locally or on DevContainers
 

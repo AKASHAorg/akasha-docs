@@ -31,7 +31,7 @@ import getSDK from "@akashaorg/awf-sdk";
 const gqlClient = getSDK().services.gql.client;
 // diff-add-start
 
-const fetchBeamByIdHandler = (beamId: string) => {
+const fetchBeamByIdHandler = async (beamId: string) => {
   try {
     const response = await gqlClient.GetBeamByDid({
       id: beamId,
@@ -53,7 +53,7 @@ import getSDK from "@akashaorg/awf-sdk";
 
 const gqlClient = getSDK().services.gql.client;
 
-const fetchBeamByIdHandler = (beamId: string) => {
+const fetchBeamByIdHandler = async (beamId: string) => {
   try {
     const response = await gqlClient.GetBeamByDid({
       id: beamId,
