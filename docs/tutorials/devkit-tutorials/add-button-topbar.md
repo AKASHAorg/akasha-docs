@@ -58,7 +58,7 @@ const ButtonA = (props: IRootExtensionProps) => {
 export default withProviders(ButtonA);
 ```
 
-In the code snippet above, we defined a conponent which returns a simple button with a click handler. The props that could be passed to this extension is defined in the [typings package](https://github.com/AKASHAorg/akasha-core/blob/next/libs/typings/src/ui/root-component.ts).
+In the code snippet above, we defined a component which returns a simple button with a click handler. The props that could be passed to this extension is defined in the [typings package](https://github.com/AKASHAorg/akasha-core/blob/next/libs/typings/src/ui/root-component.ts).
 
 3. Let's do a similar thing in the second file
 
