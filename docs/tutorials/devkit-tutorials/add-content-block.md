@@ -573,25 +573,29 @@ touch index.tsx
 2. Open this file in your code editor, then copy and paste the code snippet below. This component simply does the work of conditionally rendering the two block modes components defined earlier based on the received props.
 
 ```tsx title="src/extensions/dad-joke-block/index.tsx"
-import * as React from 'react';
-import { withProviders } from '@akashaorg/ui-core-hooks';
+import * as React from "react";
+import { withProviders } from "@akashaorg/ui-core-hooks";
 import {
   BlockInstanceMethods,
   ContentBlockModes,
   ContentBlockRootProps,
-} from '@akashaorg/typings/lib/ui';
-import { DadJokeBlock } from './dad-joke';
-import { DadJokeReadonlyBlock } from './dad-joke-readonly';
+} from "@akashaorg/typings/lib/ui";
+import { DadJokeBlock } from "./dad-joke";
+import { DadJokeReadonlyBlock } from "./dad-joke-readonly";
 
 const PollBlockExtension = (
   props: ContentBlockRootProps & {
     blockRef?: React.RefObject<BlockInstanceMethods>;
-  },
+  }
 ) => {
   return (
     <>
-      {props.blockInfo.mode === ContentBlockModes.EDIT && <DadJokeBlock {...props} />}
-      {props.blockInfo.mode === ContentBlockModes.READONLY && <DadJokeReadonlyBlock {...props} />}
+      {props.blockInfo.mode === ContentBlockModes.EDIT && (
+        <DadJokeBlock {...props} />
+      )}
+      {props.blockInfo.mode === ContentBlockModes.READONLY && (
+        <DadJokeReadonlyBlock {...props} />
+      )}
     </>
   );
 };
@@ -605,13 +609,42 @@ In the final section of this tutorial we are going to update the root app's inde
 1. In the register function's return object, right after the `menuItems`, we need to update the code block below.
 
 ```tsx title="src/index.tsx"
-// ...
+import {
+  IAppConfig,
+  IntegrationRegistrationOptions,
+  MenuItemAreaType,
+  LogoTypeSource,
+} from "@akashaorg/typings/lib/ui";
+// diff-add
+import { CirclePlay } from "lucide-react";
+
+/**
+ * Changes in this file requires a full reload in the browser!
+ */
+
+const SidebarIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className="w-5 h-5 stroke-secondaryLight dark:stroke-secondaryDark"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23-.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"
+    />
+  </svg>
+);
+
 export const register = (opts: IntegrationRegistrationOptions): IAppConfig => {
   return {
-    rootComponent: () => import('./components'),
+    rootComponent: () => import("./components"),
     mountsIn: opts.layoutSlots?.applicationSlotId as string,
     menuItems: {
-      label: 'Extension Devkit',
+      label: "Extension Devkit",
       logo: { type: LogoTypeSource.ICON, value: <SidebarIcon /> },
       area: [MenuItemAreaType.UserAppArea],
       subRoutes: [],
@@ -619,10 +652,10 @@ export const register = (opts: IntegrationRegistrationOptions): IAppConfig => {
     // diff-add-start
     contentBlocks: [
       {
-        propertyType: 'dad-joke-block',
+        propertyType: "dad-joke-block",
         icon: <CirclePlay />,
-        displayName: 'Dad Joke block',
-        rootComponent: () => import('./extensions/dad-joke-block'),
+        displayName: "Dad Joke block",
+        rootComponent: () => import("./extensions/dad-joke-block"),
       },
     ],
     // diff-add-end
