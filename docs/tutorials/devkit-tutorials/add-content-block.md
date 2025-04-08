@@ -135,7 +135,7 @@ export const DadJokeBlock = (
 };
 ```
 
-- Make a query call using [useGetAppsQuery](../../data-fetching-and-mutations/hooks/apollo-hooks/#usegetappsquery) to get the applications's release id. This which will be used in the block creation process. The application's name is got from the props passed into the component `props.blockInfo.appName`.
+- Make a query call using [useGetAppsQuery](../../data-fetching-and-mutations/hooks/apollo-hooks/#usegetappsquery) to get the applications's release id. This which will be used in the block creation process. We can access the parent application name from the props passed into the component `props.blockInfo.appName`.
 
 ```tsx title="src/extensions/dad-joke-block/dad-joke.tsx"
 import React from 'react';
@@ -583,7 +583,7 @@ import {
 import { DadJokeBlock } from "./dad-joke";
 import { DadJokeReadonlyBlock } from "./dad-joke-readonly";
 
-const PollBlockExtension = (
+const DadJokeBlockExtension = (
   props: ContentBlockRootProps & {
     blockRef?: React.RefObject<BlockInstanceMethods>;
   }
@@ -599,7 +599,7 @@ const PollBlockExtension = (
     </>
   );
 };
-export default withProviders<ContentBlockRootProps>(PollBlockExtension);
+export default withProviders<ContentBlockRootProps>(DadJokeBlockExtension);
 ```
 
 ## Application level index file
