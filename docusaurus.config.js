@@ -59,7 +59,6 @@ const config = {
         propertiesFormat: "table",
         indexFormat: "table",
         membersWithOwnFile: [],
-        groupOrder: ["Classes", "Functions", "Type Aliases", "*"],
         navigationModel: {
           excludeFolders: true,
         },
@@ -142,7 +141,7 @@ const config = {
         tsconfig: "./akasha-core/libs/hooks/tsconfig.json",
         readme: "./akasha-core/libs/hooks/README.md",
         out: "./docs/data-fetching-and-mutations/hooks/custom-hooks",
-        // entryFileName: "index.md",
+        entryFileName: "index.md",
         fileExtension: ".md",
         mergeReadme: true,
         hidePageTitle: true,
@@ -174,7 +173,7 @@ const config = {
         tsconfig: "./akasha-core/libs/hooks/tsconfig.json",
         readme: "./akasha-core/libs/hooks/README_GENERATED.md",
         out: "./docs/data-fetching-and-mutations/hooks/apollo-hooks",
-        // entryFileName: "index.md",
+        entryFileName: "index.md",
         fileExtension: ".md",
         mergeReadme: true,
         hidePageTitle: true,
@@ -299,16 +298,16 @@ const config = {
         ],
         magicComments: [
           {
-            className: 'code-block-diff-add-line',
-            line: 'diff-add',
-            block: {start: 'diff-add-start', end: 'diff-add-end'}
+            className: "code-block-diff-add-line",
+            line: "diff-add",
+            block: { start: "diff-add-start", end: "diff-add-end" },
           },
           {
-            className: 'code-block-diff-remove-line',
-            line: 'diff-remove',
-            block: {start: 'diff-remove-start', end: 'diff-remove-end'}
-          }
-        ]
+            className: "code-block-diff-remove-line",
+            line: "diff-remove",
+            block: { start: "diff-remove-start", end: "diff-remove-end" },
+          },
+        ],
       },
     }),
 };

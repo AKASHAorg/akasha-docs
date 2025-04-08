@@ -112,13 +112,5 @@ dist
 *.gz
 
 # generated docs folders
-docs/react-hooks/hooks
 docs/data-fetching-and-mutations/sdk/*
-!docs/data-fetching-and-mutations/sdk/_category_.json
 docs/data-fetching-and-mutations/hooks/*
-docs/event-bus/ui-events
-docs/event-bus/global-events
-docs/design-system/design-system-core
-docs/design-system/design-system-components
-docs/composedb-models/*
-!docs/composedb-models/_category_.json
