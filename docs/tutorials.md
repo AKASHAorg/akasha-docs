@@ -8,7 +8,7 @@ sidebar_label: Tutorials
 The following sections provide step-by-step guides to boostraping, building and deploying different kinds of extensions such as [Applications](/extensions/applications), [Widgets](/extensions/widgets) and [Plugins](/extensions/plugins). Click on any of the cards to get started with the relevant topics.
 
 :::tip
-If you are starting by cloning the <span style={{color: 'tomato'}}>AKASHA Core</span> repository, please make sure you complete [Bootstrapping a new extension](./extension-tutorials/index.md#bootstrapping-a-new-extension) tutorial.
+If you are starting by cloning the <span style={{color: 'tomato'}}>AKASHA Core</span> repository, please make sure you complete [Bootstrapping a new extension](./extensions/extension-tutorials/index.md#bootstrapping-a-new-extension) tutorial.
 :::
 
 <div className="card-container">
