@@ -1,5 +1,5 @@
 ---
-sidebar_position: 812
+sidebar_position: 2
 sidebar_label: Create a Widget
 ---
 

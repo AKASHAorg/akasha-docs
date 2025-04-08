@@ -1,5 +1,5 @@
 ---
-sidebar_position: 815
+sidebar_position: 5
 sidebar_label: Create Extension Points
 ---
 
