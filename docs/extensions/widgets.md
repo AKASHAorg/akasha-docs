@@ -20,6 +20,7 @@ Examples of widgets are:
 - `Mini Profile` widget which shows brief overview of the beam author's profile on the full beam page
 
 ## Registration
+
 Widget registration follows the same steps as any extension registration which is documented [here](./index.md#the-registration-part)
 
 ::::info
@@ -63,8 +64,7 @@ export const register = () => {
 The second parameter of `activeWhen` is a utility function. This utility function converts a URL path into an activity function which when called with the current Location, returns a boolean.
 `activeWhen` property can be a string, a function or an array of strings and functions:
 
-`
-  activeWhen: '/users'
+`  activeWhen: '/users'
   // or
   activeWhen: ['/user', '/users/:userId']
   // or
@@ -73,8 +73,7 @@ The second parameter of `activeWhen` is a utility function. This utility functio
   activeWhen: [
     '/user',
     (location, pathToActiveWhen) => pathToActiveWhen('/users/my-user-id')(location)
-  ]
-`
+  ]`
 
 `activeWhen` property also supports dynamic values.
 
@@ -88,7 +87,9 @@ pathToActiveWhen(/users/:userId/profile)
 🚫 https://app.com/users/profile/sub-profile/
 🚫 https://app.com/users/profile/sub-profile/
 ```
+
 You can also use your own matching logic like:
+
 ```
 {
   activeWhen: (location) => {

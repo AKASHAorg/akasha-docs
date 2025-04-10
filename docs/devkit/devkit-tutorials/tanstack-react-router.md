@@ -66,32 +66,20 @@ now, let's export a react component from each file
 
 ```tsx title="src/components/pages/home.tsx"
 export const HomePage = () => {
-    return (
-      <div>
-        Home page
-      </div>
-    );
-  };
+  return <div>Home page</div>;
+};
 ```
 
 ```tsx title="src/components/pages/docs.tsx"
 export const DocsPage = () => {
-    return (
-      <div>
-        Docs page
-      </div>
-    );
-  };
+  return <div>Docs page</div>;
+};
 ```
 
 ```tsx title="src/components/pages/components.tsx"
 export const ComponentsPage = () => {
-    return (
-      <div>
-        Components page
-      </div>
-    );
-  };
+  return <div>Components page</div>;
+};
 ```
 
 Now, using these newly created components let's add the routes to our router:

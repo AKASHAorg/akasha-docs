@@ -16,12 +16,8 @@ Let's continue from the `home.tsx` page that we've created in the previous tutor
 
 ```tsx title="components/pages/home.tsx"
 export const HomePage = () => {
-    return (
-      <div>
-        Home page
-      </div>
-    );
-  };
+  return <div>Home page</div>;
+};
 ```
 
 We will create a button that will navigate to the world's global antenna. For this we'll need some information about that app:

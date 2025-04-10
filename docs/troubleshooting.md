@@ -19,6 +19,7 @@ root-workspace-0b6124@workspace:. doesn\'t provide @testing-library/dom (pa2b9f)
 • YN0000: L Completed in 12s 138ms
 YN0000: • Failed with errors in 12s 412ms akasha-core git: (next)
 ```
+
 This is related to the `yarn` version. Most likely you have a different `yarn` version installed globally.
 
 Execute the following command in the root of the project:

@@ -18,20 +18,17 @@ touch src/index.ts
 Open the index file and create and export the registration function
 
 ```ts title="export widget's registration function"
-
 export const register = () => {
-  return {}
-}
-
+  return {};
+};
 ```
 
 Next, we'll need to add the following properties to the config object:
 
-|           |  Required  |                     Description                                 |
-|:---------:|:----------:|:---------------------------------------------------------------:|
-| loadingFn |   true     |  the [loading function](../../extensions/app-loader.md)      |
-| mountsIn  |   true     |  where to show this widget                                      |
-
+|           | Required |                      Description                       |
+| :-------: | :------: | :----------------------------------------------------: |
+| loadingFn |   true   | the [loading function](../../extensions/app-loader.md) |
+| mountsIn  |   true   |               where to show this widget                |
 
 Let's create a simple React component in a new file in the `src` folder.
 
@@ -42,26 +39,22 @@ touch src/my-widget-component.tsx
 This file will be dynamically imported using the `loadingFn` and must export `single-spa-react` lifecycle methods:
 
 ```tsx title="src/my-widget-component.tsx"
-
-import React from 'react';
-import ReactDOMClient from 'react-dom/client';
-import singleSpaReact from 'single-spa-react';
+import React from "react";
+import ReactDOMClient from "react-dom/client";
+import singleSpaReact from "single-spa-react";
 
 const MyWidget = () => {
-  return <div>Hello World</div>
-}
+  return <div>Hello World</div>;
+};
 
-export const {bootstrap, mount, unmount} = singleSpaReact({
+export const { bootstrap, mount, unmount } = singleSpaReact({
   React,
   ReactDOMClient,
   rootComponent: MyWidget,
   errorBoundary: () => {
-    return (
-      <div>Error in widget</div>
-    )
-  }
-})
-
+    return <div>Error in widget</div>;
+  },
+});
 ```
 
 Now we are ready to complete the configuration of our widget:
@@ -69,10 +62,10 @@ Now we are ready to complete the configuration of our widget:
 ```ts
 export const register = (options: IntegrationRegistrationOptions) => {
   return {
-    loadingFn: () => import('my-widget-component'),
+    loadingFn: () => import("my-widget-component"),
     mountsIn: options.layoutSlots.widgetSlotId,
-  }
-}
+  };
+};
 ```
 
 Well done! Now if you rebuild the project you will see the widget in the right side of the page.

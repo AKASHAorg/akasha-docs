@@ -17,14 +17,16 @@ Some of default apps that are available in Akasha World include:
 - Settings
 
 ## Registration
+
 Application registration follows the same steps as any extension registration which is documented [here](./index.md#the-registration-part)
 
 ### Example of a registration function
+
 ```ts title="src/index.ts"
 export function register() {
   return {
     // ...config object
-  }
+  };
 }
 ```
 
@@ -53,6 +55,7 @@ Applications have a specific mounting area that is defined by the layout widget.
 
 :::info
 Applications does not have an activity function. The activity function is calculated from the name of the app.
+
 - url: `https://localhost:8181/example-app`
   - -> will load the `example-app`
 - url: `https://localhost:8181/@akashaorg/app-settings-ewa`
