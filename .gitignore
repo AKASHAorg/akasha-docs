@@ -112,9 +112,9 @@ dist
 *.gz
 
 # generated docs folders
-docs/data-fetching-and-mutations/sdk/_index_generated.md
 docs/data-fetching-and-mutations/sdk/*.cjs
 docs/data-fetching-and-mutations/sdk/api/*
+docs/data-fetching-and-mutations/sdk/generated/*
 docs/data-fetching-and-mutations/sdk/services/*
 docs/data-fetching-and-mutations/hooks/apollo-hooks/*
 docs/data-fetching-and-mutations/hooks/custom-hooks/*
