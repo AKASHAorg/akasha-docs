@@ -1,5 +1,5 @@
 ---
-sidebar_position: 811
+sidebar_position: 1
 sidebar_label: Create an App
 ---
 
@@ -113,15 +113,15 @@ import "systemjs-webpack-interop/auto-public-path";
 export const register = (options) => ({
   loadingFn: () => import("./components"),
   menuItems: {
-    label: 'MyApp',
+    label: "MyApp",
     type: MenuItemType.App,
     logo: { type: LogoTypeSource.ICON, value: <svg></svg> },
     area: [MenuItemAreaType.AppArea],
     subRoutes: [
       {
-        label: 'Submenu',
+        label: "Submenu",
         index: 0,
-        route: '/my-subroute',
+        route: "/my-subroute",
         type: MenuItemType.Internal,
       },
     ],
@@ -172,4 +172,5 @@ export default HelloEthereumWorldApp;
 ### Repository setup for the newly created app
 
 **1. Repo setup: nx, registryOverrides, examples/ethereum.world/src/index update**
+
 > WIP

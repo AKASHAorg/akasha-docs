@@ -1,16 +1,17 @@
 ---
-sidebar_position: 81
-sidebar_label: Extension Tutorials
+sidebar_position: 57
+sidebar_label: Tutorials
 ---
 
 # Build Extensions Tutorials
+
 The following section provides a step-by-step guide on how to create different types of extensions using the AKASHA Core. It covers creating necessary folders, initializing the project, and running relevant Yarn commands.
 
-## Bootstrapping a new extension
-
-:::info
-Before we begin make sure you have already followed the [Dev QuickStart](../../setup.md) guide
+:::caution
+To follow these tutorials, you must have set up the [AKASHA Core](https://github.com/AKASHAorg/akasha-core) project and run it locally. If you are yet to do so, please click [here](../../setup.md) to get started.
 :::
+
+## Bootstrapping a new extension
 
 The extensions should be created in the `extensions` folder which is in the root of the AKASHA Core project. So if you want to bootstrap a new app you should do it by creating a new folder in `extensions/apps`, for widgets in `extensions/widgets` and for plugins in `extensions/plugins`.
 
@@ -37,7 +38,6 @@ This command will create a `package.json` which we will modify it for our needs:
 The extension name in the Extension Publishing step should be the same as the package name you set here.
 :::
 
-
 In order to maintain consistency between different apps, we recommend creating a similar top level folder structure:
 
 ```treeview title="Basic App Directory Structure"
@@ -57,45 +57,46 @@ In order to maintain consistency between different apps, we recommend creating a
 #### Next, let's setup the build system.
 
 ### Setting up NX
+
 NX is used as the build system for the AKASHA Core monorepository.
 To set it up create a `project.json` file in the root of your app with the following content:
 
 ```json5
 {
-  "name": "my-awesome-extension",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "extensions/{extensionType}/my-awesome-extension",
-  "projectType": "application",
-  "targets": {
-    "prepare": {
-      "dependsOn": [
+  name: "my-awesome-extension",
+  $schema: "../../../node_modules/nx/schemas/project-schema.json",
+  sourceRoot: "extensions/{extensionType}/my-awesome-extension",
+  projectType: "application",
+  targets: {
+    prepare: {
+      dependsOn: [
         "@akashaorg/ui-awf-hooks:build",
         "@akashaorg/design-system-core:prepare",
         "@akashaorg/design-system-components:prepare",
         "@akashaorg/awf-sdk:build",
         "@akashaorg/ui-lib-extensions:prepare",
-        "@akashaorg/typings:prepare"
+        "@akashaorg/typings:prepare",
       ],
-      "executor": "nx:run-commands",
-      "options": {
-        "cwd": "extensions/{extensionType}/my-awesome-extension",
-        "command": "tsc --build"
-      }
-    },
-    "build": {
-      "dependsOn": ["prepare"],
-      "executor": "nx:run-commands",
-      "options": {
-        "cwd": "extensions/{extensionType}/my-awesome-extension",
-        "command": "webpack --config webpack.config.cjs"
+      executor: "nx:run-commands",
+      options: {
+        cwd: "extensions/{extensionType}/my-awesome-extension",
+        command: "tsc --build",
       },
-      "outputs": [
+    },
+    build: {
+      dependsOn: ["prepare"],
+      executor: "nx:run-commands",
+      options: {
+        cwd: "extensions/{extensionType}/my-awesome-extension",
+        command: "webpack --config webpack.config.cjs",
+      },
+      outputs: [
         "{projectRoot}/lib",
-        "{workspaceRoot}/dist/{extensionType}/my-awesome-extension"
-      ]
-    }
+        "{workspaceRoot}/dist/{extensionType}/my-awesome-extension",
+      ],
+    },
   },
-  "tags": ["scope:extension", "type:{extensionType}"]
+  tags: ["scope:extension", "type:{extensionType}"],
 }
 ```
 
@@ -105,21 +106,24 @@ Please adjust the following fields with your actual paths.
 Finally, adjust the `tags` field with the replacing the `{extensionType}` accordingly.
 :::
 
-
 ### Setting Webpack
+
 As you already saw in the previous step, AKASHA Core is using Webpack as module bundler.
 
 To set it up you will have to create a new file `webpack.config.cjs` in the root folder of your extension:
 
 ```js
-const path = require('path');
-const baseConfig = require('../../webpack.config');
+const path = require("path");
+const baseConfig = require("../../webpack.config");
 
 module.exports = Object.assign(baseConfig, {
   context: path.resolve(__dirname),
   output: Object.assign(baseConfig.output, {
-    path: path.resolve(__dirname, '../../../dist/{extensionType}/my-awesome-extension'),
-    publicPath: 'auto',
+    path: path.resolve(
+      __dirname,
+      "../../../dist/{extensionType}/my-awesome-extension"
+    ),
+    publicPath: "auto",
   }),
 });
 ```
@@ -163,39 +167,41 @@ The most important parts of that file are:
 
 ```ts
 if (__DEV__ || __LOAD_LOCAL_SOURCES__) {
-  registryOverrides = (await import('./registry-overrides')).default;
+  registryOverrides = (await import("./registry-overrides")).default;
 }
 ```
+
 So if `__DEV__` global variable is true (equivalent to `process.env.NODE_ENV`) it will import some registryOverrides (no need to know what they are yet).
 
 and in the next lines:
 
 ```ts {19} showLineNumbers title="AKASHA World config"
- const loaderConfig: WorldConfig = {
-    title: 'AKASHA World',
-    worldIcon: {
-      basePath: '/icons/world/',
-      darkModeSuffix: '_dark',
-      extension: '.png',
-      small: 'small',
-      medium: 'medium',
-      large: 'large',
-    },
-    layout: '@akashaorg/ui-widget-layout',
-    homepageApp: '@akashaorg/app-antenna',
-    extensionsApp: '@akashaorg/app-extensions',
-    defaultApps: [
-      // ..some app names
-    ],
-    defaultWidgets: [
-      //... some widget names
-    ],
-    registryOverrides,
-    socialLinks: [
-      // ...
-    ],
-  };
+const loaderConfig: WorldConfig = {
+  title: "AKASHA World",
+  worldIcon: {
+    basePath: "/icons/world/",
+    darkModeSuffix: "_dark",
+    extension: ".png",
+    small: "small",
+    medium: "medium",
+    large: "large",
+  },
+  layout: "@akashaorg/ui-widget-layout",
+  homepageApp: "@akashaorg/app-antenna",
+  extensionsApp: "@akashaorg/app-extensions",
+  defaultApps: [
+    // ..some app names
+  ],
+  defaultWidgets: [
+    //... some widget names
+  ],
+  registryOverrides,
+  socialLinks: [
+    // ...
+  ],
+};
 ```
+
 Notice that those `registryOverrides` are passed down to `AppLoader`.
 
 Internally the AppLoader will also check if this property is present in the config and will try to load the extensions from there, instead of requesting it from the registry.
@@ -203,15 +209,14 @@ Internally the AppLoader will also check if this property is present in the conf
 So in order to specify from where to load an extension, we must add a new entry to the `registry-overrides.ts` file like this:
 
 ```ts title="registry-overrides.ts"
-
 const overrides = [
   {
-    name: 'my-awesome-extension',
+    name: "my-awesome-extension",
     integrationType: AkashaAppApplicationType.App, // change this to reflect the kind of extension you are creating
     sources: [`https://localhost:8131/{extensionType}/my-awesome-extension`],
-  }
+  },
   // ...the already existing overrides
-]
+];
 ```
 
 Now going back to the world config, we can specify to load the extension as installed by default.

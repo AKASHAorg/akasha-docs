@@ -4,7 +4,7 @@ sidebar_label: Topbar button
 title: Enrich Topbar using extension point
 ---
 
-This tutorial adds further explanation on how extension points work and how even with Devkit, we are able to interact with extension points on other apps or widgets in a world. You can learn more about [Extension Points](../../extensions/extension-points.md) and take a look at a related tutorial on how to [create extension points](../extension-tutorials/create-extension-points.md).
+This tutorial adds further explanation on how extension points work and how even with Devkit, we are able to interact with extension points on other apps or widgets in a world. You can learn more about [Extension Points](../../extensions/extension-points.md) and take a look at a related tutorial on how to [create extension points](../../extensions/extension-tutorials/create-extension-points.md).
 
 :::info
 The fully working implementation is available on the devkit's [examples/extension-point](https://github.com/AKASHAorg/extension-devkit/tree/examples/extension-point) branch

@@ -8,42 +8,50 @@ sidebar_label: Extending other apps (Extension Points)
 Extension points are components exposed by an app that can be mounted at any level inside the same app or other apps or widgets. These components can provide additional functionalities to the already rendered elements. For example a like button extension point can be rendered on a beam card, but also on the profile app. A follow button can be rendered on a user's profile and also on a profile-related widget etc.
 
 :::info
-  Extension points allows you to inject a small component (imagine a `like` button) into specific locations/components that are rendered inside other apps. This is only possible if that component allows this by implementing an `<Extension />` component.
+Extension points allows you to inject a small component (imagine a `like` button) into specific locations/components that are rendered inside other apps. This is only possible if that component allows this by implementing an `<Extension />` component.
 :::
 
 ## Extension points example usecase
+
 - insert a like button into a beam-card
 - display the beam editor anywhere you want in your extension
 - display the "Flag" button on any entity - provided by the Vibes App
 
 ## Registration
+
 The extension points are automatically registered when the parent app registers. Extension points cannot be standalone, they are provided by an app via the app's configuration object.
 
 ```ts title="index.js of MyApplication"
 export const register = () => {
   return {
     // ...
-    extensions: [{ /** extension 1 */ }, { /** extension 2 */ }],
+    extensions: [
+      {
+        /** extension 1 */
+      },
+      {
+        /** extension 2 */
+      },
+    ],
   };
 };
 ```
 
 ## Configuration Object interface
+
 The config object is defined within the parent app's config. This is managed using the `extensions` key,
 which is an array containing the config object for each extension-point.
 
 To define an extension-point the following properties must be set:
 
-|            | Required |                 Description                        |
-|:----------:|:--------:|:--------------------------------------------------:|
-| rootComponent  |   yes    | function to lazy import a React component |
-| mountsIn   |   yes    | the slot in which this extension will be mounted   |
-
+|               | Required |                   Description                    |
+| :-----------: | :------: | :----------------------------------------------: |
+| rootComponent |   yes    |    function to lazy import a React component     |
+|   mountsIn    |   yes    | the slot in which this extension will be mounted |
 
 Example:
 
 ```ts title="index.ts of MyAwesomeApp"
-
 // the register function of an app
 export const register = () => {
   // this is the config object of an app
@@ -51,18 +59,18 @@ export const register = () => {
     // ...app's config options
     extensions: [
       {
-        rootComponent: () => import('path/to/extension1.tsx'),
-        mountsIn: 'profile-card/profile-menu-extensions'
+        rootComponent: () => import("path/to/extension1.tsx"),
+        mountsIn: "profile-card/profile-menu-extensions",
       },
       {
-        rootComponent: () => import('path/to/extension2.tsx'),
-        mountsIn: 'beam-card/beam-card-footer-extensions'
-      }
-    ]
-  }
-}
-
+        rootComponent: () => import("path/to/extension2.tsx"),
+        mountsIn: "beam-card/beam-card-footer-extensions",
+      },
+    ],
+  };
+};
 ```
+
 ## Declaring extension slots
 
 It is a good idea to allow other apps to extend your components with additional functionality.
@@ -78,15 +86,12 @@ Extensions are not namespaced because the idea is to have multiple extensions fr
 Example usage:
 
 ```tsx title="Defining a mounting point of an extension-point"
-import { Extension } from '@akashaorg/ui-lib-extensions/lib/react/extension';
+import { Extension } from "@akashaorg/ui-lib-extensions/lib/react/extension";
 
 const MyReactComponent = () => {
   return (
     <>
-      <Extension
-        name="my-app/some-extension-id"
-        {...someProps}
-      />
+      <Extension name="my-app/some-extension-id" {...someProps} />
     </>
   );
 };

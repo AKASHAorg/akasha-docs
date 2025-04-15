@@ -5,7 +5,7 @@ sidebar_label: Fetch a Profile
 
 # Fetch A Profile
 
-Fetching a profile involves querying the underlying <span className='highlight-1'>profile model</span> using GraphQL API through the SDK's [GQL service](../../data-fetching-and-mutations/sdk/services/Services.md#graphql).
+Fetching a profile involves querying the underlying <span className='highlight-1'>profile model</span> using GraphQL API through the SDK's [GQL service](../../../data-fetching-and-mutations/sdk/services/Services.md#graphql).
 
 We can fetch the profile we just created in the [previous](./create-a-profile.md) tutorial using its `DID`
 

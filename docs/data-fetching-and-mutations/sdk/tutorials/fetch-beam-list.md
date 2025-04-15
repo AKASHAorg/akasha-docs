@@ -5,7 +5,7 @@ sidebar_label: Fetch list of Beams
 
 # Fetch List of Beams
 
-Fetching a list of beams is quite similar to what we did with fetching a beam with its id in the [previous](./fetch-a-beam-by-id.md) tutorial, only that we do not to specify any id. It involves querying the underlying <span className='highlight-1'>beam model</span> using GraphQL API through the SDK's [GQL service](../../data-fetching-and-mutations/sdk/services/Services.md#graphql).
+Fetching a list of beams is quite similar to what we did with fetching a beam with its id in the [previous](./fetch-a-beam-by-id.md) tutorial, only that we do not to specify any id. It involves querying the underlying <span className='highlight-1'>beam model</span> using GraphQL API through the SDK's [GQL service](../../../data-fetching-and-mutations/sdk/services/Services.md#graphql).
 
 1. Let's start again by creating a new file
 

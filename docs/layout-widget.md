@@ -8,6 +8,7 @@ sidebar_label: Layout
 The layout of a world is controlled by its Layout widget. It outlines specific areas in which the apps and widgets can be mounted.
 
 ## Akasha World's default layout widget
+
 Akasha World's layout widget defines these areas;
 
 - Topbar Area
@@ -98,7 +99,7 @@ This area is split into 2 sub-sections, one above the other:
 
 - Contextual Widget Area - widgets that are directly related to the currently active app (Example: `mini profile widget` that is loaded when the full beam page is active on the antenna app)
 
-- Root Widget Area - widgets that are not related to the currently mounted app (example: `trending widget`  which shows latest profiles and trending topics).
+- Root Widget Area - widgets that are not related to the currently mounted app (example: `trending widget` which shows latest profiles and trending topics).
 
 **Examples**
 

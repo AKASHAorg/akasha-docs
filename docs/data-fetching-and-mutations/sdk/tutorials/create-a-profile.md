@@ -5,7 +5,7 @@ sidebar_label: Create a Profile
 
 # Create A Profile
 
-Creating a profile involves mutating the underlying <span className="highlight-1">profile model</span> using GraphQL API through the SDK's [GQL service](../../data-fetching-and-mutations/sdk/services/Services.md#graphql).
+Creating a profile involves mutating the underlying <span className="highlight-1">profile model</span> using GraphQL API through the SDK's [GQL service](../../../data-fetching-and-mutations/sdk/services/Services.md#graphql).
 
 1. First, let's create a new file
 

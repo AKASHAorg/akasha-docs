@@ -49,7 +49,7 @@ In edit mode the content block must expose a simple api using React's `useImpera
 React.useImperativeHandle(props.blockRef, () => ({
   async createBlock() {},
   async retryBlockCreation() {},
-}))
+}));
 ```
 
 ### read-only-mode
@@ -60,6 +60,7 @@ edit-mode block.
 The content-block is matched against both the application's name and the `propertyType` param when rendering the content.
 
 ## Creating/Storing Content Block data
+
 Creating the content block should only happen when the block is in [ContentBlockModes.EDIT](https://github.com/AKASHAorg/akasha-core/blob/next/libs/typings/src/ui/editor-blocks.ts) mode and it should be done through a call on `CreateBlock`, available in the composeDB API.
 
 You can explore existing methods for your models using `yarn composedb:graphql`.
@@ -70,23 +71,24 @@ The interface of a content-block model is:
 
 ```tsx
 contentBlock = {
-    // controls the visiblity of this block
-    // true when visible
-    active: boolean,
-    // the version of the app that this
-    // block was published with
-    appVersionID: string,
-    // the content-nodes of this block, these are
-    // the actual values that were inserted by the user
-    content: [titleNode, bodyNode],
-    // the creation date of this content-block
-    createdAt: new Date().toISOString(),
-    // must be one of: 'FORM', 'OTHER' or 'TEXT'
-    kind: string,
-}
+  // controls the visiblity of this block
+  // true when visible
+  active: boolean,
+  // the version of the app that this
+  // block was published with
+  appVersionID: string,
+  // the content-nodes of this block, these are
+  // the actual values that were inserted by the user
+  content: [titleNode, bodyNode],
+  // the creation date of this content-block
+  createdAt: new Date().toISOString(),
+  // must be one of: 'FORM', 'OTHER' or 'TEXT'
+  kind: string,
+};
 ```
 
 ### Content Nodes
+
 A content block can contain one or more content-nodes which are stored in the content-blocks `content` property. The properties of a content node are as follows:
 
 ```tsx
@@ -103,7 +105,7 @@ const titleNode = {
   label: string,
   // the value of the content-node, added by the user,
   value: string,
-}
+};
 ```
 
 ## Displaying Content Block's data
