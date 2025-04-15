@@ -8,7 +8,7 @@ sidebar_label: Tutorials
 The following section provides a step-by-step guide on how to create different types of extensions using the AKASHA Core. It covers creating necessary folders, initializing the project, and running relevant Yarn commands.
 
 :::caution
-To follow these tutorials, you must have set up the project and run it locally. If you are yet to do so, please click [here](../../setup.md) to get started.
+To follow these tutorials, you must have set up the [AKASHA Core](https://github.com/AKASHAorg/akasha-core) project and run it locally. If you are yet to do so, please click [here](../../setup.md) to get started.
 :::
 
 ## Bootstrapping a new extension

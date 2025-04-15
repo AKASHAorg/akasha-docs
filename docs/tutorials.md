@@ -21,7 +21,7 @@ If you are starting by cloning the <span style={{color: 'tomato'}}>AKASHA Core</
   <a className="card clickable-card" href="/extensions/extension-tutorials">
     <h3>Extensions</h3>
     <span>
-      Create awesome extensions
+      Create awesome extensions using Akasha Core Repository
     </span>
   </a>
   <a className="card clickable-card" href="/devkit/devkit-tutorials">
