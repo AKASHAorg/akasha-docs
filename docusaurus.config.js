@@ -45,7 +45,7 @@ const config = {
         tsconfig: "./akasha-core/libs/sdk/tsconfig.json",
         readme: "./akasha-core/libs/sdk/README.md",
         out: "./docs/data-fetching-and-mutations/sdk",
-        entryFileName: "index.md",
+        entryFileName: "_index_generated.md",
         fileExtension: ".md",
         mergeReadme: true,
         hidePageTitle: true,
