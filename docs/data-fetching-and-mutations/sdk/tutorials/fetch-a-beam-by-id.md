@@ -5,7 +5,7 @@ sidebar_label: Fetch a Beam  by Id
 
 # Fetch A Beam By Id
 
-Fetching a beam by its id involves querying the underlying <span className='highlight-1'>beam model</span> using GraphQL API through the SDK's [GQL service](../../data-fetching-and-mutations/sdk/services/Services.md#graphql).
+Fetching a beam by its id involves querying the underlying <span className='highlight-1'>beam model</span> using GraphQL API through the SDK's [GQL service](../../../data-fetching-and-mutations/sdk/services/Services.md#graphql).
 
 We can fetch the beam we just created in the [previous](./create-a-beam.md) tutorial using its `id`
 

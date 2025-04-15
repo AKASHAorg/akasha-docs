@@ -12,7 +12,7 @@ If you are starting by cloning the <span style={{color: 'tomato'}}>AKASHA Core</
 :::
 
 <div className="card-container">
-  <a className="card clickable-card" href="/data-fetching-and-mutations/sdk-tutorials">
+  <a className="card clickable-card" href="/data-fetching-and-mutations/sdk/tutorials">
     <h3>SDK</h3>
     <span>
       Learn how to use the SDK

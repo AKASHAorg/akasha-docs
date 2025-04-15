@@ -6,10 +6,10 @@ sidebar_label: Create a Content Block
 # Create A Content Block
 
 Content blocks are the basic building block used in creating and rendering beams. Creating a content block involves mutating
-the underlying <span className="highlight-1">content block model</span> using GraphQL API through the SDK's [GQL service](../../data-fetching-and-mutations/sdk/services/Services.md#graphql).
+the underlying <span className="highlight-1">content block model</span> using GraphQL API through the SDK's [GQL service](../../../data-fetching-and-mutations/sdk/services/Services.md#graphql).
 
 :::info
-Click [here](../../extensions/editor/content_blocks.md) for a detailed explanation of what content blocks are
+Click [here](../../../extensions/editor/content_blocks.md) for a detailed explanation of what content blocks are
 :::
 
 We shall now proceed to create a content block

@@ -5,9 +5,9 @@ sidebar_label: Create a Beam
 
 # Create A Beam
 
-Creating a beam involves mutating the underlying <span className="highlight-1">beam model</span> using GraphQL API through the SDK's [GQL service](../../data-fetching-and-mutations/sdk/services/Services.md#graphql).
+Creating a beam involves mutating the underlying <span className="highlight-1">beam model</span> using GraphQL API through the SDK's [GQL service](../../../data-fetching-and-mutations/sdk/services/Services.md#graphql).
 
-A beam consists of content blocks which could be formed in an editor. In order to create a beam, we need to specify a list containing the id(s) of the [content block(s)](../../extensions/editor/content_blocks.md) in that beam. This means that before a beam is created, its individual content block(s) need to be created and stored in the content block model, first, then their respective ids will be referenced and saved to the beam model.
+A beam consists of content blocks which could be formed in an editor. In order to create a beam, we need to specify a list containing the id(s) of the [content block(s)](../../../extensions/editor/content_blocks.md) in that beam. This means that before a beam is created, its individual content block(s) need to be created and stored in the content block model, first, then their respective ids will be referenced and saved to the beam model.
 
 :::tip
 To better understand this tutorial, it is important that you go through [creating a content block](./create-a-content-block.md) tutorial first
@@ -27,7 +27,7 @@ import getSDK from "@akashaorg/awf-sdk";
 const gqlClient = getSDK().services.gql.client;
 ```
 
-3. Let's define a function to handle and return the response from the SDK service. This function will have two params, first parameter being the content of the beam we wish to create. This is an array that holds the `ID` of the individual [content blocks](../../extensions/editor/content_blocks.md) in the beam and their corresponding `order`. The second parameter is optional (defaults to `true`) and specifies whether the beam is active or has beem removed by its author
+3. Let's define a function to handle and return the response from the SDK service. This function will have two params, first parameter being the content of the beam we wish to create. This is an array that holds the `ID` of the individual [content blocks](../../../extensions/editor/content_blocks.md) in the beam and their corresponding `order`. The second parameter is optional (defaults to `true`) and specifies whether the beam is active or has beem removed by its author
 
 ```ts title="create-beam.ts"
 import getSDK from "@akashaorg/awf-sdk";
